@@ -1,0 +1,23 @@
+{
+  "subject": "acct:ericbrown@hachyderm.io",
+  "aliases": [
+    "https://hachyderm.io/@ericbrown",
+    "https://hachyderm.io/users/ericbrown"
+  ],
+  "links": [
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://hachyderm.io/@ericbrown"
+    },
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://hachyderm.io/users/ericbrown"
+    },
+    {
+      "rel": "http://ostatus.org/schema/1.0/subscribe",
+      "template": "https://hachyderm.io/authorize_interaction?uri={uri}"
+    }
+  ]
+}
