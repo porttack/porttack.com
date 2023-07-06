@@ -8,7 +8,7 @@ My goal this year was to bring back the Lions speech contest to students in the 
 
 The Lion's topic was "Social Media: Connects us or Isolates us". The trick was, my Lions club could only support 4 to 6 student speakers. What if too many students registered? And how could I also promote the Rotary speech contest and its $1500 prize?
 
-So I engaged parent groups at two schools and helped them create speech contests to filter students to Lions and Rotary contests. See [Speech Contests 2003](https://speechcontests2023.com).
+So I engaged parent groups at two schools and helped them create speech contests to filter students to Lions and Rotary contests. See [Speech Contests 2003](https://speechcontest2023.com).
 
 Two parent contests, three lion contests, four rotary contests and a dozen+ students later and finally it is all over!  I heard some frightened students face their fears. I also saw several students inspire other students (and adults) and take one more step toward leadership in their communities.
 
