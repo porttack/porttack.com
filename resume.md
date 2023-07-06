@@ -3,9 +3,12 @@ layout: page
 title: Resume
 permalink: /resume/
 ---
+
+Eric Brown <br> [ericbrown@porttack.com](mailto:ericbrown@porttack.com)
+
 ## Professional Objective
 
-Open to parttime work starting summer of 2024.
+Interested in parttime work starting summer 2024. Individual contributor and/or technical leadership position in a dynamic and creative environment.
 
 ## Summary
 
