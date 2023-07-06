@@ -55,11 +55,10 @@ Interested in parttime work starting summer 2024. Individual contributor and/or 
 ## Experience
 
 * [Khan Academy](https://www.khanacademy.org/), Staff Engineer, *2020-23*
-* Apple, Individual Contributor 5, *2014-20*
+* [Apple (iCloud Mail)](https://www.icloud.com/mail), Individual Contributor 5, *2014-20*
 * [Infoblox](https://www.infoblox.com/products/bloxone-ddi/), Distinguished Engineer, *2012-14*
-* [Abaca](https://www.proofpoint.com/us/proofpoint-inc-acquires-abaca-technology-corporation), CTO/Architect, *2007-12*
+* [Abaca](https://www.proofpoint.com/us/proofpoint-inc-acquires-abaca-technology-corporation), CTO/Architect/Manager, *2003-12*
 * [plosone.org](https://plos.org/), Senior Engineer, *2006-07*
-* Abaca, Director of Engineering, *2003-06*
 * [2Wire](https://en.wikipedia.org/wiki/2Wire), Engineering Manager, *2000-02*
 * iReady, Director of Engineering, *1999-2000*
 * [PointCast](https://en.wikipedia.org/wiki/PointCast), Principal Engineer, Engineering Manager, *1996-99*
