@@ -22,3 +22,4 @@ I received my Bachelor of Science in Electrical Engineering in 1990 from the Uni
 * [SLV Rotary](https://portal.clubrunner.ca//6779), "Service above self"
 * [Santa Cruz Lions](https://santacruzhostlionsclub.org/), "We serve"
 * [Scouts Troop 604](https://sites.google.com/site/troop604112014/) and [Santa Cruz Sea Scouts](https://santacruzseascouts.com/), "Do A Good Turn Daily" / "Be Prepared"
+* Maker's Night / [CoderDojo](https://coderdojo.com/en/about) (3rd Tuesdays 6:30-8:30pm)
