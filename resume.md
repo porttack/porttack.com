@@ -5,7 +5,7 @@ permalink: /resume/
 ---
 ## Professional Objective
 
-I might be open to some parttime work starting the summer of 2024. Until then, I'm focused on teaching.
+Open to parttime work starting summer of 2024.
 
 ## Summary
 

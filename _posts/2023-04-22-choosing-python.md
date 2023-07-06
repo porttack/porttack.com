@@ -1,4 +1,4 @@
-This is not a difficult decision for silicon veterans. It has always been considered a "teaching language". A huge set of modern software engineering problems have solutions as python programs.
+This is not a difficult decision for silicon valley veterans. It has always been considered a "teaching language". A huge set of modern software engineering problems have solutions as python programs.
 
 Yet it is far from the default choice for k12. Why? Block languages like Scratch and code.org are simply easier to get started with. There's minimal typing (which can be difficult for younger students and even for many older students). Just click-and-drag to code a solution. Neither teachers nor students need to know how to type or understand syntax. What could be easier?
 

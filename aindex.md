@@ -7,7 +7,6 @@ title: Welcome!
 permalink: /
 order: 1
 ---
-# Welcome!
 
 I'm Eric Brown, a teacher, father, husband, rotarian, engineer, sailor and runner.
 
