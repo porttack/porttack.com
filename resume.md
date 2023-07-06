@@ -51,18 +51,19 @@ Open to parttime work starting summer of 2024.
 
 ## Experience
 
-* Khan Academy, Staff Engineer, 10/2020 - 7/2023
-* Apple, IC5, 4/2014 - 10/2020
-* Infoblox, Distinguished Engineer 12/2012 - 3/2014
-* Abaca, CTO/Architect 10/2007 - 11/2012
-* plosone.org, Senior Engineer 7/2006 - 10/2007
-* Abaca, Director of Engineering 7/2003 - 7/2006
-* 2Wire, Engineering Manager 10/2000 - 10/2002
-* iReady, Director of Engineering 8/1999 - 7/2000
-* PointCast, Principal Engineer, Engineering Manager 4/1996 - 8/1999
-* Adobe, Senior Computer Scientist 3/1998 - 6/1998
-* Sony, Lead Engineer 5/1993 - 4/1996
-* Kodak, Contract Programmer 12/1989 - 4/1993
+* [Khan Academy](https://www.khanacademy.org/), Staff Engineer, *2020-23*
+* Apple, Individual Contributor 5, *2014-20*
+* [Infoblox](https://www.infoblox.com/products/bloxone-ddi/), Distinguished Engineer, *2012-14*
+* [Abaca](https://www.proofpoint.com/us/proofpoint-inc-acquires-abaca-technology-corporation), CTO/Architect, *2007-12*
+* [plosone.org](https://plos.org/), Senior Engineer, *2006-07*
+* Abaca, Director of Engineering, *2003-06*
+* [2Wire](https://en.wikipedia.org/wiki/2Wire), Engineering Manager, *2000-02*
+* iReady, Director of Engineering, *1999-2000*
+* [PointCast](https://en.wikipedia.org/wiki/PointCast), Principal Engineer, Engineering Manager, *1996-99*
+* Adobe, Senior Computer Scientist, *1998*
+* Sony, Lead Engineer, *1993-96*
+* [Kodak (Photo CD)](https://en.wikipedia.org/wiki/Photo_CD), Contract Programmer, *1989-93*
+
 
 ## Education
 
