@@ -12,4 +12,8 @@ To solve this, I collaborated with parent groups at two schools and assisted the
 
 Fast forward through two parent contests, three Lion contests, four Rotary contests, and over a dozen students later, I've finally reached the end! I've witnessed students conquer their fears and step up to inspire their peers and adults alike, inching closer to becoming leaders in their communities.
 
-The cherry on top? My son attended one contest and was moved by a student's speech. Without any nudging from me (as we all know, teens often do the opposite of what their parents suggest), he decided to write a speech. He put in the work, practiced, took feedback at the club level, and improved at the area level. His speech centered around community, proving the apple doesn't fall far from the tree. This experience ignited a spark in him, leading him to join Interact and secure a spot at [RYLA](https://www.ryla5170.com/) this summer. I'm excited to see what next year brings. Sometimes, things just fall into place. 😊
+The cherry on top? My son attended one contest and was moved by a student's speech. Without any nudging from me (as we all know, teens often do the opposite of what their parents suggest), he decided to write a speech. He put in the work, practiced, took feedback at the club level, and improved at the area level. This experience ignited a spark in him, leading him to join Interact (Rotary for youth) and secure a spot at [RYLA](https://www.ryla5170.com/) this summer. I'm excited to see what next year brings. Sometimes, things just fall into place. 😊
+
+For students that can't wait to try delivering their next speech, the next contest is [VFW's Voice of Democracy](https://www.vfw.org/community/youth-and-education/youth-scholarships). Sppeches are due 10/31/2023. Rotary contests start in February 2024; the 2024 theme is **"Create Hope in the World"**
+
+![lecturn](https://clipart-library.com/image_gallery/n678643.jpg)
