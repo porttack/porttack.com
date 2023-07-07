@@ -13,4 +13,7 @@ Over the years, I've attempted to ignite the same spark in my children and their
 
 Now, it's time to take a leap of faith, to clear the stage of other distractions. It's time to fully commit to this journey of sharing and learning, of inspiring and being inspired. Here's to the next chapter 📖!
 
-
+<br>
+![teaching](https://imgs.xkcd.com/comics/progeny.png)
+<br>
+(Licensed under [CC BY-NC 2.5](https://xkcd.com/license.html#:~:text=This%20means%20that%20you%20are,link%20back%20to%20this%20page.))
