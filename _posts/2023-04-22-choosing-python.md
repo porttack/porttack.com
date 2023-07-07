@@ -1,32 +1,32 @@
-This is not a difficult decision for silicon valley veterans. It has always been considered a "teaching language". A huge set of modern software engineering problems have solutions as python programs.
+---
+layout: post
+title:  "Python: The Future of K12 Coding Education"
+date:   2023-04-22
+categories: teaching
+---
 
-Yet it is far from the default choice for k12. Why? Block languages like Scratch and code.org are simply easier to get started with. There's minimal typing (which can be difficult for younger students and even for many older students). Just click-and-drag to code a solution. Neither teachers nor students need to know how to type or understand syntax. What could be easier?
+For tech veterans, the choice is clear. Python, often considered a "teaching language", is the go-to solution for a vast array of modern software engineering problems. However, it's not the default choice for K12 education. Why?
 
-## What can you do in Python that you cannot do in blocks?
+Block languages like Scratch and code.org are more accessible for beginners. They require minimal typing, which can be challenging for younger or less experienced students. The click-and-drag interface eliminates the need for understanding syntax or typing skills. It's an easy introduction to coding, but does it limit students' potential?
 
-How about downloading global temperature statistics from the internet, manipulating and plotting them in a few lines of code?
+## Python's Potential: Beyond Blocks
 
-How about reading air quality levels from a simple sensor and uploading that every second to a real time graph on the web?
+What can Python offer that block languages can't? Imagine downloading global temperature statistics from the internet, manipulating, and plotting them in just a few lines of code. Or reading air quality levels from a sensor and uploading the data to a real-time web graph every second.
 
-A student can use a free machine learning library to decide if images taken by a raspberry pi camera represent a feral cat or raccoon prowling their school after hours.
+With Python, students can use free machine learning libraries to identify whether images taken by a Raspberry Pi camera are of a feral cat or a raccoon. The knowledge gained from studying Python for 2 to 3 years in K12 can be applied to solve problems in math, science, humanities, and beyond, providing a strong foundation for college and career.
 
-Most importantly, a student studying python over 2 to 3 years in k12 will retain this knowledge to solve problems in math, science, humanities or wherever their passions carry them as they finish high school and continue to college and career.
+## The Role of Block Languages
 
-## Blocks still has its place
+Block languages aren't obsolete. Many educational programming environments now allow students to switch between blocks and Python. The translation of code in these environments can be impressive, albeit sometimes buggy.
 
-Multiple educational programming environments now allow students to switch between blocks and python. Watching these environments translate code is sometimes impressive. (And sometimes it is buggy.)
+I once thought restricting access to blocks would encourage students to use Python. However, I've found value in using AI like ChatGPT to write and refine Python programs. This approach mirrors how many future computer scientists will work. Is there really a difference between using ChatGPT to write a Python program and converting block code to Python?
 
-I always thought I'd do my best to restrict access to blocks so as to force students to use python.
+Foreign language teachers have been using tools like Google Translate for years. It's time for coding education to embrace similar advancements.
 
-But recently at work I decided to ask ChatGPT to write a python program to accomplish a specific task. And I kept using ChatGPT to refine the program and fix its own bugs. Let's get real -- this is how many future computer scientists will work.
+## The Future of Coding Education
 
-What is the difference between using ChatGPT to write a python program (complete with comments) and using blocks and then converting that to python?
+I won't be teaching block languages. When asked how to grade Scratch programs, a facilitator suggested students take screenshots and submit those. That's not the future I envision.
 
-Foreign language teachers must be laughing at other teachers. After all, they've been living with google translate for a half decade now.
+When my son was in 3rd grade, he used an Arduino, a microcontroller common in high school robotics courses, to simulate a die roll. Five years ago, it could only be programmed in the "C" language. Today, Arduinos understand Python. This evolution reflects the future of coding education - a future where Python plays a central role. 🚀🐍
 
-## Teaching Blocks
-
-That I'm not doing. I asked a scratch PD facilitator how to grade scratch programs. They suggested students take screen shots and submit those. No thanks.
-
-
-When my son was in 3rd grade, he used an Arduino to simulate a die roll. An Arduino is a microcontroller used in many high school robotics courses. Five years ago, it could only be programmed in the "C" language. Today Arduino's understand python.
+![pyton joke](https://i.imgur.com/6lggMJ8.jpg)
