@@ -4,7 +4,10 @@ title:  "From Mini Mermaids to Young Tritons: A Journey of Empowerment and Wrest
 date:   2018-04-25
 categories: teaching
 ---
-I have twins—a boy and a girl—and back in second grade, I enrolled my daughter in a self-esteem running program called Mini Mermaids. It aimed to teach young girls how to silence that negative self-talk and embrace their strengths. Little did I realize the unintended consequences of my decision.
+
+<img src="https://static.wixstatic.com/media/6cddbe_8d0cfc01553a4cce850e8e42349f05a6~mv2.png/v1/fill/w_566,h_545,al_c,lg_1,q_85,enc_auto/6cddbe_8d0cfc01553a4cce850e8e42349f05a6~mv2.png" height="300">
+
+I have twins—a boy and a girl—and back in second grade, I enrolled my daughter in a self-esteem running program called [Mini Mermaids](https://www.minimermaidrunningclub.org/about-us). It aimed to teach young girls how to silence that negative self-talk and embrace their strengths. Little did I realize the unintended consequences of my decision.
 
 My son, indignant and filled with righteous fury, confronted the parent leader/volunteer, questioning how they could exclude boys. Explaining life's unfairness to a six-year-old is no easy task, especially when his sister seemed to be getting more opportunities, a fact that irked him to no end.
 
