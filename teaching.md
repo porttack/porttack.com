@@ -29,4 +29,4 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 
 ## New Computer Science Building
 
-![New CTE Buildings](docs/assets/images/new-cte-construction1.jpeg)
+![New CTE Buildings](https://photos.app.goo.gl/9h7fraziy63EsEUr8)
