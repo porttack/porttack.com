@@ -33,7 +33,7 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 * Thursday, Aug 24th - SLVHS Back to school Night
 * Tuesday, Aug 29th - SLVE Back to school Night
 * Thursday, Sept 14th 7:00pm PAC - Screenagers Next Chapter (about teen anxiety)
-* Tuesday, Aug 19th 6:30pm - Maker's Night / Coderdojo
+* Tuesday, Sept 19th 6:30pm - Maker's Night / Coderdojo
 
 ## New Computer Science Building
 
