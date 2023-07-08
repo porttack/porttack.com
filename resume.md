@@ -8,7 +8,7 @@ Eric Brown <br> [ericbrown@porttack.com](mailto:ericbrown@porttack.com)
 
 ## Professional Objective
 
-Interested in parttime work starting summer 2024. Individual contributor and/or technical leadership position in a dynamic and creative environment.
+Individual contributor and/or technical leadership position in a dynamic and creative environment. Part-time work only.
 
 ## Summary
 
