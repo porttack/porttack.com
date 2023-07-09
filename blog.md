@@ -6,5 +6,5 @@ layout: home
 title: Blog
 permalink: /blog/
 ---
-All opinions are solely my own. Please send any feedback or comments to [ericbrown@porttack.com](mailto:ericbrown@porttack.com?subject=blog).
+All opinions are solely my own. Please send any feedback or comments to [ericbrown@porttack.com](mailto:ericbrown@porttack.com?subject=porttack.com%20Blog%20Feedback).
 
