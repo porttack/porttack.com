@@ -11,7 +11,7 @@ categories: teaching
 
 Rituals are important. They are collective habits that foster a sense of community.
 
-From kindergarten to 12th grade, my childhood school day always commenced with the recitation of the Pledge of Allegiance. At that time, I didn't give it much thought and may have even dozed off had I not been required to stand. Not until I had my own children and went to their school did I reflect on its meaning. Why wasn't it a part of their school? I felt loss. The Pledge symbolizes the recognition that there is something greater than ourselves—a reminder that we are part of a broader community and bear responsibilities towards it.
+From kindergarten to 12th grade, my childhood school day always commenced with the recitation of the Pledge of Allegiance. At that time, I didn't give it much thought and may have even dozed off had I not been required to stand. Not until I had my own children and went to their school did I reflect on its meaning. Why wasn't it a part of their school? I felt a loss for them. The Pledge symbolizes the recognition that there is something greater than ourselves—a reminder that we are part of a broader community and bear responsibilities towards it. (One principal did reinstate the Pledge one day a week for a few years.)
 
 While preparing for my teaching interview, I contemplated how I could inspire my students to embrace a sense of purpose beyond themselves. According to the teacher interview guides, I needed to be ready to discuss classroom management and the rules I would implement.
 
