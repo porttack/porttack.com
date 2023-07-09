@@ -4,7 +4,7 @@ title:  "Empowering Voices: The Journey of 2023 Youth Speech Contests"
 date:   2023-04-30
 categories: rotary lions
 ---
-This year, I set out to reintroduce the Lions speech contest to the schools I support. I firmly believe in the power of rhetoric as a tool for fostering youth leadership, and with a potential [$20k scholarship](https://studentspeakersfoundation.org/) up for grabs, what better incentive could there be? It's crucial to amplify the voices of our youth. 📣
+This year, I set out to reintroduce the [Lions speech contest](https://www.northerncalifornialions.org/studentspeakercontest) to the schools I support. I firmly believe in the power of rhetoric as a tool for fostering youth leadership, and with a potential [$20k scholarship](https://studentspeakersfoundation.org/) up for grabs, what better incentive could there be? It's crucial to amplify the voices of our youth. 📣
 
 The Lion's contest theme was **"Social Media: Connects us or Isolates us"**. However, my Lions club could only accommodate 4 to 6 student speakers. This posed a challenge: what if we had an overflow of interested students? And how could I simultaneously promote the [Rotary speech contest](https://rotarydistrict5170.org/sitepage/speech-contest) with its enticing $1500 prize?
 
