@@ -17,7 +17,7 @@ While preparing for my teaching interview, I contemplated how I could inspire my
 
 Now, here's where another story enters the picture: my involvement in Rotary. I joined Rotary because of its Four-Way Test, a set of ethical guidelines. While some Rotary clubs recite the Pledge, mine stands and recites the Four-Way Test at the start of every meeting. This prompted me to wonder if Rotary's Four-way test could serve multiple purposes in my classroom — a ritual encompassing several elements. It could become a call to a larger community, promoting inclusion, character, and responsibility. Implicit classroom rules?
 
-So I asked a student. When it comes to engaging with teenagers, the best conversations often occur when they're trapped in a car with you. During a 10-hour drive back from Oregon, I took the opportunity to discuss this idea with my son. He attends my Rotary club's meetings and recently participated in the Rotary speech contest. He understood the context, so I sought his input. Rarely do I expect complete agreement from my children, but this time, he didn't need much time to ponder.
+So I asked a high school student. I asked my son. He attends my Rotary club's meetings and recently participated in the Rotary speech contest. He understoods the four-way test and he's in a lot of classrooms. Rarely do I expect complete agreement from my children, but this time, he didn't need much time to ponder.
 
 We'll see how the interview goes. More importantly, we'll see how students respond.
 

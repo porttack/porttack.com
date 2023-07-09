@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Screenagers Next Chapter - Youth Anxiety"
+title:  "Screenagers Next Chapter & Youth Anxiety"
 date:   2023-02-27
 categories: teaching
 ---

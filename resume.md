@@ -54,6 +54,7 @@ Individual contributor and/or technical leadership position in a dynamic and cre
 
 ## Experience
 
+* [SLVUSD](/teaching/), Computer Science Teacher, *2023-2024*
 * [Khan Academy](https://www.khanacademy.org/), Staff Engineer, *2020-23*
 * [Apple (iCloud Mail)](https://www.icloud.com/mail), Individual Contributor 5, *2014-20*
 * [Infoblox](https://www.infoblox.com/products/bloxone-ddi/), Distinguished Engineer, *2012-14*
