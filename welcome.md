@@ -37,8 +37,8 @@ San Lorenzo Valley [High School](https://hs.slvusd.org) and [Middle School](http
 <img src="/docs/assets/images/porttack-sailor.png" height="180">
 <br><br>
 <span style="font-size: 90%;">
-*In sailing, a "port tack" refers to the orientation of a sailing vessel relative to the wind. When a boat is on a port tack, the wind is coming from the port side (left side) of the boat. <!-- The term "tack" refers to the side of the boat that the wind is coming from. -->
+*In sailing, "port tack" refers to the orientation of a sailboat relative to the wind. When a boat is on a port tack, the wind is coming from the port side (left side) of the boat. <!-- The term "tack" refers to the side of the boat that the wind is coming from. -->
 In practical terms, when a boat is on a port tack, the wind is hitting the port side of the sails, and the sails are typically trimmed (adjusted) to allow the boat to sail in the desired direction. The opposite of a port tack is a "starboard tack," where the wind is coming from the starboard side (right side) of the boat.
-Understanding the tack of a sailboat is crucial for determining right-of-way and avoiding collisions, as the rules of sailing often prioritize the vessel on a starboard tack over one on a port tack when they approach each other.
+Understanding the tack of a sailboat is crucial for determining right-of-way and avoiding collisions, as the rules of sailing are that the sailboat on a starboard tack has rights over one on a port tack.
 (starboardtack.com was taken when I was looking for a domain name two decades ago. Both my wife and I are left handed and port is easier to spell than starboard, so "now you know" why my site is named porttack.com!)*
 </span>
