@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Reflecting on Accomplishments: Nurturing Growth in Education and Community"
-date:   2022-12-24
+date:   2022-06-15
 categories: parenting
 ---
-Wrapping up my time with a school is always bittersweet, a time to invest social capital, and build programs. This year, my son and daughter completed their middle school journey at Nature Academy and SLVMS. 
+Wrapping up my time with a school is always bittersweet, a time to spend some social capital, and give back. This year, my son and daughter completed their middle school journey at Nature Academy and SLVMS. 
 
 With the help of many, we introduced chess, mock trial, and self-defense programs to both schools. Additionally, SLVMS received two new murals from the same artist we collaborated with at SLVE before the COVID-19 pandemic, with students lending a hand in creating one of them. Scholarships were provided for outdoor school activities at Nature Academy, and we expanded scholarships through SLVFE for graduating SLVHS students. Personally, I had the opportunity to go on an amazing outdoor school field trip with my son and participate in several scouting camps and overnighters. Witnessing the growth and maturation of my own children, as well as students I've known since kindergarten, into young adults has been an incredibly rewarding experience. Moreover, the adult community, along with the teachers and parents who guide these children, have also evolved and matured in their own ways.
 

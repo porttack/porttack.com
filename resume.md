@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resume
-permalink: /resume/
+permalink: /resume.html
 ---
 
 Eric Brown <br> [ericbrown@porttack.com](mailto:ericbrown@porttack.com)

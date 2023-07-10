@@ -22,7 +22,7 @@ title: porttack.com
 #author:
 #  name: Eric Brown
 #  email: ericbrown@porttack.com
-permalink: pretty
+permalink: /:year/:month/:day/:title:output_ext
 paginate: 5
 paginate_path: /page-:num
 email: ericbrown@porttack.com
@@ -60,7 +60,7 @@ font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
 header_pages:
 - welcome.md
-- teaching.md
+- slv.md
 - blog.md
 - resume.md
 
