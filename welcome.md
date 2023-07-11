@@ -8,7 +8,7 @@ permalink: /
 order: 1
 ---
 
-I'm Eric Brown -- [teacher](/teaching/), husband, father, rotarian, engineer, sailor and runner. On this site you can find [information about my classes](/slv/), my [blog](/blog/), and a copy of my [resume](/resume/).
+I'm Eric Brown -- [teacher](/slv/), husband, father, rotarian, engineer, sailor and runner. On this site you can find [information about my classes](/slv/), my [blog](/blog/), and a copy of my [resume](/resume/).
 
 ## A brief bio
 
