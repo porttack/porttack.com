@@ -25,15 +25,15 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 
 ### Community
 
-* Maker's Night / Coderdojo (3rd Tuesdays 6:30-8:30pm)
+* Maker's Night / Coderdojo (1st Tuesdays 6:30-8:30pm)
 
 ### Upcoming Events
 
 * Thursday, Aug 17th - SLVMS Back to school Night
 * Thursday, Aug 24th - SLVHS Back to school Night
 * Tuesday, Aug 29th - SLVE Back to school Night
+* Tuesday, Sept 5th 6:30pm - Maker's Night / Coderdojo
 * Thursday, Sept 14th 7:00pm PAC - Screenagers Next Chapter (about teen anxiety)
-* Tuesday, Sept 19th 6:30pm - Maker's Night / Coderdojo
 
 ## New Computer Science Building
 
