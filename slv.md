@@ -9,7 +9,7 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 ## Programs
 ### [SLV High School](https://hs.slvusd.org)
 
-* ICT Essentials (co-teaching with Mr. Rollins) - 9th Grade / 3rd period
+* Student Repair Academy - 3rd period Mondays
 * Computer Science AP Principals - 2nd period
 * Robotics - 5th period
 
