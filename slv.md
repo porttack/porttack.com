@@ -9,9 +9,9 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 ## Programs
 ### [SLV High School](https://hs.slvusd.org)
 
+* Programming and Robotics - 2nd period
+* Computer Science AP Principals - 5th period
 * Student Repair Academy - 3rd period Mondays
-* Computer Science AP Principals - 2nd period
-* Robotics - 5th period
 
 ### [SLV Middle School](https://ms.slvusd.org)
 
