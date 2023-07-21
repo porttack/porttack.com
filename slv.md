@@ -15,8 +15,8 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 
 ### [SLV Middle School](https://ms.slvusd.org)
 
-* 8th Grade Computer Science (1 semester) - 4th period
-* [7th Grade Computer Science](cs7) (1 semester) - 6th period
+* CS 110 Sixth-grade Computer Science Wheel (quarter long) - 4th period
+* CS 007 Seventh-grade Computer Science (1 semester) - 6th period
 * Underwater ROV Club (Tuesdays after school)
 
 ### SLV Elementary School
