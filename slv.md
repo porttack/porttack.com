@@ -19,10 +19,11 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 * CS 007 Seventh-grade Computer Science (1 semester) - 6th period
 * Underwater ROV Club (Tuesdays after school)
 
+<!--
 ### SLV Elementary School
 
 * 4th/5th Grade Coding Fridays (after school)
-
+-->
 ### Community
 
 * Maker's Night / Coderdojo (1st Tuesdays 6:30-8:30pm)
