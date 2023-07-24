@@ -12,6 +12,7 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 * Programming and Robotics - 2nd period
 * Computer Science AP Principals - 5th period
 * Student Repair Academy - 3rd period Mondays
+  * [IT Essentials](https://itessentials.santacruzcoe.org/course-outline) taught by Mr. Rollins - 3rd period Tuesday & Thursday
 
 ### [SLV Middle School](https://ms.slvusd.org)
 
