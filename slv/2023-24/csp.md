@@ -3,7 +3,6 @@ layout: page
 title: Computer Science Principals Description
 permalink: /slv/2024/csp
 ---
-## Computer Science Principals AP Description
 
 **Grades:** 10-12 (or brief teacher interview)
 <br>
@@ -28,6 +27,8 @@ permalink: /slv/2024/csp
 Please check back here on August 6th, 2023.
 
 ### Syllabus
+
+We are still evaluating which Computer Science Principles platform will deliver the best outcome for student success.
 
 * [Harvard CS50 AP](https://cs50.harvard.edu/ap/2024/) - Consider watching this [video](https://youtu.be/tZxLMIk_SaY)
 * [Code.org + Carnegie Mellon University CS Academy CSP](https://drive.google.com/drive/folders/1H0xDreMoCDCHqKAetrdl1OfsV5Nkg7n5)
