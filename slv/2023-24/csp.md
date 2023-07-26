@@ -3,11 +3,11 @@ layout: page
 title: AP Computer Science Principles
 permalink: /slv/2024/csp
 ---
-## Prerequisites
+## Requirements
 
 **Grades:** 10-12 (or brief teacher interview)
 <br>
-**Classes:** Math 1 (or brief teacher interview)
+**Prerequisites:** Math 1 (or brief teacher interview)
 <br>
 (The primary purpose of the teacher interview is to assess maturity and establish expectations for rigor. Email [Mr. Brown](mailto:ebrown@slvusd.org) to schedule.)
 
