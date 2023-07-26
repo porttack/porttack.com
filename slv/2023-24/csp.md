@@ -11,12 +11,12 @@ permalink: /slv/2024/csp
 <br>
 (The primary purpose of the teacher interview is to assess maturity and establish expectations for rigor. Email [Mr. Brown](mailto:ebrown@slvusd.org) to schedule.)
 
-**Course Goal:** Provide students with opportunities to learn and demonstrate computer science skills that colleges consider favorably during admissions. 
+**Course Goals:** The course aims to (1) provide students with opportunities to learn and demonstrate computer science skills that colleges consider favorably during admissions, and (2) teach students tools that they can easily reuse as they continue their education and pursue careers. 
 
 **Rigor Expectations:**
-* We will use either the Harvard or Carnegie Mellon AP curriculum designed for Algebra-ready 10th-12th graders.
-* There is a mandatory performance project due in April, which is worth 30% of the grade. Classroom time will be allocated for this purpose.
-* As college admissions favor deep commitments to students' areas of study, participation in CruzHacks 2024 (February), Santa Cruz Engineering/Science Fair, Raspberry Pi Coolest Projects, and/or California Invention Convention is strongly encouraged and supported.
+* We will use either the Harvard or Carnegie Mellon AP curriculum designed for Algebra-ready high school students.
+* There is a mandatory [project ("Create Performance Task")](https://apcentral.collegeboard.org/media/pdf/ap-csp-student-task-directions.pdf) due in April, which is worth 30% of the grade. Classroom time will be allocated for this purpose.
+* As college admissions favor deep commitments to students' areas of study, participation in CruzHacks 2024 (February), Santa Cruz Engineering/Science Fair, Raspberry Pi Coolest Projects, and/or California Invention Convention is encouraged and supported.
 * There is a manageable amount of homework.
 
 **Teacher’s Note/Goal:** Computer Science and Engineering are fun. It isn't always easy – I get frustrated with my computer sometimes – but I hope to inspire students to experience the same thrill and enjoyment I get from solving problems with technology. I will also strive to adjust expectations and projects appropriately based on students' abilities.

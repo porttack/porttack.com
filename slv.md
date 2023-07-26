@@ -9,8 +9,8 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 ## Programs
 ### [SLV High School](https://hs.slvusd.org)
 
-* Programming and Robotics - 2nd period
-* [Computer Science Principals (AP)](/slv/2023-24/csp.md) - 5th period
+* [Programming, Robotics and IoT](/slv/2023-24/robotics.md) - 2nd period
+* [AP Computer Science Principles](/slv/2023-24/csp.md) - 5th period
 * Student Repair Academy - 3rd period Mondays
   * [IT Essentials](https://itessentials.santacruzcoe.org/course-outline) taught by Mr. Rollins - 3rd period Tuesday & Thursday
 
