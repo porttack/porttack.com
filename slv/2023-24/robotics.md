@@ -21,6 +21,18 @@ As you progress, you'll embark on exciting projects that merge the realms of pro
 
 Immerse yourself in the cutting-edge world of "Programming, Robotics, and the Internet of Things" and shape the future with your innovative creations. Gain the skills and confidence to build and control intelligent devices, paving the way for a promising future in the realm of technology and innovation.
 
+## Student Expectations
+
+1. **Active Participation & Collaboration:** Engage actively in discussions, group activities, and projects, working collaboratively with classmates to achieve shared goals.
+
+2. **Responsible Attendance & Respectful Behavior:** Attend classes regularly, arriving on time, and demonstrate respect for equipment and resources.
+
+3. **Curiosity, Creativity & Innovative Projects:** Cultivate curiosity, think creatively, and explore innovative solutions through exciting programming, robotics, and IoT projects.
+
+4. **Effort, Perseverance & Skill Development:** Put in effort, persevere through challenges, and actively develop your programming, robotics, and IoT skills.
+
+5. **Homework Completion & Continuous Learning:** Expect homework that complements the course material, reinforcing your understanding of computational thinking concepts without overwhelming you.
+
 ## Required School Supplies
 
 Please check back here on August 6th, 2023.
