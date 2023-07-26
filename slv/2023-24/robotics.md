@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Robotics, Programming and IoT
+title: Programming, Robotics and IoT
 permalink: /slv/2024/robotics
 ---
 ## Requirements
