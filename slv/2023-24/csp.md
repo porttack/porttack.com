@@ -3,13 +3,15 @@ layout: page
 title: AP Computer Science Principles
 permalink: /slv/2024/csp
 ---
-## Course Description
+## Prerequisites
 
 **Grades:** 10-12 (or brief teacher interview)
 <br>
-**Prerequisites:** Math 1 (or brief teacher interview)
+**Classes:** Math 1 (or brief teacher interview)
 <br>
 (The primary purpose of the teacher interview is to assess maturity and establish expectations for rigor. Email [Mr. Brown](mailto:ebrown@slvusd.org) to schedule.)
+
+## Course Description
 
 **Course Goals:** The course aims to (1) provide students with opportunities to learn and demonstrate computer science skills that colleges consider favorably during admissions, and (2) teach students tools that they can easily reuse as they continue their education and pursue careers. 
 
@@ -21,13 +23,11 @@ permalink: /slv/2024/csp
 
 **Teacher’s Note/Goal:** Computer Science and Engineering are fun. It isn't always easy – I get frustrated with my computer sometimes – but I hope to inspire students to experience the same thrill and enjoyment I get from solving problems with technology. I will also strive to adjust expectations and projects appropriately based on students' abilities.
 
----
-
-### Required School Supplies
+## Required School Supplies
 
 Please check back here on August 6th, 2023.
 
-### Syllabus
+## Syllabus
 
 We are still evaluating which Computer Science Principles platform will deliver the best outcomes for student success.
 
