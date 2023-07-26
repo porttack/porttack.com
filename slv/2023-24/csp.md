@@ -15,7 +15,7 @@ The primary purpose of the teacher interview is to assess maturity and establish
 
 **Course Goals:** This course aims to (1) cultivate students' computational thinking abilities, fostering problem-solving skills that transcend specific tools and technologies, empowering them to approach challenges like computer scientists. Additionally, (2) students will gain exposure to various practical tools in computer science, which they can readily apply throughout their academic journey and future careers. Moreover, (3) the course will assist students in preparing a portfolio that showcases their problem-solving capabilities and technical skills, positioning them favorably in the eyes of colleges during the admissions process and beyond. 
 
-**Rigor Expectations:**
+**Student Expectations:**
 * We will use either the Harvard or Carnegie Mellon AP curriculum designed for Algebra-ready high school students.
 * There is a mandatory [project ("Create Performance Task")](https://apcentral.collegeboard.org/media/pdf/ap-csp-student-task-directions.pdf) due in April, which is worth 30% of the grade. Classroom time will be allocated for this purpose.
 * As college admissions favor deep commitments to students' areas of study, participation in CruzHacks 2024 (February), Santa Cruz Engineering/Science Fair, Raspberry Pi Coolest Projects, and/or California Invention Convention is encouraged and supported.
