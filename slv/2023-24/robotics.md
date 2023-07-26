@@ -1,19 +1,19 @@
 ---
 layout: page
 title: Robotics, Programming and IoT
-permalink: /slv/2024/csp
+permalink: /slv/2024/robotics
 ---
 ## Prerequisites
 
 **Grades:** 10-12 (or brief teacher interview)
 <br>
-**Prerequisites:** Math 1 (or brief teacher interview)
+**Classes:** Math 1 (or brief teacher interview)
 <br>
 (The primary purpose of the teacher interview is to assess maturity and establish expectations for rigor. Email [Mr. Brown](mailto:ebrown@slvusd.org) to schedule.)
 
 ## Course Description
 
-Become a creator. Discover the power of coding as you explore the Python programming language to control a wide array of robotics technologies and Internet of Things (IoT).
+Become a creator. Discover the power of coding as you explore the Python programming language to control a wide array of robotics technologies and **Internet of Things** (IoT).
 
 In this hands-on learning experience, you'll delve into the fundamentals of electronics, sensors, coding, and 3D printing (time permitting). Gain practical knowledge in designing and assembling circuits, and unleash your creativity in creating functional 3D-printed components. With IoT, you'll have opportunities to explore cloud computing, artificial intelligence, and internet-connected gadgets, uncovering their immense potential for solving real-world problems.
 
