@@ -9,7 +9,7 @@ permalink: /slv/2024/robotics
 <br>
 **Prerequisites:** Math 1 (or brief teacher interview)
 <br>
-(The primary purpose of the teacher interview is to assess maturity and establish expectations for rigor. Email [Mr. Brown](mailto:ebrown@slvusd.org) to schedule.)
+The primary purpose of the teacher interview is to assess maturity and establish expectations for rigor. Email [Mr. Brown](mailto:ebrown@slvusd.org) to schedule.
 
 ## Course Description
 
