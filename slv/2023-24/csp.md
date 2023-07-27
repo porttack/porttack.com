@@ -3,6 +3,7 @@ layout: page
 title: AP Computer Science Principles
 permalink: /slv/2024/csp
 ---
+(5th Period)
 ## Requirements
 
 **Grades:** 10-12 (or brief teacher interview)

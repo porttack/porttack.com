@@ -3,6 +3,7 @@ layout: page
 title: Programming, Robotics and IoT
 permalink: /slv/2024/robotics
 ---
+(2nd Period)
 ## Requirements
 
 **Grades:** 10-12 (or brief teacher interview)
