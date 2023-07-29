@@ -37,6 +37,10 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 * Tuesday, Sept 5th 6:30pm - Maker's Night / Coderdojo
 * Thursday, Sept 14th 7:00pm PAC - Screenagers Next Chapter (about teen anxiety)
 
+## Why should you learn to program
+
+<iframe width="100%" src="https://www.youtube.com/watch?v=xfBWk4nw440" frameborder="0" allowfullscreen></iframe>
+
 ## New Computer Science Building
 
 ![New CTE Buildings](https://lh3.googleusercontent.com/pw/AIL4fc9Wf8EAP6FwjR0mhvBQWzIXs8VWDcTnZsVTfhY95dsXTv8nqiQz08-FoFN1b6Y0i9U-Tr4VeKGDHZ-0wmKd9YBSa21fZndBDedl8Gbp6xo1T3MQZzI=w2400)
