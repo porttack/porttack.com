@@ -18,7 +18,7 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 
 * CS 110 Sixth grade Computer Science Wheel (quarter long) - 4th period
 * CS 007 Seventh grade Computer Science (semester long) - 6th period
-* Underwater ROV Club (Tuesdays after school)
+* [Underwater ROV Club](https://materovcompetition.org/) (Tuesdays after school)
 
 <!--
 ### SLV Elementary School
@@ -27,7 +27,7 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 -->
 ### Community
 
-* Maker's Night / Coderdojo (1st Tuesdays 6:30-8:30pm)
+* Maker's Night / [Coderdojo](https://coderdojo.com/en/about) (1st Tuesdays 6:30-8:30pm)
 
 ### Upcoming Events
 
@@ -35,11 +35,12 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 * Thursday, Aug 24th - SLVHS Back to school Night
 * Tuesday, Aug 29th - SLVE Back to school Night
 * Tuesday, Sept 5th 6:30pm - Maker's Night / Coderdojo
-* Thursday, Sept 14th 7:00pm PAC - Screenagers Next Chapter (about teen anxiety)
+* Thursday, Sept 14th 7:00pm PAC - [Screenagers Next Chapter](https://www.screenagersmovie.com/about-screenagers-next-chapter) (about teen anxiety)
 
 ### Competitions
 
 * [NCSS Challenge](https://groklearning.com/challenge/) - 7/30/23 - 9/2/23 - 4 levels - collect points at all levels - entering late is fine - email [Mr. Brown](mailto:ebrown@slvusd.org) by 8/18/23 (earlier to get started now!)
+* [Voice of Democracy](https://www.vfw.org/community/youth-and-education/youth-scholarships) - MS & HS - Due 10/31/2023
 * Santa Cruz Hacks - February 2024
 * Harvard [cs50 Puzzle Day](https://cs50.medium.com/this-was-cs50x-puzzle-day-2023-1134de6012c6) (open to any high school student) ~3/31/2024
 * [Your Voice is Power](https://www.amazonfutureengineer.com/yourvoiceispower) - To be determined
