@@ -37,6 +37,14 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 * Tuesday, Sept 5th 6:30pm - Maker's Night / Coderdojo
 * Thursday, Sept 14th 7:00pm PAC - Screenagers Next Chapter (about teen anxiety)
 
+### Competitions
+
+* [NCSS Challenge](https://groklearning.com/challenge/) - 7/30/23 - 9/2/23 - 4 levels - collect points at all levels - entering late is fine - email [Mr. Brown](mailto:ebrown@slvusd.org) by 8/18/23
+* Santa Cruz Hacks - February 2024
+* Harvard [cs50 Puzzle Day](https://cs50.medium.com/this-was-cs50x-puzzle-day-2023-1134de6012c6) (open to any high school student) ~3/31/2024
+* [Your Voice is Power](https://www.amazonfutureengineer.com/yourvoiceispower) - To be determined
+* [CS50 AP Fair](https://spencertiberi.github.io/playbook50/events/cs50fair) - May 2024
+
 ## Why learn Computer Science?
 
 {% include youtube.html id="xfBWk4nw440" %}
