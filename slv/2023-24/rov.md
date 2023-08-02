@@ -3,7 +3,10 @@ layout: page
 title: Underwater ROV Club
 permalink: /slv/2024/rov
 ---
-🌊 Embark on an exhilarating underwater adventure and join our Middle School ROV Club! Dive into the captivating world of building underwater robots, where science, technology, applied math, engineering, and entrepreneurial skills come together in a thrilling learning experience. 🔧🔬 With MATE's cutting-edge underwater robot and remotely operated vehicle (ROV) kits, students of all ages can unleash their creativity and curiosity. 🚀
+
+(Tuesdays 2:45 pm - 4:45 pm -- September to May)
+
+🌊 Embark on an exhilarating underwater adventure and join the SLV Middle School ROV Club! Dive into the captivating world of building underwater robots, where science, technology, applied math, engineering, and entrepreneurial skills come together in a thrilling learning experience. 🔧🔬 With MATE's cutting-edge underwater robot and remotely operated vehicle (ROV) kits, middle school students can unleash their creativity and curiosity. 🚀
 
 Discover the joy of hands-on learning as you progress from beginner to advanced levels, guided by your own passion to enhance the capabilities of your robots. Our club offers a safe and supportive environment, where you can build upon your knowledge and skills while having fun with like-minded peers. 🤝🌟
 
@@ -11,7 +14,10 @@ Join us and unlock a world of exploration beneath the waves, gaining invaluable 
 
 ## Application
 
-Get ready for an unforgettable opportunity! Brace yourselves as we gear up to launch the most thrilling application process ever! The countdown has begun for an exclusive chance to join our elite team. Are you prepared to seize the moment? We're searching for 12 to 15 exceptional students who are ready to embark on an adventure like no other. Stay tuned for updates on when the gates to this incredible opportunity will swing wide open! Don't miss your shot to be a part of this extraordinary journey!
+📢 Ahoy there! ⚓️ Attention 6th to 8th graders! 🎉 The moment you've been waiting for is on the horizon! 🚀🌟 Soon, we'll be setting sail on an underwater adventure like no other with the SLV Middle School ROV Club!
+
+🚀⏳ **The application process is not yet open**, but keep your eyes peeled for updates! We'll be accepting a lucky crew of 12 to 15 students to join this thrilling expedition. ⛵🌊
+
 
 ## Schedule & Attendance
 
