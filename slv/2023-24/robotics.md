@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Programming, Robotics and IoT
-permalink: /slv/2024/robotics
+permalink: /slv/2023-24/robotics
 ---
 (2nd Period)
 ## Requirements

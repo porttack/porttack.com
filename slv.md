@@ -7,18 +7,18 @@ permalink: /slv/
 I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my classes this year, I look forward to getting to know you. The best way to connect with me is via my school email address, [ebrown@slvusd.org](mailto:ebrown@slvusd.org).
 
 ## Programs
-### [SLV High School](https://hs.slvusd.org)
+### 🏢 [SLV High School](https://hs.slvusd.org) 🎓
 
-* [Programming, Robotics and IoT](/slv/2023-24/robotics.md) - 2nd period
-* [AP Computer Science Principles](/slv/2023-24/csp.md) - 5th period
-* Student Repair Academy - 3rd period Mondays
+* [Programming, Robotics and IoT](/slv/2023-24/robotics.md) - 2nd period 🖥️🤖🌐
+* [AP Computer Science Principles](/slv/2023-24/csp.md) - 5th period 📚💻🎓
+* Student Repair Academy - 3rd period Mondays 🔧🛠️👨‍🔧
   * [IT Essentials](https://itessentials.santacruzcoe.org/course-outline) taught by Mr. Rollins - 3rd period Tuesday & Thursday
 
-### [SLV Middle School](https://ms.slvusd.org)
+### 🏫 [SLV Middle School](https://ms.slvusd.org) 🎒
 
-* CS 110 Sixth grade Computer Science Wheel (quarter long) - 4th period
-* CS 007 Seventh grade Computer Science (semester long) - 6th period
-* [Underwater ROV Club](https://materovcompetition.org/) (Tuesdays after school)
+* [CS 110 Sixth grade Computer Science Wheel (quarter long)](/slv/2023-24/cs110a.md) - 4th period ⏰🐍
+* CS 007 Seventh grade Computer Science (semester long) - 6th period ⏰🖥️
+* [Underwater ROV Club](/slv/2023-24/rov.md) (Tuesdays after school) 🌊🤿🔧
 
 <!--
 ### SLV Elementary School
@@ -39,7 +39,7 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 
 ### Competitions
 
-* [NCSS Challenge](https://groklearning.com/challenge/) - 7/30/23 - 9/2/23 - 4 levels - collect points at all levels - entering late is fine - email [Mr. Brown](mailto:ebrown@slvusd.org) by 8/18/23 (earlier to get started now!)
+* [NCSS Challenge](https://groklearning.com/challenge/) - 7/30/23 - 9/2/23 - 4 levels - collect points at all levels - entering late is fine - email [Mr. Brown](mailto:ebrown@slvusd.org) by 8/18/23 (earlier to get started now!) 📅💻📈
 * [Voice of Democracy](https://www.vfw.org/community/youth-and-education/youth-scholarships) - MS & HS - Due 10/31/2023
 * Santa Cruz Hacks - February 2024
 * Harvard [cs50 Puzzle Day](https://cs50.medium.com/this-was-cs50x-puzzle-day-2023-1134de6012c6) (open to any high school student) ~3/31/2024

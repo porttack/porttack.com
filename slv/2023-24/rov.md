@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Underwater ROV Club
-permalink: /slv/2024/rov
+permalink: /slv/2023-24/rov
 ---
 
 (Tuesdays 2:45 pm - 4:45 pm -- September to May)
