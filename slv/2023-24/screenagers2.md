@@ -20,7 +20,7 @@ permalink: /screenagers
 * 📉 Since 2012, there has been a 50% increase in teens reporting depressive symptoms. 😔😞
 * 👦👧 Half of adults with mental health challenges experienced symptoms before age 15. 🚻💔
 * 😴🌙 Teens are recommended to sleep 8-10 hours each night, however, 41% get 7 hours or less (American Academy of Sleep Medicine). 😴⏰😴
-* 📱💤 Of those with devices in their rooms, 36% of teens wake at night to check them. 📱🌙😴
+* 📱💤 Of those with devices in their rooms, 36% of [teens wake at night to check them](https://amp.commonsense.org/blog/a4de87ae-0a09-4248-9a98-e7519234a9eb). 📱🌙😴
 * 👂💙 By listening to our teens, providing support, and connecting them to appropriate resources and services, families have an important role to play. 🤝👪💼
 * 🤝💪 Our teens don't need to suffer, and we can help! 🤗🙌
 
