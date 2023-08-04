@@ -24,6 +24,12 @@ permalink: /screenagers
 * 👂💙 By listening to our teens, providing support, and connecting them to appropriate resources and services, families have an important role to play. 🤝👪💼
 * 🤝💪 Our teens don't need to suffer, and we can help! 🤗🙌
 
-## Trailer
+### Trailer
 
 {% include youtube.html id="ecDraB2YExA" %}
+
+### Synopsis
+
+Filmmaker and physician Delaney Ruston uses a personal lens and professional eye to help us all flip the script on stress, anxiety, and depression. We follow Delaney as she finds herself at a loss on how to help her own teens as they struggle with their emotional wellbeing. Ruston sets out to understand these challenges in our current screen-filled society, and how we as parents and schools empower teens to overcome mental health challenges and build emotional agility, communication savvy, and stress resilience.
+
+We witness Delaney as she finds her way from ineffective parenting to much-improved strategies. We follow other personal stories of families from an array of backgrounds with a spectrum of emotional challenges. We also observe approaches in schools that provide strategies relevant beyond the classroom setting. Interwoven into the stories are surprising insights from brain researchers, psychologists, and thought-leaders that reveal evidence-based ways to support mental wellness among our youth. The impact of social media and screen time in general is incorporated in topics brought to our attention in Screenagers NEXT CHAPTER, how it may be impacting our teen’s mental health, and what we can do to help support youth in the face of struggles.
