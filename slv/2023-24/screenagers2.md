@@ -11,7 +11,7 @@ San Lorenzo Valley High School, 7105 Highway 9, Felton, CA 95018
 
 This is a movie for parents and teenagers. It is appropriate for 6th-12th graders **and** their parents. Parents and teens are welcome to join together or on their own. (We strongly encourage parents to bring their 6th grade+ children if they can, but come on their own if they cannot.)
 
-<img align="right" src="/docs/assets/images/screenagers_facts.gif" width="250">
+<img align="right" src="/docs/assets/images/screenager_facts.gif" width="250">
 
 
 ## Facts this movie discusses include
