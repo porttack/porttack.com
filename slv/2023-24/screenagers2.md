@@ -3,7 +3,7 @@ layout: page
 title: Screenagers Next Chapter
 permalink: /screenagers
 ---
-<img align="right" src="/docs/assets/images/screenager_facts.gif" width="325" style="border:10px">
+<img align="right" src="/docs/assets/images/screenager_facts.gif" width="325" style="border: 15px solid white;">
 
 ### Thursday, September 14th, 6:30pm
 
