@@ -1,15 +1,15 @@
 ---
 layout: page
 title: Screenagers Next Chapter
-permalink: /slv/2023-24/screenagers-nextchapter
+permalink: /screenagers
 ---
-<img align="right" src="/docs/assets/images/screenager_facts.gif" width="300">
+<img align="right" src="/docs/assets/images/screenager_facts.gif" width="325" style="border:10px">
 
 ### Thursday, September 14th, 6:30pm
 
 🏫 San Lorenzo Valley High School, 7105 Highway 9 📚
 
-Join us and learn more about solutions to the anxiety, depression, suicidal ideation, and other mental health challenges our kids are experiencing. 💪😌🧠
+**Join us and learn more about solutions to the anxiety, depression, suicidal ideation, and other mental health challenges our kids are experiencing.** 💪😌🧠
 
 🎬 This is a movie for parents and teenagers. It is appropriate for 6th-12th graders and their parents. Parents and teens are welcome to join together or on their own. (We strongly encourage parents to bring their 6th grade+ children if they can, but come on their own if they cannot.) 👪👩‍👧👩‍👦🧑‍🤝‍🧑
 
