@@ -1,8 +1,10 @@
 ---
 layout: page
-title: Screenagers Next Chapter
+title: Screenagers Next Chapter at SLV
 permalink: /screenagers
 ---
+This movie is about teen anxiety. It is not the same as the first screenagers movie about screen time!
+
 <img align="right" src="/docs/assets/images/screenager_facts.gif" width="275" style="border: 8px solid white;">
 
 ### Thursday, September 14th, 6:30pm
