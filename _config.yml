@@ -18,15 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-name: Eric Brown
-title: null
+name: null
+title: Eric Brown
 #author:
 #  name: Eric Brown
 #  email: ericbrown@porttack.com
 permalink: /:year/:month/:day/:title:output_ext
 paginate: 5
 paginate_path: /page-:num
-email: ericbrown@porttack.com
+#email: ericbrown@porttack.com
+email: null
 description: >- # this means to ignore newlines until "baseurl:"
   Eric Brown -- Computer Science Teacher and Engineer
 #baseurl: "" # the subpath of your site, e.g. /blog
