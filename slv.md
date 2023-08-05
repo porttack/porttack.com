@@ -11,7 +11,7 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 
 * [Programming, Robotics and IoT](/slv/2023-24/robotics.md) - 2nd period 🖥️🤖🌐
 * [AP Computer Science Principles](/slv/2023-24/csp.md) - 5th period 📚💻🎓
-* [Tech Symposium](/slv/2023-24/cs9.md) - 3rd period Mondays 🔧🛠️👨‍🔧
+* [Tech Symposium](/slv/2023-24/symposium.md) - 3rd period Mondays 🔧🛠️👨‍🔧
   * [IT Essentials](https://itessentials.santacruzcoe.org/course-outline) taught by Mr. Rollins - 3rd period Tuesday & Thursday
 
 ### 🏫 [SLV Middle School](https://ms.slvusd.org) 🎒
