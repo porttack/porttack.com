@@ -11,13 +11,13 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 
 * [Programming, Robotics and IoT](/slv/2023-24/robotics.md) - 2nd period 🖥️🤖🌐
 * [AP Computer Science Principles](/slv/2023-24/csp.md) - 5th period 📚💻🎓
-* Student Repair Academy - 3rd period Mondays 🔧🛠️👨‍🔧
+* [Tech Club](/slv/2023-24/cs9.md) - 3rd period Mondays 🔧🛠️👨‍🔧
   * [IT Essentials](https://itessentials.santacruzcoe.org/course-outline) taught by Mr. Rollins - 3rd period Tuesday & Thursday
 
 ### 🏫 [SLV Middle School](https://ms.slvusd.org) 🎒
 
 * [CS 110 Sixth grade Computer Science Wheel (quarter long)](/slv/2023-24/cs110a.md) - 4th period ⏰🐍
-* CS 007 Seventh grade Computer Science (semester long) - 6th period ⏰🖥️
+* [CS 007 Seventh grade Computer Science (semester long)](/slv/2023-24/cs7a.md) - 6th period ⏰🖥️
 * [Underwater ROV Club](/slv/2023-24/rov.md) (Tuesdays after school) 🌊🤿🔧
 
 <!--
