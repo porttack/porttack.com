@@ -5,7 +5,10 @@
   
       <div class="footer-col-wrapper">
         <div class="footer-col">
-          
+          <p>{{ site.author.name | escape }} - 
+            <a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+          </p>
+        <!--
         {%- if site.author %}
           <ul class="contact-list">
             {% if site.author.name -%}
@@ -16,7 +19,8 @@
             {%- endif %}
           </ul>
         {%- endif %}
-        </div>
+        -->
+        </div> <!-- /.footer-col -->
         <!--
         <div class="footer-col">
             {%- include social.html -%}
