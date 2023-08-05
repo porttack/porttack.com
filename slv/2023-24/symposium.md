@@ -31,7 +31,7 @@ Students who wish to learn more about Chromebooks, how they work, and help fix t
 
 ## Special Tech Symposium Activities
 
-#### 8/14, 8/21 & 8/28 Astralian NCSS Challenge
+#### 8/14, 8/21 & 8/28 Australian NCSS Challenge
 
 [NCSS Challenge](https://groklearning.com/challenge/) - 8/14/23 - 9/2/23. All students will be joining exciting NCSS Challenge. Kick start your coding adventure! 🏆🚀 Collect points at all levels. 📈
 
