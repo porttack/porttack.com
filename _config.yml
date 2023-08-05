@@ -20,9 +20,9 @@
 
 name: null
 title: Eric Brown
-#author:
-#  name: Eric Brown
-#  email: ericbrown@porttack.com
+author:
+  name: Eric Brown
+  email: ebrown@slvusd.org
 permalink: /:year/:month/:day/:title:output_ext
 paginate: 5
 paginate_path: /page-:num
