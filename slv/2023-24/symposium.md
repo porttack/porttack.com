@@ -25,7 +25,7 @@ Understanding the value of being safe and responsible producers, students will l
 
 Join us for this invigorating journey where every Monday morning will be a stepping stone towards an empowered future as digital creators and global citizens! 🌐🌟
 
-## Tech Club
+#### Tech Club
 
 Students who wish to learn more about Chromebooks, how they work, and help fix them are able to work on a self-paced curriculum. Mr. Brown most approve this privilege on a per-student basis.
 
@@ -42,6 +42,12 @@ Students who wish to learn more about Chromebooks, how they work, and help fix t
 #### Guest Speakers
 
 We may have guest speakers from time-to-time. It is important for students to be on their best behavior. 😊
+
+## For Parents/Guardians
+
+While I'm a new teacher, I've taught some of this curriculum previously at SLVUSD. There is an assiciated parenting book called [Raising Humans in a Digital World: Helping Kids Build a Healthy Relationship with Technology](https://www.cyberwise.org/book) by Diana Graber. You can read more about why this curriculum was selected in the [Cultivating Digital Citizenship: Empowering Our Children in a Connected World](/2020/01/01/cybercivics.html) blog post.
+
+If you are a parent working in a technology field we're discussing in this symposium or any other classes I'm teaching, I'd love to hear from you. While high school students don't want parents in their classes the way they did in elementary school, they still need us and want to learn from our life experiences.
 
 ## 🎯 Course Objectives - Tech Symposium 🚀💻
 
