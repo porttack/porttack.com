@@ -29,6 +29,15 @@ Join us for this invigorating journey where every Monday morning will be a stepp
 
 Students who wish to learn more about Chromebooks, how they work, and help fix them are able to work on a self-paced curriculum. Mr. Brown most approve this privilege on a per-student basis.
 
+## Required Materials:
+
+* A folder with pockets for classroom work
+* Lined looseleaf paper as needed 📝
+* 2 sharpened pencils ✏️✏️
+* Colored pencils or markers (optional) 🎨
+* A chromebook 💻
+* Masks (if you're not sure if your sick) 😷
+
 ## Special Tech Symposium Activities
 
 #### 8/14, 8/21 & 8/28 Australian NCSS Challenge
@@ -48,6 +57,13 @@ We may have guest speakers from time-to-time. It is important for students to be
 While I'm a new teacher, I've taught some of this curriculum previously at SLVUSD. There is an assiciated parenting book called [Raising Humans in a Digital World: Helping Kids Build a Healthy Relationship with Technology](https://www.cyberwise.org/book) by Diana Graber. You can read more about why this curriculum was selected in the [Cultivating Digital Citizenship: Empowering Our Children in a Connected World](/2020/01/01/cybercivics.html) blog post.
 
 If you are a parent working in a technology field we're discussing in this symposium or any other classes I'm teaching, I'd love to hear from you. While high school students don't want parents in their classes the way they did in elementary school, they still need us and want to learn from our life experiences.
+
+Additionally:
+* **ASAP** - Please sign this syllabus with your child and return it to me. 🖋️👩‍👧‍👦
+* **8/24** - Please come to Back To School Night so I can meet you! 🏫🌃🤝
+* **9/14** - Please watch [Screenagers Next Chapter](/screenagers) with us at 6:30pm. 🎥🍿🕡
+* Join us on a Tuesday for [CoderDojo](/slv/2023-24/coderdojo) - 7:00pm. 📅👩‍💻🕖
+
 
 ## 🎯 Course Objectives - Tech Symposium 🚀💻
 
