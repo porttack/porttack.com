@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 🕵️‍♂️ 007: Excursions in Computer Science 🚀
+title: 🕵️‍♂️ 007 - Excursions in Computer Science 🚀
 permalink: /slv/2023-24/cs7a
 ---
 Instructor: Mr. Brown 🎓
