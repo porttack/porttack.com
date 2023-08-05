@@ -3,7 +3,18 @@ layout: page
 title: Programming, Robotics and IoT
 permalink: /slv/2023-24/robotics
 ---
-(2nd Period)
+Instructor: Mr. Brown 🎓
+<br>
+Email: [ebrown@slvusd.org](mailto:ebrown@slvusd.org) 📧 (Please keep emails short and to the point)
+<br>
+Room: [C-103](/docs/assets/images/SLVHSCampusmap.pdf)
+<br>
+Website: [www.porttack.com/slv](https://porttack.com/slv) 💻
+<br>
+When: [High School 2nd Period](https://4.files.edl.io/cc47/08/02/23/003111-2f5a833f-44e2-4f38-99ff-07bf15ec51e7.pdf) ⏰
+<br>
+[Optional CoderDojo](/slv/2023-24/coderdojo): 1st Tuesday Evenings 🌙
+
 ## Requirements
 
 **Grades:** 10-12 (or brief teacher interview)

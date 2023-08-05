@@ -27,7 +27,7 @@ San Lorenzo Valley [High School](https://hs.slvusd.org) and [Middle School](http
 <br> [SLV Rotary](https://portal.clubrunner.ca//6779), "Service above self"
 <br> [Santa Cruz Lions](https://santacruzhostlionsclub.org/), "We serve"
 <br> [Scouts Troop 604](https://sites.google.com/site/troop604112014/) and [Santa Cruz Sea Scouts](https://santacruzseascouts.com/), "Do A Good Turn Daily" / "Be Prepared"
-<br> Maker's Night / [CoderDojo](https://coderdojo.com/en/about) (1st Tuesdays 6:30-8:30pm)
+<br> Maker's Night / [CoderDojo](/slv/2023-24/coderdojo): 1st Tuesday Evenings 🌙
 
 <br>
 <!-- <img align="left" src="../docs/assets/images/ericbrown8.jpeg" width="150"> 

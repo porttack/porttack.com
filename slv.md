@@ -27,7 +27,7 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 -->
 ### Community
 
-* Maker's Night / [Coderdojo](https://coderdojo.com/en/about) (1st Tuesdays 6:30-8:30pm)
+* Maker's Night / [CoderDojo](/slv/2023-24/coderdojo): 1st Tuesday Evenings 🌙
 
 ### Upcoming Events
 

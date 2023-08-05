@@ -7,13 +7,13 @@ Instructor: Mr. Brown 🎓
 <br>
 Email: [ebrown@slvusd.org](mailto:ebrown@slvusd.org) 📧 (Please keep emails short and to the point)
 <br>
-Room: [C-103 (New High School Building between Basketball Courts & Varsity Baseball Field)](https://4.files.edl.io/18a5/07/26/22/230415-fe6a3585-ecd1-4c22-9253-f4ddf3883db6.pdf)
+Room: [C-103](/docs/assets/images/SLVHSCampusmap.pdf)
 <br>
 Website: [www.porttack.com/slv](https://porttack.com/slv) 💻
 <br>
 When: [Middle School 6th Period](https://4.files.edl.io/2f45/07/25/23/160102-e1d201d6-8032-4dae-82e4-3e67a2d5fb3e.pdf) ⏰
 <br>
-Monthly CoderDojo: 1st Tuesdays of every month - 6:30pm-8:30pm 🌙
+[Optional CoderDojo](/slv/2023-24/coderdojo): 1st Tuesday Evenings 🌙
 <br>
 (Content and platform may change next semester.)
 
