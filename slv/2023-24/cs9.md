@@ -15,7 +15,7 @@ When: [High School 3rd Period - Mondays only](https://4.files.edl.io/cc47/08/02/
 <br>
 Monthly CoderDojo: 1st Tuesdays of every month - 6:30pm-8:30pm 🌙
 
-## 🔍🚀 Empowering Digital Creators and Citizens 🌍💡" 🌟
+## 🚀 Empowering Digital Creators and Citizens 🌍
 
 Get ready for Monday morning tech discussions and activities as we embark on an  adjunct to the "IT Essentials" class! 🚀💻 On Monday mornings, students will be immersed in the world of digital citizenship and media literacy, learning skills that go beyond the basics and empower them to be creators in the digital age.
 
@@ -27,10 +27,9 @@ Join us for this invigorating journey where every Monday morning will be a stepp
 
 ## Other Activities
 
-In the first 3-weeks, all students will participate in the NGSS and build a few coding skills.
+In the first 3 weeks, all students will participate in the NGSS and build a few coding skills.
 
-Students that wish to learn more about chromebooks, how they work and help fix them are able to work self paced curriculum. Mr. Brown can approve of this privlidge.
-
+Students who wish to learn more about Chromebooks, how they work, and help fix them are able to work on a self-paced curriculum. Mr. Brown can approve of this privilege.
 
 
 
