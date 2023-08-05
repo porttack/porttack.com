@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tech Discussions: Empowering Digital Creators and Citizens
+title: Tech Discussions
 permalink: /slv/2023-24/cs9
 ---
 Instructor: Mr. Brown 🎓
@@ -15,7 +15,7 @@ When: [High School 3rd Period - Mondays only](https://4.files.edl.io/cc47/08/02/
 <br>
 Monthly CoderDojo: 1st Tuesdays of every month - 6:30pm-8:30pm 🌙
 
-## Course Description
+## 🔍🚀 Empowering Digital Creators and Citizens 🌍💡" 🌟
 
 Get ready for Monday morning tech discussions and activities as we embark on an  adjunct to the "IT Essentials" class! 🚀💻 On Monday mornings, students will be immersed in the world of digital citizenship and media literacy, learning skills that go beyond the basics and empower them to be creators in the digital age.
 
