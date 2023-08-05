@@ -19,7 +19,7 @@ Monthly CoderDojo: 1st Tuesdays of every month - 6:30pm-8:30pm 🌙
 
 ## 🕵️‍♂️ CS 007: Excursions in Computer Science 🚀
 
-Welcome, aspiring secret agents, to an exhilarating semester of 🐍 Python programming, 🔌 electronics, and 🤖 robotics, as we embark on an exciting journey through the captivating world of computer science! Get ready to embrace the role of "007" agents, mastering the art of coding, building amazing gadgets, and uncovering the secrets of 🔒 cryptography to crack codes and unlock hidden mysteries. 🌐💻 Time permitting, we'll also set forth on exciting missions in 📊 data science, 🤖 AI, and/or ✨ 3D printing for extra thrills! As we progress, we'll also learn about 💻 digital citizenship, 📚 digital literacy, and 🔒 cyber-security, equipping ourselves to be responsible digital explorers. 🌌💫 So, accept this top-secret mission and join us for unforgettable adventures exploring computer science! 🕵️‍♂️🌟
+Welcome, aspiring secret agents, to an exhilarating semester of 🐍 Python programming, 🔌 electronics, and 🤖 robotics, as we embark on an exciting journey through the captivating world of computer science! Get ready to master the art of coding, building amazing gadgets, and uncovering the secrets of 🔒 cryptography to crack codes and unlock hidden mysteries. 🌐💻 Time permitting, we'll also set forth on exciting missions in 📊 data science, 🤖 AI, and/or ✨ 3D printing for extra thrills! As we progress, we'll also learn about 💻 digital citizenship, 📚 digital literacy, and 🔒 cyber-security, equipping ourselves to be responsible digital explorers. 🌌💫 So, accept this top-secret mission and join us for unforgettable adventures exploring computer science! 🕵️‍♂️🌟
 
 <a href="https://microbit.org/"><img align="right" src="https://ichef.bbci.co.uk/images/ic/1456x819_b/p02wg78h.jpg" height="125"></a>
 ## Required Materials:
@@ -48,7 +48,7 @@ CS 110A will use the following coding platforms:
 - The Mu editor
 - Other websites as necessary
 
-## 🏆 Competition: 🚀
+## 🏆 Mission #1: 🚀
 
 [NCSS Challenge](https://groklearning.com/challenge/) - 7/30/23 - 9/2/23 - 4 levels - collect points at all levels - entering late is fine - email [Mr. Brown](mailto:ebrown@slvusd.org) by 8/18/23 (or earlier to get started now!) 📅💻📈
 
