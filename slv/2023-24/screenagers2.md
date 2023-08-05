@@ -2,6 +2,7 @@
 layout: page
 title: Screenagers Next Chapter at SLV
 permalink: /screenagers
+site_title: Screenagers Movie
 ---
 This movie is about teen anxiety. It is not the same as the first screenagers movie about screen time!
 
