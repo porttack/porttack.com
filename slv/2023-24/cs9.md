@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tech Discussions
+title: Tech Symposium
 permalink: /slv/2023-24/cs9
 ---
 Instructor: Mr. Brown 🎓
