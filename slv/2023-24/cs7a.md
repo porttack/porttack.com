@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CS 007 Seventh Grade CS
+title: CS 007 Seventh Grade Computer Science
 permalink: /slv/2023-24/cs7a
 ---
 Instructor: Mr. Brown 🎓
