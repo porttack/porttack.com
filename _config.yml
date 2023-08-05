@@ -27,7 +27,7 @@ permalink: /:year/:month/:day/:title:output_ext
 paginate: 5
 paginate_path: /page-:num
 #email: ericbrown@porttack.com
-email: null
+email: ebrown@slvusd.org
 description: >- # this means to ignore newlines until "baseurl:"
   Eric Brown -- Computer Science Teacher and Engineer
 #baseurl: "" # the subpath of your site, e.g. /blog
