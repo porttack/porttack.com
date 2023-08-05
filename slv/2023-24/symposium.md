@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tech Symposium
+title: Tech Symposium Syllabus
 permalink: /slv/2023-24/symposium
 ---
 Instructor: Mr. Brown 🎓
@@ -88,28 +88,28 @@ I have read the behavior expectations contained in this syllabus and have read t
 
 
 **🧑‍🎓 Student Name:**  
-<div style="width:500px"><hr style="border-color:black"/></div>
+<div style="width:600px"><hr style="border-color:black"/></div>
 
 **✍️ Student Signature:**  
-<div style="width:500px"><hr style="border-color:black"/></div>
+<div style="width:600px"><hr style="border-color:black"/></div>
 
 **📅 Date:**  
-<div style="width:500px"><hr style="border-color:black"/></div>
+<div style="width:600px"><hr style="border-color:black"/></div>
 
 **👨‍👩‍👦 Parent/Guardian Name:**  
-<div style="width:500px"><hr style="border-color:black"/></div>
+<div style="width:600px"><hr style="border-color:black"/></div>
 
 **✍️ Parent/Guardian Signature:**  
-<div style="width:500px"><hr style="border-color:black"/></div>
+<div style="width:600px"><hr style="border-color:black"/></div>
 
 **📅 Date:**  
-<div style="width:500px"><hr style="border-color:black"/></div>
+<div style="width:600px"><hr style="border-color:black"/></div>
 
 **📧 Parent/Guardian Email:**  
-<div style="width:500px"><hr style="border-color:black"/></div>
+<div style="width:600px"><hr style="border-color:black"/></div>
 
 **☎️ Parent/Guardian Phone:**  
-<div style="width:500px"><hr style="border-color:black"/></div>
+<div style="width:600px"><hr style="border-color:black"/></div>
 
 <br>
 
