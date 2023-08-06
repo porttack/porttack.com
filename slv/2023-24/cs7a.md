@@ -29,7 +29,7 @@ Welcome, aspiring secret agents, to an exhilarating semester of 🐍 Python prog
 - A chromebook 💻
 - A Micro:bit (available in class)
 - A Robot (available in class)
-- * Masks (if you're not sure if your sick) 😷
+- Masks (if you're not sure if your sick) 😷
 
 ## Special Seventh Grade Computer Science Activities
 
@@ -41,7 +41,7 @@ Welcome, aspiring secret agents, to an exhilarating semester of 🐍 Python prog
 
 #### 9/8 Movie: Screenagers Next Chapter (about teen anxiety)
 
-🎬 We will be watching and discussing this movie in class. It discusses sensitive issues we all know about in society but don't always openly discuss. SLV is also screening this movie for parents and students the evening of 9/14. More info is at https://porttack.com/screenagers. 🍿🗣️💬🌐
+🎬 We will be watching and discussing this movie in class. It discusses sensitive issues we all know about in society but don't always openly discuss. SLV is also screening this movie for parents and students the evening of 9/14. More info is at [here](/screenagers). 🍿🗣️💬🌐
 
 #### Guest Speakers
 
@@ -49,15 +49,15 @@ We may have guest speakers from time-to-time. It is important for students to be
 
 ## For Parents/Guardians
 
- am familiar with and have previously taught the digital citizenship/literacy curriculum currently being implemented in this class. There is an assiciated parenting book called [Raising Humans in a Digital World: Helping Kids Build a Healthy Relationship with Technology](https://www.cyberwise.org/book) by Diana Graber. You can read more about why this curriculum was selected in the [Cultivating Digital Citizenship: Empowering Our Children in a Connected World](/2020/01/01/cybercivics.html) blog post.
+ I previously taught some of the digital citizenship/literacy curriculum currently being implemented in this class. There is an assiciated parenting book called [Raising Humans in a Digital World: Helping Kids Build a Healthy Relationship with Technology](https://www.cyberwise.org/book) by Diana Graber. You can read more about why this curriculum was selected in the [Cultivating Digital Citizenship: Empowering Our Children in a Connected World](/2020/01/01/cybercivics.html) blog post.
 
-If you are a parent working in a technology field we're discussing in this symposium or any other classes I'm teaching, I'd love to hear from you. While middle school students are starting to not want parents in their classes the way they did in elementary school, they still need us and want to learn from our life experiences.
+If you are a parent working in a technology field we're discussing in our symposium or any other classes I'm teaching, I'd love to hear from you. While middle school students are starting to not want parents in their classes the way they did in elementary school, they still need us and want to learn from our life experiences.
 
 Additionally:
 * **ASAP** - Please sign this syllabus with your child and return it or email it to me. 🖋️👩‍👧‍👦
 * **8/17** - Please come to Back To School Night so I can meet you! 🏫🌃🤝
 * **9/14** - Please watch [Screenagers Next Chapter](/screenagers) with us at 6:30pm. 🎥🍿🕡
-* Join us on a Tuesday for [CoderDojo](/slv/2023-24/coderdojo) - 7:00pm. 📅👩‍💻🕖
+* Join us on a Tuesday evening for [CoderDojo](/slv/2023-24/coderdojo) 🌙
 
 
 <a href="https://www.stevehockensmith.com/books-for-kids"><img align="right" src="https://images4.penguinrandomhouse.com/cover/9781594746765" width="75"></a>
@@ -91,7 +91,7 @@ We will take a brief break as the AP students are excused and we'll either have 
 * Five Minute Coding Challenge
 * 7th Grade Tech Symposium (similar to [High School Tech Symposium](/slv/2023-24/symposium))
 * Nick and Tesla (and sometimes a brief break)
-* Programming less or project work
+* Programming, lesson, or project work
 
 ### Fridays
 
