@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Seventh Grade Computer Science
+title: Seventh Grade Computer Science Syllabus
 permalink: /slv/2023-24/cs7a
 ---
 Instructor: Mr. Brown 🎓
