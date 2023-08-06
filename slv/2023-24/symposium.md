@@ -59,7 +59,7 @@ While I'm a new teacher, I've taught some of this curriculum previously at SLVUS
 If you are a parent working in a technology field we're discussing in this symposium or any other classes I'm teaching, I'd love to hear from you. While high school students don't want parents in their classes the way they did in elementary school, they still need us and want to learn from our life experiences.
 
 Additionally:
-* **ASAP** - Please sign this syllabus with your child and return it to me. 🖋️👩‍👧‍👦
+* **ASAP** - Please sign this syllabus with your child and return it or email it to me. 🖋️👩‍👧‍👦
 * **8/24** - Please come to Back To School Night so I can meet you! 🏫🌃🤝
 * **9/14** - Please watch [Screenagers Next Chapter](/screenagers) with us at 6:30pm. 🎥🍿🕡
 * Join us on a Tuesday for [CoderDojo](/slv/2023-24/coderdojo) - 7:00pm. 📅👩‍💻🕖
