@@ -33,24 +33,104 @@ As you progress, you'll embark on exciting projects that merge the realms of pro
 
 Immerse yourself in the cutting-edge world of "Programming, Robotics, and the Internet of Things" and shape the future with your innovative creations. Gain the skills and confidence to build and control intelligent devices, paving the way for a promising future in the realm of technology and innovation.
 
-## Student Expectations
+## Required Materials:
 
-1. **Active Participation & Collaboration:** Engage actively in discussions, group activities, and projects, working collaboratively with classmates to achieve shared goals.
-2. **Responsible Attendance & Respectful Behavior:** Attend classes regularly, arriving on time, and demonstrate respect for equipment and resources.
-3. **Curiosity, Creativity & Innovative Projects:** Cultivate curiosity, think creatively, and explore innovative solutions through exciting programming, robotics, and IoT projects.
-4. **Effort, Perseverance & Skill Development:** Put in effort, persevere through challenges, and actively develop your programming, robotics, and IoT skills.
-5. **Homework Completion & Continuous Learning:** Expect homework that complements the course material, reinforcing your understanding of computational thinking concepts without overwhelming you.
+- A folder with pockets
+- Lined looseleaf paper as needed 📝
+- 2 sharpened pencils ✏️✏️
+- A chromebook 💻
+- A Micro:bit (available in class)
+- Masks (if you're not sure if your sick) 😷
 
-## Required School Supplies
+It is likely a 3-ring binder will be desireable, but it is not clear yet.
 
-Please check back here on August 6th, 2023.
+## 🎯 Course Objectives: 🚀
 
-## Syllabus
+1. Understand the fundamentals of coding using the Python programming language. 💻🐍
 
-(subject to change)
+1. Gain practical knowledge in electronics and sensors, including their applications in robotics and IoT technologies. 🛠️🔌📡
 
-* [Carnegie Mellon CS1](https://academy.cs.cmu.edu/course-info)
-* [Arduino CTC Go](https://www.arduino.cc/education/ctc-go) - Electronics
-* Arduino CT Go Motions - Robotics
-* Arduino Explore IoT
-* Soldering
+3. Learn the basics of robotics, including motors, servos, gears, and the principles of robot design and operation. 🤖🏎️⚙️
+
+4. Explore the concept of the Internet of Things (IoT) and its connection to cloud computing and artificial intelligence. 🌐☁️🧠
+
+5. Learn the basics of 3D printing and its potential for creating functional components. 🖨️🔧
+
+6. Develop the ability to design and assemble circuits for various robotics and IoT projects. 🛠️🔌💡
+
+7. Acquire problem-solving skills through hands-on projects involving circuits, motors, servos, and sensors. 🛠️🔧🔍🧠
+
+8. Foster critical thinking by applying coding concepts to real-world problem-solving scenarios. 🤔💡🌍
+
+9. Enhance creativity by designing and creating innovative projects that merge programming, robotics, and IoT. 🎨🤖💡
+
+10. Cultivate communication skills through collaborative project-based activities with fellow learners. 🗣️🤝👥
+
+11. Build teamwork abilities by working together on complex projects and sharing responsibilities. 👫🤝🏗️
+
+## Grading Policy 📝🗓️👥🏗️🤝💬🗣️💻📝🔧📓🛠️👥🎤🏢📈📐
+
+1. **Weekly Reflections - 20%** 📝🗓️
+   Regular reflections on the learning process and personal growth.
+
+2. **Collaborative Team Projects and Classroom Community - 20%** 👥🏗️🤝💬🗣️
+   Students will be evaluated on their positive and active engagement within the classroom community and their ability to work effectively in collaborative team projects. This includes actively participating in group work, fostering a collaborative learning environment, and providing appropriate and constructive feedback to peers during team projects.
+
+3. **Coding Assignments, Classwork, and Small Project Work - 20%** 💻📝🔧
+   Evaluation of individual performance in coding assignments, in-class activities, and smaller project tasks.
+
+4. **Individual and Group Engineering Notebooks and Presentation Skills - 20%** 📓🛠️👥🎤
+   Review of the quality and completeness of engineering notebooks kept by students, both individually and in groups, as well as their presentation skills when communicating project findings or results.
+
+5. **Large Projects (including Engineering Notebook & Presentation) - 20%** 🏢📈📐📓🎤
+   Assessment of students' performance in significant projects (at least one per semester), which may involve complex problem-solving, critical thinking, and creativity. This category will also consider their engineering notebooks and presentation skills related to the large projects.
+
+## 📚 Behavioral Expectations: 🚀
+
+- Arrive to class on time. ⏰🚪
+- Start daily coding challenge upon arrival. 💻🧩
+- Students will be present during class until excused. 📚🙋‍♂️
+- All students should be attentive and scholastic at all times. 👀🧠
+- Our classroom is a safe space; always be respectful, supportive, and positive. 🏫🤝😊
+- I encourage students to wear masks when appropriate to protect their community, especially when sick. 😷👥🌡️
+- Student space should be kept clean. If you cause a mess in the classroom, you will be expected to clean it. 🧹🚮🧽
+- All expectations present in the [SLV High School Student Handbook](https://4.files.edl.io/bc4e/08/02/23/002808-b216a732-f42e-49b7-8bda-aea29630e3de.pdf). 🍎📘
+
+### ⚖️ Consequences ⚖️
+
+- Phone call home ☎️🏠
+- Referral to Counselor / Principal’s office 📞👨‍💼
+- Behavioral Contract 📜✍️
+
+Let's create a positive and nurturing learning environment together! 🌟🎓
+
+## Signature Section
+
+I have read the behavior expectations contained in this syllabus and have read the [student handbook](https://4.files.edl.io/bc4e/08/02/23/002808-b216a732-f42e-49b7-8bda-aea29630e3de.pdf). I agree to abide by all guidelines outlined above and as present in the handbook. I understand the consequences of ignoring them as outlined above and as present in the handbook.
+
+
+**🧑‍🎓 Student Name:**  
+<div style="width:500px"><hr style="border-color:black"/></div>
+
+**✍️ Student Signature:**  
+<div style="width:500px"><hr style="border-color:black"/></div>
+
+**📅 Date:**  
+<div style="width:500px"><hr style="border-color:black"/></div>
+
+**👨‍👩‍👦 Parent/Guardian Name:**  
+<div style="width:500px"><hr style="border-color:black"/></div>
+
+**✍️ Parent/Guardian Signature:**  
+<div style="width:500px"><hr style="border-color:black"/></div>
+
+**📅 Date:**  
+<div style="width:500px"><hr style="border-color:black"/></div>
+
+**📧 Parent/Guardian Email:**  
+<div style="width:500px"><hr style="border-color:black"/></div>
+
+**☎️ Parent/Guardian Phone:**  
+<div style="width:500px"><hr style="border-color:black"/></div>
+
+<br>
