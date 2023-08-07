@@ -175,7 +175,7 @@ Let's create a positive and nurturing learning environment together! 🌟🎓
 
 I have read the behavior expectations contained in this syllabus and have read the [student handbook](https://4.files.edl.io/6cd0/08/04/22/235655-92319262-51b4-40e8-ba53-bb6989bc9f12.pdf). I agree to abide by all guidelines outlined above and as present in the handbook. I understand the consequences of ignoring them as outlined above and as present in the handbook.
 
-🔲 Please check here to give permission for your child to participate in the screening of the documentary "[Screenagers: Next Chapter](/screenagers)" in classroom. I understand that this film explores topics related to stress, anxiety, and depression among adolescents in the context of our digital society. A counselor will be present for discussion after the meeting. (If you do not give permission, we will find another activity for your student. You can come screen the movie separately or with your student on [Sept 14th](/screenagers).)
+🔲 Please check here to give permission for your child to participate in the screening of the documentary "[Screenagers: Next Chapter](/screenagers)" in classroom. I understand that this film explores topics related to stress, anxiety, and depression among adolescents in the context of our digital society. A counselor will be present for discussion after the meeting. (If you do not give permission, we will find another activity for your student.) We encourage you to screen the movie yourself and/or with your student the evening of [Sept 14th](/screenagers).
 
 **🧑‍🎓 Student Name:**  
 <div style="width:500px"><hr style="border-color:black"/></div>
