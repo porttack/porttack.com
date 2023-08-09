@@ -135,19 +135,16 @@ Let's embark on this exciting journey of learning and growth together! 🚀🌟
 
 This is an elective course, and grades will be determined based on the following percentages: 🎓📊
 
-1. **Grades on Assigned Programming or Electronics Tasks - 20%** 💻🔌🧰
+1. **Grades on Assigned Programming or Electronics Tasks - 25%** 💻🔌🧰
    Grades will be given for students' performance and completion of assigned programming tasks, using Python and Micro:bit, as well as for electronics tasks, which may include circuits and applied robotics. These tasks can be completed either in class or, for many, as homework, and they will assess students' understanding and application of computing skills & concepts.
 
-2. **Classroom Community and Collaboration - 20%** 🤝💬🗣️
-   Students will be evaluated on their positive and active engagement within the classroom community. This includes actively participating in group work, fostering a collaborative learning environment, and providing appropriate and constructive feedback to peers, including AP students who may occasionally take on teaching roles.
-
-3. **Weekly Reflections - 20%** 📝🗓️
+2. **Weekly Reflections - 25%** 📝🗓️
    Regular reflections on the learning process and personal growth.
 
-4. **Tech Symposium Assignments - 20%** 🌐🔒💻
+3. **Tech Symposium Assignments - 25%** 🌐🔒💻
    Grades will be given for assignments that result from the Tech Symposiums. These assignments may include projects, presentations, or written work related to topics explored during the Tech Symposium, covering areas such as digital citizenship, digital literacy, etc.
 
-5. **Genius Hour Project (Final Project) - 20%** 🏁🎉
+4. **Genius Hour Project (Final Project) - 25%** 🏁🎉
    As a culmination of their learning, students will work on a self-directed "Genius Hour" project where they can explore a topic of their choice, integrating multiple concepts and tools into a creative and impressive work. Assessment of Genius Hour projects will consider factors such as passion, research, creativity, problem-solving, presentation skills, reflection, and growth.
 
 In this course, we value your effort, progress, and active involvement in the learning journey. Let's work together to make this an enjoyable and rewarding experience for everyone! 🌟
