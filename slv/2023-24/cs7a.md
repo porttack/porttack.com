@@ -36,12 +36,11 @@ Welcome, aspiring secret agents, to an exhilarating semester of 🐍 Python prog
 #### 8/14 - 9/2 Australian NCSS Challenge
 
 [NCSS Challenge](https://groklearning.com/challenge/) - 8/14/23 - 9/2/23. 
-**I need this form signed and returned for student to participate.**
  Students will be joining exciting NCSS Challenge. Kick start your coding adventure! 🏆🚀 Collect points at all levels. 📈
 
 #### 9/8 Movie: Screenagers Next Chapter (about teen anxiety)
 
-🎬 We will be watching and discussing this movie in class. It discusses sensitive issues we all know about in society but don't always openly discuss. SLV is also screening this movie for parents and students the evening of 9/14. More info is at [here](/screenagers). 🍿🗣️💬🌐
+🎬 We will be watching and discussing this movie in class. It discusses sensitive issues we all know about in society but don't always openly discuss. SLV is also screening this movie for parents and students the evening of 9/14. More info is at [www.porttack.com/screenagers](/screenagers). 🍿🗣️💬🌐
 
 #### Guest Speakers
 
@@ -49,7 +48,7 @@ We may have guest speakers from time-to-time. It is important for students to be
 
 ## For Parents/Guardians
 
- I previously taught some of the digital citizenship/literacy curriculum currently being implemented in this class. There is an assiciated parenting book called [Raising Humans in a Digital World: Helping Kids Build a Healthy Relationship with Technology](https://www.cyberwise.org/book) by Diana Graber. You can read more about why this curriculum was selected in the [Cultivating Digital Citizenship: Empowering Our Children in a Connected World](/2020/01/01/cybercivics.html) blog post.
+ I previously taught some of the digital citizenship/literacy curriculum currently being implemented in this class. There is an assiciated parenting book called "[Raising Humans in a Digital World: Helping Kids Build a Healthy Relationship with Technology](https://www.cyberwise.org/book)" by Diana Graber. You can read more about why this curriculum was selected in the "[Cultivating Digital Citizenship: Empowering Our Children in a Connected World](/2020/01/01/cybercivics.html)" blog post.
 
 If you are a parent working in a technology field we're discussing in our symposium or any other classes I'm teaching, I'd love to hear from you. While middle school students are starting to not want parents in their classes the way they did in elementary school, they still need us and want to learn from our life experiences.
 
@@ -88,14 +87,14 @@ We will take a brief break as the AP students are excused and we'll either have 
 
 ### Wednesdays
 
-* Five Minute Coding Challenge
+* Five Minute Coding Challenge (so get to class on time!)
 * 7th Grade Tech Symposium (similar to [High School Tech Symposium](/slv/2023-24/symposium))
 * Nick and Tesla (and sometimes a brief break)
 * Programming, lesson, or project work
 
 ### Fridays
 
-* Five Minute Coding Challenge
+* Five Minute Coding Challenge (so get to class on time!)
 * Electronics or Physical Computing
 * Nick and Tesla (and sometimes a brief break)
 * Ongoing lesson or project work
@@ -138,8 +137,8 @@ This is an elective course, and grades will be determined based on the following
 1. **Grades on Assigned Programming or Electronics Tasks - 25%** 💻🔌🧰
    Grades will be given for students' performance and completion of assigned programming tasks, using Python and Micro:bit, as well as for electronics tasks, which may include circuits and applied robotics. These tasks can be completed either in class or, for many, as homework, and they will assess students' understanding and application of computing skills & concepts.
 
-2. **Weekly Reflections - 25%** 📝🗓️
-   Regular reflections on the learning process and personal growth.
+2. **Weekly Reflections and Behavior - 25%** 📝🗓️
+   Regular reflections on the learning process and personal growth. Try hard to be on-time to class.
 
 3. **Tech Symposium Assignments - 25%** 🌐🔒💻
    Grades will be given for assignments that result from the Tech Symposiums. These assignments may include projects, presentations, or written work related to topics explored during the Tech Symposium, covering areas such as digital citizenship, digital literacy, etc.
