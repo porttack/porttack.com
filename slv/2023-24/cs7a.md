@@ -24,9 +24,9 @@ Welcome, aspiring secret agents, to an exhilarating semester of 🐍 Python prog
 <a href="https://microbit.org/"><img align="right" src="https://ichef.bbci.co.uk/images/ic/1456x819_b/p02wg78h.jpg" height="125"></a>
 ## Required Materials:
 
-- A composition notebook 📓
+- A composition notebook 📓 (by 8/21)
 - 2 sharpened pencils ✏️✏️
-- A chromebook 💻
+- A charged chromebook 💻
 - A Micro:bit (available in class)
 - A Robot (available in class)
 - Masks (if you're not sure if your sick) 😷
