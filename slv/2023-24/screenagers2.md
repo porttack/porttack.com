@@ -29,8 +29,11 @@ This movie is about teen anxiety. It is not the same as the first screenagers mo
 
 ### Trailer
 
-{% include youtube.html id="ecDraB2YExA" %}
+<a href="https://www.screenagersmovie.com/about-screenagers-next-chapter">Click here to see the trailer</a>.
+
+<!-- {% include youtube.html id="ecDraB2YExA" %} 
 <br>
+-->
 
 ### Synopsis
 
