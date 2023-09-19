@@ -16,6 +16,9 @@ permalink: /hack
 <br>
 **Documents:** [Google Folder](https://drive.google.com/drive/folders/1a_FDQ-1Aq-6q4La7B9SJtFnL-uyCEbWg?usp=sharing)
 
+(This is a trial club. It will continue based on reasonable student participation and cooperation.
+Leadership opportunities exist.)
+
 ### Club Purpose
 
 Our club is all about encouraging collaboration and creativity through coding and making, including 3D printing. It's a place where we help each other grow our skills, solve problems, and bring ideas to life.
