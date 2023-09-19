@@ -32,3 +32,13 @@ Our club is all about encouraging collaboration and creativity through coding an
 This is not a place for playing video or computer games. Our focus is on hands-on learning, creativity, and supporting each other in our coding and making endeavors.
 
 We look forward to seeing you at SLV CoderDojo!
+
+### Optional events / activites
+
+- Harvard cs50 Hackathon - December 2023
+- Santa Cruz Hacks - February 2024
+- [MateoHacks](https://mateohacks.com/) (High School / Bay area) - March 23, 2024
+- [Computer Science Honor Society](https://csteachers.org/cshs/)
+- [AIClub Student Research Symposium](https://www.corp.aiclub.world/aiclub-student-research-symposiums) (Saratoga, CA)
+- [American Computer Science League](https://www.acsl.org/) (Contests)
+
