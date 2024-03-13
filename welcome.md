@@ -16,7 +16,7 @@ I'm Eric Brown -- engineer, [teacher](/slv/), husband, father, rotarian, sailor 
 
 As of August 2023, I am a [teacher at the San Lorenzo Valley High School](/slv/). Prior to that I worked as an engineer at Khan Academy, Apple, Adobe, Sony, Kodak, and a string of smaller companies, startups and non-profits. I've also led programs encouraging youth leadership and character development in San Lorenzo Valley.
 
-I received my Bachelor of Science in Electrical Engineering in 1990 from the University of Rochester. And I've run marathons and [raced sailboats](https://photos.app.goo.gl/q54pVKj9XjczAdN47) for most of my life.
+I received my Bachelor of Science in Electrical Engineering from the University of Rochester. And I've run marathons and [raced sailboats](https://photos.app.goo.gl/q54pVKj9XjczAdN47) for most of my life.
 
 <a href="https://portal.clubrunner.ca//6779"><img align="right" src="https://cdn.freebiesupply.com/logos/large/2x/rotary-international-1-logo-png-transparent.png" width="75"></a>
 
