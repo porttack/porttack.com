@@ -8,7 +8,7 @@ Eric Brown <br> [ericbrown@porttack.com](mailto:ericbrown@porttack.com)
 
 ## Professional Objective
 
-Individual contributor and/or technical leadership position in a dynamic and creative environment. Part-time work only.
+Individual contributor and/or technical leadership position in a dynamic and creative environment.
 
 ## Summary
 
