@@ -13,12 +13,14 @@ Website: [www.porttack.com/slv](https://porttack.com/slv) 💻
 <br>
 When: [Middle School 6th Period](https://4.files.edl.io/2f45/07/25/23/160102-e1d201d6-8032-4dae-82e4-3e67a2d5fb3e.pdf) ⏰
 <br>
-[Optional CoderDojo](/slv/2023-24/coderdojo): 1st Tuesday Evenings 🌙
-<br>
-(Content and platform may change next semester.)
 
-## 🕵️‍♂️ CS 007: Excursions in Computer Science 🚀
+## Seventh Grade Computer Science - Exploring Programming with Python 🚀
 
+Welcome to seventh grade computer science.
+
+Exploring Programming with Python is a lighter version of our high school intro to computer science class, some might call it a splash into the fundamentals of programming. It is designed to engage and excite future computer science students. The curriculum is taught using text-based coding in Python. Exploring Programming with Python also revolves around graphics-based problem solving and has similar visually engaging notes, checkpoints, exercises, and projects for students to complete. Students also have an opportunity to work with various aspects of physical computing.
+
+<!-- 
 Welcome, aspiring secret agents, to an exhilarating semester of 🐍 Python programming, 🔌 electronics, and 🤖 robotics, as we embark on an exciting journey through the captivating world of computer science! Get ready to master the art of coding, building amazing gadgets, and uncovering the secrets of 🔒 cryptography to crack codes and unlock hidden mysteries. 🌐💻 Time permitting, we'll also set forth on exciting missions in 📊 data science, 🤖 AI, and/or ✨ 3D printing for extra thrills! As we progress, we'll also learn about 💻 digital citizenship, 📚 digital literacy, and 🔒 cyber-security, equipping ourselves to be responsible digital explorers. 🌌💫 So, accept this top-secret mission and join us for unforgettable adventures exploring computer science! 🕵️‍♂️🌟
 
 <a href="https://microbit.org/"><img align="right" src="https://ichef.bbci.co.uk/images/ic/1456x819_b/p02wg78h.jpg" height="125"></a>
@@ -237,3 +239,4 @@ I have read the behavior expectations contained in this syllabus and have read t
 
 18. **6-8.IC.22:** Collaborate with multiple contributors while creating computational artifacts. 🤝👥💻
 
+-->

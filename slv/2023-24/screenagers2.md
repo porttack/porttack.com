@@ -8,17 +8,16 @@ This movie is about teen anxiety. It is not the same as the first screenagers mo
 
 <img align="right" src="/docs/assets/images/screenager_facts.gif" width="275" style="border: 8px solid white;">
 
-### Thursday, September 14th, 7:00pm
+### Wednesday, April 24th, 7:00pm
 
 🏫 San Lorenzo Valley High School, 7105 Highway 9 📚
 
-**Join us and learn more about solutions to the anxiety, depression, suicidal ideation, and other mental health challenges our kids are experiencing.** 💪😌🧠
+**Join us and learn more about solutions to the anxiety, depression, suicidal ideation, and other mental health challenges our kids are experiencing.**
 
-🎬 This is a movie for parents and teenagers. It is appropriate for 6th-12th graders and their parents. Parents and teens are welcome to join together or on their own. (We strongly encourage parents to bring their 6th grade+ children if they can, but come on their own if they cannot.) 👪👩‍👧👩‍👦🧑‍🤝‍🧑
+🎬 This is a movie for parents and teenagers. It is appropriate for 6th-12th graders and their parents. Parents and teens are welcome to join together or on their own. (We strongly encourage parents to bring their 6th grade+ children if they can, but come on their own if they cannot.)
 
-🗣️ Followed by an optional 30-minute counselor-led discussion. 🗣️🤝🗣️
 
-### 📊🎬 Facts this movie discusses include 🧠💡
+### 📊🎬 Facts this movie discusses include
 
 * Since 2012, there has been a 50% increase in teens reporting depressive symptoms. 😔😞
 * Half of adults with mental health challenges experienced symptoms before age 15. 🚻💔
