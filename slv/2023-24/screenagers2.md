@@ -8,7 +8,7 @@ This movie is about teen anxiety. It is not the same as the first screenagers mo
 
 <img align="right" src="/docs/assets/images/screenager_facts.gif" width="275" style="border: 8px solid white;">
 
-### Wednesday, September 5th, 7:00pm
+### Thursday, September 5th, 7:00pm
 
 🏫 San Lorenzo Valley High School, 7105 Highway 9 📚
 
