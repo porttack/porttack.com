@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Learning Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .game-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .bits-container {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+        .bit-group {
+            display: flex;
+            gap: 8px;
+            margin: 0 4px;
+            padding: 4px;
+            border-radius: 4px;
+        }
+        .bit-group-0 { background: rgba(239, 68, 68, 0.1); }
+        .bit-group-1 { background: rgba(59, 130, 246, 0.1); }
+        .bit-group-2 { background: rgba(16, 185, 129, 0.1); }
+        .bit-button {
+            width: 45px;
+            height: 45px;
+            font-size: 20px;
+            border: 2px solid #4f46e5;
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .bit-group-0 .bit-button { border-color: rgb(239, 68, 68); }
+        .bit-group-0 .bit-button.active { background: rgb(239, 68, 68); }
+        .bit-group-1 .bit-button { border-color: rgb(59, 130, 246); }
+        .bit-group-1 .bit-button.active { background: rgb(59, 130, 246); }
+        .bit-group-2 .bit-button { border-color: rgb(16, 185, 129); }
+        .bit-group-2 .bit-button.active { background: rgb(16, 185, 129); }
+        .bit-button.active {
+            color: white;
+        }
+        .bit-info {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .bit-info-group {
+            display: flex;
+            gap: 8px;
+            margin: 0 4px;
+            padding: 4px;
+            border-radius: 4px;
+        }
+        .bit-value {
+            width: 45px;
+            text-align: center;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .power-label {
+            color: #666;
+        }
+        .decimal-label {
+            font-weight: bold;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 8px 16px;
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background: #4338ca;
+        }
+        .button.secondary {
+            background: #e5e7eb;
+            color: #374151;
+        }
+        .button.secondary:hover {
+            background: #d1d5db;
+        }
+        .text-center {
+            text-align: center;
+            margin: 12px 0;
+        }
+        .feedback {
+            text-align: center;
+            margin: 12px 0;
+            font-weight: bold;
+        }
+        .feedback.correct {
+            color: #059669;
+        }
+        .feedback.incorrect {
+            color: #dc2626;
+        }
+        .timer {
+            text-align: center;
+            font-size: 24px;
+            color: #4f46e5;
+            margin: 10px 0;
+        }
+        .values-display {
+            text-align: center;
+            margin: 12px 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .values-display.visible {
+            opacity: 1;
+        }
+        .end-screen {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 20px;
+        }
+        .results-container {
+            margin-top: 20px;
+            padding: 20px;
+            background: #e0f7fa;
+            border-radius: 8px;
+        }
+        .results-container h2 {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .results-container div {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <div id="results" class="results-container" style="display: none;">
+        <h2>Results</h2>
+        <div id="correct-numbers"></div>
+    </div>
+    <script type="text/babel">
+        const BinaryLearningGame = () => {
+            const [bits, setBits] = React.useState(Array(12).fill(0));
+            const [target, setTarget] = React.useState(0);
+            const [feedback, setFeedback] = React.useState('');
+            const [score, setScore] = React.useState(0);
+            const [isHexChallenge, setIsHexChallenge] = React.useState(false);
+            const [timeLeft, setTimeLeft] = React.useState(120);
+            const [isPlaying, setIsPlaying] = React.useState(false);
+            const [round, setRound] = React.useState(0);
+            const [showValues, setShowValues] = React.useState(false);
+
+            React.useEffect(() => {
+                let timer;
+                if (isPlaying && timeLeft > 0) {
+                    timer = setInterval(() => {
+                        setTimeLeft(t => t - 1);
+                    }, 1000);
+                } else if (timeLeft === 0 && isPlaying) {
+                    endGame();
+                }
+                return () => clearInterval(timer);
+            }, [timeLeft, isPlaying]);
+
+            const generateNewTarget = () => {
+                let newTarget;
+                let isHex = round % 2 === 1;
+
+                if (!isHex && round < 2) {
+                    newTarget = Math.floor(Math.random() * 16);
+                } else if (!isHex && round < 4) {
+                    newTarget = Math.floor(Math.random() * 64);
+                } else if (!isHex && round < 6) {
+                    newTarget = Math.floor(Math.random() * 256);
+                } else {
+                    newTarget = Math.floor(Math.random() * 4096);
+                }
+
+                setTarget(newTarget);
+                setIsHexChallenge(isHex);
+                setFeedback('');
+                setShowValues(false);
+                setBits(Array(12).fill(0)); // Reset bits for new challenge
+            };
+
+            const startGame = () => {
+                setIsPlaying(true);
+                setTimeLeft(120);
+                setScore(0);
+                setRound(0);
+                generateNewTarget();
+            };
+
+            const endGame = () => {
+                setIsPlaying(false);
+                setFeedback(`Game Over! Final score: ${score}`);
+            };
+
+            const toggleBit = (index) => {
+                const newBits = [...bits];
+                newBits[index] = newBits[index] === 0 ? 1 : 0;
+                setBits(newBits);
+                setFeedback('');
+                setShowValues(false);
+            };
+
+            const bitsToDecimal = () => {
+                return bits.reduce((acc, bit, index) => {
+                    return acc + bit * Math.pow(2, 11 - index);
+                }, 0);
+            };
+
+            const checkAnswer = () => {
+                setShowValues(true);
+                const decimal = bitsToDecimal();
+                if (decimal === target) {
+                    setFeedback('Correct! +1 point');
+                    setScore(score + 1);
+                    setRound(round + 1);
+                    setTimeout(generateNewTarget, 1500);
+                } else {
+                    setFeedback('Try again!');
+                }
+            };
+
+            const renderBitGroups = () => {
+                const groups = [];
+                for (let i = 0; i < 3; i++) {
+                    groups.push(
+                        <div key={i} className={`bit-group bit-group-${i}`}>
+                            {bits.slice(i * 4, (i + 1) * 4).map((bit, index) => (
+                                <button
+                                    key={index}
+                                    className={`bit-button ${bit === 1 ? 'active' : ''}`}
+                                    onClick={() => toggleBit(i * 4 + index)}
+                                >
+                                    {bit}
+                                </button>
+                            ))}
+                        </div>
+                    );
+                }
+                return groups;
+            };
+
+            const renderBitInfo = () => {
+                const groups = [];
+                for (let i = 0; i < 3; i++) {
+                    groups.push(
+                        <div key={i} className="bit-info-group">
+                            {[3, 2, 1, 0].map((power, index) => {
+                                const actualPower = power + (8 - i * 4);
+                                const decimalValue = Math.pow(2, actualPower);
+                                return (
+                                    <div key={index} className="bit-value">
+                                        <div className="power-label">2<sup>{actualPower}</sup></div>
+                                        <div className="decimal-label">{decimalValue}</div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    );
+                }
+                return groups;
+            };
+
+            return (
+                <div className="game-container">
+                    <h1 className="title">Binary Learning Game</h1>
+                    
+                    {!isPlaying && !feedback.includes('Game Over') ? (
+                        <div className="text-center">
+                            <button className="button" onClick={startGame}>Start Game</button>
+                        </div>
+                    ) : (
+                        <>
+                            <div className="timer">Time: {timeLeft}s</div>
+                            <div className="text-center">
+                                Score: {score}
+                            </div>
+
+                            {isPlaying && (
+                                <>
+                                    <div className="text-center">
+                                        Convert {isHexChallenge ? `0x${target.toString(16).toUpperCase()}` : target} to binary
+                                    </div>
+
+                                    <div className="bits-container">
+                                        {renderBitGroups()}
+                                    </div>
+
+                                    <div className="bit-info">
+                                        {renderBitInfo()}
+                                    </div>
+
+                                    <div className={`values-display ${showValues ? 'visible' : ''}`}>
+                                        Decimal value: {bitsToDecimal()}
+                                        <br />
+                                        Hex value: 0x{bitsToDecimal().toString(16).toUpperCase()}
+                                    </div>
+
+                                    <div className="controls">
+                                        <button className="button" onClick={checkAnswer}>
+                                            Check Answer
+                                        </button>
+                                        <button className="button secondary" onClick={startGame}>
+                                            New Game
+                                        </button>
+                                    </div>
+                                </>
+                            )}
+
+                            {!isPlaying && (
+                                <div className="end-screen">
+                                    {feedback}
+                                    <br />
+                                    <button className="button" onClick={startGame} style={{marginTop: '20px'}}>
+                                        Play Again
+                                    </button>
+                                </div>
+                            )}
+                        </>
+                    )}
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<BinaryLearningGame />);
+    </script>
+</body>
+</html>
