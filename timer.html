@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 90vmin;
+            height: 90vmin;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: min(1in, 25vmin);
+        }
+        #timer {
+            font-size: min(25vmin, calc(100vh - 2in));
+            text-align: center;
+            width: 100%;
+        }
+        #controls {
+            margin-top: 20px;
+        }
+        button {
+            font-size: min(3vmin, 24px);
+            margin: 0 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="timer">00:00</div>
+        <div id="controls">
+            <button id="pauseBtn">Pause</button>
+            <button id="restartBtn">Restart</button>
+        </div>
+    </div>
+    <script>
+        function getSeconds() {
+            const params = new URLSearchParams(window.location.search);
+            return parseInt(params.get('s')) || 0;
+        }
+
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        let timeLeft = getSeconds();
+        const initialTime = timeLeft;
+        const timerElement = document.getElementById('timer');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const restartBtn = document.getElementById('restartBtn');
+        let timerInterval;
+        let isPaused = false;
+
+        function updateTimer() {
+            if (timeLeft < 0) {
+                timerElement.textContent = "00:00";
+                clearInterval(timerInterval);
+                pauseBtn.disabled = true;
+                return;
+            }
+            timerElement.textContent = formatTime(timeLeft);
+            timeLeft--;
+        }
+
+        function togglePause() {
+            if (isPaused) {
+                timerInterval = setInterval(updateTimer, 1000);
+                pauseBtn.textContent = 'Pause';
+            } else {
+                clearInterval(timerInterval);
+                pauseBtn.textContent = 'Resume';
+            }
+            isPaused = !isPaused;
+        }
+
+        function restart() {
+            clearInterval(timerInterval);
+            timeLeft = initialTime;
+            isPaused = false;
+            pauseBtn.textContent = 'Pause';
+            pauseBtn.disabled = false;
+            updateTimer();
+            timerInterval = setInterval(updateTimer, 1000);
+        }
+
+        pauseBtn.addEventListener('click', togglePause);
+        restartBtn.addEventListener('click', restart);
+
+        updateTimer();
+        timerInterval = setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
