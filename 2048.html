@@ -13,7 +13,8 @@
             background-color: black;
             color: white;
             margin: 0;
-            padding: 20px;
+            padding: 10px;
+            min-height: 100vh;
         }
         
         #game-container {
@@ -21,26 +22,30 @@
             display: flex;
             gap: 20px;
             align-items: flex-start;
+            width: 100%;
+            max-width: 600px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         
         #grid {
             display: inline-grid;
-            grid-template-columns: repeat(4, 80px);
-            gap: 10px;
+            grid-template-columns: repeat(4, minmax(60px, 80px));
+            gap: min(2.5vw, 10px);
             background-color: #333;
-            padding: 10px;
+            padding: min(2.5vw, 10px);
             border-radius: 6px;
         }
         
         .cell {
-            width: 80px;
-            height: 80px;
+            width: auto;
+            aspect-ratio: 1;
             background-color: #444;
             border-radius: 3px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 24px;
+            font-size: clamp(16px, 5vw, 24px);
             font-weight: bold;
             color: white;
             transition: background-color 0.15s ease;
@@ -56,17 +61,17 @@
             animation: newTile 0.3s ease;
         }
         
-        .cell[data-value="2"] { background-color: #4d0000; } /* very dark red */
-        .cell[data-value="4"] { background-color: #800000; } /* dark maroon */
-        .cell[data-value="8"] { background-color: #b30000; } /* medium dark red */
-        .cell[data-value="16"] { background-color: #e60000; } /* pure red */
-        .cell[data-value="32"] { background-color: #ff1a1a; } /* bright red */
-        .cell[data-value="64"] { background-color: #ff4d4d; } /* lighter red */
-        .cell[data-value="128"] { background-color: #ff6666; font-size: 20px; } /* coral red */
-        .cell[data-value="256"] { background-color: #ff8080; font-size: 20px; } /* salmon */
-        .cell[data-value="512"] { background-color: #ff9999; font-size: 20px; } /* light salmon */
-        .cell[data-value="1024"] { background-color: #ffb3b3; font-size: 18px; } /* very light red */
-        .cell[data-value="2048"] { background-color: #ffcccc; font-size: 18px; } /* pale red */
+        .cell[data-value="2"] { background-color: #4d0000; }
+        .cell[data-value="4"] { background-color: #800000; }
+        .cell[data-value="8"] { background-color: #b30000; }
+        .cell[data-value="16"] { background-color: #e60000; }
+        .cell[data-value="32"] { background-color: #ff1a1a; }
+        .cell[data-value="64"] { background-color: #ff4d4d; }
+        .cell[data-value="128"] { background-color: #ff6666; }
+        .cell[data-value="256"] { background-color: #ff8080; }
+        .cell[data-value="512"] { background-color: #ff9999; }
+        .cell[data-value="1024"] { background-color: #ffb3b3; }
+        .cell[data-value="2048"] { background-color: #ffcccc; }
 
         #controls {
             display: flex;
@@ -75,21 +80,22 @@
         }
 
         .control-button {
-            width: 60px;
-            height: 60px;
-            background-color: #c00;
+            width: clamp(50px, 15vw, 60px);
+            height: clamp(50px, 15vw, 60px);
+            background-color: #e60000;
             border: none;
             border-radius: 5px;
             color: white;
-            font-size: 24px;
+            font-size: clamp(18px, 5vw, 24px);
             cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .control-button:hover {
-            background-color: #d00;
+            background-color: #ff1a1a;
         }
 
         #horizontal-controls {
@@ -99,7 +105,7 @@
         }
 
         #score {
-            font-size: 24px;
+            font-size: clamp(18px, 5vw, 24px);
             margin: 20px 0;
             color: white;
         }
@@ -110,6 +116,8 @@
             text-align: center;
             line-height: 1.5;
             color: white;
+            padding: 0 10px;
+            font-size: clamp(14px, 4vw, 16px);
         }
 
         #game-over {
@@ -123,15 +131,15 @@
             justify-content: center;
             align-items: center;
             color: white;
-            font-size: 48px;
+            font-size: clamp(24px, 8vw, 48px);
             flex-direction: column;
         }
 
         #restart-button {
             margin-top: 20px;
             padding: 10px 20px;
-            font-size: 18px;
-            background-color: #c00;
+            font-size: clamp(16px, 5vw, 18px);
+            background-color: #e60000;
             color: white;
             border: none;
             border-radius: 3px;
@@ -139,7 +147,7 @@
         }
 
         #restart-button:hover {
-            background-color: #d00;
+            background-color: #ff1a1a;
         }
     </style>
 </head>
@@ -194,7 +202,6 @@
                 if (emptyCells.length > 0) {
                     const {x, y} = emptyCells[Math.floor(Math.random() * emptyCells.length)];
                     this.grid[x][y] = Math.random() < 0.9 ? 2 : 4;
-                    // Mark this position as new for animation
                     this.lastNewTile = {x, y};
                 }
             }
@@ -332,7 +339,6 @@
                         const value = this.grid[i][j];
                         cell.textContent = value || '';
                         cell.setAttribute('data-value', value);
-                        // Add animation class for new tiles
                         if (this.lastNewTile && this.lastNewTile.x === i && this.lastNewTile.y === j) {
                             cell.classList.add('new-tile');
                         }
@@ -341,7 +347,6 @@
                 }
 
                 document.getElementById('score-value').textContent = this.score;
-                // Clear the last new tile after display update
                 this.lastNewTile = null;
             }
 
