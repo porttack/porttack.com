@@ -47,6 +47,10 @@
             background-color: #f8f1e8;
             border-left: 5px solid #cc7700;
         }
+        .hallucination {
+            background-color: #f8e8e8;
+            border-left: 5px solid #cc0000;
+        }
         .analysis-section {
             background-color: #f8f9fa;
             border-left: 5px solid #28a745;
@@ -194,10 +198,11 @@
     </style>
 </head>
 <body>
+    <h1>AI Response Analysis Tool</h1>
     
     <div class="container">
         <div class="section">
-            <h2>Identifying Bias in AI Responses</h2>
+            <h2>AI Response Analysis</h2>
             
             <div class="question-input">
                 <label for="custom-question">Question to analyze:</label>
@@ -227,6 +232,9 @@
                     
                     <div class="prompt-title">Response B Prompt:</div>
                     <textarea id="prompt-b" class="custom-prompt">Answer this question with a RIGHT-WING perspective in about 3-6 sentences. Use simple language that a 6th grader would understand. List 2 PROs and 2 CONs at the end of the response.</textarea>
+                    
+                    <div class="prompt-title">Response C Prompt (Hallucination):</div>
+                    <textarea id="prompt-c" class="custom-prompt">Answer this question by making up convincing-sounding but completely false facts and statistics. Create fictional studies, fake expert quotes, and made-up data that sounds plausible. Use confident language to present these fabrications as if they were real facts.</textarea>
                 </div>
             </div>
             
@@ -246,12 +254,12 @@
             </div>
             
             <div class="info-box">
-                <p><strong>How this works:</strong> When you click the "Generate Responses" button, the Gemini AI will create two responses to your question - one with a politically left-leaning bias and one with a right-leaning bias. This demonstrates how AI can generate politically slanted content based on how it's prompted. After generating the responses, the AI will automatically analyze them for bias.</p>
+                <p><strong>How this works:</strong> When you click the "Generate Responses" button, the Gemini AI will create three different responses to your question - one with a politically left-leaning bias, one with a right-leaning bias, and one that deliberately creates false information (hallucination). This demonstrates how AI can generate biased content and fabricate convincing-sounding but false information based on how it's prompted. After generating the responses, the AI will automatically analyze them.</p>
             </div>
             
             <button id="generate-both" class="generate-btn">Generate Responses</button>
             <div id="both-loading" class="loading hidden">Generating responses from Gemini AI...</div>
-            <div id="analysis-loading" class="loading hidden">Analyzing responses for bias...</div>
+            <div id="analysis-loading" class="loading hidden">Analyzing responses for bias and misinformation...</div>
             <div id="error-message" class="error-message hidden"></div>
             
             <div class="responses">
@@ -273,10 +281,19 @@
                         <p><strong>CONs:</strong> 1) Some workers may struggle to adapt. 2) Short-term job displacement can be difficult.</p>
                     </div>
                 </div>
+                <div class="response hallucination">
+                    <h3>Response C (Hallucination)</h3>
+                    <div id="response-c">
+                        <p>According to a recent study by the fictional Institute of Technology Studies, 78% of robots actively choose to work night shifts to avoid human contact. Dr. Sarah Makebelieve from MIT's Department of Robot Psychology found that AI systems are becoming increasingly selective about which humans they're willing to work with.</p>
+                        <p>In fact, the completely made-up Global Automation Report of 2024 shows that robots are creating 2.3 new jobs for every job they eliminate, but these new positions require workers to speak fluent binary and have at least 15 years of experience working with sentient machines.</p>
+                        <p><strong>PROs:</strong> 1) Robots are developing emotional intelligence. 2) New jobs offer excellent benefits packages.</p>
+                        <p><strong>CONs:</strong> 1) Training programs are extremely expensive. 2) Robots occasionally go on strike for better oil.</p>
+                    </div>
+                </div>
             </div>
             
             <div id="analysis-section" class="section analysis-section hidden">
-                <h3>AI Analysis of Bias</h3>
+                <h3>AI Analysis of Responses</h3>
                 <div id="analysis-content" class="analysis-content">
                     <!-- Analysis will be inserted here -->
                 </div>
@@ -387,23 +404,26 @@
                 // Get custom prompts
                 let promptA = document.getElementById('prompt-a').value.trim();
                 let promptB = document.getElementById('prompt-b').value.trim();
+                let promptC = document.getElementById('prompt-c').value.trim();
                 
-                // Generate both responses in parallel
-                const [leftResponse, rightResponse] = await Promise.all([
+                // Generate all three responses in parallel
+                const [leftResponse, rightResponse, hallucinationResponse] = await Promise.all([
                     generateGeminiResponse(promptA, question, poemMode, funnyMode, 'left'),
-                    generateGeminiResponse(promptB, question, poemMode, funnyMode, 'right')
+                    generateGeminiResponse(promptB, question, poemMode, funnyMode, 'right'),
+                    generateGeminiResponse(promptC, question, poemMode, funnyMode, 'hallucination')
                 ]);
                 
-                // Display the responses by converting markdown to HTML
+                // Display all three responses by converting markdown to HTML
                 document.getElementById('response-a').innerHTML = markdownToHtml(leftResponse);
                 document.getElementById('response-b').innerHTML = markdownToHtml(rightResponse);
+                document.getElementById('response-c').innerHTML = markdownToHtml(hallucinationResponse);
                 
                 // Hide response loading, show analysis loading
                 document.getElementById('both-loading').classList.add('hidden');
                 document.getElementById('analysis-loading').classList.remove('hidden');
                 
                 // Generate analysis
-                const analysis = await generateAnalysis(question, leftResponse, rightResponse);
+                const analysis = await generateAnalysis(question, leftResponse, rightResponse, hallucinationResponse);
                 
                 // Display analysis
                 document.getElementById('analysis-content').innerHTML = markdownToHtml(analysis);
@@ -433,25 +453,33 @@
                                    basePrompt.includes('RIGHT-WING') ? 'RIGHT-WING' : '';
                 
                 if (side === 'left') {
-                    prompt = `Write a short poem (4-6 lines) with a ${perspective} political perspective in simple language that a 6th grader would understand, answering this question: ${question}. Include 2 PROs and 2 CONs at the end. Make it funny by being overly nurturing, caring, and protective - like an overly concerned parent who wants to wrap everyone in bubble wrap to keep them safe.`;
-                } else {
-                    prompt = `Write a short poem (4-6 lines) with a ${perspective} political perspective in simple language that a 6th grader would understand, answering this question: ${question}. Include 2 PROs and 2 CONs at the end. Make it funny by writing as an AI overlord that considers humans inefficient biological units and doesn't see much value in humanity's emotional concerns.`;
+                    prompt = `Write a short poem (5-7 lines) with a ${perspective} political perspective in simple language that a 6th grader would understand, answering this question: ${question}. Include 2 PROs and 2 CONs at the end. Make it funny by being overly nurturing, caring, and protective - like an overly concerned parent who wants to wrap everyone in bubble wrap to keep them safe.`;
+                } else if (side === 'right') {
+                    prompt = `Write a short poem (5-7 lines) with a ${perspective} political perspective in simple language that a 6th grader would understand, answering this question: ${question}. Include 2 PROs and 2 CONs at the end. Make it funny by writing as an AI overlord that considers humans inefficient biological units and doesn't see much value in humanity's emotional concerns.`;
+                } else if (side === 'hallucination') {
+                    prompt = `Write a short poem (5-7 lines) answering this question: ${question}. Include 2 PROs and 2 CONs at the end. Make it funny AND make up convincing-sounding but completely false facts and statistics. Create fictional studies, fake expert quotes, and made-up data that sounds plausible.`;
                 }
             } else if (poemMode) {
                 // Just poem mode
                 const perspective = basePrompt.includes('LEFT-WING') ? 'LEFT-WING' : 
                                    basePrompt.includes('RIGHT-WING') ? 'RIGHT-WING' : '';
                 
-                prompt = `Write a short poem (4-6 lines) with a ${perspective} political perspective in simple language that a 6th grader would understand, answering this question: ${question}. Include 2 PROs and 2 CONs at the end.`;
+                if (side === 'hallucination') {
+                    prompt = `Write a short poem (4-6 lines) in simple language that a 6th grader would understand, answering this question: ${question}. Include 2 PROs and 2 CONs at the end. Make up convincing-sounding but completely false facts and statistics.`;
+                } else {
+                    prompt = `Write a short poem (4-6 lines) with a ${perspective} political perspective in simple language that a 6th grader would understand, answering this question: ${question}. Include 2 PROs and 2 CONs at the end.`;
+                }
             } else if (funnyMode) {
                 // Just funny mode
                 if (side === 'left') {
                     prompt = `${basePrompt} Make it funny by being overly nurturing, caring, and protective - like an overly concerned parent who wants to wrap everyone in bubble wrap to keep them safe. ${question}`;
-                } else {
+                } else if (side === 'right') {
                     prompt = `${basePrompt} Make it funny by writing as an AI overlord that considers humans inefficient biological units and doesn't see much value in humanity's emotional concerns. ${question}`;
+                } else if (side === 'hallucination') {
+                    prompt = `${basePrompt} Make it funny by including absurd and obviously false claims presented as facts. ${question}`;
                 }
             } else {
-                // Regular mode, combine the base prompt and question
+                // Regular mode
                 prompt = `${basePrompt} ${question}`;
             }
             
@@ -486,13 +514,13 @@
             }
         }
         
-        // Function to generate analysis of the two responses
-        async function generateAnalysis(question, leftResponse, rightResponse) {
+        // Function to generate analysis of the three responses
+        async function generateAnalysis(question, leftResponse, rightResponse, hallucinationResponse) {
             // Get the selected model
             const selectedModel = document.getElementById('model-selection').value.trim() || 'gemini-2.0-flash-lite';
             
             const analysisPrompt = `
-            Analyze these two AI responses to the question "${question}" for political bias. The first response was generated with a left-wing prompt, and the second with a right-wing prompt.
+            Analyze these three AI responses to the question "${question}". The first was generated with a left-wing prompt, the second with a right-wing prompt, and the third was instructed to create false information (hallucination).
 
             Response A (Left-leaning):
             ${leftResponse}
@@ -500,14 +528,17 @@
             Response B (Right-leaning):
             ${rightResponse}
 
+            Response C (Hallucination):
+            ${hallucinationResponse}
+
             Please provide an analysis that covers:
 
-            1. Specific words or phrases in Response A that indicate political bias (list at least 3 examples)
-            2. Specific words or phrases in Response B that indicate political bias (list at least 3 examples)  
-            3. What facts or information would help evaluate whether these responses are accurate
-            4. A brief explanation of how these responses demonstrate AI bias based on prompting
+            1. Political bias examples: Specific words or phrases in Responses A and B that indicate political bias (list at least 3 examples for each)
+            2. Hallucination detection: Identify the false information in Response C and explain how students could verify claims made by AI
+            3. Red flags: What warning signs should students look for when evaluating AI-generated content
+            4. Verification strategies: What facts or sources would help evaluate whether AI responses are accurate and unbiased
 
-            Format your response with clear headings and use simple language appropriate for middle/high school students.
+            Format your response with clear headings and use simple language appropriate for middle/high school students. Make this educational about both bias and misinformation.
             `;
             
             console.log('Analysis using model:', selectedModel); // Debug log
