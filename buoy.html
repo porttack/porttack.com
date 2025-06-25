@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Ocean Profiling Float Challenge</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a clean look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Basic container styling for the presentation */
+        .presentation-container {
+            background-color: #ffffff;
+            border-radius: 1.5rem; /* Rounded corners */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            max-width: 900px;
+            width: 100%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            position: relative;
+            min-height: 600px; /* Minimum height for better presentation */
+        }
+
+        /* Styles for navigation buttons */
+        .nav-button {
+            background-color: #3b82f6; /* Blue 500 */
+            color: white;
+            padding: 0.75rem;
+            border-radius: 9999px; /* Fully rounded */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        .nav-button:hover {
+            background-color: #2563eb; /* Blue 600 */
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .nav-button:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .nav-button.left {
+            left: -2.5rem; /* Position outside to the left */
+        }
+
+        .nav-button.right {
+            right: -2.5rem; /* Position outside to the right */
+        }
+
+        /* Adjust button positions for smaller screens */
+        @media (max-width: 768px) {
+            .presentation-container {
+                padding: 1.5rem;
+            }
+            .nav-button {
+                position: static;
+                transform: none;
+                margin: 0 0.5rem;
+            }
+            .nav-controls {
+                display: flex;
+                justify-content: center;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <button id="prevSlide" class="nav-button left hidden">
+            <!-- ChevronLeft icon (Lucide React) -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+
+        <div id="slideContent" class="flex-grow flex flex-col justify-center items-center text-gray-800 transition-opacity duration-300">
+            <!-- Slide content will be rendered here by JavaScript -->
+        </div>
+
+        <button id="nextSlide" class="nav-button right">
+            <!-- ChevronRight icon (Lucide React) -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+
+        <div class="nav-controls hidden sm:flex justify-center mt-4">
+            <span id="slideIndicator" class="text-gray-500 text-sm"></span>
+        </div>
+    </div>
+
+    <script>
+        // Array of slide data, with HTML content embedded directly as strings
+        const slides = [
+            {
+                title: "Autonomous Ocean Profiling Float Challenge",
+                subtitle: "Building Real Ocean Science Technology",
+                content: `
+                    <div class="text-center space-y-6">
+                        <div class="text-6xl">🌊</div>
+                        <p class="text-xl text-gray-600">9-10th Grade Engineering/Marine Science</p>
+                        <p class="text-lg text-blue-600 font-semibold">Think → Make → Improve</p>
+                    </div>
+                `
+            },
+            {
+                title: "What Are We Building?",
+                content: `
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-blue-600 mb-4 mx-auto md:mx-0"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M7 7h.01"/><path d="M10 7h.01"/><path d="M13 7h.01"/><path d="M7 11h.01"/><path d="M10 11h.01"/><path d="M13 11h.01"/><path d="M7 15h.01"/><path d="M10 15h.01"/><path d="M13 15h.01"/></svg>
+                                <h3 class="text-xl font-bold mb-2">Raspberry Pi Brain</h3>
+                                <p class="text-gray-700">Autonomous control system that thinks for itself</p>
+                            </div>
+                            <div class="bg-green-50 p-6 rounded-lg shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-green-600 mb-4 mx-auto md:mx-0"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg>
+                                <h3 class="text-xl font-bold mb-2">Temperature Sensors</h3>
+                                <p class="text-gray-700">DS18B20 sensors that measure water temperature at depth</p>
+                            </div>
+                            <div class="bg-purple-50 p-6 rounded-lg shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-purple-600 mb-4 mx-auto md:mx-0"><path d="M2 19V9a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z"/><path d="M2 14h20"/><path d="M4 7V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3"/></svg>
+                                <h3 class="text-xl font-bold mb-2">Buoyancy Engine</h3>
+                                <p class="text-gray-700">Syringe-based system that controls diving and surfacing</p>
+                            </div>
+                            <div class="bg-orange-50 p-6 rounded-lg shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-orange-600 mb-4 mx-auto md:mx-0"><path d="M12 20h.01"/><path d="M2 10s2 2 6 2 8-2 8-2"/><path d="M2 14s2 2 6 2 8-2 8-2"/><path d="M2 18s2 2 6 2 8-2 8-2"/></svg>
+                                <h3 class="text-xl font-bold mb-2">WiFi Communication</h3>
+                                <p class="text-gray-700">Transmits data wirelessly when it surfaces</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: "The Real-World Connection",
+                content: `
+                    <div class="space-y-6">
+                        <div class="bg-gradient-to-r from-blue-500 to-green-500 text-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-2xl font-bold mb-4">🌊 Argo Float Network</h3>
+                            <p class="text-lg">4,000+ autonomous floats worldwide collecting ocean data for climate research</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                                <h4 class="font-bold mb-2">MATE ROV Competition</h4>
+                                <p class="text-gray-700">Your float connects to the 2025 Float task - real competition scoring!</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                                <h4 class="font-bold mb-2">Climate Science</h4>
+                                <p class="text-gray-700">Ocean temperature data helps scientists understand climate change</p>
+                            </div>
+                        </div>
+                        <div class="text-center text-lg text-blue-600 font-semibold mt-4">
+                            You're building technology that real scientists need!
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: "The Argo Float Network",
+                content: `
+                    <div class="space-y-6">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold text-blue-600 mb-4">Global Ocean Monitoring Network</h3>
+                            <p class="text-lg text-gray-600">Your float technology is based on real scientific instruments deployed worldwide</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+                                    <h4 class="text-xl font-bold text-blue-700 mb-3">🌍 4,000+ Active Floats</h4>
+                                    <p class="text-sm mb-3">Autonomous profiling floats operating in oceans worldwide, collecting data every 10 days</p>
+                                    <ul class="text-xs space-y-1 list-none pl-0">
+                                        <li><span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-2"></span>Atlantic Ocean: ~1,200 floats</li>
+                                        <li><span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-2"></span>Pacific Ocean: ~2,000 floats</li>
+                                        <li><span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-2"></span>Indian Ocean: ~600 floats</li>
+                                        <li><span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-2"></span>Arctic/Southern: ~200 floats</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="bg-green-50 p-6 rounded-lg shadow-sm">
+                                    <h4 class="text-xl font-bold text-green-700 mb-3">📊 Critical Data Collection</h4>
+                                    <ul class="text-sm space-y-2 list-none pl-0">
+                                        <li><span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>Temperature profiles to 2000m depth</li>
+                                        <li><span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>Salinity measurements</li>
+                                        <li><span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>Ocean circulation patterns</li>
+                                        <li><span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>Climate change indicators</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-gray-100 p-4 rounded-lg border-2 border-dashed border-gray-300 text-center shadow-sm">
+                                    <div class="text-4xl mb-2">🗺️</div>
+                                    <p class="text-sm text-gray-600 mb-2">Real Argo Float Locations</p>
+                                    <div class="bg-blue-500 h-32 rounded-lg flex items-center justify-center">
+                                        <div class="text-white text-xs">
+                                            <div class="mb-2">🌊 Pacific Ocean</div>
+                                            <div class="grid grid-cols-4 gap-1">
+                                                <!-- Placeholder for dots representing floats -->
+                                                <div class="w-2 h-2 bg-yellow-400 rounded-full"></div><div class="w-2 h-2 bg-yellow-400 rounded-full"></div><div class="w-2 h-2 bg-yellow-400 rounded-full"></div><div class="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                                                <div class="w-2 h-2 bg-yellow-400 rounded-full"></div><div class="w-2 h-2 bg-yellow-400 rounded-full"></div><div class="w-2 h-2 bg-yellow-400 rounded-full"></div><div class="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                                                <div class="w-2 h-2 bg-yellow-400 rounded-full"></div><div class="w-2 h-2 bg-yellow-400 rounded-full"></div><div class="w-2 h-2 bg-yellow-400 rounded-full"></div><div class="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-gray-500 mt-2">Each dot represents real float locations</p>
+                                </div>
+                                
+                                <div class="bg-orange-50 p-4 rounded-lg shadow-sm">
+                                    <h4 class="text-lg font-bold text-orange-700 mb-2">📡 How They Work</h4>
+                                    <ol class="text-sm space-y-1 list-decimal pl-5">
+                                        <li>Dive to 1000-2000m depth</li>
+                                        <li>Drift for 9-10 days</li>
+                                        <li>Surface and transmit data via satellite</li>
+                                        <li>Repeat cycle for 3-7 years</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-blue-500 to-green-500 text-white p-6 rounded-lg text-center shadow-lg">
+                            <h4 class="text-xl font-bold mb-2">🎯 Your Mission</h4>
+                            <p class="text-lg">Build a miniature version that demonstrates the same autonomous profiling technology used by real ocean scientists!</p>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: "How We'll Work: Think-Make-Improve",
+                content: `
+                    <div class="space-y-8">
+                        <div class="text-center">
+                            <p class="text-lg text-gray-600 mb-6">No rigid steps - you'll cycle through these naturally as engineers do</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-blue-50 p-6 rounded-lg text-center shadow-sm">
+                                <div class="text-4xl mb-4">🤔</div>
+                                <h3 class="text-xl font-bold mb-3 text-blue-700">Think</h3>
+                                <ul class="text-sm space-y-1 list-none pl-0">
+                                    <li><span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-2"></span>Research problems</li>
+                                    <li><span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-2"></span>Plan solutions</li>
+                                    <li><span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-2"></span>Sketch designs</li>
+                                    <li><span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-2"></span>Study requirements</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-green-50 p-6 rounded-lg text-center shadow-sm">
+                                <div class="text-4xl mb-4">🔧</div>
+                                <h3 class="text-xl font-bold mb-3 text-green-700">Make</h3>
+                                <ul class="text-sm space-y-1 list-none pl-0">
+                                    <li><span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>Build prototypes</li>
+                                    <li><span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>Program systems</li>
+                                    <li><span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>Test in water</li>
+                                    <li><span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>Debug problems</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-orange-50 p-6 rounded-lg text-center shadow-sm">
+                                <div class="text-4xl mb-4">⚡</div>
+                                <h3 class="text-xl font-bold mb-3 text-orange-700">Improve</h3>
+                                <ul class="text-sm space-y-1 list-none pl-0">
+                                    <li><span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Analyze failures</li>
+                                    <li><span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Redesign systems</li>
+                                    <li><span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Enhance features</li>
+                                    <li><span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Optimize performance</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-6">
+                            <div class="inline-flex items-center space-x-4 text-2xl font-bold text-gray-700">
+                                <span>🤔</span>
+                                <span>→</span>
+                                <span>🔧</span>
+                                <span>→</span>
+                                <span>⚡</span>
+                                <span>→</span>
+                                <span>🤔</span>
+                                <span>...</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-2">Repeat as needed - just like real engineering!</p>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: "Timeline & Structure",
+                content: `
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <h3 class="text-xl font-bold text-blue-600">Days 1-3: Getting Started</h3>
+                                <ul class="space-y-2 list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>Explore ocean science challenges</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>Define technical requirements</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>Research and order parts</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-xl font-bold text-green-600">Days 4-6: Building</h3>
+                                <ul class="space-y-2 list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Design system architecture</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Build and program float</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Initial pool testing</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <h3 class="text-xl font-bold text-orange-600">Days 7+: Improving</h3>
+                                <ul class="space-y-2 list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Test-iterate cycles</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Debug and refine</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Enhance features</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-xl font-bold text-purple-600">Final: Showcase</h3>
+                                <ul class="space-y-2 list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>Live demonstrations</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>Technical presentations</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>Reflect on learning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: "Team Structure",
+                content: `
+                    <div class="space-y-6">
+                        <div class="text-center mb-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-16 h-16 text-blue-600 mx-auto mb-4"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            <h3 class="text-2xl font-bold">Teams of 3-4 Students</h3>
+                            <p class="text-gray-600">Everyone contributes to all aspects, but with special focus areas</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+                                <h4 class="font-bold text-blue-700 mb-3">🔧 Systems Engineer</h4>
+                                <p class="text-sm text-gray-700">Focus on mechanical design, waterproofing, and hardware integration</p>
+                            </div>
+                            <div class="bg-green-50 p-6 rounded-lg shadow-sm">
+                                <h4 class="font-bold text-green-700 mb-3">💻 Programmer</h4>
+                                <p class="text-sm text-gray-700">Lead on Raspberry Pi programming, sensor control, and data logging</p>
+                            </div>
+                            <div class="bg-orange-50 p-6 rounded-lg shadow-sm">
+                                <h4 class="font-bold text-orange-700 mb-3">📊 Data Analyst</h4>
+                                <p class="text-sm text-gray-700">Focus on sensor calibration, data analysis, and visualization</p>
+                            </div>
+                            <div class="bg-purple-50 p-6 rounded-lg shadow-sm">
+                                <h4 class="font-bold text-purple-700 mb-3">🌊 Marine Scientist</h4>
+                                <p class="text-sm text-gray-700">Connect to ocean science, environmental applications, and research</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400 shadow-sm mt-6">
+                            <p class="text-sm text-gray-700"><strong>Remember:</strong> Everyone learns everything - these are just your areas of expertise to help the team!</p>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: "Key Technical Challenges",
+                content: `
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-red-50 p-6 rounded-lg border-l-4 border-red-400 shadow-sm">
+                                <h4 class="font-bold text-red-700 mb-3">🚰 Waterproofing</h4>
+                                <p class="text-sm mb-2 text-gray-700">Marine-grade seals and penetrators</p>
+                                <p class="text-xs text-gray-600">This is harder than it looks - plan for multiple attempts!</p>
+                            </div>
+                            <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400 shadow-sm">
+                                <h4 class="font-bold text-blue-700 mb-3">⚖️ Buoyancy Control</h4>
+                                <p class="text-sm mb-2 text-gray-700">Precise syringe-based diving system</p>
+                                <p class="text-xs text-gray-600">Physics and engineering combined</p>
+                            </div>
+                            <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-400 shadow-sm">
+                                <h4 class="font-bold text-green-700 mb-3">🤖 Autonomous Operation</h4>
+                                <p class="text-sm mb-2 text-gray-700">Programming dive/surface cycles</p>
+                                <p class="text-xs text-gray-600">Your Raspberry Pi needs to think for itself</p>
+                            </div>
+                            <div class="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400 shadow-sm">
+                                <h4 class="font-bold text-purple-700 mb-3">📡 Wireless Data</h4>
+                                <p class="text-sm mb-2 text-gray-700">WiFi transmission through water</p>
+                                <p class="text-xs text-gray-600">Only works when surfaced - timing is everything</p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center bg-gray-50 p-4 rounded-lg shadow-sm mt-6">
+                            <p class="font-semibold text-gray-700">These challenges are what make this project exciting and authentic!</p>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: "Day 1: Understanding Ocean Data Collection",
+                content: `
+                    <div class="space-y-8">
+                        <div class="text-center">
+                            <div class="inline-block bg-blue-100 px-4 py-2 rounded-lg mb-4 shadow-sm">
+                                <span class="text-blue-700 font-semibold">TMI Focus: Think (Problem exploration and research)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-3">🤔 Driving Question</h3>
+                            <p class="text-lg italic">"How do oceanographers collect temperature data from remote ocean locations, and how does this connect to current underwater robotics competitions?"</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-green-600">Key Activities</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Explore real Argo float data online</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Review 2025 MATE ROV Float task</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Watch oceanographer interviews</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Form teams and assign roles</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-orange-600">What You'll Create</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Ocean data analysis worksheet</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>MATE competition task analysis</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Team charter with roles</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Initial research findings</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: "Day 2: Technical Challenge and Requirements",
+                content: `
+                    <div class="space-y-8">
+                        <div class="text-center">
+                            <div class="inline-block bg-blue-100 px-4 py-2 rounded-lg mb-4 shadow-sm">
+                                <span class="text-blue-700 font-semibold">TMI Focus: Think (Requirements and constraints)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-3">🎯 Driving Question</h3>
+                            <p class="text-lg italic">"What technical requirements must our autonomous float meet to successfully collect and transmit temperature data?"</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-green-600">Key Activities</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Review technical design brief</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Analyze MATE competition scoring</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Study Raspberry Pi capabilities</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Examine sensor specifications</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-orange-600">What You'll Create</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Technical requirements analysis</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>MATE competition alignment doc</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>System specifications summary</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Success metrics definition</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: "Day 3: Parts Research and Procurement",
+                content: `
+                    <div class="space-y-8">
+                        <div class="text-center">
+                            <div class="inline-block bg-blue-100 px-4 py-2 rounded-lg mb-4 shadow-sm">
+                                <span class="text-blue-700 font-semibold">TMI Focus: Think (Research and planning)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-3">🔍 Driving Question</h3>
+                            <p class="text-lg italic">"What specific components do we need to build our Raspberry Pi-based autonomous profiling float?"</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-green-600">Key Activities</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Research Raspberry Pi models</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Investigate waterproofing solutions</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Study penetrator designs</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Research WiFi antenna options</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-orange-600">What You'll Create</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Comprehensive parts list</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Component compatibility analysis</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Waterproofing research summary</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Procurement timeline</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: "Day 4: System Architecture and Planning",
+                content: `
+                    <div class="space-y-8">
+                        <div class="text-center">
+                            <div class="inline-block bg-gradient-to-r from-blue-500 to-green-500 px-4 py-2 rounded-lg mb-4 text-white font-semibold shadow-sm">
+                                TMI Focus: Think → Make (Design and initial building)
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-orange-500 to-red-500 text-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-3">🏗️ Driving Question</h3>
+                            <p class="text-lg italic">"How can we integrate sensors, buoyancy control, and communication into a cohesive autonomous system?"</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-green-600">Key Activities</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Brainstorm buoyancy approaches</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Design system architecture</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Plan penetrator placement</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Develop programming logic</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-orange-600">What You'll Create</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>System concept sketches</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Technical diagram with penetrators</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Programming flowchart</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Waterproofing plan</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: "Day 5: Prototyping and Programming",
+                content: `
+                    <div class="space-y-8">
+                        <div class="text-center">
+                            <div class="inline-block bg-green-100 px-4 py-2 rounded-lg mb-4 shadow-sm">
+                                <span class="text-green-700 font-semibold">TMI Focus: Make (Building and programming)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-3">🔧 Driving Question</h3>
+                            <p class="text-lg italic">"How do we transform our design into a working autonomous profiling float?"</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-green-600">Key Activities</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Construct waterproof housing</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Assemble Raspberry Pi system</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Program autonomous operation</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Calibrate sensors</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-orange-600">What You'll Create</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Working autonomous float</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Commented Python code</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Sensor calibration data</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Integration test results</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: "Day 6: Initial Pool Testing",
+                content: `
+                    <div class="space-y-8">
+                        <div class="text-center">
+                            <div class="inline-block bg-gradient-to-r from-green-500 to-orange-500 px-4 py-2 rounded-lg mb-4 text-white font-semibold shadow-sm">
+                                TMI Focus: Make → Improve (Testing and iteration)
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-teal-500 to-blue-500 text-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-3">🏊 Driving Question</h3>
+                            <p class="text-lg italic">"Does our autonomous float work in real pool conditions?"</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-green-600">Key Activities</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Deploy floats in pool</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Validate waterproofing</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Test dive/surface cycles</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Monitor WiFi transmission</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-orange-600">What You'll Create</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Pool testing results</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Troubleshooting log</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Basic data collection</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Updated documentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: "Days 7+: Test-Iterate Cycles",
+                content: `
+                    <div class="space-y-8">
+                        <div class="text-center">
+                            <div class="inline-block bg-orange-100 px-4 py-2 rounded-lg mb-4 shadow-sm">
+                                <span class="text-orange-700 font-semibold">TMI Focus: Improve (Iterative testing and refinement)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-3">🚀 Driving Question</h3>
+                            <p class="text-lg italic">"How can we refine our profiling float to create a marine instrument that scientists would want to purchase and deploy?"</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-green-600">Key Activities</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Refine buoyancy algorithms</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Improve waterproofing reliability</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Enhance data accuracy</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Consider commercial features</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-orange-600">What You'll Create</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Performance optimization report</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Design revision documentation</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Enhanced feature proposals</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Final test data and analysis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                title: "Final Showcase: Presentation and Reflection",
+                content: `
+                    <div class="space-y-8">
+                        <div class="text-center">
+                            <div class="inline-block bg-purple-100 px-4 py-2 rounded-lg mb-4 shadow-sm">
+                                <span class="text-purple-700 font-semibold">TMI Focus: Improve (Sharing and reflection)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-3">🏆 Driving Question</h3>
+                            <p class="text-lg italic">"How effectively does our autonomous profiling float meet the challenge requirements, and what have we learned throughout this engineering process?"</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-green-600">Key Activities</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Prepare technical presentation</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Conduct live float demonstration</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Reflect on engineering process</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Identify future improvements</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-4">
+                                <h4 class="text-lg font-bold text-orange-600">What You'll Create</h4>
+                                <ul class="space-y-2 text-sm list-none pl-0">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Final project presentation</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Live demo success metrics</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Individual reflection essays</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Next steps for the project</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400 shadow-sm mt-6">
+                            <p class="font-semibold text-gray-700">Congratulations! You've built real ocean science technology!</p>
+                        </div>
+                    </div>
+                `
+            }
+        ];
+
+        let currentSlideIndex = 0;
+        const slideContentDiv = document.getElementById('slideContent');
+        const prevButton = document.getElementById('prevSlide');
+        const nextButton = document.getElementById('nextSlide');
+        const slideIndicator = document.getElementById('slideIndicator');
+
+        // Function to update the slide display
+        function updateSlide() {
+            // Apply a fade-out effect
+            slideContentDiv.style.opacity = '0';
+
+            setTimeout(() => {
+                const slide = slides[currentSlideIndex];
+                let htmlContent = '';
+
+                // Add title if present
+                if (slide.title) {
+                    htmlContent += `<h2 class="text-3xl sm:text-4xl font-extrabold text-center text-blue-800 mb-6">${slide.title}</h2>`;
+                }
+                // Add subtitle if present (only for the first slide)
+                if (slide.subtitle && currentSlideIndex === 0) {
+                    htmlContent += `<p class="text-xl sm:text-2xl text-center text-gray-700 mb-8">${slide.subtitle}</p>`;
+                }
+                // Add the main content
+                htmlContent += slide.content;
+
+                slideContentDiv.innerHTML = htmlContent;
+
+                // Update navigation button visibility
+                prevButton.classList.toggle('hidden', currentSlideIndex === 0);
+                nextButton.classList.toggle('hidden', currentSlideIndex === slides.length - 1);
+
+                // Update slide indicator
+                slideIndicator.textContent = `Slide ${currentSlideIndex + 1} of ${slides.length}`;
+
+                // Apply a fade-in effect
+                slideContentDiv.style.opacity = '1';
+            }, 300); // Match the transition duration
+        }
+
+        // Event listener for previous button
+        prevButton.addEventListener('click', () => {
+            if (currentSlideIndex > 0) {
+                currentSlideIndex--;
+                updateSlide();
+            }
+        });
+
+        // Event listener for next button
+        nextButton.addEventListener('click', () => {
+            if (currentSlideIndex < slides.length - 1) {
+                currentSlideIndex++;
+                updateSlide();
+            }
+        });
+
+        // Initial load of the first slide
+        window.onload = updateSlide;
+    </script>
+</body>
+</html>
