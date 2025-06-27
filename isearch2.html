@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search - Easy URL Copy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            color: #1a73e8;
+            margin: 0 0 10px 0;
+        }
+        
+        .instructions {
+            background: #e8f0fe;
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .instructions h3 {
+            margin: 0 0 10px 0;
+            color: #1a73e8;
+        }
+        
+        .instructions ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin: 5px 0;
+        }
+        
+        .tip {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        
+        .search-container {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        /* Style the Google CSE */
+        .gcse-search {
+            width: 100% !important;
+        }
+        
+        /* Custom styles to make the search results easier to work with */
+        .gsc-results-wrapper-overlay {
+            background: white !important;
+            border-radius: 10px !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+            margin-top: 20px !important;
+        }
+        
+        .copy-helper {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #1a73e8;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            max-width: 300px;
+            display: none;
+            z-index: 1000;
+        }
+        
+        .copy-helper.show {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+        
+        .close-helper {
+            float: right;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            margin: -5px -5px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔍 Image Search for Students</h1>
+        <p>Find images and easily copy their URLs for your projects</p>
+    </div>
+
+    <div class="instructions">
+        <h3>How to get image URLs for your code:</h3>
+        <ol>
+            <li><strong>Search</strong> for images using the search box below</li>
+            <li><strong>Right-click</strong> on any image you want to use</li>
+            <li>Select <strong>"Copy image address"</strong> (Chrome) or <strong>"Copy Image Link"</strong> (Firefox)</li>
+            <li><strong>Paste</strong> the URL directly into your code!</li>
+        </ol>
+        
+        <div class="tip">
+            <strong>💡 Pro tip:</strong> The copied URL will look something like: <code>https://example.com/image.jpg</code> - perfect for HTML, CSS, JavaScript, Python, and more!
+        </div>
+    </div>
+
+    <div class="search-container">
+        <script async src="https://cse.google.com/cse.js?cx=e4d3d8ec2435f440b"></script>
+        <div class="gcse-search" data-defaultToImageSearch="true"></div>
+    </div>
+
+    <!-- Floating helper -->
+    <div class="copy-helper" id="copyHelper">
+        <button class="close-helper" onclick="hideCopyHelper()">&times;</button>
+        <h4>Need help copying image URLs?</h4>
+        <p><strong>Right-click</strong> on any image and select:</p>
+        <ul>
+            <li><strong>Chrome:</strong> "Copy image address"</li>
+            <li><strong>Firefox:</strong> "Copy Image Link"</li>
+            <li><strong>Safari:</strong> "Copy Image Address"</li>
+            <li><strong>Edge:</strong> "Copy image address"</li>
+        </ul>
+    </div>
+
+    <script>
+        // Show the copy helper after a few seconds
+        setTimeout(() => {
+            document.getElementById('copyHelper').classList.add('show');
+        }, 3000);
+        
+        function hideCopyHelper() {
+            document.getElementById('copyHelper').classList.remove('show');
+        }
+        
+        // Auto-hide after 10 seconds
+        setTimeout(() => {
+            hideCopyHelper();
+        }, 13000);
+        
+        // Add keyboard shortcut info
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'h') {
+                e.preventDefault();
+                const helper = document.getElementById('copyHelper');
+                if (helper.classList.contains('show')) {
+                    hideCopyHelper();
+                } else {
+                    helper.classList.add('show');
+                }
+            }
+        });
+        
+        // Add right-click detection to remind users
+        document.addEventListener('contextmenu', function(e) {
+            // Check if right-clicking on an image
+            if (e.target.tagName === 'IMG') {
+                // Could add a brief highlight or tooltip here
+                console.log('Right-clicked on image - remember to copy image address!');
+            }
+        });
+    </script>
+</body>
+</html>
