@@ -5,7 +5,7 @@ date:   2024-06-15
 categories: teaching
 ---
 
-Moving from four decades in tech to a middle school classroom taught me more than I expected. Here are three key insights from my first year at SLV:
+Moving from four decades in tech to a middle school and high school classroom taught me more than I expected. Here are three key insights from my first year at SLV.
 
 ## 1. Sometimes Success Happens by Accident
 
