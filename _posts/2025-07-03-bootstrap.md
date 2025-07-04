@@ -8,9 +8,11 @@ excerpt_separator: <!--more-->
 
 For a few years, I've made a fundamental error in my computer science teaching: assuming students arrive with certain mathematical concepts. I did learn to teach middle schoolers which axis is *x* and which is *y*, but I never taught about order of operations, what a function is, what *f(x)* means, etc.
 
-<p align="center">
-[<img src="https://www.bootstrapworld.org/materials/fall2020/en-us/courses/algebra-wescheme/images/Logo.png" width="150">](https://bootstrapworld.org/materials/algebra/)
-</p>
+<div style="text-align: center;">
+  <a href="https://bootstrapworld.org/materials/algebra/">
+    <img src="https://www.bootstrapworld.org/materials/fall2020/en-us/courses/algebra-wescheme/images/Logo.png" width="150">
+  </a>
+</div>
 
 <!--more-->
 
