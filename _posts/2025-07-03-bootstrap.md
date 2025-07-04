@@ -17,7 +17,7 @@ Computer Science builds on some linguistic¹ and mathematical concepts that are 
 
 Bootstrap introduces the following common vocabulary and concepts, equipping students with a foundational language they will use as they explore computer science:
 
-- Order of operations (using circles instead of PEMDAS)  
+- Order of operations (using circles of evaluation as an alternative to PEMDAS)  
 - Variables  
 - Simple Data Types (even just the notion of what a data type is)  
 - Functions that *consume* a *domain* and *produce* a *range* of value(s)  
@@ -29,8 +29,9 @@ Bootstrap introduces the following common vocabulary and concepts, equipping stu
 - x, y, width, height, etc.  
 - Graphical composition, translation, etc.  
 - Simple and complex inequalities
+- Conditionals (if statements)
 
-Bootstrap Algebra is middle school content. For middle school, it could consume most of a semester or serve as foundational preparation before CMU Coding Academy or physical computing. 
+Bootstrap Algebra is middle school content. For middle school, it could consume an entire semester or serve as foundational preparation for [CMU Coding Academy](https://academy.cs.cmu.edu/course-info#CS0) or physical computing. 
 
 For high school computer science, it creates an initial framework that accesses or reteaches students' math learning while establishing a common vocabulary and conceptual basis for exploring other computer science content.
 
