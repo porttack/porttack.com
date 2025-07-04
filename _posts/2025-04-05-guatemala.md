@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "Clean Water and Clear Vision: A Teacher's Perspective on Service in Guatemala"
+title:  "A Service Project with My Son: A Guatemala Water Project"
 date:   2025-04-05
 categories: service rotary
 ---
 
-Last month, I joined ten other Rotarians from Santa Cruz Sunrise Rotary on a self-funded trip to Guatemala. Our mission: install two water purification systems capable of producing 10,000 gallons of clean water daily and distribute 500 pairs of reading glasses to people who needed them.
+Last month, I joined ten other Rotarians from [Santa Cruz Sunrise Rotary](https://portal.clubrunner.ca/2276) on a self-funded trip to Guatemala. Our mission: install two water purification systems capable of producing 10,000 gallons of clean water daily and distribute 500 pairs of reading glasses to people who needed them. For me, this trip also offered something equally valuable - the chance to do meaningful service work alongside my 17-year-old son.
+
+My son and I attend Sunrise Rotary meetings almost every Thursday morning, and he currently serves as the Santa Cruz area Interact District 5170 representative. This Guatemala trip represented our shared belief in Rotary's mission of service above self.
 
 ## Why This Matters
 
@@ -13,7 +15,7 @@ The statistics that drove our trip are sobering. In Guatemala, the average perso
 
 The water purification systems we installed use advanced membrane technology to filter out bacteria and viruses, with a small amount of chlorine for additional safety. Similar systems have dramatically reduced infant mortality in Guatemalan hospitals.
 
-As for the reading glasses? A 75-cent pair of eyeglasses can restore someone's ability to work and provide for their family. The impact is immediate.
+As for the reading glasses? A 75-cent pair of eyeglasses can restore someone's ability to work and provide for their family. The impact is immediate and profound.
 
 ## A Teacher's Observations
 
@@ -31,6 +33,6 @@ This experience reinforced something I try to teach my students: we're all conne
 
 The young people I teach daily will inherit a world with complex challenges. Experiences like this remind me that they're also inheriting a tradition of service, innovation, and the belief that ordinary people can do extraordinary things when they work together.
 
-*View the [Guatemala Water Project Presentation](https://docs.google.com/presentation/d/1lDz4XiRvGh2GLMPMPwx0JUFJKESKDOkjRwV5HbFbVQQ/edit?usp=sharing) I gave my students when I returned.*
+*View the full [Guatemala 2025 Presentation](https://docs.google.com/presentation/d/1lDz4XiRvGh2GLMPMPwx0JUFJKESKDOkjRwV5HbFbVQQ/edit?usp=sharing) for more details on the project and Rotary's global health initiatives.*
 
 🌍💧

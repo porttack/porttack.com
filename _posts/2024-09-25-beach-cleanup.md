@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "212 Pounds of Trash and Priceless Lessons: Our Beach Cleanup Story"
+title:  "212 Pounds of Trash: Our Beach Cleanup Story"
 date:   2024-09-25
 categories: service environment community
 ---
