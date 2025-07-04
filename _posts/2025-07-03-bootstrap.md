@@ -5,7 +5,11 @@ date:   2025-07-03
 categories: teaching professional-development
 ---
 
+<img src="https://bootstrapworld.org/images/icon.png" width="150">
+
 For a few years, I've made a fundamental error in my computer science teaching: assuming students arrive with certain mathematical concepts. I did learn to teach middle schoolers which axis is *x* and which is *y*, but I never taught about order of operations, what a function is, what *f(x)* means, etc.
+
+``
 
 Brown University's Bootstrap Algebra takes this head-on. Computer science content often assumes these foundational concepts, but when students lack them, we end up teaching syntax instead of thinking. Bootstrap Algebra builds the mathematical and linguistic foundations that make computer science accessible to everyone, not just students who happened to master these concepts elsewhere.
 
