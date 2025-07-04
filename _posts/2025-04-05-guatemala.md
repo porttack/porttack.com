@@ -3,9 +3,13 @@ layout: post
 title:  "A Service Project with My Son: A Guatemala Water Project"
 date:   2025-04-05
 categories: service rotary
+excerpt_separator: <!--more-->
 ---
+<img src="https://porttack.com/docs/assets/images/guatemala_poster.png">
 
 Last month, I joined ten other Rotarians from [Santa Cruz Sunrise Rotary](https://portal.clubrunner.ca/2276) on a self-funded trip to Guatemala. Our mission: install two water purification systems capable of producing 10,000 gallons of clean water daily and distribute 500 pairs of reading glasses to people who needed them. For me, this trip also offered something equally valuable - the chance to do meaningful service work alongside my 17-year-old son.
+
+<!--more-->
 
 My son and I attend Sunrise Rotary meetings almost every Thursday morning, and he currently serves as the Santa Cruz area Interact District 5170 representative. This Guatemala trip represented our shared belief in Rotary's mission of service above self.
 
