@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Math We Assume: What Bootstrap Algebra Taught Me About CS Education"
-date:   2025-07-10
+date:   2025-07-03
 categories: teaching professional-development
 ---
 
