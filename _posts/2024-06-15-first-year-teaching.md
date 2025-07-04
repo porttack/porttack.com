@@ -21,4 +21,4 @@ With my most challenging 6th grade group, I stepped back from ambitious computer
 
 **The biggest lesson?** Teaching isn't just about what you know - it's about building community, earning trust, and meeting students where they are. Everything else follows from there.
 
-*After 40 years in the tech industry, I'm learning that the most important algorithms run on human connection, not computers.*
+*Just like in industry, it isn't writing perfect code that creates success - it's building connections and community that transforms ideas into reality.* 
