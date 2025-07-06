@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Why Summer Camp Still Shapes Character: What I Learned Visiting Camp Wolfeboro"
-date:   2025-07-14
+date:   2025-07-04
 categories: scouting parenting character
 #published: false
 excerpt_separator: <!--more-->
@@ -32,7 +32,7 @@ For any parent wondering whether these traditional youth organizations still mat
 
 *Sometimes the most important lessons happen around a campfire, not in a classroom.* 🏕️⚜️
 
----
+<hr/>
 
 **Learn More:**
 - [Santa Cruz Lions Club](https://santacruzhostlionsclub.org/)
