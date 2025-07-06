@@ -8,7 +8,7 @@ excerpt_separator: <!--more-->
 ---
 <img src="https://porttack.com/docs/assets/images/wolfeboro1.jpeg">
 
-This July, I drove to Camp Wolfeboro to visit my son Noah, who's working on staff this summer. What I witnessed was a community of young people who genuinely care for each other—staff members who return year after year, even during college summers, not primarily for the modest pay, but for the belonging and friendships they've built. Watching these teenagers take responsibility for younger scouts, solve problems together, and support each other through challenges reminded me why scouting creates such lasting bonds—few other activities offer the same opportunity for kids to grow together in one community over so many years.
+This July, I drove to Camp Wolfeboro to visit my son, Noah, who's working on staff this summer. What I witnessed was a community of young people who genuinely care for each other—staff members who return year after year, even during college summers, not primarily for the modest pay, but for the belonging and friendships they've built. Watching these teenagers take responsibility for younger scouts, solve problems together, and support each other through challenges reminded me why scouting creates such lasting bonds—few other activities offer the same opportunity for kids to grow together in one community over so many years.
 
 <!--more-->
 
@@ -35,7 +35,6 @@ For any parent wondering whether these traditional youth organizations still mat
 <hr/>
 
 **Learn More:**
-- [Santa Cruz Lions Club](https://santacruzhostlionsclub.org/)
-- [Scout Troop 604](https://scouttroop604.org/)
-- [Camp Wolfeboro](https://www.campwolfeboro.org/)
-- [Scouting America](https://www.scouting.org/)
+- [Santa Cruz Lions Club](https://santacruzhostlionsclub.org/about)
+- [Scout Troop 604](https://sites.google.com/site/troop604112014/)
+- [Scouting America - Silicon Valley Monterey Bay](https://svmbc.org/)
