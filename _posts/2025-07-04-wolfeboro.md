@@ -3,7 +3,7 @@ layout: post
 title:  "Why Summer Camp Still Shapes Character: What I Learned Visiting Camp Wolfeboro"
 date:   2025-07-14
 categories: scouting parenting character
-published: false
+#published: false
 excerpt_separator: <!--more-->
 ---
 <img src="https://porttack.com/docs/assets/images/wolfeboro1.jpeg">
