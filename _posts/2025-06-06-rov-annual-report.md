@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "2024-25 Robotics Program Annual Report: Growth, Community, and Second Place Finish"
-date:   2025-06-30
+date:   2025-06-06
 categories: teaching robotics annual-report
 excerpt_separator: <!--more-->
 ---
