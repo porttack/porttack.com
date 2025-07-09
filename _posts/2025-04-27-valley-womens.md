@@ -3,9 +3,14 @@ layout: post
 title:  "Gratitude in Action: Students Present to Valley Women's Club"
 date:   2025-04-27
 categories: community grants presentations
+excerpt_separator: <!--more-->
 ---
 
+<img src="https://porttack.com/docs/assets/images/vw2025.jpeg">
+
 Last week, our ROV students had the opportunity to present at the Valley Women's Club annual meeting - not to ask for something, but to report back and say thank you. It was one of those moments that reminded me why authentic community partnerships matter so much in education.
+
+<!--more-->
 
 ## More Than a Thank You
 

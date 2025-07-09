@@ -10,8 +10,8 @@ For a few years, I've made a fundamental error in my computer science teaching: 
 
 <div style="text-align: center;">
   <a href="https://bootstrapworld.org/materials/algebra/">
-    <img src="https://bootstrapworld.org/images/icon.png" height=250>
-    <img src="https://www.bootstrapworld.org/materials/fall2020/en-us/courses/algebra-wescheme/images/Logo.png" height="150">
+    <img src="https://bootstrapworld.org/images/icon.png" height=100>
+    <img src="https://www.bootstrapworld.org/materials/fall2020/en-us/courses/algebra-wescheme/images/Logo.png" height="100">
   </a>
 </div>
 

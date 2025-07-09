@@ -9,9 +9,9 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 ## Programs
 ### [SLV High School](https://hs.slvusd.org) 🎓
 
-* Exploring Computer Science - 5th period
-* AP Computer Science Principles - 6th period
-* Robotics (ROV) - 7th period Tu/Th
+* Exploring Computer Science
+* AP Computer Science Principles
+* Robotics (ROV)
 
 <!--
 * [Robotics](/slv/2023-24/robotics.md) - 2nd period
@@ -20,8 +20,7 @@ I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my c
 
 ### [SLV Middle School](https://ms.slvusd.org) 🎒
 
-* Intro to Computer Science (semester long) - 2nd period
-* Intro to Computer Science (semester long) - 3rd period
+* Intro to Computer Science (semester long)
 
 <!--
 * [Sixth grade Computer Science Wheel (quarter long)](/slv/2023-24/cs110a.md) - 4th period
