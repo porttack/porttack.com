@@ -20,9 +20,9 @@ The setup was ambitious: our ROV teams demonstrated their underwater robots at t
 
 ## The Teaching Moment
 
-What struck me most was watching my typically reserved high school students light up as they became teachers. One student who rarely speaks up in AP class spent an hour enthusiastically explaining how motors work to a group of second graders. Another beamed as elementary students called him "the robot expert."
+What struck me most was watching my typically reserved high school students light up as they became teachers. One student who rarely speaks up in AP class spent an hour patiently helping young children create circuits. Another beamed as elementary students called him "the robot expert." And one first grader enthusiastically calculated how many years before he'd be able to take a computer science class after playing with robots and microbits.
 
-Teaching forces you to truly understand what you know. These students had to break down complex concepts, anticipate questions, and find new ways to explain when their first attempt didn't work. They experienced firsthand what every teacher knows - you don't really understand something until you can teach it to someone else.
+Teaching forces you to truly understand what you know. These students had to break down some complex concepts, anticipate questions, and find new ways to explain when their first attempt didn't work. They experienced firsthand what every teacher knows - you don't really understand something until you can teach it to someone else.
 
 ## Community Building
 

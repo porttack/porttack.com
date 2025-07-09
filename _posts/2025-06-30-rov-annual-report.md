@@ -7,10 +7,8 @@ excerpt_separator: <!--more-->
 ---
 
 <div style="text-align: center;">
-
-    <img src="https://porttack.com/docs/assets/images/rov2.jpeg" height="200">
-    <img src="https://porttack.com/docs/assets/images/rov3.jpeg" height="200">
-
+    <img src="https://porttack.com/docs/assets/images/rov2.jpeg" style="max-width: 30%; height: auto; max-height: 200px; margin: 1%;">
+    <img src="https://porttack.com/docs/assets/images/rov3.jpeg" style="max-width: 50%; height: auto; max-height: 200px; margin: 1%;">
 </div>
 
 Our second year of underwater robotics at San Lorenzo Valley has wrapped up, and I'm reflecting on a season that was both more complex and more rewarding than our [inaugural year](https://porttack.com/2024/06/01/rov-annual-report.html). Nineteen students across three teams, a second-place regional finish, and countless hours of learning, building, and growing together.
