@@ -1,11 +1,21 @@
 ---
 layout: post
 title:  "2024-25 ROV Annual Report: Growth, Community, and Second Place Dreams"
-date:   2025-06-15
+date:   2025-06-30
 categories: teaching robotics annual-report
+excerpt_separator: <!--more-->
 ---
 
 Our second year of underwater robotics at San Lorenzo Valley has wrapped up, and I'm reflecting on a season that was both more complex and more rewarding than our inaugural year. Nineteen students across three teams, a second-place regional finish, and countless hours of learning, building, and growing together.
+
+<div style="text-align: center;">
+
+    <img src="https://porttack.com/docs/assets/images/rov2.jpeg" height="150">
+    <img src="https://porttack.com/docs/assets/images/rov3.jpeg" height="150">
+
+</div>
+
+<!--more-->
 
 ## Beyond the Technical Metrics
 
