@@ -1,19 +1,19 @@
 ---
 layout: post
-title:  "2024-25 ROV Annual Report: Growth, Community, and Second Place Dreams"
+title:  "2024-25 Robotics Program Annual Report: Growth, Community, and Second Place Finish"
 date:   2025-06-30
 categories: teaching robotics annual-report
 excerpt_separator: <!--more-->
 ---
 
-Our second year of underwater robotics at San Lorenzo Valley has wrapped up, and I'm reflecting on a season that was both more complex and more rewarding than our inaugural year. Nineteen students across three teams, a second-place regional finish, and countless hours of learning, building, and growing together.
-
 <div style="text-align: center;">
 
-    <img src="https://porttack.com/docs/assets/images/rov2.jpeg" height="150">
-    <img src="https://porttack.com/docs/assets/images/rov3.jpeg" height="150">
+    <img src="https://porttack.com/docs/assets/images/rov2.jpeg" height="200">
+    <img src="https://porttack.com/docs/assets/images/rov3.jpeg" height="200">
 
 </div>
+
+Our second year of underwater robotics at San Lorenzo Valley has wrapped up, and I'm reflecting on a season that was both more complex and more rewarding than our [inaugural year](https://porttack.com/2024/06/01/rov-annual-report.html). Nineteen students across three teams, a second-place regional finish, and countless hours of learning, building, and growing together.
 
 <!--more-->
 
@@ -21,7 +21,7 @@ Our second year of underwater robotics at San Lorenzo Valley has wrapped up, and
 
 Yes, the numbers matter: 19 students (6 high school, 13 middle school), $10,400 in funding from diverse community partners, and a second-place finish in Scout class. But what strikes me most about this year was how the program evolved into something deeper than robotics - it became a platform for leadership development, environmental education, and authentic community engagement.
 
-Our partnerships with Santa Cruz Host Lions Club, Valley Women's Club, Panther Club, and Cougar Club transformed students into community leaders and environmental stewards. Through our Lions Leo Club charter, the beach cleanup where we collected 212 pounds of trash became environmental education that connected directly to our ocean monitoring mission. When students presented to community organizations or worked fundraisers, they learned accountability and the value of earning support through service.
+Our partnerships with Santa Cruz Host Lions Club, Valley Women's Club, and Panther Club formed intergenerational community awareness and connections with others that wanted us to succeed. Youth demonstrated leadership, community awareness and participation, and environmental understanding. Through our Lions Leo Club charter, the beach cleanup where we collected 212 pounds of trash became environmental education that connected directly to our ocean monitoring mission. When students presented to community organizations or worked fundraisers, they learned accountability and the value of earning support through service.
 
 ## The Learning Process
 

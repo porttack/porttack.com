@@ -12,13 +12,13 @@ This July, I drove to Camp Wolfeboro to visit my son, Noah, who's working on sta
 
 <!--more-->
 
-In our increasingly fragmented communities, scouting provides something many boys and girls desperately need: authentic belonging and multigenerational mentorship. As both an educator and parent, I see students who can navigate complex technology but struggle with basic social interactions, who can Google any fact but lack the emotional intelligence to work through real challenges with peers. Scouting addresses this gap by creating intentional relationships where character is developed through shared experiences rather than lectures.
+In our increasingly fragmented communities, scouting provides something many boys and girls desperately need: authentic belonging and multigenerational mentorship. As both an educator and parent, I see students who can navigate complex technology but struggle with basic social interactions, who can Google any fact but lack the social and emotional intelligence to work through real challenges with peers. Scouting addresses this gap by building intentional communities where shared values are deliberately cultivated through peer leadership and shared experiences.
 
 ## Building Real Competence
 
 What makes scouting unique is its focus on developing genuine competence alongside character. When scouts learn to cook, set up camp, or lead a patrol, they gain real confidence that comes from actual ability rather than empty praise. The Scout Law isn't just recited—it's lived through daily interactions where being trustworthy, helpful, and kind becomes second nature. 
 
-Research consistently shows that youth in character-building organizations like scouting demonstrate higher levels of civic engagement, leadership skills, and life satisfaction as adults ([Tufts study on character building](https://blog.scoutingmagazine.org/2015/10/22/tufts-study-confirms-scouting-builds-character-six-critical-areas/); ["The Scouting Edge" Poll](https://filestore.scouting.org/filestore/marketing/pdf/Final-File-The-Scouting-Edge-8-5x11.pdf)).
+Research consistently shows that youth in character-building organizations like scouting demonstrate higher levels of civic engagement, leadership skills, and life satisfaction as adults. ([Tufts study on character building](https://blog.scoutingmagazine.org/2015/10/22/tufts-study-confirms-scouting-builds-character-six-critical-areas/), ["The Scouting Edge" Poll](https://filestore.scouting.org/filestore/marketing/pdf/Final-File-The-Scouting-Edge-8-5x11.pdf))
 
 In a world that often prioritizes individual achievement over service to others, scouting offers a different path—one focused on raising not just successful young people, but good ones who understand that true leadership means serving others and that belonging comes with both rights and responsibilities.
 
@@ -37,4 +37,4 @@ For any parent wondering whether these traditional youth organizations still mat
 **Learn More:**
 - [Santa Cruz Lions Club](https://santacruzhostlionsclub.org/about)
 - [Scout Troop 604](https://sites.google.com/site/troop604112014/)
-- [Scouting America - Silicon Valley Monterey Bay](https://svmbc.org/)
+- [Scouting America - Silicon Valley/Monterey Bay](https://svmbc.org/)
