@@ -3,9 +3,14 @@ layout: post
 title:  "When High Schoolers Teach Elementary: SLE Science Night Success"
 date:   2024-11-20
 categories: teaching service community
+excerpt_separator: <!--more-->
 ---
 
+<img src="https://porttack.com/docs/assets/images/scinight24.jpeg">
+
 Last Friday, my high school Computer Science Honor Society and ROV teams spent their afternoon transforming my classroom, makerspace, and our pool into hands-on science stations for Family Science Night. What started as a service project became a powerful reminder of how learning happens when students teach students.
+
+<!--more-->
 
 ## More Than Service Hours
 
