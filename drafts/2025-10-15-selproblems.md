@@ -1,5 +1,8 @@
-# **What's Wrong with SEL? (Remember CBE?)**
-
+---
+layout: page
+title: What's Wrong with SEL? (Remember CBE?)
+permalink: /drafts/2025-10-15-selproblems.html
+---
 *Why Social-Emotional Learning isn't enough—and how removing moral guardrails fuels student anxiety*
 
 ## **The Problem with SEL**
