@@ -54,7 +54,7 @@ Individual contributor and/or technical leadership position in a dynamic and cre
 
 ## Experience
 
-* [SLVUSD](/slv/), Computer Science Teacher, *2023-2024*
+* [SLVUSD](/slv/), Computer Science Teacher, *2023-2026*
 * [Khan Academy](https://www.khanacademy.org/), Staff Engineer, *2020-23*
 * [Apple (iCloud Mail)](https://www.icloud.com/mail), Individual Contributor 5, *2014-20*
 * [Infoblox](https://www.infoblox.com/products/bloxone-ddi/), Distinguished Engineer, *2012-14*
@@ -74,3 +74,7 @@ University of Rochester, New York
 * BSEE - Computer architecture, VLSI and signal processing
 * Certificate of Management Studies in Finance
 
+## Community
+
+* Active member: Santa Cruz Lions, Rotary District 5170, Silicon Valley Monterey Bay Council - Boy Scouts of America, Valley Women's Club
+* Youth mentorship and STEM education advocacy
