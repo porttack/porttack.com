@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Three Lessons from My First Year Teaching"
+title:  "From Silicon Valley to Middle School: Three Hard-Won Teaching Lessons"
 date:   2024-06-15
 categories: teaching
 ---

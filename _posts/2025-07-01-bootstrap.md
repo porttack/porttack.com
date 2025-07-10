@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The Math We Assume: What Bootstrap Algebra Taught Me About CS Education"
+title:  "What Bootstrap Taught Me About the Hidden Math Gap in Computer Science Education"
 date:   2025-07-01
 categories: teaching professional-development
 excerpt_separator: <!--more-->
