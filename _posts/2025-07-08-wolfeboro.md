@@ -13,6 +13,8 @@ This July, I drove to Camp Wolfeboro to visit my son, Noah, who's working on sta
 
 In our increasingly fragmented communities, scouting provides something many boys and girls desperately need: authentic belonging and multigenerational mentorship. As both an educator and parent, I see students who can navigate complex technology but struggle with basic social interactions, who can Google any fact but lack the social and emotional intelligence to work through real challenges with peers. Scouting addresses this gap by building intentional communities where shared values are deliberately cultivated through peer leadership and shared experiences.
 
+What I observed at Wolfeboro was social-emotional learning (SEL) in its most authentic form—young people developing *self-awareness*, *self-management*, and *responsible decision-making* not through worksheets or discussions, but through real challenges that require these competencies for success.
+
 ## Building Real Competence
 
 What makes scouting unique is its focus on developing genuine competence alongside character. When scouts learn to cook, set up camp, or lead a patrol, they gain real confidence that comes from actual ability rather than empty praise. The Scout Law isn't just recited—it's lived through daily interactions where being trustworthy, helpful, and kind becomes second nature. 
@@ -26,6 +28,8 @@ In a world that often prioritizes individual achievement over service to others,
 As a Santa Cruz Lions Club member and the charter representative to our local scout troop, I've seen firsthand how these community partnerships strengthen both organizations. When I put Noah in scouting in 2nd grade, it wasn't because I was nostalgic for my own childhood experiences—I actually didn't make it far in scouts myself. Instead, I recognized something that was becoming increasingly rare: a structured environment where kids develop character through authentic challenges alongside caring adults who aren't their parents or teachers.
 
 What I didn't anticipate was how scouting would also give me a community of friends and fellow parents who share similar values about raising good kids. As both an educator and father, I've watched scouting provide Noah with leadership opportunities, lasting friendships, and a moral compass that no classroom lesson could replicate.
+
+Even the challenges reveal the program's value. Watching parents navigate the delicate balance of supporting their teenagers while allowing independence reminded me why these communities matter. Young people need space to develop autonomy, but they also need the security of knowing caring adults are present. Scouting provides that — a network of relationships where kids can practice SEL skills like *self-management* and *social awareness* within a framework of support and shared expectations.
 
 For any parent wondering whether these traditional youth organizations still matter in our digital age, my answer is simple: they matter more than ever.
 
