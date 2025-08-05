@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 
 I'm stepping outside my comfort zone and participating in a 200 mile bike ride to raise money for [Aztecas Youth Soccer Academy](https://www.bikesignup.com/Race/SantaCruzSunriseRotaryRide3Day/Page-15) in Watsonville.
 
-Aztecas mission is to reclaim the lives of at-risk youth that struggle with gangs, violence, poverty, and drugs in Santa Cruz and Monterey Counties. The academy was established to provide an alternative to gang involvement and violence, using soccer as a unifying and empowering tool. (Donate here: [https://www.bikesignup.com/PedalingForPurpose]().)
+Aztecas mission is to reclaim the lives of at-risk youth that struggle with gangs, violence, poverty, and drugs in Santa Cruz and Monterey Counties. The academy was established to provide an alternative to gang involvement and violence, using soccer as a unifying and empowering tool. (Donate here: [https://www.bikesignup.com/PedalingForPurpose](https://www.bikesignup.com/PedalingForPurpose).)
 
 <!--more-->
 
@@ -24,6 +24,6 @@ I've committed to fundraise a minimum of $1000 with a personal goal of $1500! So
 
 ### Donations can be made here:
 
-Noah Brown (my son): [https://www.bikesignup.com/noahbrown]()
+Noah Brown (my son): [https://www.bikesignup.com/noahbrown](https://www.bikesignup.com/noahbrown)
 <br/>
-Eric Brown: [https://www.bikesignup.com/PedalingForPurpose]()
+Eric Brown: [https://www.bikesignup.com/PedalingForPurpose](https://www.bikesignup.com/PedalingForPurpose)
