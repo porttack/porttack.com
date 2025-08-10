@@ -36,9 +36,9 @@ github_username:  porttack
 linkedin_username: yogieric
 minima:
   social_links:
-    mastodon:
-    - username: ericbrown@porttack.com
-      instance: https://hachyderm.io
+#    mastodon:
+#    - username: ericbrown@porttack.com
+#      instance: https://hachyderm.io
 
 # Build settings
 theme: minima
