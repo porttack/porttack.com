@@ -32,7 +32,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Eric Brown -- Engineer and Computer Science Teacher
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  porttack
+# comment out githug_username to keep it from showing up in the footer
+# github_username:  porttack
 linkedin_username: yogieric
 minima:
   social_links:
