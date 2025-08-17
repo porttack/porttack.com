@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "One Word That Built Our Classroom Community"
-date:   2025-08-17
+title:  "Words That Built Our Classroom Community"
+date:   2025-09-15
 categories: teaching community
 excerpt_separator: <!--more-->
 ---
