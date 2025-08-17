@@ -6,7 +6,7 @@ categories: teaching community
 excerpt_separator: <!--more-->
 ---
 
-<img src="/docs/assets/images/one-word-wall-2025.jpg">
+<img src="/docs/assets/images/one-word-wall-2025.jpeg">
 *virtuous, determined, caring, responsible, committed, artistic, competitive, christian, athlete, swimmer, funny, sarcastic, sister, brother, friend, italian, mexican, polish, american, ireland, gamer, minecraft, basketball, softball, golfer, camping, hunting, construction, ebike, flips, tropical, silly, demonic, mcdonalds* (middle school)
 
 The first week of school is always about building community, but this year I tried something different with my 6th graders. Instead of typical icebreakers, students spent time narrowing their identity down to just one word. What started as a simple activity became both a meaningful way to build classroom community and solve my eternal problem of how to decorate my walls.
