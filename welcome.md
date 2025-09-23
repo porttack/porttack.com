@@ -22,12 +22,12 @@ order: 1
 
 @media (max-width: 640px) {
   .logo-container {
-    float: none;
+    /*float: none;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 20px;*/
   }
   .logo-container img {
-    width: 50px;
+    width: 40px;
   }
 }
 </style>
