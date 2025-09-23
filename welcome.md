@@ -12,7 +12,7 @@ order: 1
 .logo-container {
   float: right;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
 }
 
@@ -20,7 +20,7 @@ order: 1
   width: 75px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .logo-container {
     float: none;
     text-align: center;
