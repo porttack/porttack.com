@@ -25,6 +25,9 @@ I received my Bachelor of Science in Electrical Engineering from the University 
   <a href="https://santacruzhostlionsclub.org/">
     <img src="../docs/assets/images/LCI_emblem_black.png" width="75" alt="Lions Club">
   </a>
+  <a href="https://sites.google.com/site/troop604112014/">
+    <img src="../docs/assets/images/BSA_Logo.png" width="75" alt="Boy Scouts">
+  </a>
 </div>
 
 <!--
@@ -36,8 +39,9 @@ I received my Bachelor of Science in Electrical Engineering from the University 
 
 
 San Lorenzo Valley [High School](https://hs.slvusd.org) and [Middle School](https://ms.slvusd.org)
-<br> [SLV Rotary](https://portal.clubrunner.ca//6779), "Service above self"
 <br> [Santa Cruz Lions](https://santacruzhostlionsclub.org/), "We serve"
+<br> [SLV Rotary](https://portal.clubrunner.ca//6779), "Service above self"
+<br> [Santa Cruz Sunrise Rotary](https://portal.clubrunner.ca/2276)
 <br> [Scouts Troop 604](https://sites.google.com/site/troop604112014/) and [Santa Cruz Sea Scouts](https://santacruzseascouts.com/), "Do A Good Turn Daily" / "Be Prepared"
 <!-- <br> Maker's Night / [CoderDojo](/slv/2023-24/coderdojo): 1st Tuesday Evenings 🌙 -->
 
