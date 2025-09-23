@@ -25,6 +25,7 @@ order: 1
     /*float: none;
     text-align: center;
     margin-top: 20px;*/
+    gap: 5px;
   }
   .logo-container img {
     width: 40px;
@@ -51,6 +52,9 @@ I received my Bachelor of Science in Electrical Engineering from the University 
   </a>
   <a href="https://sites.google.com/site/troop604112014/">
     <img src="../docs/assets/images/BSA_Logo.png" alt="Boy Scouts">
+  </a>
+  <a href="https://valleywomensclub.org">
+    <img src="../docs/assets/images/VWC-logo-bw.png" alt="Valley Womens">
   </a>
 </div>
 
