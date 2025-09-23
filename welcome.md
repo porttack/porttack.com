@@ -18,7 +18,19 @@ As of August 2023, I am a [teacher at the San Lorenzo Valley High School](/slv/)
 
 I received my Bachelor of Science in Electrical Engineering from the University of Rochester. And I've run marathons and [raced sailboats](https://photos.app.goo.gl/q54pVKj9XjczAdN47) for most of my life.
 
+<div style="float: right; display: flex; gap: 10px;">
+  <a href="https://portal.clubrunner.ca//6779">
+    <img src="../docs/assets/images/rotary-international-1-logo-png-transparent.png" width="75" alt="Rotary International">
+  </a>
+  <a href="https://santacruzhostlionsclub.org/">
+    <img src="../docs/assets/images/LCI_emblem_black.png" width="75" alt="Lions Club">
+  </a>
+</div>
+
+<!--
 <a href="https://portal.clubrunner.ca//6779"><img align="right" src="../docs/assets/images/rotary-international-1-logo-png-transparent.png" width="75"></a>
+<a href="https://santacruzhostlionsclub.org/"><img align="right" src="../docs/assets/images/LCI_emblem_black.png" width="75"></a>
+-->
 
 ## Community
 
