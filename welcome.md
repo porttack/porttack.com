@@ -18,6 +18,8 @@ As of August 2023, I am a [teacher at the San Lorenzo Valley High School](/slv/)
 
 I received my Bachelor of Science in Electrical Engineering from the University of Rochester. And I've run marathons and [raced sailboats](https://photos.app.goo.gl/q54pVKj9XjczAdN47) for most of my life.
 
+## Community
+
 <div style="float: right; display: flex; gap: 10px;">
   <a href="https://portal.clubrunner.ca//6779">
     <img src="../docs/assets/images/rotary-international-1-logo-png-transparent.png" width="75" alt="Rotary International">
@@ -30,18 +32,12 @@ I received my Bachelor of Science in Electrical Engineering from the University 
   </a>
 </div>
 
-<!--
-<a href="https://portal.clubrunner.ca//6779"><img align="right" src="../docs/assets/images/rotary-international-1-logo-png-transparent.png" width="75"></a>
-<a href="https://santacruzhostlionsclub.org/"><img align="right" src="../docs/assets/images/LCI_emblem_black.png" width="75"></a>
--->
-
-## Community
-
 
 San Lorenzo Valley [High School](https://hs.slvusd.org) and [Middle School](https://ms.slvusd.org)
 <br> [Santa Cruz Lions](https://santacruzhostlionsclub.org/), "We serve"
 <br> [SLV Rotary](https://portal.clubrunner.ca//6779), "Service above self"
 <br> [Santa Cruz Sunrise Rotary](https://portal.clubrunner.ca/2276)
+<br> [Valley Women's Club of SLV](https://valleywomensclub.org/)
 <br> [Scouts Troop 604](https://sites.google.com/site/troop604112014/) and [Santa Cruz Sea Scouts](https://santacruzseascouts.com/), "Do A Good Turn Daily" / "Be Prepared"
 <!-- <br> Maker's Night / [CoderDojo](/slv/2023-24/coderdojo): 1st Tuesday Evenings 🌙 -->
 
