@@ -18,7 +18,7 @@ As of August 2023, I am a [teacher at the San Lorenzo Valley High School](/slv/)
 
 I received my Bachelor of Science in Electrical Engineering from the University of Rochester. And I've run marathons and [raced sailboats](https://photos.app.goo.gl/q54pVKj9XjczAdN47) for most of my life.
 
-<a href="https://portal.clubrunner.ca//6779"><img align="right" src="https://cdn.freebiesupply.com/logos/large/2x/rotary-international-1-logo-png-transparent.png" width="75"></a>
+<a href="https://portal.clubrunner.ca//6779"><img align="right" src="../docs/assets/images/rotary-international-1-logo-png-transparent.png" width="75"></a>
 
 ## Community
 
@@ -27,7 +27,7 @@ San Lorenzo Valley [High School](https://hs.slvusd.org) and [Middle School](http
 <br> [SLV Rotary](https://portal.clubrunner.ca//6779), "Service above self"
 <br> [Santa Cruz Lions](https://santacruzhostlionsclub.org/), "We serve"
 <br> [Scouts Troop 604](https://sites.google.com/site/troop604112014/) and [Santa Cruz Sea Scouts](https://santacruzseascouts.com/), "Do A Good Turn Daily" / "Be Prepared"
-<br> Maker's Night / [CoderDojo](/slv/2023-24/coderdojo): 1st Tuesday Evenings 🌙
+<!-- <br> Maker's Night / [CoderDojo](/slv/2023-24/coderdojo): 1st Tuesday Evenings 🌙 -->
 
 <br>
 <!-- <img align="left" src="../docs/assets/images/ericbrown8.jpeg" width="150"> 
