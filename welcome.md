@@ -8,6 +8,30 @@ permalink: /
 order: 1
 ---
 
+<style>
+.logo-container {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logo-container img {
+  width: 75px;
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+    float: none;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .logo-container img {
+    width: 50px;
+  }
+}
+</style>
+
 I'm Eric Brown -- engineer, [teacher](/slv/), husband, father, rotarian, sailor and runner. On this site you can find [information about my classes](/slv/), my [blog](/blog/), and a copy of my [resume](/resume.html).
 
 ## A brief bio
@@ -20,7 +44,7 @@ I received my Bachelor of Science in Electrical Engineering from the University 
 
 ## Community
 
-<div style="float: right; display: flex; gap: 10px;">
+<div class="logo-container">
   <a href="https://portal.clubrunner.ca//6779">
     <img src="../docs/assets/images/rotary-international-1-logo-png-transparent.png" width="75" alt="Rotary International">
   </a>
