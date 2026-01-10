@@ -79,7 +79,8 @@
       font-size: 28px; font-weight: 700; color: white;
     }
     .result-title { font-size: 22px; font-weight: 700; color: #1B4175; margin-bottom: 4px; }
-    .result-subtitle { color: #666; margin-bottom: 24px; }
+    .result-subtitle { color: #666; margin-bottom: 8px; }
+    .result-done { color: #999; font-size: 13px; margin-bottom: 24px; }
     
     .lb-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
     .lb-title { color: white; font-size: 20px; font-weight: 700; }
@@ -89,6 +90,7 @@
     .lb-loading { padding: 32px; text-align: center; color: #999; }
     .lb-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #eee; }
     .lb-item.top3 { background: #fffbeb; }
+    .lb-item.is-you { background: #e8f4fd; }
     .lb-rank { 
       width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; 
       font-size: 12px; font-weight: 700; color: white; margin-right: 12px; flex-shrink: 0;
@@ -99,18 +101,18 @@
     .lb-rank.normal { background: #1DAFDE; }
     .lb-info { flex: 1; min-width: 0; }
     .lb-name { font-weight: 600; color: #1B4175; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .lb-meta { font-size: 11px; color: #999; text-transform: capitalize; }
+    .lb-meta { font-size: 11px; color: #999; }
     .lb-score { text-align: right; flex-shrink: 0; margin-left: 8px; }
     .lb-pct { font-weight: 700; color: #80BC42; }
     .lb-detail { font-size: 11px; color: #999; }
     
-    .lb-filter { display: flex; gap: 8px; margin-bottom: 12px; }
-    .lb-filter-btn { 
-      padding: 6px 12px; border: 2px solid rgba(255,255,255,0.3); background: transparent; 
-      color: white; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; 
+    .lb-tabs { display: flex; gap: 0; margin-bottom: 12px; background: rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; }
+    .lb-tab { 
+      flex: 1; padding: 10px 12px; border: none; background: transparent; 
+      color: rgba(255,255,255,0.7); border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; 
       font-family: inherit; transition: all 0.2s;
     }
-    .lb-filter-btn.active { background: white; color: #1B4175; border-color: white; }
+    .lb-tab.active { background: white; color: #1B4175; }
     
     .info-text { text-align: center; color: #1DAFDE; font-size: 12px; margin-top: 16px; }
     .error-text { text-align: center; color: #FEBB2A; font-size: 11px; margin-top: 8px; }
@@ -119,6 +121,24 @@
 <body>
 
 <div class="container">
+  <!-- ALREADY COMPLETED SCREEN -->
+  <div id="completed-screen" class="hidden">
+    <div class="header">
+      <div class="logo">✓</div>
+      <div class="title">SLV ROV 2026</div>
+      <div class="subtitle">MATE Competition Manual</div>
+      <div class="quiz-badge" id="quiz-badge-done">Quiz #1</div>
+    </div>
+    
+    <div class="card" style="text-align: center;">
+      <div class="result-circle" id="prev-result-circle">0%</div>
+      <div class="result-title">Already Completed</div>
+      <div class="result-subtitle" id="prev-result-subtitle"></div>
+      <div class="result-done" id="prev-result-date"></div>
+      <button class="btn btn-green" id="completed-lb-btn">🏆 View Leaderboard</button>
+    </div>
+  </div>
+  
   <!-- WELCOME SCREEN -->
   <div id="welcome-screen">
     <div class="header">
@@ -169,8 +189,8 @@
       <div class="result-circle" id="result-circle">0%</div>
       <div class="result-title" id="result-title">Good job!</div>
       <div class="result-subtitle" id="result-subtitle"></div>
-      <button class="btn btn-orange" id="retry-btn">Try Again</button>
-      <button class="btn btn-green" id="results-lb-btn">🏆 Leaderboard</button>
+      <div class="result-done">Your score has been recorded ✓</div>
+      <button class="btn btn-green" id="results-lb-btn">🏆 View Leaderboard</button>
     </div>
   </div>
   
@@ -180,9 +200,9 @@
       <div class="lb-title">🏆 Leaderboard</div>
       <button class="lb-back" id="lb-back-btn">Back</button>
     </div>
-    <div class="lb-filter">
-      <button class="lb-filter-btn active" data-filter="current">This Quiz</button>
-      <button class="lb-filter-btn" data-filter="all">All Quizzes</button>
+    <div class="lb-tabs">
+      <button class="lb-tab active" data-filter="student">Students</button>
+      <button class="lb-tab" data-filter="other">Parents & Mentors</button>
     </div>
     <div class="lb-list" id="lb-list">
       <div class="lb-loading">Loading...</div>
@@ -264,10 +284,40 @@ let playerName = '';
 let playerRole = 'student';
 let answered = false;
 let leaderboard = [];
-let leaderboardFilter = 'current';
-let isOnline = !!SCRIPT_URL;
+let leaderboardFilter = 'student';
+let hasCompletedQuiz = false;
 
 const STORAGE_KEY = 'slv-rov-quiz-leaderboard';
+const COMPLETED_KEY = 'slv-rov-quiz-completed';
+
+// Check if user already completed this quiz
+function getCompletedQuizzes() {
+  try {
+    const data = localStorage.getItem(COMPLETED_KEY);
+    if (data) return JSON.parse(data);
+  } catch(e) {}
+  return {};
+}
+
+function markQuizCompleted(name, role, score, total) {
+  const completed = getCompletedQuizzes();
+  completed[QUIZ_ID] = {
+    name,
+    role,
+    score,
+    total,
+    pct: Math.round((score / total) * 100),
+    date: new Date().toLocaleDateString()
+  };
+  try {
+    localStorage.setItem(COMPLETED_KEY, JSON.stringify(completed));
+  } catch(e) {}
+}
+
+function getPreviousAttempt() {
+  const completed = getCompletedQuizzes();
+  return completed[QUIZ_ID] || null;
+}
 
 // Update page with quiz ID
 document.getElementById('quiz-badge').textContent = QUIZ_ID;
@@ -289,23 +339,32 @@ function saveLocalLeaderboard(data) {
   } catch(e) {}
 }
 
-async function fetchLeaderboard(filter = 'current') {
+async function fetchLeaderboard(roleFilter = 'student') {
+  let scores = [];
+  
   if (!SCRIPT_URL) {
-    return loadLocalLeaderboard().filter(e => filter === 'all' || e.quiz === QUIZ_ID);
+    scores = loadLocalLeaderboard().filter(e => e.quiz === QUIZ_ID);
+  } else {
+    try {
+      const url = `${SCRIPT_URL}?quiz=${encodeURIComponent(QUIZ_ID)}`;
+      const response = await fetch(url);
+      const data = await response.json();
+      if (data.success) scores = data.scores;
+    } catch(e) {
+      console.log('Fetch failed, using local storage');
+      document.getElementById('offline-notice').classList.remove('hidden');
+      scores = loadLocalLeaderboard().filter(e => e.quiz === QUIZ_ID);
+    }
   }
   
-  try {
-    const url = filter === 'current' 
-      ? `${SCRIPT_URL}?quiz=${encodeURIComponent(QUIZ_ID)}`
-      : SCRIPT_URL;
-    const response = await fetch(url);
-    const data = await response.json();
-    if (data.success) return data.scores;
-  } catch(e) {
-    console.log('Fetch failed, using local storage');
-    document.getElementById('offline-notice').classList.remove('hidden');
+  // Filter by role
+  if (roleFilter === 'student') {
+    scores = scores.filter(e => e.role === 'student');
+  } else {
+    scores = scores.filter(e => e.role === 'parent' || e.role === 'mentor');
   }
-  return loadLocalLeaderboard().filter(e => filter === 'all' || e.quiz === QUIZ_ID);
+  
+  return scores;
 }
 
 async function saveScore(name, role, score, total) {
@@ -323,7 +382,7 @@ async function saveScore(name, role, score, total) {
   const local = loadLocalLeaderboard();
   local.push(entry);
   local.sort((a, b) => b.pct - a.pct);
-  saveLocalLeaderboard(local.slice(0, 100));
+  saveLocalLeaderboard(local.slice(0, 200));
   
   // Try to save to Google Sheets
   if (SCRIPT_URL) {
@@ -370,6 +429,7 @@ roleBtns.forEach(btn => {
 startBtn.addEventListener('click', startQuiz);
 
 document.getElementById('show-lb-btn').addEventListener('click', () => {
+  returnScreen = 'welcome-screen';
   renderLeaderboard();
   showScreen('leaderboard-screen');
 });
@@ -443,6 +503,8 @@ function nextQuestion() {
     renderQuestion();
   } else {
     saveScore(playerName, playerRole, score, QUESTIONS.length);
+    markQuizCompleted(playerName, playerRole, score, QUESTIONS.length);
+    hasCompletedQuiz = true;
     showResults();
   }
 }
@@ -461,13 +523,13 @@ function showResults() {
   showScreen('results-screen');
 }
 
-document.getElementById('retry-btn').addEventListener('click', () => {
-  nameInput.value = playerName;
-  startBtn.disabled = false;
-  showScreen('welcome-screen');
-});
-
 document.getElementById('results-lb-btn').addEventListener('click', () => {
+  returnScreen = 'results-screen';
+  // Auto-select the right tab based on role
+  leaderboardFilter = playerRole === 'student' ? 'student' : 'other';
+  document.querySelectorAll('.lb-tab').forEach(t => t.classList.remove('active'));
+  document.querySelector(`.lb-tab[data-filter="${leaderboardFilter}"]`).classList.add('active');
+  
   renderLeaderboard();
   showScreen('leaderboard-screen');
 });
@@ -480,18 +542,20 @@ async function renderLeaderboard() {
   const scores = await fetchLeaderboard(leaderboardFilter);
   
   if (scores.length === 0) {
-    list.innerHTML = '<div class="lb-empty">No scores yet!</div>';
+    const roleText = leaderboardFilter === 'student' ? 'student' : 'parent or mentor';
+    list.innerHTML = `<div class="lb-empty">No ${roleText} scores yet!</div>`;
     return;
   }
   
   list.innerHTML = scores.slice(0, 30).map((entry, i) => {
     const rankClass = i === 0 ? 'gold' : i === 1 ? 'silver' : i === 2 ? 'bronze' : 'normal';
+    const isYou = hasCompletedQuiz && entry.name === playerName && entry.role === playerRole;
     return `
-      <div class="lb-item ${i < 3 ? 'top3' : ''}">
+      <div class="lb-item ${i < 3 ? 'top3' : ''} ${isYou ? 'is-you' : ''}">
         <div class="lb-rank ${rankClass}">${i + 1}</div>
         <div class="lb-info">
-          <div class="lb-name">${entry.name}</div>
-          <div class="lb-meta">${entry.role}${leaderboardFilter === 'all' ? ' • ' + entry.quiz : ''} • ${entry.date}</div>
+          <div class="lb-name">${entry.name}${isYou ? ' (you)' : ''}</div>
+          <div class="lb-meta">${entry.date}</div>
         </div>
         <div class="lb-score">
           <div class="lb-pct">${entry.pct}%</div>
@@ -502,18 +566,20 @@ async function renderLeaderboard() {
   }).join('');
 }
 
-// Leaderboard filter buttons
-document.querySelectorAll('.lb-filter-btn').forEach(btn => {
+// Leaderboard tab buttons
+document.querySelectorAll('.lb-tab').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.lb-filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.lb-tab').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     leaderboardFilter = btn.dataset.filter;
     renderLeaderboard();
   });
 });
 
+let returnScreen = 'welcome-screen';
+
 document.getElementById('lb-back-btn').addEventListener('click', () => {
-  showScreen('welcome-screen');
+  showScreen(returnScreen);
 });
 
 // Check if we're online
@@ -521,6 +587,35 @@ if (!SCRIPT_URL) {
   document.getElementById('offline-notice').classList.remove('hidden');
   document.getElementById('offline-notice').textContent = 'Local mode - set SCRIPT_URL for shared leaderboard';
 }
+
+// Check if user already completed this quiz
+const previousAttempt = getPreviousAttempt();
+if (previousAttempt) {
+  hasCompletedQuiz = true;
+  playerName = previousAttempt.name;
+  playerRole = previousAttempt.role;
+  
+  // Update completed screen
+  document.getElementById('quiz-badge-done').textContent = QUIZ_ID;
+  const prevCircle = document.getElementById('prev-result-circle');
+  prevCircle.textContent = previousAttempt.pct + '%';
+  prevCircle.style.backgroundColor = previousAttempt.pct >= 70 ? '#80BC42' : previousAttempt.pct >= 50 ? '#FEBB2A' : '#EE7024';
+  document.getElementById('prev-result-subtitle').textContent = `${previousAttempt.name}: ${previousAttempt.score}/${previousAttempt.total}`;
+  document.getElementById('prev-result-date').textContent = `Completed ${previousAttempt.date}`;
+  
+  // Show completed screen
+  showScreen('completed-screen');
+}
+
+// Completed screen leaderboard button
+document.getElementById('completed-lb-btn').addEventListener('click', () => {
+  returnScreen = 'completed-screen';
+  leaderboardFilter = playerRole === 'student' ? 'student' : 'other';
+  document.querySelectorAll('.lb-tab').forEach(t => t.classList.remove('active'));
+  document.querySelector(`.lb-tab[data-filter="${leaderboardFilter}"]`).classList.add('active');
+  renderLeaderboard();
+  showScreen('leaderboard-screen');
+});
 </script>
 
 </body>
