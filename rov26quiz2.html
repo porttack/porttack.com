@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SLV ROV 2026 Quiz #1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      font-family: 'Montserrat', system-ui, sans-serif; 
+      background: #1B4175; 
+      min-height: 100vh; 
+      padding: 16px;
+    }
+    .container { max-width: 500px; margin: 0 auto; }
+    .card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+    .hidden { display: none !important; }
+    
+    .header { text-align: center; padding: 32px 0 24px; }
+    .logo { width: 80px; height: 80px; background: #1DAFDE; border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; font-size: 36px; }
+    .title { color: white; font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+    .subtitle { color: #1DAFDE; font-size: 14px; }
+    .quiz-badge { display: inline-block; background: #EE7024; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-top: 8px; }
+    
+    input[type="text"] { 
+      width: 100%; padding: 12px 16px; border: 2px solid #1DAFDE; border-radius: 8px; 
+      font-size: 16px; font-family: inherit; margin-bottom: 12px;
+    }
+    input[type="text"]:focus { outline: none; border-color: #EE7024; }
+    
+    .role-buttons { display: flex; gap: 8px; margin-bottom: 16px; }
+    .role-btn { 
+      flex: 1; padding: 10px; border: none; border-radius: 8px; 
+      font-weight: 600; cursor: pointer; font-family: inherit; font-size: 14px;
+      background: #eee; color: #1B4175; transition: all 0.2s;
+    }
+    .role-btn.active { background: #1DAFDE; color: white; }
+    
+    .btn { 
+      width: 100%; padding: 14px; border: none; border-radius: 8px; 
+      font-weight: 700; cursor: pointer; font-family: inherit; font-size: 16px;
+      transition: all 0.2s;
+    }
+    .btn-orange { background: #EE7024; color: white; }
+    .btn-orange:hover { background: #d5631f; }
+    .btn-orange:disabled { background: #ccc; cursor: not-allowed; }
+    .btn-green { background: #80BC42; color: white; margin-top: 12px; }
+    .btn-green:hover { background: #6fa336; }
+    
+    .progress-bar { display: flex; justify-content: space-between; color: white; font-size: 14px; margin-bottom: 8px; }
+    .progress-score { color: #FEBB2A; font-weight: 600; }
+    .progress-track { height: 6px; background: rgba(255,255,255,0.2); border-radius: 3px; margin-bottom: 16px; }
+    .progress-fill { height: 100%; background: #1DAFDE; border-radius: 3px; transition: width 0.3s; }
+    
+    .question { font-weight: 700; color: #1B4175; margin-bottom: 20px; font-size: 16px; line-height: 1.4; }
+    .options { display: flex; flex-direction: column; gap: 8px; }
+    .option { 
+      width: 100%; padding: 14px 16px; border: 2px solid #ddd; border-radius: 8px; 
+      background: white; text-align: left; cursor: pointer; font-family: inherit; 
+      font-size: 14px; color: #1B4175; transition: all 0.2s;
+    }
+    .option:hover:not(:disabled) { border-color: #1DAFDE; }
+    .option:disabled { cursor: default; }
+    .option.correct { background: #80BC42; border-color: #80BC42; color: white; }
+    .option.incorrect { background: #D83C27; border-color: #D83C27; color: white; }
+    .option-letter { font-weight: 700; margin-right: 8px; }
+    
+    .feedback { margin-top: 16px; padding: 12px; border-radius: 8px; font-size: 14px; }
+    .feedback.correct { background: #d4edda; color: #155724; }
+    .feedback.incorrect { background: #f8d7da; color: #721c24; }
+    .feedback strong { display: block; margin-bottom: 4px; }
+    .next-btn { margin-top: 12px; }
+    
+    .result-circle { 
+      width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 16px; 
+      display: flex; align-items: center; justify-content: center; 
+      font-size: 28px; font-weight: 700; color: white;
+    }
+    .result-title { font-size: 22px; font-weight: 700; color: #1B4175; margin-bottom: 4px; }
+    .result-subtitle { color: #666; margin-bottom: 8px; }
+    .result-done { color: #999; font-size: 13px; margin-bottom: 24px; }
+    
+    .lb-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .lb-title { color: white; font-size: 20px; font-weight: 700; }
+    .lb-back { padding: 8px 16px; background: #EE7024; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-family: inherit; }
+    .lb-list { background: white; border-radius: 12px; overflow: hidden; }
+    .lb-empty { padding: 32px; text-align: center; color: #999; }
+    .lb-loading { padding: 32px; text-align: center; color: #999; }
+    .lb-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #eee; }
+    .lb-item.top3 { background: #fffbeb; }
+    .lb-item.is-you { background: #e8f4fd; }
+    .lb-rank { 
+      width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+      font-size: 12px; font-weight: 700; color: white; margin-right: 12px; flex-shrink: 0;
+    }
+    .lb-rank.gold { background: #FEBB2A; }
+    .lb-rank.silver { background: #aaa; }
+    .lb-rank.bronze { background: #cd7f32; }
+    .lb-rank.normal { background: #1DAFDE; }
+    .lb-info { flex: 1; min-width: 0; }
+    .lb-name { font-weight: 600; color: #1B4175; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .lb-meta { font-size: 11px; color: #999; }
+    .lb-score { text-align: right; flex-shrink: 0; margin-left: 8px; }
+    .lb-pct { font-weight: 700; color: #80BC42; }
+    .lb-detail { font-size: 11px; color: #999; }
+    
+    .lb-tabs { display: flex; gap: 0; margin-bottom: 12px; background: rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; }
+    .lb-tab { 
+      flex: 1; padding: 10px 12px; border: none; background: transparent; 
+      color: rgba(255,255,255,0.7); border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; 
+      font-family: inherit; transition: all 0.2s;
+    }
+    .lb-tab.active { background: white; color: #1B4175; }
+    
+    .info-text { text-align: center; color: #1DAFDE; font-size: 12px; margin-top: 16px; }
+    .error-text { text-align: center; color: #FEBB2A; font-size: 11px; margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- ALREADY COMPLETED SCREEN -->
+  <div id="completed-screen" class="hidden">
+    <div class="header">
+      <div class="logo">✓</div>
+      <div class="title">SLV ROV 2026</div>
+      <div class="subtitle">MATE Competition Manual</div>
+      <div class="quiz-badge" id="quiz-badge-done">Quiz #1</div>
+    </div>
+    
+    <div class="card" style="text-align: center;">
+      <div class="result-circle" id="prev-result-circle">0%</div>
+      <div class="result-title">Already Completed</div>
+      <div class="result-subtitle" id="prev-result-subtitle"></div>
+      <div class="result-done" id="prev-result-date"></div>
+      <button class="btn btn-green" id="completed-lb-btn">🏆 View Leaderboard</button>
+    </div>
+  </div>
+  
+  <!-- WELCOME SCREEN -->
+  <div id="welcome-screen">
+    <div class="header">
+      <div class="logo">🤖</div>
+      <div class="title">SLV ROV 2026</div>
+      <div class="subtitle">MATE Competition Manual</div>
+      <div class="quiz-badge" id="quiz-badge">Quiz #1</div>
+    </div>
+    
+    <div class="card">
+      <input type="text" id="name-input" placeholder="Your name" autocomplete="off">
+      
+      <div class="role-buttons">
+        <button class="role-btn active" data-role="student">Student</button>
+        <button class="role-btn" data-role="parent">Parent</button>
+        <button class="role-btn" data-role="mentor">Mentor</button>
+      </div>
+      
+      <button class="btn btn-orange" id="start-btn" disabled>Start Quiz →</button>
+    </div>
+    
+    <button class="btn btn-green" id="show-lb-btn">🏆 Leaderboard</button>
+    
+    <div class="info-text" id="question-count">6 questions • No time limit</div>
+    <div class="error-text hidden" id="offline-notice">Offline mode - scores saved locally</div>
+  </div>
+  
+  <!-- QUIZ SCREEN -->
+  <div id="quiz-screen" class="hidden">
+    <div class="progress-bar">
+      <span id="progress-text">Q1/6</span>
+      <span class="progress-score">Score: <span id="score-text">0</span></span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progress-fill" style="width: 16.67%"></div>
+    </div>
+    
+    <div class="card">
+      <div class="question" id="question-text"></div>
+      <div class="options" id="options-container"></div>
+      <div id="feedback-container"></div>
+    </div>
+  </div>
+  
+  <!-- RESULTS SCREEN -->
+  <div id="results-screen" class="hidden">
+    <div class="card" style="text-align: center;">
+      <div class="result-circle" id="result-circle">0%</div>
+      <div class="result-title" id="result-title">Good job!</div>
+      <div class="result-subtitle" id="result-subtitle"></div>
+      <div class="result-done">Your score has been recorded ✓</div>
+      <button class="btn btn-green" id="results-lb-btn">🏆 View Leaderboard</button>
+    </div>
+  </div>
+  
+  <!-- LEADERBOARD SCREEN -->
+  <div id="leaderboard-screen" class="hidden">
+    <div class="lb-header">
+      <div class="lb-title">🏆 Leaderboard</div>
+      <button class="lb-back" id="lb-back-btn">Back</button>
+    </div>
+    <div class="lb-tabs">
+      <button class="lb-tab active" data-filter="student">Students</button>
+      <button class="lb-tab" data-filter="other">Parents & Mentors</button>
+    </div>
+    <div class="lb-list" id="lb-list">
+      <div class="lb-loading">Loading...</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// =============================================================================
+// ██████╗ ██╗   ██╗██╗███████╗    ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ 
+// ╚═════██╗██║   ██║██║╚══███╔╝   ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ 
+//  █████╔╝██║   ██║██║  ███╔╝    ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
+// ██╔═══╝ ██║   ██║██║ ███╔╝     ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
+// ███████╗╚██████╔╝██║███████╗   ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
+// ╚══════╝ ╚═════╝ ╚═╝╚══════╝    ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ 
+//
+// HARDENED TEMPLATE - Answers are hashed so students can't just read the code!
+// To create a quiz, use the helper at the bottom of this file.
+//
+// =============================================================================
+
+// ┌─────────────────────────────────────────────────────────────────────────────┐
+// │ 1. QUIZ ID - Change this for each quiz (Quiz #1, Quiz #2, etc.)            │
+// └─────────────────────────────────────────────────────────────────────────────┘
+const QUIZ_ID = "Quiz #2";
+
+// ┌─────────────────────────────────────────────────────────────────────────────┐
+// │ 2. GOOGLE APPS SCRIPT URL - Paste your deployed script URL here.           │
+// └─────────────────────────────────────────────────────────────────────────────┘
+const SCRIPT_URL = "";
+
+// ┌─────────────────────────────────────────────────────────────────────────────┐
+// │ 3. QUESTIONS - Each answer is a HASH, not the index!                       │
+// │                                                                             │
+// │    To generate hashes, use the helper function at the bottom of this file. │
+// │    Open browser console (F12), paste the helper, run generateQuiz([...])   │
+// │                                                                             │
+// │    Format:                                                                  │
+// │    {                                                                        │
+// │      q: "Question text",                                                    │
+// │      o: ["Option A", "Option B", "Option C", "Option D"],                  │
+// │      h: "abc123...",  // Hash of the correct answer text                   │
+// │      e: "Explanation (optional)"                                           │
+// │    }                                                                        │
+// └─────────────────────────────────────────────────────────────────────────────┘
+const QUESTIONS = [
+  {
+    q: "What is the full name of Task 2?",
+    o: [
+      "SmartAtlantic Alliance: Better Information, Better Decisions",
+      "Atlantic Smart Systems: Data for the Ocean",
+      "OceanSmart Network: Connecting the Seas",
+      "BlueData Alliance: Monitoring the Deep"
+    ],
+    h: "3b0434febecaa8c8828b60eabf7d7a94",
+    e: ""
+  },
+  {
+    q: "In Task 2.1, what type of species are teams trying to mitigate?",
+    o: [
+      "Endangered species",
+      "Invasive crab species",
+      "Native fish species",
+      "Coral species"
+    ],
+    h: "d336804850e23cc52c7d571bac22c5e1",
+    e: "Teams must identify and remove invasive crabs while leaving native crabs alone."
+  },
+  {
+    q: "What covers the top of the iceberg prop in Task 2.2?",
+    o: [
+      "White paint",
+      "Foam padding",
+      "Bubble wrap or clear plastic",
+      "Corrugated cardboard"
+    ],
+    h: "3798fb2d2e687d1c37a333b4a6fce91d",
+    e: ""
+  },
+  {
+    q: "What is used to construct the lobster pot in Task 2.3?",
+    o: [
+      "A wooden crate",
+      "A milk crate",
+      "A wire basket",
+      "A plastic bucket"
+    ],
+    h: "3030eb9543fd36c8bd42a29b999f9568",
+    e: "The lobster pot is constructed from a milk crate, 3-inch pipe, and corrugated plastic."
+  },
+  {
+    q: "What is the buoy anchor constructed from in Task 2.4?",
+    o: [
+      "A concrete block",
+      "A 2-gallon bucket",
+      "A sand bag",
+      "A metal weight"
+    ],
+    h: "476d7338cb9ff1096081f93d6ae733d4",
+    e: "A #310 U-bolt provides the attachment point on the 2-gallon bucket anchor."
+  },
+  {
+    q: "What is the name of the subsea observatory in Task 2.5?",
+    o: [
+      "The St. John's Observatory",
+      "The Holyrood Subsea Observatory",
+      "The Atlantic Deep Station",
+      "The Newfoundland Research Platform"
+    ],
+    h: "482ce49bfc4e0c754f7716fabad4617d",
+    e: ""
+  }
+];
+
+// =============================================================================
+// ███████╗████████╗ ██████╗ ██████╗ ██╗
+// ██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗██║
+// ███████╗   ██║   ██║   ██║██████╔╝██║
+// ╚════██║   ██║   ██║   ██║██╔═══╝ ╚═╝
+// ███████║   ██║   ╚██████╔╝██║     ██╗
+// ╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝
+//
+// QUIZ ENGINE - Don't edit unless you know what you're doing
+// =============================================================================
+
+// Simple hash function (not cryptographically secure, but good enough to deter casual cheating)
+async function hashAnswer(text) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(text.toLowerCase().trim());
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('').substring(0, 32);
+}
+
+// Check if an answer is correct by comparing hashes
+async function isCorrectAnswer(questionIndex, answerText) {
+  const hash = await hashAnswer(answerText);
+  return hash === QUESTIONS[questionIndex].h;
+}
+
+// Find the correct answer index for a question (for showing after answering)
+async function findCorrectIndex(questionIndex) {
+  const q = QUESTIONS[questionIndex];
+  for (let i = 0; i < q.o.length; i++) {
+    const hash = await hashAnswer(q.o[i]);
+    if (hash === q.h) return i;
+  }
+  return -1; // Should never happen if quiz is set up correctly
+}
+
+let currentQuestion = 0;
+let score = 0;
+let playerName = '';
+let playerRole = 'student';
+let answered = false;
+let leaderboard = [];
+let leaderboardFilter = 'student';
+let hasCompletedQuiz = false;
+let returnScreen = 'welcome-screen';
+
+const STORAGE_KEY = 'slv-rov-quiz-leaderboard';
+const COMPLETED_KEY = 'slv-rov-quiz-completed';
+
+function getCompletedQuizzes() {
+  try {
+    const data = localStorage.getItem(COMPLETED_KEY);
+    if (data) return JSON.parse(data);
+  } catch(e) {}
+  return {};
+}
+
+function markQuizCompleted(name, role, score, total) {
+  const completed = getCompletedQuizzes();
+  completed[QUIZ_ID] = {
+    name,
+    role,
+    score,
+    total,
+    pct: Math.round((score / total) * 100),
+    date: new Date().toLocaleDateString()
+  };
+  try {
+    localStorage.setItem(COMPLETED_KEY, JSON.stringify(completed));
+  } catch(e) {}
+}
+
+function getPreviousAttempt() {
+  const completed = getCompletedQuizzes();
+  return completed[QUIZ_ID] || null;
+}
+
+// Update page with quiz ID
+document.getElementById('quiz-badge').textContent = QUIZ_ID;
+document.getElementById('quiz-badge-done').textContent = QUIZ_ID;
+document.title = `SLV ROV 2026 ${QUIZ_ID}`;
+document.getElementById('question-count').textContent = `${QUESTIONS.length} questions • No time limit`;
+
+function loadLocalLeaderboard() {
+  try {
+    const data = localStorage.getItem(STORAGE_KEY);
+    if (data) return JSON.parse(data);
+  } catch(e) {}
+  return [];
+}
+
+function saveLocalLeaderboard(data) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  } catch(e) {}
+}
+
+async function fetchLeaderboard(roleFilter = 'student') {
+  let scores = [];
+  
+  if (!SCRIPT_URL) {
+    scores = loadLocalLeaderboard().filter(e => e.quiz === QUIZ_ID);
+  } else {
+    try {
+      const url = `${SCRIPT_URL}?quiz=${encodeURIComponent(QUIZ_ID)}`;
+      const response = await fetch(url);
+      const data = await response.json();
+      if (data.success) scores = data.scores;
+    } catch(e) {
+      console.log('Fetch failed, using local storage');
+      document.getElementById('offline-notice').classList.remove('hidden');
+      scores = loadLocalLeaderboard().filter(e => e.quiz === QUIZ_ID);
+    }
+  }
+  
+  if (roleFilter === 'student') {
+    scores = scores.filter(e => e.role === 'student');
+  } else {
+    scores = scores.filter(e => e.role === 'parent' || e.role === 'mentor');
+  }
+  
+  return scores;
+}
+
+async function saveScore(name, role, score, total) {
+  const entry = {
+    name,
+    role,
+    score,
+    total,
+    pct: Math.round((score / total) * 100),
+    quiz: QUIZ_ID,
+    date: new Date().toLocaleDateString()
+  };
+  
+  const local = loadLocalLeaderboard();
+  local.push(entry);
+  local.sort((a, b) => b.pct - a.pct);
+  saveLocalLeaderboard(local.slice(0, 200));
+  
+  if (SCRIPT_URL) {
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(entry)
+      });
+    } catch(e) {
+      console.log('Could not save to server');
+    }
+  }
+}
+
+function showScreen(id) {
+  document.querySelectorAll('[id$="-screen"]').forEach(el => el.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+}
+
+const nameInput = document.getElementById('name-input');
+const startBtn = document.getElementById('start-btn');
+const roleBtns = document.querySelectorAll('.role-btn');
+
+nameInput.addEventListener('input', () => {
+  startBtn.disabled = !nameInput.value.trim();
+});
+
+nameInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && nameInput.value.trim()) startQuiz();
+});
+
+roleBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    roleBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    playerRole = btn.dataset.role;
+  });
+});
+
+startBtn.addEventListener('click', startQuiz);
+
+document.getElementById('show-lb-btn').addEventListener('click', () => {
+  returnScreen = 'welcome-screen';
+  renderLeaderboard();
+  showScreen('leaderboard-screen');
+});
+
+function startQuiz() {
+  playerName = nameInput.value.trim();
+  currentQuestion = 0;
+  score = 0;
+  answered = false;
+  showScreen('quiz-screen');
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = QUESTIONS[currentQuestion];
+  document.getElementById('progress-text').textContent = `Q${currentQuestion + 1}/${QUESTIONS.length}`;
+  document.getElementById('score-text').textContent = score;
+  document.getElementById('progress-fill').style.width = `${((currentQuestion + 1) / QUESTIONS.length) * 100}%`;
+  document.getElementById('question-text').textContent = q.q;
+  
+  const container = document.getElementById('options-container');
+  container.innerHTML = '';
+  
+  q.o.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'option';
+    btn.innerHTML = `<span class="option-letter">${String.fromCharCode(65 + i)}.</span>${opt}`;
+    btn.addEventListener('click', () => selectAnswer(i, opt));
+    container.appendChild(btn);
+  });
+  
+  document.getElementById('feedback-container').innerHTML = '';
+  answered = false;
+}
+
+async function selectAnswer(index, answerText) {
+  if (answered) return;
+  answered = true;
+  
+  const q = QUESTIONS[currentQuestion];
+  const isCorrect = await isCorrectAnswer(currentQuestion, answerText);
+  const correctIndex = await findCorrectIndex(currentQuestion);
+  
+  if (isCorrect) score++;
+  
+  document.getElementById('score-text').textContent = score;
+  
+  const options = document.querySelectorAll('.option');
+  options.forEach((opt, i) => {
+    opt.disabled = true;
+    if (i === correctIndex) opt.classList.add('correct');
+    else if (i === index && !isCorrect) opt.classList.add('incorrect');
+  });
+  
+  let feedbackHTML = `
+    <div class="feedback ${isCorrect ? 'correct' : 'incorrect'}">
+      <strong>${isCorrect ? '✓ Correct!' : '✗ Incorrect'}</strong>
+      ${q.e ? q.e : ''}
+    </div>
+    <button class="btn btn-orange next-btn" id="next-btn">
+      ${currentQuestion < QUESTIONS.length - 1 ? 'Next →' : 'See Results →'}
+    </button>
+  `;
+  
+  document.getElementById('feedback-container').innerHTML = feedbackHTML;
+  document.getElementById('next-btn').addEventListener('click', nextQuestion);
+}
+
+function nextQuestion() {
+  if (currentQuestion < QUESTIONS.length - 1) {
+    currentQuestion++;
+    renderQuestion();
+  } else {
+    saveScore(playerName, playerRole, score, QUESTIONS.length);
+    markQuizCompleted(playerName, playerRole, score, QUESTIONS.length);
+    hasCompletedQuiz = true;
+    showResults();
+  }
+}
+
+function showResults() {
+  const pct = Math.round((score / QUESTIONS.length) * 100);
+  const circle = document.getElementById('result-circle');
+  circle.textContent = pct + '%';
+  circle.style.backgroundColor = pct >= 70 ? '#80BC42' : pct >= 50 ? '#FEBB2A' : '#EE7024';
+  
+  document.getElementById('result-title').textContent = 
+    pct >= 80 ? 'Excellent!' : pct >= 60 ? 'Good job!' : 'Keep reading the manual!';
+  document.getElementById('result-subtitle').textContent = `${playerName}: ${score}/${QUESTIONS.length}`;
+  
+  showScreen('results-screen');
+}
+
+document.getElementById('results-lb-btn').addEventListener('click', () => {
+  returnScreen = 'results-screen';
+  leaderboardFilter = playerRole === 'student' ? 'student' : 'other';
+  document.querySelectorAll('.lb-tab').forEach(t => t.classList.remove('active'));
+  document.querySelector(`.lb-tab[data-filter="${leaderboardFilter}"]`).classList.add('active');
+  renderLeaderboard();
+  showScreen('leaderboard-screen');
+});
+
+async function renderLeaderboard() {
+  const list = document.getElementById('lb-list');
+  list.innerHTML = '<div class="lb-loading">Loading...</div>';
+  
+  const scores = await fetchLeaderboard(leaderboardFilter);
+  
+  if (scores.length === 0) {
+    const roleText = leaderboardFilter === 'student' ? 'student' : 'parent or mentor';
+    list.innerHTML = `<div class="lb-empty">No ${roleText} scores yet!</div>`;
+    return;
+  }
+  
+  list.innerHTML = scores.slice(0, 30).map((entry, i) => {
+    const rankClass = i === 0 ? 'gold' : i === 1 ? 'silver' : i === 2 ? 'bronze' : 'normal';
+    const isYou = hasCompletedQuiz && entry.name === playerName && entry.role === playerRole;
+    return `
+      <div class="lb-item ${i < 3 ? 'top3' : ''} ${isYou ? 'is-you' : ''}">
+        <div class="lb-rank ${rankClass}">${i + 1}</div>
+        <div class="lb-info">
+          <div class="lb-name">${entry.name}${isYou ? ' (you)' : ''}</div>
+          <div class="lb-meta">${entry.date}</div>
+        </div>
+        <div class="lb-score">
+          <div class="lb-pct">${entry.pct}%</div>
+          <div class="lb-detail">${entry.score}/${entry.total}</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+document.querySelectorAll('.lb-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.lb-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    leaderboardFilter = btn.dataset.filter;
+    renderLeaderboard();
+  });
+});
+
+document.getElementById('lb-back-btn').addEventListener('click', () => {
+  showScreen(returnScreen);
+});
+
+if (!SCRIPT_URL) {
+  document.getElementById('offline-notice').classList.remove('hidden');
+  document.getElementById('offline-notice').textContent = 'Local mode - set SCRIPT_URL for shared leaderboard';
+}
+
+const previousAttempt = getPreviousAttempt();
+if (previousAttempt) {
+  hasCompletedQuiz = true;
+  playerName = previousAttempt.name;
+  playerRole = previousAttempt.role;
+  
+  document.getElementById('quiz-badge-done').textContent = QUIZ_ID;
+  const prevCircle = document.getElementById('prev-result-circle');
+  prevCircle.textContent = previousAttempt.pct + '%';
+  prevCircle.style.backgroundColor = previousAttempt.pct >= 70 ? '#80BC42' : previousAttempt.pct >= 50 ? '#FEBB2A' : '#EE7024';
+  document.getElementById('prev-result-subtitle').textContent = `${previousAttempt.name}: ${previousAttempt.score}/${previousAttempt.total}`;
+  document.getElementById('prev-result-date').textContent = `Completed ${previousAttempt.date}`;
+  
+  showScreen('completed-screen');
+}
+
+document.getElementById('completed-lb-btn').addEventListener('click', () => {
+  returnScreen = 'completed-screen';
+  leaderboardFilter = playerRole === 'student' ? 'student' : 'other';
+  document.querySelectorAll('.lb-tab').forEach(t => t.classList.remove('active'));
+  document.querySelector(`.lb-tab[data-filter="${leaderboardFilter}"]`).classList.add('active');
+  renderLeaderboard();
+  showScreen('leaderboard-screen');
+});
+
+// =============================================================================
+// ██╗  ██╗███████╗██╗     ██████╗ ███████╗██████╗ 
+// ██║  ██║██╔════╝██║     ██╔══██╗██╔════╝██╔══██╗
+// ███████║█████╗  ██║     ██████╔╝█████╗  ██████╔╝
+// ██╔══██║██╔══╝  ██║     ██╔═══╝ ██╔══╝  ██╔══██╗
+// ██║  ██║███████╗███████╗██║     ███████╗██║  ██║
+// ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝
+//
+// QUIZ GENERATOR HELPER
+// 
+// To create a new quiz with hashed answers:
+// 1. Open browser console (F12)
+// 2. Copy and paste this entire generateQuiz function
+// 3. Run it with your questions like this:
+//
+// generateQuiz([
+//   {
+//     q: "What is the capital of France?",
+//     o: ["London", "Paris", "Berlin", "Madrid"],
+//     correct: 1,  // 0=A, 1=B, 2=C, 3=D
+//     e: "Paris is the capital and largest city of France."
+//   },
+//   // ... more questions
+// ]);
+//
+// 4. Copy the output and paste it into the QUESTIONS array above
+// =============================================================================
+
+/*
+async function generateQuiz(questions) {
+  const output = [];
+  
+  for (const q of questions) {
+    const correctAnswer = q.o[q.correct];
+    const encoder = new TextEncoder();
+    const data = encoder.encode(correctAnswer.toLowerCase().trim());
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('').substring(0, 32);
+    
+    output.push({
+      q: q.q,
+      o: q.o,
+      h: hash,
+      e: q.e || ""
+    });
+  }
+  
+  console.log("// Copy this into your QUESTIONS array:");
+  console.log("const QUESTIONS = " + JSON.stringify(output, null, 2) + ";");
+  return output;
+}
+*/
+</script>
+
+</body>
+</html>
