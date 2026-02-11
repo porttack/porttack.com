@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Exchange Party - Little Brother Demo</title>
+    <style>
+        body {
+            font-family: 'Monaco', 'Courier New', monospace;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+        }
+        h1 {
+            color: #4ec9b0;
+            text-align: center;
+            font-size: 36px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #ce9178;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 40px;
+            font-size: 18px;
+            background-color: #0e639c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        button:hover {
+            background-color: #1177bb;
+        }
+        .page {
+            min-height: 80vh;
+        }
+        .key-section {
+            margin: 30px 0;
+            padding: 30px;
+            background-color: #252526;
+            border-radius: 5px;
+            border: 1px solid #3e3e42;
+        }
+        .key-section h2 {
+            color: #569cd6;
+            margin-top: 0;
+            font-size: 28px;
+        }
+        .key-content {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 3px;
+            font-size: 16px;
+            line-height: 1.8;
+            border: 1px solid #3e3e42;
+            min-height: 40px;
+            white-space: pre-wrap;
+            font-family: 'Monaco', 'Courier New', monospace;
+        }
+        .fingerprint {
+            font-size: 20px;
+            font-weight: bold;
+            color: #4ec9b0;
+        }
+        .label {
+            color: #9cdcfe;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .hidden {
+            display: none;
+        }
+        .warning {
+            color: #f48771;
+            font-style: italic;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        .safe {
+            color: #4ec9b0;
+            font-style: italic;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        .owner-name {
+            text-align: center;
+            font-size: 24px;
+            color: #ce9178;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1: Private Key -->
+    <div id="page1" class="page">
+        <h1>🔐 Key Exchange Party</h1>
+        <div class="subtitle"><a href="https://craphound.com/littlebrother/about/" target="_blank" style="color: #ce9178; text-decoration: underline;">Little Brother</a> - Chapter 10 Simulation</div>
+        
+        <button id="generateBtn" onclick="generateKeys()">Generate My Keys</button>
+        
+        <div id="privateResults" class="hidden">
+            <div class="key-section">
+                <h2>🔒 Your Private Key</h2>
+                <div class="label">Keep this SECRET - never share with anyone:</div>
+                <div class="key-content" id="privateKey"></div>
+                <div class="label" style="margin-top: 20px;">Private Key Fingerprint (<a href="https://crc32.online/" target="_blank" style="color: #569cd6;">CRC32</a>):</div>
+                <div class="key-content fingerprint" id="privateFingerprint"></div>
+                <div class="warning">⚠️ This stays with YOU. Don't show anyone!</div>
+            </div>
+            
+            <button onclick="showPublicKey()">Next: Show My Public Key →</button>
+        </div>
+    </div>
+
+    <!-- Page 2: Public Key -->
+    <div id="page2" class="page hidden">
+        <h1>🔓 Public Key to Share</h1>
+        <div class="subtitle">Take a photo of this screen with the key owner</div>
+        
+        <div class="owner-name" id="ownerName">Key #1</div>
+        
+        <div class="key-section">
+            <h2>Public Key</h2>
+            <div class="label">Safe to share:</div>
+            <div class="key-content" id="publicKey"></div>
+            <div class="label" style="margin-top: 20px;">Public Key Fingerprint (<a href="https://crc32.online/" target="_blank" style="color: #569cd6;">CRC32</a>):</div>
+            <div class="key-content fingerprint" id="publicFingerprint"></div>
+            <div class="safe">✓ Read fingerprint aloud to verify identity</div>
+        </div>
+        
+        <button onclick="showPrivateKey()">← Back to Private Key</button>
+        <button onclick="generateNewKeyPair()">Generate New Key Pair</button>
+    </div>
+
+    <script>
+        let currentKeys = null;
+        let keyCounter = 0;
+
+        // CRC32 implementation
+        function crc32(str) {
+            const makeCRCTable = function() {
+                let c;
+                const crcTable = [];
+                for(let n = 0; n < 256; n++) {
+                    c = n;
+                    for(let k = 0; k < 8; k++) {
+                        c = ((c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1));
+                    }
+                    crcTable[n] = c;
+                }
+                return crcTable;
+            }
+            
+            const crcTable = makeCRCTable();
+            let crc = 0 ^ (-1);
+
+            for (let i = 0; i < str.length; i++) {
+                crc = (crc >>> 8) ^ crcTable[(crc ^ str.charCodeAt(i)) & 0xFF];
+            }
+
+            return ((crc ^ (-1)) >>> 0).toString(16).padStart(8, '0');
+        }
+
+        function formatCRC32(hex) {
+            // Format as colon-separated pairs without prefix
+            const pairs = hex.match(/.{1,2}/g) || [];
+            return pairs.join(':').toUpperCase();
+        }
+
+        async function generateKeys() {
+            keyCounter++;
+            await performKeyGeneration();
+        }
+
+        async function generateNewKeyPair() {
+            keyCounter++;
+            document.getElementById('page2').classList.add('hidden');
+            document.getElementById('page1').classList.remove('hidden');
+            document.getElementById('privateResults').classList.add('hidden');
+            window.scrollTo(0, 0);
+            await performKeyGeneration();
+        }
+
+        async function performKeyGeneration() {
+            try {
+                // Generate ED25519 key pair using Web Crypto API
+                const keyPair = await window.crypto.subtle.generateKey(
+                    {
+                        name: "Ed25519",
+                    },
+                    true,
+                    ["sign", "verify"]
+                );
+                
+                // Export keys
+                const privateKeyRaw = await window.crypto.subtle.exportKey("pkcs8", keyPair.privateKey);
+                const publicKeyRaw = await window.crypto.subtle.exportKey("spki", keyPair.publicKey);
+                
+                // Convert to hex for display
+                const privateKeyHex = arrayBufferToHex(privateKeyRaw);
+                const publicKeyHex = arrayBufferToHex(publicKeyRaw);
+                
+                // Store keys for later use
+                currentKeys = {
+                    privateKeyHex: privateKeyHex,
+                    publicKeyHex: publicKeyHex
+                };
+                
+                // Format keys for display
+                const privateKeyFormatted = formatPrivateKey(privateKeyHex);
+                const publicKeyFormatted = formatPublicKey(publicKeyHex);
+                
+                // Calculate CRC32 on the displayed text (what user would copy)
+                const privateCRC = formatCRC32(crc32(privateKeyFormatted));
+                const publicCRC = formatCRC32(crc32(publicKeyFormatted));
+                
+                // Display private key
+                document.getElementById('privateKey').textContent = privateKeyFormatted;
+                document.getElementById('privateFingerprint').textContent = privateCRC;
+                document.getElementById('privateResults').classList.remove('hidden');
+                
+                // Prepare public key
+                document.getElementById('publicKey').textContent = publicKeyFormatted;
+                document.getElementById('publicFingerprint').textContent = publicCRC;
+                document.getElementById('ownerName').textContent = 'Key #' + keyCounter;
+                
+            } catch (error) {
+                alert('Error generating keys: ' + error.message);
+                console.error(error);
+            }
+        }
+
+        function arrayBufferToHex(buffer) {
+            return Array.from(new Uint8Array(buffer))
+                .map(b => b.toString(16).padStart(2, '0'))
+                .join('');
+        }
+
+        function formatPrivateKey(hexKey) {
+            // Format as PEM-like structure with proper line breaks
+            const chunks = hexKey.match(/.{1,64}/g) || [];
+            return '-----BEGIN PRIVATE KEY-----\n' + 
+                   chunks.slice(0, 4).join('\n') + 
+                   '\n-----END PRIVATE KEY-----';
+        }
+
+        function formatPublicKey(hexKey) {
+            // Show public key in readable chunks
+            const chunks = hexKey.match(/.{1,64}/g) || [];
+            return 'ssh-ed25519\n' + chunks.slice(0, 2).join('\n');
+        }
+
+        function showPublicKey() {
+            document.getElementById('page1').classList.add('hidden');
+            document.getElementById('page2').classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+        function showPrivateKey() {
+            document.getElementById('page2').classList.add('hidden');
+            document.getElementById('page1').classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
