@@ -115,6 +115,10 @@
                 <div class="key-content" id="privateKey"></div>
                 <div class="label" style="margin-top: 20px;">Private Key Fingerprint (<a href="https://crc32.online/" target="_blank" style="color: #569cd6;">CRC32</a>):</div>
                 <div class="key-content fingerprint" id="privateFingerprint"></div>
+                <div class="label" style="margin-top: 20px;">Private Key Fingerprint (SHA-256):</div>
+                <div class="key-content fingerprint" id="privateFingerprintSHA256"></div>
+                <button onclick="copyPrivateKeyForVerification()" style="margin: 10px auto; padding: 10px 20px; font-size: 14px;">Copy Key Data for Verification</button>
+                <div class="safe" style="font-size: 14px;">To verify: Type in the hex numbers only (no BEGIN/END lines, no spaces) or click Copy button to paste into crc32.online</div>
                 <div class="warning">⚠️ This stays with YOU. Don't show anyone!</div>
             </div>
             
@@ -135,7 +139,11 @@
             <div class="key-content" id="publicKey"></div>
             <div class="label" style="margin-top: 20px;">Public Key Fingerprint (<a href="https://crc32.online/" target="_blank" style="color: #569cd6;">CRC32</a>):</div>
             <div class="key-content fingerprint" id="publicFingerprint"></div>
+            <div class="label" style="margin-top: 20px;">Public Key Fingerprint (SHA-256):</div>
+            <div class="key-content fingerprint" id="publicFingerprintSHA256"></div>
+            <button onclick="copyPublicKeyForVerification()" style="margin: 10px auto; padding: 10px 20px; font-size: 14px;">Copy Key for Verification</button>
             <div class="safe">✓ Read fingerprint aloud to verify identity</div>
+            <div class="safe" style="font-size: 14px;">To verify: Type in all characters (no spaces) or click Copy button to paste into crc32.online</div>
         </div>
         
         <button onclick="showPrivateKey()">← Back to Private Key</button>
@@ -220,23 +228,71 @@
                 const privateKeyFormatted = formatPrivateKey(privateKeyHex);
                 const publicKeyFormatted = formatPublicKey(publicKeyHex);
                 
-                // Calculate CRC32 on the displayed text (what user would copy)
-                const privateCRC = formatCRC32(crc32(privateKeyFormatted));
-                const publicCRC = formatCRC32(crc32(publicKeyFormatted));
+                // For private key: hash only the hex data (without BEGIN/END markers)
+                const privateKeyDataOnly = privateKeyFormatted
+                    .replace('-----BEGIN PRIVATE KEY-----', '')
+                    .replace('-----END PRIVATE KEY-----', '')
+                    .replace(/\s+/g, '');
+                
+                // For public key: hash everything without whitespace
+                const publicKeyNoWhitespace = publicKeyFormatted.replace(/\s+/g, '');
+                
+                const privateCRC = formatCRC32(crc32(privateKeyDataOnly));
+                const publicCRC = formatCRC32(crc32(publicKeyNoWhitespace));
+                
+                const privateSHA256 = await calculateSHA256(privateKeyDataOnly);
+                const publicSHA256 = await calculateSHA256(publicKeyNoWhitespace);
+                
+                // Store for copy buttons
+                currentKeys.privateKeyDataOnly = privateKeyDataOnly;
+                currentKeys.publicKeyNoWhitespace = publicKeyNoWhitespace;
                 
                 // Display private key
                 document.getElementById('privateKey').textContent = privateKeyFormatted;
                 document.getElementById('privateFingerprint').textContent = privateCRC;
+                document.getElementById('privateFingerprintSHA256').textContent = privateSHA256;
                 document.getElementById('privateResults').classList.remove('hidden');
                 
                 // Prepare public key
                 document.getElementById('publicKey').textContent = publicKeyFormatted;
                 document.getElementById('publicFingerprint').textContent = publicCRC;
+                document.getElementById('publicFingerprintSHA256').textContent = publicSHA256;
                 document.getElementById('ownerName').textContent = 'Key #' + keyCounter;
                 
             } catch (error) {
                 alert('Error generating keys: ' + error.message);
                 console.error(error);
+            }
+        }
+
+        async function calculateSHA256(text) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(text);
+            const hashBuffer = await window.crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            // Format as colon-separated pairs like CRC32
+            const pairs = hashHex.match(/.{1,2}/g) || [];
+            return pairs.join(':').toUpperCase();
+        }
+
+        function copyPrivateKeyForVerification() {
+            if (currentKeys && currentKeys.privateKeyDataOnly) {
+                navigator.clipboard.writeText(currentKeys.privateKeyDataOnly).then(() => {
+                    alert('Private key data copied to clipboard (without BEGIN/END markers)!\nPaste into crc32.online or SHA-256 calculator to verify.');
+                }).catch(err => {
+                    alert('Failed to copy: ' + err);
+                });
+            }
+        }
+
+        function copyPublicKeyForVerification() {
+            if (currentKeys && currentKeys.publicKeyNoWhitespace) {
+                navigator.clipboard.writeText(currentKeys.publicKeyNoWhitespace).then(() => {
+                    alert('Public key copied to clipboard (no whitespace)!\nPaste into crc32.online or SHA-256 calculator to verify.');
+                }).catch(err => {
+                    alert('Failed to copy: ' + err);
+                });
             }
         }
 
