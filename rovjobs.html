@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEL ROV — Roles & Rubric</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0b1f3a;
+  --ocean: #0e4f6e;
+  --teal: #0d8a7e;
+  --teal-light: #12b5a6;
+  --amber: #e8a020;
+  --amber-light: #fbbf24;
+  --white: #ffffff;
+  --off-white: #f4f7f9;
+  --light: #e8eef3;
+  --mid: #b8c9d6;
+  --muted: #6b8fa8;
+  --text: #1a2e3f;
+  --text-sec: #4a6578;
+  --border: #d0dce6;
+  --danger: #c0392b;
+  --danger-bg: #fdf0ee;
+  --warn-bg: #fef9ec;
+  --warn-text: #92600a;
+  --success-bg: #edf7f5;
+  --success-text: #0a5c52;
+  --info-bg: #e8f2f8;
+  --info-text: #0b4a6f;
+  --exec-bg: #fef3e2;
+  --exec-text: #7a4a0a;
+  --exec-border: #f5c842;
+  --lead-bg: #e8f2f8;
+  --lead-text: #0b4a6f;
+  --lead-border: #6bb4d8;
+  --spec-bg: #edf7f5;
+  --spec-text: #0a5c52;
+  --spec-border: #4db8a8;
+  --ops-bg: #f0f4f7;
+  --ops-text: #3a5268;
+  --ops-border: #90adc0;
+  --all-bg: #f0f4f7;
+  --all-text: #1a2e3f;
+  --all-border: #6b8fa8;
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--navy);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Header */
+.site-header {
+  background: var(--navy);
+  padding: 1.5rem 2rem 1.25rem;
+  border-bottom: 2px solid var(--teal);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.logo-mark {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+.header-text {}
+.org-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 2px;
+}
+.tool-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.tool-sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 1px;
+}
+
+/* Main layout */
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.75rem;
+  background: #162d46;
+  border-radius: var(--radius-lg);
+  padding: 4px;
+  width: fit-content;
+}
+.tab-btn {
+  padding: 8px 20px;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  border-radius: var(--radius);
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.tab-btn.active {
+  background: var(--teal);
+  color: var(--white);
+}
+.tab-btn:hover:not(.active) { color: var(--white); }
+
+.section { display: none; }
+.section.active { display: block; }
+
+/* Search & filter */
+.search-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.search-row input {
+  flex: 1;
+  min-width: 160px;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--text);
+  outline: none;
+}
+.search-row input:focus { border-color: var(--teal); }
+.tier-filter { display: flex; gap: 6px; flex-wrap: wrap; }
+.tier-btn {
+  padding: 5px 12px;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--text-sec);
+  cursor: pointer;
+  transition: all 0.15s;
+  font-weight: 500;
+}
+.tier-btn.active.t-all { background: var(--all-bg); color: var(--all-text); border-color: var(--all-border); }
+.tier-btn.active.t-exec { background: var(--exec-bg); color: var(--exec-text); border-color: var(--exec-border); }
+.tier-btn.active.t-lead { background: var(--lead-bg); color: var(--lead-text); border-color: var(--lead-border); }
+.tier-btn.active.t-spec { background: var(--spec-bg); color: var(--spec-text); border-color: var(--spec-border); }
+.tier-btn.active.t-ops { background: var(--ops-bg); color: var(--ops-text); border-color: var(--ops-border); }
+
+/* Job grid */
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+.job-btn {
+  padding: 10px 12px;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  text-align: left;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--text);
+  cursor: pointer;
+  line-height: 1.35;
+  transition: all 0.12s;
+}
+.job-btn:hover { border-color: var(--teal); background: var(--off-white); }
+.job-btn.active { font-weight: 600; }
+.job-btn.active.all { border-color: var(--all-border); background: var(--all-bg); color: var(--all-text); }
+.job-btn.active.exec { border-color: var(--exec-border); background: var(--exec-bg); color: var(--exec-text); }
+.job-btn.active.lead { border-color: var(--lead-border); background: var(--lead-bg); color: var(--lead-text); }
+.job-btn.active.spec { border-color: var(--spec-border); background: var(--spec-bg); color: var(--spec-text); }
+.job-btn.active.ops { border-color: var(--ops-border); background: var(--ops-bg); color: var(--ops-text); }
+.job-btn.hidden { display: none; }
+
+.tier-pill {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+.pill-all { background: var(--all-bg); color: var(--all-text); }
+.pill-exec { background: var(--exec-bg); color: var(--exec-text); }
+.pill-lead { background: var(--lead-bg); color: var(--lead-text); }
+.pill-spec { background: var(--spec-bg); color: var(--spec-text); }
+.pill-ops { background: var(--ops-bg); color: var(--ops-text); }
+
+/* JD Card */
+.jd-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+.jd-card.card-all { border-color: var(--teal); border-width: 2px; }
+.jd-hdr {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 1rem;
+  padding-bottom: .85rem;
+  border-bottom: 1px solid var(--light);
+  flex-wrap: wrap;
+}
+.jd-title { font-size: 20px; font-weight: 600; color: var(--navy); }
+.jd-lbl {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 1rem 0 6px;
+}
+.jd-mission { font-size: 14.5px; color: var(--text-sec); font-style: italic; line-height: 1.6; }
+.note-bar {
+  margin-top: .75rem;
+  padding: .65rem 1rem;
+  background: var(--info-bg);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--teal);
+  font-size: 13px;
+  color: var(--info-text);
+  line-height: 1.5;
+}
+ul.jl { padding-left: 1.25rem; }
+ul.jl li { font-size: 14px; color: var(--text); margin-bottom: 6px; line-height: 1.55; }
+.btag {
+  display: inline;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  background: var(--warn-bg);
+  color: var(--warn-text);
+  border-radius: 3px;
+  padding: 1px 5px;
+  margin-left: 5px;
+  vertical-align: middle;
+  border: 1px solid #f5d87a;
+}
+.success-bar {
+  margin-top: 1rem;
+  padding: .75rem 1rem;
+  background: var(--success-bg);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--teal);
+  font-size: 13.5px;
+  color: var(--success-text);
+  line-height: 1.5;
+}
+
+/* Rubric */
+.rubric-top { font-size: 14px; color: var(--white); margin-bottom: 1.25rem; line-height: 1.65; opacity: 0.85; }
+.rubric-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: #162d46;
+  border-radius: var(--radius-lg);
+}
+.rubric-controls label { font-size: 13px; color: var(--muted); }
+.rubric-controls select {
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  border: 1px solid #2a4a65;
+  background: #0b1f3a;
+  color: var(--white);
+  outline: none;
+}
+.mode-toggle { display: flex; gap: 5px; margin-left: auto; }
+.mode-btn {
+  padding: 6px 14px;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  border-radius: var(--radius);
+  border: 1px solid #2a4a65;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.mode-btn.active { background: var(--teal); color: var(--white); border-color: var(--teal); }
+
+.table-wrap { overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid var(--border); background: var(--white); }
+.rtable { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 700px; }
+.rtable th {
+  padding: 10px 11px;
+  text-align: left;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--off-white);
+  border-bottom: 1px solid var(--border);
+}
+.rtable td { padding: 10px 11px; vertical-align: top; border-bottom: 1px solid var(--light); line-height: 1.5; }
+.rtable tr:last-child td { border-bottom: none; }
+.rtable tr.tm-row td { background: #f7fbfd; }
+.cat-cell { font-weight: 600; font-size: 12.5px; color: var(--navy); min-width: 130px; }
+.blbl { font-family: 'Space Mono', monospace; font-size: 9px; color: var(--warn-text); display: block; margin-top: 3px; }
+.tm-lbl { font-family: 'Space Mono', monospace; font-size: 9px; color: var(--teal); display: block; margin-top: 3px; }
+.lhdr {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  font-family: 'Space Mono', monospace;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-bottom: 3px;
+}
+.h0 { background: var(--danger-bg); color: var(--danger); }
+.h1 { background: var(--all-bg); color: var(--muted); }
+.h2 { background: var(--warn-bg); color: var(--warn-text); }
+.h3 { background: var(--success-bg); color: var(--success-text); }
+.l0 { color: var(--danger); font-size: 12px; }
+.l1 { color: var(--text-sec); font-size: 12px; }
+.l2 { color: var(--text); font-size: 12px; }
+.l3 { color: var(--success-text); font-size: 12px; }
+
+.sect-divider {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 9px 11px;
+  background: var(--light);
+  border-bottom: 1px solid var(--border);
+}
+
+.tech-box {
+  margin-top: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+}
+.tech-hdr {
+  padding: 10px 14px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  background: var(--off-white);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+.tech-body { padding: 12px 14px; }
+.chk-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 13.5px;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.45;
+}
+.chk-item input { margin-top: 2px; flex-shrink: 0; accent-color: var(--teal); }
+.wt-note { font-size: 11.5px; color: var(--muted); margin-top: 1rem; }
+
+.footer {
+  margin-top: 4rem;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #162d46;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #2a4a65;
+  letter-spacing: 0.05em;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <svg class="logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="24" cy="24" r="22" stroke="#0d8a7e" stroke-width="2" fill="none"/>
+    <circle cx="24" cy="24" r="14" stroke="#0d8a7e" stroke-width="1" fill="none" stroke-dasharray="3 2"/>
+    <path d="M8 28 Q16 18 24 24 Q32 30 40 20" stroke="#0d8a7e" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <circle cx="24" cy="24" r="3" fill="#0d8a7e"/>
+    <path d="M24 10 L24 6 M24 42 L24 38 M10 24 L6 24 M42 24 L38 24" stroke="#12b5a6" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M30 16 L34 12 M18 32 L14 36" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>
+  <div class="header-text">
+    <div class="org-name">Sea Exploration League</div>
+    <div class="tool-name">ROV Roles &amp; Rubric</div>
+    <div class="tool-sub">Job descriptions · behavioral expectations · evaluation rubric</div>
+  </div>
+</header>
+
+<div class="main">
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('jd',this)">Job descriptions</button>
+    <button class="tab-btn" onclick="switchTab('rubric',this)">Behavioral rubric</button>
+  </div>
+
+  <div id="jd" class="section active">
+    <div class="search-row">
+      <input type="text" id="searchBox" placeholder="Search roles..." oninput="filterJobs()">
+      <div class="tier-filter">
+        <button class="tier-btn t-all active" data-tier="all" onclick="toggleTier(this)">Everyone</button>
+        <button class="tier-btn t-exec active" data-tier="exec" onclick="toggleTier(this)">Executive</button>
+        <button class="tier-btn t-lead active" data-tier="lead" onclick="toggleTier(this)">Leads</button>
+        <button class="tier-btn t-spec active" data-tier="spec" onclick="toggleTier(this)">Specialists</button>
+        <button class="tier-btn t-ops active" data-tier="ops" onclick="toggleTier(this)">Operations</button>
+      </div>
+    </div>
+    <div class="job-grid" id="jobGrid"></div>
+    <div id="jdDetail"></div>
+  </div>
+
+  <div id="rubric" class="section">
+    <p class="rubric-top">The rubric has two layers. <strong>Team member behaviors</strong> (blue-tinted rows) apply to everyone. <strong>Role-specific behaviors</strong> apply on top. Behavioral criteria = 60%, technical checklist = 40%.</p>
+    <div class="rubric-controls">
+      <label for="roleSelect">Role:</label>
+      <select id="roleSelect" onchange="renderRubric()"></select>
+      <div class="mode-toggle">
+        <button class="mode-btn active" id="modeself" onclick="setMode('self')">Self-eval</button>
+        <button class="mode-btn" id="modepeer" onclick="setMode('peer')">Performance eval</button>
+      </div>
+    </div>
+    <div id="rubricContent"></div>
+  </div>
+</div>
+
+<footer class="footer">Sea Exploration League · SLV ROV Program · 2025–26</footer>
+
+<script>
+const TIER_LABEL={all:"Everyone",exec:"Executive",lead:"Lead",spec:"Specialist",ops:"Operations"};
+
+const TEAM_MEMBER={id:"tm",tier:"all",name:"Team member",icon:"◯",
+mission:"Show up ready to contribute, leave the team better than you found it, and do your part to make this a place where everyone can do their best work.",
+note:"Every person on the team holds this job description — regardless of their additional role. These expectations don't go away when you have a title.",
+soft:[
+{t:"Shows up on time, prepared, and ready to work — every session",b:"Be on time"},
+{t:"Returns workspace, tools, and shared equipment to order before leaving",b:"Always be knolling / Sacred space"},
+{t:"Follows team systems and processes rather than working around them",b:"Work to code"},
+{t:"Keeps personal task lists and commitments current and visible",b:"Keep a list"},
+{t:"Completes tasks fully — doesn't leave things at 90%",b:"Thoroughness counts"},
+{t:"Confirms that communication landed — doesn't assume the message was received",b:"Sent ≠ received"},
+{t:"Names their own mistakes clearly and helps fix them, without deflecting",b:"Own your mistakes"},
+{t:"Stays engaged through hard problems and frustrating sessions",b:"Persistence"},
+{t:"Actively helps a teammate learn something they know — shares skills, not just answers",b:"Teach what you know"},
+{t:"Raises interpersonal concerns directly with the person involved, or with a lead — not to bystanders",b:"Conflict resolution"},
+{t:"Puts team progress ahead of personal preference when the two conflict",b:"Team above self"},
+{t:"Treats setbacks as information, not as reasons to disengage",b:"Growth mindset"},
+],
+tech:[
+"Attends sessions consistently and notifies a lead in advance when absent",
+"Completes sprint assignments by sprint boundary",
+"Keeps their section of the Work Log binder current",
+"Participates in retrospectives with honest, specific input",
+"Contributes to at least one section of the annual report",
+]};
+
+const JOBS=[TEAM_MEMBER,
+{id:"ceo",tier:"exec",name:"CEO",icon:"★",mission:"Own the big picture. You succeed when every part of the program has direction, your leads are making real decisions, and the team is moving as one unit toward competition.",soft:[{t:"Distributes real authority — delegates decisions, not just tasks",b:"Work to code"},{t:"Stays composed and decisive under the pressure of crunch periods",b:"Persistence"},{t:"Addresses conflict directly and constructively rather than avoiding it",b:"Sent ≠ received"},{t:"Models program standards in your own behavior — cleanup, punctuality, documentation",b:"Sacred space"},{t:"Ensures no student is invisible: notices when someone is disengaged or struggling",b:"Thoroughness counts"}],tech:["Facilitates sprint planning and retrospectives","Holds weekly check-ins with all department leads","Owns competition-day run plan sign-off","Presents at the shareholder meeting and in public presentations","Authors executive summary of the annual report"]},
+{id:"cmo",tier:"exec",name:"CMO",icon:"◈",mission:"Make the program visible and credible to people outside the room — sponsors, schools, community members, and future students.",soft:[{t:"Delivers on publication and grant deadlines without reminders",b:"Be on time"},{t:"Confirms understanding of audience before writing — doesn't assume",b:"Sent ≠ received"},{t:"Edits own work fully before sharing with others",b:"Thoroughness counts"},{t:"Keeps a running list of outreach contacts, deadlines, and follow-ups",b:"Keep a list"},{t:"Maintains consistent, professional program voice even when rushed",b:"Work to code"}],tech:["Manages website and newsletter","Drafts and tracks all grant applications","Coordinates community presentations","Owns social media and photo documentation","Authors communications section of the annual report"]},
+{id:"vp",tier:"exec",name:"VP",icon:"◇",mission:"Support the CEO and step in fully when needed. Your job is to make sure things don't fall through the cracks between departments.",soft:[{t:"Follows through on items delegated by the CEO without needing reminders",b:"Be on time"},{t:"Proactively identifies gaps or blockers across departments",b:"Thoroughness counts"},{t:"Closes communication loops — confirms receipt and understanding",b:"Sent ≠ received"},{t:"Keeps shared tracking docs current so anyone can see program status",b:"Keep a list"},{t:"Owns mistakes in coordination or delegation openly",b:"Own your mistakes"}],tech:["Maintains cross-department sprint board","Covers CEO responsibilities when absent","Coordinates logistics for pool sessions and Saturday work days","Tracks action items from leadership meetings","Co-presents at shareholder meeting"]},
+{id:"vpeng",tier:"lead",name:"VP of Engineering",icon:"⚙",mission:"Ensure the ROV gets built to spec, on time, and in a way the whole engineering team understands and can maintain.",soft:[{t:"Coordinates across mechanical, electrical, and software without micromanaging",b:"Work to code"},{t:"Documents engineering decisions so the team doesn't repeat mistakes",b:"Thoroughness counts"},{t:"Flags integration risks between subsystems before they become failures",b:"Sent ≠ received"},{t:"Stays engaged through hard debugging sessions, not just design phases",b:"Persistence"},{t:"Clears workspace and organizes shared tools after every build session",b:"Sacred space"}],tech:["Owns overall ROV architecture and subsystem integration","Reviews all engineering work before pool sessions","Leads engineering retrospectives at sprint boundaries","Maintains current build status and known issues list","Authors engineering section of the annual report"]},
+{id:"intlead",tier:"lead",name:"Integration Engineer (Lead)",icon:"⬡",mission:"Make sure every subsystem works together — not just independently. You own the seams between mechanical, electrical, and software.",soft:[{t:"Runs integration tests on a schedule — doesn't wait until the week before competition",b:"Be on time"},{t:"Documents every integration issue found and its resolution",b:"Keep a list"},{t:"Communicates failures and blockers to relevant engineers immediately",b:"Sent ≠ received"},{t:"Stays neutral between subsystems — no tribal loyalty to one department",b:"Work to code"},{t:"Keeps working through integration problems even when causes are unclear",b:"Persistence"}],tech:["Designs and maintains integration test matrix across all subsystems","Runs full-system integration tests at each sprint boundary","Maintains integration issue log and status","Coordinates with VP of Engineering on architecture decisions","Authors integration section of the annual report"]},
+{id:"pm",tier:"lead",name:"Project Manager",icon:"⬢",mission:"Keep the team organized and on schedule so build time is spent building, not searching for information or waiting on decisions.",soft:[{t:"Maintains the sprint board and GitHub tickets as a live, accurate record",b:"Keep a list"},{t:"Surfaces scheduling conflicts or resource gaps at least a session in advance",b:"Be on time"},{t:"Follows program tracking processes rather than inventing workarounds",b:"Work to code"},{t:"Owns tracking errors or missed updates openly",b:"Own your mistakes"},{t:"Sends meeting notes and action items within 24 hours",b:"Sent ≠ received"}],tech:["Maintains GitHub project board and sprint tickets","Runs the Work Log binder system","Coordinates leadership meeting agendas","Tracks budget line items alongside the Treasurer","Authors project management section of the annual report"]},
+{id:"twlead",tier:"lead",name:"Lead Tech Writer",icon:"✎",mission:"Own the team's written voice for technical documentation — the technical report, system documentation, and any writing that represents the team's engineering to judges.",soft:[{t:"Sets writing deadlines for other contributors and follows up on them",b:"Be on time"},{t:"Gives direct, specific feedback on drafts — not just 'looks good'",b:"Thoroughness counts"},{t:"Confirms that contributors understand the assignment before they start writing",b:"Sent ≠ received"},{t:"Follows team document structure and style standards consistently",b:"Work to code"},{t:"Keeps a running log of all doc sections, owners, and status",b:"Keep a list"}],tech:["Owns technical report structure and quality","Assigns and tracks writing sections for all contributors","Edits all technical documentation before submission","Coordinates with Chief Scientist on science content accuracy","Authors and compiles annual report with Secretary"]},
+{id:"chiefsci",tier:"lead",name:"Chief Scientist",icon:"◆",mission:"Connect the team's technical work to the real ocean science behind the competition tasks — so the team can give an informed, credible presentation.",soft:[{t:"Reads the competition manual's scientific context, not just the task specs",b:"Thoroughness counts"},{t:"Explains scientific concepts in language non-scientists on the team can use",b:"Sent ≠ received"},{t:"Keeps a running list of sources and findings to reference in the technical report",b:"Keep a list"},{t:"Pushes the team's scientific claims to be accurate and specific, not vague",b:"Work to code"},{t:"Maintains scientific integrity — doesn't overstate conclusions",b:"Own your mistakes"}],tech:["Researches ocean science context for all competition tasks","Leads team's environmental education component","Owns the technical report science sections","Coaches Scientist(s) on research and writing","Coordinates with CMO on public-facing scientific content"]},
+{id:"cto",tier:"lead",name:"CTO",icon:"◉",mission:"Own the team's technical vision — what systems to use, how they integrate, and what technical debt will hurt you at competition.",soft:[{t:"Makes technology decisions based on team capability and time, not personal preference",b:"Work to code"},{t:"Documents all key technical decisions and the reasoning behind them",b:"Thoroughness counts"},{t:"Communicates technical constraints clearly to non-engineers",b:"Sent ≠ received"},{t:"Stays engaged with integration problems, not just high-level design",b:"Persistence"},{t:"Owns technical decisions that didn't work out rather than deflecting",b:"Own your mistakes"}],tech:["Owns technology selection and system architecture","Reviews software, electrical, and mechanical integration","Maintains technical documentation overview","Supports QA in system-level testing","Authors technology section of the annual report"]},
+{id:"mech",tier:"spec",name:"Mechanical Engineer",icon:"⚒",mission:"Build a frame and physical systems that hold together under competition conditions and that your teammates can modify without breaking.",soft:[{t:"Returns every tool to its correct location at end of every session",b:"Sacred space"},{t:"Documents build decisions — why a dimension, material, or method was chosen",b:"Thoroughness counts"},{t:"Follows the 3D print queue process rather than jumping the line",b:"Work to code"},{t:"Completes tasks to a finished, handoff-ready state — not 90%",b:"Persistence"},{t:"Cleans up hardware and scrap material before leaving the workspace",b:"Always be knolling"}],tech:["Designs and builds ROV frame and enclosures","Manages 3D print queue and verifies all printed parts","Maintains current CAD files matching the physical build","Performs waterproofing checks before every pool session","Coordinates with Electrical on physical mounting of components"]},
+{id:"elec",tier:"spec",name:"Electrical Engineer",icon:"⚡",mission:"Build wiring that is safe, labeled, and understandable to someone who didn't wire it — because eventually that person will need to fix it.",soft:[{t:"Labels connectors and cables before moving to the next task — not later",b:"Always be knolling"},{t:"Follows wiring standards consistently, not just when supervised",b:"Work to code"},{t:"Surfaces safety concerns immediately, not at the end of a session",b:"Be on time"},{t:"Owns wiring errors rather than attributing them to unclear specs",b:"Own your mistakes"},{t:"Completes continuity and safety testing fully before signing off",b:"Thoroughness counts"}],tech:["Designs and builds all power and signal wiring","Labels all connectors and cables to a team standard","Performs and logs continuity and safety tests","Maintains a current electrical schematic","Coordinates thruster and ESC configuration with Software Engineer"]},
+{id:"sw",tier:"spec",name:"Software Engineer",icon:"{}",mission:"Build reliable control software that pilots trust, that handles real conditions, and that your teammates can read and fix.",soft:[{t:"Commits and documents code during sessions — not after the fact",b:"Thoroughness counts"},{t:"Explains technical decisions in plain language to non-programmers",b:"Sent ≠ received"},{t:"Follows team coding standards and repository practices even when working alone",b:"Work to code"},{t:"Stays with hard bugs instead of moving on and leaving broken code",b:"Persistence"},{t:"Returns workstations and hardware to a neutral state after sessions",b:"Always be knolling"}],tech:["Writes and maintains ROV thruster and control software","Documents all code with clear comments and README","Tests all software against hardware before pool sessions","Maintains GitHub repo and meaningful commit history","Coordinates camera and sensor integration with CTO"]},
+{id:"inteng",tier:"spec",name:"Integration Engineer",icon:"⬟",mission:"Support the Lead Integration Engineer and own testing of specific subsystem interfaces — the places where things connect and break.",soft:[{t:"Runs assigned integration tests completely — doesn't skip steps under time pressure",b:"Thoroughness counts"},{t:"Logs every result including failures — especially failures",b:"Keep a list"},{t:"Reports blockers to Lead Integration Engineer before they become sprint-level problems",b:"Sent ≠ received"},{t:"Follows the integration test plan rather than improvising",b:"Work to code"},{t:"Stays methodical when debugging interface failures",b:"Persistence"}],tech:["Runs assigned integration tests per the test matrix","Logs results with conditions, outcomes, and next steps","Reports issues to Lead Integration Engineer and QA","Supports full-system integration sessions","Documents interface behaviors for technical report"]},
+{id:"safety",tier:"ops",name:"Safety Officer",icon:"⬣",mission:"Make sure no one gets hurt and no equipment gets damaged through preventable causes — in the shop, at the pool, and at competition.",soft:[{t:"Enforces safety procedures even when the team is rushed, tired, or dismissive",b:"Work to code"},{t:"Addresses unsafe behavior directly and immediately — not after the fact",b:"Be on time"},{t:"Keeps safety checklists current and runs them completely, every session",b:"Thoroughness counts"},{t:"Raises safety concerns to the CEO or a lead when they're not being addressed",b:"Sent ≠ received"},{t:"Owns near-misses and safety gaps openly rather than minimizing them",b:"Own your mistakes"}],tech:["Maintains shop and pool safety checklists","Runs pre-session safety briefings","Tracks all safety incidents and near-misses","Coordinates PPE and tool safety with VP of Engineering","Owns safety section of annual report and competition documentation"]},
+{id:"deck",tier:"ops",name:"Deck Manager",icon:"⬤",mission:"Own the pool deck. On competition day, your job is to make sure the team arrives prepared, the ROV enters the water safely, and everyone knows their role.",soft:[{t:"Runs pre-pool checklists fully — every item, every session",b:"Thoroughness counts"},{t:"Communicates the deck plan clearly to all team members before sessions begin",b:"Sent ≠ received"},{t:"Keeps pool deck equipment organized and ready between dives",b:"Always be knolling"},{t:"Enforces safety and process procedures even when the team is rushed",b:"Work to code"},{t:"Stays calm and adaptive when things go wrong at the pool",b:"Persistence"}],tech:["Runs pre-dive and post-dive equipment checklists","Coordinates pilot rotation and pool session schedule","Manages tether and surface equipment during dives","Briefs team before each pool session","Owns competition-day logistics checklist"]},
+{id:"qa",tier:"ops",name:"Quality Assurance",icon:"✓",mission:"Catch problems before pool day does. Your job is to be the person who asks 'are we sure?' before it's too late.",soft:[{t:"Tests things yourself rather than taking someone's word for it",b:"Thoroughness counts"},{t:"Documents every test result — including the ones that fail",b:"Keep a list"},{t:"Raises concerns directly and early, not quietly after the fact",b:"Sent ≠ received"},{t:"Follows the same testing process every time, not a shortcut version",b:"Work to code"},{t:"Owns test gaps or missed checks when they're discovered",b:"Own your mistakes"}],tech:["Maintains QA checklist for each subsystem","Logs all test results with date, conditions, and outcome","Coordinates with each engineer to schedule pre-pool verification","Maintains open issues list and status","Reports QA status to VP of Engineering before each pool session"]},
+{id:"props",tier:"ops",name:"Props Lead",icon:"◎",mission:"Build the competition props to spec so the team can practice on realistic conditions — not guesses.",soft:[{t:"Reads the competition manual carefully before building — doesn't improvise dimensions",b:"Work to code"},{t:"Organizes all props and materials so anyone can find them",b:"Always be knolling"},{t:"Builds early enough that the team gets real practice time",b:"Be on time"},{t:"Documents what was built, what was approximated, and why",b:"Thoroughness counts"},{t:"Coordinates with Strategy on which props to prioritize",b:"Sent ≠ received"}],tech:["Builds competition props to manual specifications","Maintains props inventory and storage system","Coordinates prop build schedule with sprint planning","Flags any spec ambiguities to the team","Supports pool session setup and breakdown"]},
+{id:"testeng",tier:"ops",name:"Test Engineer",icon:"△",mission:"Design and run tests that tell the team something true — not just tests that confirm what they want to believe.",soft:[{t:"Runs tests with consistent methodology — same conditions, same logging",b:"Work to code"},{t:"Reports results honestly, including results the team won't want to see",b:"Own your mistakes"},{t:"Coordinates test sessions with Deck Manager and QA in advance",b:"Be on time"},{t:"Keeps a running test log with dates, conditions, and results",b:"Keep a list"},{t:"Reruns tests after changes rather than assuming the fix worked",b:"Thoroughness counts"}],tech:["Designs test plans for each subsystem and integration milestone","Logs all test sessions with conditions and outcomes","Coordinates with QA on pre-competition verification","Identifies performance benchmarks and tracks progress","Reports findings to VP of Engineering"]},
+{id:"scientist",tier:"spec",name:"Scientist",icon:"⬜",mission:"Support the Chief Scientist's research and own at least one section of the team's scientific documentation.",soft:[{t:"Completes research tasks with sources and notes, not just a summary",b:"Thoroughness counts"},{t:"Checks in with Chief Scientist before drawing conclusions",b:"Sent ≠ received"},{t:"Keeps organized research notes that others could use",b:"Keep a list"},{t:"Follows citation and accuracy standards consistently",b:"Work to code"},{t:"Revises work when errors are pointed out, without defensiveness",b:"Own your mistakes"}],tech:["Researches assigned ocean science topics","Documents findings with citations","Writes at least one section of the technical report","Prepares to present research at the technical interview","Supports Chief Scientist in team science education"]},
+{id:"tw",tier:"spec",name:"Tech Writer",icon:"✐",mission:"Write clearly about technical work that other people did, in language that both engineers and non-engineers can understand.",soft:[{t:"Asks clarifying questions before writing — doesn't guess at technical content",b:"Sent ≠ received"},{t:"Submits drafts to the Lead Tech Writer on time for review",b:"Be on time"},{t:"Revises drafts based on feedback without defensiveness",b:"Own your mistakes"},{t:"Follows team document structure and style standards",b:"Work to code"},{t:"Completes assigned sections fully, including figures and captions",b:"Thoroughness counts"}],tech:["Writes assigned sections of the technical report","Interviews engineers to understand the technical content","Coordinates with Lead Tech Writer on style and structure","Incorporates feedback and manages revision cycles","Supports annual report writing as assigned"]},
+{id:"sec",tier:"ops",name:"Secretary",icon:"✉",mission:"Make sure the team's decisions, plans, and history are written down accurately and on time — because memory is unreliable under pressure.",soft:[{t:"Takes notes during meetings and distributes them within 24 hours",b:"Be on time"},{t:"Captures decisions and action items completely — not just highlights",b:"Thoroughness counts"},{t:"Maintains a document system anyone can navigate",b:"Keep a list"},{t:"Follows document naming and storage conventions consistently",b:"Work to code"},{t:"Flags when key decisions weren't captured clearly",b:"Sent ≠ received"}],tech:["Takes and distributes notes for all leadership meetings","Maintains the team's shared document folder structure","Supports annual report compilation and formatting","Archives sprint retrospectives and key decisions","Coordinates with Project Manager on Work Log binder system"]},
+{id:"treas",tier:"ops",name:"Treasurer",icon:"$",mission:"Track every dollar so the team can make real decisions about what to buy and what to skip — not guesses based on vibes.",soft:[{t:"Updates financial records after every transaction — not at the end of the sprint",b:"Be on time"},{t:"Reports budget status accurately including uncomfortable numbers",b:"Own your mistakes"},{t:"Keeps a complete record of income and expenses with receipts",b:"Keep a list"},{t:"Follows the approved budget process before spending",b:"Work to code"},{t:"Confirms financial totals with the Project Manager regularly",b:"Sent ≠ received"}],tech:["Maintains income and expense ledger","Tracks grant status and expected income","Reports financial status at each leadership meeting","Coordinates with CMO on grant application amounts","Authors financials section of the annual report"]},
+];
+
+const TM_BEHAVIORS=[
+{cat:"Shows up ready",b:"Be on time",self:["I'm often late or unprepared when I arrive.","I usually show up on time but sometimes come unprepared.","I consistently arrive on time, prepared to work.","I'm never the reason a session starts late, and I help others be ready too."],peer:["Often late or unprepared — impacts the team's ability to start.","Usually present but sometimes unprepared.","Consistently arrives on time and ready to contribute.","Always prepared; raises the whole team's readiness."]},
+{cat:"Workspace",b:"Knolling / Sacred space",self:["I often leave my area without cleaning up.","I clean up most of the time but miss things.","I consistently clean up and organize tools after each session.","I actively improve workspace standards and help others do the same."],peer:["Regularly leaves workspace messy or tools out of place.","Usually cleans up but inconsistently.","Consistently returns workspace to good order every session.","Actively models workspace standards and lifts the whole team."]},
+{cat:"Follows team systems",b:"Work to code",self:["I often do things my own way instead of following team systems.","I follow team processes mostly, with occasional workarounds.","I follow team standards consistently and raise concerns properly.","I follow standards, teach them to others, and help improve them constructively."],peer:["Frequently works around team systems or standards.","Mostly follows process with some workarounds.","Consistently follows team standards.","Models process discipline and helps others internalize it."]},
+{cat:"Tracks own work",b:"Keep a list",self:["I lose track of my tasks or commitments regularly.","I keep some kind of list but it's often incomplete or out of date.","My task list is current and I follow through on commitments.","My tracking is reliable enough that others can depend on it."],peer:["Loses track of tasks or commitments regularly.","Partial tracking — some things fall through.","Reliably tracks and follows through on commitments.","Exemplary self-management; a model for the team."]},
+{cat:"Completes tasks",b:"Thoroughness counts",self:["I often leave tasks at 80–90% and move on.","I finish most things but sometimes leave loose ends.","I complete tasks to a handoff-ready state.","I finish thoroughly and check my work before calling it done."],peer:["Leaves tasks incomplete or at 90%.","Mostly complete but occasional loose ends.","Consistently finishes tasks to a handoff-ready state.","Exceptional follow-through — can count on this person to finish."]},
+{cat:"Communication",b:"Sent ≠ received",self:["I assume people got my message without checking.","I communicate but sometimes forget to confirm understanding.","I confirm that messages landed and follow up on open items.","I proactively catch communication gaps before they cause problems."],peer:["Leaves communication open-ended or unclear.","Communicates but doesn't always confirm understanding.","Closes loops reliably.","Exceptionally clear — catches misalignments before they matter."]},
+{cat:"Accountability",b:"Own your mistakes",self:["I tend to avoid or deflect when something goes wrong.","I acknowledge mistakes sometimes but can get defensive.","I name my mistakes clearly and focus on fixing them.","I proactively surface problems I caused and lead the fix."],peer:["Deflects blame or avoids acknowledging mistakes.","Inconsistent — sometimes owns it, sometimes deflects.","Acknowledges errors directly and moves to fix them.","Proactively names and fixes mistakes — models accountability."]},
+{cat:"Persistence",b:"Persistence",self:["I give up or disengage when I hit a hard problem.","I persist sometimes but can drift when frustrated.","I stay with hard problems and find a way through or ask for help.","I maintain focus and energy even in the crunch and help others do the same."],peer:["Disengages when facing hard problems or setbacks.","Variable — sometimes persists, sometimes checks out.","Reliably sticks with difficult problems.","Sustains the team's energy and focus through tough stretches."]},
+{cat:"Teaches others",b:"Teach what you know",self:["I rarely take time to help teammates learn skills I have.","I help when asked but don't often offer proactively.","I actively share what I know and help teammates build skills.","I treat mentoring as part of my job, not extra credit."],peer:["Rarely shares skills or helps teammates learn.","Helps when asked but not proactively.","Actively shares knowledge and helps teammates grow.","Exceptional mentor — leaves the team more capable."]},
+{cat:"Conflict resolution",b:"Conflict resolution",self:["I avoid conflict or vent to bystanders rather than addressing it directly.","I sometimes address conflict directly but often let it linger.","I raise concerns with the person involved or a lead, not to bystanders.","I address conflict early and constructively before it affects the team."],peer:["Avoids conflict or vents sideways — rarely addresses it directly.","Inconsistent — sometimes direct, sometimes avoidant.","Handles conflict directly and constructively.","Consistently models healthy conflict resolution for the team."]},
+{cat:"Team above self",b:"Team above self",self:["I prioritize my preferences over team needs most of the time.","I sometimes put the team first but struggle when it's personally costly.","I put team progress ahead of personal preference when the two conflict.","I consistently make choices that are good for the team, even when they cost me something."],peer:["Consistently prioritizes personal preference over team needs.","Sometimes puts the team first — inconsistent.","Reliably puts team progress ahead of personal preference.","Consistently selfless — a genuine asset to team culture."]},
+{cat:"Growth mindset",b:"Growth mindset",self:["I treat setbacks or criticism as confirmation I'm not good at this.","I sometimes bounce back from setbacks but can take feedback personally.","I treat setbacks as information and use feedback to improve.","I actively seek out hard feedback and help others see challenges as opportunities."],peer:["Treats setbacks as confirmation of fixed ability — disengages.","Variable — sometimes resilient, sometimes takes it personally.","Bounces back from setbacks and applies feedback constructively.","Models a growth mindset for the team — embraces hard feedback."]},
+];
+
+const ROLE_BEHAVIORS=[
+{cat:"Reliability",b:"Be on time",self:["I rarely meet role-specific commitments or deadlines.","I usually deliver but sometimes miss role deadlines without communicating.","I consistently meet role commitments and communicate early when I can't.","I proactively manage my role commitments and help others do the same."],peer:["Rarely meets role-specific commitments.","Usually delivers but inconsistently.","Consistently reliable in role responsibilities.","Exceptionally dependable in this role."]},
+{cat:"Documentation",b:"Thoroughness counts",self:["My role documentation is missing or significantly incomplete.","I document sometimes but leave gaps in role-related records.","My role logs and outputs are current and complete.","My documentation is thorough enough that someone could take over my role mid-sprint."],peer:["Role documentation is rarely complete.","Partial documentation — some gaps.","Role documentation consistently complete and usable.","Exemplary — role outputs are clear, current, and handoff-ready."]},
+{cat:"Communication",b:"Sent ≠ received",self:["I often assume people in my role know what I'm doing.","I communicate my role status sometimes but leave gaps.","I keep relevant people informed and confirm understanding.","I proactively surface role blockers and keep the team ahead of problems."],peer:["Often leaves role communication incomplete.","Communicates role status inconsistently.","Keeps relevant people informed reliably.","Proactively surfaces blockers — the team is never surprised."]},
+{cat:"Process",b:"Work to code",self:["I often improvise in my role rather than following established processes.","I follow role processes mostly but sometimes cut corners.","I follow role standards consistently and raise concerns properly.","I follow role standards and help make them better for whoever has this role next."],peer:["Frequently improvises rather than following role processes.","Mostly follows role process with occasional shortcuts.","Consistently follows role standards.","Models role process discipline and documents it for successors."]},
+];
+
+let activeTiers=new Set(["all","exec","lead","spec","ops"]);
+let currentJob="tm";
+let evalMode="self";
+
+function switchTab(tab,btn){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById(tab).classList.add('active');
+  btn.classList.add('active');
+  if(tab==='rubric') renderRubric();
+}
+
+function toggleTier(btn){
+  const t=btn.dataset.tier;
+  if(activeTiers.has(t)) activeTiers.delete(t); else activeTiers.add(t);
+  btn.classList.toggle('active');
+  filterJobs();
+}
+
+function filterJobs(){
+  const q=document.getElementById('searchBox').value.toLowerCase();
+  document.querySelectorAll('.job-btn').forEach(btn=>{
+    btn.classList.toggle('hidden',!activeTiers.has(btn.dataset.tier)||(q&&!btn.dataset.name.includes(q)));
+  });
+}
+
+function renderGrid(){
+  document.getElementById('jobGrid').innerHTML=JOBS.map(j=>`
+    <button class="job-btn${j.id===currentJob?' active ':' '}${j.tier}" data-tier="${j.tier}" data-name="${j.name.toLowerCase()}" onclick="selectJob('${j.id}')">
+      <span class="tier-pill pill-${j.tier}">${TIER_LABEL[j.tier]}</span><br>${j.icon} ${j.name}
+    </button>`).join('');
+}
+
+function selectJob(id){currentJob=id;renderGrid();renderJD();}
+
+function renderJD(){
+  const j=JOBS.find(x=>x.id===currentJob);
+  const isTM=j.id==="tm";
+  document.getElementById('jdDetail').innerHTML=`
+    <div class="jd-card${isTM?' card-all':''}">
+      <div class="jd-hdr">
+        <span class="jd-title">${j.name}</span>
+        <span class="tier-pill pill-${j.tier}">${TIER_LABEL[j.tier]}</span>
+      </div>
+      <div class="jd-lbl">Mission</div>
+      <p class="jd-mission">${j.mission}</p>
+      ${j.note?`<div class="note-bar">${j.note}</div>`:''}
+      <div class="jd-lbl">Behavioral expectations</div>
+      <ul class="jl">${j.soft.map(s=>`<li>${s.t} <span class="btag">${s.b}</span></li>`).join('')}</ul>
+      <div class="jd-lbl">Technical responsibilities</div>
+      <ul class="jl">${j.tech.map(t=>`<li>${t}</li>`).join('')}</ul>
+      <div class="success-bar"><strong>You're succeeding when:</strong> ${j.mission}</div>
+    </div>`;
+}
+
+function populateSelect(){
+  document.getElementById('roleSelect').innerHTML=JOBS.map(j=>`<option value="${j.id}">${j.name}</option>`).join('');
+}
+
+function setMode(m){
+  evalMode=m;
+  document.querySelectorAll('.mode-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('mode'+m).classList.add('active');
+  renderRubric();
+}
+
+function renderRubric(){
+  const dept=JOBS.find(d=>d.id===document.getElementById('roleSelect').value);
+  const isSelf=evalMode==='self';
+  const L=["Not yet","Developing","Proficient","Exemplary"];
+  const row=(c,isTm)=>`<tr${isTm?' class="tm-row"':''}><td class="cat-cell">${c.cat}<span class="${isTm?'tm-lbl':'blbl'}">${isTm?'Team member — ':'Role — '}${c.b}</span></td>${[0,1,2,3].map(i=>`<td><span class="lhdr h${i}">${L[i]}</span><br><span class="l${i}">${(isSelf?c.self:c.peer)[i]}</span></td>`).join('')}</tr>`;
+  document.getElementById('rubricContent').innerHTML=`
+    <div class="table-wrap"><table class="rtable">
+      <thead><tr><th style="width:140px">Criterion</th><th>Not yet (1)</th><th>Developing (2)</th><th>Proficient (3)</th><th>Exemplary (4)</th></tr></thead>
+      <tbody>
+        <tr><td colspan="5" class="sect-divider">Team member behaviors — everyone</td></tr>
+        ${TM_BEHAVIORS.map(c=>row(c,true)).join('')}
+        ${dept.id!=='tm'?`<tr><td colspan="5" class="sect-divider">Role-specific behaviors — ${dept.name}</td></tr>${ROLE_BEHAVIORS.map(c=>row(c,false)).join('')}`:''}
+      </tbody>
+    </table></div>
+    <p class="wt-note">Behavioral criteria = 60% of evaluation &nbsp;·&nbsp; Technical checklist = 40%</p>
+    <div class="tech-box">
+      <div class="tech-hdr">Technical checklist — ${dept.name}</div>
+      <div class="tech-body">${dept.tech.map(t=>`<div class="chk-item"><input type="checkbox"><span>${t}</span></div>`).join('')}</div>
+    </div>`;
+}
+
+renderGrid();renderJD();populateSelect();
+</script>
+</body>
+</html>
