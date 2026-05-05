@@ -68,9 +68,10 @@ body {
   gap: 1.25rem;
 }
 .logo-mark {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   flex-shrink: 0;
+  object-fit: contain;
 }
 .header-text {}
 .org-name {
@@ -409,14 +410,7 @@ ul.jl li { font-size: 14px; color: var(--text); margin-bottom: 6px; line-height:
 <body>
 
 <header class="site-header">
-  <svg class="logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="24" cy="24" r="22" stroke="#0d8a7e" stroke-width="2" fill="none"/>
-    <circle cx="24" cy="24" r="14" stroke="#0d8a7e" stroke-width="1" fill="none" stroke-dasharray="3 2"/>
-    <path d="M8 28 Q16 18 24 24 Q32 30 40 20" stroke="#0d8a7e" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <circle cx="24" cy="24" r="3" fill="#0d8a7e"/>
-    <path d="M24 10 L24 6 M24 42 L24 38 M10 24 L6 24 M42 24 L38 24" stroke="#12b5a6" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M30 16 L34 12 M18 32 L14 36" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"/>
-  </svg>
+  <img class="logo-mark" src="https://raw.githubusercontent.com/porttack/porttack.com/main/docs/assets/images/SELLogo2.png" alt="Sea Exploration League logo">
   <div class="header-text">
     <div class="org-name">Sea Exploration League</div>
     <div class="tool-name">ROV Roles &amp; Rubric</div>
