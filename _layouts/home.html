@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {% if site.paginate and paginator %}
+    {% assign posts = paginator.posts %}
+  {% else %}
+    {% assign posts = site.posts %}
+  {% endif %}
+
+  {%- if posts.size > 0 -%}
+    <ul class="post-list">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {%- for post in posts -%}
+        {%- assign show_post = false -%}
+        {%- assign is_draft = false -%}
+        {%- if post.categories contains "draft" -%}
+          {%- assign is_draft = true -%}
+        {%- endif -%}
+
+        {%- if page.only_category -%}
+          {%- if post.categories contains page.only_category -%}
+            {%- assign show_post = true -%}
+          {%- endif -%}
+        {%- elsif page.exclude_category -%}
+          {%- assign excluded = page.exclude_category | split: "," -%}
+          {%- assign is_excluded = false -%}
+          {%- for cat in excluded -%}
+            {%- if post.categories contains cat -%}
+              {%- assign is_excluded = true -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- unless is_excluded -%}
+            {%- assign show_post = true -%}
+          {%- endunless -%}
+        {%- else -%}
+          {%- unless is_draft -%}
+            {%- assign show_post = true -%}
+          {%- endunless -%}
+        {%- endif -%}
+        
+        {%- if show_post -%}
+          <li>
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+</div>

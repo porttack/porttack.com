@@ -1,8 +1,9 @@
 ---
 layout: home
-title: Blog
-permalink: /blog/
-exclude_category: tech-news,draft,public-comment
+title: Blog - Public Comments
+permalink: /blog/public-comment/
+only_category: public-comment
+exclude_category: draft
 ---
 
 {% include blog-header.html %}
@@ -14,4 +15,3 @@ exclude_category: tech-news,draft,public-comment
   <a href="/blog/news/">Tech News</a> | 
   <a href="/blog/public-comment/">Public Comments</a>
 </nav>
-

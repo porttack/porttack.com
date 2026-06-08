@@ -1,8 +1,8 @@
 ---
 layout: home
-title: Blog
-permalink: /blog/
-exclude_category: tech-news,draft,public-comment
+title: Blog - All Posts
+permalink: /blog/all/
+exclude_category: draft
 ---
 
 {% include blog-header.html %}
