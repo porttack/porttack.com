@@ -47,6 +47,7 @@ show_excerpts: true # set to false to remove excerpts on the homepage
 google_analytics: G-D1M0QW3Q9C
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
 #  - jekyll-seo-tag
 #  - jekyll-sitemap
 #  - jekyll-paginate
