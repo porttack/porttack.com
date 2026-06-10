@@ -5,13 +5,6 @@ date:   2023-07-15
 categories: teaching
 ---
 
----
-layout: post
-title:  "My Teaching Compass: Principles and Goals"
-date:   2023-07-15
-categories: teaching
----
-
 ## Teaching Principles
 
 * **Youth represent humanity's future**
