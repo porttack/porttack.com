@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "AI in Education Nuance: Protect the Struggle AND Multiply the Learning"
+title:  "Nuance: Students Need Productive Struggle AND Opportunity to Multiply Their Learning"
 date:   2026-06-03
 excerpt_separator: <!--more-->
 excerpt: "We need to limit AI so students still learning fundamentals don't lose the learning that comes from productive struggle. At the same time, for students who already have those fundamentals, AI can multiply how much they learn. We need policies for both."
