@@ -9,6 +9,8 @@ excerpt_separator: <!--more-->
 
 *Draft - not yet public*
 
+Three years teaching both. One platform teaches. The other gets watched. Here's the difference.
+
 ---
 
 ## About the Author
