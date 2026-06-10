@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "AI: Shortcut Past the Struggle, or Accelerator for Growth?"
+title:  "AI in Education Nuance: Protect the Struggle AND Multiply the Learning"
 date:   2026-06-03
 excerpt_separator: <!--more-->
-excerpt: "AI can let students skip the productive struggle that builds real understanding, and we need to protect beginners from that. But for students who have already mastered the fundamentals, the same tool can become a multiplier, helping them produce far more knowledge than they could on their own."
+excerpt: "Some students need to be protected from AI until their fundamentals are solid -- it can short-circuit the productive struggle they need to actually learn. Others should be empowered to use it as a multiplier once those fundamentals are in place. We need policies for both, and AI isn't waiting."
 
 categories: public-comment
 ---
