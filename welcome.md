@@ -35,6 +35,8 @@ order: 1
 
 I'm Eric Brown -- engineer, [teacher](/slv/), husband, father, rotarian, sailor and runner. On this site you can find [information about my classes](/slv/), my [blog](/blog/), and a copy of my [resume](/resume.html).
 
+What drives me, in the classroom and in the community, is helping others succeed.
+
 ## A brief bio
 
 
