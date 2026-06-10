@@ -3,9 +3,11 @@ layout: post
 title:  "When AI Removes the Productive Struggle"
 date:   2026-02-04
 excerpt_separator: <!--more-->
-excerpt: "I built machine learning systems professionally for a decade. I've also watched firsthand in my own classrooms what happens when AI removes the productive struggle students actually need to learn."
+excerpt: "I built machine learning systems professionally for a decade. I've also watched firsthand in my own classrooms what happens when AI removes the productive struggle students actually need to learn.<br><a href='https://www.heinemann.com/blog/ai-and-the-productive-struggle'><img src='https://s3.amazonaws.com/prod-hmhco-vmg-craftcms-public/hnm/images/_transforms/_medium/aiproductivestruggle.png' alt='AI and the Productive Struggle' style='max-height: 200px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 categories: public-comment
 ---
+
+<a href="https://www.heinemann.com/blog/ai-and-the-productive-struggle"><img src="https://s3.amazonaws.com/prod-hmhco-vmg-craftcms-public/hnm/images/_transforms/_medium/aiproductivestruggle.png" alt="AI and the Productive Struggle" style="max-height: 200px; width: auto; display: block; margin: 0 auto 1em;"></a>
 
 You all know me. I've been in this room on and off for 12 years - sometimes giving public comment. I've worn many hats in this community to support it at large and, frequently, our youth.
 
