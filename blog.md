@@ -2,7 +2,7 @@
 layout: home
 title: Blog
 permalink: /blog/
-exclude_category: tech-news,draft,public-comment
+exclude_category: tech-news,draft
 ---
 
 {% include blog-header.html %}
