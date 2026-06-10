@@ -3,7 +3,7 @@ layout: post
 title:  "AI in Education Nuance: Protect the Struggle AND Multiply the Learning"
 date:   2026-06-03
 excerpt_separator: <!--more-->
-excerpt: "Some students need to be protected from AI until their fundamentals are solid -- it can short-circuit the productive struggle they need to actually learn. Others should be empowered to use it as a multiplier once those fundamentals are in place. We need policies for both, and AI isn't waiting."
+excerpt: "We need to limit AI so students still learning fundamentals don't lose the learning that comes from productive struggle. At the same time, for students who already have those fundamentals, AI can multiply how much they learn. We need policies for both."
 
 categories: public-comment
 ---
