@@ -29,6 +29,14 @@ My recommendation is CMU CS Academy.
 
 That recommendation is not close. It is based on how students learn, what they produce, how teachers are supported, and what the evidence from my own classroom shows about engagement and retention. I will address each of these in turn, and then address the standards question - which tends to dominate administrative conversations about curriculum - in an appendix.
 
+| | CMU CS Academy | CodeHS |
+|---|---|---|
+| **Instruction** | Interactive, text-based notes - referenceable, communal, works alongside a teacher or peer | Video lessons - passive, requires headphones, hard to revisit collaboratively |
+| **Assessment** | Consistent creative tasks each unit; gradebook reflects real progress | Frequent quizzes of uncertain retention; all-or-nothing submissions produce a gradebook of completions, not understanding |
+| **Collaboration** | Built into every unit, with research-backed pair programming | One collaborative project, at the very end of the course |
+| **Teacher Materials** | Interactive notes double as shared material - walked through live or worked on together with students. Differentiation always an issue. | Lesson slides provided, but add little beyond what the platform already shows. Differentiation always an issue. |
+| **Support** | Single sequenced curriculum; deep community of fellow teachers plus direct access to content creators | 100+ course catalog; tiered support staffed by people without classroom teaching experience |
+
 ---
 
 ## 1. How Students Learn: Instruction Format
