@@ -39,15 +39,13 @@ Students may not remember every networking concept or cryptographic technique fr
 
 ---
 
-The sections above make the case for why. What follows is the unit itself: reading sequence, lesson materials, and standards coverage.
-
 ## The unit: reading order, standards, and scope & sequence
 
 *A supplemental novel unit for first-year computer science students*
 
 ### How the novel fits the course
 
-*Little Brother* runs **alongside** any first-year high school CS course as a supplement, not a replacement for programming instruction. The novel carries the impacts and networking strands (privacy, surveillance, encryption, civil liberties, licensing) that a code editor isn't the right instrument for. The programming work lives elsewhere in the course; the novel supplies the **why**.
+*Little Brother* runs **alongside** any first through forth high school CS course as a supplement, not a replacement for programming instruction. The novel carries the impacts and networking strands (privacy, surveillance, encryption, civil liberties, licensing) that a code editor isn't the right instrument for. The programming work lives elsewhere in the course; the novel supplies the **why**.
 
 ### Reading order & scope and sequence
 
@@ -83,12 +81,6 @@ California's 9–12 **core** runs CS.1–3, NI.4–7, DA.8–11, AP.12–22, IC.
 **Covered: licensing**
 - The **Creative Commons** release of the book maps to the licensing standard in the **AP.12–22** strand. Students can read the actual CC license on the book *and* find it again on the CSTA standards document (abstract-to-concrete in one move).
 
-**Not covered (flag these as gaps)**
-- **9-12.CS.1–3** (Computing Systems): the hardware / abstraction-layer material. The book gestures at it (repurposed console hardware) but doesn't teach it.
-- **The analysis half of 9-12.DA** (Data & Analysis): building visualizations and computational models. Out of scope for the novel.
-
-> **Combined reach:** roughly **a third of the 30 core standards** are reached through the novel (the 8 IC standards plus the 3–4 networking standards it genuinely hits). That figure is an estimate: the IC count is exact; the networking count depends on how strictly you score "covered" vs. "reinforced."
-
 ### AP CSP coverage
 
 The novel lands almost entirely in two of the five Big Ideas:
@@ -101,10 +93,6 @@ The novel lands almost entirely in two of the five Big Ideas:
 **Big Idea 4: Computing Systems & Networks (CSN)**
 - **4.1 The Internet**: how data moves: DNS, packets, routing, redundancy (CSN-1).
 - **4.2 Fault Tolerance**: resilient, redundant networks; the Xnet / mesh material is a natural hook.
-
-**Not covered (flag these as gaps)**
-- **Big Idea 1 (CRD)** and **Big Idea 3 (AAP)**: the create-and-program core, roughly half the exam. The novel motivates programming but doesn't teach it; that's the programming course's job.
-- **Big Idea 2 (DAT)**: data representation, compression, and analysis. Largely out of scope; the book's "data" is about privacy (which lives in IOC-2), not data representation.
 
 ### Appendix: the author's encouragement, and where other teachers have gone
 
