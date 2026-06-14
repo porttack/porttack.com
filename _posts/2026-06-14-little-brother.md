@@ -2,7 +2,7 @@
 layout: post
 title: "Little Brother / Big Brother"
 date: 2026-06-14
-categories: draft
+categories: teaching
 excerpt: "Cory Doctorow's *Little Brother* pulls students into questions of privacy, surveillance, encryption, and civil liberties -- questions that don't have clean answers and that students keep arguing about long after the unit ends. Also: the full reading sequence, lesson materials, and how it maps to California and AP CSP standards.<br><a href='https://craphound.com/littlebrother/'><img src='https://craphound.com/craphound/wp-content/cory/littlebrother-US-cover-small.jpg' alt='Little Brother by Cory Doctorow' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 excerpt_separator: <!--more-->
 ---
@@ -39,7 +39,7 @@ Students may not remember every networking concept or cryptographic technique fr
 
 ---
 
-The sections above make the case for why. What follows is for teachers who want to run this unit and for administrators who need to know what it covers: the reading sequence, California and AP CSP standards crosswalks, lesson materials, and an honest accounting of what the novel doesn't reach.
+The sections above make the case for why. What follows is the unit itself: reading sequence, lesson materials, and standards coverage.
 
 ## The unit — reading order, standards, and scope & sequence
 
@@ -50,8 +50,6 @@ The sections above make the case for why. What follows is for teachers who want 
 *Little Brother* runs **alongside** the regular first-year course as a supplement, not as a replacement for the programming or AP CSP backbone. The novel carries the **impacts and networking-impacts** strands — privacy, surveillance, encryption, civil liberties, licensing — that a code editor isn't the right instrument for. The technical "how" (Khan units, programming projects) lives elsewhere in the course; the novel supplies the **why**.
 
 ### Reading order & scope and sequence
-
-Groupings are read in this order over the course of the unit. Chapter content is described at the theme level. Two code columns are given: **CA** uses California's 9–12 core numbering; **AP CSP** uses the College Board framework's Topic numbers (4.x = Big Idea 4, Computing Systems & Networks; 5.x = Big Idea 5, Impact of Computing).
 
 | # | Chapters | Theme & CS topics | CA standards | AP CSP |
 |---|----------|-------------------|--------------|--------|
@@ -66,15 +64,13 @@ Groupings are read in this order over the course of the unit. Chapter content is
 | 9 | **18–19** | Marcus's detention comes home (18); Barbara the journalist, press freedom and accountability (19). Civic literacy and narrative payoff. | IC.23, IC.30 | 5.1, 5.5 |
 | 10 | **20–22 + Epilogue** | Resolution and **agency**: the systems were built by people and can be rebuilt. Accountability, Marcus testifying, the hope/agency arc the whole unit points toward. | IC.23, IC.30 | 5.1 |
 
-> **Closing-arc note:** Groupings 8–10 are the final stretch — Ch 17 + Intro, then Ch 18–19, then Ch 20–22 + epilogue. They're lighter on new technical content; their value is civic literacy, character, and the hope/agency payoff.
-
 ### Lesson materials
 
 - **Crypto & the key-signing party (Groupings 3–4):** an interactive **["Key Exchange Party" tool](https://porttack.com/keygen)** — generates an ED25519 private key, public key, and fingerprint live on screen, simulating Chapter 10's key-signing party.
 - **Crypto Wars — "Illegal Math" (Grouping 8, Ch 17):** [presentation](https://docs.google.com/presentation/d/1gtE46uUj_wQlXWfdxtBLOv7oHNNxROgb/edit?usp=sharing)
 - **Creative Commons / copyright (Grouping 8, Ch 17 + Intro):** [presentation](https://docs.google.com/presentation/d/1bC-1o6sW6UZQOy8p7VpzShud3Y03uMMu/edit?usp=sharing)
 
-### California standards crosswalk
+### California standards coverage
 
 California's 9–12 **core** runs CS.1–3, NI.4–7, DA.8–11, AP.12–22, IC.23–30 — thirty standards. Here's where the novel lands:
 
@@ -93,9 +89,9 @@ California's 9–12 **core** runs CS.1–3, NI.4–7, DA.8–11, AP.12–22, IC.
 
 > **Combined reach:** roughly **a third of the 30 core standards** are reached through the novel (the 8 IC standards plus the 3–4 networking standards it genuinely hits). That figure is an estimate — the IC count is exact; the networking count depends on how strictly you score "covered" vs. "reinforced."
 
-### AP CSP crosswalk
+### AP CSP coverage
 
-AP CSP organizes its content into **five Big Ideas** — Creative Development (CRD), Data (DAT), Algorithms & Programming (AAP), Computing Systems & Networks (CSN), and Impact of Computing (IOC) — each split into numbered **Topics**, with Learning Objectives and Essential Knowledge beneath them. The novel lands almost entirely in two of the five:
+The novel lands almost entirely in two of the five Big Ideas:
 
 **Big Idea 5 — Impact of Computing (IOC), the spine**
 - **5.1 Beneficial and Harmful Effects** — the surveillance state, dual-use technology, computing's effect on society (the whole arc).
@@ -109,12 +105,6 @@ AP CSP organizes its content into **five Big Ideas** — Creative Development (C
 **Not covered — flag these as gaps**
 - **Big Idea 1 (CRD)** and **Big Idea 3 (AAP)** — the create-and-program core, roughly half the exam. The novel motivates programming but doesn't teach it; that's the programming course's job.
 - **Big Idea 2 (DAT)** — data representation, compression, and analysis. Largely out of scope; the book's "data" is about privacy (which lives in IOC-2), not data representation.
-
-> Same shape as the California map: the novel owns the **impact** and **networks** Big Ideas, and the programming course owns the rest. AP just sorts the same material into different bins.
-
-### A note on what this doesn't claim
-
-The credibility of both crosswalks rests on **not overclaiming** — the same instinct that makes a reader trust them over a vendor's "100% standards-aligned" checkbox. Whole strands are genuinely untouched: in California terms, Computing Systems and the analysis half of Data & Analysis; in AP terms, Creative Development, Algorithms & Programming, and most of Data. That's not a flaw — the full picture was never meant to live in one course. Both frameworks distinguish a "for all students" core from specialty/elective material, and the programming-and-build core belongs to the programming course. *Little Brother* is doing exactly the job it's good at — the impact and networking strands — and that's the claim worth making.
 
 ### Appendix — the author's encouragement, and where other teachers have gone
 
