@@ -3,9 +3,11 @@ layout: post
 title: "Little Brother / Big Brother"
 date: 2026-06-14
 categories: draft
-excerpt: "Cory Doctorow's *Little Brother* pulls students into questions of privacy, surveillance, encryption, and civil liberties -- questions that don't have clean answers and that students keep arguing about long after the unit ends. Also: the full reading sequence, lesson materials, and how it maps to California and AP CSP standards."
+excerpt: "Cory Doctorow's *Little Brother* pulls students into questions of privacy, surveillance, encryption, and civil liberties -- questions that don't have clean answers and that students keep arguing about long after the unit ends. Also: the full reading sequence, lesson materials, and how it maps to California and AP CSP standards.<br><a href='https://craphound.com/littlebrother/'><img src='https://craphound.com/craphound/wp-content/cory/littlebrother-US-cover-small.jpg' alt='Little Brother by Cory Doctorow' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 excerpt_separator: <!--more-->
 ---
+
+<a href="https://craphound.com/littlebrother/"><img src="https://craphound.com/craphound/wp-content/cory/littlebrother-US-cover-large.jpg" alt="Little Brother by Cory Doctorow" style="max-height: 250px; width: auto; display: block; margin: 0 auto 1em;"></a>
 
 ## How a novel helps students understand why computing matters
 
