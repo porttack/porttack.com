@@ -45,7 +45,7 @@ Students may not remember every networking concept or cryptographic technique fr
 
 ### How the novel fits the course
 
-*Little Brother* runs **alongside** any first through forth high school CS course as a supplement, not a replacement for programming instruction. The novel carries the impacts and networking strands (privacy, surveillance, encryption, civil liberties, licensing) that a code editor isn't the right instrument for. The programming work lives elsewhere in the course; the novel supplies the **why**.
+*Little Brother* runs **alongside** any first through forth year high school CS course as a supplement, not a replacement for programming instruction. The novel carries the impacts and networking strands (privacy, surveillance, encryption, civil liberties, licensing) that a code editor isn't the right instrument for. The programming work lives elsewhere in the course; the novel supplies the **why**.
 
 ### Reading order & scope and sequence
 
@@ -94,13 +94,15 @@ The novel lands almost entirely in two of the five Big Ideas:
 - **4.1 The Internet**: how data moves: DNS, packets, routing, redundancy (CSN-1).
 - **4.2 Fault Tolerance**: resilient, redundant networks; the Xnet / mesh material is a natural hook.
 
-### Appendix: the author's encouragement, and where other teachers have gone
+### Appendix: Doctorow's encouragement, and where other teachers have gone
 
 Before building any of this, I wrote to Cory Doctorow in 2023 to ask whether other teachers had taught *Little Brother* in a computer science setting. His reply was immediate:
 
 > **My note (May 2023):** I asked whether he knew of other teachers using *Little Brother* in a CS class, since it keeps students engaged and is full of discussion points about digital citizenship and security.
 >
 > **His reply:** "Yes, tons!" with pointers to the curriculum and teacher write-ups that have collected around the book.
+
+In fact, it has been taught to both middle and high school students.
 
 Doctorow releases the novel under a Creative Commons license precisely so it can be used this way, and the book's own back matter points readers to a publisher-produced educator's guide. A few stable starting points for anyone who wants to follow the same path:
 
