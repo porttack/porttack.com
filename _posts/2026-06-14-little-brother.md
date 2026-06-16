@@ -3,7 +3,7 @@ layout: post
 title: "Little Brother / Big Brother"
 date: 2026-06-14
 categories: teaching
-excerpt: "Cory Doctorow's <em>Little Brother</em> pulls students into questions of privacy, surveillance, encryption, and civil liberties -- questions that don't have clean answers and that students keep arguing about long after the unit ends. Also: the full reading sequence, lesson materials, and how it maps to California and AP CSP standards.<br><a href='/2026/06/14/little-brother.html'><img src='https://craphound.com/craphound/wp-content/cory/littlebrother-US-cover-small.jpg' alt='Little Brother by Cory Doctorow' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
+excerpt: "Cory Doctorow's <em>Little Brother</em> pulls students into questions of privacy, surveillance, encryption, and civil liberties -- questions that don't have clean answers. Also: the full reading sequence, lesson materials, and how it maps to California and AP CSP standards.<br><a href='/2026/06/14/little-brother.html'><img src='https://craphound.com/craphound/wp-content/cory/littlebrother-US-cover-small.jpg' alt='Little Brother by Cory Doctorow' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 excerpt_separator: <!--more-->
 ---
 
