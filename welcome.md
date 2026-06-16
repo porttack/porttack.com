@@ -63,9 +63,9 @@ I received my Bachelor of Science in Electrical Engineering from the University 
 ## Community
 
 San Lorenzo Valley [High School](https://hs.slvusd.org) and [Middle School](https://ms.slvusd.org)
-<br> [Santa Cruz Lions](https://santacruzhostlionsclub.org/), "We serve"
 <br> [SLV Rotary](https://portal.clubrunner.ca//6779) (President Elect), "Service above self"
 <br> [Santa Cruz Sunrise Rotary](https://portal.clubrunner.ca/2276)
+<br> [Santa Cruz Lions](https://santacruzhostlionsclub.org/), "We serve"
 <br> [Valley Women's Club of SLV](https://valleywomensclub.org/)
 <br> [SLV Foundation for Education](https://slvfoundation.org) (Treasurer)
 <br> [Scouts Troop 604](https://sites.google.com/site/troop604112014/), [Santa Cruz Sea Scouts](https://santacruzseascouts.com/), Explorer Post 841
