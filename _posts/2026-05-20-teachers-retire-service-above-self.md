@@ -3,11 +3,11 @@ layout: post
 title:  "Teachers Retire. Service Above Self Doesn't Have To."
 date:   2026-05-20
 excerpt_separator: <!--more-->
-excerpt: "<a href='https://portal.clubrunner.ca//6779'>SLV Rotary</a> is offering to sponsor up to two retiring teachers in their first year of Rotary membership at any club in Santa Cruz County. If you've spent your career putting kids first, you already know what 'service above self' looks like.<br><a href='/2026/05/20/teachers-retire-service-above-self.html'><img src='https://clubrunner.blob.core.windows.net/00000006779/ThemeLogos/en-us/LightBG_-rotary-logo-4.jpg' alt='Rotary Club of San Lorenzo Valley' style='width: auto; display: block; margin: 0.6em auto 0;'></a>"
+excerpt: "<a href='https://portal.clubrunner.ca//6779'>SLV Rotary</a> is offering to sponsor up to two retiring teachers in their first year of Rotary membership at any club in Santa Cruz County. If you've spent your career putting kids first, you already know what 'service above self' looks like.<br><a href='/2026/05/20/teachers-retire-service-above-self.html'><img src='/docs/assets/images/SLV_Rotary_logo2.png' alt='Rotary Club of San Lorenzo Valley' style='max-height: 110px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 categories: public-comment
 ---
 
-<a href="https://portal.clubrunner.ca//6779"><img src="https://clubrunner.blob.core.windows.net/00000006779/ThemeLogos/en-us/LightBG_-rotary-logo-4.jpg" alt="Rotary Club of San Lorenzo Valley" style="max-height: 200px; width: auto; display: block; margin: 0 auto 0.3em;"></a>
+<a href="https://portal.clubrunner.ca//6779"><img src="/docs/assets/images/SLV_Rotary_logo2.png" alt="Rotary Club of San Lorenzo Valley" style="max-height: 150px; width: auto; display: block; margin: 0 auto 0.3em;"></a>
 
 I'm the incoming president of the <a href="https://portal.clubrunner.ca//6779">SLV Rotary Club</a>. And Rotary's shared value of service to others is part of why I became a teacher. In fact, it was some long conversations with Andrew at Rotary meetings that helped me make my decision to become a teacher.
 
