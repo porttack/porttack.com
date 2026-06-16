@@ -3,15 +3,15 @@ layout: post
 title: "Little Brother / Big Brother"
 date: 2026-06-14
 categories: teaching
-excerpt: "Cory Doctorow's <em>Little Brother</em> pulls students into questions of privacy, surveillance, encryption, and civil liberties -- questions that don't have clean answers. Also: the full reading sequence, lesson materials, and how it maps to California and AP CSP standards.<br><a href='/2026/06/14/little-brother.html'><img src='https://craphound.com/craphound/wp-content/cory/littlebrother-US-cover-small.jpg' alt='Little Brother by Cory Doctorow' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
+excerpt: "Cory Doctorow's <em>Little Brother</em> pulls students into questions of privacy, surveillance, encryption, and civil liberties -- questions that don't have clean answers. Also: the full reading sequence, lesson materials, and how it maps to California and AP CSP standards.<br><a href='/2026/06/14/little-brother.html'><img src='https://craphound.com/craphound/wp-content/cory/littlebrother-US-cover-small.jpg' alt='Little Brother by Cory Doctorow' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0; box-shadow: -4px 4px 10px rgba(0,0,0,0.3), 2px 4px 8px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.08);'></a>"
 excerpt_separator: <!--more-->
 ---
 
-<a href="https://craphound.com/littlebrother/"><img src="https://craphound.com/craphound/wp-content/cory/littlebrother-US-cover-large.jpg" alt="Little Brother by Cory Doctorow" style="max-height: 250px; width: auto; display: block; margin: 0 auto 1em;"></a>
+<a href="https://craphound.com/littlebrother/"><img src="https://craphound.com/craphound/wp-content/cory/littlebrother-US-cover-large.jpg" alt="Little Brother by Cory Doctorow" style="max-height: 250px; width: auto; display: block; margin: 0 auto 1em; box-shadow: -4px 4px 10px rgba(0,0,0,0.3), 2px 4px 8px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.08);"></a>
 
 ## How a novel helps students understand why computing matters
 
-*Little Brother* is juvenile fiction about a group of teenagers who use cryptography, social engineering, software, and the internet to fight a government surveillance state. In a computer science classroom, it teaches digital literacy without students quite realizing they're learning it.
+*Little Brother* is juvenile fiction about a group of teenagers who use cryptography, social engineering, software, and the internet to fight a dystopian surveillance state. In a computer science classroom, it teaches digital literacy without students realizing they're learning it.
 
 The novel pulls students into questions of privacy, security, surveillance, encryption, censorship, data collection, authentication, and the consequences technology carries for society. These map directly onto California's 9–12 Impacts of Computing standards (9-12.IC.23 through .30, in standards built on the CSTA K–12 framework), covering eight standards that make up a quarter of the state's high-school computer science core.
 
