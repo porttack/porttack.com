@@ -5,6 +5,7 @@ date:   2026-05-20
 excerpt_separator: <!--more-->
 excerpt: "<a href='https://portal.clubrunner.ca//6779'>SLV Rotary</a> is offering to sponsor up to two retiring teachers in their first year of Rotary membership at any club in Santa Cruz County. If you've spent your career putting kids first, you already know what 'service above self' looks like.<br><a href='/2026/05/20/teachers-retire-service-above-self.html'><img src='/docs/assets/images/SLV_Rotary_logo2.png' alt='Rotary Club of San Lorenzo Valley' style='max-height: 110px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 categories: public-comment
+public_comment_note: "This is a public comment I delivered to the SLVUSD school board at their 5/20/2026 meeting honoring retiring teachers and staff. -- Eric Brown"
 ---
 
 <a href="https://portal.clubrunner.ca//6779"><img src="/docs/assets/images/SLV_Rotary_logo2.png" alt="Rotary Club of San Lorenzo Valley" style="max-height: 150px; width: auto; display: block; margin: 0 auto 0.3em;"></a>

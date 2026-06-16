@@ -5,6 +5,7 @@ date:   2016-06-08
 excerpt_separator: <!--more-->
 excerpt: "\"So, your kids must love the iPad?\" ... \"They haven't used it,\" he told me. \"We limit how much technology our kids use at home.\" -- Steve Jobs, New York Times, 2014"
 categories: public-comment
+public_comment_note: "This is a public comment I delivered to the SLVUSD school board on 6/8/2016 regarding the BYOD (Bring Your Own Device) policy. -- Eric Brown"
 ---
 
 My name is Eric. I have two second graders at SLVE and have been active every week in the computer lab this year with one of my children because I've been skeptical of where computers add enrichment in our young children's education. And I've been impressed with what they can do and the passion exhibited by the children and teacher even in the absence of a curriculum, teacher's guides, etc.

@@ -5,6 +5,7 @@ date:   2026-02-04
 excerpt_separator: <!--more-->
 excerpt: "I built machine learning systems professionally for a decade. I've also watched firsthand in my own classrooms what happens when AI removes the productive struggle students actually need to learn.<br><a href='/2026/02/04/when-ai-removes-productive-struggle.html'><img src='https://s3.amazonaws.com/prod-hmhco-vmg-craftcms-public/hnm/images/_transforms/_medium/aiproductivestruggle.png' alt='AI and the Productive Struggle' style='max-height: 200px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 categories: public-comment
+public_comment_note: "This is a public comment I delivered to the SLVUSD school board on 2/4/2026 regarding AI in education. -- Eric Brown"
 ---
 
 <a href="https://www.heinemann.com/blog/ai-and-the-productive-struggle"><img src="https://s3.amazonaws.com/prod-hmhco-vmg-craftcms-public/hnm/images/_transforms/_medium/aiproductivestruggle.png" alt="AI and the Productive Struggle" style="max-height: 200px; width: auto; display: block; margin: 0 auto 1em;"></a>

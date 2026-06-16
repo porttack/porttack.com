@@ -6,6 +6,7 @@ excerpt_separator: <!--more-->
 excerpt: "We need to limit AI so students still learning fundamentals don't lose the learning that comes from productive struggle. At the same time, for students who already have those fundamentals, AI can multiply how much they learn. We need policies for both."
 
 categories: public-comment
+public_comment_note: "This is a public comment I delivered to the SLVUSD school board on 6/3/2026 regarding AI in education. -- Eric Brown"
 ---
 
 I've promised my students I'd read this for over a month now. I'm going to go fast…

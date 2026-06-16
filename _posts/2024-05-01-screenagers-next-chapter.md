@@ -5,6 +5,7 @@ date:   2024-05-01
 excerpt_separator: <!--more-->
 excerpt: "A report to the school board on what students and parents said after our Screenagers Next Chapter showing -- including seventh graders' mixed reactions and why parents overwhelmingly want all students to see it.<br><a href='/2024/05/01/screenagers-next-chapter.html'><img src='https://porttack.com/docs/assets/images/screenager_facts.gif' alt='Screenagers facts' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 categories: public-comment
+public_comment_note: "This is a public comment I delivered to the SLVUSD school board on 5/1/2024 regarding the Screenagers Next Chapter film showing. -- Eric Brown"
 ---
 
 <a href="https://porttack.com/screenagers"><img src="https://porttack.com/docs/assets/images/screenager_facts.gif" alt="Screenagers facts" style="max-height: 150px; width: auto; display: block; margin: 0 auto 1em;"></a>

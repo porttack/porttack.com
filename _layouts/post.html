@@ -23,6 +23,17 @@ layout: default
     {{ content }}
   </div>
 
+  {%- if page.categories contains "public-comment" -%}
+    <hr>
+    <p style="font-size: 90%; color: #666;">
+      {%- if page.public_comment_note -%}
+        {{ page.public_comment_note }}
+      {%- else -%}
+        This is a public comment I delivered to the San Lorenzo Valley USD school board. Public comments are typically limited to two minutes.
+      {%- endif -%}
+    </p>
+  {%- endif -%}
+
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}
