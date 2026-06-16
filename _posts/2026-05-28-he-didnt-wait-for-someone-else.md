@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 excerpt: "When COVID closed schools and cut kids off from one another, our scholarship recipient didn't wait for someone else to step up. He started a program for older students to read to elementary kids -- because we all need stories, and we all need connection."
 ---
 
-Good evening. My name is Eric Brown. I am a member of Santa Cruz Lions.
+Good evening. My name is Eric Brown. I am a member of <a href="https://santacruzhostlionsclub.org/">Santa Cruz Lions</a>.
 
 If you're not familiar with Lions, we're an international service organization -- like Rotary, Kiwanis, Omega Nu or Valley Womens -- focused on improving the lives of people in our communities. Worldwide there are over a million Lions members. Here in Santa Cruz County, our club supports youth in many ways.
 
