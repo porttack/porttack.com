@@ -4,12 +4,12 @@ title: "We Are Optimizing for the Wrong Skills"
 date: 2026-06-19
 categories: draft
 excerpt_separator: <!--more-->
-excerpt: "How a generation of content-mastery optimization squeezed out the skills employers actually want, and why project-based work (plus AI) is the way back. I'm a CTE teacher thinking about a systems problem."
+excerpt: "How a generation of content-mastery optimization squeezed out the skills employers actually want, and why project-based learning (PBL) is the way back. When AI is used in PBL, it can deepen how students learn instead of serving as a cognitive bypass, which is all cheating ever was."
 ---
 
 *Draft - not yet public*
 
-*I'm a CTE teacher. A generation of content-mastery optimization squeezed out the skills employers actually want. PBL, plus AI, is the way back.*
+*I'm a CTE teacher. A generation of content-mastery optimization squeezed out the skills employers actually want. Project based learning, plus AI when appropriate, is the way back.*
 
 Much of the conversation I hear about AI in school boils down to detecting cheating. That's hard. But it is more than that. It is cognitive offload. Forget about detecting it; it is like eating sugar instead of vegetables -- it doesn't really benefit our future citizens.
 
@@ -45,6 +45,8 @@ The format that develops those things is not a worksheet. It is a project.
 
 My robotics students design and build underwater ROVs and compete with them. The work has a real specification, a budget, a team, engineering documentation, and a deadline that does not move, because a competition does not care about your excuses. Students hit problems no answer key anticipated. They debug at the last minute with tired hands. They split up the labor, miss a handoff, fix it, and then present what they made to people who ask hard questions. Every skill on the employer list is in that paragraph. None of it is on a bubble sheet, and none of it can be faked by a student who has to stand up and defend the thing they built.
 
+I won't pretend this is easy or that it scales on its own. PBL like this is a labor of dedication. The prep is heavy and the day-to-day logistics are real. The hard part is getting students to focus, to plan, to work productively together: teaching by doing, and letting them learn the soft skills the way soft skills are actually learned, through experience and failure, and develop character along the way. The students who haven't bought in yet can stall a whole team, and some years the luck of the roster makes it harder still. I keep doing it anyway, because the payoff is worth the cost, and because students can tell when the work is real and when someone actually cares whether they figure it out.
+
 Projects are the one format where content mastery and the soft skills get built in the same motion. You cannot make the robot work without the fundamentals, and you cannot finish the season without the collaboration. That is not a tradeoff between rigor and creativity. It is the place they stop being opposites.
 
 ## AI as the multiplier, with one guardrail
@@ -53,6 +55,8 @@ This is where AI comes back in, and where I have to be careful, because I have a
 
 But once a student has the fundamentals, AI stops being a crutch and becomes a multiplier. In a project, an experienced student can use it to reach further: more ambitious designs, more professional documentation, faster iteration, higher-level ideation. That is how the engineers I used to work with use it now, and it is what employers say they want. The skill at that stage is not avoiding the tool. It is using it well: prompting with intent, judging what comes back, slowing down, and cutting the slop. A multiplier only helps if you have something worth multiplying. Fundamentals first, then the multiplier.
 
+None of this means a project needs AI. Plenty of the best ones don't. The point is only that when AI shows up, it should multiply learning rather than replace it.
+
 That is the whole shape of it. Protect the struggle while students build the base. Multiply once they have it. And do both inside projects, where the base and the human skills grow together.
 
 ## What I actually want
@@ -60,6 +64,10 @@ That is the whole shape of it. Protect the struggle while students build the bas
 None of this is a call for less rigor. It is a call to stop optimizing for the part of learning that is easiest to score, right as the world started paying a premium for the part that is hardest to score.
 
 A colleague recently had some of us watch [Most Likely to Succeed](https://en.wikipedia.org/wiki/Most_Likely_to_Succeed_(film)), the 2015 documentary that follows ninth graders at High Tech High, a San Diego charter school that built its whole model around project-based learning. The film makes an argument that stuck with me: the school most of us grew up in was designed more than a century ago to produce reliable, standardized output, and the economy that rewarded that output is gone. It is a provocation more than a prescription, and it is honest about the open questions, including whether a PBL-only model serves every student equally. But it names the thing I keep circling. We are optimizing for the wrong skills.
+
+I won't pretend this is easy or that it scales on its own. PBL like this is a labor of dedication. The prep is heavy and the day-to-day logistics are real. The hard part is getting students to focus, to plan, to work productively together: teaching by doing, and letting them learn the soft skills the way soft skills are actually learned, through experience and failure, and develop character along the way. The students who haven't bought in yet can stall a whole team, and some years the luck of the roster makes it harder still. I keep doing it anyway, because the payoff is worth the cost, and because students can tell when the work is real and when someone actually cares whether they figure it out.
+
+There's a larger version of this argument, about what kind of citizens, leaders, and followers we're forming, and who gets access to that formation. But that's why this piece is about skills and not scores.
 
 What I want is not complicated. I want classrooms where students make things together. Where creativity and collaboration are the work itself and not the reward at the end of the unit.[^codehs] Where the struggle of learning the fundamentals is something students do alongside each other, which is its own kind of community and its own reason not to hand that part to a machine. And I want schools willing to put project-based learning at the center of how kids learn, not at the edges.
 
