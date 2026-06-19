@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Credit Is the Floor: AP CSA, CMU Units, and What Actually Builds an Engineer"
-date: 2026-06-22
+date: 2026-06-18
 categories: draft
 excerpt_separator: <!--more-->
 ---
