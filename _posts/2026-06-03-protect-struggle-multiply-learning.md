@@ -23,6 +23,6 @@ My students design and build robots and compete at a level where the technical d
 
 Teaching them how to prompt well, how to evaluate what comes back, how to slow down, avoid the slop, and produce professional results. That's the skill.
 
-Dr. Rumman Chowdhury talks about keeping the human in the loop, and has said we should [teach students to produce knowledge, not just output](https://insights.blackhatmea.com/is-there-any-point-in-cybersecurity-education-in-the-age-of-ai/). I agree. For advanced students, AI is a multiplier that allows them to produce significantly more knowledge than they otherwise could. I want to help students do this by being the teacher in the loop.
+Dr. Rumman Chowdhury talks about [keeping the human in the loop](https://venturebeat.com/ai/the-pitfalls-of-a-retrofit-human-in-ai-systems), and has said we should [teach students to produce knowledge, not just output](https://insights.blackhatmea.com/is-there-any-point-in-cybersecurity-education-in-the-age-of-ai/). I agree. For advanced students, AI is a multiplier that allows them to produce significantly more knowledge than they otherwise could. I want to help students do this by being the teacher in the loop.
 
 I don't know exactly what it looks like in practice, but I'm ready to experiment with caution and safety in mind. I think doing so supports my more advanced students.
