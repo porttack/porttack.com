@@ -6,6 +6,9 @@ layout: default
   {%- if page.categories contains "public-comment" -%}
     <p style="margin-bottom: 1em;"><a href="/blog/public-comment/">← All Public Comments</a></p>
   {%- endif -%}
+  {%- if page.categories contains "draft" -%}
+    <p style="margin-bottom: 1em;"><a href="/blog/drafts/">← All Drafts</a></p>
+  {%- endif -%}
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
