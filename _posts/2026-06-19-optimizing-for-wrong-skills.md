@@ -4,8 +4,10 @@ title: "We Are Optimizing for the Wrong Skills"
 date: 2026-06-19
 categories: draft
 excerpt_separator: <!--more-->
-excerpt: "How a generation of content-mastery optimization squeezed out the skills employers actually want, and why project-based work (plus AI, sometimes) is the way back. I'm a CTE teacher thinking about a systems problem."
+excerpt: "How a generation of content-mastery optimization squeezed out the skills employers actually want, and why project-based work (plus AI) is the way back. I'm a CTE teacher thinking about a systems problem."
 ---
+
+*I'm a CTE teacher. How a generation of content-mastery optimization squeezed out the skills employers actually want, and why PBL work (plus AI) is the way back.*
 
 Much of the conversation I hear about AI in school boils down to detecting cheating. That's hard. But it is more than that. It is cognitive offload. Forget about detecting it; it is like eating sugar instead of vegetables -- it doesn't really benefit our future citizens.
 
@@ -13,7 +15,7 @@ How do we wall the tool off? It is a fair question, but I think it is the wrong 
 
 <!--more-->
 
-This is the tension. I'm a teacher. But I'm also an engineer thinking about a systems problem. On one side is content mastery, the standards and the codes, the material I can put on a test and measure cleanly. On the other side is creativity and the soft skills, the messy, human, hard-to-grade capacities that real work runs on. For most of the last two decades we have poured our energy into the first and quietly starved the second. AI did not create that imbalance. It just made it impossible to ignore, because the part of school we optimized hardest is exactly the part a machine now does for free. (But that still overlooks the importance of both learning the fundamentals and the community built by not using AI to learn fundamentals -- both are important.)
+This is the tension. I'm a teacher. But I'm also an engineer thinking about a systems problem. On one side is content mastery, the standards and the codes, the material I can put on a test and measure cleanly. On the other side is creativity and the soft skills, the messy, human, hard-to-grade capacities that real work runs on. For most of the last two decades we have poured our energy into the first and quietly starved the second. AI did not create that imbalance. It just made it impossible to ignore, because the part of school we optimized hardest is exactly the part a machine now does for free. But free has a cost. Students still have to learn the fundamentals, and the struggle of learning them together is part of what turns a class into a community. Neither is something I want to hand to a machine.
 
 ## How we got here: No Child Left Behind
 
@@ -55,12 +57,14 @@ That is the whole shape of it. Protect the struggle while students build the bas
 
 None of this is a call for less rigor. It is a call to stop optimizing for the part of learning that is easiest to score, right as the world started paying a premium for the part that is hardest to score.
 
-A colleague recently had our staff watch [Most Likely to Succeed](https://en.wikipedia.org/wiki/Most_Likely_to_Succeed_(film)), the 2015 documentary that follows ninth graders at High Tech High, a San Diego charter school that built its whole model around project-based learning. The film makes an argument that stuck with me: the school most of us grew up in was designed more than a century ago to produce reliable, standardized output, and the economy that rewarded that output is going away. It is a provocation more than a prescription, and it is honest about the open questions, including whether an all-project model serves every student equally. But it names the thing I keep circling. We are optimizing for the wrong skills.
+A colleague recently had some of us watch [Most Likely to Succeed](https://en.wikipedia.org/wiki/Most_Likely_to_Succeed_(film)), the 2015 documentary that follows ninth graders at High Tech High, a San Diego charter school that built its whole model around project-based learning. The film makes an argument that stuck with me: the school most of us grew up in was designed more than a century ago to produce reliable, standardized output, and the economy that rewarded that output is gone. It is a provocation more than a prescription, and it is honest about the open questions, including whether a PBL-only model serves every student equally. But it names the thing I keep circling. We are optimizing for the wrong skills.
 
-What I want is not complicated. I want classrooms where students make things together. Where creativity and collaboration are the work itself and not the reward at the end of the unit. Where the struggle of learning the fundamentals is something students do alongside each other, which is its own kind of community and its own reason not to hand that part to a machine. And I want schools willing to put project-based learning at the center of how kids learn, not at the edges.
+What I want is not complicated. I want classrooms where students make things together. Where creativity and collaboration are the work itself and not the reward at the end of the unit.[^codehs] Where the struggle of learning the fundamentals is something students do alongside each other, which is its own kind of community and its own reason not to hand that part to a machine. And I want schools willing to put project-based learning at the center of how kids learn, not at the edges.
 
 The exam, a student can get on their own. Learning to create, to work with other people, and to use the right tools well once the fundamentals are real: that is the part I can give them, and the part that lasts.
 
 ---
 
 *All opinions are my own. Feedback and collaboration welcome. -- Eric Brown*
+
+[^codehs]: I compared two intro CS curricula on exactly this axis in [CodeHS vs. CMU CS Academy](/2026/06/10/codehs-vs-cmu.html) -- which one builds more of what I'm describing here.
