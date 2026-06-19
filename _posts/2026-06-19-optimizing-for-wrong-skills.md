@@ -4,7 +4,7 @@ title: "We Are Optimizing for the Wrong Skills"
 date: 2026-06-19
 categories: draft
 excerpt_separator: <!--more-->
-excerpt: "How a generation of content-mastery optimization squeezed out the skills employers actually want, and why project-based learning (PBL) is the way back. When AI is used in PBL, it can deepen how students learn instead of serving as a cognitive bypass, which is all cheating ever was.<br><a href='/2026/06/19/optimizing-for-wrong-skills.html'><img src='/docs/assets/images/wef-growing-skills-2030.png' alt='WEF fastest-growing skills by 2030' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
+excerpt: "How a generation of content-mastery optimization squeezed out the skills employers actually want, and why project-based learning (PBL) is the way back. When AI is used in PBL, it can deepen how students learn instead of serving as a cognitive bypass, which is all cheating ever was.<br><a href='/2026/06/19/optimizing-for-wrong-skills.html'><img src='/docs/assets/images/wef-growing-skills-2030.png' alt='WEF fastest-growing skills by 2030' style='max-height: 225px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 ---
 
 *Draft - not yet public*
