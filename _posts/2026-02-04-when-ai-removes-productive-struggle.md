@@ -16,7 +16,7 @@ What you may not know is that I'm an Electrical Engineer. Computer Science class
 
 <!--more-->
 
-I also researched and purchased digital citizenship curriculum for this district when my children entered middle school. Before covid I taught some of these. I brought the [Screenagers movie](/2024/05/01/screenagers-next-chapter.html) about youth and social media to two different high schools in our county. I'm showing it again to my 9th graders in a few weeks in our High School wellness center.
+I also researched and purchased [digital citizenship curriculum](/2020/01/01/cybercivics.html) for this district when my children entered middle school. Before covid I taught some of these. I brought the [Screenagers movie](/2024/05/01/screenagers-next-chapter.html) about youth and social media to two different high schools in our county. I'm showing it again to my 9th graders in a few weeks in our High School wellness center.
 
 And while I've only been teaching for 3-years, I have worked with youth in our schools since about 2017 -- creating, funding, and running enrichment programs.
 
