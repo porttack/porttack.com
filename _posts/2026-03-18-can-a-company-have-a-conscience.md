@@ -2,10 +2,12 @@
 layout: post
 title:  "Can a Company Have a Conscience?"
 date:   2026-03-18
-categories: teaching
-excerpt: "Can a company have a conscience? After Anthropic was declared a Pentagon 'supply chain risk' for refusing two safeguards -- no mass surveillance, no autonomous weapons -- and a competitor was rewarded for agreeing to them, I brought the contradiction to my students. Their confusion was entirely reasonable."
+categories: tech-news
+excerpt: "Can a company have a conscience? After Anthropic was declared a Pentagon 'supply chain risk' for refusing two safeguards -- no mass surveillance, no autonomous weapons -- and a competitor was rewarded for agreeing to them, I brought the contradiction to my students. Their confusion was entirely reasonable.<br><a href='/2026/03/18/can-a-company-have-a-conscience.html'><img src='https://akm-img-a-in.tosshub.com/indiatoday/images/story/202603/openai-ceo-sam-altman-and-anthropic-ceo-dario-amodei-03533847-16x9.png' alt='Sam Altman and Dario Amodei' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 excerpt_separator: <!--more-->
 ---
+
+<a href="https://www.indiatoday.in/technology/news/story/anthropic-is-taking-pentagon-to-court-sam-altman-says-no-private-company-is-bigger-than-government-2878077-2026-03-06"><img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202603/openai-ceo-sam-altman-and-anthropic-ceo-dario-amodei-03533847-16x9.png" alt="Sam Altman and Dario Amodei" style="max-height: 250px; width: auto; display: block; margin: 0 auto 1em;"></a>
 
 Can a company have a conscience?
 
