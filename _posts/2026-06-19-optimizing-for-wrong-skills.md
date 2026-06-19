@@ -7,6 +7,8 @@ excerpt_separator: <!--more-->
 excerpt: "How a generation of content-mastery optimization squeezed out the skills employers actually want, and why project-based work (plus AI) is the way back. I'm a CTE teacher thinking about a systems problem."
 ---
 
+*Draft - not yet public*
+
 *I'm a CTE teacher. How a generation of content-mastery optimization squeezed out the skills employers actually want, and why PBL work (plus AI) is the way back.*
 
 Much of the conversation I hear about AI in school boils down to detecting cheating. That's hard. But it is more than that. It is cognitive offload. Forget about detecting it; it is like eating sugar instead of vegetables -- it doesn't really benefit our future citizens.
