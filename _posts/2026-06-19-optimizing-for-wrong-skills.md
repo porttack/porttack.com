@@ -29,7 +29,7 @@ I want to be fair to the intent. The goal was equity. If you do not measure, you
 
 ## What the work actually rewards
 
-Here is the part that should bother us. The skills we squeezed out are precisely the ones the working world is now asking for most.
+Here is the part that should bother us. The skills we demphasized are precisely the ones the working world is now asking for most.
 
 The World Economic Forum surveys more than a thousand employers for its [Future of Jobs Report](https://www.weforum.org/publications/the-future-of-jobs-report-2025/). In the 2025 edition, the core skills employers rank highest are analytical thinking, resilience and flexibility, leadership, and creative thinking. Creative thinking sits near the top, named by well over half of the companies surveyed. These are not the things a standardized test was built to capture. They are the things a standardized test was built to leave out.
 
@@ -61,7 +61,7 @@ That is the whole shape of it. Protect the struggle while students build the bas
 
 ## The real inequity
 
-We usually argue equity at the level of grading: who gets measured fairly, who clears the bar, whether a mark reflects what a student actually knows. But that keeps the fight inside the frame I'm trying to leave. The deeper inequity isn't how we score the soft skills. It's that a content-only curriculum never teaches them, and the students who pay the highest price are the ones who don't pick them up at home or in some well-resourced program. Creativity, collaboration, knowing how to carry yourself and work with other people: school is the one place every kid can get them. **Withholding them is the inequity.** How we grade matters, but it's a much smaller question than the one we've let it stand in for.
+We usually argue equity at the level of grading: who gets measured fairly, who clears the bar, whether a mark reflects what a student actually knows. But that keeps the fight inside the frame I'm trying to leave. The deeper inequity isn't how we score the soft skills. It's that a content-only mastery based curriculum never teaches them, and the students who pay the highest price are the ones who don't pick them up at home or in some other opt-in program. Creativity, collaboration, knowing how to carry yourself and work with other people: school is the one place every kid can get them. *Withholding them is the inequity.* How we grade matters, but it's a much smaller question than the one we've let it stand in for.
 
 I'm not the only one circling this. A colleague recently had some of us watch [Most Likely to Succeed](https://en.wikipedia.org/wiki/Most_Likely_to_Succeed_(film)), the 2015 documentary that follows ninth graders at High Tech High, a San Diego charter school built around project-based learning. It argues that the school most of us grew up in was designed more than a century ago to produce reliable, standardized output, and that the economy which rewarded that output is gone. It's a provocation more than a prescription, but it names the thing I keep coming back to. We are optimizing for the wrong skills.
 
@@ -69,11 +69,10 @@ There's a larger version of this argument, about what kind of citizens, leaders,
 
 None of this is a call for less rigor. It's a call to stop optimizing for what's easiest to score, right when the world started paying a premium for what's hardest. What I want is not complicated: classrooms where students make things together, where creativity and collaboration are the work itself and not the reward at the end of the unit.[^codehs] Where the struggle of learning the fundamentals is something students do alongside each other, which is its own kind of community and its own reason not to hand that part to a machine. And I want schools willing to put project-based learning at the center of how kids learn, not at the edges.
 
-Many good students learn test taking strategies. But providing  students the opportunity to create, to work with other people, and to use the right tools well once the fundamentals are real: these are the soft and real-world skills todays work runs on. PBL is a strong way to deliver on these for our future leaders and citizens.
-
+A test was never built to see the skills that matter most: creating, working with other people, and using the right tools well once the fundamentals are real. These are the soft and real-world skills today's work runs on. PBL is a good way to deliver them. They are the right skills our future leaders and citizens need.
 
 ---
 
 *All opinions are my own. Feedback and collaboration welcome. -- Eric Brown*
 
-[^codehs]: I compared two intro CS curricula on exactly this axis in [CodeHS vs. CMU CS Academy](/2026/06/10/codehs-vs-cmu.html) -- which one builds more of what I'm describing here.
+[^codehs]: I compared two intro CS curricula on exactly these axes (creativity & collaboration) in [CodeHS vs. CMU CS Academy](/2026/06/10/codehs-vs-cmu.html) -- which one builds more of what I'm describing here.
