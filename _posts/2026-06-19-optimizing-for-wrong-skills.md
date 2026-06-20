@@ -268,7 +268,7 @@ But once a student has the fundamentals, AI stops being a crutch and becomes a m
 
 None of this means a project needs AI. Plenty of the best ones don't. The point is only that when AI shows up, it should multiply learning rather than replace it.
 
-That is the whole shape of it. Protect the struggle while students build the base. Multiply once they have it. And do both inside projects, where the base and the human skills grow together.
+That is the whole shape of it. Protect the cognitive struggle while students learn the fundamentals. Multiply once they have them. Then, inside projects, students apply those fundamentals while building the human skills.
 
 ## The real inequity
 
