@@ -13,7 +13,7 @@ excerpt: "How a generation of content-mastery optimization squeezed out the skil
 
 Much of the conversation I hear about AI in school boils down to detecting cheating. That's hard, and while it is frequently necessary, it's the wrong fight. The deeper problem isn't that a student fooled me. It's cognitive offload: the student who skips the thinking is mostly cheating himself. It is like eating sugar instead of vegetables, the easy version feels fine now and starves the growth that matters later.
 
-How do we wall the tool off? It is a fair question, but I don't think that's always the answer. Call it cognitive offload or call it cheating, it is a symptom. The thing underneath it is a question we have been avoiding for twenty years: are we teaching the right things at all?
+How do we wall the tool off? It is a fair question, but I don't think that's always the answer. Call it cognitive offload or call it cheating, it is a symptom. The real question is the one underneath: is focusing on content mastery alone the right thing?
 
 <!--more-->
 
