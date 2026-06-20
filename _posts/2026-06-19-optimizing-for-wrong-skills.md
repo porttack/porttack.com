@@ -11,9 +11,9 @@ excerpt: "How a generation of content-mastery optimization squeezed out the skil
 
 *I'm a CTE teacher. A generation of content-mastery optimization squeezed out the skills employers actually want. Project based learning, plus AI when appropriate, is the way back.*
 
-Much of the conversation I hear about AI in school boils down to detecting cheating. That's hard. But it is more than that. It is cognitive offload. Forget about detecting it; it is like eating sugar instead of vegetables -- it doesn't really benefit our future citizens.
+Much of the conversation I hear about AI in school boils down to detecting cheating. That's hard, and while it is frequently necessary, it's the wrong fight. The deeper problem isn't that a student fooled me. It's cognitive offload: the student who skips the thinking is mostly cheating himself. It is like eating sugar instead of vegetables, the easy version feels fine now and starves the growth that matters later.
 
-How do we wall the tool off? It is a fair question, but I think it is the wrong place to start. Call it cognitive offload or call it cheating. It is a symptom. The thing underneath it is a question we have been avoiding for twenty years: are we teaching the right things at all?
+How do we wall the tool off? It is a fair question, but I don't think that's always the answer. Call it cognitive offload or call it cheating, it is a symptom. The thing underneath it is a question we have been avoiding for twenty years: are we teaching the right things at all?
 
 <!--more-->
 
@@ -190,7 +190,7 @@ Then there is the finding that ties the whole argument together. The fastest-gro
 
 So the market is asking for two things at once: people who can think creatively and work with others, and people who are comfortable using AI to multiply what they produce. That is nearly the inverse of what content-mastery optimization trained us to deliver.
 
-## Projects are where both live
+## Applying fundamentals, building soft skills
 
 I spent twenty-five years building software before I taught. I was a CTO, I wrote production code at Apple and Khan Academy, and in all that time I never once saw someone hired or kept for their ability to pass a timed multiple-choice test. People were valued for what they could build, how they thought when a system broke, and whether anyone wanted to work with them again.
 
@@ -198,9 +198,9 @@ The format that develops those things is not a worksheet. It is a project.
 
 My robotics students design and build underwater ROVs and compete with them. The work has a real specification, a budget, a team, engineering documentation, and a deadline that does not move, because a competition does not care about your excuses. Students hit problems no answer key anticipated. They debug at the last minute with tired hands. They split up the labor, miss a handoff, fix it, and then present what they made to people who ask hard questions. Every skill on the employer list is in that paragraph. None of it is on a bubble sheet, and none of it can be faked by a student who has to stand up and defend the thing they built.
 
-I won't pretend this is easy or that it scales on its own. PBL like this is a labor of dedication. The prep is heavy and the day-to-day logistics are real. The hard part is getting students to focus, to plan, to work productively together: teaching by doing, and letting them learn the soft skills the way soft skills are actually learned, through experience and failure, and develop character along the way. The students who haven't bought in yet can stall a whole team, and some years the luck of the roster makes it harder still. I keep doing it anyway, because the payoff is worth the cost, and because students can tell when the work is real and when someone actually cares whether they figure it out.
+I won't pretend this is easy or that it scales on its own. PBL like this is a labor of dedication. The prep is heavy and the day-to-day logistics are real. The hard part is getting students to focus, to plan, to work productively together: teaching by doing, and letting them learn the soft skills the way soft skills are actually learned, through experience and failure, and develop character along the way. The students who haven't bought in yet can stall a whole team, and some years the luck of the roster makes it harder still. I keep doing it anyway, because the payoff is worth the cost, and because students can tell when the work is real. They know I care.
 
-Projects are the one format where content mastery and the soft skills get built in the same motion. You cannot make the robot work without the fundamentals, and you cannot finish the season without the collaboration. That is not a tradeoff between rigor and creativity. It is the place they stop being opposites.
+Projects are the one format where students apply the fundamentals and build the soft skills at the same time. You cannot make the robot work without the fundamentals you already have, and you cannot finish the season without the collaboration you are learning as you go. That is not a tradeoff between rigor and creativity. It is the place they stop being opposites.
 
 ## AI as the multiplier, with one guardrail
 
