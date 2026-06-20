@@ -41,5 +41,66 @@ layout: default
     {%- include disqus_comments.html -%}
   {%- endif -%}
 
+  {%- comment -%}
+    Version history: always shown on drafts and on posts with "show_history: true"
+    in their front matter; on any other post it appears only when the URL carries
+    a "history" query parameter (e.g. ?history). Rendered hidden for all posts and
+    revealed by JS so non-draft pages stay clean.
+  {%- endcomment -%}
+  <div id="git-history" class="git-history" hidden
+       data-repo="{{ site.github_repo | default: 'yogieric/porttack.com' }}"
+       data-path="{{ page.path }}"
+       data-draft="{% if page.categories contains 'draft' %}true{% else %}false{% endif %}"
+       data-show="{% if page.show_history %}true{% else %}false{% endif %}">
+    <hr>
+    <h2 class="git-history-title">Version history</h2>
+    <ol class="git-history-list" reversed><li class="git-history-status">Loading commit history…</li></ol>
+  </div>
+  <style>
+    .git-history{font-size:90%;color:#666;margin-top:1.5em;}
+    .git-history hr{margin-bottom:1.5em;}
+    .git-history-title{font-size:1.05rem;margin:0 0 .5em;}
+    .git-history-list{margin:0;padding-left:1.2em;}
+    .git-history-list li{margin:.2em 0;}
+    .git-history-date{color:#888;white-space:nowrap;}
+    .git-history-status{list-style:none;margin-left:-1.2em;color:#888;}
+  </style>
+  <script>
+  (function(){
+    var box = document.getElementById("git-history");
+    if(!box) return;
+    var isDraft = box.getAttribute("data-draft") === "true";
+    var forced = box.getAttribute("data-show") === "true";
+    var wantsHistory = new URLSearchParams(window.location.search).has("history");
+    if(!isDraft && !forced && !wantsHistory) return;  // leave hidden on normal posts
+    box.hidden = false;
+    var repo = box.getAttribute("data-repo");
+    var path = box.getAttribute("data-path");
+    var list = box.querySelector(".git-history-list");
+    var api = "https://api.github.com/repos/" + repo + "/commits?per_page=50&path=" + encodeURIComponent(path);
+    function esc(s){ var d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
+    fetch(api, {headers:{Accept:"application/vnd.github+json"}})
+      .then(function(r){ if(!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function(commits){
+        if(!Array.isArray(commits) || !commits.length){
+          list.innerHTML = '<li class="git-history-status">No commit history found for this file.</li>';
+          return;
+        }
+        var html = "";
+        commits.forEach(function(c){
+          var subject = (c.commit.message || "").split("\n")[0];
+          var when = new Date(c.commit.author.date);
+          var date = when.toLocaleDateString(undefined, {year:"numeric", month:"short", day:"numeric"});
+          html += '<li><span class="git-history-date">' + date + '</span> — '
+                + '<a href="' + c.html_url + '" target="_blank" rel="noopener">' + esc(subject) + '</a></li>';
+        });
+        list.innerHTML = html;
+      })
+      .catch(function(err){
+        list.innerHTML = '<li class="git-history-status">Could not load history (' + esc(err.message) + ').</li>';
+      });
+  })();
+  </script>
+
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
