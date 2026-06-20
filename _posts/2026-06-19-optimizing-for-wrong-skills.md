@@ -37,7 +37,7 @@ A standardized test can measure analytical thinking, the skill at the top of tha
 
 Then there is the finding that ties the whole argument together. The fastest-growing skill employers report wanting by 2030 is fluency with AI and data. You might expect that to come at the expense of the human skills. It does the opposite. The report's own reading is that as AI spreads, demand for deeply human skills like creative thinking rises rather than falls. The machine takes the routine, and the premium shifts to the judgment, the design, and the collaboration that sit on top of it.
 
-Analytical thinking drops to #9.
+Analytical thinking <a href="#wef-skills-widget" class="wsw-jump" data-view="growing">drops to #9</a>.
 
 {% raw %}
 <!-- WEF skills toggle widget. Self-contained: paste inline into a post, or save in _includes and reference it. -->
@@ -53,6 +53,18 @@ Analytical thinking drops to #9.
   <p class="wsw-caption" id="wsw-caption"></p>
 
   <div class="wsw-chart" id="wsw-chart" aria-live="polite"></div>
+
+  <!-- Print-only: both views render here so a printout shows 2025 and 2030 side by side. -->
+  <div class="wsw-print" id="wsw-print-now">
+    <h4 class="wsw-print-title">Most essential today</h4>
+    <p class="wsw-caption wsw-print-caption"></p>
+    <div class="wsw-chart"></div>
+  </div>
+  <div class="wsw-print" id="wsw-print-growing">
+    <h4 class="wsw-print-title">Growing fastest by 2030</h4>
+    <p class="wsw-caption wsw-print-caption"></p>
+    <div class="wsw-chart"></div>
+  </div>
 
   <div class="wsw-legend">
     <span class="wsw-key"><i class="dot human"></i>Human / soft skill</span>
@@ -102,6 +114,19 @@ Analytical thinking drops to #9.
   #wef-skills-widget .wsw-label{font-size:.78rem;}
   #wef-skills-widget .wsw-rank{font-size:.74rem;}
 }
+/* On screen the interactive toggle is shown and the print blocks are hidden. */
+#wef-skills-widget .wsw-print{display:none;}
+@media print{
+  /* Hide the interactive controls/live chart; show both static views instead. */
+  #wef-skills-widget .wsw-toggle, #wef-skills-widget #wsw-chart, #wef-skills-widget #wsw-caption{display:none !important;}
+  #wef-skills-widget .wsw-print{display:block; margin:0 0 1.2rem;}
+  #wef-skills-widget .wsw-print-title{font-size:1rem; font-weight:700; margin:0 0 .35rem;}
+  #wef-skills-widget .wsw-print-caption{margin:.2rem 0 .8rem; min-height:0;}
+  /* No animation in print; bars carry their final width inline. */
+  #wef-skills-widget .wsw-bar{transition:none !important;}
+  /* Keep bar fills when printers drop background colors. */
+  #wef-skills-widget .wsw-bar, #wef-skills-widget .dot{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+}
 </style>
 
 <script>
@@ -140,7 +165,7 @@ Analytical thinking drops to #9.
   ];
 
   var CAPTIONS = {
-    now: "<b>AI is not on this list.</b> The skills employers call most essential right now are mostly human ones, ranked by the share of employers naming each a core skill. (But click above on <b>\"Growing fastest by 2030\"</b> to see what employers need in just 4 years.)",
+    now: "<b>AI is not on this list.</b> The skills employers call most essential right now are mostly human ones, ranked by the share of employers naming each a core skill. (Click on <a href='#wef-skills-widget' class='wsw-jump' data-view='growing'><b>Growing fastest by 2030</b></a> to see what employers need in just 4 years.)",
     growing: "<b>Now AI leaps to number one.</b> But the human skills do not fall away. Creativity, resilience, curiosity, and leadership all stay near the top of what is growing fastest."
   };
 
@@ -148,7 +173,9 @@ Analytical thinking drops to #9.
   var caption = document.getElementById("wsw-caption");
   var btns = widget.querySelectorAll(".wsw-btn");
 
-  function render(view){
+  // Build the rows for a view. When staticWidth is true (print), the final bar
+  // width is baked into the markup so it renders without the screen animation.
+  function buildRows(view, staticWidth){
     var rows = (view === "now") ? NOW : GROWING;
     var maxNow = 80;
     var html = "";
@@ -161,14 +188,19 @@ Analytical thinking drops to #9.
         width = ((GROWING.length - i) / GROWING.length) * 100;
         valText = "";
       }
+      var barAttr = staticWidth ? 'style="width:' + width + '%"' : 'data-w="' + width + '"';
       html += '<div class="wsw-row">'
         + '<div class="wsw-rank">' + (i + 1) + '</div>'
         + '<div class="wsw-label">' + d.name + '</div>'
-        + '<div class="wsw-track"><div class="wsw-bar ' + d.cls + '" data-w="' + width + '"></div></div>'
+        + '<div class="wsw-track"><div class="wsw-bar ' + d.cls + '" ' + barAttr + '></div></div>'
         + '<div class="wsw-val">' + valText + '</div>'
         + '</div>';
     });
-    chart.innerHTML = html;
+    return html;
+  }
+
+  function render(view){
+    chart.innerHTML = buildRows(view, false);
     caption.innerHTML = CAPTIONS[view];
     requestAnimationFrame(function(){
       requestAnimationFrame(function(){
@@ -179,12 +211,34 @@ Analytical thinking drops to #9.
     });
   }
 
+  // Populate the print-only blocks once; both views are always present for printing.
+  function fillPrint(id, view){
+    var block = document.getElementById(id);
+    if(!block) return;
+    block.querySelector(".wsw-chart").innerHTML = buildRows(view, true);
+    block.querySelector(".wsw-print-caption").innerHTML = CAPTIONS[view];
+  }
+  fillPrint("wsw-print-now", "now");
+  fillPrint("wsw-print-growing", "growing");
+
   btns.forEach(function(btn){
     btn.addEventListener("click", function(){
       btns.forEach(function(b){ b.classList.remove("is-active"); b.setAttribute("aria-selected","false"); });
       btn.classList.add("is-active"); btn.setAttribute("aria-selected","true");
       render(btn.getAttribute("data-view"));
     });
+  });
+
+  // Links with class "wsw-jump" flip the widget to a view and scroll to it.
+  // Delegated so it covers both in-prose links and the dynamically-rendered caption link.
+  document.addEventListener("click", function(e){
+    var link = e.target.closest(".wsw-jump");
+    if(!link) return;
+    e.preventDefault();
+    var view = link.getAttribute("data-view") || "growing";
+    var targetBtn = widget.querySelector('.wsw-btn[data-view="' + view + '"]');
+    if(targetBtn) targetBtn.click();
+    widget.scrollIntoView({behavior:"smooth", block:"center"});
   });
 
   render("now");
