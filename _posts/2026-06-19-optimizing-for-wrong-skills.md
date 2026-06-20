@@ -33,9 +33,11 @@ Here is the part that should bother us. The skills we de-emphasized are precisel
 
 The World Economic Forum surveys more than a thousand employers for its [Future of Jobs Report](https://www.weforum.org/publications/the-future-of-jobs-report-2025/).[^wef] In the 2025 edition, the core skills employers rank highest are analytical thinking, resilience and flexibility, leadership, and creative thinking. Creative thinking sits near the top, named by well over half of the companies surveyed. 
 
-These are the things a standardized test was never built to see. That isn't quite fair to teachers, who chase analytical thinking every day and reach for collaboration, communication, and perseverance when they can. But reaching for these skills is not the same as building them, and a schedule packed with required content leaves little room to do it on purpose.
+A standardized test can measure analytical thinking, the skill at the top of that list in 2025 and the one school works hardest to build. It is nearly blind to everything else. Teachers reach for creativity, collaboration, and perseverance where the day allows, but reaching for these skills is not the same as building them, and a schedule packed with required content leaves little room to do it on purpose.
 
-Then there is the finding that ties the whole argument together. The fastest-growing skill employers report wanting by 2030 is fluency with AI and data. You might expect that to come at the expense of the human skills. It does the opposite. The report's own reading is that as AI spreads, demand for deeply human skills like creativity rises rather than falls. The machine takes the routine, and the premium shifts to the judgment, the design, and the collaboration that sit on top of it.
+Then there is the finding that ties the whole argument together. The fastest-growing skill employers report wanting by 2030 is fluency with AI and data. You might expect that to come at the expense of the human skills. It does the opposite. The report's own reading is that as AI spreads, demand for deeply human skills like creative thinking rises rather than falls. The machine takes the routine, and the premium shifts to the judgment, the design, and the collaboration that sit on top of it.
+
+Analytical thinking drops to #9.
 
 {% raw %}
 <!-- WEF skills toggle widget. Self-contained: paste inline into a post, or save in _includes and reference it. -->
