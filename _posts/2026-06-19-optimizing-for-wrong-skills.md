@@ -278,7 +278,11 @@ I'm not the only one circling this. A colleague recently had some of us watch [M
 
 There's a larger version of this argument, about what kind of citizens, leaders, and followers we're forming, and who gets access to that formation. But that's why this piece is about skills and not scores.
 
-None of this is a call for less rigor. It's a call to stop optimizing for what's easiest to score, right when the world started paying a premium for what's hardest. What I want is not complicated: classrooms where students make things together, where creativity and collaboration are the work itself and not the reward at the end of the unit.[^codehs] Where the struggle of learning the fundamentals is something students do alongside each other, which is its own kind of community and its own reason not to hand that part to a machine. And I want schools willing to put project-based learning at the center of how kids learn, not at the edges.
+## What I'm really saying
+
+The whole argument in a breath. We built school around what a test can measure, and spent twenty years getting better at it. The world now pays most for what it can't. What we worked hardest to teach is exactly what a machine now does for free. Projects are where students apply the fundamentals and build the human skills a machine can't do for them.
+
+None of this is a call for less rigor. It's a call to stop optimizing for what's easiest to score. What I want is not complicated: classrooms where students make things together, where creativity and collaboration are the work itself and not the reward at the end of the unit.[^codehs] Where the struggle of learning the fundamentals is something students do alongside each other, which is its own kind of community and its own reason not to hand that part to a machine. And I want schools willing to put project-based learning at the center of how kids learn, not at the edges.
 
 A test was never built to see the skills that matter most: creating, working with other people, and using the right tools well once the fundamentals are real. These are the soft and real-world skills today's work runs on. PBL is a good way to deliver them. They are the right skills our future leaders and citizens need.
 
