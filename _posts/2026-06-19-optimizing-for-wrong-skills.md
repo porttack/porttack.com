@@ -250,7 +250,7 @@ So the market is asking for two things at once: people who can think creatively 
 
 ## Applying fundamentals, building soft skills
 
-I spent twenty-five years building software before I taught. I was a CTO, I wrote production code at Apple and Khan Academy, and in all that time I never once saw someone hired or kept for their ability to pass a timed multiple-choice test. People were valued for what they could build, how they thought when a system broke, and whether anyone wanted to work with them again.
+I spent twenty-five years building software before I taught. I was a CTO, I wrote production code at Apple and Khan Academy, and in all that time I never once saw someone hired or kept for a test score. People were valued for what they could build, how they thought when a system broke, how clearly they could explain it, and whether anyone wanted to work with them again.
 
 The format that develops those things is not a worksheet. It is a project.
 
