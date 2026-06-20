@@ -37,7 +37,7 @@ A standardized test can measure analytical thinking, the skill at the top of tha
 
 Then there is the finding that ties the whole argument together. The fastest-growing skill employers report wanting by 2030 is fluency with AI and data. You might expect that to come at the expense of the human skills. It does the opposite. The report's own reading is that as AI spreads, demand for deeply human skills like creative thinking rises rather than falls. The machine takes the routine, and the premium shifts to the judgment, the design, and the collaboration that sit on top of it.
 
-Analytical thinking <a href="#wef-skills-widget" class="wsw-jump" data-view="growing">drops to #9</a>.
+Analytical thinking tops the list today, but it isn't what's growing. By 2030 it <a href="#wef-skills-widget" class="wsw-jump" data-view="growing">drops to #9</a>, and the skills climbing past it are the human ones we leave the least room for.
 
 {% raw %}
 <!-- WEF skills toggle widget. Self-contained: paste inline into a post, or save in _includes and reference it. -->
