@@ -138,15 +138,15 @@ The question isn't whether character education belongs in schools. It's whether 
 
 **References:**
 
-Arnold, M. E. (2018). From context to outcomes: A thriving model for 4-H youth development programs. *Journal of Human Sciences and Extension, 6*(1), 141-160. 4-H Study details: https://www.4-h.org/wp-content/uploads/2024/01/23154204/2023-06-07-The-Reconnection-and-Replication-of-the-4-H-Study-of-PYD-Final-Report.pdf
+Arnold, M. E. (2018). [From context to outcomes: A thriving model for 4-H youth development programs](https://www.4-h.org/wp-content/uploads/2024/01/23154204/2023-06-07-The-Reconnection-and-Replication-of-the-4-H-Study-of-PYD-Final-Report.pdf). *Journal of Human Sciences and Extension, 6*(1), 141-160.
 
 Cipriano, C., & Strambler, M. (2023). The state of evidence for social and emotional learning: A contemporary meta-analysis of universal school-based SEL interventions. *Child Development*, 94(4), 1181-1204.
 
-Lerner, R. M., et al. (2015). *Positive youth development among participants in the Boy Scouts of America: A report from a two-and-a-half year longitudinal study*. Institute for Applied Research in Youth Development, Tufts University. https://blog.scoutingmagazine.org/2015/10/22/tufts-study-confirms-scouting-builds-character-six-critical-areas/
+Lerner, R. M., et al. (2015). [*Positive youth development among participants in the Boy Scouts of America: A report from a two-and-a-half year longitudinal study*](https://blog.scoutingmagazine.org/2015/10/22/tufts-study-confirms-scouting-builds-character-six-critical-areas/). Institute for Applied Research in Youth Development, Tufts University.
 
 Soria, K. M., Johnson, M., & Weiner, B. (2019). Belonging and community service-learning among college students. *Michigan Journal of Community Service Learning*, 25(2), 52-67.
 
-The Harris Poll. (2024). *The Scouting Edge: A Study of Ethics & Character in America*. Conducted for the Boy Scouts of America. https://filestore.scouting.org/filestore/marketing/pdf/Final-File-The-Scouting-Edge-8-5x11.pdf
+The Harris Poll. (2024). [*The Scouting Edge: A Study of Ethics & Character in America*](https://filestore.scouting.org/filestore/marketing/pdf/Final-File-The-Scouting-Edge-8-5x11.pdf). Conducted for the Boy Scouts of America.
 
 Tucker, M. L., & McCarthy, A. M. (2001). Presentation self-efficacy: Increasing communication skills through service-learning. *Journal of Managerial Issues*, 13(2), 227-244.
 
