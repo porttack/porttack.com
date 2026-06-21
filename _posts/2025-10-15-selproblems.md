@@ -59,7 +59,7 @@ Multiple studies provide compelling evidence for the effectiveness of character-
 
 **Service Learning Research:** Multiple studies document the power of community service in character development:
 
-* **Academic and Mental Health Benefits:** A 2024 meta-analysis found that service learning significantly improves academic performance while reducing anxiety and depression symptoms (Cipriano & Strambler, 2023).
+* **Academic and Personal Benefits:** A meta-analysis of 62 studies covering nearly 12,000 students found that service learning produces significant gains in academic performance, attitudes toward self and school, civic engagement, and social skills (Celio, Durlak, & Dymnicki, 2011).
 
 * **Character Development:** Students in service learning programs show measurable increases in empathy, civic responsibility, and moral reasoning compared to traditional academic-only approaches (Tucker & McCarthy, 2001).
 
@@ -86,7 +86,7 @@ This critique shouldn't diminish SEL's genuine contributions:
 * **Assessment and measurement**: You can track progress in self-awareness and relationship skills more easily than "trustworthiness" and "courage."
 * **Integration with academics**: SEL competencies mesh naturally with content learning.
 * **Cultural responsiveness**: SEL frameworks can adapt to diverse cultural contexts without imposing specific moral content.
-* **Research foundation**: The evidence base for SEL interventions is robust and growing.
+* **Research foundation**: The evidence base for SEL interventions is robust and growing (Cipriano & Strambler, 2023).
 
 ![CASEL Framework](https://www.illuminateed.com/wp-content/uploads/2021/03/CASEL-Wheel.jpg)
 *The CASEL framework recognizes that students need multiple contexts (schools, families, communities) for development, but treats these as delivery systems for individual competencies rather than authentic places of belonging and moral formation.*
@@ -135,6 +135,8 @@ The question was never whether character education belongs in schools. It's whet
 **References:**
 
 Arnold, M. E. (2018). [From context to outcomes: A thriving model for 4-H youth development programs](https://www.4-h.org/wp-content/uploads/2024/01/23154204/2023-06-07-The-Reconnection-and-Replication-of-the-4-H-Study-of-PYD-Final-Report.pdf). *Journal of Human Sciences and Extension, 6*(1), 141-160.
+
+Celio, C. I., Durlak, J., & Dymnicki, A. (2011). [A meta-analysis of the impact of service-learning on students](https://journals.sagepub.com/doi/10.1177/105382591103400205). *Journal of Experiential Education, 34*(2), 164-181.
 
 Cipriano, C., & Strambler, M. (2023). The state of evidence for social and emotional learning: A contemporary meta-analysis of universal school-based SEL interventions. *Child Development*, 94(4), 1181-1204.
 
