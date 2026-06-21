@@ -4,14 +4,20 @@ title: What's Wrong with SEL? (Remember CBE?)
 date: 2025-10-15
 categories: draft
 redirect_from: /drafts/2025-10-15-selproblems.html
+excerpt_separator: <!--more-->
+excerpt: "We have spent decades teaching students to manage their emotions, but we quietly set aside the moral frameworks and community belonging that character-based education once provided. I argue that this gap is one source of rising student anxiety, and that schools need both: the skills SEL teaches and the foundation of belonging and contribution that character education offers. (A draft and work in progress.)<br><a href='/2025/10/15/selproblems.html'><img src='/docs/assets/images/SELvsCBE.png' alt='SEL vs Character-Based Education Venn diagram' style='max-height: 225px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 ---
 *Why Social-Emotional Learning isn't enough, and how removing moral guardrails fuels student anxiety*
+
+> **A note before you read:** This is a draft and a work in progress. It's a strongly opinionated piece, and I'm still researching it. The causal claims I make here, particularly that the decline of character education has contributed to rising student anxiety, along with the student-outcome claims, are closer to suppositions than settled conclusions. I'm still gathering the research and evidence to test them. None of this is invented, but it is far from polished. It grows out of a graduate course on Social-Emotional Learning at UC Berkeley and out of my own years working with young people. Read it as a position I'm thinking through out loud, not a finished argument.
 
 ## **The Problem with SEL**
 
 American schools face an unprecedented crisis. Despite decades of investment in social-emotional learning programs, youth anxiety and depression rates continue climbing. From 2010 to 2019, major depressive episodes among adolescents increased 60%. Suicide remains the second leading cause of death for ages 10-24.
 
 We teach students to identify emotions, manage stress, and make responsible decisions. We implement SEL curricula, measure competencies, and celebrate improved emotional regulation. These efforts matter, but they're not enough. Something fundamental is missing from our approach to student wellbeing, and that missing piece is contributing to the very anxiety we're trying to address.
+
+<!--more-->
 
 ## **What We Replaced: From Character-Based Education to Individual Skills**
 
