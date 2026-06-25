@@ -8,7 +8,7 @@ excerpt: "When COVID closed schools and cut kids off from one another, our schol
 
 Good evening. My name is Eric Brown. I am a member of <a href="https://santacruzhostlionsclub.org/">Santa Cruz Lions</a>.
 
-If you're not familiar with Lions, we're an international service organization -- like Rotary, Kiwanis, Omega Nu or Valley Womens -- focused on improving the lives of people in our communities. Worldwide there are over a million Lions members. Here in Santa Cruz County, our club supports youth in many ways.
+If you're not familiar with Lions, we're an international service organization -- like [Rotary](https://slvrotary.org/), [Kiwanis](https://svkiwanis.org/), [Omega Nu](https://www.duckyderbysantacruz.org/) or [Valley Womens](https://valleywomensclub.org/) -- focused on improving the lives of people in our communities. Worldwide there are over a million Lions members. Here in Santa Cruz County, our club supports youth in many ways.
 
 <!--more-->
 
