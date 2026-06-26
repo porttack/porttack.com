@@ -41,6 +41,8 @@ Analytical thinking tops the list today, but it isn't what's growing. By 2030 it
 
 {% raw %}
 <!-- WEF skills toggle widget. Self-contained: paste inline into a post, or save in _includes and reference it. -->
+<a id="wef-skills-now" aria-hidden="true" tabindex="-1" style="display:block;height:0;overflow:hidden;"></a>
+<a id="wef-skills-growing" aria-hidden="true" tabindex="-1" style="display:block;height:0;overflow:hidden;"></a>
 <div id="wef-skills-widget">
   <div class="wsw-head">
     <h3 class="wsw-title">What employers say they need</h3>
@@ -242,6 +244,14 @@ Analytical thinking tops the list today, but it isn't what's growing. By 2030 it
   });
 
   render("now");
+
+  // Deep-link support: #wef-skills-growing (or #wef-skills-now) switches the
+  // widget to the right view on page load so external links land in context.
+  var hash = window.location.hash;
+  if (hash === "#wef-skills-growing") {
+    var btn = widget.querySelector('.wsw-btn[data-view="growing"]');
+    if (btn) btn.click();
+  }
 })();
 </script>
 {% endraw %}
