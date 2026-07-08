@@ -19,6 +19,7 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
 <a id="wef-skills-growing" aria-hidden="true" tabindex="-1" style="display:block;height:0;overflow:hidden;"></a>
 <a id="wef-skills-cte" aria-hidden="true" tabindex="-1" style="display:block;height:0;overflow:hidden;"></a>
 <a id="wef-skills-match" aria-hidden="true" tabindex="-1" style="display:block;height:0;overflow:hidden;"></a>
+<a id="wef-skills-csta" aria-hidden="true" tabindex="-1" style="display:block;height:0;overflow:hidden;"></a>
 <div id="wef-skills-widget">
   <div class="wsw-head">
     <h3 class="wsw-title">Interactive Chart: Skills &harr; Standards</h3>
@@ -30,7 +31,8 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
            works via the #wef-skills-cte deep link.
       <button class="wsw-btn" data-view="cte" role="tab" aria-selected="false">In the CTE standards</button>
       -->
-      <button class="wsw-btn is-active" data-view="match" role="tab" aria-selected="true">Match-up</button>
+      <button class="wsw-btn is-active" data-view="match" role="tab" aria-selected="true">CTE Match-up</button>
+      <button class="wsw-btn" data-view="csta" role="tab" aria-selected="false">CSTA Match-up</button>
     </div>
   </div>
 
@@ -63,7 +65,7 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
     <span class="wsw-key"><i class="dot ai"></i>AI &amp; big data</span>
   </div>
 
-  <p class="wsw-source">Source: World Economic Forum, <em>Future of Jobs Report 2025</em> (Figs. 3.3 &amp; 3.4; global; n&gt;1,000 employers), and the California CTE Model Curriculum Standards knowledge and performance anchor standards (2013, ICT sector edition). In the standards table, Rank is each skill's 2025 employer rank; skills marked 2030 appear only on the fastest-growing list. Coverage rates how fully the anchor standard covers the skill: strong = named at the anchor-standard level, partial = covered by sub-standards, gap = thin or missing. The match-up view draws the same mapping as lines: solid = strong, dashed = partial, no line = gap; hover or tap any anchor standard there to read its full text, quoted from the ICT sector edition (with the sector name abbreviated to ICT), with the mapped sub-standards highlighted.</p>
+  <p class="wsw-source">Source: World Economic Forum, <em>Future of Jobs Report 2025</em> (Figs. 3.3 &amp; 3.4; global; n&gt;1,000 employers), and the California CTE Model Curriculum Standards knowledge and performance anchor standards (2013, ICT sector edition). In the standards table, Rank is each skill's 2025 employer rank; skills marked 2030 appear only on the fastest-growing list. Coverage rates how fully the anchor standard covers the skill: strong = named at the anchor-standard level, partial = covered by sub-standards, gap = thin or missing. The match-up views draw the mapping as lines: solid = strong, dashed = partial, no line = gap; hover or tap any item on the right to read its full text with the mapped sub-standards highlighted. The CTE match-up quotes the ICT sector edition (sector name abbreviated to ICT). The CSTA match-up sets the same skills against California's CS standards: the seven core practices (statements quoted from the K-12 Computer Science Framework, end-of-grade-12 expectations) and the five concept strands of the 9-12 core (standards quoted from the 2018 California CS standards).</p>
 </div>
 
 <style>
@@ -239,36 +241,36 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
   ];
 
   // The eleven CTE knowledge and performance anchor standards.
-  var ANCHORS = [
-    {n:1, name:"Academics"},
-    {n:2, name:"Communications"},
-    {n:3, name:"Career Planning &amp; Management"},
-    {n:4, name:"Technology"},
-    {n:5, name:"Problem Solving &amp; Critical Thinking"},
-    {n:6, name:"Health &amp; Safety"},
-    {n:7, name:"Responsibility &amp; Flexibility"},
-    {n:8, name:"Ethics &amp; Legal Responsibilities"},
-    {n:9, name:"Leadership &amp; Teamwork"},
-    {n:10, name:"Technical Knowledge &amp; Skills"},
-    {n:11, name:"Demonstration &amp; Application"}
+  var CTE_ANCHORS = [
+    {id:"1", disp:"1.0", name:"Academics"},
+    {id:"2", disp:"2.0", name:"Communications"},
+    {id:"3", disp:"3.0", name:"Career Planning &amp; Management"},
+    {id:"4", disp:"4.0", name:"Technology"},
+    {id:"5", disp:"5.0", name:"Problem Solving &amp; Critical Thinking"},
+    {id:"6", disp:"6.0", name:"Health &amp; Safety"},
+    {id:"7", disp:"7.0", name:"Responsibility &amp; Flexibility"},
+    {id:"8", disp:"8.0", name:"Ethics &amp; Legal Responsibilities"},
+    {id:"9", disp:"9.0", name:"Leadership &amp; Teamwork"},
+    {id:"10", disp:"10.0", name:"Technical Knowledge &amp; Skills"},
+    {id:"11", disp:"11.0", name:"Demonstration &amp; Application"}
   ];
 
-  // Lines for the match-up view: s = index into CTE, a = anchor number.
+  // Lines for the CTE match-up: s = index into CTE, a = anchor id.
   // w: "strong" draws solid, "partial" draws dashed. Skills with no entry
-  // (service orientation, AI & big data) are the gaps and get no line.
-  var MATCH_LINKS = [
-    {s:0, a:5, w:"strong"}, {s:0, a:1, w:"partial"},
-    {s:1, a:7, w:"strong"},
-    {s:2, a:9, w:"strong"},
-    {s:3, a:11, w:"partial"},
-    {s:4, a:3, w:"partial"},
-    {s:5, a:4, w:"strong"}, {s:5, a:10, w:"strong"},
-    {s:6, a:2, w:"partial"}, {s:6, a:9, w:"partial"},
-    {s:7, a:3, w:"partial"}, {s:7, a:11, w:"partial"},
-    {s:8, a:9, w:"partial"},
-    {s:9, a:2, w:"partial"},
-    {s:11, a:10, w:"strong"},
-    {s:12, a:6, w:"partial"}
+  // (AI & big data) are the gaps and get no line.
+  var CTE_LINKS = [
+    {s:0, a:"5", w:"strong"}, {s:0, a:"1", w:"partial"},
+    {s:1, a:"7", w:"strong"},
+    {s:2, a:"9", w:"strong"},
+    {s:3, a:"11", w:"partial"},
+    {s:4, a:"3", w:"partial"},
+    {s:5, a:"4", w:"strong"}, {s:5, a:"10", w:"strong"},
+    {s:6, a:"2", w:"partial"}, {s:6, a:"9", w:"partial"},
+    {s:7, a:"3", w:"partial"}, {s:7, a:"11", w:"partial"},
+    {s:8, a:"9", w:"partial"},
+    {s:9, a:"2", w:"partial"},
+    {s:11, a:"10", w:"strong"},
+    {s:12, a:"6", w:"partial"}
   ];
 
   // Full text of each anchor standard, quoted from the CDE ICT sector edition
@@ -410,11 +412,148 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
     "11.4":"Creative thinking"
   };
 
+  // The CSTA/CA CS side of the mapping: the seven core practices plus the
+  // five concept strands of the California 9-12 core.
+  var CSTA_ANCHORS = [
+    {id:"P1", disp:"P1", name:"Fostering an Inclusive Computing Culture", unit:"practice"},
+    {id:"P2", disp:"P2", name:"Collaborating Around Computing", unit:"practice"},
+    {id:"P3", disp:"P3", name:"Recognizing &amp; Defining Computational Problems", unit:"practice"},
+    {id:"P4", disp:"P4", name:"Developing &amp; Using Abstractions", unit:"practice"},
+    {id:"P5", disp:"P5", name:"Creating Computational Artifacts", unit:"practice"},
+    {id:"P6", disp:"P6", name:"Testing &amp; Refining Computational Artifacts", unit:"practice"},
+    {id:"P7", disp:"P7", name:"Communicating About Computing", unit:"practice"},
+    {id:"CS", disp:"CS", name:"Computing Systems", unit:"strand"},
+    {id:"NI", disp:"NI", name:"Networks &amp; the Internet", unit:"strand"},
+    {id:"DA", disp:"DA", name:"Data &amp; Analysis", unit:"strand"},
+    {id:"AP", disp:"AP", name:"Algorithms &amp; Programming", unit:"strand"},
+    {id:"IC", disp:"IC", name:"Impacts of Computing", unit:"strand"}
+  ];
+
+  // Skills with no entry here (motivation, curiosity, environmental
+  // stewardship) are the CS-side gaps; note they flip against the CTE map.
+  var CSTA_LINKS = [
+    {s:0, a:"P3", w:"strong"}, {s:0, a:"P4", w:"strong"},
+    {s:1, a:"P6", w:"partial"},
+    {s:2, a:"P2", w:"partial"}, {s:2, a:"P7", w:"partial"},
+    {s:3, a:"P5", w:"strong"},
+    {s:5, a:"CS", w:"strong"}, {s:5, a:"AP", w:"strong"},
+    {s:6, a:"P1", w:"strong"},
+    {s:8, a:"P2", w:"partial"},
+    {s:9, a:"P1", w:"partial"},
+    {s:10, a:"DA", w:"strong"},
+    {s:11, a:"NI", w:"strong"}
+  ];
+
+  // Practice statements quoted from the K-12 Computer Science Framework
+  // (end-of-grade-12 expectations); strand standards quoted from the 2018
+  // California CS standards, 9-12 core.
+  var PRACTICE_DESC = "One of the seven core practices attached to every California CS standard. By the end of Grade 12, students should be able to:";
+  var CSTA_DETAILS = {
+    P1: {desc: PRACTICE_DESC, subs:[
+      {n:"1.1", t:"Include the unique perspectives of others and reflect on one's own perspectives when designing and developing computational products."},
+      {n:"1.2", t:"Address the needs of diverse end users during the design process to produce artifacts with broad accessibility and usability."},
+      {n:"1.3", t:"Employ self- and peer-advocacy to address bias in interactions, product design, and development methods."}
+    ]},
+    P2: {desc: PRACTICE_DESC, subs:[
+      {n:"2.1", t:"Cultivate working relationships with individuals possessing diverse perspectives, skills, and personalities."},
+      {n:"2.2", t:"Create team norms, expectations, and equitable workloads to increase efficiency and effectiveness."},
+      {n:"2.3", t:"Solicit and incorporate feedback from, and provide constructive feedback to, team members and other stakeholders."},
+      {n:"2.4", t:"Evaluate and select technological tools that can be used to collaborate on a project."}
+    ]},
+    P3: {desc: PRACTICE_DESC, subs:[
+      {n:"3.1", t:"Identify complex, interdisciplinary, real-world problems that can be solved computationally."},
+      {n:"3.2", t:"Decompose complex real-world problems into manageable subproblems that could integrate existing solutions or procedures."},
+      {n:"3.3", t:"Evaluate whether it is appropriate and feasible to solve a problem computationally."}
+    ]},
+    P4: {desc: PRACTICE_DESC, subs:[
+      {n:"4.1", t:"Extract common features from a set of interrelated processes or complex phenomena."},
+      {n:"4.2", t:"Evaluate existing technological functionalities and incorporate them into new designs."},
+      {n:"4.3", t:"Create modules and develop points of interaction that can apply to multiple situations and reduce complexity."},
+      {n:"4.4", t:"Model phenomena and processes and simulate systems to understand and evaluate potential outcomes."}
+    ]},
+    P5: {desc: PRACTICE_DESC, subs:[
+      {n:"5.1", t:"Plan the development of a computational artifact using an iterative process that includes reflection on and modification of the plan, taking into account key features, time and resource constraints, and user expectations."},
+      {n:"5.2", t:"Create a computational artifact for practical intent, personal expression, or to address a societal issue."},
+      {n:"5.3", t:"Modify an existing artifact to improve or customize it."}
+    ]},
+    P6: {desc: PRACTICE_DESC, subs:[
+      {n:"6.1", t:"Systematically test computational artifacts by considering all scenarios and using test cases."},
+      {n:"6.2", t:"Identify and fix errors using a systematic process."},
+      {n:"6.3", t:"Evaluate and refine a computational artifact multiple times to enhance its performance, reliability, usability, and accessibility."}
+    ]},
+    P7: {desc: PRACTICE_DESC, subs:[
+      {n:"7.1", t:"Select, organize, and interpret large data sets from multiple sources to support a claim."},
+      {n:"7.2", t:"Describe, justify, and document computational processes and solutions using appropriate terminology consistent with the intended audience and purpose."},
+      {n:"7.3", t:"Articulate ideas responsibly by observing intellectual property rights and giving appropriate attribution."}
+    ]},
+    CS: {desc:"California's three 9-12 core standards for Computing Systems:", subs:[
+      {n:"9-12.CS.1", t:"Describe ways in which abstractions hide the underlying implementation details of computing systems to simplify user experiences."},
+      {n:"9-12.CS.2", t:"Compare levels of abstraction and interactions between application software, system software, and hardware."},
+      {n:"9-12.CS.3", t:"Develop guidelines that convey systematic troubleshooting strategies that others can use to identify and fix errors."}
+    ]},
+    NI: {desc:"California's four 9-12 core standards for Networks &amp; the Internet:", subs:[
+      {n:"9-12.NI.4", t:"Describe issues that impact network functionality."},
+      {n:"9-12.NI.5", t:"Describe the design characteristics of the internet."},
+      {n:"9-12.NI.6", t:"Compare and contrast security measures to address various security threats."},
+      {n:"9-12.NI.7", t:"Compare and contrast cryptographic techniques to model the secure transmission of information."}
+    ]},
+    DA: {desc:"California's four 9-12 core standards for Data &amp; Analysis. The specialty tier goes further and names artificial intelligence outright (9-12S.AP.10: \"Describe how artificial intelligence drives many software and physical systems\").", subs:[
+      {n:"9-12.DA.8", t:"Translate between different representations of data abstractions of real-world phenomena, such as characters, numbers, and images."},
+      {n:"9-12.DA.9", t:"Describe tradeoffs associated with how data elements are organized and stored."},
+      {n:"9-12.DA.10", t:"Create data visualizations to help others better understand real-world phenomena."},
+      {n:"9-12.DA.11", t:"Refine computational models to better represent the relationships among different elements of data collected from a phenomenon or process."}
+    ]},
+    AP: {desc:"California's eleven 9-12 core standards for Algorithms &amp; Programming:", subs:[
+      {n:"9-12.AP.12", t:"Design algorithms to solve computational problems using a combination of original and existing algorithms."},
+      {n:"9-12.AP.13", t:"Create more generalized computational solutions using collections instead of repeatedly using simple variables."},
+      {n:"9-12.AP.14", t:"Justify the selection of specific control structures by identifying tradeoffs associated with implementation, readability, and performance."},
+      {n:"9-12.AP.15", t:"Iteratively design and develop computational artifacts for practical intent, personal expression, or to address a societal issue by using events to initiate instructions."},
+      {n:"9-12.AP.16", t:"Decompose problems into smaller subproblems through systematic analysis, using constructs such as procedures, modules, and/or classes."},
+      {n:"9-12.AP.17", t:"Create computational artifacts using modular design."},
+      {n:"9-12.AP.18", t:"Systematically design programs for broad audiences by incorporating feedback from users."},
+      {n:"9-12.AP.19", t:"Explain the limitations of licenses that restrict use of computational artifacts when using resources such as libraries."},
+      {n:"9-12.AP.20", t:"Iteratively evaluate and refine a computational artifact to enhance its performance, reliability, usability, and accessibility."},
+      {n:"9-12.AP.21", t:"Design and develop computational artifacts working in team roles using collaborative tools."},
+      {n:"9-12.AP.22", t:"Document decisions made during the design process using text, graphics, presentations, and/or demonstrations in the development of complex programs."}
+    ]},
+    IC: {desc:"California's eight 9-12 core standards for Impacts of Computing, the ethics wing of the document:", subs:[
+      {n:"9-12.IC.23", t:"Evaluate the ways computing impacts personal, ethical, social, economic, and cultural practices."},
+      {n:"9-12.IC.24", t:"Identify impacts of bias and equity deficit on design and implementation of computational artifacts and apply appropriate processes for evaluating issues of bias."},
+      {n:"9-12.IC.25", t:"Demonstrate ways a given algorithm applies to problems across disciplines."},
+      {n:"9-12.IC.26", t:"Study, discuss, and think critically about the potential impacts and implications of emerging technologies on larger social, economic, and political structures, with evidence from credible sources."},
+      {n:"9-12.IC.27", t:"Use collaboration tools and methods to increase connectivity with people of different cultures and careers."},
+      {n:"9-12.IC.28", t:"Explain the beneficial and harmful effects that intellectual property laws can have on innovation."},
+      {n:"9-12.IC.29", t:"Explain the privacy concerns related to the collection and generation of data through automated processes."},
+      {n:"9-12.IC.30", t:"Evaluate the social and economic implications of privacy in the context of safety, law, or ethics."}
+    ]}
+  };
+
+  var CSTA_COVERED = {
+    "1.1":"Empathy & active listening",
+    "1.2":"Service orientation",
+    "2.2":"Talent management",
+    "2.3":"Empathy & active listening",
+    "6.3":"Resilience & flexibility",
+    "9-12.NI.6":"Networks & cybersecurity",
+    "9-12.NI.7":"Networks & cybersecurity",
+    "9-12.DA.11":"AI & big data",
+    "9-12.AP.15":"Creative thinking",
+    "9-12.AP.18":"Service orientation",
+    "9-12.AP.21":"Leadership & social influence"
+  };
+
+  // Everything a match-up view needs, keyed by view name.
+  var MATCH_VIEWS = {
+    match: {anchors: CTE_ANCHORS, links: CTE_LINKS, details: ANCHOR_DETAILS, covered: COVERED, rightTitle: "CTE anchor standards"},
+    csta: {anchors: CSTA_ANCHORS, links: CSTA_LINKS, details: CSTA_DETAILS, covered: CSTA_COVERED, rightTitle: "CS practices &amp; concept strands"}
+  };
+
   var CAPTIONS = {
     now: "<b>AI is not on this list.</b> The skills employers call most essential right now are mostly human ones, ranked by the share of employers naming each a core skill.",
     growing: "<b>Now AI leaps to number one.</b> But the human skills do not fall away. Creativity, resilience, curiosity, and leadership all stay near the top of what is growing fastest.",
     cte: "<b>Most of this list was written into California's standards in 2013.</b> Coverage rates how fully each anchor standard covers the skill. The gaps are honest too: creative thinking is thin, and AI was not yet on anyone's radar.",
-    match: "<b>Thirteen employer skills, eleven anchor standards.</b> Solid lines are direct matches, dashed lines partial ones. The one skill with no line, and the one standard nothing points to, tell their own story."
+    match: "<b>Thirteen employer skills, eleven anchor standards.</b> Solid lines are direct matches, dashed lines partial ones. The one skill with no line, and the one standard nothing points to, tell their own story.",
+    csta: "<b>Same thirteen skills, different document.</b> Against California's CS standards, the seven core practices and five concept strands, the gaps flip: AI &amp; big data finds a strong home and creative thinking becomes a whole practice, while motivation, curiosity, and environmental stewardship dangle. Once again, nothing points at the ethics strand."
   };
 
   var chart = document.getElementById("wsw-chart");
@@ -440,9 +579,10 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
       });
       return html;
     }
-    if(view === "match"){
+    var mcfg = MATCH_VIEWS[view];
+    if(mcfg){
       var linked = {};
-      MATCH_LINKS.forEach(function(l){ linked[l.s] = true; });
+      mcfg.links.forEach(function(l){ linked[l.s] = true; });
       html += '<div class="wsw-match" id="wsw-match">'
         + '<svg class="wsw-match-svg" preserveAspectRatio="none"></svg>'
         + '<div class="wsw-mcol left"><div class="wsw-mcol-h">WEF skills (2025 &amp; 2030)</div>';
@@ -450,14 +590,14 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
         html += '<div class="wsw-mitem' + (linked[i] ? '' : ' is-gap') + '" data-skill="' + i + '">'
           + d.name + ' <i class="dot ' + d.cls + '"></i></div>';
       });
-      html += '</div><div class="wsw-mcol right"><div class="wsw-mcol-h">CTE anchor standards</div>';
-      ANCHORS.forEach(function(a){
-        html += '<div class="wsw-mitem" data-anchor="' + a.n + '" role="button" tabindex="0" aria-expanded="false">'
-          + '<span><span class="wsw-mnum">' + a.n + '.0</span>' + a.name + '</span>'
+      html += '</div><div class="wsw-mcol right"><div class="wsw-mcol-h">' + mcfg.rightTitle + '</div>';
+      mcfg.anchors.forEach(function(a){
+        html += '<div class="wsw-mitem" data-anchor="' + a.id + '" role="button" tabindex="0" aria-expanded="false">'
+          + '<span><span class="wsw-mnum">' + a.disp + '</span>' + a.name + '</span>'
           + '<span class="wsw-minfo" aria-hidden="true">+</span></div>';
       });
       html += '</div></div>'
-        + '<p class="wsw-mhint">Hover or tap an anchor standard to read its full text and see which sub-standards the employer skills land on.</p>'
+        + '<p class="wsw-mhint">Hover or tap an item on the right to read its full text and see where the employer skills land.</p>'
         + '<div class="wsw-detail" id="wsw-detail"></div>';
       return html;
     }
@@ -497,15 +637,16 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
   // Draw the match-up lines between skill chips and standard chips. Positions
   // come from the rendered layout, so this runs after render and on resize.
   function drawMatchLines(){
+    var mcfg = MATCH_VIEWS[currentView];
     var box = document.getElementById("wsw-match");
-    if(!box) return;
+    if(!mcfg || !box) return;
     var svg = box.querySelector(".wsw-match-svg");
     var br = box.getBoundingClientRect();
     if(br.width === 0) return;
     svg.setAttribute("viewBox", "0 0 " + br.width + " " + br.height);
     var COLORS = {human:"#0E7C86", tech:"#9AA7B2", ai:"#E0A100"};
     var paths = "";
-    MATCH_LINKS.forEach(function(l){
+    mcfg.links.forEach(function(l){
       var s = box.querySelector('.wsw-mitem[data-skill="' + l.s + '"]');
       var t = box.querySelector('.wsw-mitem[data-anchor="' + l.a + '"]');
       if(!s || !t) return;
@@ -521,33 +662,36 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
     if(shownAnchor !== null) highlightLines(shownAnchor);
   }
 
-  // Emphasize the lines into one anchor standard; null restores all lines.
+  // Emphasize the lines into one right-side item; null restores all lines.
   function highlightLines(n){
     var box = document.getElementById("wsw-match");
     if(!box) return;
     Array.prototype.forEach.call(box.querySelectorAll(".wsw-match-svg path"), function(p){
       if(n === null){ p.style.opacity = ""; p.style.strokeWidth = ""; }
-      else if(parseInt(p.getAttribute("data-a"), 10) === n){ p.style.opacity = "1"; p.style.strokeWidth = "3"; }
+      else if(p.getAttribute("data-a") === n){ p.style.opacity = "1"; p.style.strokeWidth = "3"; }
       else { p.style.opacity = ".12"; p.style.strokeWidth = ""; }
     });
   }
 
-  function anchorMatches(n){
+  function anchorMatches(mcfg, n){
     var out = [];
-    MATCH_LINKS.forEach(function(l){
+    mcfg.links.forEach(function(l){
       if(l.a === n) out.push({name: CTE[l.s].name, cls: CTE[l.s].cls, w: l.w});
     });
     return out;
   }
 
   function showDetail(n, scroll){
+    var mcfg = MATCH_VIEWS[currentView];
     var panel = document.getElementById("wsw-detail");
     var box = document.getElementById("wsw-match");
-    var d = ANCHOR_DETAILS[n];
+    if(!mcfg || !panel || !box) return;
+    var d = mcfg.details[n];
     var a = null;
-    ANCHORS.forEach(function(x){ if(x.n === n) a = x; });
-    if(!panel || !box || !d || !a) return;
-    var matches = anchorMatches(n);
+    mcfg.anchors.forEach(function(x){ if(x.id === n) a = x; });
+    if(!d || !a) return;
+    var unit = a.unit || "standard";
+    var matches = anchorMatches(mcfg, n);
     var strongNames = [];
     matches.forEach(function(m){ if(m.w === "strong") strongNames.push(m.name); });
     var mhtml;
@@ -557,19 +701,19 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
         mhtml += '<span class="wsw-mtag ' + m.cls + '">' + m.name + ' (' + m.w + ')</span>';
       });
       if(strongNames.length){
-        mhtml += '<span class="wsw-mwhole">A strong match means the whole standard is '
-          + strongNames.join(" and ") + ": the description and every sub-standard below count toward it.</span>";
+        mhtml += '<span class="wsw-mwhole">A strong match means the whole ' + unit + ' is '
+          + strongNames.join(" and ") + ": the description and every item below count toward it.</span>";
       }
     } else {
       mhtml = "No skill on the WEF employer list points here.";
     }
-    var html = '<h4>' + n + '.0 ' + a.name + '</h4>'
+    var html = '<h4>' + a.disp + ' ' + a.name + '</h4>'
       + '<p class="wsw-detail-match">' + mhtml + '</p>'
       + '<p class="wsw-detail-desc' + (strongNames.length ? ' is-covered' : '') + '">' + d.desc + '</p>';
     if(d.subs.length){
       html += '<ul>';
       d.subs.forEach(function(s){
-        var cov = COVERED[s.n];
+        var cov = mcfg.covered[s.n];
         var cls = cov ? ' class="is-covered"' : (strongNames.length ? ' class="is-covered-whole"' : '');
         html += '<li' + cls + '><b>' + s.n + '</b>' + s.t
           + (cov ? '<span class="wsw-covlabel">' + cov + '</span>' : '') + '</li>';
@@ -581,7 +725,7 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
     shownAnchor = n;
     highlightLines(n);
     Array.prototype.forEach.call(box.querySelectorAll('.wsw-mitem[data-anchor]'), function(c){
-      var active = parseInt(c.getAttribute("data-anchor"), 10) === n;
+      var active = c.getAttribute("data-anchor") === n;
       c.classList.toggle("is-active", active);
       c.setAttribute("aria-expanded", active ? "true" : "false");
       var icon = c.querySelector(".wsw-minfo");
@@ -611,12 +755,12 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
   widget.addEventListener("mouseover", function(e){
     if(pinned !== null) return;
     var chip = e.target.closest(".wsw-mitem[data-anchor]");
-    if(chip) showDetail(parseInt(chip.getAttribute("data-anchor"), 10), false);
+    if(chip) showDetail(chip.getAttribute("data-anchor"), false);
   });
   widget.addEventListener("click", function(e){
     var chip = e.target.closest(".wsw-mitem[data-anchor]");
     if(!chip) return;
-    var n = parseInt(chip.getAttribute("data-anchor"), 10);
+    var n = chip.getAttribute("data-anchor");
     if(pinned === n){ pinned = null; hideDetail(); }
     else { pinned = n; showDetail(n, true); }
   });
@@ -647,11 +791,11 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
   }
 
   window.addEventListener("resize", function(){
-    if(currentView === "match") drawMatchLines();
+    if(MATCH_VIEWS[currentView]) drawMatchLines();
   });
   // Redraw once everything has loaded, in case late layout shifts moved the chips.
   window.addEventListener("load", function(){
-    if(currentView === "match") drawMatchLines();
+    if(MATCH_VIEWS[currentView]) drawMatchLines();
   });
 
   // Populate the print-only blocks once. The match-up view is screen-only:
@@ -689,7 +833,7 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
 
   // Deep-link support: #wef-skills-now / #wef-skills-growing / #wef-skills-cte
   // switch the widget to the right view on page load.
-  var hashViews = {"#wef-skills-now":"now", "#wef-skills-growing":"growing", "#wef-skills-cte":"cte", "#wef-skills-match":"match"};
+  var hashViews = {"#wef-skills-now":"now", "#wef-skills-growing":"growing", "#wef-skills-cte":"cte", "#wef-skills-match":"match", "#wef-skills-csta":"csta"};
   var view = hashViews[window.location.hash];
   if (view) {
     var btn = widget.querySelector('.wsw-btn[data-view="' + view + '"]');
@@ -706,6 +850,8 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
 California organizes career technical education into fifteen industry sectors: health science, construction, agriculture, and the one my courses live in, Information and Communication Technologies (ICT). Each sector defines pathway standards for its trade-specific skills. Underneath all of them, though, sit the same eleven **anchor standards**, adopted with the [CTE Model Curriculum Standards](https://www.cde.ca.gov/ci/ct/sf/ctemcstandards.asp) in 2013: the things California says every CTE student should learn no matter which sector they chose. Communicate. Plan a career. Solve problems. Take responsibility. Act ethically. Lead a team. And then Standard 11, the quiet radical of the group: demonstrate all of it through work-based learning and a portfolio of real work. That is project-based learning in all but name, written into a state document.
 
 The chart above matches those eleven anchors against the skills more than a thousand employers told the World Economic Forum they need most, the same data Part 1 was built on. Hover or tap any standard to read the state's own words.
+
+The second match-up uses a different document: California's [computer science standards](https://www.cde.ca.gov/be/st/ss/documents/csstandards.pdf), adopted in 2018 and adapted from the CSTA K-12 standards, the Computer Science Teachers Association framework that most states build their CS standards on. That document has two layers. The content standards are grouped into five concept strands, from Computing Systems to Impacts of Computing. Attached to every one of them are seven **core practices**, the ways students are expected to work: collaborating, communicating, creating, testing and refining. The practices are where the soft skills live, and the CSTA Match-up tab maps the employer list against both layers.
 
 ## The quiet irony
 
@@ -733,7 +879,7 @@ The soft skills are in there too, but they live in a different layer. Every stan
 - **Creating Computational Artifacts**: creative thinking, which the CTE anchors cover only thinly.
 - (**Testing and Refining** is at least a cousin of resilience: iterate, debug, try again.)
 
-Put the two documents side by side and the complementarity is striking. The CTE anchors name the human skills and miss AI; the CS standards name AI and the technical skills and carry the human ones as practices rather than headline outcomes. Neither document alone covers the employer list. The union covers all thirteen. I've seen this from the CS side already: my [*Little Brother* unit](/2026/06/14/little-brother.html) maps a novel onto the Impacts of Computing and Networking strands, eight and four standards respectively, over a third of the core reached through a story.
+Put the two documents side by side (the CSTA Match-up tab in the chart above draws this second mapping) and the complementarity is striking. The CTE anchors name the human skills and miss AI; the CS standards name AI and the technical skills and carry the human ones as practices rather than headline outcomes. Neither document alone covers the employer list. The union covers all thirteen. I've seen this from the CS side already: my [*Little Brother* unit](/2026/06/14/little-brother.html) maps a novel onto the Impacts of Computing and Networking strands, eight and four standards respectively, over a third of the core reached through a story.
 
 One more detail worth a smile: both documents insist on ethics. CTE anchor 8.0 and the CS core's eight Impacts of Computing standards (9-12.IC.23-30) are the two largest blocks of "soft" content in either document, and ethics appears nowhere on the employer survey at all. The standards writers put it there anyway. Good.
 
