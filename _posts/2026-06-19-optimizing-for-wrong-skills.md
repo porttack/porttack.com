@@ -9,15 +9,15 @@ excerpt: "How a generation of content-mastery optimization squeezed out the skil
 
 *Draft - not yet public*
 
-*I'm a CTE teacher. A generation of content-mastery optimization squeezed out the skills employers actually want. Project based learning, plus AI when appropriate, is the way back.*
+*I'm a CTE teacher. A generation of content-mastery optimization squeezed out the skills employers actually want. Project-based learning, plus AI when appropriate, is the way back.*
 
-Much of the conversation I hear about AI in school boils down to detecting cheating. That's hard, and while it is frequently necessary, it's the wrong fight. The deeper problem isn't that a student fooled me. It's cognitive offload: the student who skips the thinking is mostly cheating himself. It is like eating sugar instead of vegetables, the easy version feels fine now and starves the growth that matters later.
+Much of the conversation I hear about AI in school boils down to detecting cheating. That's hard, and while it is frequently necessary, it's the wrong fight. The deeper problem isn't that a student fooled me. It's cognitive offload: the student who skips the thinking is mostly cheating themselves. It is like eating sugar instead of vegetables, the easy version feels fine now and starves the growth that matters later.
 
 How do we wall the tool off? It is a fair question, but I don't think that's always the answer. Call it cognitive offload or call it cheating, it is a symptom. The real question is the one underneath: is focusing on content mastery alone the right thing?
 
 <!--more-->
 
-This is the tension. I'm a teacher. But I'm also an engineer thinking about a systems problem. On one side is content mastery, the standards and the codes, the material I can put on a test and measure cleanly. On the other side is creativity and the soft skills, the messy, human, hard-to-grade capacities that real work runs on. For most of the last two decades we have poured our energy into the first and quietly starved the second. AI did not create that imbalance. It just made it impossible to ignore, because the part of school we optimized hardest is exactly the part a machine now does for free. But free has a cost. Students still have to learn the fundamentals, and the struggle of learning them together is part of what turns a class into a community. Neither is something I want to hand to a machine.
+This is the tension. I'm a teacher. But I'm also an engineer thinking about a systems problem. On one side is content mastery, the standards and the codes, the material I can put on a test and measure cleanly. On the other side is creativity and the soft skills, the messy, human, hard-to-grade capacities that real work runs on. For most of the last two decades we have poured our energy into the first and quietly starved the second. AI did not create that imbalance. It just made it impossible to ignore, because the part of school we optimized hardest is exactly the part a machine now does for free: the recall of content and the routine production of well-formed answers. But free has a cost. Students still have to learn the fundamentals, and the struggle of learning them together is part of what turns a class into a community. Neither is something I want to hand to a machine.
 
 ## How we got here: No Child Left Behind
 
@@ -37,7 +37,7 @@ A standardized test can measure analytical thinking, the skill at the top of tha
 
 Then there is the finding that ties the whole argument together. The fastest-growing skill employers report wanting by 2030 is fluency with AI and data. You might expect that to come at the expense of the human skills. It does the opposite. The report's own reading is that as AI spreads, demand for deeply human skills like creative thinking rises rather than falls. The machine takes the routine, and the premium shifts to the judgment, the design, and the collaboration that sit on top of it.
 
-Analytical thinking tops the list today, but it isn't what's growing. By 2030 it <a href="#wef-skills-widget" class="wsw-jump" data-view="growing">drops to #9</a>, and the skills climbing past it are the human ones we leave the least room for.
+Analytical thinking tops the list today, and nothing suggests it stops mattering. But it isn't where the growth is. On WEF's ranking of the skills growing fastest by 2030, it <a href="#wef-skills-widget" class="wsw-jump" data-view="growing">comes in ninth</a>, and the skills growing faster are the human ones we leave the least room for.
 
 {% raw %}
 <!-- WEF skills toggle widget. Self-contained: paste inline into a post, or save in _includes and reference it. -->
@@ -99,7 +99,8 @@ Analytical thinking tops the list today, but it isn't what's growing. By 2030 it
 #wef-skills-widget .wsw-rank{font-size:.8rem; font-weight:700; color:var(--sub); text-align:center;}
 #wef-skills-widget .wsw-label{font-size:.84rem; text-align:right; color:var(--ink);}
 #wef-skills-widget .wsw-track{background:#F1F4F6; border-radius:5px; height:22px; overflow:hidden;}
-#wef-skills-widget .wsw-bar{height:100%; width:0; border-radius:5px; transition:width .55s cubic-bezier(.22,.61,.36,1), background-color .3s ease;}
+#wef-skills-widget .wsw-bar{height:100%; width:0; border-radius:5px; transition:width .55s cubic-bezier(.22,.61,.36,1), background-color .3s ease; position:relative;}
+#wef-skills-widget .wsw-bar-rank{position:absolute; left:4px; top:50%; transform:translateY(-50%); font-size:.7rem; font-weight:700; color:#fff; white-space:nowrap; text-shadow:0 1px 2px rgba(0,0,0,.3);}
 #wef-skills-widget .wsw-bar.human{background:var(--human);}
 #wef-skills-widget .wsw-bar.tech{background:var(--tech);}
 #wef-skills-widget .wsw-bar.ai{background:var(--ai);}
@@ -153,17 +154,18 @@ Analytical thinking tops the list today, but it isn't what's growing. By 2030 it
   ];
 
   // Fastest-growing skills to 2030, WEF's ranked order (Fig. 3.4). Shown as rank, not %.
+  // rank2025 tracks where each skill ranked in the "today" view for comparison.
   var GROWING = [
-    {name:"AI & big data", cls:"ai"},
-    {name:"Networks & cybersecurity", cls:"tech"},
-    {name:"Technological literacy", cls:"tech"},
-    {name:"Creative thinking", cls:"human"},
-    {name:"Resilience, flexibility & agility", cls:"human"},
-    {name:"Curiosity & lifelong learning", cls:"human"},
-    {name:"Leadership & social influence", cls:"human"},
-    {name:"Talent management", cls:"human"},
-    {name:"Analytical thinking", cls:"tech"},
-    {name:"Environmental stewardship", cls:"tech"}
+    {name:"AI & big data", cls:"ai", rank2025: null},
+    {name:"Networks & cybersecurity", cls:"tech", rank2025: null},
+    {name:"Technological literacy", cls:"tech", rank2025: 6},
+    {name:"Creative thinking", cls:"human", rank2025: 4},
+    {name:"Resilience, flexibility & agility", cls:"human", rank2025: 2},
+    {name:"Curiosity & lifelong learning", cls:"human", rank2025: 8},
+    {name:"Leadership & social influence", cls:"human", rank2025: 3},
+    {name:"Talent management", cls:"human", rank2025: 9},
+    {name:"Analytical thinking", cls:"tech", rank2025: 1},
+    {name:"Environmental stewardship", cls:"tech", rank2025: null}
   ];
 
   var CAPTIONS = {
@@ -191,10 +193,16 @@ Analytical thinking tops the list today, but it isn't what's growing. By 2030 it
         valText = "";
       }
       var barAttr = staticWidth ? 'style="width:' + width + '%"' : 'data-w="' + width + '"';
+      // For the 2030 view, show each skill's 2025 rank inside the bar.
+      var rankInner = "";
+      if(view === "growing" && d.rank2025 !== undefined) {
+        var rankText = d.rank2025 ? d.rank2025 : "—";
+        rankInner = '<span class="wsw-bar-rank">' + rankText + '</span>';
+      }
       html += '<div class="wsw-row">'
         + '<div class="wsw-rank">' + (i + 1) + '</div>'
         + '<div class="wsw-label">' + d.name + '</div>'
-        + '<div class="wsw-track"><div class="wsw-bar ' + d.cls + '" ' + barAttr + '></div></div>'
+        + '<div class="wsw-track"><div class="wsw-bar ' + d.cls + '" ' + barAttr + '>' + rankInner + '</div></div>'
         + '<div class="wsw-val">' + valText + '</div>'
         + '</div>';
     });
@@ -282,7 +290,7 @@ That is the whole shape of it. Protect the cognitive struggle while students lea
 
 ## The real inequity
 
-We usually argue equity at the level of grading: who gets measured fairly, who clears the bar, whether a mark reflects what a student actually knows. But that keeps the fight inside the frame I'm trying to leave. The deeper inequity isn't how we score the soft skills. It's that a content-only mastery-based curriculum never teaches them, and the students who pay the highest price are the ones who don't pick them up at home or in some other opt-in program. Creativity, collaboration, knowing how to carry yourself and work with other people: school is the one place every kid can get them. *Withholding them is the inequity.* How we grade matters, but it's a much smaller question than the one we've let it stand in for.
+We usually argue equity at the level of grading: who gets measured fairly, who clears the bar, whether a mark reflects what a student actually knows. But that keeps the fight inside the frame I'm trying to leave. The deeper inequity isn't how we score the soft skills. It's that a content-only curriculum never teaches them, and the students who pay the highest price are the ones who don't pick them up at home or in some other opt-in program. Creativity, collaboration, knowing how to carry yourself and work with other people: school is the one place every kid can get them. *Withholding them is the inequity.* How we grade matters, but it's a much smaller question than the one we've let it stand in for.
 
 I'm not the only one circling this. A colleague recently had some of us watch [Most Likely to Succeed](https://en.wikipedia.org/wiki/Most_Likely_to_Succeed_(film)), the 2015 documentary that follows ninth graders at High Tech High, a San Diego charter school built around project-based learning. It argues that the school most of us grew up in was designed more than a century ago to produce reliable, standardized output, and that the economy which rewarded that output is gone. It's a provocation more than a prescription, but it names the thing I keep coming back to. We are optimizing for the wrong skills.
 
@@ -290,11 +298,13 @@ There's a larger version of this argument, about what kind of citizens, leaders,
 
 ## What I'm really saying
 
-The whole argument in a breath. We built school around what a test can measure, and spent twenty years getting better at it. The world now pays most for what it can't. What we worked hardest to teach is exactly what a machine now does for free. Projects are where students apply the fundamentals and build the human skills a machine can't do for them.
+The whole argument in a breath. We built school around what a test can measure, and spent twenty years getting better at it. The world now pays most for what it can't. The content recall we worked hardest to test is exactly what a machine now produces for free. Projects are where students apply the fundamentals and build the human skills a machine can't do for them.
 
 None of this is a call for less rigor. It's a call to stop optimizing for what's easiest to score. What I want is not complicated: classrooms where students make things together, where creativity and collaboration are the work itself and not the reward at the end of the unit.[^codehs] Where the struggle of learning the fundamentals is something students do alongside each other, which is its own kind of community and its own reason not to hand that part to a machine. And I want schools willing to put project-based learning at the center of how kids learn, not at the edges.
 
 A test was never built to see the skills that matter most: creating, working with other people, and using the right tools well once the fundamentals are real. These are the soft and real-world skills today's work runs on. PBL is a good way to deliver them. They are the right skills our future leaders and citizens need.
+
+There is a strange piece of hope buried in California's own standards. The CTE anchor standards already name nearly every skill on the employer list: teamwork, flexibility, problem solving, real projects and portfolios. They have been sitting in the elective wing of the school, unmeasured and mostly unnoticed. That is [the next piece](/2026/07/08/hope-in-the-standards.html). After that comes [the practice](/2026/07/08/run-the-classroom-like-a-studio.html): what it looks like to run a classroom on industry's own tools.
 
 ---
 
