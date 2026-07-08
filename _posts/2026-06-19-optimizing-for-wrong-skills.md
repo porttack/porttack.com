@@ -88,7 +88,9 @@ Analytical thinking tops the list today, and nothing suggests it stops mattering
 }
 #wef-skills-widget *{box-sizing:border-box;}
 #wef-skills-widget .wsw-head{display:flex; flex-wrap:wrap; gap:.75rem 1rem; align-items:center; justify-content:space-between; margin-bottom:.35rem;}
-#wef-skills-widget .wsw-title{font-size:1.18rem; font-weight:700; margin:0;}
+/* Match the site's in-content H2 (minima: 2rem, weight 400, 1.75rem <=800px). */
+#wef-skills-widget .wsw-title{font-size:2rem; font-weight:400; margin:0;}
+@media (max-width:800px){#wef-skills-widget .wsw-title{font-size:1.75rem;}}
 #wef-skills-widget .wsw-toggle{display:inline-flex; background:#F1F4F6; border-radius:999px; padding:3px;}
 #wef-skills-widget .wsw-btn{
   border:0; background:transparent; cursor:pointer; font:inherit; font-size:.82rem; font-weight:600;

@@ -11,8 +11,6 @@ excerpt: "Part 2: California's CTE anchor standards already name nearly every sk
 
 {% include series-toc.html part=2 %}
 
-*Part 2 of a series. [Part 1](/2026/06/19/optimizing-for-wrong-skills.html) argued that a generation of content-mastery optimization squeezed out many of the skills employers actually want. This piece points out that in 2013 California did put many of these skills into CTE (Career Technical Education) Anchor Standards.*
-
 <!--more-->
 
 {% raw %}
@@ -23,7 +21,7 @@ excerpt: "Part 2: California's CTE anchor standards already name nearly every sk
 <a id="wef-skills-match" aria-hidden="true" tabindex="-1" style="display:block;height:0;overflow:hidden;"></a>
 <div id="wef-skills-widget">
   <div class="wsw-head">
-    <h3 class="wsw-title">What employers say they need</h3>
+    <h3 class="wsw-title">Interactive Chart: Skills &harr; Standards</h3>
     <div class="wsw-toggle" role="tablist" aria-label="Choose a view">
       <button class="wsw-btn" data-view="now" role="tab" aria-selected="false">Most essential today</button>
       <button class="wsw-btn" data-view="growing" role="tab" aria-selected="false">Growing fastest by 2030</button>
@@ -77,7 +75,9 @@ excerpt: "Part 2: California's CTE anchor standards already name nearly every sk
 }
 #wef-skills-widget *{box-sizing:border-box;}
 #wef-skills-widget .wsw-head{display:flex; flex-wrap:wrap; gap:.75rem 1rem; align-items:center; justify-content:space-between; margin-bottom:.35rem;}
-#wef-skills-widget .wsw-title{font-size:1.18rem; font-weight:700; margin:0;}
+/* Match the site's in-content H2 (minima: 2rem, weight 400, 1.75rem <=800px). */
+#wef-skills-widget .wsw-title{font-size:2rem; font-weight:400; margin:0;}
+@media (max-width:800px){#wef-skills-widget .wsw-title{font-size:1.75rem;}}
 #wef-skills-widget .wsw-toggle{display:inline-flex; flex-wrap:wrap; background:#F1F4F6; border-radius:999px; padding:3px;}
 #wef-skills-widget .wsw-btn{
   border:0; background:transparent; cursor:pointer; font:inherit; font-size:.82rem; font-weight:600;
@@ -698,6 +698,8 @@ excerpt: "Part 2: California's CTE anchor standards already name nearly every sk
 })();
 </script>
 {% endraw %}
+
+*Part 2 of a series. [Part 1](/2026/06/19/optimizing-for-wrong-skills.html) argued that a generation of content-mastery optimization squeezed out many of the skills employers actually want. This piece points out that in 2013 California did put many of these skills into CTE (Career Technical Education) Anchor Standards.*
 
 These are the skills more than a thousand employers told the World Economic Forum they need, matched line by line against California's CTE anchor standards. Hover or tap a standard to read what the state actually wrote.
 
