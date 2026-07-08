@@ -1,0 +1,156 @@
+{
+  "source": "Computer Science Standards for California Public Schools (adopted 2018), 9-12 core, all 30 standards.",
+  "url": "https://www.cde.ca.gov/be/st/ss/documents/csstandards.pdf",
+  "strands": [
+    {
+      "id": "CS",
+      "name": "Computing Systems",
+      "standards": [
+        {
+          "n": "9-12.CS.1",
+          "text": "Describe ways in which abstractions hide the underlying implementation details of computing systems to simplify user experiences."
+        },
+        {
+          "n": "9-12.CS.2",
+          "text": "Compare levels of abstraction and interactions between application software, system software, and hardware."
+        },
+        {
+          "n": "9-12.CS.3",
+          "text": "Develop guidelines that convey systematic troubleshooting strategies that others can use to identify and fix errors."
+        }
+      ]
+    },
+    {
+      "id": "NI",
+      "name": "Networks & the Internet",
+      "standards": [
+        {
+          "n": "9-12.NI.4",
+          "text": "Describe issues that impact network functionality."
+        },
+        {
+          "n": "9-12.NI.5",
+          "text": "Describe the design characteristics of the internet."
+        },
+        {
+          "n": "9-12.NI.6",
+          "text": "Compare and contrast security measures to address various security threats."
+        },
+        {
+          "n": "9-12.NI.7",
+          "text": "Compare and contrast cryptographic techniques to model the secure transmission of information."
+        }
+      ]
+    },
+    {
+      "id": "DA",
+      "name": "Data & Analysis",
+      "standards": [
+        {
+          "n": "9-12.DA.8",
+          "text": "Translate between different representations of data abstractions of real-world phenomena, such as characters, numbers, and images."
+        },
+        {
+          "n": "9-12.DA.9",
+          "text": "Describe tradeoffs associated with how data elements are organized and stored."
+        },
+        {
+          "n": "9-12.DA.10",
+          "text": "Create data visualizations to help others better understand real-world phenomena."
+        },
+        {
+          "n": "9-12.DA.11",
+          "text": "Refine computational models to better represent the relationships among different elements of data collected from a phenomenon or process."
+        }
+      ]
+    },
+    {
+      "id": "AP",
+      "name": "Algorithms & Programming",
+      "standards": [
+        {
+          "n": "9-12.AP.12",
+          "text": "Design algorithms to solve computational problems using a combination of original and existing algorithms."
+        },
+        {
+          "n": "9-12.AP.13",
+          "text": "Create more generalized computational solutions using collections instead of repeatedly using simple variables."
+        },
+        {
+          "n": "9-12.AP.14",
+          "text": "Justify the selection of specific control structures by identifying tradeoffs associated with implementation, readability, and performance."
+        },
+        {
+          "n": "9-12.AP.15",
+          "text": "Iteratively design and develop computational artifacts for practical intent, personal expression, or to address a societal issue by using events to initiate instructions."
+        },
+        {
+          "n": "9-12.AP.16",
+          "text": "Decompose problems into smaller subproblems through systematic analysis, using constructs such as procedures, modules, and/or classes."
+        },
+        {
+          "n": "9-12.AP.17",
+          "text": "Create computational artifacts using modular design."
+        },
+        {
+          "n": "9-12.AP.18",
+          "text": "Systematically design programs for broad audiences by incorporating feedback from users."
+        },
+        {
+          "n": "9-12.AP.19",
+          "text": "Explain the limitations of licenses that restrict use of computational artifacts when using resources such as libraries."
+        },
+        {
+          "n": "9-12.AP.20",
+          "text": "Iteratively evaluate and refine a computational artifact to enhance its performance, reliability, usability, and accessibility."
+        },
+        {
+          "n": "9-12.AP.21",
+          "text": "Design and develop computational artifacts working in team roles using collaborative tools."
+        },
+        {
+          "n": "9-12.AP.22",
+          "text": "Document decisions made during the design process using text, graphics, presentations, and/or demonstrations in the development of complex programs."
+        }
+      ]
+    },
+    {
+      "id": "IC",
+      "name": "Impacts of Computing",
+      "standards": [
+        {
+          "n": "9-12.IC.23",
+          "text": "Evaluate the ways computing impacts personal, ethical, social, economic, and cultural practices."
+        },
+        {
+          "n": "9-12.IC.24",
+          "text": "Identify impacts of bias and equity deficit on design and implementation of computational artifacts and apply appropriate processes for evaluating issues of bias."
+        },
+        {
+          "n": "9-12.IC.25",
+          "text": "Demonstrate ways a given algorithm applies to problems across disciplines."
+        },
+        {
+          "n": "9-12.IC.26",
+          "text": "Study, discuss, and think critically about the potential impacts and implications of emerging technologies on larger social, economic, and political structures, with evidence from credible sources."
+        },
+        {
+          "n": "9-12.IC.27",
+          "text": "Use collaboration tools and methods to increase connectivity with people of different cultures and careers."
+        },
+        {
+          "n": "9-12.IC.28",
+          "text": "Explain the beneficial and harmful effects that intellectual property laws can have on innovation."
+        },
+        {
+          "n": "9-12.IC.29",
+          "text": "Explain the privacy concerns related to the collection and generation of data through automated processes."
+        },
+        {
+          "n": "9-12.IC.30",
+          "text": "Evaluate the social and economic implications of privacy in the context of safety, law, or ethics."
+        }
+      ]
+    }
+  ]
+}

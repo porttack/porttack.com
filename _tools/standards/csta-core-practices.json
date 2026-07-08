@@ -1,0 +1,140 @@
+{
+  "source": "K-12 Computer Science Framework (2016) practice statements, end-of-grade-12 expectations, as used by the CSTA 2017 standards and the 2018 California CS standards.",
+  "url": "https://k12cs.org/wp-content/uploads/2016/09/K%E2%80%9312-Computer-Science-Framework.pdf",
+  "practices": [
+    {
+      "id": "P1",
+      "name": "Fostering an Inclusive Computing Culture",
+      "statements": [
+        {
+          "n": "1.1",
+          "text": "Include the unique perspectives of others and reflect on one's own perspectives when designing and developing computational products."
+        },
+        {
+          "n": "1.2",
+          "text": "Address the needs of diverse end users during the design process to produce artifacts with broad accessibility and usability."
+        },
+        {
+          "n": "1.3",
+          "text": "Employ self- and peer-advocacy to address bias in interactions, product design, and development methods."
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "name": "Collaborating Around Computing",
+      "statements": [
+        {
+          "n": "2.1",
+          "text": "Cultivate working relationships with individuals possessing diverse perspectives, skills, and personalities."
+        },
+        {
+          "n": "2.2",
+          "text": "Create team norms, expectations, and equitable workloads to increase efficiency and effectiveness."
+        },
+        {
+          "n": "2.3",
+          "text": "Solicit and incorporate feedback from, and provide constructive feedback to, team members and other stakeholders."
+        },
+        {
+          "n": "2.4",
+          "text": "Evaluate and select technological tools that can be used to collaborate on a project."
+        }
+      ]
+    },
+    {
+      "id": "P3",
+      "name": "Recognizing & Defining Computational Problems",
+      "statements": [
+        {
+          "n": "3.1",
+          "text": "Identify complex, interdisciplinary, real-world problems that can be solved computationally."
+        },
+        {
+          "n": "3.2",
+          "text": "Decompose complex real-world problems into manageable subproblems that could integrate existing solutions or procedures."
+        },
+        {
+          "n": "3.3",
+          "text": "Evaluate whether it is appropriate and feasible to solve a problem computationally."
+        }
+      ]
+    },
+    {
+      "id": "P4",
+      "name": "Developing & Using Abstractions",
+      "statements": [
+        {
+          "n": "4.1",
+          "text": "Extract common features from a set of interrelated processes or complex phenomena."
+        },
+        {
+          "n": "4.2",
+          "text": "Evaluate existing technological functionalities and incorporate them into new designs."
+        },
+        {
+          "n": "4.3",
+          "text": "Create modules and develop points of interaction that can apply to multiple situations and reduce complexity."
+        },
+        {
+          "n": "4.4",
+          "text": "Model phenomena and processes and simulate systems to understand and evaluate potential outcomes."
+        }
+      ]
+    },
+    {
+      "id": "P5",
+      "name": "Creating Computational Artifacts",
+      "statements": [
+        {
+          "n": "5.1",
+          "text": "Plan the development of a computational artifact using an iterative process that includes reflection on and modification of the plan, taking into account key features, time and resource constraints, and user expectations."
+        },
+        {
+          "n": "5.2",
+          "text": "Create a computational artifact for practical intent, personal expression, or to address a societal issue."
+        },
+        {
+          "n": "5.3",
+          "text": "Modify an existing artifact to improve or customize it."
+        }
+      ]
+    },
+    {
+      "id": "P6",
+      "name": "Testing & Refining Computational Artifacts",
+      "statements": [
+        {
+          "n": "6.1",
+          "text": "Systematically test computational artifacts by considering all scenarios and using test cases."
+        },
+        {
+          "n": "6.2",
+          "text": "Identify and fix errors using a systematic process."
+        },
+        {
+          "n": "6.3",
+          "text": "Evaluate and refine a computational artifact multiple times to enhance its performance, reliability, usability, and accessibility."
+        }
+      ]
+    },
+    {
+      "id": "P7",
+      "name": "Communicating About Computing",
+      "statements": [
+        {
+          "n": "7.1",
+          "text": "Select, organize, and interpret large data sets from multiple sources to support a claim."
+        },
+        {
+          "n": "7.2",
+          "text": "Describe, justify, and document computational processes and solutions using appropriate terminology consistent with the intended audience and purpose."
+        },
+        {
+          "n": "7.3",
+          "text": "Articulate ideas responsibly by observing intellectual property rights and giving appropriate attribution."
+        }
+      ]
+    }
+  ]
+}

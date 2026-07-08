@@ -1,0 +1,458 @@
+{
+  "source": "CA CTE Model Curriculum Standards, ICT sector edition (2013), knowledge and performance anchor standards. ELA alignment notes dropped; sector name abbreviated to ICT.",
+  "url": "https://www.cde.ca.gov/ci/ct/sf/documents/infocomtech.pdf",
+  "anchors": [
+    {
+      "id": "1",
+      "name": "Academics"
+    },
+    {
+      "id": "2",
+      "name": "Communications"
+    },
+    {
+      "id": "3",
+      "name": "Career Planning & Management"
+    },
+    {
+      "id": "4",
+      "name": "Technology"
+    },
+    {
+      "id": "5",
+      "name": "Problem Solving & Critical Thinking"
+    },
+    {
+      "id": "6",
+      "name": "Health & Safety"
+    },
+    {
+      "id": "7",
+      "name": "Responsibility & Flexibility"
+    },
+    {
+      "id": "8",
+      "name": "Ethics & Legal Responsibilities"
+    },
+    {
+      "id": "9",
+      "name": "Leadership & Teamwork"
+    },
+    {
+      "id": "10",
+      "name": "Technical Knowledge & Skills"
+    },
+    {
+      "id": "11",
+      "name": "Demonstration & Application"
+    }
+  ],
+  "details": {
+    "1": {
+      "desc": "Analyze and apply appropriate academic standards required for successful industry sector pathway completion leading to postsecondary education and employment. Refer to the ICT academic alignment matrix for identification of standards.",
+      "subs": []
+    },
+    "2": {
+      "desc": "Acquire and accurately use ICT sector terminology and protocols at the career and college readiness level for communicating effectively in oral, written, and multimedia formats.",
+      "subs": [
+        {
+          "n": "2.1",
+          "text": "Recognize the elements of communication using a sender-receiver model."
+        },
+        {
+          "n": "2.2",
+          "text": "Identify barriers to accurate and appropriate communication."
+        },
+        {
+          "n": "2.3",
+          "text": "Interpret verbal and nonverbal communications and respond appropriately."
+        },
+        {
+          "n": "2.4",
+          "text": "Demonstrate elements of written and electronic communication such as accurate spelling, grammar, and format."
+        },
+        {
+          "n": "2.5",
+          "text": "Communicate information and ideas effectively to multiple audiences using a variety of media and formats."
+        },
+        {
+          "n": "2.6",
+          "text": "Advocate and practice safe, legal, and responsible use of digital media information and communications technologies."
+        },
+        {
+          "n": "2.7",
+          "text": "Use technical writing and communication skills to work effectively with diverse groups of people."
+        },
+        {
+          "n": "2.8",
+          "text": "Understand the principles of a customer-oriented service approach to users."
+        }
+      ]
+    },
+    "3": {
+      "desc": "Integrate multiple sources of career information from diverse formats to make informed career decisions, solve problems, and manage personal career plans.",
+      "subs": [
+        {
+          "n": "3.1",
+          "text": "Identify personal interests, aptitudes, information, and skills necessary for informed career decision making."
+        },
+        {
+          "n": "3.2",
+          "text": "Evaluate personal character traits such as trust, respect, and responsibility and understand the impact they can have on career success."
+        },
+        {
+          "n": "3.3",
+          "text": "Explore how information and communication technologies are used in career planning and decision making."
+        },
+        {
+          "n": "3.4",
+          "text": "Research the scope of career opportunities available and the requirements for education, training, certification, and licensure."
+        },
+        {
+          "n": "3.5",
+          "text": "Integrate changing employment trends, societal needs, and economic conditions into career planning."
+        },
+        {
+          "n": "3.6",
+          "text": "Recognize the role and function of professional organizations, industry associations, and organized labor in a productive society."
+        },
+        {
+          "n": "3.7",
+          "text": "Recognize the importance of small business in the California and global economies."
+        },
+        {
+          "n": "3.8",
+          "text": "Understand how digital media are used by potential employers and postsecondary agencies to evaluate candidates."
+        },
+        {
+          "n": "3.9",
+          "text": "Develop a career plan that reflects career interests, pathways, and postsecondary options."
+        }
+      ]
+    },
+    "4": {
+      "desc": "Use existing and emerging technology, to investigate, research, and produce products and services, including new information, as required in the ICT sector workplace environment.",
+      "subs": [
+        {
+          "n": "4.1",
+          "text": "Use electronic reference materials to gather information and produce products and services."
+        },
+        {
+          "n": "4.2",
+          "text": "Employ technology based communications responsibly and effectively to explore complex systems and issues."
+        },
+        {
+          "n": "4.3",
+          "text": "Use information and communication technologies to synthesize, summarize, compare, and contrast information from multiple sources."
+        },
+        {
+          "n": "4.4",
+          "text": "Discern the quality and value of information collected using digital technologies, and recognize bias and intent of the associated sources."
+        },
+        {
+          "n": "4.5",
+          "text": "Research past, present, and projected technological advances as they impact a particular pathway."
+        },
+        {
+          "n": "4.6",
+          "text": "Assess the value of various information and communication technologies to interact with constituent populations as part of a search of the current literature or in relation to the information task."
+        }
+      ]
+    },
+    "5": {
+      "desc": "Conduct short, as well as more sustained, research to create alternative solutions to answer a question or solve a problem unique to the ICT sector using critical and creative thinking, logical reasoning, analysis, inquiry, and problem-solving techniques.",
+      "subs": [
+        {
+          "n": "5.1",
+          "text": "Identify and ask significant questions that clarify various points of view to solve problems."
+        },
+        {
+          "n": "5.2",
+          "text": "Solve predictable and unpredictable work-related problems using various types of reasoning (inductive, deductive) as appropriate."
+        },
+        {
+          "n": "5.3",
+          "text": "Use systems thinking to analyze how various components interact with each other to produce outcomes in a complex work environment."
+        },
+        {
+          "n": "5.4",
+          "text": "Interpret information and draw conclusions, based on the best analysis, to make informed decisions."
+        },
+        {
+          "n": "5.5",
+          "text": "Use a logical and structured approach to isolate and identify the source of problems and to resolve problems."
+        },
+        {
+          "n": "5.6",
+          "text": "Know the available resources for identifying and resolving problems."
+        },
+        {
+          "n": "5.7",
+          "text": "Work out problems iteratively and recursively."
+        },
+        {
+          "n": "5.8",
+          "text": "Create and use algorithms and solve problems."
+        },
+        {
+          "n": "5.9",
+          "text": "Deconstruct large problems into components to solve."
+        },
+        {
+          "n": "5.10",
+          "text": "Use multiple layers of abstraction."
+        },
+        {
+          "n": "5.11",
+          "text": "Understand the concept of base systems, including binary and hexadecimal."
+        },
+        {
+          "n": "5.12",
+          "text": "Apply the concepts of Boolean logic to decision making and searching."
+        }
+      ]
+    },
+    "6": {
+      "desc": "Demonstrate health and safety procedures, regulations, and personal health practices and determine the meaning of symbols, key terms, and domain-specific words and phrases as related to the ICT sector workplace environment.",
+      "subs": [
+        {
+          "n": "6.1",
+          "text": "Locate, and adhere to, Material Safety Data Sheet (MSDS) instructions."
+        },
+        {
+          "n": "6.2",
+          "text": "Interpret policies, procedures, and regulations for the workplace environment, including employer and employee responsibilities."
+        },
+        {
+          "n": "6.3",
+          "text": "Use health and safety practices for storing, cleaning, and maintaining tools, equipment, and supplies."
+        },
+        {
+          "n": "6.4",
+          "text": "Practice personal safety when lifting, bending, or moving equipment and supplies."
+        },
+        {
+          "n": "6.5",
+          "text": "Demonstrate how to prevent and respond to work-related accidents or injuries; this includes demonstrating an understanding of ergonomics."
+        },
+        {
+          "n": "6.6",
+          "text": "Maintain a safe and healthful working environment."
+        },
+        {
+          "n": "6.7",
+          "text": "Be informed of laws/acts pertaining to the Occupational Safety and Health Administration (OSHA)."
+        },
+        {
+          "n": "6.8",
+          "text": "Maintain a safe and healthful working environment."
+        },
+        {
+          "n": "6.9",
+          "text": "Dispose of e-waste properly, understanding the health, environmental, and legal risks of improper disposal."
+        },
+        {
+          "n": "6.10",
+          "text": "Act conscientiously regarding the use of natural resources (e.g., paper, ink, etc.)"
+        },
+        {
+          "n": "6.11",
+          "text": "Conserve energy while computing (e.g., turn off equipment at night, power-saving settings, etc.)"
+        }
+      ]
+    },
+    "7": {
+      "desc": "Initiate, and participate in, a range of collaborations demonstrating behaviors that reflect personal and professional responsibility, flexibility, and respect in the ICT sector workplace environment and community settings.",
+      "subs": [
+        {
+          "n": "7.1",
+          "text": "Recognize how financial management impacts the economy, workforce, and community."
+        },
+        {
+          "n": "7.2",
+          "text": "Explain the importance of accountability and responsibility in fulfilling personal, community, and workplace roles."
+        },
+        {
+          "n": "7.3",
+          "text": "Understand the need to adapt to changing and varied roles and responsibilities."
+        },
+        {
+          "n": "7.4",
+          "text": "Practice time management and efficiency to fulfill responsibilities."
+        },
+        {
+          "n": "7.5",
+          "text": "Apply high-quality techniques to product or presentation design and development."
+        },
+        {
+          "n": "7.6",
+          "text": "Demonstrate knowledge and practice of responsible financial management."
+        },
+        {
+          "n": "7.7",
+          "text": "Demonstrate the qualities and behaviors that constitute a positive and professional work demeanor, including appropriate attire for the profession."
+        },
+        {
+          "n": "7.8",
+          "text": "Explore issues of global significance and document the impact on the ICT sector."
+        }
+      ]
+    },
+    "8": {
+      "desc": "Practice professional, ethical, and legal behavior, responding thoughtfully to diverse perspectives and resolving contradictions when possible, consistent with applicable laws, regulations, and organizational norms.",
+      "subs": [
+        {
+          "n": "8.1",
+          "text": "Access, analyze, and implement quality assurance standards of practice."
+        },
+        {
+          "n": "8.2",
+          "text": "Identify local, district, state, and federal regulatory agencies, entities, laws, and regulations related to the ICT industry sector."
+        },
+        {
+          "n": "8.3",
+          "text": "Demonstrate ethical and legal practices consistent with ICT sector workplace standards."
+        },
+        {
+          "n": "8.4",
+          "text": "Explain the importance of personal integrity, confidentiality, and ethical behavior in the workplace."
+        },
+        {
+          "n": "8.5",
+          "text": "Analyze organizational culture and practices within the workplace environment."
+        },
+        {
+          "n": "8.6",
+          "text": "Adhere to copyright and intellectual property laws and regulations, and use and appropriately cite proprietary information."
+        },
+        {
+          "n": "8.7",
+          "text": "Conform to rules and regulations regarding sharing of confidential information, as determined by ICT sector laws and practices."
+        },
+        {
+          "n": "8.8",
+          "text": "Identify legal and ethical issues that have proliferated with increased technology adoption, including hacking, scamming, and breach of privacy."
+        }
+      ]
+    },
+    "9": {
+      "desc": "Work with peers to promote divergent and creative perspectives, effective leadership, group dynamics, team and individual decision making, benefits of workforce diversity, and conflict resolution such as those practiced in the Future Business Leaders of America and SkillsUSA career technical student organization.",
+      "subs": [
+        {
+          "n": "9.1",
+          "text": "Define leadership and identify the responsibilities, competencies, and behaviors of successful leaders."
+        },
+        {
+          "n": "9.2",
+          "text": "Identify the characteristics of successful teams, including leadership, cooperation, collaboration, and effective decision-making skills as applied in groups, teams, and career technical student organization activities."
+        },
+        {
+          "n": "9.3",
+          "text": "Understand the characteristics and benefits of teamwork, leadership, and citizenship in the school, community, and workplace setting."
+        },
+        {
+          "n": "9.4",
+          "text": "Explain how professional associations and organizations and associated leadership development and competitive career development activities enhance academic preparation, promote career choices, and contribute to employment opportunities."
+        },
+        {
+          "n": "9.5",
+          "text": "Understand that the modern world is an international community and requires an expanded global view."
+        },
+        {
+          "n": "9.6",
+          "text": "Respect individual and cultural differences and recognize the importance of diversity in the workplace."
+        },
+        {
+          "n": "9.7",
+          "text": "Participate in interactive teamwork to solve real ICT sector issues and problems."
+        }
+      ]
+    },
+    "10": {
+      "desc": "Apply essential technical knowledge and skills common to all pathways in the ICT sector, following procedures when carrying out experiments or performing technical tasks.",
+      "subs": [
+        {
+          "n": "10.1",
+          "text": "Interpret and explain terminology and practices specific to the ICT sector."
+        },
+        {
+          "n": "10.2",
+          "text": "Comply with the rules, regulations, and expectations of all aspects of the ICT sector."
+        },
+        {
+          "n": "10.3",
+          "text": "Construct projects and products specific to the ICT sector requirements and expectations."
+        },
+        {
+          "n": "10.4",
+          "text": "Collaborate with industry experts for specific technical knowledge and skills."
+        },
+        {
+          "n": "10.5",
+          "text": "Understand the major software and hardware components of a computer and a network and how they relate to each other."
+        },
+        {
+          "n": "10.6",
+          "text": "Understand data sizes of various types of information (text, pictures, sound, video, etc.) and data capacity of various forms of media."
+        },
+        {
+          "n": "10.7",
+          "text": "Understand the SI (metric) prefixes commonly used in computing including, at least, kilo, mega, giga, and tera."
+        },
+        {
+          "n": "10.8",
+          "text": "Understand security concepts including authorization, rights, and encryption."
+        },
+        {
+          "n": "10.9",
+          "text": "Use common industry-standard software and their applications including word processing, spreadsheets, databases, and multimedia software."
+        },
+        {
+          "n": "10.10",
+          "text": "Manage files in a hierarchical system."
+        },
+        {
+          "n": "10.11",
+          "text": "Know multiple ways in which to transfer information and resources (e.g., text, data, sound, video, still images) between software programs and systems."
+        },
+        {
+          "n": "10.12",
+          "text": "Know appropriate search procedures for different types of information, sources, and queries."
+        },
+        {
+          "n": "10.13",
+          "text": "Evaluate the accuracy, relevance, and comprehensiveness of retrieved information."
+        },
+        {
+          "n": "10.14",
+          "text": "Analyze the effectiveness of online information resources to support collaborative tasks, research, publications, communications, and increased productivity."
+        }
+      ]
+    },
+    "11": {
+      "desc": "Demonstrate and apply the knowledge and skills contained in the ICT anchor standards, pathway standards, and performance indicators in classroom, laboratory, and workplace settings, and through career technical student organizations such as Future Business Leaders of America and SkillsUSA.",
+      "subs": [
+        {
+          "n": "11.1",
+          "text": "Utilize work-based/workplace learning experiences to demonstrate and expand upon knowledge and skills gained during classroom instruction and laboratory practices specific to the ICT sector program of study."
+        },
+        {
+          "n": "11.2",
+          "text": "Demonstrate proficiency in a career technical pathway that leads to certification, licensure, and/or continued learning at the postsecondary level."
+        },
+        {
+          "n": "11.3",
+          "text": "Demonstrate entrepreneurship skills and knowledge of self-employment options and innovative ventures."
+        },
+        {
+          "n": "11.4",
+          "text": "Employ entrepreneurial practices and behaviors appropriate to ICT sector opportunities."
+        },
+        {
+          "n": "11.5",
+          "text": "Create a portfolio, or similar collection of work, that offers evidence through assessment and evaluation of skills and knowledge competency as contained in the anchor standards, pathway standards, and performance indicators."
+        }
+      ]
+    }
+  }
+}
