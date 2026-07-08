@@ -166,6 +166,11 @@ Below is the same employer data from Part 1, with a third view added: where each
 #wef-skills-widget .wsw-mtag.tech{background:#EEF1F4; color:var(--sub);}
 #wef-skills-widget .wsw-mtag.ai{background:#FBF1D9; color:#8A6A00;}
 #wef-skills-widget .wsw-detail-desc{font-size:.82rem; color:var(--ink); margin:0 0 .55rem;}
+/* Whole-anchor (strong) matches: the description itself is the covered text,
+   and every sub-standard gets a lighter tint than the specifically-mapped ones. */
+#wef-skills-widget .wsw-detail-desc.is-covered{background:#E0F1F2; padding:.5rem .6rem; border-radius:5px; box-shadow:inset 3px 0 0 var(--human);}
+#wef-skills-widget .wsw-detail li.is-covered-whole{background:#F0F7F8; color:var(--ink);}
+#wef-skills-widget .wsw-mwhole{display:block; margin-top:.3rem; font-style:italic;}
 #wef-skills-widget .wsw-detail ul{list-style:none; margin:0; padding:0;}
 #wef-skills-widget .wsw-detail li{font-size:.78rem; color:var(--sub); margin:.22rem 0; padding:.24rem .45rem; border-radius:5px; line-height:1.35;}
 #wef-skills-widget .wsw-detail li b{color:var(--ink); margin-right:.3rem;}
@@ -244,7 +249,7 @@ Below is the same employer data from Part 1, with a third view added: where each
   // null means the skill appears only on the 2030 fastest-growing list.
   // fit: strong = named at anchor level; partial = sub-standards; gap = thin/missing.
   var CTE = [
-    {name:"Analytical thinking", cls:"tech", rank:1, std:"<b>5.0</b> Problem Solving &amp; Critical Thinking", fit:"strong"},
+    {name:"Analytical thinking", cls:"tech", rank:1, std:"<b>5.0</b> Problem Solving &amp; Critical Thinking; <b>1.0</b> Academics", fit:"strong"},
     {name:"Resilience, flexibility & agility", cls:"human", rank:2, std:"<b>7.0</b> Responsibility &amp; Flexibility", fit:"strong"},
     {name:"Leadership & social influence", cls:"human", rank:3, std:"<b>9.0</b> Leadership &amp; Teamwork", fit:"strong"},
     {name:"Creative thinking", cls:"human", rank:4, std:"<b>11.3&ndash;11.4</b> innovation &amp; entrepreneurship only", fit:"partial"},
@@ -278,7 +283,7 @@ Below is the same employer data from Part 1, with a third view added: where each
   // w: "strong" draws solid, "partial" draws dashed. Skills with no entry
   // (service orientation, AI & big data) are the gaps and get no line.
   var MATCH_LINKS = [
-    {s:0, a:5, w:"strong"},
+    {s:0, a:5, w:"strong"}, {s:0, a:1, w:"partial"},
     {s:1, a:7, w:"strong"},
     {s:2, a:9, w:"strong"},
     {s:3, a:11, w:"partial"},
@@ -435,7 +440,7 @@ Below is the same employer data from Part 1, with a third view added: where each
     now: "<b>AI is not on this list.</b> The skills employers call most essential right now are mostly human ones, ranked by the share of employers naming each a core skill.",
     growing: "<b>Now AI leaps to number one.</b> But the human skills do not fall away. Creativity, resilience, curiosity, and leadership all stay near the top of what is growing fastest.",
     cte: "<b>Most of this list was written into California's standards in 2013.</b> Coverage rates how fully each anchor standard covers the skill. The gaps are honest too: creative thinking is thin, and AI was not yet on anyone's radar.",
-    match: "<b>Thirteen employer skills, eleven anchor standards.</b> Solid lines are direct matches, dashed lines partial ones. The one skill with no line, and the two standards nothing points to, tell their own story."
+    match: "<b>Thirteen employer skills, eleven anchor standards.</b> Solid lines are direct matches, dashed lines partial ones. The one skill with no line, and the one standard nothing points to, tell their own story."
   };
 
   var chart = document.getElementById("wsw-chart");
@@ -569,23 +574,30 @@ Below is the same employer data from Part 1, with a third view added: where each
     ANCHORS.forEach(function(x){ if(x.n === n) a = x; });
     if(!panel || !box || !d || !a) return;
     var matches = anchorMatches(n);
+    var strongNames = [];
+    matches.forEach(function(m){ if(m.w === "strong") strongNames.push(m.name); });
     var mhtml;
     if(matches.length){
       mhtml = "Matched employer skills: ";
       matches.forEach(function(m){
         mhtml += '<span class="wsw-mtag ' + m.cls + '">' + m.name + ' (' + m.w + ')</span>';
       });
+      if(strongNames.length){
+        mhtml += '<span class="wsw-mwhole">A strong match means the whole standard is '
+          + strongNames.join(" and ") + ": the description and every sub-standard below count toward it.</span>";
+      }
     } else {
       mhtml = "No skill on the WEF employer list points here.";
     }
     var html = '<h4>' + n + '.0 ' + a.name + '</h4>'
       + '<p class="wsw-detail-match">' + mhtml + '</p>'
-      + '<p class="wsw-detail-desc">' + d.desc + '</p>';
+      + '<p class="wsw-detail-desc' + (strongNames.length ? ' is-covered' : '') + '">' + d.desc + '</p>';
     if(d.subs.length){
       html += '<ul>';
       d.subs.forEach(function(s){
         var cov = COVERED[s.n];
-        html += '<li' + (cov ? ' class="is-covered"' : '') + '><b>' + s.n + '</b>' + s.t
+        var cls = cov ? ' class="is-covered"' : (strongNames.length ? ' class="is-covered-whole"' : '');
+        html += '<li' + cls + '><b>' + s.n + '</b>' + s.t
           + (cov ? '<span class="wsw-covlabel">' + cov + '</span>' : '') + '</li>';
       });
       html += '</ul>';
