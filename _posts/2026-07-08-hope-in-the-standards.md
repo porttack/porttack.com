@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "The Right Skills Are Hidden in the Standards"
+title: "Soft Skills Are in the Standards"
 date: 2026-07-08
 categories: draft
 excerpt_separator: <!--more-->
-excerpt: "Part 2: California's CTE anchor standards already name nearly every skill on the employer list. The only standards that describe what employers want most are the ones the accountability system never measures."
+excerpt: "Part 2: The skills employers want most are already written into California standards. The CTE anchor standards carry the human skills, the CS standards carry the technical ones, and the soft half goes untested, which has kept it honest and kept it quiet."
 ---
 
-*Draft outline - for discussion, not yet written*
+*Draft - in progress, not yet public*
 
 {% include series-toc.html part=2 %}
 
@@ -701,64 +701,57 @@ excerpt: "Part 2: California's CTE anchor standards already name nearly every sk
 
 *Part 2 of a series. [Part 1](/2026/06/19/optimizing-for-wrong-skills.html) argued that a generation of content-mastery optimization squeezed out many of the skills employers actually want. This piece points out that in 2013 California did put many of these skills into CTE (Career Technical Education) Anchor Standards.*
 
-These are the skills more than a thousand employers told the World Economic Forum they need, matched line by line against California's CTE anchor standards. Hover or tap a standard to read what the state actually wrote.
+## What is an anchor standard?
 
-Think of California’s CTE Anchor Standards as the universal toolkit for professional success. While regular classes teach textbook theory, these standards focus on the real-world "soft skills" every employer craves—like critical thinking, teamwork, and strong communication. When you layer the ICT (Information and Communication Technologies) sector on top, it means students aren't just learning how to code or build networks; they are learning how to solve complex tech problems, protect digital privacy ethically, and pitch their ideas like pros. Ultimately, it’s about turning tech-savvy students into well-rounded, future-proof professionals.
+California organizes career technical education into fifteen industry sectors: health science, construction, agriculture, and the one my courses live in, Information and Communication Technologies (ICT). Each sector defines pathway standards for its trade-specific skills. Underneath all of them, though, sit the same eleven **anchor standards**, adopted with the [CTE Model Curriculum Standards](https://www.cde.ca.gov/ci/ct/sf/ctemcstandards.asp) in 2013: the things California says every CTE student should learn no matter which sector they chose. Communicate. Plan a career. Solve problems. Take responsibility. Act ethically. Lead a team. And then Standard 11, the quiet radical of the group: demonstrate all of it through work-based learning and a portfolio of real work. That is project-based learning in all but name, written into a state document.
 
-## The irony (opening)
+The chart above matches those eleven anchors against the skills more than a thousand employers told the World Economic Forum they need most, the same data Part 1 was built on. Hover or tap any standard to read the state's own words.
 
-**Key line to build the opening around:** The only standards in California that name the skills employers want most are the ones the accountability system never measures.
+## The quiet irony
 
-- Callback to Part 1: the WEF employer list (creative thinking, resilience, leadership, teamwork).
-- The reader expects the argument to be "we need new standards." The surprise: the standards already exist. They were adopted in 2013 and they have been sitting in plain sight.
+Part 1 ended in a challenge: we built school around what a test can see, and the skills employers now value most are the ones a test can't. The natural next demand would be new standards. Here is the surprise. California doesn't need them. The skills are already written down, and have been for over a decade.
 
-## What the CTE anchor standards actually say
+What makes this odd rather than triumphant is that no statewide assessment looks at the anchor standards. I want to be careful with that observation, because it is not a scandal and there is no villain in it. Assessing collaboration or resilience fairly, at scale, across millions of students is genuinely hard; nobody anywhere has fully cracked it. The accountability system concentrates on what it can measure well and defensibly, and that is a reasonable engineering choice. But the choice has a side effect worth naming.
 
-- California's [CTE Model Curriculum Standards](https://www.cde.ca.gov/ci/ct/sf/ctemcstandards.asp) (adopted 2013) give all 15 industry sectors the same eleven anchor standards:
-  1. Academics
-  2. Communications
-  3. Career Planning and Management
-  4. Technology
-  5. Problem Solving and Critical Thinking
-  6. Health and Safety
-  7. Responsibility and Flexibility
-  8. Ethics and Legal Responsibilities
-  9. Leadership and Teamwork
-  10. Technical Knowledge and Skills
-  11. Demonstration and Application
-- Eight of the eleven are the "other half" of school that Part 1 said we starved.
-- Pull direct quotes ([ICT sector PDF](https://www.cde.ca.gov/ci/ct/sf/documents/infocomtech.pdf)):
-  - 9.7: "Participate in interactive teamwork to solve real Information and Communication Technologies sector issues and problems."
-  - 11.1: work-based learning experiences that "demonstrate and expand upon knowledge and skills gained during classroom instruction."
-  - 11.5: "Create a portfolio, or similar collection of work, that offers evidence... of skills and knowledge competency."
-- **Point:** Standard 11 mandates project-based learning in all but name. Real teamwork, real problems, work-based learning, a portfolio of evidence. This is a state document.
+## Unmeasured, and better for it
 
-## Why they survived (the freedom of the unmeasured)
+The side effect cuts both ways, and the first way is good. Because no high-stakes test ever touched the anchor standards, they never went through the narrowing that reshaped reading and math instruction. Nobody ever had to reduce "participate in interactive teamwork to solve real sector issues" to something a bubble sheet could see, so it still describes the whole capacity instead of a proxy for it. The standards stayed honest because nobody was optimizing them.
 
-- No state test covers the anchor standards. No accountability formula counts them.
-- That is exactly why they could stay honest. Nobody was optimizing them, so they never narrowed into what a bubble sheet can see.
-- The flip side, stated plainly: nothing enforces them either. A standard nobody measures is a promise nobody has to keep.
+The other way is the honest cost. A standard without an assessment depends entirely on the program that delivers it. In a strong CTE classroom the anchor standards are the daily weather: teams, deadlines, documentation, demonstrations. In a weaker one they are a poster on the wall. Both classrooms report the same course code. That variance is real, and pretending otherwise would oversell the good news.
 
-## The elective wing (equity tie-in)
+## The CS standards carry the technical half
 
-- Part 1 argued the deeper inequity: the students who pay the most are the ones who don't pick these skills up at home "or in some other opt-in program."
-- **CTE is the opt-in program.** The state wrote the other half of school down, then filed it in the elective wing.
-- The skills every kid needs are guaranteed only to the kids who happen to choose a pathway (and whose school happens to offer a good one).
+CTE is not the only place California wrote the employer list down. The state's [computer science standards](https://www.cde.ca.gov/be/st/ss/documents/csstandards.pdf), adopted in 2018 and built on the CSTA K-12 framework, split the job differently, and they cover almost exactly the ground the CTE anchors leave open.
 
-## Existence proof, not delivery mechanism (the honest caveats)
+The technical end first. **AI and big data**, the one skill with no line in the chart above, has a real home here: the high school core devotes four standards to Data and Analysis (9-12.DA.8-11), and the specialty tier names artificial intelligence outright (9-12S.AP.10: "Describe how artificial intelligence drives many software and physical systems"). **Networks and cybersecurity** gets four more (9-12.NI.4-7). **Technological literacy** is, arguably, all thirty standards in the core.
 
-- Am I giving the standards too much credit? Address directly:
-  - They are aspirational boilerplate, identical across all 15 sectors.
-  - They are 2013 vintage; the AI gap in the table proves nobody can see thirteen years ahead.
-  - Standards on paper are not practice; CTE program quality varies enormously.
-- But the existence proof stands: the State Board of Education already adopted teamwork, flexibility, problem solving, and portfolio-based demonstration as real, teachable, assessable outcomes.
-- Anyone who says "soft skills can't be standards" can be handed a state document that says otherwise.
+The soft skills are in there too, but they live in a different layer. Every standard is tagged with one or more of seven **core practices**, and at least four of the seven are employer-list skills wearing computer science clothes:
+
+- **Collaborating Around Computing**: teamwork, including working in roles on a shared artifact.
+- **Communicating About Computing**: explaining your work to audiences who did not build it.
+- **Fostering an Inclusive Computing Culture**: empathy in design, building for people unlike yourself.
+- **Creating Computational Artifacts**: creative thinking, which the CTE anchors cover only thinly.
+- (**Testing and Refining** is at least a cousin of resilience: iterate, debug, try again.)
+
+Put the two documents side by side and the complementarity is striking. The CTE anchors name the human skills and miss AI; the CS standards name AI and the technical skills and carry the human ones as practices rather than headline outcomes. Neither document alone covers the employer list. The union covers all thirteen. I've seen this from the CS side already: my [*Little Brother* unit](/2026/06/14/little-brother.html) maps a novel onto the Impacts of Computing and Networking strands, eight and four standards respectively, over a third of the core reached through a story.
+
+One more detail worth a smile: both documents insist on ethics. CTE anchor 8.0 and the CS core's eight Impacts of Computing standards (9-12.IC.23-30) are the two largest blocks of "soft" content in either document, and ethics appears nowhere on the employer survey at all. The standards writers put it there anyway. Good.
+
+## The elective wing
+
+Part 1 named a deeper inequity: the students who pay the highest price for a content-only curriculum are the ones who don't pick up the human skills at home, or in some other opt-in program. Here is the uncomfortable observation this piece adds. CTE is the opt-in program. So is the CS pathway. The state wrote the other half of school down, then filed nearly all of it in the elective wing. A student is guaranteed the anchor standards only if they choose a pathway, and only if their school offers a strong one. I don't say that to diminish the elective wing; it is where I teach, and it is where this work is furthest along. I say it because the skills are too important to stay there.
+
+## Existence proof, with honest caveats
+
+Am I giving two stacks of paper too much credit? Partly, and it is worth saying exactly where. The anchor standards are aspirational, and identical across all fifteen sectors. They are 2013 vintage, and the AI gap in the chart is proof that nobody sees thirteen years ahead. Standards on a page are not standards in a classroom, and program quality varies enormously. All true.
+
+But the existence proof stands, and it is the point of this piece. The State Board of Education has already adopted teamwork, flexibility, problem solving, creative work, communication, and portfolio-based demonstration as real, teachable outcomes, twice, in two different documents. When someone says soft skills are too fuzzy to be standards, there are two California state documents that say otherwise. The question was never whether these skills belong in school. The state settled that years ago. The question is how to see them without flattening them.
 
 ## What it would take (bridge to Part 3)
 
-- The ask is not new standards. It is new evidence: ways of seeing these skills that don't kill them in the measuring.
-- How do you grade teamwork without turning it into a rubric performance? How do you verify understanding in the age of AI without a bubble sheet?
-- Industry already has the tools, and they translate to a classroom better than you'd think. That is [Part 3](/2026/07/08/run-the-classroom-like-a-studio.html).
+The ask is not new standards. It is new evidence: ways of seeing these skills that don't kill them in the measuring. How do you grade teamwork without turning it into a rubric performance? How do you verify understanding in the age of AI without a bubble sheet? These are genuinely hard problems, which is exactly why they deserve better than a shrug.
+
+Industry has spent decades building lightweight ways to see this kind of work: demos, reviews, decision records, retrospectives. They translate to a classroom better than you'd think. That is [Part 3](/2026/07/08/run-the-classroom-like-a-studio.html).
 
 ---
 
@@ -768,4 +761,6 @@ Think of California’s CTE Anchor Standards as the universal toolkit for profes
 
 - California Department of Education, [CTE Model Curriculum Standards](https://www.cde.ca.gov/ci/ct/sf/ctemcstandards.asp) (adopted 2013).
 - [Information and Communication Technologies sector standards](https://www.cde.ca.gov/ci/ct/sf/documents/infocomtech.pdf) (PDF), including the knowledge and performance anchor standards quoted above.
+- California Department of Education, [Computer Science Standards for California Public Schools](https://www.cde.ca.gov/be/st/ss/documents/csstandards.pdf) (PDF, adopted 2018); individual standards browsable at the [CDE standards site](https://www2.cde.ca.gov/cacs/cs).
+- Computer Science Teachers Association, [CSTA K-12 Computer Science Standards](https://csteachers.org/k12standards/) (revised 2017), including the seven core practices.
 - World Economic Forum, [Future of Jobs Report 2025](https://reports.weforum.org/docs/WEF_Future_of_Jobs_Report_2025.pdf) (Figs. 3.3 and 3.4).
