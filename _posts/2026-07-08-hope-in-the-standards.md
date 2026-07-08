@@ -11,11 +11,9 @@ excerpt: "Part 2: California's CTE anchor standards already name nearly every sk
 
 {% include series-toc.html part=2 %}
 
-*Part 2 of a series. [Part 1](/2026/06/19/optimizing-for-wrong-skills.html) argued that a generation of content-mastery optimization squeezed out the skills employers actually want. This piece is about where those skills have been hiding all along: in California's own standards.*
+*Part 2 of a series. [Part 1](/2026/06/19/optimizing-for-wrong-skills.html) argued that a generation of content-mastery optimization squeezed out many of the skills employers actually want. This piece points out that in 2013 California did put many of these skills into CTE (Career Technical Education) Anchor Standards.*
 
 <!--more-->
-
-The raw data first. These are the skills more than a thousand employers told the World Economic Forum they need, matched line by line against California's CTE anchor standards. Hover or tap a standard to read what the state actually wrote.
 
 {% raw %}
 <!-- WEF skills toggle widget, extended with a CTE-standards mapping view. -->
@@ -700,6 +698,10 @@ The raw data first. These are the skills more than a thousand employers told the
 })();
 </script>
 {% endraw %}
+
+These are the skills more than a thousand employers told the World Economic Forum they need, matched line by line against California's CTE anchor standards. Hover or tap a standard to read what the state actually wrote.
+
+Think of California’s CTE Anchor Standards as the universal toolkit for professional success. While regular classes teach textbook theory, these standards focus on the real-world "soft skills" every employer craves—like critical thinking, teamwork, and strong communication. When you layer the ICT (Information and Communication Technologies) sector on top, it means students aren't just learning how to code or build networks; they are learning how to solve complex tech problems, protect digital privacy ethically, and pitch their ideas like pros. Ultimately, it’s about turning tech-savvy students into well-rounded, future-proof professionals.
 
 ## The irony (opening)
 
