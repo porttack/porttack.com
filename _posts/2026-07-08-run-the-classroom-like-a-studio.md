@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Run the Classroom Like a Studio"
+title: "Using Industry Best Practices in the Classroom to Better Prepare Students"
 date: 2026-07-08
 categories: draft
 excerpt_separator: <!--more-->
@@ -8,6 +8,8 @@ excerpt: "Part 3: What it looks like to run a high school classroom on industry'
 ---
 
 *Draft outline - for discussion, not yet written*
+
+{% include series-toc.html part=3 %}
 
 *Part 3 of a series. [Part 1](/2026/06/19/optimizing-for-wrong-skills.html) argued we are optimizing for the wrong skills. [Part 2](/2026/07/08/hope-in-the-standards.html) showed the right ones are already in California's CTE standards. This piece is the practice: how my robotics class runs on the tools industry actually uses.*
 

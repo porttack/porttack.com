@@ -9,6 +9,8 @@ excerpt: "How a generation of content-mastery optimization squeezed out the skil
 
 *Draft - not yet public*
 
+{% include series-toc.html part=1 %}
+
 *I'm a CTE teacher. A generation of content-mastery optimization squeezed out the skills employers actually want. Project-based learning, plus AI when appropriate, is the way back.*
 
 Much of the conversation I hear about AI in school boils down to detecting cheating. That's hard, and while it is frequently necessary, it's the wrong fight. The deeper problem isn't that a student fooled me. It's cognitive offload: the student who skips the thinking is mostly cheating themselves. It is like eating sugar instead of vegetables, the easy version feels fine now and starves the growth that matters later.

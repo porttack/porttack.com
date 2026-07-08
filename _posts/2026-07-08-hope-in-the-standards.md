@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Hope Hidden in the Standards"
+title: "The Right Skills Are Hidden in the Standards"
 date: 2026-07-08
 categories: draft
 excerpt_separator: <!--more-->
@@ -8,6 +8,8 @@ excerpt: "Part 2: California's CTE anchor standards already name nearly every sk
 ---
 
 *Draft outline - for discussion, not yet written*
+
+{% include series-toc.html part=2 %}
 
 *Part 2 of a series. [Part 1](/2026/06/19/optimizing-for-wrong-skills.html) argued that a generation of content-mastery optimization squeezed out the skills employers actually want. This piece is about where those skills have been hiding all along: in California's own standards.*
 

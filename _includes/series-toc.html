@@ -1,0 +1,48 @@
+{%- comment -%}
+  Table of contents for the three-part skills series. Titles and URLs live
+  here so all three posts stay in sync; the current post is passed in and
+  rendered as plain (non-linked) text.
+  Usage: {% include series-toc.html part=2 %}
+{%- endcomment -%}
+<nav class="series-toc" aria-label="Articles in this series">
+  <p class="series-toc-label">A three-part series</p>
+  <ol class="series-toc-list">
+    <li{% if include.part == 1 %} class="is-current" aria-current="true"{% endif %}>
+      <span class="series-toc-part">Part 1</span>
+      {% if include.part == 1 %}<span class="series-toc-title">We Are Optimizing for the Wrong Skills</span>{% else %}<a class="series-toc-title" href="/2026/06/19/optimizing-for-wrong-skills.html">We Are Optimizing for the Wrong Skills</a>{% endif %}
+    </li>
+    <li{% if include.part == 2 %} class="is-current" aria-current="true"{% endif %}>
+      <span class="series-toc-part">Part 2</span>
+      {% if include.part == 2 %}<span class="series-toc-title">The Right Skills Are Hidden in the Standards</span>{% else %}<a class="series-toc-title" href="/2026/07/08/hope-in-the-standards.html">The Right Skills Are Hidden in the Standards</a>{% endif %}
+    </li>
+    <li{% if include.part == 3 %} class="is-current" aria-current="true"{% endif %}>
+      <span class="series-toc-part">Part 3</span>
+      {% if include.part == 3 %}<span class="series-toc-title">Using Industry Best Practices in the Classroom to Better Prepare Students</span>{% else %}<a class="series-toc-title" href="/2026/07/08/run-the-classroom-like-a-studio.html">Using Industry Best Practices in the Classroom to Better Prepare Students</a>{% endif %}
+    </li>
+  </ol>
+</nav>
+<style>
+  .series-toc{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    max-width:720px; margin:1.25rem 0 1.75rem; padding:.9rem 1.1rem;
+    border:1px solid #E6EAEE; border-left:4px solid #0E7C86; border-radius:8px;
+    background:#FBFCFD; color:#1B2A3A; line-height:1.4;
+  }
+  .series-toc-label{
+    margin:0 0 .5rem; font-size:.68rem; font-weight:700; text-transform:uppercase;
+    letter-spacing:.06em; color:#5A6672;
+  }
+  .series-toc-list{list-style:none; margin:0; padding:0; counter-reset:none;}
+  .series-toc-list li{
+    display:flex; align-items:baseline; gap:.6rem; margin:.32rem 0; font-size:.92rem;
+  }
+  .series-toc-part{
+    flex:none; min-width:3.2em; font-size:.66rem; font-weight:700; text-transform:uppercase;
+    letter-spacing:.04em; color:#8A94A0;
+  }
+  .series-toc-title{color:#0E7C86; text-decoration:none;}
+  .series-toc-title:hover{text-decoration:underline;}
+  .series-toc-list li.is-current{font-weight:600;}
+  .series-toc-list li.is-current .series-toc-part{color:#0E7C86;}
+  .series-toc-list li.is-current .series-toc-title{color:#1B2A3A;}
+</style>
