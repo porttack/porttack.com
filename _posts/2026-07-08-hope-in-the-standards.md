@@ -15,37 +15,7 @@ excerpt: "Part 2: California's CTE anchor standards already name nearly every sk
 
 <!--more-->
 
-## The irony (opening)
-
-**Key line to build the opening around:** The only standards in California that name the skills employers want most are the ones the accountability system never measures.
-
-- Callback to Part 1: the WEF employer list (creative thinking, resilience, leadership, teamwork).
-- The reader expects the argument to be "we need new standards." The surprise: the standards already exist. They were adopted in 2013 and they have been sitting in plain sight.
-
-## What the CTE anchor standards actually say
-
-- California's [CTE Model Curriculum Standards](https://www.cde.ca.gov/ci/ct/sf/ctemcstandards.asp) (adopted 2013) give all 15 industry sectors the same eleven anchor standards:
-  1. Academics
-  2. Communications
-  3. Career Planning and Management
-  4. Technology
-  5. Problem Solving and Critical Thinking
-  6. Health and Safety
-  7. Responsibility and Flexibility
-  8. Ethics and Legal Responsibilities
-  9. Leadership and Teamwork
-  10. Technical Knowledge and Skills
-  11. Demonstration and Application
-- Eight of the eleven are the "other half" of school that Part 1 said we starved.
-- Pull direct quotes ([ICT sector PDF](https://www.cde.ca.gov/ci/ct/sf/documents/infocomtech.pdf)):
-  - 9.7: "Participate in interactive teamwork to solve real Information and Communication Technologies sector issues and problems."
-  - 11.1: work-based learning experiences that "demonstrate and expand upon knowledge and skills gained during classroom instruction."
-  - 11.5: "Create a portfolio, or similar collection of work, that offers evidence... of skills and knowledge competency."
-- **Point:** Standard 11 mandates project-based learning in all but name. Real teamwork, real problems, work-based learning, a portfolio of evidence. This is a state document.
-
-## The mapping
-
-Below is the same employer data from Part 1, with a third view added: where each skill lives (or doesn't) in the CTE anchor standards.
+The raw data first. These are the skills more than a thousand employers told the World Economic Forum they need, matched line by line against California's CTE anchor standards. Hover or tap a standard to read what the state actually wrote.
 
 {% raw %}
 <!-- WEF skills toggle widget, extended with a CTE-standards mapping view. -->
@@ -57,10 +27,14 @@ Below is the same employer data from Part 1, with a third view added: where each
   <div class="wsw-head">
     <h3 class="wsw-title">What employers say they need</h3>
     <div class="wsw-toggle" role="tablist" aria-label="Choose a view">
-      <button class="wsw-btn is-active" data-view="now" role="tab" aria-selected="true">Most essential today</button>
+      <button class="wsw-btn" data-view="now" role="tab" aria-selected="false">Most essential today</button>
       <button class="wsw-btn" data-view="growing" role="tab" aria-selected="false">Growing fastest by 2030</button>
+      <!-- "In the CTE standards" table tab hidden for now; restore by uncommenting
+           this button and the matching print block below. The view itself still
+           works via the #wef-skills-cte deep link.
       <button class="wsw-btn" data-view="cte" role="tab" aria-selected="false">In the CTE standards</button>
-      <button class="wsw-btn" data-view="match" role="tab" aria-selected="false">Match-up</button>
+      -->
+      <button class="wsw-btn is-active" data-view="match" role="tab" aria-selected="true">Match-up</button>
     </div>
   </div>
 
@@ -79,11 +53,13 @@ Below is the same employer data from Part 1, with a third view added: where each
     <p class="wsw-caption wsw-print-caption"></p>
     <div class="wsw-chart"></div>
   </div>
+  <!-- Hidden with the "In the CTE standards" tab; restore together.
   <div class="wsw-print" id="wsw-print-cte">
     <h4 class="wsw-print-title">Mapped to California CTE anchor standards</h4>
     <p class="wsw-caption wsw-print-caption"></p>
     <div class="wsw-chart"></div>
   </div>
+  -->
 
   <div class="wsw-legend">
     <span class="wsw-key"><i class="dot human"></i>Human / soft skill</span>
@@ -675,6 +651,10 @@ Below is the same employer data from Part 1, with a third view added: where each
   window.addEventListener("resize", function(){
     if(currentView === "match") drawMatchLines();
   });
+  // Redraw once everything has loaded, in case late layout shifts moved the chips.
+  window.addEventListener("load", function(){
+    if(currentView === "match") drawMatchLines();
+  });
 
   // Populate the print-only blocks once. The match-up view is screen-only:
   // its lines are measured from a live layout, which hidden print blocks lack.
@@ -701,17 +681,17 @@ Below is the same employer data from Part 1, with a third view added: where each
     var link = e.target.closest(".wsw-jump");
     if(!link) return;
     e.preventDefault();
-    var view = link.getAttribute("data-view") || "cte";
+    var view = link.getAttribute("data-view") || "match";
     var targetBtn = widget.querySelector('.wsw-btn[data-view="' + view + '"]');
     if(targetBtn) targetBtn.click();
     widget.scrollIntoView({behavior:"smooth", block:"center"});
   });
 
-  render("now");
+  render("match");
 
-  // Deep-link support: #wef-skills-growing / #wef-skills-cte / #wef-skills-match
+  // Deep-link support: #wef-skills-now / #wef-skills-growing / #wef-skills-cte
   // switch the widget to the right view on page load.
-  var hashViews = {"#wef-skills-growing":"growing", "#wef-skills-cte":"cte", "#wef-skills-match":"match"};
+  var hashViews = {"#wef-skills-now":"now", "#wef-skills-growing":"growing", "#wef-skills-cte":"cte", "#wef-skills-match":"match"};
   var view = hashViews[window.location.hash];
   if (view) {
     var btn = widget.querySelector('.wsw-btn[data-view="' + view + '"]');
@@ -720,6 +700,34 @@ Below is the same employer data from Part 1, with a third view added: where each
 })();
 </script>
 {% endraw %}
+
+## The irony (opening)
+
+**Key line to build the opening around:** The only standards in California that name the skills employers want most are the ones the accountability system never measures.
+
+- Callback to Part 1: the WEF employer list (creative thinking, resilience, leadership, teamwork).
+- The reader expects the argument to be "we need new standards." The surprise: the standards already exist. They were adopted in 2013 and they have been sitting in plain sight.
+
+## What the CTE anchor standards actually say
+
+- California's [CTE Model Curriculum Standards](https://www.cde.ca.gov/ci/ct/sf/ctemcstandards.asp) (adopted 2013) give all 15 industry sectors the same eleven anchor standards:
+  1. Academics
+  2. Communications
+  3. Career Planning and Management
+  4. Technology
+  5. Problem Solving and Critical Thinking
+  6. Health and Safety
+  7. Responsibility and Flexibility
+  8. Ethics and Legal Responsibilities
+  9. Leadership and Teamwork
+  10. Technical Knowledge and Skills
+  11. Demonstration and Application
+- Eight of the eleven are the "other half" of school that Part 1 said we starved.
+- Pull direct quotes ([ICT sector PDF](https://www.cde.ca.gov/ci/ct/sf/documents/infocomtech.pdf)):
+  - 9.7: "Participate in interactive teamwork to solve real Information and Communication Technologies sector issues and problems."
+  - 11.1: work-based learning experiences that "demonstrate and expand upon knowledge and skills gained during classroom instruction."
+  - 11.5: "Create a portfolio, or similar collection of work, that offers evidence... of skills and knowledge competency."
+- **Point:** Standard 11 mandates project-based learning in all but name. Real teamwork, real problems, work-based learning, a portfolio of evidence. This is a state document.
 
 ## Why they survived (the freedom of the unmeasured)
 
