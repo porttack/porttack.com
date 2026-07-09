@@ -3,6 +3,7 @@ layout: post
 title: "CodeHS vs CMU"
 date: 2026-06-10
 categories: draft
+label: Curriculum Review
 excerpt: "A comparison of two introductory computer science curricula for high school students: CodeHS and CMU CS Academy."
 excerpt_separator: <!--more-->
 ---

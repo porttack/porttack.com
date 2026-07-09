@@ -3,6 +3,7 @@ layout: post
 title:  "What Bootstrap Taught Me About the Hidden Math Gap in Computer Science Education"
 date:   2025-07-01
 categories: teaching professional-development
+label: Curriculum Review
 excerpt_separator: <!--more-->
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title:  "He Didn't Wait for Someone Else to Step Up"
 date:   2026-05-28
+label: Scholarship / Lions
 excerpt_separator: <!--more-->
 excerpt: "When COVID closed schools and cut kids off from one another, our scholarship recipient didn't wait for someone else to step up. He started a program for older students to read to elementary kids -- because we all need stories, and we all need connection."
 ---

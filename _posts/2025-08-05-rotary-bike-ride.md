@@ -3,6 +3,7 @@ layout: post
 title:  "200 Miles for At-Risk Youth in Our Community"
 date:   2025-08-05
 categories: rotary service
+label: Rotary
 excerpt_separator: <!--more-->
 ---
 <img src="https://porttack.com/docs/assets/images/bikeride20250802.jpeg">

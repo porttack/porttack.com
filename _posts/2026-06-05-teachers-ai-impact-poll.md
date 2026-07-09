@@ -4,6 +4,7 @@ title:  "More Than Half of Teachers Say AI Is Making Critical Thinking Harder to
 date:   2026-06-05
 excerpt_separator: <!--more-->
 categories: tech-news
+label: Tech News
 ---
 
 <img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3000x2000+0+0/resize/1600/quality/85/format/webp/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fd6%2F88%2F87ba2d1f48a08cb13b798e3f695b%2Fglam-ai-poll-final.jpg" alt="Illustration accompanying NPR's story on the teacher AI poll" style="max-height: 200px; width: auto; display: block;">
