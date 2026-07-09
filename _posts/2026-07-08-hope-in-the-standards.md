@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Soft Skills Are in the Standards"
+title: "Soft Skills Are Already in the Standards"
 date: 2026-07-08
 categories: draft
 excerpt_separator: <!--more-->
@@ -134,3 +134,146 @@ Industry has spent decades building lightweight ways to see this kind of work: d
 - Computer Science Teachers Association, [CSTA K-12 Computer Science Standards](https://csteachers.org/k12standards/) (revised 2017), including the seven core practices.
 - Computer Science Teachers Association, [Revised PK-12 Computer Science Standards: Draft 3.0](https://csteachers.org/wp-content/uploads/2025/12/Revised-CSTA-PK-12-Standards-Draft-3.0.pdf) (December 2025; final expected as soon as 2026), the in-progress revision with the AI strand, pillars, and dispositions quoted in the CSTA 2026 match-up.
 - World Economic Forum, [Future of Jobs Report 2025](https://reports.weforum.org/docs/WEF_Future_of_Jobs_Report_2025.pdf) (Figs. 3.3 and 3.4).
+
+# TODO — Part 2: "Soft Skills Are Already in the Standards"
+
+Post: `_posts/2026-07-08-hope-in-the-standards.md` (slug stays `hope-in-the-standards`)
+Status: draft, not public
+
+Working thesis: the state already adopted these skills. They are invisible not
+because anyone disagrees, but because nothing in the accountability system asks
+anyone to look. That is a measurement gap, not a villain.
+
+---
+
+## 1. Retitle + sync
+
+- [ ] `title:` → "Soft Skills Are Already in the Standards"
+- [ ] `_includes/series-toc.html` — Part 2 line currently reads "The Right Skills
+      Are Hidden in the Standards"; it never matched the post. Fix both the
+      `is-current` span and the `<a>`.
+- [ ] Decide on Part 3 retitle → "Run the Classroom Like a Studio"? (slug already
+      says this). If yes, update the TOC there too.
+
+## 2. Research: Perkins V (the core new evidence)
+
+The point to establish: **states are never required to report anything about
+soft skills.** Compliance is possible without one data point on the anchor
+standards.
+
+- [ ] Confirm the three secondary "program quality" indicator options states
+      choose from under Perkins V:
+      1. recognized postsecondary credential attainment
+      2. postsecondary credits (dual/concurrent enrollment, articulation)
+      3. participation in work-based learning
+      Source: ACTE, *Perkins 101: Accountability*
+      <https://www.acteonline.org/wp-content/uploads/2025/03/ACTE-Perkins101-Accountability-Feb2025.pdf>
+- [ ] Confirm states *may* add a state-developed measure of success (Sec.
+      113(b)(2)(iv), indicator 4) — this is the loophole that makes the
+      soft-skills measure legal but optional. Verify the statutory cite.
+      <https://www.acteonline.org/wp-content/uploads/2024/05/PerkinsV_Quality_Indicators_20221201_508.pdf>
+- [ ] Note that the work-based learning indicator measures **participation, not
+      skill** — Advance CTE / ECS say the measure isn't required to be structured
+      around completion or attainment.
+      <https://www.ecs.org/the-state-of-cte-work-based-learning-in-perkins-v-state-plans/>
+- [ ] Find **California's** Perkins V state plan. Which indicator(s) did CA pick?
+      Get the actual document, not a summary. (Try the WIOA State Plan Portal —
+      other states' plans are there: <https://wioaplans.ed.gov/>)
+- [ ] Check the CA School Dashboard **College/Career Indicator** for the same
+      question: what earns a student "prepared" status? Is any of it teamwork,
+      communication, or problem solving?
+
+## 3. Research: the federal government concedes the point
+
+- [ ] US ED, Office of Career, Technical, and Adult Education — Employability
+      Skills Framework. The landing page states that defining, measuring, and
+      building these skills — even naming them — is challenging. That is Part 2's
+      whole argument, admitted by the people who write the rules.
+      <https://cte.ed.gov/initiatives/employability-skills-framework>
+- [ ] Get the exact wording + a stable citation. Paraphrase, don't block-quote.
+
+## 4. Research: the honest counterexample (keep the piece from overclaiming)
+
+If a state assesses these skills, "too fuzzy to measure" is empirically false.
+This *strengthens* the argument — but only if I represent it fairly.
+
+- [ ] Idaho Workplace Readiness Assessment (WRA): required of CTE capstone
+      students and seniors in at least their second CTE course, grades 9–12.
+      Measures career-readiness standards.
+      <https://cte.idaho.gov/programs/secondary-education/workplace-readiness/>
+- [ ] Find out **what the WRA actually is.** Critical: if it's a multiple-choice
+      knowledge test *about* soft skills, that is the exact failure mode Part 1
+      warns against — measuring recall of teamwork instead of teamwork. Either
+      way it's usable:
+      - if it's performance-based → proof it can be done
+      - if it's a bubble sheet → proof that measuring it badly is the real risk,
+        which sets up Part 3's "new evidence, not new standards"
+- [ ] Scan for other states with employability-skill measures (candidates:
+      Virginia's Workplace Readiness Skills assessment, Kansas, Utah).
+      Two examples is enough; don't build a fifty-state table.
+
+## 5. Research: I'm not alone (contemporary voices)
+
+- [ ] eSchool News, "Rethinking employability skills in K–12 education" (Jul
+      2026). Argues employability skills become visible and measurable when the
+      experience–reflect–apply cycle is combined with rubrics, observation, peer
+      assessment, and portfolios. Quotes David Yanoski (Marzano Research) and
+      Hymel. Part 3 is a concrete instance of exactly this.
+      <https://www.eschoolnews.com/innovative-teaching/2026/07/06/rethinking-employability-skills-in-k-12-education/>
+- [ ] Optional: AFT / James Stone, "Signature Features of High-Quality CTE"
+      (2024) — frames engaging students in employability skills as the *primary
+      challenge* of high-quality CTE.
+      <https://www.aft.org/ae/spring2024/stone>
+
+## 6. Writing
+
+- [ ] **Reframe the villain.** Current draft says the soft half "goes untested,
+      which has kept it honest and kept it quiet." Keep that line — it's the best
+      one in the front matter and it's generous. Build the new Perkins section
+      around it. Nobody skipped these standards; nobody was ever asked to look.
+      Part 1 has a villain. Part 2 reveals there wasn't one. That turn is what
+      makes the piece forwardable to a principal.
+- [ ] **Add the cheating-question paragraph** (near the end, before "What it would
+      take"). The AI cheating panic is a measurement panic: we only fear the
+      machine where we were grading the artifact instead of the person. Part 1
+      opens the cheating question, Part 3 answers it — right now Part 2 doesn't
+      touch it, and that's the weld that makes three essays into one argument.
+- [ ] Add a short Perkins subsection. Suggested placement: after "the elective
+      wing" paragraph, before "Existence proof, with honest caveats." The elective
+      wing explains *where* the skills got filed; Perkins explains *why nobody
+      went looking.*
+- [ ] Fold the Idaho counterexample into "Existence proof, with honest caveats" —
+      it belongs with the caveats, not the argument.
+- [ ] Reread the widget caption. If the post now makes a Perkins claim, the chart
+      may need a line acknowledging that CTE anchor standards are aspirational and
+      unassessed. (Already partly there — check for redundancy.)
+
+## 7. Housekeeping
+
+- [ ] Update the References block with Perkins/ED/Idaho/eSchool sources.
+- [ ] `categories: draft` → real category when publishing.
+- [ ] Verify Part 1 and Part 3 cross-links still resolve after any title changes
+      (URLs don't change; only link *text* might want updating).
+- [ ] Excerpt still accurate after the Perkins addition?
+
+---
+
+## Open questions
+
+- Is "already" doing enough work in the title for a cold reader, or does the
+  general-public version ("California Already Wrote Down the Skills Employers
+  Want") reach further? Could A/B via the social share text without changing the
+  post title.
+- How hard do I want to hit Perkins? It's the strongest evidence in the piece,
+  but it's also federal-policy inside baseball. Parents and techies may glaze.
+  Possible fix: one sentence of plain English ("a school can score perfectly on
+  every federal CTE measure without anyone ever checking whether students can
+  work together") and put the citations in a footnote.
+- Do I have standing to critique accountability policy as a new teacher? Yes —
+  but the voice should be *"here is what the documents say,"* not *"here is what
+  administrators do."* Stay on paper. The documents can't be offended.
+
+---
+
+*Working notes from a conversation with Claude, 2026-07-09:*
+<https://claude.ai/share/5a86d887-71ff-4808-8dce-55d3d1bea4c3>
