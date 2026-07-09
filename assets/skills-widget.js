@@ -24,10 +24,12 @@
  *       hiddenViews: [                               // reachable by deep-link, no tab
  *         { view:"cte", anchor:"wef-skills-cte" }
  *       ],
- *       printViews: ["now","growing"],
  *       captions: { now: "..." }                    // optional per-post overrides
  *     });
  *   </script>
+ *
+ * Printing is WYSIWYG: the currently-shown view (chart, lines, caption) prints
+ * as-is; only the tabs and the hover hint are hidden. Switch tabs, then print.
  *
  * Config keys:
  *   el           CSS selector or element for the widget container.
@@ -36,7 +38,6 @@
  *   tabs         Array of { view, label, anchor? }. Order = display order.  (3)
  *                An anchor gives the tab a deep-link target (#anchor).      (2)
  *   hiddenViews  Array of { view, anchor? } reachable only by hash, no tab.
- *   printViews   Array of view names rendered into static print blocks.
  *   percentMax   Denominator for percent bars (default from dataset, else 80).
  *   tableView    View name that renders the standards table (default "cte").
  *   captions     { <view>: html } overrides merged over the dataset's captions.
@@ -158,18 +159,16 @@
     "  .skills-widget .wsw-mitem{font-size:.7rem; padding:.3rem .4rem;}",
     "  .skills-widget .wsw-mcol{width:44%;}",
     "  .skills-widget .wsw-mcol.right{width:40%;}}",
-    "/* On screen the interactive toggle is shown and the print blocks are hidden. */",
-    ".skills-widget .wsw-print{display:none;}",
     "@media print{",
-    "  /* Hide the interactive controls/live chart; show all static views instead. */",
-    "  .skills-widget .wsw-toggle, .skills-widget > .wsw-chart, .skills-widget > .wsw-caption{display:none !important;}",
-    "  .skills-widget .wsw-print{display:block; margin:0 0 1.2rem;}",
-    "  .skills-widget .wsw-print-title{font-size:1rem; font-weight:700; margin:0 0 .35rem;}",
-    "  .skills-widget .wsw-print-caption{margin:.2rem 0 .8rem; min-height:0;}",
-    "  /* No animation in print; bars carry their final width inline. */",
+    "  /* Print what's on screen: keep the live chart (and its SVG lines), drop",
+    "     only the controls and the hover hint that mean nothing on paper. */",
+    "  .skills-widget .wsw-toggle, .skills-widget .wsw-mhint{display:none !important;}",
+    "  /* No animation in print; freeze bars at their final width. */",
     "  .skills-widget .wsw-bar{transition:none !important;}",
-    "  /* Keep bar fills when printers drop background colors. */",
-    "  .skills-widget .wsw-bar, .skills-widget .dot, .skills-widget .wsw-fit{-webkit-print-color-adjust:exact; print-color-adjust:exact;}}"
+    "  /* Keep the diagram together on one page where possible. */",
+    "  .skills-widget .wsw-match{break-inside:avoid;}",
+    "  /* Keep fills/lines when printers drop background colors. */",
+    "  .skills-widget .wsw-bar, .skills-widget .dot, .skills-widget .wsw-fit, .skills-widget .wsw-match-svg{-webkit-print-color-adjust:exact; print-color-adjust:exact;}}"
   ].join("\n");
 
   function injectCss() {
@@ -247,37 +246,13 @@
       });
     }
 
-    // Print-only blocks: each requested view renders statically so a printout
-    // shows the views a reader can't click through on paper.
-    var labels = {};
-    (cfg.tabs || []).forEach(function (t) { labels[t.view] = t.label; });
-    this.printBlocks = {};
-    var frag = document.createDocumentFragment();
-    (cfg.printViews || []).forEach(function (entry) {
-      var view = typeof entry === "string" ? entry : entry.view;
-      var title = (typeof entry === "object" && entry.title) || labels[view] || view;
-      var block = document.createElement("div");
-      block.className = "wsw-print";
-      block.innerHTML = '<h4 class="wsw-print-title"></h4>'
-        + '<p class="wsw-caption wsw-print-caption"></p>'
-        + '<div class="wsw-chart"></div>';
-      block.querySelector(".wsw-print-title").innerHTML = title;
-      block.querySelector(".wsw-print-caption").innerHTML = self.CAPTIONS[view] || "";
-      block.querySelector(".wsw-chart").innerHTML = self.buildRows(view, true);
-      frag.appendChild(block); // built into a fragment so print order matches config order
-      self.printBlocks[view] = block;
-    });
-    // Insert the whole group just after the live chart so print flow follows screen order.
-    if (self.chart && self.chart.parentNode) {
-      self.chart.parentNode.insertBefore(frag, self.chart.nextSibling);
-    } else {
-      root.appendChild(frag);
-    }
   };
 
   // --- Row builders -------------------------------------------------------
 
   // Dispatch a view to its renderer: match view, standards table, or bars.
+  // The active view prints as-is (the live chart is shown in print), so there is
+  // no separate static print rendering.
   Widget.prototype.buildRows = function (view, staticWidth) {
     if (this.MATCH_VIEWS[view]) return this.buildMatch(view);
     if (view === this.tableView) return this.buildTable();
@@ -551,6 +526,15 @@
     var redraw = function () { if (self.MATCH_VIEWS[self.currentView]) self.drawMatchLines(); };
     window.addEventListener("resize", redraw);
     window.addEventListener("load", redraw);
+    // The page prints the live chart; if switching to print re-flows the widget
+    // to a new width, remeasure so the SVG lines still land on their chips.
+    window.addEventListener("beforeprint", redraw);
+    if (window.matchMedia) {
+      var mq = window.matchMedia("print");
+      var onmq = function (e) { if (e.matches) redraw(); };
+      if (mq.addEventListener) mq.addEventListener("change", onmq);
+      else if (mq.addListener) mq.addListener(onmq);
+    }
   };
 
   Widget.prototype.render = function (view) {

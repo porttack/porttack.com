@@ -56,8 +56,8 @@ SkillsWidget.init({
   hiddenViews: [
     {view:"cte",  anchor:"wef-skills-cte"},
     {view:"csta", anchor:"wef-skills-csta"}
-  ],
-  printViews: ["now", "growing"]
+  ]
+  // Printing is WYSIWYG: whichever tab is showing prints as-is, lines and all.
 });
 </script>
 {% endraw %}
