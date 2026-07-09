@@ -75,7 +75,6 @@ SkillsWidget.init({
     {view:"now",     label:"Most essential today",    anchor:"wef-skills-now"},
     {view:"growing", label:"Growing fastest by 2030", anchor:"wef-skills-growing"}
   ],
-  printViews: ["now", "growing"],
   // This post nudges readers from the "now" tab to "growing"; override just
   // that caption to add the in-widget jump link.
   captions: {
