@@ -116,9 +116,9 @@
     ".skills-widget .wsw-mcol.right .wsw-mitem{display:flex; align-items:center; gap:.45rem; cursor:pointer; -webkit-tap-highlight-color:transparent; transition:background .15s ease;}",
     ".skills-widget .wsw-mcol.right .wsw-mitem .dot{flex:none; width:9px; height:9px; margin:0;}",
     ".skills-widget .wsw-mtext{flex:1;}",
-    ".skills-widget .wsw-mcol.right .wsw-mitem:hover{background:#E6EAEE;}",
+    ".skills-widget .wsw-mcol.right .wsw-mitem:not(.is-active):hover{background:#E6EAEE;}",
     ".skills-widget .wsw-mcol.left .wsw-mitem{cursor:pointer; -webkit-tap-highlight-color:transparent; transition:background .15s ease;}",
-    ".skills-widget .wsw-mcol.left .wsw-mitem:hover{background:#E6EAEE;}",
+    ".skills-widget .wsw-mcol.left .wsw-mitem:not(.is-active):hover{background:#E6EAEE;}",
     ".skills-widget .wsw-mitem.is-active{background:var(--ink); color:#fff;}",
     ".skills-widget .wsw-mitem.is-active .wsw-mnum{color:#C9D2DA;}",
     ".skills-widget .wsw-minfo{flex:none; width:16px; height:16px; line-height:14px; text-align:center; font-size:.75rem; font-weight:700; color:var(--sub); border:1px solid #D5DBE1; border-radius:50%; background:#fff;}",
@@ -513,6 +513,14 @@
       if (self.pinned !== null) return;
       var chip = e.target.closest(".wsw-mitem[data-anchor], .wsw-mitem[data-skill]");
       if (chip) self.selectChip(chip, false);
+    });
+    // Leaving the interactive area (e.g. back up into the prose) drops the hover
+    // preview and restores all lines, matching the tab's initial state. The
+    // notes panel sits inside the chart, so moving down into it to read or
+    // scroll the notes does not count as leaving.
+    this.chart.addEventListener("mouseleave", function () {
+      if (self.pinned !== null) return;
+      if (self.MATCH_VIEWS[self.currentView]) self.clearSelection();
     });
     root.addEventListener("click", function (e) {
       var chip = e.target.closest(".wsw-mitem[data-anchor], .wsw-mitem[data-skill]");
