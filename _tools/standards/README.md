@@ -32,7 +32,7 @@ for future posts, alignment tables, or lesson-card work.
   <https://k12cs.org/wp-content/uploads/2016/09/K%E2%80%9312-Computer-Science-Framework.pdf>
 - CSTA K-12 standards, 2017 (compact; references practices by number only):
   <https://csteachers.org/wp-content/uploads/2025/03/csta-k-12-computer-science-standards-revised.pdf>
-- CSTA PK-12 standards Draft 3.0 (Dec 2025; next revision, expected 2027 —
+- CSTA PK-12 standards Draft 3.0 (Dec 2025; next revision, expected as soon as 2026 —
   adds an AI specialty strand, four pillars, and seven "dispositions" on
   PDF page 28):
   <https://csteachers.org/wp-content/uploads/2025/12/Revised-CSTA-PK-12-Standards-Draft-3.0.pdf>

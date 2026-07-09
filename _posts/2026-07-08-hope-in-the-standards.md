@@ -20,6 +20,7 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
 <a id="wef-skills-cte" aria-hidden="true" tabindex="-1" style="display:block;height:0;overflow:hidden;"></a>
 <a id="wef-skills-match" aria-hidden="true" tabindex="-1" style="display:block;height:0;overflow:hidden;"></a>
 <a id="wef-skills-csta" aria-hidden="true" tabindex="-1" style="display:block;height:0;overflow:hidden;"></a>
+<a id="wef-skills-csta3" aria-hidden="true" tabindex="-1" style="display:block;height:0;overflow:hidden;"></a>
 <div id="wef-skills-widget">
   <div class="wsw-head">
     <h3 class="wsw-title">Interactive Chart: Skills &harr; Standards</h3>
@@ -32,7 +33,12 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
       <button class="wsw-btn" data-view="cte" role="tab" aria-selected="false">In the CTE standards</button>
       -->
       <button class="wsw-btn is-active" data-view="match" role="tab" aria-selected="true">CTE Match-up</button>
+      <!-- CSTA 2017/CA 2018 match-up hidden for now; the current standards mute
+           the argument that the CSTA 2026 draft makes plainly. Restore by
+           uncommenting; the view still works via the #wef-skills-csta deep link.
       <button class="wsw-btn" data-view="csta" role="tab" aria-selected="false">CSTA Match-up</button>
+      -->
+      <button class="wsw-btn" data-view="csta3" role="tab" aria-selected="false">CSTA 2026 Match-up</button>
     </div>
   </div>
 
@@ -65,7 +71,7 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
     <span class="wsw-key"><i class="dot ai"></i>AI &amp; big data</span>
   </div>
 
-  <p class="wsw-source">Source: World Economic Forum, <em>Future of Jobs Report 2025</em> (Figs. 3.3 &amp; 3.4; global; n&gt;1,000 employers), and the California CTE Model Curriculum Standards knowledge and performance anchor standards (2013, ICT sector edition). In the standards table, Rank is each skill's 2025 employer rank; skills marked 2030 appear only on the fastest-growing list. Coverage rates how fully the anchor standard covers the skill: strong = named at the anchor-standard level, partial = covered by sub-standards, gap = thin or missing. The match-up views draw the mapping as lines: solid = strong, dashed = partial, no line = gap; hover or tap any item on the right to read its full text with the mapped sub-standards highlighted. The CTE match-up quotes the ICT sector edition (sector name abbreviated to ICT). The CSTA match-up sets the same skills against California's CS standards: the seven core practices (statements quoted from the K-12 Computer Science Framework, end-of-grade-12 expectations) and the five concept strands of the 9-12 core (standards quoted from the 2018 California CS standards).</p>
+  <p class="wsw-source">Source: World Economic Forum, <em>Future of Jobs Report 2025</em> (Figs. 3.3 &amp; 3.4; global; n&gt;1,000 employers), and the California CTE Model Curriculum Standards knowledge and performance anchor standards (2013, ICT sector edition). In the standards table, Rank is each skill's 2025 employer rank; skills marked 2030 appear only on the fastest-growing list. Coverage rates how fully the anchor standard covers the skill: strong = named at the anchor-standard level, partial = covered by sub-standards, gap = thin or missing. The match-up views draw the mapping as lines: solid = strong, dashed = partial, no line = gap; hover or tap any item on the right to read its full text with the mapped sub-standards highlighted. The CTE match-up quotes the ICT sector edition (sector name abbreviated to ICT). The CSTA 2026 match-up sets the same skills against the CSTA PK-12 Standards Draft 3.0 (December 2025; a draft, subject to change): its four pillars of practices, seven dispositions, and five concepts, all quoted from the draft.</p>
 </div>
 
 <style>
@@ -126,9 +132,14 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
 #wef-skills-widget .wsw-mitem .dot{width:9px; height:9px; margin-left:.35rem; vertical-align:-1px;}
 #wef-skills-widget .wsw-mitem.is-gap{background:#fff; border:1px dashed var(--tech); color:var(--sub);}
 #wef-skills-widget .wsw-mnum{font-weight:700; color:var(--sub); margin-right:.3rem;}
-/* Anchor-standard chips are interactive: hover or tap opens the detail panel. */
-#wef-skills-widget .wsw-mcol.right .wsw-mitem{display:flex; align-items:center; justify-content:space-between; gap:.45rem; cursor:pointer; -webkit-tap-highlight-color:transparent; transition:background .15s ease;}
+/* Both columns are interactive: right chips open the detail panel, left
+   chips highlight their match lines. */
+#wef-skills-widget .wsw-mcol.right .wsw-mitem{display:flex; align-items:center; gap:.45rem; cursor:pointer; -webkit-tap-highlight-color:transparent; transition:background .15s ease;}
+#wef-skills-widget .wsw-mcol.right .wsw-mitem .dot{flex:none; width:9px; height:9px; margin:0;}
+#wef-skills-widget .wsw-mtext{flex:1;}
 #wef-skills-widget .wsw-mcol.right .wsw-mitem:hover{background:#E6EAEE;}
+#wef-skills-widget .wsw-mcol.left .wsw-mitem{cursor:pointer; -webkit-tap-highlight-color:transparent; transition:background .15s ease;}
+#wef-skills-widget .wsw-mcol.left .wsw-mitem:hover{background:#E6EAEE;}
 #wef-skills-widget .wsw-mitem.is-active{background:var(--ink); color:#fff;}
 #wef-skills-widget .wsw-mitem.is-active .wsw-mnum{color:#C9D2DA;}
 #wef-skills-widget .wsw-minfo{flex:none; width:16px; height:16px; line-height:14px; text-align:center; font-size:.75rem; font-weight:700; color:var(--sub); border:1px solid #D5DBE1; border-radius:50%; background:#fff;}
@@ -242,17 +253,17 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
 
   // The eleven CTE knowledge and performance anchor standards.
   var CTE_ANCHORS = [
-    {id:"1", disp:"1.0", name:"Academics"},
-    {id:"2", disp:"2.0", name:"Communications"},
-    {id:"3", disp:"3.0", name:"Career Planning &amp; Management"},
-    {id:"4", disp:"4.0", name:"Technology"},
-    {id:"5", disp:"5.0", name:"Problem Solving &amp; Critical Thinking"},
-    {id:"6", disp:"6.0", name:"Health &amp; Safety"},
-    {id:"7", disp:"7.0", name:"Responsibility &amp; Flexibility"},
-    {id:"8", disp:"8.0", name:"Ethics &amp; Legal Responsibilities"},
-    {id:"9", disp:"9.0", name:"Leadership &amp; Teamwork"},
-    {id:"10", disp:"10.0", name:"Technical Knowledge &amp; Skills"},
-    {id:"11", disp:"11.0", name:"Demonstration &amp; Application"}
+    {id:"1", disp:"1.0", name:"Academics", cls:"tech"},
+    {id:"2", disp:"2.0", name:"Communications", cls:"human"},
+    {id:"3", disp:"3.0", name:"Career Planning &amp; Management", cls:"human"},
+    {id:"4", disp:"4.0", name:"Technology", cls:"tech"},
+    {id:"5", disp:"5.0", name:"Problem Solving &amp; Critical Thinking", cls:"tech"},
+    {id:"6", disp:"6.0", name:"Health &amp; Safety", cls:"tech"},
+    {id:"7", disp:"7.0", name:"Responsibility &amp; Flexibility", cls:"human"},
+    {id:"8", disp:"8.0", name:"Ethics &amp; Legal Responsibilities", cls:"human"},
+    {id:"9", disp:"9.0", name:"Leadership &amp; Teamwork", cls:"human"},
+    {id:"10", disp:"10.0", name:"Technical Knowledge &amp; Skills", cls:"tech"},
+    {id:"11", disp:"11.0", name:"Demonstration &amp; Application", cls:"human"}
   ];
 
   // Lines for the CTE match-up: s = index into CTE, a = anchor id.
@@ -415,18 +426,18 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
   // The CSTA/CA CS side of the mapping: the seven core practices plus the
   // five concept strands of the California 9-12 core.
   var CSTA_ANCHORS = [
-    {id:"P1", disp:"P1", name:"Fostering an Inclusive Computing Culture", unit:"practice"},
-    {id:"P2", disp:"P2", name:"Collaborating Around Computing", unit:"practice"},
-    {id:"P3", disp:"P3", name:"Recognizing &amp; Defining Computational Problems", unit:"practice"},
-    {id:"P4", disp:"P4", name:"Developing &amp; Using Abstractions", unit:"practice"},
-    {id:"P5", disp:"P5", name:"Creating Computational Artifacts", unit:"practice"},
-    {id:"P6", disp:"P6", name:"Testing &amp; Refining Computational Artifacts", unit:"practice"},
-    {id:"P7", disp:"P7", name:"Communicating About Computing", unit:"practice"},
-    {id:"CS", disp:"CS", name:"Computing Systems", unit:"strand"},
-    {id:"NI", disp:"NI", name:"Networks &amp; the Internet", unit:"strand"},
-    {id:"DA", disp:"DA", name:"Data &amp; Analysis", unit:"strand"},
-    {id:"AP", disp:"AP", name:"Algorithms &amp; Programming", unit:"strand"},
-    {id:"IC", disp:"IC", name:"Impacts of Computing", unit:"strand"}
+    {id:"P1", disp:"P1", name:"Fostering an Inclusive Computing Culture", unit:"practice", cls:"human"},
+    {id:"P2", disp:"P2", name:"Collaborating Around Computing", unit:"practice", cls:"human"},
+    {id:"P3", disp:"P3", name:"Recognizing &amp; Defining Computational Problems", unit:"practice", cls:"tech"},
+    {id:"P4", disp:"P4", name:"Developing &amp; Using Abstractions", unit:"practice", cls:"tech"},
+    {id:"P5", disp:"P5", name:"Creating Computational Artifacts", unit:"practice", cls:"human"},
+    {id:"P6", disp:"P6", name:"Testing &amp; Refining Computational Artifacts", unit:"practice", cls:"tech"},
+    {id:"P7", disp:"P7", name:"Communicating About Computing", unit:"practice", cls:"human"},
+    {id:"CS", disp:"CS", name:"Computing Systems", unit:"strand", cls:"tech"},
+    {id:"NI", disp:"NI", name:"Networks &amp; the Internet", unit:"strand", cls:"tech"},
+    {id:"DA", disp:"DA", name:"Data &amp; Analysis", unit:"strand", cls:"ai"},
+    {id:"AP", disp:"AP", name:"Algorithms &amp; Programming", unit:"strand", cls:"tech"},
+    {id:"IC", disp:"IC", name:"Impacts of Computing", unit:"strand", cls:"human"}
   ];
 
   // Skills with no entry here (motivation, curiosity, environmental
@@ -542,10 +553,159 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
     "9-12.AP.21":"Leadership & social influence"
   };
 
+  // The CSTA 3.0 draft (Dec 2025, final expected as soon as 2026): four
+  // pillars of practices, seven dispositions, five concepts. All text quoted
+  // from the draft; a draft is subject to change. Ordered to minimize line
+  // crossings against the WEF skill list.
+  var CSTA3_ANCHORS = [
+    {id:"CT", disp:"Pillar", name:"Computational Thinking", unit:"pillar", cls:"tech"},
+    {id:"D3", disp:"Disp.", name:"Critical Thinking", unit:"disposition", cls:"tech"},
+    {id:"D4", disp:"Disp.", name:"Persistence", unit:"disposition", cls:"human"},
+    {id:"INC", disp:"Pillar", name:"Inclusive Collaboration", unit:"pillar", cls:"human"},
+    {id:"D1", disp:"Disp.", name:"Creativity", unit:"disposition", cls:"human"},
+    {id:"D5", disp:"Disp.", name:"Reflectiveness", unit:"disposition", cls:"human"},
+    {id:"D2", disp:"Disp.", name:"Sense of Belonging", unit:"disposition", cls:"human"},
+    {id:"PR", disp:"Concept", name:"Programming", unit:"concept", cls:"tech"},
+    {id:"HCD", disp:"Pillar", name:"Human-Centered Design", unit:"pillar", cls:"human"},
+    {id:"D7", disp:"Disp.", name:"Curiosity", unit:"disposition", cls:"human"},
+    {id:"D6", disp:"Disp.", name:"Resourcefulness", unit:"disposition", cls:"human"},
+    {id:"AD", disp:"Concept", name:"Algorithms &amp; Design", unit:"concept", cls:"tech"},
+    {id:"DA3", disp:"Concept", name:"Data &amp; Analysis", unit:"concept", cls:"ai"},
+    {id:"SS", disp:"Concept", name:"Systems &amp; Security", unit:"concept", cls:"tech"},
+    {id:"ETH", disp:"Pillar", name:"Ethics &amp; Social Responsibility", unit:"pillar", cls:"human"},
+    {id:"CSoc", disp:"Concept", name:"Computing &amp; Society", unit:"concept", cls:"human"}
+  ];
+
+  // Every WEF skill has a line against the 3.0 draft; the only chip nothing
+  // points to is Computing & Society.
+  var CSTA3_LINKS = [
+    {s:0, a:"CT", w:"strong"}, {s:0, a:"D3", w:"strong"},
+    {s:1, a:"D4", w:"strong"},
+    {s:2, a:"INC", w:"partial"},
+    {s:3, a:"D1", w:"strong"},
+    {s:4, a:"D5", w:"strong"}, {s:4, a:"D2", w:"partial"},
+    {s:5, a:"PR", w:"strong"}, {s:5, a:"SS", w:"strong"},
+    {s:6, a:"HCD", w:"strong"}, {s:6, a:"INC", w:"partial"},
+    {s:7, a:"D7", w:"strong"}, {s:7, a:"D6", w:"partial"},
+    {s:8, a:"INC", w:"partial"},
+    {s:9, a:"HCD", w:"strong"},
+    {s:10, a:"DA3", w:"strong"}, {s:10, a:"AD", w:"strong"}, {s:10, a:"PR", w:"partial"},
+    {s:11, a:"SS", w:"strong"},
+    {s:12, a:"ETH", w:"partial"}
+  ];
+
+  var DISP_NOTE = " One of seven dispositions in the CSTA 3.0 draft: habits of mind that shape how students think, persist, collaborate, and reflect, beyond what they can code or recall.";
+  var CSTA3_DETAILS = {
+    CT: {desc:"One of four pillars of practices in the CSTA 3.0 draft: a way of thinking about problems and formulating problems and solutions so that an information-processing agent can help to solve them. The engineering design process is embedded within this pillar.", subs:[
+      {n:"6", t:"Define computational problems."},
+      {n:"6.a", t:"Identify real-world problems that can be solved computationally using rule-based approaches, data-driven approaches (e.g., machine learning), or hybrid methods."},
+      {n:"6.b", t:"Clearly state criteria for success and identify constraints."},
+      {n:"6.c", t:"Decompose complex problems into manageable subproblems."},
+      {n:"7", t:"Develop and use abstractions."},
+      {n:"7.a", t:"Extract common features and patterns from data, processes, or phenomena to create general methods and algorithms."},
+      {n:"7.b", t:"Create reusable modules and procedures that can apply to multiple situations to reduce complexity."},
+      {n:"7.c", t:"Model phenomena and develop simulations, using rule-based and data-driven approaches, to understand and evaluate potential outcomes."},
+      {n:"8", t:"Create computational artifacts."},
+      {n:"8.a", t:"Generate and evaluate multiple solution approaches to determine which best meet the defined criteria given the constraints."},
+      {n:"8.b", t:"Plan the development of computational solutions."},
+      {n:"8.c", t:"Implement solutions by developing or modifying artifacts through traditional programming, model training, or hybrid methods."},
+      {n:"9", t:"Test and refine computational artifacts."},
+      {n:"9.a", t:"Test, debug, and troubleshoot computational artifacts systematically using appropriate methods, such as generating test cases for rule-based programs and accuracy evaluation for machine learning models."},
+      {n:"9.b", t:"Iteratively refine and optimize solutions to meet criteria for success."}
+    ]},
+    INC: {desc:"One of four pillars of practices in the CSTA 3.0 draft: productive collaborations with diverse groups of people, addressing communication skills, project management skills, and personal conduct when working with others.", subs:[
+      {n:"3", t:"Communicate effectively about computing."},
+      {n:"3.a", t:"Share technical ideas and explain computing concepts clearly to different audiences."},
+      {n:"3.b", t:"Give and actively listen to others' input and constructive feedback. Consider diverse perspectives and multiple solutions to technical challenges."},
+      {n:"4", t:"Manage computing projects."},
+      {n:"4.a", t:"Establish shared goals, break the work into discrete tasks, and set development milestones."},
+      {n:"4.b", t:"Document code and development processes."},
+      {n:"5", t:"Act responsibly in computing collaborations."},
+      {n:"5.a", t:"Cultivate working relationships with individuals possessing diverse perspectives, skills, and personalities."},
+      {n:"5.b", t:"Participate reliably in computing teamwork, share responsibility for project outcomes, and meet development deadlines."},
+      {n:"5.c", t:"Reflect on contributions to computing projects, including technical decisions and team interactions, to improve technical and collaboration skills."}
+    ]},
+    HCD: {desc:"One of four pillars of practices in the CSTA 3.0 draft: responsibly creating computational solutions through human-centered design, including principles of human-computer interaction.", subs:[
+      {n:"10", t:"Understand and involve diverse users in design decisions."},
+      {n:"10.a", t:"Learn about different people's experiences with computing technologies, including those with different abilities, backgrounds, and needs."},
+      {n:"10.b", t:"Gather input and feedback from diverse users throughout the design and development process to help create positive user experiences."},
+      {n:"11", t:"Use iterative design processes."},
+      {n:"11.a", t:"Start with simple prototypes and continuously test and refine solutions to ensure usability and accessibility."},
+      {n:"12", t:"Design computational technologies that empower and inform users."},
+      {n:"12.a", t:"Respect users' autonomy. Be transparent about how computational technologies make decisions that affect users. Give users control over how they interact with technologies rather than leveraging human limitations to serve creators' interests over users' interests."},
+      {n:"12.b", t:"Consider the benefits and harms of human-like behaviors in computational technologies (e.g., conversational AI) and how they influence user perceptions and actions."}
+    ]},
+    ETH: {desc:"One of four pillars of practices in the CSTA 3.0 draft: habits that help students become responsible creators of technology, based on the ACM's general ethical principles.", subs:[
+      {n:"1", t:"Use computing for positive social impact."},
+      {n:"1.a", t:"Imagine and create computing technologies that solve problems, strengthen communities, and improve quality of life."},
+      {n:"1.b", t:"Evaluate whether potential benefits of computing solutions outweigh possible harms. Ensure that harms are not concentrated on specific groups and avoid serious environmental harm."},
+      {n:"1.c", t:"Explain design trade-offs in computing projects, including what values these decisions reflect and what was prioritized or sacrificed."},
+      {n:"2", t:"Respect others' rights when creating computational technologies."},
+      {n:"2.a", t:"Respect other creators of computational technologies. Only use others' work with permission and give appropriate attribution."},
+      {n:"2.b", t:"Respect users' privacy and protect their data. Give users choices about how their information is collected and used. Only collect the minimum amount of information necessary."}
+    ]},
+    D1: {desc:"\"Creativity: Generating original, meaningful computing ideas and projects.\"" + DISP_NOTE, subs:[]},
+    D2: {desc:"\"Sense of Belonging: Feeling included, respected, and recognized in the CS community.\"" + DISP_NOTE, subs:[]},
+    D3: {desc:"\"Critical Thinking: Using reasoning and evidence to analyze and refine solutions.\"" + DISP_NOTE, subs:[]},
+    D4: {desc:"\"Persistence: Continuing effort despite frustration or setbacks.\"" + DISP_NOTE, subs:[]},
+    D5: {desc:"\"Reflectiveness: Connecting past experiences to future learning choices.\"" + DISP_NOTE, subs:[]},
+    D6: {desc:"\"Resourcefulness: Strategically seeking tools, people, and references to solve problems.\"" + DISP_NOTE, subs:[]},
+    D7: {desc:"\"Curiosity: Asking questions and exploring beyond assigned work.\"" + DISP_NOTE, subs:[]},
+    AD: {desc:"One of five concepts in the CSTA 3.0 draft. An algorithm is a sequence of steps designed to accomplish a specific task. Students learn the development, combination, and decomposition of algorithms, the evaluation of competing algorithms, and the difference between traditional algorithms and artificial intelligence/machine learning (AI/ML) algorithms. Subconcepts, summarized from the draft:", subs:[
+      {n:"Algorithm Fundamentals", t:"Designing algorithms, step-by-step solutions to a task, with complexity and visual representation growing across grades."},
+      {n:"Problem Solving", t:"Optimizing algorithms for efficiency and accuracy; exploring algorithms' underlying opaque systems."},
+      {n:"Machine Learning", t:"Students train AI models for classification or prediction, analyze how training data shapes model output, and by high school justify the selection of AI algorithms and develop AI models for specific tasks. Sample standards: E4-ALG-02 \"Train an AI model to make a classification or prediction\" (elementary); HS-ALG-04 \"Evaluate AI-generated output to assess bias, accuracy, and potential harms.\""},
+      {n:"Impacts of Algorithms and Design", t:"Who an algorithm benefits, who it may unintentionally harm, and why; fairness, equity, accessibility, and bias."}
+    ]},
+    PR: {desc:"One of five concepts in the CSTA 3.0 draft. Programming controls all computing systems, empowering people to communicate with the world in new ways and solve compelling problems. Societal and ethical impacts are woven throughout its subconcepts, summarized from the draft:", subs:[
+      {n:"Programming Fundamentals", t:"Reading and interpreting code, translating algorithms into code, and understanding programming languages' types, syntax, and semantics."},
+      {n:"Program Development", t:"Building on existing code, modularizing code, documenting code, and using AI tools to support programming."},
+      {n:"Reading and Documenting Code", t:"\"In a world where AI assistants can generate code based on a prompt, the ability to read and interpret code is increasingly important.\" Students evaluate AI-generated code for accuracy, reliability, and usability (HS-PRO-17)."},
+      {n:"Testing and Refining Code", t:"Troubleshooting strategies, optimizing code for efficiency and usability, and assessing the accuracy and bias of AI-generated code."},
+      {n:"Data Handling", t:"How programs structure and store data; identifying, labeling, and manipulating data types."}
+    ]},
+    DA3: {desc:"One of five concepts in the CSTA 3.0 draft. Computers collect and store data so it can be analyzed to better understand the world and make more accurate predictions. The draft also adds a full Artificial Intelligence specialty strand for high school. Subconcepts, summarized from the draft:", subs:[
+      {n:"Data Fundamentals", t:"Types of data, how data is generated, collected, and organized; metadata and data documentation."},
+      {n:"Data Processing", t:"Filtering, grouping, summarizing, transforming, and reshaping data; automating data cleaning and preparing data for analysis."},
+      {n:"Data Investigation", t:"Posing data questions, analyzing with computational tools, creating visualizations, and telling the story of the data."},
+      {n:"Impacts of Data Science", t:"Bias in data, data privacy, artificial intelligence and machine learning, and large-scale societal and environmental impacts of data science applications."}
+    ]},
+    SS: {desc:"One of five concepts in the CSTA 3.0 draft: the broad categories of hardware and software, networks, and cybersecurity. A Cybersecurity specialty strand goes deeper for high school. Subconcepts, summarized from the draft:", subs:[
+      {n:"Hardware and Software", t:"How systems represent and process information; interactions between hardware and software at multiple levels."},
+      {n:"Security", t:"Protecting personal information, information transmission across devices, network design, and protecting networks from different types of threats."},
+      {n:"Networks", t:"How information is sent and received across different types of networks."},
+      {n:"Impacts of Computing Systems", t:"The benefits, harms, and new problems computing systems create, from individuals to global society."}
+    ]},
+    CSoc: {desc:"One of five concepts in the CSTA 3.0 draft. Computing shapes, and is shaped by, individuals, communities, and cultures around the world. Students learn to critically and responsibly navigate these social implications, considering issues of equity, access, and accountability. Subconcepts, summarized from the draft:", subs:[
+      {n:"History of Computing", t:"How technologies evolved in response to social, scientific, and economic needs; policy and legislation; disparities across communities."},
+      {n:"Emerging Technologies", t:"Recently developed technologies with the potential to significantly impact society; their core computational principles and ethical considerations."},
+      {n:"Humans and Computing", t:"Deciding when and where computing technologies, including AI, are appropriate and helpful; the trade-offs of AI-powered solutions; how human choices in designing, deploying, and regulating AI influence its outcomes."}
+    ]}
+  };
+
+  var CSTA3_COVERED = {
+    "Machine Learning":"AI & big data",
+    "Reading and Documenting Code":"AI & big data",
+    "Impacts of Data Science":"AI & big data",
+    "Security":"Networks & cybersecurity",
+    "Networks":"Networks & cybersecurity",
+    "3.b":"Empathy & active listening",
+    "4":"Leadership & social influence",
+    "4.a":"Talent management",
+    "5.b":"Leadership & social influence",
+    "1.b":"Environmental stewardship",
+    "10.a":"Empathy & active listening",
+    "10.b":"Service orientation",
+    "12.a":"Service orientation",
+    "6.a":"AI & big data",
+    "8.c":"AI & big data"
+  };
+
   // Everything a match-up view needs, keyed by view name.
   var MATCH_VIEWS = {
     match: {anchors: CTE_ANCHORS, links: CTE_LINKS, details: ANCHOR_DETAILS, covered: COVERED, rightTitle: "CTE anchor standards"},
-    csta: {anchors: CSTA_ANCHORS, links: CSTA_LINKS, details: CSTA_DETAILS, covered: CSTA_COVERED, rightTitle: "CS practices &amp; concept strands"}
+    csta: {anchors: CSTA_ANCHORS, links: CSTA_LINKS, details: CSTA_DETAILS, covered: CSTA_COVERED, rightTitle: "CS practices &amp; concept strands"},
+    csta3: {anchors: CSTA3_ANCHORS, links: CSTA3_LINKS, details: CSTA3_DETAILS, covered: CSTA3_COVERED, rightTitle: "CSTA 3.0 draft (2026)"}
   };
 
   var CAPTIONS = {
@@ -553,7 +713,8 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
     growing: "<b>Now AI leaps to number one.</b> But the human skills do not fall away. Creativity, resilience, curiosity, and leadership all stay near the top of what is growing fastest.",
     cte: "<b>Most of this list was written into California's standards in 2013.</b> Coverage rates how fully each anchor standard covers the skill. The gaps are honest too: creative thinking is thin, and AI was not yet on anyone's radar.",
     match: "<b>Thirteen employer skills, eleven anchor standards.</b> Solid lines are direct matches, dashed lines partial ones. The one skill with no line, and the one standard nothing points to, tell their own story.",
-    csta: "<b>Same thirteen skills, different document.</b> Against California's CS standards, the seven core practices and five concept strands, the gaps flip: AI &amp; big data finds a strong home and creative thinking becomes a whole practice, while motivation, curiosity, and environmental stewardship dangle. Once again, nothing points at the ethics strand."
+    csta: "<b>Same thirteen skills, different document.</b> Against California's CS standards, the seven core practices and five concept strands, the gaps flip: AI &amp; big data finds a strong home and creative thinking becomes a whole practice, while motivation, curiosity, and environmental stewardship dangle. Once again, nothing points at the ethics strand.",
+    csta3: "<b>Every skill now has a line.</b> Mapped against the CSTA 3.0 draft, the revision expected as soon as 2026, the last gaps close: persistence, curiosity, and reflectiveness arrive as named dispositions, environmental harm enters the ethics pillar, and AI runs through four of the five concepts, elementary school onward. The one thing no employer skill points at, once again, is the ethics-and-society side. The standards writers keep it anyway."
   };
 
   var chart = document.getElementById("wsw-chart");
@@ -587,17 +748,18 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
         + '<svg class="wsw-match-svg" preserveAspectRatio="none"></svg>'
         + '<div class="wsw-mcol left"><div class="wsw-mcol-h">WEF skills (2025 &amp; 2030)</div>';
       CTE.forEach(function(d, i){
-        html += '<div class="wsw-mitem' + (linked[i] ? '' : ' is-gap') + '" data-skill="' + i + '">'
+        html += '<div class="wsw-mitem' + (linked[i] ? '' : ' is-gap') + '" data-skill="' + i + '" role="button" tabindex="0">'
           + d.name + ' <i class="dot ' + d.cls + '"></i></div>';
       });
       html += '</div><div class="wsw-mcol right"><div class="wsw-mcol-h">' + mcfg.rightTitle + '</div>';
       mcfg.anchors.forEach(function(a){
         html += '<div class="wsw-mitem" data-anchor="' + a.id + '" role="button" tabindex="0" aria-expanded="false">'
-          + '<span><span class="wsw-mnum">' + a.disp + '</span>' + a.name + '</span>'
+          + '<i class="dot ' + a.cls + '"></i>'
+          + '<span class="wsw-mtext"><span class="wsw-mnum">' + a.disp + '</span>' + a.name + '</span>'
           + '<span class="wsw-minfo" aria-hidden="true">+</span></div>';
       });
       html += '</div></div>'
-        + '<p class="wsw-mhint">Hover or tap an item on the right to read its full text and see where the employer skills land.</p>'
+        + '<p class="wsw-mhint">Hover or tap a skill on the left to light up its matches, or an item on the right to read its full text and see where the employer skills land.</p>'
         + '<div class="wsw-detail" id="wsw-detail"></div>';
       return html;
     }
@@ -629,10 +791,11 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
     return html;
   }
 
-  // Detail-panel state: pinned = anchor locked open by click/tap;
-  // shownAnchor = anchor currently displayed (pinned or hover).
+  // Selection state. Selections are keyed "a:<anchorId>" (right column,
+  // opens the detail panel) or "s:<skillIndex>" (left column, highlights
+  // lines only). pinned = locked by click/tap; shown = current selection.
   var pinned = null;
-  var shownAnchor = null;
+  var shown = null;
 
   // Draw the match-up lines between skill chips and standard chips. Positions
   // come from the rendered layout, so this runs after render and on resize.
@@ -654,21 +817,24 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
       var x1 = sr.right - br.left + 2, y1 = sr.top + sr.height / 2 - br.top;
       var x2 = tr.left - br.left - 2, y2 = tr.top + tr.height / 2 - br.top;
       var mx = (x1 + x2) / 2;
-      paths += '<path data-a="' + l.a + '" d="M' + x1 + ' ' + y1 + ' C ' + mx + ' ' + y1 + ', ' + mx + ' ' + y2 + ', ' + x2 + ' ' + y2 + '"'
+      paths += '<path data-a="' + l.a + '" data-s="' + l.s + '" d="M' + x1 + ' ' + y1 + ' C ' + mx + ' ' + y1 + ', ' + mx + ' ' + y2 + ', ' + x2 + ' ' + y2 + '"'
         + ' fill="none" stroke="' + COLORS[CTE[l.s].cls] + '" stroke-width="2"'
         + (l.w === "partial" ? ' stroke-dasharray="5 4" opacity=".7"' : ' opacity=".9"') + '/>';
     });
     svg.innerHTML = paths;
-    if(shownAnchor !== null) highlightLines(shownAnchor);
+    if(shown !== null) highlightLines(shown);
   }
 
-  // Emphasize the lines into one right-side item; null restores all lines.
-  function highlightLines(n){
+  // Emphasize the lines of one selection ("a:<id>" or "s:<idx>"); null
+  // restores all lines.
+  function highlightLines(sel){
     var box = document.getElementById("wsw-match");
     if(!box) return;
+    var attr = sel && sel.charAt(0) === "a" ? "data-a" : "data-s";
+    var val = sel ? sel.slice(2) : null;
     Array.prototype.forEach.call(box.querySelectorAll(".wsw-match-svg path"), function(p){
-      if(n === null){ p.style.opacity = ""; p.style.strokeWidth = ""; }
-      else if(p.getAttribute("data-a") === n){ p.style.opacity = "1"; p.style.strokeWidth = "3"; }
+      if(sel === null){ p.style.opacity = ""; p.style.strokeWidth = ""; }
+      else if(p.getAttribute(attr) === val){ p.style.opacity = "1"; p.style.strokeWidth = "3"; }
       else { p.style.opacity = ".12"; p.style.strokeWidth = ""; }
     });
   }
@@ -722,51 +888,73 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
     }
     panel.innerHTML = html;
     panel.style.display = "block";
-    shownAnchor = n;
-    highlightLines(n);
-    Array.prototype.forEach.call(box.querySelectorAll('.wsw-mitem[data-anchor]'), function(c){
-      var active = c.getAttribute("data-anchor") === n;
-      c.classList.toggle("is-active", active);
-      c.setAttribute("aria-expanded", active ? "true" : "false");
-      var icon = c.querySelector(".wsw-minfo");
-      if(icon) icon.textContent = (active && pinned === n) ? "×" : "+";
-    });
+    shown = "a:" + n;
+    highlightLines(shown);
+    markActive(shown);
     if(scroll) panel.scrollIntoView({behavior:"smooth", block:"nearest"});
   }
 
-  function hideDetail(){
-    var panel = document.getElementById("wsw-detail");
-    if(panel) panel.style.display = "none";
-    shownAnchor = null;
-    highlightLines(null);
+  // Highlight a skill's lines (left column). No detail panel: the skill
+  // chips carry no document text, only their matches.
+  function showSkill(i){
     var box = document.getElementById("wsw-match");
     if(!box) return;
-    Array.prototype.forEach.call(box.querySelectorAll('.wsw-mitem[data-anchor]'), function(c){
-      c.classList.remove("is-active");
-      c.setAttribute("aria-expanded", "false");
-      var icon = c.querySelector(".wsw-minfo");
-      if(icon) icon.textContent = "+";
+    var panel = document.getElementById("wsw-detail");
+    if(panel) panel.style.display = "none";
+    shown = "s:" + i;
+    highlightLines(shown);
+    markActive(shown);
+  }
+
+  // Sync is-active / aria / +-icons on every chip against a selection key.
+  function markActive(sel){
+    var box = document.getElementById("wsw-match");
+    if(!box) return;
+    Array.prototype.forEach.call(box.querySelectorAll(".wsw-mitem"), function(c){
+      var key = c.hasAttribute("data-anchor") ? "a:" + c.getAttribute("data-anchor") : "s:" + c.getAttribute("data-skill");
+      var active = key === sel;
+      c.classList.toggle("is-active", active);
+      if(c.hasAttribute("data-anchor")){
+        c.setAttribute("aria-expanded", active ? "true" : "false");
+        var icon = c.querySelector(".wsw-minfo");
+        if(icon) icon.textContent = (active && pinned === sel) ? "×" : "+";
+      }
     });
   }
 
-  // Hover previews a standard; click/tap pins it open (tap again to close).
-  // The hover preview intentionally lingers so the panel below stays readable
-  // while the mouse travels to it.
+  function clearSelection(){
+    var panel = document.getElementById("wsw-detail");
+    if(panel) panel.style.display = "none";
+    shown = null;
+    highlightLines(null);
+    markActive(null);
+  }
+
+  function selectChip(chip, fromClick){
+    var key = chip.hasAttribute("data-anchor") ? "a:" + chip.getAttribute("data-anchor") : "s:" + chip.getAttribute("data-skill");
+    if(key.charAt(0) === "a") showDetail(chip.getAttribute("data-anchor"), fromClick);
+    else showSkill(parseInt(chip.getAttribute("data-skill"), 10));
+    return key;
+  }
+
+  // Hover previews; click/tap pins (tap again to close). The hover preview
+  // intentionally lingers so the panel below stays readable while the mouse
+  // travels to it.
   widget.addEventListener("mouseover", function(e){
     if(pinned !== null) return;
-    var chip = e.target.closest(".wsw-mitem[data-anchor]");
-    if(chip) showDetail(chip.getAttribute("data-anchor"), false);
+    var chip = e.target.closest(".wsw-mitem[data-anchor], .wsw-mitem[data-skill]");
+    if(chip) selectChip(chip, false);
   });
   widget.addEventListener("click", function(e){
-    var chip = e.target.closest(".wsw-mitem[data-anchor]");
+    var chip = e.target.closest(".wsw-mitem[data-anchor], .wsw-mitem[data-skill]");
     if(!chip) return;
-    var n = chip.getAttribute("data-anchor");
-    if(pinned === n){ pinned = null; hideDetail(); }
-    else { pinned = n; showDetail(n, true); }
+    var key = chip.hasAttribute("data-anchor") ? "a:" + chip.getAttribute("data-anchor") : "s:" + chip.getAttribute("data-skill");
+    if(pinned === key){ pinned = null; clearSelection(); }
+    else { pinned = key; selectChip(chip, true); markActive(key); }
   });
   widget.addEventListener("keydown", function(e){
     if(e.key !== "Enter" && e.key !== " ") return;
-    var chip = e.target.closest ? e.target.closest(".wsw-mitem[data-anchor]") : null;
+    var chip = e.target.closest ? e.target.closest(".wsw-mitem[data-anchor], .wsw-mitem[data-skill]") : null;
     if(!chip) return;
     e.preventDefault();
     chip.click();
@@ -777,7 +965,7 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
   function render(view){
     currentView = view;
     pinned = null;
-    shownAnchor = null;
+    shown = null;
     chart.innerHTML = buildRows(view, false);
     caption.innerHTML = CAPTIONS[view];
     requestAnimationFrame(function(){
@@ -833,11 +1021,13 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
 
   // Deep-link support: #wef-skills-now / #wef-skills-growing / #wef-skills-cte
   // switch the widget to the right view on page load.
-  var hashViews = {"#wef-skills-now":"now", "#wef-skills-growing":"growing", "#wef-skills-cte":"cte", "#wef-skills-match":"match", "#wef-skills-csta":"csta"};
+  var hashViews = {"#wef-skills-now":"now", "#wef-skills-growing":"growing", "#wef-skills-cte":"cte", "#wef-skills-match":"match", "#wef-skills-csta":"csta", "#wef-skills-csta3":"csta3"};
   var view = hashViews[window.location.hash];
   if (view) {
     var btn = widget.querySelector('.wsw-btn[data-view="' + view + '"]');
+    // Views whose tab is hidden (cte table, csta 2017) still render via hash.
     if (btn) btn.click();
+    else render(view);
   }
 })();
 </script>
@@ -845,13 +1035,15 @@ excerpt: "Part 2: The skills employers want most are already written into Califo
 
 *Part 2 of a series. [Part 1](/2026/06/19/optimizing-for-wrong-skills.html) argued that a generation of content-mastery optimization squeezed out many of the skills employers actually want. This piece points out that in 2013 California did put many of these skills into CTE (Career Technical Education) Anchor Standards.*
 
-## What is an anchor standard?
+## What is a CTE Anchor standard?
 
 California organizes career technical education into fifteen industry sectors: health science, construction, agriculture, and the one my courses live in, Information and Communication Technologies (ICT). Each sector defines pathway standards for its trade-specific skills. Underneath all of them, though, sit the same eleven **anchor standards**, adopted with the [CTE Model Curriculum Standards](https://www.cde.ca.gov/ci/ct/sf/ctemcstandards.asp) in 2013: the things California says every CTE student should learn no matter which sector they chose. Communicate. Plan a career. Solve problems. Take responsibility. Act ethically. Lead a team. And then Standard 11, the quiet radical of the group: demonstrate all of it through work-based learning and a portfolio of real work. That is project-based learning in all but name, written into a state document.
 
 The chart above matches those eleven anchors against the skills more than a thousand employers told the World Economic Forum they need most, the same data Part 1 was built on. Hover or tap any standard to read the state's own words.
 
-The second match-up uses a different document: California's [computer science standards](https://www.cde.ca.gov/be/st/ss/documents/csstandards.pdf), adopted in 2018 and adapted from the CSTA K-12 standards, the Computer Science Teachers Association framework that most states build their CS standards on. That document has two layers. The content standards are grouped into five concept strands, from Computing Systems to Impacts of Computing. Attached to every one of them are seven **core practices**, the ways students are expected to work: collaborating, communicating, creating, testing and refining. The practices are where the soft skills live, and the CSTA Match-up tab maps the employer list against both layers.
+### CSTA 3.0
+
+The second match-up looks at where computer science standards are heading. CSTA, the Computer Science Teachers Association, publishes the K-12 standards that most states build their CS standards on. California modified and adopted the 2017 revision, CSTA 2.0, as its own [computer science standards](https://www.cde.ca.gov/be/st/ss/documents/csstandards.pdf) in 2018, and it will likely do the same with the next version. That next version is taking shape now: the [draft of CSTA 3.0](https://csteachers.org/wp-content/uploads/2025/12/Revised-CSTA-PK-12-Standards-Draft-3.0.pdf), expected as soon as 2026, organizes computer science into five concepts, four **pillars** of practices like Inclusive Collaboration and Human-Centered Design, and seven **dispositions**, habits of mind like persistence and curiosity. The pillars and dispositions are where the soft skills live, and the CSTA 2026 Match-up tab maps the employer list against all three layers.
 
 ## The quiet irony
 
@@ -879,9 +1071,9 @@ The soft skills are in there too, but they live in a different layer. Every stan
 - **Creating Computational Artifacts**: creative thinking, which the CTE anchors cover only thinly.
 - (**Testing and Refining** is at least a cousin of resilience: iterate, debug, try again.)
 
-Put the two documents side by side (the CSTA Match-up tab in the chart above draws this second mapping) and the complementarity is striking. The CTE anchors name the human skills and miss AI; the CS standards name AI and the technical skills and carry the human ones as practices rather than headline outcomes. Neither document alone covers the employer list. The union covers all thirteen. I've seen this from the CS side already: my [*Little Brother* unit](/2026/06/14/little-brother.html) maps a novel onto the Impacts of Computing and Networking strands, eight and four standards respectively, over a third of the core reached through a story.
+Put the two documents side by side and the complementarity is striking. The CTE anchors name the human skills and miss AI; the CS standards name AI and the technical skills and carry the human ones as practices rather than headline outcomes. Neither document alone covers the employer list. The union covers all thirteen. I've seen this from the CS side already: my [*Little Brother* unit](/2026/06/14/little-brother.html) maps a novel onto the Impacts of Computing and Networking strands, eight and four standards respectively, over a third of the core reached through a story.
 
-And the documents are not frozen. CSTA is revising its standards now, with the next version expected in 2027, and the [current draft](https://csteachers.org/wp-content/uploads/2025/12/Revised-CSTA-PK-12-Standards-Draft-3.0.pdf) reads like it was written with this chart open. "AI is Part of CS" is a named priority, backed by a full artificial intelligence specialty strand. Ethics and inclusive collaboration are elevated to pillars that organize everything else. And a new category called **dispositions** names seven habits of mind the current standards leave implicit: creativity, sense of belonging, critical thinking, persistence, reflectiveness, resourcefulness, and curiosity. Two of the three skills dangling in the CSTA match-up above, motivation and curiosity, appear there as reflectiveness and curiosity, and the third, environmental stewardship, surfaces in the AI priority itself, which asks students to weigh the environmental costs of AI systems. The draft even includes a section on how its specialty standards relate to CTE. Standard by standard, revision by revision, the documents are converging on the employer list.
+And the documents are not frozen. CSTA is revising its standards now, with the next version expected as soon as 2026, and the [current draft](https://csteachers.org/wp-content/uploads/2025/12/Revised-CSTA-PK-12-Standards-Draft-3.0.pdf) reads like it was written with this chart open. "AI is Part of CS" is a named priority, and not a bolted-on one: AI outcomes run through the foundational standards for all students, elementary school onward (E4-ALG-02 has fourth graders train a classification model; HS-PRO-17 has high schoolers evaluate AI-generated code against program requirements), with a full artificial intelligence specialty strand on top. Ethics and inclusive collaboration are elevated to pillars that organize everything else. And a new category called **dispositions** names seven habits of mind the current standards leave implicit: creativity, sense of belonging, critical thinking, persistence, reflectiveness, resourcefulness, and curiosity. That closes the gaps the current standards leave: motivation and curiosity arrive as reflectiveness and curiosity, resilience as persistence, and environmental stewardship enters the ethics pillar itself, which asks students to avoid serious environmental harm. The CSTA 2026 Match-up tab above draws the result: every skill on the employer list has a line. The draft even includes a section on how its specialty standards relate to CTE. Standard by standard, revision by revision, the documents are converging on the employer list.
 
 One more detail worth a smile: both documents insist on ethics. CTE anchor 8.0 and the CS core's eight Impacts of Computing standards (9-12.IC.23-30) are the two largest blocks of "soft" content in either document, and ethics appears nowhere on the employer survey at all. The standards writers put it there anyway. Good.
 
@@ -911,5 +1103,5 @@ Industry has spent decades building lightweight ways to see this kind of work: d
 - [Information and Communication Technologies sector standards](https://www.cde.ca.gov/ci/ct/sf/documents/infocomtech.pdf) (PDF), including the knowledge and performance anchor standards quoted above.
 - California Department of Education, [Computer Science Standards for California Public Schools](https://www.cde.ca.gov/be/st/ss/documents/csstandards.pdf) (PDF, adopted 2018); individual standards browsable at the [CDE standards site](https://www2.cde.ca.gov/cacs/cs).
 - Computer Science Teachers Association, [CSTA K-12 Computer Science Standards](https://csteachers.org/k12standards/) (revised 2017), including the seven core practices.
-- Computer Science Teachers Association, [Revised PK-12 Computer Science Standards: Draft 3.0](https://csteachers.org/wp-content/uploads/2025/12/Revised-CSTA-PK-12-Standards-Draft-3.0.pdf) (December 2025), the in-progress revision with the AI strand, pillars, and dispositions.
+- Computer Science Teachers Association, [Revised PK-12 Computer Science Standards: Draft 3.0](https://csteachers.org/wp-content/uploads/2025/12/Revised-CSTA-PK-12-Standards-Draft-3.0.pdf) (December 2025; final expected as soon as 2026), the in-progress revision with the AI strand, pillars, and dispositions quoted in the CSTA 2026 match-up.
 - World Economic Forum, [Future of Jobs Report 2025](https://reports.weforum.org/docs/WEF_Future_of_Jobs_Report_2025.pdf) (Figs. 3.3 and 3.4).
