@@ -154,15 +154,174 @@ Computer science is ultimately about concepts rather than any specific language.
 
 ## Appendix C: CA Standards Coverage
 
-*Status: TBD - standards mapping in progress*
+CodeHS markets its California standards alignment prominently. CMU CS Academy
+publishes one too: its main alignment document lists CSTA and ISTE standards,
+and links to a separate state-specific document mapping CS1 directly to the
+California CDE Computer Science Content Standards. For teachers keeping score,
+California's 2018 standards are a modified adoption of CSTA 2017, so CMU's CSTA
+claims were already California claims wearing different numbers. The
+state-specific document just says so explicitly.
 
-CodeHS prominently markets alignment with California Computer Science Standards. CMU CS Academy does not produce equivalent marketing documentation. This asymmetry can create a false impression in administrative conversations about standards compliance.
+What follows is my own mapping of both courses against the California 9-12 core
+standards. The short version: on a coverage checklist the two courses nearly
+match, CMU undersells itself by one heavily-taught standard, and the real
+difference between the courses sits exactly where a checklist cannot see.
 
-A teacher-conducted mapping of CMU CS1 content against CA CS standards is in progress. Preliminary assessment indicates that CMU covers the relevant standards - it simply does not document that coverage in marketing materials.
+### What CMU claims
 
-The more important point is what "coverage" means. A curriculum that lists a standard as covered is not the same as a curriculum that teaches it in a way students retain and can apply. CodeHS touches many standards. Whether students walk away having genuinely learned what those standards describe is a different question - and one that classroom observation suggests a less confident answer to than the vendor's checklist implies.
+CMU's California document maps CS1 to nine of the eleven 9-12 core Algorithms &
+Programming standards:
 
-A completed standards mapping will be added to this appendix when available.
+| CA standard | What it names |
+|---|---|
+| 9-12.AP.12 | Design algorithms using original and existing algorithms |
+| 9-12.AP.13 | Use collections instead of repeated simple variables |
+| 9-12.AP.15 | Iteratively develop artifacts using events |
+| 9-12.AP.16 | Decompose problems into subproblems |
+| 9-12.AP.17 | Create artifacts using modular design |
+| 9-12.AP.18 | Design for broad audiences using feedback |
+| 9-12.AP.20 | Iteratively evaluate and refine an artifact |
+| 9-12.AP.21 | Work in team roles using collaborative tools |
+| 9-12.AP.22 | Document decisions made during design |
+
+### The standard CMU does not claim
+
+Neither CMU document claims **9-12.AP.14: justify the selection of specific
+control structures by identifying tradeoffs.** I do not know why. Units 3
+through 9 of CS1 are conditionals and loops almost without interruption, and
+students do not just use these constructs - they choose among them, and the
+Creative Task design sheet makes the choosing explicit. Before building, every
+student lists the coding concepts they plan to use and why. That is the
+standard's own language: justify your selection.
+
+Add AP.14 back and CS1 delivers ten of eleven. The eleventh, AP.19, asks
+students to explain software license limitations. That is not a first-course
+topic, and in this pathway it is not skipped - it is taught where it belongs, in
+AP CS Principles, where I cover it with my own materials.
+
+Beyond Algorithms & Programming, CS1 is deliberately narrow. It does not teach
+the Networks, Impacts, Computing Systems, or data visualization strands, and it
+should not. In a three-course pathway, the on-ramp earns its place by teaching
+one concept well. Those strands belong to the courses that follow. An intro
+course claiming all thirty core standards would be exactly the checkbox problem
+this appendix is about.
+
+### Unit-by-unit map: CS1
+
+Two structures recur in every unit and do not belong to any single row: the
+Creative Task (Units 1-10) and the collaborative task. They are listed at the
+bottom, because they are where the process standards actually live.
+
+| CS1 Unit | Introduced concepts | CA standards reached |
+|---|---|---|
+| 1 - Creating Drawings | shapes, colors, opacity | Foundational; no AP standard yet |
+| 2 - Functions, Mouse Events, Properties | functions, onMousePress/Release, properties | AP.15, AP.17 |
+| 3 - Mouse Motion, Conditionals, Helper Functions | onMouseMove/Drag, if, helper functions | AP.14, AP.15, AP.16 |
+| 4 - More Conditionals, Key Events, Methods | elif, key events, methods | AP.14, AP.15, AP.17 |
+| 5 - Complex Conditionals, More Key Events | compound/nested conditionals, onKeyHold | AP.14, AP.15 |
+| 6 - Groups, Step Events, Motion | groups, onStep, motion | AP.15 |
+| 7 - New Shapes, Local Variables, For Loops | local variables, for loops | AP.14, AP.17 |
+| 8 - Math Functions, Random, Nested Loops | library functions, random, nested loops | AP.12, AP.14 |
+| 9 - Types, Strings, While Loops | types, input, strings, while | AP.14 |
+| 10 - Lists and Return Values | lists, list methods, return values | AP.13, AP.17 |
+| 11 - 2D Lists and Board Games | 2D lists, game logic | AP.12, AP.13 |
+| 12 - Final Project | images, sounds, open-ended build | AP.15 |
+| Creative Task, Units 1-10 | design, build, reflect on a self-chosen artifact, against a rubric | AP.14, AP.20, AP.22 |
+| Collaborative task, every unit | pair programming in a real-time shared editor | AP.21 |
+
+The Creative Task is a rubric-scored cycle: describe the program, sketch the
+canvas, list the concepts you will use and why, build, reflect on one difficulty
+and how the design changed. That is documentation (AP.22) and refinement (AP.20)
+taught ten times a year. One caveat I will state rather than hide: AP.18
+requires incorporating feedback from users, and the rubric does not mandate a
+feedback step. CMU claims the standard and the structure supports it, but
+meeting it depends on the teacher building feedback into the task. In my
+classroom it is built in.
+
+### The same map for Corgi
+
+The same exercise applied to the CodeHS Corgi syllabus, with a caveat: the
+syllabus lists topics at a coarser grain than CMU's scope and sequence, so this
+is inferred from topic lists. Indicative, not audited.
+
+| Corgi Unit | Listed topics | CA standards (inferred) |
+|---|---|---|
+| 1 - Programming with Karel | functions, control flow, loops, conditionals, top-down design | AP.14, AP.16, AP.17 |
+| 2 - Karel Challenges | larger Karel problems | AP.12, AP.16 |
+| 3 - JavaScript Basics | variables, input, arithmetic, constants, random, functions | AP.17 |
+| 4 - The Canvas and Graphics | canvas, graphics, positioning | Foundational |
+| 5 - Graphics Challenges | larger graphics problems | AP.12 |
+| 6 - JavaScript Control Structures | booleans, if/else, operators, while, break, for, nesting | AP.14 |
+| 7 - Control Structures Challenges | larger problems | AP.12, AP.14 |
+| 8 - Functions | parameters, return values, scope | AP.17 |
+| 9 - Functions Challenges | larger problems | AP.12, AP.17 |
+| 10 - Animation and Games | timers, mouse and keyboard events | AP.15 |
+| 11 - Animations Challenges | larger animation problems | AP.12, AP.15 |
+| 12 - Project: Breakout | guided build, collision detection | AP.15 |
+| 13 - Final Project | project planning, pseudocode, open-ended build | AP.18, AP.20, AP.21, AP.22 |
+| 14 - Final Exam | cumulative assessment | - |
+| Optional extension - Data Structures | arrays, lists, objects, sets, grids | AP.13 |
+
+Two rows matter most.
+
+Collections first. In CS1, lists and 2D lists are core content, taught and
+assessed for every student. In Corgi they live in an optional extension
+sequenced after the final project, and the final exam does not touch them - its
+listed coverage is Karel, JavaScript basics, graphics, control structures,
+functions, and animation. Whether a Corgi student ever meets 9-12.AP.13 depends
+on whether their teacher assigns optional material after the course is
+functionally over. As designed and assessed, Corgi covers nine core AP
+standards. CS1 covers ten.
+
+Second, the process standards. In Corgi, design, refinement, documentation, and
+collaboration all land with intent in one place: the Unit 13 final project.
+Open-ended moments do appear earlier, but they are sporadic, not the rhythm of
+the course. Collaboration gets one lesson in Unit 3 - driver, navigator, list
+the pros and cons - and one lesson on pair programming is not 9-12.AP.21 any
+more than one lesson on essays is a writing curriculum.
+
+### Conclusion
+
+Put the two maps side by side and the checklists nearly match. Any argument for
+CMU that rests on counting standards will not get far, and should not.
+
+The real finding is this: **the standards a checklist verifies worst are the
+standards where these courses differ most.** Refine your work, collaborate in
+roles, document your decisions - AP.20, AP.21, AP.22 - get a checkmark from both
+vendors. CS1 delivers them as the rhythm of the course: a design-build-reflect
+cycle closing every unit, and a collaborative task in each one. Corgi delivers
+them once with intent, at the very end. Same checkmarks. Opposite classrooms.
+
+The AP.14 omission makes the same point from the other side. A standards sheet
+can under-credit a strong course just as easily as it can over-credit a weak
+one. The checklist fails in both directions.
+
+So the standards question, which dominates adoption conversations, turns out to
+be the least informative question you can ask about these two curricula. The
+mapping above is necessary. It retires the idea that one course is aligned and
+the other is not, and it belongs in the adoption paperwork. But it was never
+going to be the reason to choose. That reason is in the Creative Task and the
+collaborative editor, and there is no line for either on any alignment sheet.
+Coverage is packaging. The checklist cannot see pedagogy, and pedagogy is the
+product.
+
+### Sources
+
+- California Department of Education, *Computer Science Standards for California
+  Public Schools, Kindergarten through Grade Twelve* (adopted August 2018),
+  grades 9-12 core standards.
+- CMU CS Academy, *CS1: Introduction to Programming - Course Description and
+  Standard Alignment* (last updated 6/5/23), and its linked state-specific
+  mapping to the California CDE Computer Science Content Standards.
+- CMU CS Academy, *CS1 Scope and Sequence with Pacing Guide* (last updated
+  3/15/23) and *CS1 Creative Tasks* guide.
+- CodeHS, *Introduction to Computer Science with JavaScript (Corgi)* syllabus
+  (course 17397).
+
+Method: California standard text matched against each course's scope and
+sequence or syllabus. CMU's nine claimed standards are taken from its California
+document. 9-12.AP.14 is added on the basis of course content and the Creative
+Task requirement that students justify their choice of concepts.
 
 ---
 
