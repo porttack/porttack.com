@@ -282,28 +282,32 @@ more than one lesson on essays is a writing curriculum.
 
 ### Conclusion
 
-Put the two maps side by side and the checklists nearly match. Any argument for
-CMU that rests on counting standards will not get far, and should not.
+Evaluated independently, by a teacher who has examined and taught significant
+chunks of both courses, the two look very similar in standards coverage. The
+maps nearly match, and nothing in this appendix should be read as claiming
+otherwise.
 
-The real finding is this: **the standards a checklist verifies worst are the
-standards where these courses differ most.** Refine your work, collaborate in
-roles, document your decisions - AP.20, AP.21, AP.22 - get a checkmark from both
-vendors. CS1 delivers them as the rhythm of the course: a design-build-reflect
-cycle closing every unit, and a collaborative task in each one. Corgi delivers
-them once with intent, at the very end. Same checkmarks. Opposite classrooms.
+What the maps cannot show is where the coverage comes from, and I think that
+difference is what predicts retention. CMU reads like a pedagogy executed first
+and aligned afterward. The course is built around a rhythm - a creative task
+and a collaborative task closing nearly every unit - and the standards coverage
+falls out of that rhythm naturally. CodeHS reads more like a course designed by
+a computer scientist trying to implement a specification - the standards. Both
+approaches produce a defensible map.
 
-The AP.14 omission makes the same point from the other side. A standards sheet
-can under-credit a strong course just as easily as it can over-credit a weak
-one. The checklist fails in both directions.
+Different students learn different ways - some prefer CMU, some prefer CodeHS -
+but in three or so years, more have preferred CMU in every class that has seen
+both. Some do CMU for fun and some come back to it after they finish my class.
+That says something. And the rhythm of CMU works for students who need
+predictability, and there are plenty of those. Students retain what they
+repeatedly design, defend, and build with a partner. That is a hypothesis from
+classroom observation, not a measurement, and I hold it accordingly.
 
-So the standards question, which dominates adoption conversations, turns out to
-be the least informative question you can ask about these two curricula. The
-mapping above is necessary. It retires the idea that one course is aligned and
-the other is not, and it belongs in the adoption paperwork. But it was never
-going to be the reason to choose. That reason is in the Creative Task and the
-collaborative editor, and there is no line for either on any alignment sheet.
-Coverage is packaging. The checklist cannot see pedagogy, and pedagogy is the
-product.
+Maybe that is the honest value of a standards comparison: not as a scorecard,
+since the scores nearly tie, but as a way of seeing each course's depth and
+methodology. Read that way, the maps above and the body of this post say the
+same thing. Both courses cover the standards. I simply believe more strongly in
+CMU's pedagogy, and the body of this post is why.
 
 ### Sources
 
