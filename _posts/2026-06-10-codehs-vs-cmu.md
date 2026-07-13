@@ -331,13 +331,18 @@ Task requirement that students justify their choice of concepts.
 
 ## Appendix D: Student Placement in Introductory CS
 
-*Status: TBD - additional data being compiled*
+*Status: Still work in progress*
 
 Many of the challenges teachers encounter with introductory CS curricula - including CMU CS Academy - are better understood as placement problems than curriculum problems. Students arrive in introductory CS courses with widely varying preparation, motivation, and prior exposure to programming concepts through tools like Scratch and MakeCode.
 
 A student who is not ready for text-based programming will struggle in any text-based curriculum. The question worth asking is not only "which curriculum is better" but "which students are ready for this curriculum, and what do we offer students who are not yet ready."
 
 Data from multiple years of classroom observation across CMU CS Academy, CodeHS, and CS50 AP is being compiled to address this question more concretely. That analysis will be added here when complete.
+
+ * CMU is thoughtful about placement by design: CS1 is built around the reasoning and problem-solving maturity of an Algebra 1 student, while Exploring Programming (CS0) is the deliberately lighter middle school on-ramp. My experience teaching CS0 to sixth graders, and helpful modifications is here: [Sixth Graders and CMU's Exploring Programming (cs0)](/2026/07/13/sixth-grade-cmu-cs0.html)
+ * TBD: Students guessing vs learning/retaining. Anecdotal (All platforms)
+ * TBD: Code.org Discoveries progress skew (and other teacher observations)
+ * TBD: Issues with highly sequenced Computer Science concepts and how that impacts student absenteeism, and generally assisting students that constantly fall behind. CS concepts are so tightly sequenced that skipping a unit is frequently not an option.
 
 ---
 
