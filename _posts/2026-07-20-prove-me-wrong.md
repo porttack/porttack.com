@@ -10,23 +10,73 @@ excerpt: "A ready-to-run Socratic seminar built around a true AI-cheating story:
 
 Before I explain the lesson, read what my students read. It is a true story, and it is the whole hook.
 
-> **The Test That Everyone Aced**
->
-> **1.** A college professor named Roberto Serrano has taught the same class for almost twenty years. He gives a hard midterm every year. Normally, students score somewhere in the 60s and 70s. A perfect score is rare.
->
-> **2.** One year, he let his students take the midterm at home instead of in class. When he graded them, almost everyone did great. The class average was 96 out of 100. Forty students got a perfect score. Professor Serrano was not happy. He was suspicious. A test that hard should not suddenly be that easy.
->
-> **3.** So he tested his idea. He typed his own test questions into an AI chatbot, the kind like ChatGPT. The chatbot gave back answers. Some of them looked exactly like what his students had turned in, even the strange parts. It looked like students had let the AI take the test for them.
->
-> **4.** So Professor Serrano made the class a deal that was really a dare. The next test, the final, would be taken in the room, on paper, with no phones and no computers. If the class scored as high as they did at home, both tests would count. If they crashed, he would have his answer. **Prove me wrong.**
->
-> **5.** They could not. The in-class average dropped to about 48 out of 100, the lowest he had ever seen. Some students who had scored a perfect 100 at home did not even show up for the final.
->
-> **6.** Here is what the professor believes, and it is worth arguing about. He thinks the struggle of working something out in your own head is how your brain actually learns it. When a computer does the hard thinking for you, you get the answer, but you do not get the learning. The students had a great score. They did not have the knowledge underneath it.
->
-> **7.** But there is another side. AI is not always bad for learning. If you already understand something, AI can help you go further and faster, like a coach or a smart study partner. A calculator does not hurt you in math once you already know how the math works. The hard question is this: when does the tool help you, and when does it steal the practice you needed?
+<style>
+.seminar-reading{border:1px solid rgba(128,128,128,.35);border-radius:8px;margin:1.5rem 0;overflow:hidden;font-style:normal;}
+.seminar-reading__bar{display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.5rem .9rem;background:rgba(128,128,128,.12);border-bottom:1px solid rgba(128,128,128,.25);}
+.seminar-reading__label{font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;font-weight:700;opacity:.7;}
+.seminar-reading__copy{display:inline-flex;align-items:center;justify-content:center;padding:.3rem;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit;cursor:pointer;opacity:.7;line-height:0;}
+.seminar-reading__copy:hover{opacity:1;}
+.seminar-reading__copy.is-copied{color:#2e7d32;border-color:#2e7d32;opacity:1;}
+.seminar-reading__body{padding:1rem 1.15rem;line-height:1.6;font-style:normal;}
+.seminar-reading__body p{margin:0 0 .75rem;font-style:normal;}
+.seminar-reading__body p:last-child{margin-bottom:0;}
+.seminar-reading__title{font-weight:700;font-size:1.05rem;margin:0 0 .9rem;}
+</style>
+ 
+<div class="seminar-reading">
+  <div class="seminar-reading__bar">
+    <span class="seminar-reading__label">Student handout</span>
+    <button type="button" class="seminar-reading__copy" onclick="copySeminarReading(this)" aria-label="Copy the reading to the clipboard" title="Copy">
+      <svg class="seminar-reading__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+    </button>
+  </div>
+  <div class="seminar-reading__body" id="seminar-reading-text">
+    <p class="seminar-reading__title">The Test That Everyone Aced</p>
+    <p><strong>1.</strong> A college professor named Roberto Serrano has taught the same class for almost twenty years. He gives a hard midterm every year. Normally, students score somewhere in the 60s and 70s. A perfect score is rare.</p>
+    <p><strong>2.</strong> One year, he let his students take the midterm at home instead of in class. When he graded them, almost everyone did great. The class average was 96 out of 100. Forty students got a perfect score. Professor Serrano was not happy. He was suspicious. A test that hard should not suddenly be that easy.</p>
+    <p><strong>3.</strong> So he tested his idea. He typed his own test questions into an AI chatbot, the kind like ChatGPT. The chatbot gave back answers. Some of them looked exactly like what his students had turned in, even the strange parts. It looked like students had let the AI take the test for them.</p>
+    <p><strong>4.</strong> So Professor Serrano made the class a deal that was really a dare. The next test, the final, would be taken in the room, on paper, with no phones and no computers. If the class scored as high as they did at home, both tests would count. If they crashed, he would have his answer. <strong>Prove me wrong.</strong></p>
+    <p><strong>5.</strong> They could not. The in-class average dropped to about 48 out of 100, the lowest he had ever seen. Some students who had scored a perfect 100 at home did not even show up for the final.</p>
+    <p><strong>6.</strong> Here is what the professor believes, and it is worth arguing about. He thinks the struggle of working something out in your own head is how your brain actually learns it. When a computer does the hard thinking for you, you get the answer, but you do not get the learning. The students had a great score. They did not have the knowledge underneath it.</p>
+    <p><strong>7.</strong> But there is another side. AI is not always bad for learning. If you already understand something, AI can help you go further and faster, like a coach or a smart study partner. A calculator does not hurt you in math once you already know how the math works. The hard question is this: when does the tool help you, and when does it steal the practice you needed?</p>
+  </div>
+</div>
+<script>
+var SEMINAR_COPY_ICON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+var SEMINAR_CHECK_ICON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+function copySeminarReading(btn){
+  var el=document.getElementById('seminar-reading-text');
+  if(!el){return;}
+  var html=el.innerHTML;
+  var text=el.innerText.trim();
+  function done(){
+    btn.classList.add('is-copied');
+    btn.innerHTML=SEMINAR_CHECK_ICON;
+    setTimeout(function(){btn.classList.remove('is-copied');btn.innerHTML=SEMINAR_COPY_ICON;},1500);
+  }
+  if(navigator.clipboard&&window.ClipboardItem){
+    var item=new ClipboardItem({
+      'text/html':new Blob([html],{type:'text/html'}),
+      'text/plain':new Blob([text],{type:'text/plain'})
+    });
+    navigator.clipboard.write([item]).then(done,function(){seminarPlainCopy(text,done);});
+  }else if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done,function(){seminarPlainCopy(text,done);});
+  }else{
+    seminarPlainCopy(text,done);
+  }
+}
+function seminarPlainCopy(text,done){
+  var ta=document.createElement('textarea');
+  ta.value=text;ta.setAttribute('readonly','');
+  ta.style.position='absolute';ta.style.left='-9999px';
+  document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');done();}catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
 
-My students argue that story out before they hear a word from me. And where I land tends to surprise people: I do not think the students are the real failure here. That is the argument I make [in a separate post(Brown University: The Midterm Averaged 96. The Final Averaged 48.)](/2026/07/15/brown-university-ai-students.html), and it is exactly the kind of thing I keep out of the room until the very end. Everything below is how I hold my tongue.
+My students argue that story out before they hear a word from me. And where I land tends to surprise people: I do not think the students are the real failure here. That is the argument I make [in a separate post (Brown University: The Midterm Averaged 96. The Final Averaged 48.)](/2026/07/15/brown-university-ai-students.html), and it is exactly the kind of thing I keep out of the room until the very end. Everything below is how I hold my tongue.
 
 (The reading above is the whole handout, paragraph numbers and all. Lift it as is.)
 
