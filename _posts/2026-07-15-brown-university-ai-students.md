@@ -21,6 +21,6 @@ Here is the other side, and it matters. AI is not the villain of this story. For
 
 So the lesson is not "ban the machine." It is narrower and harder. Assessment that can be finished by pressing a button now measures your willingness to press it, and nothing more.
 
-The students did what the incentives rewarded, which makes this less a story about a broken generation and more a challenge to the people who design the work. Serrano changed one thing, and the gap revealed itself. The rest of us have to face a much larger, uncomfortable reality: there is no playbook for this yet. We are in entirely uncharted territory - educational, ethical, and human. Finding our way through will require us to rethink not just how we test, but how we want human society to work.
+The students did what the incentives rewarded, which makes this less a story about a broken generation and more a challenge to what, how, and why we educate our citizens. Serrano changed one thing, and the gap revealed itself. The rest of us have to face a much larger, uncomfortable reality: there is no playbook for this yet. We are in entirely uncharted territory - educational, ethical, and human. Finding our way through will require us to rethink not just how we test, but how we want human society to work.
 
 See also: [Optimizing for the Wrong Skills](/2026/06/19/optimizing-for-wrong-skills.html)
