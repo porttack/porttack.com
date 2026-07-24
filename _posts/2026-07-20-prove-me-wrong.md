@@ -5,8 +5,11 @@ date: 2026-07-20
 categories: lesson-plans
 label: Lesson Plan / AI Literacy
 excerpt_separator: <!--more-->
-excerpt: "A ready-to-run Socratic seminar built around a true AI-cheating story: the reading, the norms, a fishbowl with a hot seat, an entry ticket, an observer organizer, an exit ticket, a clear boundary for the student who came to perform, and the California standards it covers. The format is taught first, on accessible content, with my own opinion held back until the end."
+excerpt: "A ready-to-run Socratic seminar built around a true AI-cheating story: the reading, the norms, a fishbowl with a hot seat, an entry ticket, an observer organizer, an exit ticket, a clear boundary for the student who came to perform, and the California standards it covers. The format is taught first, on accessible content, with my own opinion held back until the end.<br><a href='/2026/07/20/prove-me-wrong.html'><img src='https://www.insidehighered.com/sites/default/files/styles/max_650x650/public/2026-07/Roberto_Serrano_Brown_University.jpg?itok=Ts4wzwtu' alt='Roberto Serrano, Brown University economics professor, next to a gate into Brown’s campus' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 ---
+
+<a href="https://www.insidehighered.com/news/faculty/learning-assessment/2026/07/08/brown-professor-suspects-most-his-class-used-ai-cheat"><img src="https://www.insidehighered.com/sites/default/files/styles/max_650x650/public/2026-07/Roberto_Serrano_Brown_University.jpg?itok=Ts4wzwtu" alt="Roberto Serrano, Brown University economics professor, next to a gate into Brown's campus" style="max-height: 250px; width: auto; display: block; margin: 0 auto 1em;"></a>
+<small>Roberto Serrano, the professor at the center of the story below. (via Inside Higher Ed)</small>
 
 Before I explain the lesson, read what my students read. It is a true story, and it is the whole hook.
 

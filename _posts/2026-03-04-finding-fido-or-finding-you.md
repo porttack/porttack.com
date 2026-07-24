@@ -5,9 +5,15 @@ date: 2026-03-04
 categories: teaching lesson-plans tech-news
 label: Lesson
 show_history: true
-excerpt: "In February, Ring spent a Super Bowl slot showing a lost dog reunited with a crying kid. It was heartwarming. It was also an ad for a neighborhood-wide surveillance network that is on by default, built by a founder who has spent a decade saying his real mission is to end crime. Here is the story, and why it belongs in a computer science classroom."
+excerpt: "In February, Ring spent a Super Bowl slot showing a lost dog reunited with a crying kid. It was heartwarming. It was also an ad for a neighborhood-wide surveillance network that is on by default, built by a founder who has spent a decade saying his real mission is to end crime. Here is the story, and why it belongs in a computer science classroom.<br><div style='display: flex; justify-content: center; gap: 0.5em; margin: 0.6em 0 0;'><img src='https://www.pcworld.com/wp-content/uploads/2026/02/Ring-Search-Party-Super-Bowl-ad-3.jpg?quality=50&strip=all&w=1024' alt='Screenshot from Ring’s Super Bowl ad showing the Search Party feature tracking a lost dog' style='max-height: 150px; width: auto; display: block;'><img src='https://piunikaweb.com/wp-content/uploads/2026/02/ring-dog-found-with-search-party.webp' alt='Ring app notification showing a dog found via Search Party' style='max-height: 150px; width: auto; display: block;'></div>"
 excerpt_separator: <!--more-->
 ---
+
+<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 0.6em 0 0;">
+<img src="https://www.pcworld.com/wp-content/uploads/2026/02/Ring-Search-Party-Super-Bowl-ad-3.jpg?quality=50&strip=all&w=1024" alt="Screenshot from Ring's Super Bowl ad showing the Search Party feature tracking a lost dog" style="max-height: 200px; width: auto; display: block;">
+<img src="https://piunikaweb.com/wp-content/uploads/2026/02/ring-dog-found-with-search-party.webp" alt="Ring app notification showing a dog found via Search Party" style="max-height: 200px; width: auto; display: block;">
+</div>
+<p style="text-align: center;"><small>Ring's Search Party ad tracking a lost dog, and the app notification when it finds one. (via PCWorld and PiunikaWeb)</small></p>
 
 <p style="text-align: center; font-size: 0.9em; margin: 0 0 1.5em;">Classroom slides: <a href="/docs/assets/slides/finding-fido-or-finding-you.pdf">PDF</a> &middot; <a href="https://docs.google.com/presentation/d/1_tl_4sCDswmFkHAdQrGfM5dEwCZdJXTh/edit?usp=sharing">Google Slides</a></p>
 
