@@ -4,8 +4,11 @@ title: "Brown University: The Midterm Averaged 96. The Final Averaged 48."
 date: 2026-07-15
 categories: tech-news
 tags: [AI, education, cognitive-offload, assessment]
-excerpt: "A Brown professor sent his midterm home and the class averaged 96. He brought the final back into the room and it averaged 48. The gap is one of the clearest pictures yet of what AI offloading does to learning, and why the fix is not simply banning the tool."
+excerpt: "A Brown professor sent his midterm home and the class averaged 96. He brought the final back into the room and it averaged 48. The gap is one of the clearest pictures yet of what AI offloading does to learning, and why the fix is not simply banning the tool.<br><img src='https://www.insidehighered.com/sites/default/files/styles/max_650x650/public/2026-07/Roberto_Serrano_Brown_University.jpg?itok=Ts4wzwtu' alt='Roberto Serrano, Brown University economics professor, next to a gate into Brown’s campus' style='max-height: 200px; width: auto; display: block;'>"
 ---
+
+<img src="https://www.insidehighered.com/sites/default/files/styles/max_650x650/public/2026-07/Roberto_Serrano_Brown_University.jpg?itok=Ts4wzwtu" alt="Roberto Serrano, Brown University economics professor, next to a gate into Brown's campus" style="max-height: 200px; width: auto; display: block;">
+<small>Roberto Serrano, next to a Brown University campus gate. (via Inside Higher Ed)</small>
 
 An economics professor at Brown gave a take-home midterm this spring. The class averaged 96. Forty of eighty-six students earned a perfect score. If you have ever graded a stack of exams, you know that number is not a triumph. It is a smoke alarm.
 
@@ -22,5 +25,9 @@ Here is the other side, and it matters. AI is not the villain of this story. For
 So the lesson is not "ban the machine." It is narrower and harder. Assessment that can be finished by pressing a button now measures your willingness to press it, and nothing more.
 
 The students did what the incentives rewarded, which makes this less a story about a broken generation and more a challenge to what, how, and why we educate our citizens. Serrano changed one thing, and the gap revealed itself. The rest of us have to face a much larger, uncomfortable reality: there is no playbook for this yet. We are in entirely uncharted territory - educational, ethical, and human. Finding our way through will require us to rethink not just how we test, but how we want human society to work.
+
+---
+
+I turned this story into a classroom activity, too: [a Socratic seminar built around it](/2026/07/20/prove-me-wrong.html), where students argue out the same question before they hear a word of my own opinion.
 
 See also: [Optimizing for the Wrong Skills](/2026/06/19/optimizing-for-wrong-skills.html)
