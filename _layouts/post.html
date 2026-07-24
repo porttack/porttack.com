@@ -6,6 +6,12 @@ layout: default
   {%- if page.categories contains "public-comment" -%}
     <p style="margin-bottom: 1em;"><a href="/blog/public-comment/">← All Public Comments</a></p>
   {%- endif -%}
+  {%- if page.categories contains "tech-news" -%}
+    <p style="margin-bottom: 1em;"><a href="/blog/news/">← All Tech News</a></p>
+  {%- endif -%}
+  {%- if page.categories contains "lesson-plans" -%}
+    <p style="margin-bottom: 1em;"><a href="/blog/lesson-plans/">← All Lesson Plans</a></p>
+  {%- endif -%}
   {%- if page.categories contains "draft" -%}
     <p style="margin-bottom: 1em;"><a href="/blog/drafts/">← All Drafts</a></p>
   {%- endif -%}
