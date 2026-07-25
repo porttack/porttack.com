@@ -2,7 +2,7 @@
 layout: post
 title: "New York Paused Its Robot Teacher. The Face Was Always the Problem."
 date: 2026-07-24
-categories: news
+categories: tech-news
 description: "A rural district on the Seneca Nation reservation spent $57,590 on a humanoid robot teaching assistant built by a company with roots in sex dolls. On Friday the state stepped in and the district hit pause. The data questions are fixable. The face isn't."
 ---
 
@@ -31,7 +31,7 @@ Here's the detail that turned a local ed-tech story into a national one. Realbot
 
 Realbotix told New York Focus that its education team is separate from RealDoll, sharing no employees, payroll, locations, or technology, and that it's pursuing a transaction to split the businesses at the ownership level by September. Fair enough. But the lineage is why the state teachers union came out swinging.
 
-## The objections, and then the state
+## The union objections, and then the NY State objections
 
 The New York State United Teachers, which represents nearly 700,000 members, [issued a blunt statement](https://www.rochesterfirst.com/adam-interviews/adam-interviews-humanoid-robot-coming-to-upstate-ny-school/). President Melinda Person said a robot from a company associated with sex dolls has no business in a classroom, and made the broader case that students need real relationships with caring adults, not simulated ones.
 
@@ -39,7 +39,7 @@ The union wasn't alone. The Alliance for Quality Education argued that underserv
 
 Then the regulator arrived. On Friday, Education Commissioner Betty Rosa sent Beehler a letter saying the department [remains concerned](https://nysfocus.com/2026/07/24/new-york-robot-teacher-plan-paused) about what a humanoid robot does inside a high school classroom, and that parents, teachers, and stakeholders are uneasy about AI in schools particularly when it involves robots that resemble humans. Hours later, the district announced the pilot was on hold while it works through enhanced student data privacy agreements with the state and talks to the community.
 
-## My take
+## My take - more reasons for concern
  
 The district described a careful setup, and the pause is partly about whether that setup survives review. Set it aside. Even if Salamanca satisfies the state on every data question, and it may, my objection doesn't move, because my objection was never the data.
  
@@ -63,7 +63,7 @@ The skills employers keep saying they need are the human ones, and [we are optim
 
 Those are learned by doing them with other people: splitting up work, blowing a handoff, fixing it, defending what you built to someone asking hard questions. A tutor can help a student master content. It cannot make a student into someone others want to work with. This point matters less than the first one, but it's the part that shows up in a kid's life twenty years later.
  
-### Why does a tutor need a face at all?
+### Why does an electronic tutor need a face at all?
  
 Strip the novelty off and this is the electronic babysitter in better clothes. We parked kids in front of televisions for decades, and we have been shipping computer-assisted learning software for at least three of those decades. AI is a genuinely new twist on that lineage, more responsive than anything before it, but it's the same idea wearing a nicer sweater.
  
@@ -82,5 +82,7 @@ Salamanca could have bought the tutor. It bought a face too. **That isn't innova
 ---
  
 *Have a student, parent, or teacher take on this? I'd like to hear it. [Drop me a note](/).*
+
+*Eric Brown teaches Computer Science and Robotics in Felton, California*
  
 *See also: [the Socratic seminar I built around the Brown story](/2026/07/20/prove-me-wrong.html), and [what happens when AI removes the productive struggle](/2026/02/04/when-ai-removes-productive-struggle.html). Sources: [New York Focus](https://nysfocus.com/2026/07/14/new-york-humanoid-robot-teacher-salamanca-school-district), [The Robot Report](https://www.therobotreport.com/realbotix-makes-transition-from-novelty-to-embodied-ai/), and [Rochester First](https://www.rochesterfirst.com/adam-interviews/adam-interviews-humanoid-robot-coming-to-upstate-ny-school/).*
