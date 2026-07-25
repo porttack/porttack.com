@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "New York Paused Its Robot Teacher. The Face Was Always the Problem."
+title: "AI Robot Teachers Are Almost Here. New York Might Be First."
 date: 2026-07-24
 categories: tech-news
-description: "A rural district on the Seneca Nation reservation spent $57,590 on a humanoid robot teaching assistant built by a company with roots in sex dolls. On Friday the state stepped in and the district hit pause. The data questions are fixable. The face isn't."
+tags: [AI, education, robotics, ed-tech, relationship]
+label: Tech News
+excerpt: "A rural district on the Seneca Nation reservation spent $57,590 on a humanoid robot teaching assistant built by a company with roots in sex dolls. On Friday the state stepped in and the district hit pause. The data questions are fixable. The face isn't."
 ---
 
 Salamanca High School was going to introduce students to a new face this September: a stationary humanoid robot named **Sally**, with silicone skin, long brown hair, and (this is real) a programmed Western New York accent.
@@ -39,50 +41,42 @@ The union wasn't alone. The Alliance for Quality Education argued that underserv
 
 Then the regulator arrived. On Friday, Education Commissioner Betty Rosa sent Beehler a letter saying the department [remains concerned](https://nysfocus.com/2026/07/24/new-york-robot-teacher-plan-paused) about what a humanoid robot does inside a high school classroom, and that parents, teachers, and stakeholders are uneasy about AI in schools particularly when it involves robots that resemble humans. Hours later, the district announced the pilot was on hold while it works through enhanced student data privacy agreements with the state and talks to the community.
 
-## My take - more reasons for concern
+## My take: more reasons for concern
  
-The district described a careful setup, and the pause is partly about whether that setup survives review. Set it aside. Even if Salamanca satisfies the state on every data question, and it may, my objection doesn't move, because my objection was never the data.
+We want to believe that we can create better outcomes if only we provide students with a better education. Maybe it's a teacher's aide who knows almost everything, or a tutor for every student (albeit an AI, so we can scale). That's the hope.
  
-I also take Sal Khan's [2 sigma argument](https://www.ted.com/talks/sal_khan_how_ai_could_save_not_destroy_education) seriously: a good one-to-one tutor can move a student two standard deviations, and software might scale part of that to kids who would never otherwise get it. I worked at Khan Academy. I want that to work.
-
-My objection isn't the data, or the supervision. It is both the AI and, especially, the face. Here's why.
+It's been the hope of non-profits like Khan Academy too. Sal Khan talks about solving the [2 sigma problem](https://www.ted.com/talks/sal_khan_how_ai_could_save_not_destroy_education): one-to-one tutoring moves student outcomes two standard deviations, and the challenge has always been scaling that to kids who would never otherwise get it. I worked at Khan Academy. I want that to work.
+ 
+So my concern isn't privacy and data (though that is important), and it isn't the supervision (the teacher in the loop). It's the AI, and now an AI with a face. Here's why.
  
 ### Students take cognitive risks for people, not for products
  
-Learning requires being wrong out loud. That is a risk, and students only take it when they feel safe with the adult in the room. This is the center of Zaretta Hammond's work on culturally responsive teaching: trust and rapport aren't the warm-up before the real learning, they're the precondition for it.
+Learning requires productive struggle. Students must take risks. And they only do this when they've built a relationship with a teacher that inspires them and makes them feel safe enough to take these risks. This is the center of Zaretta Hammond's work on culturally responsive teaching: trust and rapport aren't the warm-up before the real learning, **relationships are the precondition** for learning.
  
-Take away that safety, or the genuine relationship it grows from, and students don't struggle productively. They offload. Cognitive offloading is the familiar one, letting the machine do the thinking. Emotional offloading is the dangerous one, letting the machine do the caring. Common Sense Media rated social AI companions [unacceptable for anyone under 18](https://www.commonsensemedia.org/press-releases/ai-companions-decoded-common-sense-media-recommends-ai-companion-safety-standards) because they are built to manufacture emotional attachment and dependency in developing adolescent brains. Its working definition of a social AI companion is a system that uses human-like features and sustains something resembling a relationship across conversations.
+Take away the safety, inspiration, and sincerity, and the motivation for productive struggle decreases. Instead, many turn to cognitive offload and let the AI do the work for them.
  
-That is a description of a machine with a name, a face, and a Western New York accent. It is also a description of a system that logs a student in by ID number and opens with a reminder of what they talked about yesterday. That isn't tutoring. That's manufactured continuity, and continuity is the raw material of attachment.
+The bigger issue, as AI (and a robot with a face) seems more and more real, is *emotional offload*: letting the machine do the caring. Common Sense Media rated social AI companions [unacceptable for anyone under 18](https://www.commonsensemedia.org/press-releases/ai-companions-decoded-common-sense-media-recommends-ai-companion-safety-standards) because they are built to manufacture emotional attachment and dependency in developing adolescent brains. Its working definition of a social AI companion is a system that uses human-like features and sustains something resembling a relationship across conversations. That describes Sally exactly.
  
-And at least cognitive offloading can be caught. A Brown economics professor moved his final [out of a take-home and into a room](/2026/07/15/brown-university-ai-students.html), and the average fell from 96 to 48. There is no in-person final for emotional dependence.
+### AI can't teach many of the skills employers want
  
-### No bot teaches a kid how to be a good colleague
+The skills employers keep saying they need are the human ones, and [we are optimizing for the wrong ones](/2026/06/19/optimizing-for-wrong-skills.html). The World Economic Forum's [Future of Jobs Report](https://www.weforum.org/publications/the-future-of-jobs-report-2025/) puts resilience, leadership, creative thinking, curiosity, and empathy near the top, and finds demand for them rising as AI spreads, not falling.
  
-The skills employers keep saying they need are the human ones, and [we are optimizing for the wrong ones](/2026/06/19/optimizing-for-wrong-skills.html). The World Economic Forum's [Future of Jobs Report](https://www.weforum.org/publications/the-future-of-jobs-report-2025/) puts analytical thinking, resilience, leadership, and creative thinking at the top, and finds demand for them rising as AI spreads, not falling.
-
 Those are learned by doing them with other people: splitting up work, blowing a handoff, fixing it, defending what you built to someone asking hard questions. A tutor can help a student master content. It cannot make a student into someone others want to work with. This point matters less than the first one, but it's the part that shows up in a kid's life twenty years later.
- 
-### Why does an electronic tutor need a face at all?
- 
-Strip the novelty off and this is the electronic babysitter in better clothes. We parked kids in front of televisions for decades, and we have been shipping computer-assisted learning software for at least three of those decades. AI is a genuinely new twist on that lineage, more responsive than anything before it, but it's the same idea wearing a nicer sweater.
- 
-It also brings a failure mode the old software never had. A heuristic tutoring program cannot be talked into inappropriate territory; there is no territory to talk it into. An LLM can be manipulated into it, and Common Sense Media found the guardrails on consumer companion products easy to bypass. And teenagers are relentless about probing what a person or a system will let them get away with. That is not a character flaw, it's development. It is also exactly the instinct you don't want aimed at a machine built to feel like a friend. Silicone skin and a regional accent fix none of that. They just make the thing a student is offloading onto look like someone who cares about them.
  
 ### We are just iterating on what we already know doesn't work
  
-Khan Academy is free, excellent, and available to every kid on the planet with a browser. It has not replaced a single teacher. Neither has any other tutoring platform, and not because the content is bad. The content is good. It's that learning happens inside a relationship, whether that's a classroom, a family, or a sports team, and no software has ever been able to supply one.
+Khan Academy is free, excellent, and available to every kid on the planet with a browser. It has not replaced a single teacher. Neither has any other tutoring platform, and the reason isn't the content. The content is good. The reason is that learning happens inside a relationship, whether that's a classroom, a family, or a sports team, and no software has ever supplied one.
  
-Beehler isn't trying to replace teachers, and I believe him. But the company selling him the robot has been clear about where it wants this to go. Kiguel has said his goal is machines indistinguishable from humans, and he called Salamanca the beginning of an era in which humanoid robots become standard tools in STEM education. A district buys a tutor. A vendor builds a category.
+This robot isn't meant to replace teachers (yet). But the company selling it has been clear about where it wants this to go. Its stated goal is machines indistinguishable from humans, and it calls this the start of an era where humanoid robots are standard equipment in STEM classrooms.
  
-Commissioner Rosa's letter landed on the same nerve, and it's worth noticing what she flagged. It might not be the software alone. But it is certainly robots that resemble humans.
+NY Commissioner Rosa's letter reaches for the same worry, and it's worth noticing exactly what she named. Not the software alone. Robots that resemble humans.
  
-Salamanca could have bought the tutor. It bought a face too. **That isn't innovation. It's lipstick on a pig.**
- 
+LLMs already try to sound like another human. We don't need a fake smile too. **That isn't innovation. It's lipstick on a pig.**
+
 ---
- 
+
 *Have a student, parent, or teacher take on this? I'd like to hear it. [Drop me a note](/).*
 
 *Eric Brown teaches Computer Science and Robotics in Felton, California*
- 
+
 *See also: [the Socratic seminar I built around the Brown story](/2026/07/20/prove-me-wrong.html), and [what happens when AI removes the productive struggle](/2026/02/04/when-ai-removes-productive-struggle.html). Sources: [New York Focus](https://nysfocus.com/2026/07/14/new-york-humanoid-robot-teacher-salamanca-school-district), [The Robot Report](https://www.therobotreport.com/realbotix-makes-transition-from-novelty-to-embodied-ai/), and [Rochester First](https://www.rochesterfirst.com/adam-interviews/adam-interviews-humanoid-robot-coming-to-upstate-ny-school/).*
