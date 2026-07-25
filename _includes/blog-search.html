@@ -1,0 +1,73 @@
+<div class="blog-search">
+  <input type="text" id="search-input" class="search-input" placeholder="Search posts…" aria-label="Search posts">
+  <ul id="search-results" class="search-results"></ul>
+</div>
+
+<style>
+  .blog-search { position: relative; margin: 0 0 1.5em; max-width: 28em; }
+  .search-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5em 0.75em;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  .search-input:focus {
+    outline: none;
+    border-color: #2a7ae2;
+    box-shadow: 0 0 0 2px rgba(42, 122, 226, 0.2);
+  }
+  .search-results {
+    list-style: none;
+    margin: 0.25em 0 0;
+    padding: 0;
+  }
+  .search-results:not(:empty) {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .search-results li {
+    border-top: 1px solid #eee;
+  }
+  .search-results li:first-child {
+    border-top: none;
+  }
+  .search-results li a {
+    display: block;
+    padding: 0.5em 0.75em;
+    text-decoration: none;
+  }
+  .search-results li a:hover,
+  .search-results li a:focus {
+    background: #f5f8fc;
+  }
+  .search-results .search-result-title {
+    font-weight: 600;
+  }
+  .search-results .search-result-meta {
+    display: block;
+    font-size: 85%;
+    color: #666;
+    margin-top: 0.1em;
+  }
+</style>
+
+<script src="{{ '/assets/js/simple-jekyll-search.min.js' | relative_url }}"></script>
+<script>
+  window.SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '{{ "/search.json" | relative_url }}',
+    searchResultTemplate: '<li><a href="{url}"><span class="search-result-title">{title}</span><span class="search-result-meta">{date}{category}</span></a></li>',
+    templateMiddleware: function (prop, value) {
+      if (prop === 'category') {
+        return value ? ' · ' + value : '';
+      }
+    },
+    noResultsText: 'No matching posts.',
+    limit: 12,
+    fuzzy: false
+  });
+</script>

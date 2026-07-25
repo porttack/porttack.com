@@ -7,3 +7,5 @@
   <a href="/blog/public-comment/"{% if page.url == "/blog/public-comment/" %} style="font-weight: bold;"{% endif %}>Public Comments</a>{% if page.show_drafts %} |
   <a href="/blog/drafts/"{% if page.url == "/blog/drafts/" %} style="font-weight: bold;"{% endif %}>Drafts</a>{% endif %}
 </nav>
+
+{% include blog-search.html %}

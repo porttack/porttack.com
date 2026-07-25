@@ -1,0 +1,25 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+{%- assign sorted_posts = site.posts | sort: "date" | reverse -%}
+{%- assign needs_comma = false -%}
+{%- for post in sorted_posts -%}
+  {%- unless post.categories contains "draft" -%}
+    {%- if needs_comma -%},{%- endif -%}
+    {%- assign post_category = post.label -%}
+    {%- if post_category == nil or post_category == "" -%}
+      {%- assign post_category = post.categories | first -%}
+    {%- endif -%}
+    {
+      "title": {{ post.title | jsonify }},
+      "url": {{ post.url | relative_url | jsonify }},
+      "date": {{ post.date | date: "%b %-d, %Y" | jsonify }},
+      "category": {{ post_category | jsonify }},
+      "content": {{ post.content | strip_html | strip_newlines | jsonify }}
+    }
+    {%- assign needs_comma = true -%}
+  {%- endunless -%}
+{%- endfor -%}
+]
