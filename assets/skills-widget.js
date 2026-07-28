@@ -37,6 +37,9 @@
  *   defaultView  View shown on load when no matching URL hash is present.  (1)
  *   tabs         Array of { view, label, anchor? }. Order = display order.  (3)
  *                An anchor gives the tab a deep-link target (#anchor).      (2)
+ *                Append "?a=<id>" or "?s=<idx>" to that hash to also open
+ *                (and pin) one chip in a match view on load, e.g.
+ *                "#wef-skills-match?a=7" opens CTE anchor 7.0.
  *   hiddenViews  Array of { view, anchor? } reachable only by hash, no tab.
  *   percentMax   Denominator for percent bars (default from dataset, else 80).
  *   tableView    View name that renders the standards table (default "cte").
@@ -564,11 +567,28 @@
     });
   };
 
-  // Deep-link support: a matching hash switches the widget to that view on load.
-  // Views whose tab is hidden still render via their anchor.
+  // Deep-link support: a matching hash switches the widget to that view on
+  // load. Views whose tab is hidden still render via their anchor. An
+  // optional "?a=<id>" or "?s=<idx>" suffix on the hash also opens (and pins)
+  // one chip in a match view, e.g. "#wef-skills-match?a=7" for anchor "7" in
+  // the "match" view's chip list.
   Widget.prototype.applyHash = function () {
-    var view = this.hashViews[window.location.hash];
+    var hash = window.location.hash;
+    var qIdx = hash.indexOf("?");
+    var base = qIdx === -1 ? hash : hash.slice(0, qIdx);
+    var view = this.hashViews[base];
     if (view) this.render(view);
+    if (qIdx === -1 || !this.MATCH_VIEWS[this.currentView]) return;
+    var params = hash.slice(qIdx + 1), m;
+    if ((m = /(?:^|&)a=([^&]+)/.exec(params))) {
+      var id = decodeURIComponent(m[1]);
+      this.pinned = "a:" + id;
+      this.showDetail(id, true);
+    } else if ((m = /(?:^|&)s=([^&]+)/.exec(params))) {
+      var idx = decodeURIComponent(m[1]);
+      this.pinned = "s:" + idx;
+      this.showSkill(parseInt(idx, 10));
+    }
   };
 
   // Registry of named datasets. The data lives in a companion file that calls
