@@ -24,6 +24,10 @@ Before I explain the lesson, read what my students read. It is a true story, and
 .seminar-reading__body p{margin:0 0 .75rem;font-style:normal;}
 .seminar-reading__body p:last-child{margin-bottom:0;}
 .seminar-reading__title{font-weight:700;font-size:1.05rem;margin:0 0 .9rem;}
+.seminar-reading__body .write-line{border-bottom:1px solid rgba(128,128,128,.4);height:1.7rem;margin:0 0 .7rem;}
+.seminar-reading__body table{width:100%;border-collapse:collapse;margin:0 0 .75rem;}
+.seminar-reading__body th,.seminar-reading__body td{border:1px solid rgba(128,128,128,.35);padding:.5rem .6rem;text-align:left;vertical-align:top;height:2.2rem;}
+.seminar-reading__body th{background:rgba(128,128,128,.1);}
 </style>
  
 <div class="seminar-reading">
@@ -48,7 +52,8 @@ Before I explain the lesson, read what my students read. It is a true story, and
 var SEMINAR_COPY_ICON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
 var SEMINAR_CHECK_ICON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>';
 function copySeminarReading(btn){
-  var el=document.getElementById('seminar-reading-text');
+  var box=btn.closest('.seminar-reading');
+  var el=box?box.querySelector('.seminar-reading__body'):null;
   if(!el){return;}
   var html=el.innerHTML;
   var text=el.innerText.trim();
@@ -165,24 +170,69 @@ Back-pocket only. The goal is that students generate their own (the entry ticket
 
 **Entry ticket** (pre-work, or filled out in class right after reading together):
 
-> 1. **Two questions** the story raises for you, ones you could actually argue about.
-> 2. **A starting side, and why.** Changing your mind during the seminar is not losing. It is the point.
-> 3. **Two pieces of evidence** from the reading, by paragraph number.
+<div class="seminar-reading">
+  <div class="seminar-reading__bar">
+    <span class="seminar-reading__label">Student handout</span>
+    <button type="button" class="seminar-reading__copy" onclick="copySeminarReading(this)" aria-label="Copy the entry ticket to the clipboard" title="Copy">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+    </button>
+  </div>
+  <div class="seminar-reading__body">
+    <p class="seminar-reading__title">Entry Ticket</p>
+    <p><strong>1.</strong> Two questions the story raises for you, ones you could actually argue about.</p>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
+    <p><strong>2.</strong> A starting side, and why. Changing your mind during the seminar is not losing. It is the point.</p>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
+    <p><strong>3.</strong> Two pieces of evidence from the reading, by paragraph number.</p>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
+  </div>
+</div>
 
 **Observer organizer** (the outer circle fills it in while watching; it is their ticket into the hot seat):
 
-| What to catch | Who said it | My note |
-| --- | --- | --- |
-| An idea I agreed with | | |
-| An idea I would push back on | | |
-| The strongest point made | | |
-| A question nobody has asked yet | | |
+<div class="seminar-reading">
+  <div class="seminar-reading__bar">
+    <span class="seminar-reading__label">Student handout</span>
+    <button type="button" class="seminar-reading__copy" onclick="copySeminarReading(this)" aria-label="Copy the observer organizer to the clipboard" title="Copy">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+    </button>
+  </div>
+  <div class="seminar-reading__body">
+    <p class="seminar-reading__title">Observer Organizer</p>
+    <table>
+      <tr><th>What to catch</th><th>Who said it</th><th>My note</th></tr>
+      <tr><td>An idea I agreed with</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td>An idea I would push back on</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td>The strongest point made</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td>A question nobody has asked yet</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    </table>
+    <p><em>Tally each time someone builds on another person's idea instead of starting over:</em></p>
+    <div class="write-line"></div>
+  </div>
+</div>
 
-Plus one line at the bottom: *tally each time someone builds on another person's idea instead of starting over.* That move is the difference between a discussion and a set of speeches.
+That tally is the difference between a discussion and a set of speeches.
 
 **Exit ticket:**
 
-> Did your thinking move today? Three sentences: what you believed walking in, what you believe now, and what said or asked in the room moved you (or held you in place).
+<div class="seminar-reading">
+  <div class="seminar-reading__bar">
+    <span class="seminar-reading__label">Student handout</span>
+    <button type="button" class="seminar-reading__copy" onclick="copySeminarReading(this)" aria-label="Copy the exit ticket to the clipboard" title="Copy">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+    </button>
+  </div>
+  <div class="seminar-reading__body">
+    <p class="seminar-reading__title">Exit Ticket</p>
+    <p>Did your thinking move today? Three sentences: what you believed walking in, what you believe now, and what said or asked in the room moved you (or held you in place).</p>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
+  </div>
+</div>
 
 I grade effort and honesty here, not the position landed on. "I changed my mind because of what someone said" is the best possible answer.
 
