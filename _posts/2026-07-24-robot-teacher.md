@@ -5,7 +5,7 @@ date: 2026-07-24
 categories: tech-news
 tags: [AI, education, robotics, ed-tech, relationship]
 label: Tech News
-excerpt: "A rural district on the Seneca Nation reservation spent $57,590 on a humanoid robot teaching assistant built by a company with roots in sex dolls. On Friday the state stepped in and the district hit pause. The data questions are fixable. The face isn't."
+excerpt: "A rural district on the Seneca Nation reservation spent $57,590 on a humanoid robot teaching assistant built by a company with roots in sex dolls. On Friday the state stepped in and the district hit pause. The real problem isn't the data agreements. <br><img src='/docs/assets/images/ny-school-robot-inc.jpeg' alt='Sally' style='max-height: 200px; width: auto; display: block;'>"
 ---
 
 Salamanca High School was going to introduce students to a new face this September: a stationary humanoid robot named **Sally**, with silicone skin, long brown hair, and (this is real) a programmed Western New York accent.
@@ -13,6 +13,9 @@ Salamanca High School was going to introduce students to a new face this Septemb
 As of Friday afternoon, it isn't. The district has put the pilot on hold.
 
 The story broke in [New York Focus](https://nysfocus.com/2026/07/14/new-york-humanoid-robot-teacher-salamanca-school-district) and bounced around every outlet from Fox to the New York Post. Then the State Education Department got involved. As a computer science and robotics teacher, I spent the week reading past the headlines, and I think most of the argument has been aimed at the wrong target.
+
+![Sally](/docs/assets/images/ny-school-robot-inc.jpeg)
+*Sally. Photo: Courtesy Realbotix*
 
 ## What Salamanca was actually buying
 
