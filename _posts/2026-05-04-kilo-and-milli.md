@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Kilo & Milli: Borrowing the Meter Stick to Teach Electrical Units"
-date:   2026-08-02
+date:   2026-05-04
 categories: teaching lesson-plans
 label: Lesson Plan
 excerpt_separator: <!--more-->
