@@ -4,32 +4,33 @@ title:  "A Teaching Decision Record/Recommendation (TDR)"
 date:   2023-06-06
 categories: teaching
 ---
-Just like the world of engineering (or the rollercoaster ride of parenting 🎢), there are many decisions to make. Teachers, like captains at the helm, make choices about classroom management, procedures, assessments, grading, incentives, and discipline, all varying based on their unique school environment. Sometimes these decisions are intricate puzzles, and at other times, they call for collaboration. 🧩🤝
+Teachers make a lot of decisions: classroom management, grading, incentives, discipline, curriculum. None of it happens in a vacuum — every school and every classroom is different, and what worked at my last job or in someone else's room doesn't automatically transfer to mine.
 
-Many cutting-edge engineering companies have started using [Architecture Decision Records (ADRs)](https://github.com/joelparkerhenderson/architecture-decision-record/blob/main/README.md) to navigate through decision-making. This process is like a Swiss Army knife - it can apply to a multitude of decisions!
+In my old engineering life, teams facing that same kind of situation — lots of context-dependent decisions, lots of people who'd want a say — used [Architecture Decision Records (ADRs)](https://github.com/joelparkerhenderson/architecture-decision-record/blob/main/README.md). The idea is simple: write down what you decided, why, and what you considered, so the reasoning outlives the meeting where you made it.
 
+CTE teachers, myself included, are also picking curriculum, which is its own kind of architecture decision. So I've started keeping the same kind of record for teaching choices. I'm calling it a Teaching Decision Record, or TDR.
 
-Career Technical Education is taught by professionals such as myself. And in such cases, CTE teachers are  selecting curriculum as well.
+## Why bother
 
-## Goals 🎯
+* It gets feedback from other teachers, parents, and sometimes students on paper instead of lost in a hallway conversation.
+* It's a living document — I expect to come back and revise it once I've actually tried the thing in a classroom.
+* It gives old ideas a fair hearing next to new ones, instead of defaulting to whatever's trendiest.
 
-* Foster collaboration and feedback from educators & other relevant individuals (this could include professionals, parents, and even students at some level - everyone's voice matters! 🗣️)
-* Create living documents. Reflections and updated information are not just welcomed, they're celebrated! 🎉
-* Encourage the adaptation of existing new and old ideas for today’s dynamic classrooms.
+## What goes in one
 
-## Sections 📚
-These are all optional. And updates at any time are not just encouraged, they're a sign of growth! 🌱
+None of these are required. Fill in what's useful and skip the rest.
 
-* Decision - What is the current decision?
-* Status - Is the decision made? Awaiting feedback? Under analysis?
-* Decision Context - What is prompting this analysis?
-* Problem Statement - What are we trying to solve? 🧩
-* Options Considered - Likely long presentation of options
-* Decision rationale - Useful when there are many options
-* Implementation Plan - May point to other documents
-* Potential Risks and Mitigation
-* Reflections and Lessons Learned
-* References and appendixes
+* **Decision** — what's actually being decided
+* **Status** — proposed, decided, or under review
+* **Decision Context** — what prompted this
+* **Problem Statement** — what we're trying to solve
+* **Options Considered**
+* **Decision Rationale** — mainly worth writing when there were several real options
+* **Implementation Plan** — can just point to another document
+* **Potential Risks and Mitigation**
+* **Reflections and Lessons Learned**
+* **References and Appendixes**
 
-Remember, every decision is a step forward in our journey of shaping the future! 🌟
+It's a template, not a form. The point is to have somewhere to put the reasoning down before it evaporates.
 
+Here's the [Google Doc template](https://docs.google.com/document/d/1Z3Hank8scmEcj05UgxJK7WEZwptJ65JbYc17Crm_ulo/edit?usp=sharing) I actually use — File > Make a copy if you want your own.
