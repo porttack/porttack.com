@@ -256,6 +256,24 @@ This *strengthens* the argument — but only if I represent it fairly.
       (URLs don't change; only link *text* might want updating).
 - [ ] Excerpt still accurate after the Perkins addition?
 
+## Essay #2 — AFT ten-point plan as evidence
+
+- [ ] Pull the AFT AI plan directly (aft.org, ~late May/early June 2026). Confirm the
+      five planks: age-based limits, foundations-then-applied, teacher capacity AND
+      authority, safety/privacy in procurement, independent (non-vendor) research.
+- [ ] Verify the "6 in 10 teachers use AI, 18% get formal guidance" stat. Sourced
+      secondhand from Kotran (aiEDU) — find the original survey. Possibly Gallup/Walton
+      or EdWeek Research Center. Do not cite until confirmed.
+- [ ] Use as the concession: a national union having to *demand* teacher capacity and
+      authority is an admission teachers currently have neither. The system's own
+      advocates say the support isn't there.
+- [ ] Candidate pull-line: "The union had to ask for the thing the system should
+      already be providing."
+- [ ] Decide framing: AFT as ally-evidence, not as endorsement. Avoid making the essay
+      read as union advocacy — the argument is structural, not political.
+
+Source: Alex Kotran, "An AI backlash is brewing," Notes on AI Readiness, Aug 5 2026.
+
 ---
 
 ## Open questions
