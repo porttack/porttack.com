@@ -1,0 +1,132 @@
+{%- comment -%}
+  Who sees a student's chatbot disclosure: Sec. 3 prov. 10 versus a narrower rule.
+
+  Usage (add the Liquid tag braces yourself):
+     include disclosure-routing.html
+     include disclosure-routing.html id="second-one"
+
+  Self-contained. No dependencies.
+{%- endcomment -%}
+{%- assign uid = include.id | default: "droute" -%}
+
+<div class="pt-widget pt-droute" id="{{ uid }}">
+  <p class="pt-widget__eyebrow">Interactive &middot; who receives it</p>
+  <h3 class="pt-widget__title">One message, five destinations</h3>
+  <p class="pt-widget__lede">
+    A student types something into a district-licensed chatbot. Toggle between what
+    Section 3, provision 10 specifies and what a narrower rule would do. Click any
+    recipient to see what a district would have to establish before that disclosure
+    is defensible.
+  </p>
+
+  <div class="pt-droute__toggle" role="group" aria-label="Choose a routing rule">
+    <button type="button" data-rule="bill" aria-pressed="true">As the bill is written</button>
+    <button type="button" data-rule="narrow" aria-pressed="false">A narrower rule</button>
+  </div>
+
+  <p class="pt-droute__msg">
+    <span class="pt-droute__time">11:04 PM</span>
+    <span class="pt-droute__bubble">I don't really want to be here anymore.</span>
+  </p>
+
+  <ul class="pt-droute__list" aria-live="polite"></ul>
+
+  <p class="pt-droute__foot"></p>
+</div>
+
+<style>
+.pt-droute { --on: var(--pt-control,#b3372e); --off: var(--pt-rule,#d9d5cc); --ok: var(--pt-capability,#2f7d5a); }
+.pt-droute__toggle { display:flex; gap:.4rem; margin-bottom:1.2rem; flex-wrap:wrap; }
+.pt-droute__toggle button { font:inherit; font-size:.8rem; padding:.4rem .8rem; border:1px solid var(--pt-rule,#d9d5cc); background:transparent; color:inherit; border-radius:999px; cursor:pointer; }
+.pt-droute__toggle button[aria-pressed="true"] { border-color:currentColor; box-shadow:inset 0 0 0 1px currentColor; font-weight:600; }
+
+.pt-droute__msg { margin:0 0 1.2rem; display:flex; align-items:baseline; gap:.6rem; flex-wrap:wrap; }
+.pt-droute__time { font-family:var(--pt-mono,monospace); font-size:.72rem; color:var(--pt-ink-soft,#555f68); }
+.pt-droute__bubble { display:inline-block; padding:.5rem .85rem; border-radius:14px 14px 14px 3px; background:color-mix(in srgb, currentColor 8%, transparent); font-size:.95rem; }
+
+.pt-droute__list { list-style:none; padding:0; margin:0 0 1rem; display:grid; gap:.35rem; }
+.pt-droute__list li { margin:0; }
+.pt-droute__item { display:flex; align-items:flex-start; gap:.7rem; width:100%; text-align:left; font:inherit; font-size:.9rem; padding:.55rem .7rem; border:1px solid transparent; border-radius:4px; background:transparent; color:inherit; cursor:pointer; transition:opacity .25s ease; }
+.pt-droute__item:hover { border-color:var(--pt-rule,#d9d5cc); }
+.pt-droute__dot { flex:0 0 auto; width:.65rem; height:.65rem; border-radius:50%; margin-top:.35rem; background:var(--off); transition:background-color .25s ease; }
+.pt-droute__item[data-on="1"] .pt-droute__dot { background:var(--on); }
+.pt-droute__item[data-on="0"] { opacity:.4; }
+.pt-droute__role { font-weight:600; }
+.pt-droute__why { display:block; font-size:.82rem; color:var(--pt-ink-soft,#555f68); line-height:1.45; margin-top:.15rem; }
+.pt-droute__foot { font-size:.85rem; color:var(--pt-ink-soft,#555f68); line-height:1.5; margin:0; }
+</style>
+
+<script>
+(function(){
+  var root = document.getElementById({{ uid | jsonify }});
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = "1";
+
+  var R = [
+    { role:"School counselor", bill:1, narrow:1,
+      why:"Trained to receive this. In California, Education Code 49602 makes what a pupil twelve or older tells a counselor confidential and outside the pupil record, with enumerated exceptions. That protection is the reason this role exists." },
+    { role:"Principal", bill:1, narrow:0,
+      why:"A school official under FERPA only if the district has defined the role as having a legitimate educational interest in chatbot logs, in its annual notification. Most annual notifications were not written with this in mind." },
+    { role:"Assistant principal", bill:1, narrow:0,
+      why:"Same FERPA question as the principal, plus a practical one: this is usually the person who runs the discipline system. A crisis flag arriving on the discipline desk is a design decision, not an accident." },
+    { role:"Front office secretary", bill:1, narrow:0,
+      why:"Named explicitly in the provision. No confidentiality training, no professional obligation, and a hard sentence to write into a FERPA annual notification. This is the one I would strike first." },
+    { role:"School resource officer", bill:1, narrow:0,
+      why:"A police officer. Can qualify as a school official under FERPA if the district has done that work, but as a default recipient of a mental health disclosure it changes what the tool is. Should require a specific, articulable, immediate threat and a human decision, logged." },
+    { role:"The student, before they type", bill:0, narrow:1,
+      why:"Provision 10 requires the reporting and never requires telling the student it exists. This is the single most important fix and it costs one sentence in the interface." },
+    { role:"A crisis line the student can reach directly", bill:0, narrow:1,
+      why:"The provision says the machine cannot fulfill the request, so the student is refused and reported in the same breath. At minimum the tool should surface 988 and district resources and say plainly what it is about to do." }
+  ];
+
+  var list = root.querySelector(".pt-droute__list");
+  var foot = root.querySelector(".pt-droute__foot");
+  var rule = "bill";
+
+  R.forEach(function(r, i){
+    var li = document.createElement("li");
+    li.innerHTML =
+      '<button type="button" class="pt-droute__item" data-i="' + i + '">' +
+        '<span class="pt-droute__dot"></span>' +
+        '<span><span class="pt-droute__role"></span><span class="pt-droute__why" hidden></span></span>' +
+      '</button>';
+    li.querySelector(".pt-droute__role").textContent = r.role;
+    li.querySelector(".pt-droute__why").textContent = r.why;
+    list.appendChild(li);
+  });
+
+  var items = Array.prototype.slice.call(list.querySelectorAll(".pt-droute__item"));
+
+  function paint(){
+    var n = 0;
+    items.forEach(function(el, i){
+      var on = R[i][rule];
+      el.dataset.on = on ? "1" : "0";
+      if (on) n++;
+      el.setAttribute("aria-label", R[i].role + (on ? ", included" : ", not included"));
+    });
+    foot.textContent = rule === "bill"
+      ? "Five recipients, one of whom is trained for this and one of whom is police. The student is not on the list."
+      : "Two recipients and one disclosure. The student knows the rule before they type, which is the only version where an informed student still reaches for the tool.";
+  }
+
+  list.addEventListener("click", function(e){
+    var btn = e.target.closest(".pt-droute__item");
+    if (!btn) return;
+    var why = btn.querySelector(".pt-droute__why");
+    why.hidden = !why.hidden;
+  });
+
+  root.querySelectorAll(".pt-droute__toggle button").forEach(function(b){
+    b.addEventListener("click", function(){
+      rule = b.dataset.rule;
+      root.querySelectorAll(".pt-droute__toggle button").forEach(function(x){
+        x.setAttribute("aria-pressed", String(x.dataset.rule === rule));
+      });
+      paint();
+    });
+  });
+
+  paint();
+})();
+</script>

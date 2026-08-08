@@ -1,0 +1,264 @@
+{%- comment -%}
+  All 49 provisions of the STUDENTS FIRST Act as a roll-call board.
+
+  Usage (add the Liquid tag braces yourself):
+     include provision-map.html                    essay mode: my sort shown, reader can override
+     include provision-map.html mode="classroom"   classroom mode: sort first, reveal after
+     include provision-map.html id="second-one"    only needed if embedded twice on one page
+
+  Self-contained. Needs porttack-callouts.css for the color tokens, and falls
+  back to its own defaults without it.
+{%- endcomment -%}
+{%- assign mode = include.mode | default: "essay" -%}
+{%- assign uid = include.id | default: "pmap" -%}
+
+<div class="pt-widget pt-pmap" id="{{ uid }}" data-mode="{{ mode }}">
+  <p class="pt-widget__eyebrow">Interactive &middot; 49 provisions</p>
+  <h3 class="pt-widget__title">The roll call</h3>
+  <p class="pt-widget__lede">
+    Every numbered provision in the bill, one square each, in order. Does it
+    <b>control</b> somebody, grant a <b>right</b> against the system, or build a
+    <b>capability</b>? Click any square to read it. Click a category button first,
+    then a square, to sort it yourself.
+  </p>
+
+  <div class="pt-pmap__legend" role="group" aria-label="Choose a category, then click squares to sort">
+    <button type="button" class="pt-chip" data-cat="control"    aria-pressed="false"><span></span>Control</button>
+    <button type="button" class="pt-chip" data-cat="rights"     aria-pressed="false"><span></span>Right</button>
+    <button type="button" class="pt-chip" data-cat="capability" aria-pressed="false"><span></span>Capability</button>
+    <button type="button" class="pt-chip pt-chip--ghost" data-act="reset">Reset</button>
+    <button type="button" class="pt-chip pt-chip--ghost" data-act="reveal" hidden>Show my sort</button>
+  </div>
+
+  <div class="pt-pmap__board" role="list" aria-label="Provisions of the STUDENTS FIRST Act"></div>
+
+  <div class="pt-pmap__readout" aria-live="polite">
+    <div class="pt-pmap__bar" role="img" aria-label="Distribution of provisions by category"></div>
+    <p class="pt-pmap__tally"></p>
+  </div>
+
+  <div class="pt-pmap__detail" aria-live="polite" hidden></div>
+
+  <details class="pt-pmap__method">
+    <summary>How I sorted these</summary>
+    <p><b>Control</b> if the provision detects, restricts, punishes, mandates monitoring, or routes
+    information about a person. <b>Right</b> if it protects someone from the system: appeals,
+    notice, refusal, opt-out, limits on what officials may do. <b>Capability</b> if it makes a
+    student or a teacher able to do something they could not do before.</p>
+    <p>Several are genuinely arguable. Section 2, provision 12 requires an oral defense to prove
+    mastery, which sounds like capability until you notice it only triggers on suspicion. Section 3,
+    provision 2 asks parents to learn AI literacy in order to monitor their children, which is both.
+    I put the arguable ones where the provision's trigger points, not where its language points.
+    If you sort them differently, the tally above is yours. That disagreement is the useful part.</p>
+  </details>
+</div>
+
+<style>
+.pt-pmap { --c-control: var(--pt-control, #b3372e); --c-rights: var(--pt-rights, #b0802a); --c-capability: var(--pt-capability, #2f7d5a); --c-none: var(--pt-rule, #d9d5cc); }
+.pt-pmap__legend { display:flex; flex-wrap:wrap; gap:.4rem; margin-bottom:1rem; }
+.pt-chip { display:inline-flex; align-items:center; gap:.4rem; padding:.35rem .7rem; font:inherit; font-size:.8rem; line-height:1; background:transparent; color:inherit; border:1px solid var(--pt-rule,#d9d5cc); border-radius:999px; cursor:pointer; }
+.pt-chip span { width:.6rem; height:.6rem; border-radius:2px; display:inline-block; }
+.pt-chip[data-cat="control"] span { background:var(--c-control); }
+.pt-chip[data-cat="rights"] span { background:var(--c-rights); }
+.pt-chip[data-cat="capability"] span { background:var(--c-capability); }
+.pt-chip[aria-pressed="true"] { border-color:currentColor; box-shadow:inset 0 0 0 1px currentColor; font-weight:600; }
+.pt-chip--ghost { opacity:.65; font-size:.75rem; }
+.pt-chip--ghost:hover { opacity:1; }
+
+.pt-pmap__board { display:grid; grid-template-columns:repeat(auto-fill, minmax(26px, 1fr)); gap:4px; margin-bottom:1rem; }
+.pt-cell { aspect-ratio:1; border:none; padding:0; border-radius:2px; cursor:pointer; background:var(--c-none); position:relative; transition:transform .12s ease, background-color .25s ease; }
+.pt-cell[data-cat="control"] { background:var(--c-control); }
+.pt-cell[data-cat="rights"] { background:var(--c-rights); }
+.pt-cell[data-cat="capability"] { background:var(--c-capability); }
+.pt-cell:hover, .pt-cell:focus-visible { transform:scale(1.18); z-index:2; }
+.pt-cell[aria-current="true"] { box-shadow:0 0 0 2px var(--pt-ink,#1a1d21); z-index:3; }
+.pt-cell--sectionstart { margin-left:0; box-shadow:inset 2px 0 0 rgba(0,0,0,.28); }
+
+.pt-pmap__bar { display:flex; height:10px; border-radius:2px; overflow:hidden; background:var(--c-none); margin-bottom:.5rem; }
+.pt-pmap__bar i { display:block; height:100%; transition:width .3s ease; }
+.pt-pmap__tally { margin:0 0 1rem; font-family:var(--pt-mono, monospace); font-size:.78rem; letter-spacing:.02em; color:var(--pt-ink-soft,#555f68); }
+.pt-pmap__tally b { color:inherit; }
+
+.pt-pmap__detail { border-left:3px solid var(--pt-rule,#d9d5cc); padding:.6rem 0 .6rem .9rem; margin-bottom:1rem; font-size:.92rem; line-height:1.5; }
+.pt-pmap__detail[data-cat="control"] { border-left-color:var(--c-control); }
+.pt-pmap__detail[data-cat="rights"] { border-left-color:var(--c-rights); }
+.pt-pmap__detail[data-cat="capability"] { border-left-color:var(--c-capability); }
+.pt-pmap__detail .ref { font-family:var(--pt-mono, monospace); font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--pt-ink-soft,#555f68); display:block; margin-bottom:.3rem; }
+.pt-pmap__method { font-size:.85rem; color:var(--pt-ink-soft,#555f68); }
+.pt-pmap__method summary { cursor:pointer; }
+.pt-pmap__method p { line-height:1.5; }
+@media (max-width:480px){ .pt-pmap__board { grid-template-columns:repeat(auto-fill, minmax(22px,1fr)); } }
+</style>
+
+<script>
+(function(){
+  var root = document.getElementById({{ uid | jsonify }});
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = "1";
+
+  // sec, num, category, short label, text
+  var P = [
+    [1,1,"rights","Vendors must disclose known biases","Any organization selling generative AI to public schools must address all known biases in it and inform clients; the school must pass that on to parents and guardians."],
+    [1,2,"capability","Protect the human parts of teaching","Educators should prioritize educator-student relationships by omitting AI where human connection is irreplaceable."],
+    [1,3,"rights","Teacher judgment and privacy law preserved","Nothing in the act infringes teacher professional judgment, penalizes a teacher or administrator for declining to use AI, or preempts federal or state student privacy law."],
+
+    [2,1,"control","Detectors, plus a right to appeal","Students may appeal convictions of wrongful AI use and may be subject to AI detectors. Students should preserve document history to defend against false positives. Suspected work gets examined by two officials plus checking software."],
+    [2,2,"capability","AI literacy when devices arrive","States shall require AI literacy instruction when students begin using classroom devices, covering misinformation, plagiarism, bias, privacy, appropriate academic use, environmental impact, and how AI works."],
+    [2,3,"capability","AI supports in IEP and 504 plans","Schools should allow AI-based learning supports in IEP or 504 accommodation plans where appropriate."],
+    [2,4,"capability","Teach editing before allowing the tool","Never AI for the act of writing. Editing, brainstorming, and studying permitted after eighth grade, and editing without AI must be taught and assessed thoroughly first."],
+    [2,5,"control","No AI harassment, expulsion possible","Students may not use AI images, video, audio, or messages to bully, harass, libel, or falsely accuse. Violators face suspension or expulsion and may face legal consequences without school protection."],
+    [2,6,"control","Permission required, citation required","Students need teacher permission to use AI and must cite how and where. Absent explicit permission, any use is unauthorized and counts as plagiarism."],
+    [2,7,"rights","Right to refuse AI","High school students can refuse to use AI tools and must be given an alternative assignment."],
+    [2,8,"control","No pasting assignments into AI","Students are prohibited from inputting assignments directly into AI platforms."],
+    [2,9,"control","Automatic zero on graded assessments","AI use is strictly prohibited on all graded assessments. A student caught receives a zero unless the teacher specifies otherwise. Studying is exempt."],
+    [2,10,"control","Teacher-chosen punishment, principal signoff","No plagiarizing use on formative or summative work. Punishment is the teacher's choice with the principal's permission."],
+    [2,11,"capability","Fact-check everything AI produces","Students must independently fact-check all AI-generated claims before submitting."],
+    [2,12,"control","Oral defense on suspicion","Verification of Mastery. If AI was used during drafting, students must demonstrate independent mastery through in-person discussion, handwritten assessment, or oral defense."],
+    [2,13,"control","No AI on artistic assignments","Students may not use AI to complete artistic assignments."],
+    [2,14,"rights","Notice of data collection, no profiling","Students must be told what data is collected and why, may deny unnecessary collection, and schools may not use AI to profile students by ethnicity, religion, appearance, beliefs, or values."],
+    [2,15,"capability","Access to one approved AI tool","Students must have access to at least one school-approved, filtered, monitored AI mode."],
+
+    [3,1,"capability","Parents model critical thinking","Parents should encourage balanced technology habits, reinforce ethical academic behavior at home, and support critical thinking over shortcuts."],
+    [3,2,"control","Parents learn AI literacy in order to monitor","Parents are encouraged to learn AI literacy, to be used to monitor their children's AI use at home for schoolwork and studying."],
+    [3,3,"rights","Told how AI is used, may give feedback","Parents shall be informed how AI is incorporated into curriculum and given the opportunity to provide feedback."],
+    [3,4,"rights","Annual notice and sign-off","Families informed annually of potential AI use, sign off before the year begins, and may request clarification with a timely response."],
+    [3,5,"control","Sign the punishment schedule","Parents must be aware of and sign a written form on punishments for breaking AI rules, with a public comment period before rules take effect."],
+    [3,6,"rights","Parents set the rules at home","Parents may request AI policy information and set their own rules for AI use at home, though following school policy is advised."],
+    [3,7,"control","Parent AI help on graded work risks expulsion","Parents may use AI freely on non-graded work, but only with explicit teacher permission on graded work. Otherwise the student is subject to suspension or expulsion."],
+    [3,8,"control","Parents must enforce boundaries","Parents are required to review school AI guidelines so they can enforce appropriate boundaries at home."],
+    [3,9,"rights","Answer within one week","Parents have a right to an explanation of classroom AI rules, and the teacher must respond within one week."],
+    [3,10,"control","Chatbot detects distress and alerts officials","School-licensed chatbots must detect attempts to use them for emotional support or life advice, must not fulfill the request, and should alert school officials including principals, assistant principals, secretaries, counselors, and school resource officers."],
+
+    [4,1,"rights","No AI-only grading or discipline","Teachers cannot rely solely on AI to determine grades, misconduct, or other decisions about a student's education."],
+    [4,2,"control","Mandatory detector and lockdown browser","Teachers must use one standardized district AI detector on written graded assessments and lockdown browsers on graded online assessments, and must personally investigate before reporting."],
+    [4,3,"rights","Written policy in every syllabus","Teachers must publish a clear written AI policy each semester stating when AI is permitted, restricted, or banned, with category-based rules and consistency across sections."],
+    [4,4,"capability","Teachers may use AI, and must disclose","Teachers may use AI for planning, practice materials, feedback, resources, and instruction, must be as transparent as students are asked to be, and must review AI output for accuracy, bias, and appropriateness."],
+    [4,5,"rights","Teacher autonomy on assessment drafting","Teachers choose whether to use AI to draft internal assessments and are responsible for verifying accuracy, bias, and standards alignment."],
+    [4,6,"control","Viva voce on suspicion","Teachers may require an oral defense of any paper or project where AI use is suspected or reported."],
+    [4,7,"control","Discipline jurisdiction by offense level","Teachers may discipline AI misuse per district guidelines, which must define teacher versus administrator jurisdiction using grade weighting, offense level, and school size. Sensitive IEP or 504 information may not be entered into AI tools."],
+    [4,8,"capability","Biennial AI literacy training","Teachers assigning digital work must complete a state-provided AI literacy course every two years covering responsible use, integrity, privacy, accessibility, and recognizing AI-generated work."],
+
+    [5,1,"capability","Counselors stay human","Administrators should require that counselors not use AI tools, particularly in mental health contexts, so students receive face-to-face help."],
+    [5,2,"control","Annual policy review","Administration must review AI policy every year to ensure practices meet district values and goals."],
+    [5,3,"rights","Publish the rules and the penalties","Administrators must create a clear rule set for AI use, published on the school website or rule book, along with the repercussions for breaking it."],
+    [5,4,"control","Guidelines plus consequences","Administrators must establish clear guidelines for AI use by teachers and students, and consequences for misuse."],
+    [5,5,"capability","Bi-annual staff training","Administrators must provide mandated bi-annual AI literacy training for teachers, covering professional use and safe curricular integration."],
+    [5,6,"rights","Appeals, and no AI in the discipline process","Any AI-misuse discipline must include an appeal. Administrators may not use AI in the disciplinary process except for detection software, and must have a second party in decisions about AI use."],
+    [5,7,"control","Revoke AI access","Administrators can take away a student's privilege of using AI."],
+    [5,8,"control","Progressive discipline ladder","Repeat violations trigger progressive discipline: parent conferences, redoing work in a monitored non-digital environment, loss of credit for the assignment or course, academic probation, or other code-of-conduct actions."],
+    [5,9,"rights","No personal information into AI tools","Administrators may not enter any student's or teacher's personal information into AI tools."],
+    [5,10,"rights","Consult before drafting, publish early","Administrators must consult students, staff, and families before drafting rules, form a monitoring committee, and publish guidelines at least two weeks before the school year."],
+    [5,11,"rights","Opt-out procedures with a deadline","Opt-out procedures must be established two weeks before the year starts, with a response within one week of a parent request."],
+    [5,12,"rights","No AI in hiring","Administrators may not use AI to employ teachers or faculty."],
+    [5,13,"capability","Federal funding for AI capacity","Proportional federal funding with a baseline minimum should go to states for enterprise AI, mandatory staff training, and AI literacy options for students."]
+  ];
+
+  var SECTION = {1:"General Provisions",2:"Student Provisions",3:"Parents and Guardians",4:"Teachers",5:"Administrators"};
+  var LABEL = {control:"Control", rights:"Right", capability:"Capability"};
+  var mode = root.dataset.mode;
+  var classroom = mode === "classroom";
+
+  var board   = root.querySelector(".pt-pmap__board");
+  var detail  = root.querySelector(".pt-pmap__detail");
+  var bar     = root.querySelector(".pt-pmap__bar");
+  var tally   = root.querySelector(".pt-pmap__tally");
+  var reveal  = root.querySelector('[data-act="reveal"]');
+
+  var user = {};          // index -> category chosen by reader
+  var revealed = !classroom;
+  var brush = null;
+  if (classroom) reveal.hidden = false;
+
+  var cells = P.map(function(p, i){
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "pt-cell" + (p[1] === 1 ? " pt-cell--sectionstart" : "");
+    b.setAttribute("role","listitem");
+    b.dataset.i = i;
+    b.setAttribute("aria-label","Section " + p[0] + ", provision " + p[1] + ": " + p[3]);
+    b.title = "Sec. " + p[0] + " prov. " + p[1];
+    board.appendChild(b);
+    return b;
+  });
+
+  function catOf(i){
+    if (user[i]) return user[i];
+    return revealed ? P[i][2] : null;
+  }
+
+  function paint(){
+    var counts = {control:0, rights:0, capability:0, none:0};
+    cells.forEach(function(c, i){
+      var cat = catOf(i);
+      if (cat) { c.dataset.cat = cat; counts[cat]++; }
+      else { delete c.dataset.cat; counts.none++; }
+    });
+
+    var sorted = 49 - counts.none;
+    bar.innerHTML = "";
+    ["control","rights","capability"].forEach(function(k){
+      var i = document.createElement("i");
+      i.style.width = (counts[k] / 49 * 100) + "%";
+      i.style.background = "var(--c-" + k + ")";
+      bar.appendChild(i);
+    });
+
+    if (sorted === 0) {
+      tally.innerHTML = "Nothing sorted yet. Pick a category above, then click squares.";
+    } else {
+      tally.innerHTML =
+        "<b>" + counts.control + "</b> control &nbsp;/&nbsp; " +
+        "<b>" + counts.rights + "</b> rights &nbsp;/&nbsp; " +
+        "<b>" + counts.capability + "</b> capability" +
+        (counts.none ? " &nbsp;/&nbsp; " + counts.none + " unsorted" : "") +
+        (Object.keys(user).length ? " &nbsp;&middot;&nbsp; includes your changes" : "");
+    }
+  }
+
+  function show(i){
+    var p = P[i];
+    cells.forEach(function(c){ c.removeAttribute("aria-current"); });
+    cells[i].setAttribute("aria-current","true");
+    var cat = catOf(i);
+    detail.hidden = false;
+    if (cat) detail.dataset.cat = cat; else delete detail.dataset.cat;
+    detail.innerHTML =
+      '<span class="ref">Sec. ' + p[0] + ' &middot; prov. ' + p[1] + ' &middot; ' + SECTION[p[0]] +
+      (cat ? ' &middot; ' + LABEL[cat] : '') + '</span>' + p[4];
+  }
+
+  board.addEventListener("click", function(e){
+    var c = e.target.closest(".pt-cell");
+    if (!c) return;
+    var i = +c.dataset.i;
+    if (brush) { user[i] = brush; paint(); }
+    show(i);
+  });
+
+  root.querySelectorAll(".pt-chip[data-cat]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var was = brush === btn.dataset.cat;
+      brush = was ? null : btn.dataset.cat;
+      root.querySelectorAll(".pt-chip[data-cat]").forEach(function(b){
+        b.setAttribute("aria-pressed", String(b.dataset.cat === brush));
+      });
+    });
+  });
+
+  root.querySelector('[data-act="reset"]').addEventListener("click", function(){
+    user = {}; brush = null; revealed = !classroom;
+    if (reveal) reveal.textContent = "Show my sort";
+    root.querySelectorAll(".pt-chip[data-cat]").forEach(function(b){ b.setAttribute("aria-pressed","false"); });
+    detail.hidden = true;
+    paint();
+  });
+
+  if (reveal) reveal.addEventListener("click", function(){
+    revealed = !revealed;
+    reveal.textContent = revealed ? "Hide my sort" : "Show my sort";
+    paint();
+  });
+
+  paint();
+})();
+</script>

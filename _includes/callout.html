@@ -1,0 +1,25 @@
+{%- comment -%}
+  Pull-out box.
+
+  Usage (add the Liquid tag braces yourself; they are omitted here because
+  Liquid parses tags inside comment blocks and would try to run them):
+
+     include callout.html
+        type="source"                  one of: source, quote, note, warn
+        title="Read the bill"
+        body="Nine pages, five sections."
+        link="https://example.com"     optional
+        linktext="Download the PDF"    optional
+
+  body is run through markdownify, so inline markdown works.
+  Keep the whole tag on ONE line. Jekyll rejects multi-line include tags.
+  Do not use a pipe character inside a parameter value.
+{%- endcomment -%}
+{%- assign kind = include.type | default: "note" -%}
+<aside class="pt-callout pt-callout--{{ kind }}" role="note">
+  {%- if include.title %}<p class="pt-callout__title">{{ include.title }}</p>{% endif -%}
+  <div class="pt-callout__body">{{ include.body | markdownify }}</div>
+  {%- if include.link %}
+  <p class="pt-callout__link"><a href="{{ include.link }}">{{ include.linktext | default: "Read more" }}</a></p>
+  {%- endif -%}
+</aside>

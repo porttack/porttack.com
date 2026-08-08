@@ -1,0 +1,311 @@
+{%- comment -%}
+  Browsable summary of all 49 provisions, organized by the bill's own five
+  sections. Five tabs, one per section; each tab lists short-label bullets;
+  click (or hover, on a mouse) a bullet to reveal its full text in place.
+
+  Usage (add the Liquid tag braces yourself):
+     include section-tabs.html
+     include section-tabs.html default="2"       opens on section 2 (Students) instead of 1 (General)
+     include section-tabs.html id="second-one"   only needed if embedded twice on one page
+
+  Self-contained. Needs porttack-callouts.css for shared widget chrome and
+  falls back to its own defaults without it.
+{%- endcomment -%}
+{%- assign uid = include.id | default: "stabs" -%}
+{%- assign default_sec = include.default | default: 1 -%}
+
+<div class="pt-widget pt-stabs" id="{{ uid }}" data-default="{{ default_sec }}">
+  <p class="pt-widget__eyebrow">Browse &middot; 49 provisions by section</p>
+  <h3 class="pt-widget__title">Read it section by section</h3>
+  <p class="pt-widget__lede">
+    The bill is organized in five parts: general provisions, then rules for
+    students, parents, teachers, and administrators. Pick a section, then a
+    line, to read what it actually says.
+  </p>
+
+  <p class="pt-stabs__pdf">
+    <a href="https://www.aasa.org/docs/default-source/resources/reports/17_s-2026-the-students-first-act-final-bill-passed-84-14-july-19-2026.pdf">Full text of the bill (PDF, AASA, 9 pages)</a>
+  </p>
+
+  <div class="pt-stabs__tabs" role="tablist" aria-label="Sections of the STUDENTS FIRST Act"></div>
+  <div class="pt-stabs__panels"></div>
+</div>
+
+<style>
+.pt-stabs {
+  --sec-1: var(--pt-sec-1, #2a78d6); --sec-2: var(--pt-sec-2, #1baf7a);
+  --sec-3: var(--pt-sec-3, #4a3aa7); --sec-4: var(--pt-sec-4, #e87ba4);
+  --sec-5: var(--pt-sec-5, #eb6834);
+  --box-bg: var(--pt-box-bg, #f7f6f2);
+  --wash-1: color-mix(in srgb, var(--sec-1) 15%, transparent);
+  --wash-2: color-mix(in srgb, var(--sec-2) 15%, transparent);
+  --wash-3: color-mix(in srgb, var(--sec-3) 15%, transparent);
+  --wash-4: color-mix(in srgb, var(--sec-4) 15%, transparent);
+  --wash-5: color-mix(in srgb, var(--sec-5) 15%, transparent);
+
+  /* breakout box: this widget reads as a card, not the plain ruled
+     top/bottom chrome the other pt-widgets use */
+  border-top: none; border-bottom: none;
+  background: var(--box-bg);
+  border: 1px solid var(--pt-rule, #d9d5cc);
+  border-radius: 14px;
+  padding: 1.35rem 1.35rem 1.5rem;
+}
+@media (prefers-color-scheme: dark) {
+  .pt-stabs {
+    --sec-1: var(--pt-sec-1, #3987e5); --sec-2: var(--pt-sec-2, #199e70);
+    --sec-3: var(--pt-sec-3, #9085e9); --sec-4: var(--pt-sec-4, #d55181);
+    --sec-5: var(--pt-sec-5, #d95926);
+    --box-bg: var(--pt-box-bg, #23231f);
+  }
+}
+.pt-stabs__pdf { margin: 0 0 1.1rem; font-size: 0.88rem; }
+
+/* tabs as folder flaps: same wash as the panel they open, so the open
+   tab and its folder read as one continuous color. The underline is
+   the only thing marking which one is open. */
+.pt-stabs__tabs { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.pt-stabs__tab {
+  font: inherit; font-size: 0.85rem; font-weight: 600;
+  color: var(--pt-ink-soft, #555f68);
+  border: none; border-bottom: 3px solid transparent; border-radius: 10px 10px 0 0; cursor: pointer;
+  padding: 0.55rem 0.85rem;
+  -webkit-tap-highlight-color: transparent;
+}
+.pt-stabs__tab[data-sec="1"] { background: color-mix(in srgb, var(--sec-1) 8%, transparent); }
+.pt-stabs__tab[data-sec="2"] { background: color-mix(in srgb, var(--sec-2) 8%, transparent); }
+.pt-stabs__tab[data-sec="3"] { background: color-mix(in srgb, var(--sec-3) 8%, transparent); }
+.pt-stabs__tab[data-sec="4"] { background: color-mix(in srgb, var(--sec-4) 8%, transparent); }
+.pt-stabs__tab[data-sec="5"] { background: color-mix(in srgb, var(--sec-5) 8%, transparent); }
+.pt-stabs__tab[aria-selected="true"] { color: var(--pt-ink, #1a1d21); }
+.pt-stabs__tab[data-sec="1"][aria-selected="true"] { background: var(--wash-1); border-bottom-color: var(--sec-1); }
+.pt-stabs__tab[data-sec="2"][aria-selected="true"] { background: var(--wash-2); border-bottom-color: var(--sec-2); }
+.pt-stabs__tab[data-sec="3"][aria-selected="true"] { background: var(--wash-3); border-bottom-color: var(--sec-3); }
+.pt-stabs__tab[data-sec="4"][aria-selected="true"] { background: var(--wash-4); border-bottom-color: var(--sec-4); }
+.pt-stabs__tab[data-sec="5"][aria-selected="true"] { background: var(--wash-5); border-bottom-color: var(--sec-5); }
+
+/* the open folder: exactly the selected tab's wash, so tab and panel
+   look like one uninterrupted piece of colored paper */
+.pt-stabs__panels [role="tabpanel"] { border-radius: 0 10px 10px 10px; padding: 1rem 1rem 0.2rem; }
+.pt-stabs__panels [data-sec="1"] { background: var(--wash-1); }
+.pt-stabs__panels [data-sec="2"] { background: var(--wash-2); }
+.pt-stabs__panels [data-sec="3"] { background: var(--wash-3); }
+.pt-stabs__panels [data-sec="4"] { background: var(--wash-4); }
+.pt-stabs__panels [data-sec="5"] { background: var(--wash-5); }
+
+.pt-stabs__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; }
+.pt-stabs__item {
+  display: block; width: 100%; text-align: left; font: inherit; font-size: 0.92rem;
+  background: transparent; border: none; border-radius: 6px; color: inherit;
+  padding: 0.55rem 0.7rem; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+/* a page lifted out of the folder: light in light mode, dark in dark
+   mode, independent of :hover so keyboard toggle and touch tap (which
+   don't reliably trigger :focus-visible) still show the open state */
+.pt-stabs__item:hover, .pt-stabs__item:focus-visible, .pt-stabs__item[aria-expanded="true"] {
+  background: color-mix(in srgb, white 65%, transparent);
+  box-shadow: 0 1px 2px rgba(0,0,0,.07);
+}
+@media (prefers-color-scheme: dark) {
+  .pt-stabs__item:hover, .pt-stabs__item:focus-visible, .pt-stabs__item[aria-expanded="true"] {
+    background: color-mix(in srgb, black 35%, transparent);
+    box-shadow: none;
+  }
+}
+.pt-stabs__num { font-family: var(--pt-mono, monospace); font-size: 0.72rem; color: var(--pt-ink-soft, #555f68); margin-right: 0.5rem; }
+.pt-stabs__detail { display: block; margin: 0.4rem 0 0.1rem; padding-left: 0.05rem; font-size: 0.88rem; line-height: 1.5; color: var(--pt-ink-soft, #555f68); }
+.pt-stabs__detail[hidden] { display: none; }
+</style>
+
+<script>
+(function(){
+  var root = document.getElementById({{ uid | jsonify }});
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = "1";
+
+  // sec, num, short label, full text
+  var P = [
+    [1,1,"Vendors must disclose known biases","Any organization selling generative AI to public schools must address all known biases in it and inform clients; the school must pass that on to parents and guardians."],
+    [1,2,"Protect the human parts of teaching","Educators should prioritize educator-student relationships by omitting AI where human connection is irreplaceable."],
+    [1,3,"Teacher judgment and privacy law preserved","Nothing in the act infringes teacher professional judgment, penalizes a teacher or administrator for declining to use AI, or preempts federal or state student privacy law."],
+
+    [2,1,"Detectors, plus a right to appeal","Students may appeal convictions of wrongful AI use and may be subject to AI detectors. Students should preserve document history to defend against false positives. Suspected work gets examined by two officials plus checking software."],
+    [2,2,"AI literacy when devices arrive","States shall require AI literacy instruction when students begin using classroom devices, covering misinformation, plagiarism, bias, privacy, appropriate academic use, environmental impact, and how AI works."],
+    [2,3,"AI supports in IEP and 504 plans","Schools should allow AI-based learning supports in IEP or 504 accommodation plans where appropriate."],
+    [2,4,"Teach editing before allowing the tool","Never AI for the act of writing. Editing, brainstorming, and studying permitted after eighth grade, and editing without AI must be taught and assessed thoroughly first."],
+    [2,5,"No AI harassment, expulsion possible","Students may not use AI images, video, audio, or messages to bully, harass, libel, or falsely accuse. Violators face suspension or expulsion and may face legal consequences without school protection."],
+    [2,6,"Permission required, citation required","Students need teacher permission to use AI and must cite how and where. Absent explicit permission, any use is unauthorized and counts as plagiarism."],
+    [2,7,"Right to refuse AI","High school students can refuse to use AI tools and must be given an alternative assignment."],
+    [2,8,"No pasting assignments into AI","Students are prohibited from inputting assignments directly into AI platforms."],
+    [2,9,"Automatic zero on graded assessments","AI use is strictly prohibited on all graded assessments. A student caught receives a zero unless the teacher specifies otherwise. Studying is exempt."],
+    [2,10,"Teacher-chosen punishment, principal signoff","No plagiarizing use on formative or summative work. Punishment is the teacher's choice with the principal's permission."],
+    [2,11,"Fact-check everything AI produces","Students must independently fact-check all AI-generated claims before submitting."],
+    [2,12,"Oral defense on suspicion","Verification of Mastery. If AI was used during drafting, students must demonstrate independent mastery through in-person discussion, handwritten assessment, or oral defense."],
+    [2,13,"No AI on artistic assignments","Students may not use AI to complete artistic assignments."],
+    [2,14,"Notice of data collection, no profiling","Students must be told what data is collected and why, may deny unnecessary collection, and schools may not use AI to profile students by ethnicity, religion, appearance, beliefs, or values."],
+    [2,15,"Access to one approved AI tool","Students must have access to at least one school-approved, filtered, monitored AI mode."],
+
+    [3,1,"Parents model critical thinking","Parents should encourage balanced technology habits, reinforce ethical academic behavior at home, and support critical thinking over shortcuts."],
+    [3,2,"Parents learn AI literacy in order to monitor","Parents are encouraged to learn AI literacy, to be used to monitor their children's AI use at home for schoolwork and studying."],
+    [3,3,"Told how AI is used, may give feedback","Parents shall be informed how AI is incorporated into curriculum and given the opportunity to provide feedback."],
+    [3,4,"Annual notice and sign-off","Families informed annually of potential AI use, sign off before the year begins, and may request clarification with a timely response."],
+    [3,5,"Sign the punishment schedule","Parents must be aware of and sign a written form on punishments for breaking AI rules, with a public comment period before rules take effect."],
+    [3,6,"Parents set the rules at home","Parents may request AI policy information and set their own rules for AI use at home, though following school policy is advised."],
+    [3,7,"Parent AI help on graded work risks expulsion","Parents may use AI freely on non-graded work, but only with explicit teacher permission on graded work. Otherwise the student is subject to suspension or expulsion."],
+    [3,8,"Parents must enforce boundaries","Parents are required to review school AI guidelines so they can enforce appropriate boundaries at home."],
+    [3,9,"Answer within one week","Parents have a right to an explanation of classroom AI rules, and the teacher must respond within one week."],
+    [3,10,"Chatbot detects distress and alerts officials","School-licensed chatbots must detect attempts to use them for emotional support or life advice, must not fulfill the request, and should alert school officials including principals, assistant principals, secretaries, counselors, and school resource officers."],
+
+    [4,1,"No AI-only grading or discipline","Teachers cannot rely solely on AI to determine grades, misconduct, or other decisions about a student's education."],
+    [4,2,"Mandatory detector and lockdown browser","Teachers must use one standardized district AI detector on written graded assessments and lockdown browsers on graded online assessments, and must personally investigate before reporting."],
+    [4,3,"Written policy in every syllabus","Teachers must publish a clear written AI policy each semester stating when AI is permitted, restricted, or banned, with category-based rules and consistency across sections."],
+    [4,4,"Teachers may use AI, and must disclose","Teachers may use AI for planning, practice materials, feedback, resources, and instruction, must be as transparent as students are asked to be, and must review AI output for accuracy, bias, and appropriateness."],
+    [4,5,"Teacher autonomy on assessment drafting","Teachers choose whether to use AI to draft internal assessments and are responsible for verifying accuracy, bias, and standards alignment."],
+    [4,6,"Viva voce on suspicion","Teachers may require an oral defense of any paper or project where AI use is suspected or reported."],
+    [4,7,"Discipline jurisdiction by offense level","Teachers may discipline AI misuse per district guidelines, which must define teacher versus administrator jurisdiction using grade weighting, offense level, and school size. Sensitive IEP or 504 information may not be entered into AI tools."],
+    [4,8,"Biennial AI literacy training","Teachers assigning digital work must complete a state-provided AI literacy course every two years covering responsible use, integrity, privacy, accessibility, and recognizing AI-generated work."],
+
+    [5,1,"Counselors stay human","Administrators should require that counselors not use AI tools, particularly in mental health contexts, so students receive face-to-face help."],
+    [5,2,"Annual policy review","Administration must review AI policy every year to ensure practices meet district values and goals."],
+    [5,3,"Publish the rules and the penalties","Administrators must create a clear rule set for AI use, published on the school website or rule book, along with the repercussions for breaking it."],
+    [5,4,"Guidelines plus consequences","Administrators must establish clear guidelines for AI use by teachers and students, and consequences for misuse."],
+    [5,5,"Bi-annual staff training","Administrators must provide mandated bi-annual AI literacy training for teachers, covering professional use and safe curricular integration."],
+    [5,6,"Appeals, and no AI in the discipline process","Any AI-misuse discipline must include an appeal. Administrators may not use AI in the disciplinary process except for detection software, and must have a second party in decisions about AI use."],
+    [5,7,"Revoke AI access","Administrators can take away a student's privilege of using AI."],
+    [5,8,"Progressive discipline ladder","Repeat violations trigger progressive discipline: parent conferences, redoing work in a monitored non-digital environment, loss of credit for the assignment or course, academic probation, or other code-of-conduct actions."],
+    [5,9,"No personal information into AI tools","Administrators may not enter any student's or teacher's personal information into AI tools."],
+    [5,10,"Consult before drafting, publish early","Administrators must consult students, staff, and families before drafting rules, form a monitoring committee, and publish guidelines at least two weeks before the school year."],
+    [5,11,"Opt-out procedures with a deadline","Opt-out procedures must be established two weeks before the year starts, with a response within one week of a parent request."],
+    [5,12,"No AI in hiring","Administrators may not use AI to employ teachers or faculty."],
+    [5,13,"Federal funding for AI capacity","Proportional federal funding with a baseline minimum should go to states for enterprise AI, mandatory staff training, and AI literacy options for students."]
+  ];
+
+  var SECTION = [
+    {n:1, short:"General",   full:"General Provisions"},
+    {n:2, short:"Students",  full:"Student Provisions"},
+    {n:3, short:"Parents",   full:"Parents and Guardians"},
+    {n:4, short:"Teachers",  full:"Teachers"},
+    {n:5, short:"Admins",    full:"Administrators"}
+  ];
+
+  var tabs   = root.querySelector(".pt-stabs__tabs");
+  var panels = root.querySelector(".pt-stabs__panels");
+  var pointerFine = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  var defaultSec = +root.dataset.default || 1;
+
+  var tabEls = SECTION.map(function(s){
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "pt-stabs__tab";
+    b.dataset.sec = s.n;
+    b.setAttribute("role", "tab");
+    b.setAttribute("aria-selected", s.n === defaultSec ? "true" : "false");
+    b.id = root.id + "-tab-" + s.n;
+    b.setAttribute("aria-controls", root.id + "-panel-" + s.n);
+    b.tabIndex = s.n === defaultSec ? 0 : -1;
+    b.title = s.full;
+    b.appendChild(document.createTextNode(s.short));
+    tabs.appendChild(b);
+    return b;
+  });
+
+  var panelEls = SECTION.map(function(s){
+    var panel = document.createElement("div");
+    panel.setAttribute("role", "tabpanel");
+    panel.id = root.id + "-panel-" + s.n;
+    panel.setAttribute("aria-labelledby", root.id + "-tab-" + s.n);
+    panel.dataset.sec = s.n;
+    panel.hidden = s.n !== defaultSec;
+
+    var list = document.createElement("ul");
+    list.className = "pt-stabs__list";
+    list.setAttribute("role", "list");
+
+    P.filter(function(p){ return p[0] === s.n; }).forEach(function(p){
+      var li = document.createElement("li");
+      var item = document.createElement("button");
+      item.type = "button";
+      item.className = "pt-stabs__item";
+      item.setAttribute("aria-expanded", "false");
+      item.innerHTML =
+        '<span class="pt-stabs__num">' + s.n + '.' + p[1] + '</span>' + p[2] +
+        '<span class="pt-stabs__detail" hidden></span>';
+      item.querySelector(".pt-stabs__detail").textContent = p[3];
+      li.appendChild(item);
+      list.appendChild(li);
+    });
+
+    panel.appendChild(list);
+    panels.appendChild(panel);
+    return panel;
+  });
+
+  function closeAll(){
+    root.querySelectorAll(".pt-stabs__item").forEach(function(item){
+      item.setAttribute("aria-expanded", "false");
+      item.querySelector(".pt-stabs__detail").hidden = true;
+    });
+  }
+
+  function openItem(item){
+    closeAll();
+    item.setAttribute("aria-expanded", "true");
+    item.querySelector(".pt-stabs__detail").hidden = false;
+  }
+
+  function selectTab(n){
+    tabEls.forEach(function(t){
+      var on = +t.dataset.sec === n;
+      t.setAttribute("aria-selected", String(on));
+      t.tabIndex = on ? 0 : -1;
+    });
+    panelEls.forEach(function(p, i){ p.hidden = SECTION[i].n !== n; });
+    closeAll();
+  }
+
+  tabs.addEventListener("click", function(e){
+    var t = e.target.closest(".pt-stabs__tab");
+    if (!t) return;
+    selectTab(+t.dataset.sec);
+  });
+
+  tabs.addEventListener("keydown", function(e){
+    if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+    var i = tabEls.findIndex(function(t){ return t.getAttribute("aria-selected") === "true"; });
+    var next = e.key === "ArrowRight" ? (i + 1) % tabEls.length : (i - 1 + tabEls.length) % tabEls.length;
+    selectTab(+tabEls[next].dataset.sec);
+    tabEls[next].focus();
+    e.preventDefault();
+  });
+
+  panels.addEventListener("click", function(e){
+    var item = e.target.closest(".pt-stabs__item");
+    if (!item) return;
+    // On a mouse, hovering already opens/closes the item (below). A real mouse
+    // click fires its own preceding mouseover, so toggling here too would just
+    // fight that and immediately re-close what the hover just opened. Keyboard
+    // activation (Enter/Space) dispatches a click with detail 0 and has no
+    // hover state, so it still needs to toggle here.
+    if (pointerFine && e.detail > 0) return;
+    var open = item.getAttribute("aria-expanded") === "true";
+    open ? closeAll() : openItem(item);
+  });
+
+  if (pointerFine) {
+    panels.addEventListener("mouseover", function(e){
+      var item = e.target.closest(".pt-stabs__item");
+      if (item) openItem(item);
+    });
+    panels.addEventListener("mouseout", function(e){
+      var item = e.target.closest(".pt-stabs__item");
+      var to = e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest(".pt-stabs__item");
+      if (item && item !== to) closeAll();
+    });
+  }
+
+  document.addEventListener("click", function(e){
+    if (!root.contains(e.target)) closeAll();
+  });
+})();
+</script>

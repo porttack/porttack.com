@@ -1,0 +1,146 @@
+{%- comment -%}
+  Base-rate calculator for AI detectors.
+
+  Usage (add the Liquid tag braces yourself):
+     include detector-math.html
+     include detector-math.html id="second-one"    only if embedded twice on one page
+
+  Self-contained. No dependencies.
+{%- endcomment -%}
+{%- assign uid = include.id | default: "dmath" -%}
+
+<div class="pt-widget pt-dmath" id="{{ uid }}">
+  <p class="pt-widget__eyebrow">Interactive &middot; conditional probability</p>
+  <h3 class="pt-widget__title">Run the detector on your own school</h3>
+  <p class="pt-widget__lede">
+    Set the assumptions however you like, including generously in the vendor's favor.
+    The detector never gets worse than you tell it to be. Watch the last number anyway.
+  </p>
+
+  <div class="pt-dmath__controls">
+    <label>
+      <span class="pt-dmath__lab">Students taking the assignment <output data-out="n">500</output></span>
+      <input type="range" data-in="n" min="30" max="2000" step="10" value="500">
+    </label>
+    <label>
+      <span class="pt-dmath__lab">Who actually used AI improperly <output data-out="base">8%</output></span>
+      <input type="range" data-in="base" min="1" max="50" step="1" value="8">
+    </label>
+    <label>
+      <span class="pt-dmath__lab">Detector catches real AI use <output data-out="tpr">90%</output> of the time</span>
+      <input type="range" data-in="tpr" min="50" max="100" step="1" value="90">
+    </label>
+    <label>
+      <span class="pt-dmath__lab">Detector wrongly flags honest work <output data-out="fpr">4%</output> of the time</span>
+      <input type="range" data-in="fpr" min="0" max="20" step="0.5" value="4">
+    </label>
+  </div>
+
+  <div class="pt-dmath__viz" role="img" data-viz-label=""></div>
+
+  <div class="pt-dmath__out" aria-live="polite">
+    <div class="pt-dmath__stat"><b data-out="flagged">–</b><span>students accused</span></div>
+    <div class="pt-dmath__stat"><b data-out="caught">–</b><span>correctly</span></div>
+    <div class="pt-dmath__stat pt-dmath__stat--bad"><b data-out="false">–</b><span>wrongly</span></div>
+    <div class="pt-dmath__stat pt-dmath__stat--bad"><b data-out="rate">–</b><span>of every 100 accusations is a mistake</span></div>
+  </div>
+
+  <p class="pt-dmath__miss" data-out="missed"></p>
+
+  <details class="pt-dmath__note">
+    <summary>Why a better model does not fix this</summary>
+    <p>The false positive rate applies to the honest majority, and there are a lot of them. The
+    true positive rate applies to the small group who actually cheated. When the honest group is
+    twenty times larger, a small error rate on that group produces more accusations than a large
+    success rate on the other one. Vendors compete on the wrong number, because the number that
+    matters is not accuracy. It is what fraction of the people you accuse did nothing wrong, and
+    that depends on how many people cheated, which you do not know.</p>
+    <p>Set the false positive rate to zero and the problem disappears. No detector has ever
+    achieved that, and the closest attempt, OpenAI's own classifier, was withdrawn in July 2023
+    for low accuracy six months after launch.</p>
+  </details>
+</div>
+
+<style>
+.pt-dmath { --bad: var(--pt-control, #b3372e); --ok: var(--pt-capability, #2f7d5a); --neutral: var(--pt-rule, #d9d5cc); }
+.pt-dmath__controls { display:grid; gap:.85rem; margin-bottom:1.4rem; max-width:34rem; }
+.pt-dmath__controls label { display:block; }
+.pt-dmath__lab { display:block; font-size:.85rem; margin-bottom:.25rem; color:var(--pt-ink-soft,#555f68); }
+.pt-dmath__lab output { font-family:var(--pt-mono, monospace); font-weight:600; color:var(--pt-ink,#1a1d21); }
+.pt-dmath input[type=range] { width:100%; accent-color:var(--bad); }
+
+.pt-dmath__viz { display:grid; grid-template-columns:repeat(auto-fill, minmax(9px,1fr)); gap:2px; margin-bottom:1.2rem; }
+.pt-dmath__viz i { aspect-ratio:1; border-radius:1px; background:var(--neutral); opacity:.5; }
+.pt-dmath__viz i.ok  { background:var(--ok); opacity:1; }
+.pt-dmath__viz i.bad { background:var(--bad); opacity:1; }
+.pt-dmath__viz i.miss{ background:transparent; box-shadow:inset 0 0 0 1px var(--ok); opacity:.9; }
+
+.pt-dmath__out { display:flex; flex-wrap:wrap; gap:1.4rem 2rem; margin-bottom:.9rem; }
+.pt-dmath__stat { max-width:11rem; }
+.pt-dmath__stat b { display:block; font-size:1.85rem; line-height:1; font-family:var(--pt-mono, monospace); font-weight:600; }
+.pt-dmath__stat span { font-size:.78rem; color:var(--pt-ink-soft,#555f68); line-height:1.3; display:block; margin-top:.25rem; }
+.pt-dmath__stat--bad b { color:var(--bad); }
+.pt-dmath__miss { font-size:.85rem; color:var(--pt-ink-soft,#555f68); margin:0 0 1rem; }
+.pt-dmath__note { font-size:.85rem; color:var(--pt-ink-soft,#555f68); }
+.pt-dmath__note summary { cursor:pointer; }
+.pt-dmath__note p { line-height:1.55; }
+</style>
+
+<script>
+(function(){
+  var root = document.getElementById({{ uid | jsonify }});
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = "1";
+
+  var ins = {}, outs = {};
+  root.querySelectorAll("[data-in]").forEach(function(el){ ins[el.dataset.in] = el; });
+  root.querySelectorAll("[data-out]").forEach(function(el){ outs[el.dataset.out] = el; });
+  var viz = root.querySelector(".pt-dmath__viz");
+
+  function calc(){
+    var n    = +ins.n.value;
+    var base = +ins.base.value / 100;
+    var tpr  = +ins.tpr.value / 100;
+    var fpr  = +ins.fpr.value / 100;
+
+    var guilty  = n * base;
+    var honest  = n - guilty;
+    var caught  = Math.round(guilty * tpr);
+    var falsely = Math.round(honest * fpr);
+    var missed  = Math.round(guilty) - caught;
+    var flagged = caught + falsely;
+    var rate    = flagged ? Math.round(falsely / flagged * 100) : 0;
+
+    outs.n.textContent    = n;
+    outs.base.textContent = ins.base.value + "%";
+    outs.tpr.textContent  = ins.tpr.value + "%";
+    outs.fpr.textContent  = ins.fpr.value + "%";
+
+    outs.flagged.textContent = flagged;
+    outs.caught.textContent  = caught;
+    outs["false"].textContent = falsely;
+    outs.rate.textContent    = rate;
+
+    outs.missed.textContent = missed > 0
+      ? "Meanwhile " + missed + " student" + (missed === 1 ? "" : "s") + " who did use AI improperly were not flagged at all."
+      : "Every student who used AI improperly was flagged, along with everyone else.";
+
+    // one square per student, capped so the grid stays readable
+    var cap = Math.min(n, 600);
+    var scale = cap / n;
+    var sOk = Math.round(caught * scale), sBad = Math.round(falsely * scale), sMiss = Math.round(missed * scale);
+    var html = "";
+    for (var i = 0; i < cap; i++) {
+      var cls = i < sOk ? "ok" : i < sOk + sBad ? "bad" : i < sOk + sBad + sMiss ? "miss" : "";
+      html += "<i class='" + cls + "'></i>";
+    }
+    viz.innerHTML = html;
+    viz.setAttribute("aria-label",
+      flagged + " of " + n + " students accused. " + caught + " correctly, " + falsely +
+      " wrongly. " + rate + " percent of accusations are mistakes.");
+  }
+
+  Object.keys(ins).forEach(function(k){ ins[k].addEventListener("input", calc); });
+  calc();
+})();
+</script>
