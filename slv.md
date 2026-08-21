@@ -2,6 +2,9 @@
 layout: page
 title: SLV Computer Science
 permalink: /slv/
+redirect_from:
+  - /2021/04/12/7th-grade-computer-science.html
+  - /2023/04/22/choosing-python.html
 ---
 
 I'm Mr. Brown, an Engineer and Computer Scientist. If you are taking one of my classes this year, I look forward to getting to know you. The best way to connect with me is via my school email address, [ebrown@slvusd.org](mailto:ebrown@slvusd.org).

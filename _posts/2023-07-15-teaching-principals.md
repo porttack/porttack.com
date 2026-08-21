@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My Teaching Compass: Principles and Goals That Guide Every Decision"
+title:  "My teaching principles and goals"
 date:   2023-07-15
 categories: teaching
 excerpt_separator: <!--more-->
