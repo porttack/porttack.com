@@ -29,5 +29,3 @@ The wall has become our portrait. Where it goes from here, I'm not sure, but for
 ## For Other Teachers
 
 If you're interested in trying this, I've created a [detailed lesson plan](https://docs.google.com/document/d/1jrMCrzcuq_OiMRXvzOVXOfxQeOY0C2EmNnk3pCUzBrE/edit?usp=sharing) that breaks down the original Cult of Pedagogy idea into specific daily activities that worked for me, with timing, learning objectives, and California standards alignment for both SEL and CTE.
-
-*Sometimes the most important lesson is helping students see themselves - and each other - clearly.* ✨

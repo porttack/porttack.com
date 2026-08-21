@@ -30,5 +30,3 @@ We're already planning for next year with lessons learned and bigger dreams. The
 The MATE ROV competition asks students to help create "the ocean we need for the future we want." After this year, I'm convinced our students are ready to tackle that challenge - and many others.
 
 *Read the full [2023-24 Annual Report](https://docs.google.com/document/d/1j0Am21fyYBawZMjikYiq12QPvRSW6c91HZsB-UmKnq0/edit?usp=sharing) for detailed financials, curriculum, and lessons learned.*
-
-🤖🌊

@@ -46,8 +46,8 @@ Bootstrap Algebra is middle school content. For middle school, it could consume 
 
 For high school computer science, it creates an initial framework that accesses or reteaches students' math learning while establishing a common vocabulary and conceptual basis for exploring other computer science content.
 
+The useful part of this PD wasn't a new thing to teach. It was noticing what I had been assuming students already knew.
+
 ---
 
 ¹ [Research](https://www.nature.com/articles/s41598-020-60661-8) shows that language skills are far more important than math/numeracy skills in predicting a student's performance at learning modern computer programming. And generic problem-solving and learning aptitude are even more relevant than language or math skills combined.
-
-*Sometimes the most important professional development forces you to question not what you're teaching, but what you're assuming students already know.* 📚💻

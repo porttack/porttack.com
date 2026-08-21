@@ -35,5 +35,3 @@ For our ROV students, many of whom completed last year's intense competition, th
 Events like this create ripples that extend far beyond one evening. Elementary students go home talking about robots and coding. Parents see the value of hands-on STEM education. High school students gain confidence and discover they might enjoy teaching or mentoring.
 
 Some of our high schoolers asked afterward if we could do it again. That's the marker of authentic learning - when students want more, not less.
-
-*Sometimes the best classroom is one where everyone is both teacher and student.* 🔬🤖

@@ -20,5 +20,3 @@ The simplest adjustments transformed my classroom: moving backpacks to the back 
 With my most challenging 6th grade group, I stepped back from ambitious computer science goals. We added journals, read books, used computers less. Counterintuitively, this created space for real learning. Sometimes the best thing a teacher can do is resist the urge to cover more content and instead focus on reaching every student.
 
 **The biggest lesson?** Teaching isn't just about what you know - it's about building community, earning trust, and meeting students where they are. Everything else follows from there.
-
-*Just like in industry, it isn't writing perfect code that creates success - it's building connections and community that transforms ideas into reality.* 

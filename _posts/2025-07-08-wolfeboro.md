@@ -34,8 +34,6 @@ Even the challenges reveal the program's value. Watching parents navigate the de
 
 For any parent wondering whether these traditional youth organizations still matter in our digital age, my answer is simple: they matter more than ever.
 
-*Sometimes the most important lessons happen around a campfire, not in a classroom.* 🏕️⚜️
-
 <hr/>
 
 **Learn More:**

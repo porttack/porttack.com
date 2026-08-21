@@ -30,5 +30,3 @@ Several students commented on the amount of microplastics mixed in with the sand
 The best service projects teach as much as they serve. Our students learned about environmental impact, community organizing, and the satisfaction that comes from improving something bigger than yourself. They also learned that meaningful work often involves tasks that aren't glamorous but are necessary.
 
 Perhaps most importantly, they experienced how a small group of committed people can make a tangible difference. In a world where environmental challenges can feel overwhelming, 212 pounds of trash removed by 26 volunteers is proof that individual action matters.
-
-*Sometimes the most important lessons happen when you're elbow-deep in seaweed, working alongside others who care about the same things you do.* ♻️

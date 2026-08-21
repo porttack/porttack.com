@@ -31,8 +31,6 @@ The experience was eye-opening for everyone. Students discovered that:
 
 One student commented, "I never realized how much I talk to myself when I code!"
 
-*Sometimes the best preparation for the future happens when we step outside the traditional curriculum and simulate what students will actually encounter.*
-
 <br/>
 <hr/>
 <br/>

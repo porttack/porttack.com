@@ -40,6 +40,17 @@ matter) and leave the substance and phrasing untouched.
 - Empty engagement filler ("everyone's voice matters!", "let's dive in").
 - Vague uplift standing in for a real claim ("a step forward in our journey
   of shaping the future!").
+- **The italic closing kicker.** The single most common tell on this site,
+  and it survived into posts that otherwise read as his: a one-line
+  italicized aphorism at the end, usually "*Sometimes the most important
+  lesson/classroom/teaching is...*" or "*Just like in industry, it isn't X,
+  it's Y.*" Ten were removed in one pass. Delete them; never write one. The
+  post should end on the last real thing he has to say.
+
+Italics that are NOT this and must stay: "*Delivered 5/1/2024*" stamps on
+public comment posts, "*All opinions are my own. -- Eric Brown*" sign-offs,
+"*Read the full [Annual Report](...)*" link lines, bio lines, photo
+captions, draft-status markers, and seminar facilitator notes.
 
 **Reconstruct like this:**
 - First person, grounded in something that actually happened — a specific

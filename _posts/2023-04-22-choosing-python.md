@@ -28,7 +28,7 @@ Foreign language teachers have been using tools like Google Translate for years.
 
 I won't be teaching block languages. When asked how to grade Scratch programs, a facilitator suggested students take screenshots and submit those. That's not the future I envision.
 
-When my son was in 3rd grade, he used an Arduino, a microcontroller common in high school robotics courses, to simulate a die roll. Five years ago, it could only be programmed in the "C" language. Today, Arduinos understand Python. This evolution reflects the future of coding education - a future where Python plays a central role. 🚀🐍
+When my son was in 3rd grade, he used an Arduino, a microcontroller common in high school robotics courses, to simulate a die roll. Five years ago, it could only be programmed in the "C" language. Today, Arduinos understand Python. This evolution reflects the future of coding education - a future where Python plays a central role.
 
 ![pyton joke](https://realpython.com/cdn-cgi/image/width=960,format=auto/https://files.realpython.com/media/Arduino-With-Python-How-to-Get-Started_Watermarked.67d3c045231b.jpg)
 

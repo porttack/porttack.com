@@ -33,5 +33,3 @@ This kind of partnership teaches students that grants aren't entitlements - they
 Standing before that room of accomplished community leaders, our students demonstrated confidence, gratitude, and pride in their work. They answered questions thoughtfully, explained technical concepts clearly, and represented our program with maturity that went far beyond their years.
 
 The $1,000 grant supported our environmental education mission, but the presentation experience was equally valuable. Students learned that being part of a community means both receiving support and giving back, both asking for help and showing accountability.
-
-*Sometimes the most important lessons happen not in the classroom, but in moments when students realize they're part of something bigger than themselves.* 🎓

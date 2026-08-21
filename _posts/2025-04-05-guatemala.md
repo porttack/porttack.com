@@ -38,5 +38,3 @@ This experience reinforced something I try to teach my students: we're all conne
 The young people I teach daily will inherit a world with complex challenges. Experiences like this remind me that they're also inheriting a tradition of service, innovation, and the belief that ordinary people can do extraordinary things when they work together.
 
 *View the full [Guatemala 2025 Presentation](https://docs.google.com/presentation/d/1lDz4XiRvGh2GLMPMPwx0JUFJKESKDOkjRwV5HbFbVQQ/edit?usp=sharing) for more details on the project and Rotary's global health initiatives.*
-
-🌍💧
