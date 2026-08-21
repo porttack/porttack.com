@@ -5,11 +5,9 @@ date:   2023-07-15
 categories: teaching
 excerpt_separator: <!--more-->
 ---
-I'm heading into my first full year of teaching, and before the schedule fills in and the day-to-day takes over, I wanted to write down what I actually believe about kids and teaching — the stuff I want to be able to check my decisions against later, not just a mission statement for the wall.
+I'm heading into my first full year of teaching. Before the schedule fills up and the day-to-day takes over, here's what I actually believe about kids and teaching. I expect to edit it as the year tells me where I got it wrong.
 
 <!--more-->
-
-This is the same instinct behind the [Teaching Decision Record](/teaching/2023/06/06/teaching-decision-records.html) I wrote about last month: put the reasoning down while it's still clear, because a semester from now I won't remember why a decision felt obvious in July. I expect to edit this list as the year tells me where I got it wrong.
 
 ## Teaching Principles
 

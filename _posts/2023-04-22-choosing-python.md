@@ -3,6 +3,7 @@ layout: post
 title:  "Python: The Future of K12 Coding Education"
 date:   2023-04-22
 categories: teaching
+redirect_from: /2021/04/12/7th-grade-computer-science.html
 ---
 
 For tech veterans, the choice is clear. Python, often considered a "teaching language", is [hugely popular](https://pypl.github.io/PYPL.html) and the go-to solution for a [vast array of modern software engineering problems](https://www.mygreatlearning.com/blog/open-source-python-libraries/). However, it's not the default choice for K12 education. Why?

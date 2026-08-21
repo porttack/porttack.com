@@ -3,31 +3,34 @@ layout: post
 title:  "Friday Coding for 4th and 5th graders"
 date:   2017-12-22
 categories: teaching
+excerpt_separator: <!--more-->
 ---
-Friday Coding was an after-school program that ran from September 29 to December 15, 2017, spanning a period of 10 weeks. It provided a valuable opportunity for twenty enthusiastic 4th and 5th graders to dive into the world of coding. The program kicked off and concluded at the SLE playground.
+Friday Coding was a ten-week after-school program, September 29 to December 15, 2017, for twenty 4th and 5th graders. We started and finished at the SLE playground.
 
-Our approach was dynamic and engaging, incorporating a mix of unplugged group activities, self-paced code.org curriculum (ranging from courses D to F, depending on the students' abilities), and other coding and engineering-related exercises. Throughout the program, students were actively encouraged to collaborate, pooling their skills and knowledge to solve problems and support one another.
+<!--more-->
 
-Parents appreciated the convenience of picking children up after work, marking the start of their weekend.
+Each session mixed unplugged group activities, self-paced code.org work (courses D through F, depending on the kid), and other coding and engineering exercises. Collaboration was the default rather than something I had to ask for.
 
-Time was divided as
-* 3:15pm - 4:15pm - Lesson / Unplugged Activity
+The schedule:
+
+* 3:15pm - 4:15pm - Lesson / unplugged activity
 * 4:15pm - 4:30pm - Break (playground / snack)
 * 4:30pm - 5:30pm - Code.org online activity
 
-The purpose of Friday Coding was to implement a highly accessible curriculum that could be easily utilized in SLE classroom settings, serving as a valuable resource for future coding endeavors. (It was also initiated in response to a student's expressed desire to learn more about coding.)
+Ending at 5:30 on a Friday mattered more than I expected. Parents could come straight from work, collect a kid, and start the weekend.
 
-## Lessons Learned
+The point was to find a curriculum accessible enough that an SLE classroom teacher could pick it up later without much overhead. It also started because a student asked to learn more about coding.
 
-- Keep it at their level. The initial Lesson 1, focusing on computational computing's math, proved to be too challenging for some students. While those who grasped the concepts were somewhat excited, those who struggled felt discouraged initially.
-- Identify which groups work well together and be mindful of potential conflicts among certain students. Flexibility is key in creating a harmonious learning environment.
-- Maintain classroom discipline whenever necessary, ensuring a conducive atmosphere for effective learning.
-- Allocate sufficient time for online activities and resist the urge to grant too much free time too quickly. Instead, offer easier lessons to students who may be genuinely struggling.
-- Familiarize yourself with the sequencing and topics of each lesson, allowing you to redirect students to appropriate alternative lessons when needed.
-- Ensure that students can easily log in via the classroom system or have additional "student login cards" printed out as backups.
-- For advanced students, be flexible in allowing and encouraging the use of Scratch. However, establish ground rules and promote collaborative projects involving two or more students.
-- Prioritize completing at least some of the online activities beforehand, as this will enhance your ability (or that of your helpers) to assist the students effectively.
-- Observe and gauge which students thrive in logic-based activities like Play Lab and which excel in grasping mathematical concepts through the Artist lessons.
-- When teaching spreadsheet-related skills, proceed slowly through the steps, ensuring students grasp each stage effectively. Consider gathering students on the rug periodically to assess their progress and allow them to assist one another.
-- As we were beta testing Course F, minor issues with the platform emerged. The main concern was that the functions coding activities placed excessive emphasis on puzzles, rather than reinforcing the fundamental principles and applications of functions.
+## Lessons learned
 
+- Keep it at their level. Lesson 1 was the math behind computation, and it was too hard for a good chunk of the group. The kids who got it were mildly interested. The kids who didn't were discouraged in week one, which is the worst week for it.
+- Work out early which kids work well together and which pairs are trouble, then stay willing to rearrange.
+- Hold the line on discipline when it's needed.
+- Leave enough time for the online work and don't hand out free time too early. A struggling student needs an easier lesson, not a longer break.
+- Know the lesson sequence well enough to redirect a kid to a different lesson without stopping to look it up.
+- Make sure every student can log in through the classroom system, and print backup student login cards.
+- Let the advanced students use Scratch, with ground rules, and steer them toward projects with two or more kids in them.
+- Do the online activities yourself first. You and your helpers will be far more useful.
+- Watch who lights up on the logic puzzles in Play Lab versus who picks up the math through the Artist lessons. They aren't the same kids.
+- Go slow on spreadsheets. Pull everyone onto the rug now and then to see where they are and let them help each other.
+- We were beta testing Course F and hit some platform bugs. The bigger problem was that the functions activities leaned on puzzle-solving instead of on what functions are actually for.
