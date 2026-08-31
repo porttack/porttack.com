@@ -96,6 +96,13 @@ The novel lands almost entirely in two of the five Big Ideas:
 - **4.1 The Internet**: how data moves: DNS, packets, routing, redundancy (CSN-1).
 - **4.2 Fault Tolerance**: resilient, redundant networks; the Xnet / mesh material is a natural hook.
 
+### The full standards alignment
+
+The sections above are the summary. Every course I teach gets checked against the same standards catalog (California, AP CSP, and CSTA), and *Little Brother*'s full breakdown -- exact code, chapter, and how strong the match is -- lives there too:
+
+- **[This book's coverage, highlighted against the whole catalog](https://learn.porttack.com/standards/?only=LB)**
+- **[A standalone, printable report of just what it covers](https://learn.porttack.com/standards/?report=LB)**
+
 ### Appendix: Doctorow's encouragement, and where other teachers have gone
 
 Before building any of this, I wrote to Cory Doctorow in 2023 to ask whether other teachers had taught *Little Brother* in a computer science setting. His reply was immediate:
