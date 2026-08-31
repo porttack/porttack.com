@@ -83,6 +83,8 @@ California's 9–12 **core** runs CS.1–3, NI.4–7, DA.8–11, AP.12–22, IC.
 **Covered: licensing**
 - The **Creative Commons** release of the book maps to the licensing standard in the **AP.12–22** strand. Students can read the actual CC license on the book *and* find it again on the CSTA standards document (abstract-to-concrete in one move).
 
+**[This book's California coverage, highlighted](https://learn.porttack.com/standards/?only=LB&view=ca-cs)** &middot; **[...as a standalone report](https://learn.porttack.com/standards/?report=LB&view=ca-cs)**
+
 ### AP CSP coverage
 
 The novel lands almost entirely in two of the five Big Ideas:
@@ -95,6 +97,8 @@ The novel lands almost entirely in two of the five Big Ideas:
 **Big Idea 4: Computing Systems & Networks (CSN)**
 - **4.1 The Internet**: how data moves: DNS, packets, routing, redundancy (CSN-1).
 - **4.2 Fault Tolerance**: resilient, redundant networks; the Xnet / mesh material is a natural hook.
+
+**[This book's AP CSP coverage, highlighted](https://learn.porttack.com/standards/?only=LB&view=ap-only)** &middot; **[...as a standalone report](https://learn.porttack.com/standards/?report=LB&view=ap-only)**
 
 ### The full standards alignment
 
