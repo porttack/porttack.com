@@ -15,9 +15,9 @@ excerpt_separator: <!--more-->
 
 *Little Brother* is juvenile fiction about a group of teenagers who use cryptography, social engineering, software, and the internet to fight a dystopian surveillance state. In a computer science classroom, it teaches digital literacy without students realizing they're learning it.
 
-The novel pulls students into questions of privacy, security, surveillance, encryption, censorship, data collection, authentication, and the consequences technology carries for society. These map directly onto California's 9–12 Impacts of Computing standards (9-12.IC.23 through .30, in standards built on the CSTA K–12 framework), covering eight standards that make up a quarter of the state's high-school computer science core.
+The novel pulls students into questions of privacy, security, surveillance, encryption, censorship, data collection, authentication, and the consequences technology carries for society. These map directly onto California's 9–12 Impacts of Computing standards (in standards built on the CSTA K–12 framework) — six of the eight in that strand (9-12.IC.23, .24, .26, .28, .29, .30), a fifth of the state's high-school computer science core on their own.
 
-The book also opens doors to networking. Students encounter resilient communication systems, encrypted messaging, distributed networks, and the tension between centralized control and decentralized communication. These are natural entry points into California's networking standards on reliability, the design of the internet, security, and cryptography (9-12.NI.4 through .7). Counted together with the Impacts standards, that's roughly a third of the high-school core, reached through a story instead of a syllabus.
+The book also opens doors to networking. Students encounter resilient communication systems, encrypted messaging, distributed networks, and the tension between centralized control and decentralized communication. These are natural entry points into California's networking standards on reliability, the design of the internet, security, and cryptography (9-12.NI.5 through .7). Counted together with the Impacts standards, that's roughly a third of the high-school core, reached through a story instead of a syllabus.
 
 And it engages. The standards aren't handed over as a checklist; they surface from the plot. Students argue about whether surveillance makes a society safer. They debate privacy against security. They question who should control technology, and who should be trusted with data.
 
@@ -54,9 +54,9 @@ Students may not remember every networking concept or cryptographic technique fr
 | # | Chapters | Theme & CS topics | CA standards | AP CSP |
 |---|----------|-------------------|--------------|--------|
 | 1 | **1–3** | The setup. ARGs, RFID/arphids, school surveillance, Marcus's tech fluency. "Would you give up your phone password?" as the opening hook. | NI (identifier basics), IC.23, IC.29 | 5.1, 5.6 |
-| 2 | **4–6** | The BART/Bay Bridge bombing, DHS detention and interrogation, Marcus refusing to unlock his phone. The civil-liberties stakes land here. | IC.23, IC.30 | 5.1, 5.6 |
-| 3 | **7–9** | Crypto payoff. Public/private keys, man-in-the-middle, the web-of-trust concept (7); traffic analysis (*encryption hides content, not pattern*) and the "make everyone abnormal" move (8); the family/surveillance fallout scene (9). | NI.6, NI.7, IC.23, IC.30 | 5.6, 4.1 |
-| 4 | **10–11** | The web of trust actually gets built ([key-signing party](https://porttack.com/keygen)). Mesh/decentralized communication; Xnet momentum. | NI.4, NI.6, NI.7 | 4.1, 4.2, 5.6 |
+| 2 | **4–6** | The BART/Bay Bridge bombing, DHS detention and interrogation, Marcus refusing to unlock his phone. The civil-liberties stakes land here. | IC.23, IC.26, IC.30 | 5.1, 5.6 |
+| 3 | **7–9** | Crypto payoff. Public/private keys, man-in-the-middle, the web-of-trust concept, traffic analysis (*encryption hides content, not pattern*), and the "make everyone abnormal" move (7); the paradox of the false positive (8); the family/surveillance fallout scene (9). | NI.6, NI.7, IC.23, IC.30 | 5.6, 4.1 |
+| 4 | **10–11** | The web of trust actually gets built ([key-signing party](https://porttack.com/keygen)). Mesh/decentralized communication; Xnet momentum. | NI.5, NI.6, NI.7 | 4.1, 4.2, 5.6 |
 | 5 | **12–13** | Surveillance tech detail (camera noise signatures and stripping them, arphid tracking, the limits of protected speech). Matrix-themed discussion deck. | NI.6, NI.7, IC.23, IC.30 | 5.6, 5.5 |
 | 6 | **14** | Xnet press conference; anonymous speech, media, whistleblowing; M1k3y's identity pressure. Lighter on technical content, strong on civic literacy. | IC.23, IC.30 | 5.1, 5.5 |
 | 7 | **15–16** | Xnet organizing and relationship beats. Narrative momentum; thin on new CS hooks (candidate for compression or teacher summary). | IC.23 | 5.1 |
@@ -75,10 +75,10 @@ Students may not remember every networking concept or cryptographic technique fr
 California's 9–12 **core** runs CS.1–3, NI.4–7, DA.8–11, AP.12–22, IC.23–30 (thirty standards). Here's where the novel lands:
 
 **Covered: the thematic core**
-- **9-12.IC.23–.30** (Impacts of Computing): computing's effect on social, ethical, economic, and cultural practices; intellectual-property and licensing law; non-evident data collection; and weighing privacy against safety, law, and ethics. That's **eight standards (more than a quarter of the core)** and the spine of the unit. Strongest individual anchors: **IC.23, IC.28, IC.29, IC.30**.
+- **9-12.IC.23, .24, .26, .28, .29, .30** (Impacts of Computing): computing's effect on social, ethical, economic, and cultural practices; intellectual-property and licensing law; non-evident data collection; and weighing privacy against safety, law, and ethics. That's **six standards (a fifth of the core)** and the spine of the unit. Strongest individual anchors: **IC.23, IC.28, IC.29, IC.30**; IC.24 and IC.26 are real but lighter touches. (IC.25 and IC.27 aren't really here.)
 
 **Covered / reinforced: networking**
-- **9-12.NI.4–.7** (Networking & the Internet): the design characteristics of the internet (DNS, IP, scalability, reliability), network security, and comparing cryptographic techniques for secure transmission. The book hits the **security and cryptography** end squarely (NI.6, NI.7); the **architecture** end (NI.4) is reinforced rather than fully taught.
+- **9-12.NI.5–.7** (Networking & the Internet): the design characteristics of the internet (DNS, addressing, scalability, reliability), network security, and comparing cryptographic techniques for secure transmission. The book hits all three squarely: NI.5 through Xnet's mesh routing and Chapter 17's DNS explainer, NI.6/NI.7 through the crypto-and-countermeasures arc running chapters 6–10 and 17. (NI.4, on network performance for organizations, is the one 9-12 networking standard the book doesn't really touch.)
 
 **Covered: licensing**
 - The **Creative Commons** release of the book maps to the licensing standard in the **AP.12–22** strand. Students can read the actual CC license on the book *and* find it again on the CSTA standards document (abstract-to-concrete in one move).
