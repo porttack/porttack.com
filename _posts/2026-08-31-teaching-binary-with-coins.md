@@ -95,11 +95,27 @@ Two digits, one byte, `FF` is the ceiling. That framing connects directly to the
 
 I am explicit with students that hex is enrichment. They will not be asked to convert hex on the AP exam. Binary to decimal and back, they will.
 
-## AP CSP alignment
+## Computer Science Standards Alignment
 
-This is Big Idea 2, Data. The vocabulary I make sure gets said out loud and written down: **bit**, **byte**, **binary**, **base 2**, **base 10**, **decimal**, **hexadecimal**, **base 16**, **RGB**. The CED skill being practiced is representing the same value in multiple ways and explaining why a representation was chosen, which the color picker demonstration does almost for free.
+One lesson, spanning AP, middle school, high school, and CTE: AP CSP topic 2.1 (Binary Numbers); California's 9-12.DA.8 and CSTA's 3A-DA-09 at the high school level; California's 6-8.DA.7 and CSTA's 2-DA-07 at the middle school level; and California CTE's anchor standard 5.11.
 
-The two agreements also set up **overflow** later. When you eventually ask what happens if you need 256 and only own eight coins, the answer is already in their hands.
+[This lesson's full standards report](https://learn.porttack.com/standards/?report=Coins)
+
+## Vocabulary
+
+**Bit.** A single binary digit, 0 or 1.
+
+**Byte.** Eight bits. Enough to hold one of 256 values.
+
+**Binary (base 2).** Numbers written with only two digits, 0 and 1.
+
+**Decimal (base 10).** The system you already use, ten digits, 0 through 9.
+
+**Hexadecimal (base 16).** Sixteen digits, 0 through 9 then A through F. Four bits per digit, so one byte is exactly two hex digits.
+
+**RGB.** A color stored as three numbers, the amounts of red, green, and blue, each one byte.
+
+**Overflow.** What happens when a value needs more bits than you have to hold it. The two coin agreements set this up directly: ask what happens when you need 256 and only own eight coins, and the answer is already in their hands.
 
 ## Things to watch for
 
