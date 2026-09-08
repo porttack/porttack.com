@@ -1,7 +1,8 @@
 ---
 layout: home
 title: Blog
-permalink: /blog/
+permalink: /
+redirect_from: /blog/
 exclude_category: tech-news,draft
 ---
 

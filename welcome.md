@@ -3,9 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Welcome!
-permalink: /
-order: 1
+title: About Me!
+permalink: /about/
 ---
 
 <style>
