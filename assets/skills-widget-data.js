@@ -2,7 +2,7 @@
  * skills-widget-data.js — the WEF "Skills <-> Standards" dataset.
  *
  * Static, reusable content for the skills-widget engine: the two WEF skill
- * lists, the shared skill/standard mapping, and the CTE / CSTA / CSTA 3.0
+ * lists, the shared skill/standard mapping, and the CTE / CSTA / CSTA 2026
  * match-up data, plus a canonical set of captions. Loaded after
  * skills-widget.js; registers itself as the "wef-skills" dataset so posts can
  * pull it in with { dataset: "wef-skills" } instead of carrying the data
@@ -365,10 +365,12 @@
     "9-12.AP.21":"Leadership & social influence"
   };
 
-  // The CSTA 3.0 draft (Dec 2025, final expected as soon as 2026): four
-  // pillars of practices, seven dispositions, five concepts. All text quoted
-  // from the draft; a draft is subject to change. Ordered to minimize line
-  // crossings against the WEF skill list.
+  // The 2026 CSTA PK-12 Computer Science Standards (published July 2026,
+  // csteachers.org): four pillars of practices, seven dispositions, five
+  // concepts. Pillar and disposition text is quoted verbatim (CC BY-NC-SA
+  // 4.0); concept subconcepts are summarized, with codes cited, from Eric's
+  // own decoded standards catalog (learn.porttack.com/standards). Ordered to
+  // minimize line crossings against the WEF skill list.
   var CSTA3_ANCHORS = [
     {id:"CT", disp:"Pillar", name:"Computational Thinking", unit:"pillar", cls:"tech"},
     {id:"D3", disp:"Disp.", name:"Critical Thinking", unit:"disposition", cls:"tech"},
@@ -388,8 +390,8 @@
     {id:"CSoc", disp:"Concept", name:"Computing &amp; Society", unit:"concept", cls:"human"}
   ];
 
-  // Every WEF skill has a line against the 3.0 draft; the only chip nothing
-  // points to is Computing & Society.
+  // Every WEF skill has a line against the 2026 standards; the only chip
+  // nothing points to is Computing & Society.
   var CSTA3_LINKS = [
     {s:0, a:"CT", w:"strong"}, {s:0, a:"D3", w:"strong"},
     {s:1, a:"D4", w:"strong"},
@@ -406,26 +408,26 @@
     {s:12, a:"ETH", w:"partial"}
   ];
 
-  var DISP_NOTE = " One of seven dispositions in the CSTA 3.0 draft: habits of mind that shape how students think, persist, collaborate, and reflect, beyond what they can code or recall.";
+  var DISP_NOTE = " One of seven dispositions in the 2026 CSTA PK-12 Computer Science Standards: habits of mind that shape how students think, persist, collaborate, and reflect, beyond what they can code or recall.";
   var CSTA3_DETAILS = {
-    CT: {desc:"One of four pillars of practices in the CSTA 3.0 draft: a way of thinking about problems and formulating problems and solutions so that an information-processing agent can help to solve them. The engineering design process is embedded within this pillar.", subs:[
+    CT: {desc:"One of four pillars of practices: a way of thinking about problems and formulating problems and solutions so that an information-processing agent can help to solve them. The engineering design process is embedded within this pillar.", subs:[
       {n:"6", t:"Define computational problems."},
-      {n:"6.a", t:"Identify real-world problems that can be solved computationally using rule-based approaches, data-driven approaches (e.g., machine learning), or hybrid methods."},
+      {n:"6.a", t:"Identify real-world problems that can be solved computationally using rule-based approaches, data-driven approaches (e.g., machine learning), or a combination of these approaches."},
       {n:"6.b", t:"Clearly state criteria for success and identify constraints."},
       {n:"6.c", t:"Decompose complex problems into manageable subproblems."},
       {n:"7", t:"Develop and use abstractions."},
       {n:"7.a", t:"Extract common features and patterns from data, processes, or phenomena to create general methods and algorithms."},
       {n:"7.b", t:"Create reusable modules and procedures that can apply to multiple situations to reduce complexity."},
       {n:"7.c", t:"Model phenomena and develop simulations, using rule-based and data-driven approaches, to understand and evaluate potential outcomes."},
-      {n:"8", t:"Create computational artifacts."},
-      {n:"8.a", t:"Generate and evaluate multiple solution approaches to determine which best meet the defined criteria given the constraints."},
+      {n:"8", t:"Create computing technologies."},
+      {n:"8.a", t:"Generate and evaluate multiple approaches to solving a problem. Determine which solution best meets the defined criteria given the constraints."},
       {n:"8.b", t:"Plan the development of computational solutions."},
-      {n:"8.c", t:"Implement solutions by developing or modifying artifacts through traditional programming, model training, or hybrid methods."},
-      {n:"9", t:"Test and refine computational artifacts."},
-      {n:"9.a", t:"Test, debug, and troubleshoot computational artifacts systematically using appropriate methods, such as generating test cases for rule-based programs and accuracy evaluation for machine learning models."},
-      {n:"9.b", t:"Iteratively refine and optimize solutions to meet criteria for success."}
+      {n:"8.c", t:"Implement solutions by developing or modifying technologies through traditional programming, model training, or a combination of these approaches."},
+      {n:"9", t:"Test and refine computing technologies."},
+      {n:"9.a", t:"Test, debug, and troubleshoot computing technologies systematically using appropriate methods, such as generating test cases for rule-based programs and accuracy evaluation for machine learning models."},
+      {n:"9.b", t:"Iteratively refine and optimize technologies to meet criteria for success."}
     ]},
-    INC: {desc:"One of four pillars of practices in the CSTA 3.0 draft: productive collaborations with diverse groups of people, addressing communication skills, project management skills, and personal conduct when working with others.", subs:[
+    INC: {desc:"One of four pillars of practices: productive collaborations with diverse groups of people, addressing communication skills, project management skills, and personal conduct when working with others.", subs:[
       {n:"3", t:"Communicate effectively about computing."},
       {n:"3.a", t:"Share technical ideas and explain computing concepts clearly to different audiences."},
       {n:"3.b", t:"Give and actively listen to others' input and constructive feedback. Consider diverse perspectives and multiple solutions to technical challenges."},
@@ -437,67 +439,65 @@
       {n:"5.b", t:"Participate reliably in computing teamwork, share responsibility for project outcomes, and meet development deadlines."},
       {n:"5.c", t:"Reflect on contributions to computing projects, including technical decisions and team interactions, to improve technical and collaboration skills."}
     ]},
-    HCD: {desc:"One of four pillars of practices in the CSTA 3.0 draft: responsibly creating computational solutions through human-centered design, including principles of human-computer interaction.", subs:[
+    HCD: {desc:"One of four pillars of practices: responsibly developing computing technologies through human-centered design, drawing on principles of human-computer interaction to understand user needs and iteratively design systems that support and empower people.", subs:[
       {n:"10", t:"Understand and involve diverse users in design decisions."},
       {n:"10.a", t:"Learn about different people's experiences with computing technologies, including those with different abilities, backgrounds, and needs."},
       {n:"10.b", t:"Gather input and feedback from diverse users throughout the design and development process to help create positive user experiences."},
       {n:"11", t:"Use iterative design processes."},
-      {n:"11.a", t:"Start with simple prototypes and continuously test and refine solutions to ensure usability and accessibility."},
-      {n:"12", t:"Design computational technologies that empower and inform users."},
-      {n:"12.a", t:"Respect users' autonomy. Be transparent about how computational technologies make decisions that affect users. Give users control over how they interact with technologies rather than leveraging human limitations to serve creators' interests over users' interests."},
-      {n:"12.b", t:"Consider the benefits and harms of human-like behaviors in computational technologies (e.g., conversational AI) and how they influence user perceptions and actions."}
+      {n:"11.a", t:"Start with simple prototypes and continuously test and refine computing technologies to ensure usability and accessibility."},
+      {n:"12", t:"Design computing technologies that empower and inform users."},
+      {n:"12.a", t:"Respect users' autonomy. Be transparent about how computing technologies make decisions that affect users. Give users control over how they interact with technologies rather than leveraging human limitations to serve creators' interests over users' interests."},
+      {n:"12.b", t:"Consider the benefits and harms of human-like behaviors in computing technologies (e.g., conversational AI) and how they influence user perceptions and actions."}
     ]},
-    ETH: {desc:"One of four pillars of practices in the CSTA 3.0 draft: habits that help students become responsible creators of technology, based on the ACM's general ethical principles.", subs:[
+    ETH: {desc:"One of four pillars of practices: habits that help students become responsible creators of technology, based on the ACM's general ethical principles.", subs:[
       {n:"1", t:"Use computing for positive social impact."},
       {n:"1.a", t:"Imagine and create computing technologies that solve problems, strengthen communities, and improve quality of life."},
-      {n:"1.b", t:"Evaluate whether potential benefits of computing solutions outweigh possible harms. Ensure that harms are not concentrated on specific groups and avoid serious environmental harm."},
-      {n:"1.c", t:"Explain design trade-offs in computing projects, including what values these decisions reflect and what was prioritized or sacrificed."},
-      {n:"2", t:"Respect others' rights when creating computational technologies."},
-      {n:"2.a", t:"Respect other creators of computational technologies. Only use others' work with permission and give appropriate attribution."},
-      {n:"2.b", t:"Respect users' privacy and protect their data. Give users choices about how their information is collected and used. Only collect the minimum amount of information necessary."}
+      {n:"1.b", t:"Evaluate whether potential benefits of computing technologies outweigh possible harms. Ensure that harms are not concentrated on specific groups and avoid serious environmental harm."},
+      {n:"1.c", t:"Explain design trade-offs in computing technologies, including the values these decisions reflect and what was prioritized or sacrificed."},
+      {n:"2", t:"Respect others' rights and dignity when creating computing technologies."},
+      {n:"2.a", t:"Respect other creators of computing technologies. Only use others' work with permission and give appropriate attribution."},
+      {n:"2.b", t:"Respect users' privacy and protect their data. Give users choices about how their information is collected and used. Only collect the minimum amount of information necessary. Avoid practices that manipulate or undermine users."}
     ]},
-    D1: {desc:"\"Creativity: Generating original, meaningful computing ideas and projects.\"" + DISP_NOTE, subs:[]},
+    D1: {desc:"\"Creativity: Generating original and meaningful computing ideas and projects.\"" + DISP_NOTE, subs:[]},
     D2: {desc:"\"Sense of Belonging: Feeling included, respected, and recognized in the CS community.\"" + DISP_NOTE, subs:[]},
     D3: {desc:"\"Critical Thinking: Using reasoning and evidence to analyze and refine solutions.\"" + DISP_NOTE, subs:[]},
     D4: {desc:"\"Persistence: Continuing effort despite frustration or setbacks.\"" + DISP_NOTE, subs:[]},
-    D5: {desc:"\"Reflectiveness: Connecting past experiences to future learning choices.\"" + DISP_NOTE, subs:[]},
-    D6: {desc:"\"Resourcefulness: Strategically seeking tools, people, and references to solve problems.\"" + DISP_NOTE, subs:[]},
+    D5: {desc:"\"Reflectiveness: Connecting past experiences to inform future learning.\"" + DISP_NOTE, subs:[]},
+    D6: {desc:"\"Resourcefulness: Seeking and using tools, people, and information to solve problems.\"" + DISP_NOTE, subs:[]},
     D7: {desc:"\"Curiosity: Asking questions and exploring beyond assigned work.\"" + DISP_NOTE, subs:[]},
-    AD: {desc:"One of five concepts in the CSTA 3.0 draft. An algorithm is a sequence of steps designed to accomplish a specific task. Students learn the development, combination, and decomposition of algorithms, the evaluation of competing algorithms, and the difference between traditional algorithms and artificial intelligence/machine learning (AI/ML) algorithms. Subconcepts, summarized from the draft:", subs:[
-      {n:"Algorithm Fundamentals", t:"Designing algorithms, step-by-step solutions to a task, with complexity and visual representation growing across grades."},
-      {n:"Problem Solving", t:"Optimizing algorithms for efficiency and accuracy; exploring algorithms' underlying opaque systems."},
-      {n:"Machine Learning", t:"Students train AI models for classification or prediction, analyze how training data shapes model output, and by high school justify the selection of AI algorithms and develop AI models for specific tasks. Sample standards: E4-ALG-02 \"Train an AI model to make a classification or prediction\" (elementary); HS-ALG-04 \"Evaluate AI-generated output to assess bias, accuracy, and potential harms.\""},
-      {n:"Impacts of Algorithms and Design", t:"Who an algorithm benefits, who it may unintentionally harm, and why; fairness, equity, accessibility, and bias."}
+    AD: {desc:"One of five concepts in the 2026 CSTA standards. An algorithm is a sequence of steps designed to accomplish a specific task; this concept covers designing and evaluating algorithms, including the shift from traditional rule-based algorithms toward data-driven ones like machine learning. Subconcepts, summarized from the standards:", subs:[
+      {n:"Algorithmic Problem Solving", t:"Choosing the right data structure to pair with an algorithm, reworking an algorithm to run more clearly or efficiently, and giving AI-generated text, images, or code a critical look for accuracy, bias, or harm. HS-ALG-PS-01 to 05."},
+      {n:"Machine Learning", t:"Defending the choice of one AI approach over another for a task, questioning a dataset before trusting it, and building a working model for a specific job. Sample standards: E5-ALG-ML-02 \"Train a machine learning model to make a classification or prediction\" (5th grade); HS-ALG-ML-06 to 08 (high school)."},
+      {n:"Impacts of Algorithms &amp; Design", t:"Designing for genuinely broad usability, tracing unfairness in both rule-based and data-driven algorithms, and naming which values &mdash; efficiency, privacy, fairness &mdash; a design quietly prioritized. HS-ALG-IM-09 to 11."}
     ]},
-    PR: {desc:"One of five concepts in the CSTA 3.0 draft. Programming controls all computing systems, empowering people to communicate with the world in new ways and solve compelling problems. Societal and ethical impacts are woven throughout its subconcepts, summarized from the draft:", subs:[
-      {n:"Programming Fundamentals", t:"Reading and interpreting code, translating algorithms into code, and understanding programming languages' types, syntax, and semantics."},
-      {n:"Program Development", t:"Building on existing code, modularizing code, documenting code, and using AI tools to support programming."},
-      {n:"Reading and Documenting Code", t:"\"In a world where AI assistants can generate code based on a prompt, the ability to read and interpret code is increasingly important.\" Students evaluate AI-generated code for accuracy, reliability, and usability (HS-PRO-17)."},
-      {n:"Testing and Refining Code", t:"Troubleshooting strategies, optimizing code for efficiency and usability, and assessing the accuracy and bias of AI-generated code."},
-      {n:"Data Handling", t:"How programs structure and store data; identifying, labeling, and manipulating data types."}
+    PR: {desc:"One of five concepts in the 2026 CSTA standards. Programming controls computing systems and lets people communicate with the world in new ways; students read, write, test, and refine code, increasingly alongside AI tools. Subconcepts, summarized from the standards:", subs:[
+      {n:"Program Development", t:"Splitting a program into organized pieces, leaning on outside resources (docs, libraries, APIs) instead of reinventing everything, crediting borrowed work, and structuring teamwork with roles and a shared design document. HS-PRO-PD-12 to 15."},
+      {n:"Variables &amp; Data Storage", t:"Choosing the right structure &mdash; a list, a dictionary &mdash; to hold a program's data. HS-PRO-VD-16."},
+      {n:"Reading &amp; Documenting", t:"Explaining what someone else's code does, part by part (HS-PRO-RD-17), and giving AI-generated code the same scrutiny: testing it against what it was supposed to do, including edge cases (MS-PRO-RD-18, HS-PRO-RD-18)."},
+      {n:"Testing &amp; Refining", t:"Checking a finished program against its own original plan, and actually acting on feedback and test results rather than filing them away. HS-PRO-TR-19 &amp; 20."}
     ]},
-    DA3: {desc:"One of five concepts in the CSTA 3.0 draft. Computers collect and store data so it can be analyzed to better understand the world and make more accurate predictions. The draft also adds a full Artificial Intelligence specialty strand for high school. Subconcepts, summarized from the draft:", subs:[
-      {n:"Data Fundamentals", t:"Types of data, how data is generated, collected, and organized; metadata and data documentation."},
-      {n:"Data Processing", t:"Filtering, grouping, summarizing, transforming, and reshaping data; automating data cleaning and preparing data for analysis."},
-      {n:"Data Investigation", t:"Posing data questions, analyzing with computational tools, creating visualizations, and telling the story of the data."},
-      {n:"Impacts of Data Science", t:"Bias in data, data privacy, artificial intelligence and machine learning, and large-scale societal and environmental impacts of data science applications."}
+    DA3: {desc:"One of five concepts in the 2026 CSTA standards. Computers collect and store data so it can be analyzed to better understand the world and make predictions; a full Artificial Intelligence specialty strand builds on this concept for high school electives. Subconcepts, summarized from the standards:", subs:[
+      {n:"Data Collection &amp; Preparation", t:"Manufacturing data to fit a simulation's needs, writing a data dictionary, cleaning up messy text data, and weighing different ways to validate a dataset's values. HS-DAT-DC-21 to 24."},
+      {n:"Data Investigation", t:"Turning a multi-variable dataset into a chart to answer a question about it, and spotting how someone else's chart or simulation can still mislead. HS-DAT-DI-25 &amp; 26."},
+      {n:"Impacts of Data Science", t:"Weighing the real costs of collecting data at scale &mdash; consent, ownership, bias, misinformation, even data centers' environmental footprint &mdash; and arguing both sides of whether a privacy law actually works. HS-DAT-IM-27 &amp; 28."}
     ]},
-    SS: {desc:"One of five concepts in the CSTA 3.0 draft: the broad categories of hardware and software, networks, and cybersecurity. A Cybersecurity specialty strand goes deeper for high school. Subconcepts, summarized from the draft:", subs:[
-      {n:"Hardware and Software", t:"How systems represent and process information; interactions between hardware and software at multiple levels."},
-      {n:"Security", t:"Protecting personal information, information transmission across devices, network design, and protecting networks from different types of threats."},
-      {n:"Networks", t:"How information is sent and received across different types of networks."},
-      {n:"Impacts of Computing Systems", t:"The benefits, harms, and new problems computing systems create, from individuals to global society."}
+    SS: {desc:"One of five concepts in the 2026 CSTA standards, merging hardware, networks, and security into one strand to reflect how tightly they're now connected. A Cybersecurity specialty strand goes deeper for high school electives. Subconcepts, summarized from the standards:", subs:[
+      {n:"Hardware &amp; Software", t:"What sets an operating system apart from ordinary software, and what a real device's limits (battery life, screen size) mean for putting it to work. HS-SYS-HW-29 &amp; 30."},
+      {n:"Security", t:"Naming what a security measure costs as well as what it protects, sorting out who a given breach actually affects, and proposing concrete fixes for a described vulnerability. HS-SYS-SE-31 to 33."},
+      {n:"Networks", t:"Reading a network diagram's physical and software layers together, and understanding the internet as a layered network of networks held together by protocols like TCP/IP. HS-SYS-NT-34 &amp; 35."},
+      {n:"Impacts of Computing Systems", t:"Explaining why a computing law or policy exists, and tracing who bears the unevenly distributed costs of computing's physical footprint &mdash; energy, e-waste, supply chains. HS-SYS-IM-36 &amp; 37."}
     ]},
-    CSoc: {desc:"One of five concepts in the CSTA 3.0 draft. Computing shapes, and is shaped by, individuals, communities, and cultures around the world. Students learn to critically and responsibly navigate these social implications, considering issues of equity, access, and accountability. Subconcepts, summarized from the draft:", subs:[
-      {n:"History of Computing", t:"How technologies evolved in response to social, scientific, and economic needs; policy and legislation; disparities across communities."},
-      {n:"Emerging Technologies", t:"Recently developed technologies with the potential to significantly impact society; their core computational principles and ethical considerations."},
-      {n:"Humans and Computing", t:"Deciding when and where computing technologies, including AI, are appropriate and helpful; the trade-offs of AI-powered solutions; how human choices in designing, deploying, and regulating AI influence its outcomes."}
+    CSoc: {desc:"One of five concepts in the 2026 CSTA standards. Computing shapes, and is shaped by, individuals, communities, and cultures around the world; students learn to critically and responsibly navigate these social implications. Subconcepts, summarized from the standards:", subs:[
+      {n:"History of Computing", t:"Tracing how forces outside the technology itself &mdash; economics, culture, politics &mdash; pushed a technology's design or adoption, and explaining the reasoning behind a specific privacy or algorithmic-transparency rule. HS-SOC-HI-38 &amp; 39."},
+      {n:"Emerging Technologies", t:"What a new technology does differently under the hood, who its benefits leave out, and backing a proposed real-world use with research that's honest about who it might help or harm. HS-SOC-ET-40 to 42."},
+      {n:"Humans &amp; Computing", t:"The choices behind a system &mdash; whose data, whose tuning, whose decisions about use &mdash; and the open question of whether an AI system could ever be intelligent the way a person is. HS-SOC-HU-43 &amp; 44."},
+      {n:"Career Exploration", t:"Looking at how real, varied computing professionals actually work, and weighing what a student has learned against their own interests. HS-SOC-CE-45 &amp; 46."}
     ]}
   };
 
   var CSTA3_COVERED = {
     "Machine Learning":"AI & big data",
-    "Reading and Documenting Code":"AI & big data",
+    "Reading &amp; Documenting":"AI & big data",
     "Impacts of Data Science":"AI & big data",
     "Security":"Networks & cybersecurity",
     "Networks":"Networks & cybersecurity",
@@ -517,7 +517,7 @@
   var MATCH_VIEWS = {
     match: {anchors: CTE_ANCHORS, links: CTE_LINKS, details: ANCHOR_DETAILS, covered: COVERED, rightTitle: "CTE anchor standards"},
     csta: {anchors: CSTA_ANCHORS, links: CSTA_LINKS, details: CSTA_DETAILS, covered: CSTA_COVERED, rightTitle: "CS practices &amp; concept strands"},
-    csta3: {anchors: CSTA3_ANCHORS, links: CSTA3_LINKS, details: CSTA3_DETAILS, covered: CSTA3_COVERED, rightTitle: "CSTA 3.0 draft (2026)"}
+    csta3: {anchors: CSTA3_ANCHORS, links: CSTA3_LINKS, details: CSTA3_DETAILS, covered: CSTA3_COVERED, rightTitle: "2026 CSTA PK-12 Standards"}
   };
 
   var CAPTIONS = {
@@ -526,7 +526,7 @@
     cte: "<b>Most of this list was written into California's standards in 2013.</b> Coverage rates how fully each anchor standard covers the skill. The gaps are honest too: creative thinking is thin, and AI was not yet on anyone's radar.",
     match: "<b>Thirteen employer skills, eleven anchor standards.</b> Solid lines are direct matches, dashed lines partial ones. The one skill with no line, and the one standard nothing points to, tell their own story.",
     csta: "<b>Same thirteen skills, different document.</b> Against California's CS standards, the seven core practices and five concept strands, the gaps flip: AI &amp; big data finds a strong home and creative thinking becomes a whole practice, while motivation, curiosity, and environmental stewardship dangle. Once again, nothing points at the ethics strand.",
-    csta3: "<b>Every skill now has a line.</b> Mapped against the CSTA 3.0 draft, the revision expected as soon as 2026, the last gaps close: persistence, curiosity, and reflectiveness arrive as named dispositions, environmental harm enters the ethics pillar, and AI runs through four of the five concepts, elementary school onward. The one thing no employer skill points at, once again, is the ethics-and-society side. The standards writers keep it anyway."
+    csta3: "<b>Every skill now has a line.</b> Mapped against the 2026 CSTA PK-12 Computer Science Standards, published in July 2026, the last gaps close: persistence, curiosity, and reflectiveness arrive as named dispositions, environmental harm enters the ethics pillar, and AI runs through the Algorithms &amp; Design and Programming concepts, kindergarten onward. The one thing no employer skill points at, once again, is the Computing &amp; Society concept. The standards writers keep it anyway."
   };
 
   SW.registerDataset("wef-skills", {
