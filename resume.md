@@ -76,5 +76,6 @@ University of Rochester, New York
 
 ## Community
 
+* President, [SLV Rotary](https://portal.clubrunner.ca//6779), *2026-27*
 * Active member: Santa Cruz Lions, Rotary District 5170, Silicon Valley Monterey Bay Council - Boy Scouts of America, Valley Women's Club
 * Youth mentorship and STEM education advocacy
