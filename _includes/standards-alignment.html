@@ -29,13 +29,23 @@
 </details>
 <style>
   .standards-alignment{margin:1.5em 0;border:1px solid rgba(128,128,128,.35);border-radius:6px;padding:0 1.2em;font-size:0.9em;color:#555;}
-  .standards-alignment summary{cursor:pointer;font-weight:600;padding:0.8em 0;}
-  .standards-alignment[open] summary{border-bottom:1px solid rgba(128,128,128,.25);margin-bottom:1em;}
+  .standards-alignment > summary{cursor:pointer;font-weight:600;padding:0.8em 0;}
+  .standards-alignment[open] > summary{border-bottom:1px solid rgba(128,128,128,.25);margin-bottom:1em;}
   .standards-alignment h3{font-size:0.95em;margin:0.8em 0 0.3em;}
   .standards-alignment ul{margin:0;padding-left:1.2em;}
   .standards-alignment li{margin-bottom:0.6em;}
   .standards-alignment .standards-note{margin:0.2em 0 0;}
   .standards-alignment-links{margin:1em 0 0;font-style:italic;}
+  /* Computer Science / Digital Literacy / SEL sub-groups (learn's
+     assets/js/standards-alignment.js) -- same rotating-arrow chevron as
+     learn's own .standards-alignment-group in assets/main.scss, just
+     written as plain CSS to match this file's own style (no Sass here). */
+  .standards-alignment-group{margin:0.8em 0;}
+  .standards-alignment-group > summary{cursor:pointer;font-weight:600;list-style:none;display:flex;align-items:center;gap:0.4em;}
+  .standards-alignment-group > summary::-webkit-details-marker{display:none;}
+  .standards-alignment-group > summary::before{content:"\25B8";display:inline-block;transition:transform 0.15s ease;}
+  .standards-alignment-group[open] > summary::before{transform:rotate(90deg);}
+  .standards-alignment-group h3:first-of-type{margin-top:0.5em;}
 </style>
 <script src="{{ std_base }}/assets/js/standards-alignment.js" defer></script>
 {% endif %}
