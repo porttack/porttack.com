@@ -48,7 +48,7 @@ layout: default
         
         {%- if show_post -%}
           <li>
-            <span class="post-meta">{{ post.date | date: date_format }}{%- if post.label %} &middot; {{ post.label }}{% endif %}</span>
+            <span class="post-meta">{{ post.date | date: date_format }}{%- if post.label %} &middot; {{ post.label }}{% endif %}{%- if post.lesson_category -%}{% assign lesson_cat = site.data.lesson_categories | where: "id", post.lesson_category | first %} &middot; {{ lesson_cat.name | default: post.lesson_category }}{%- endif %}</span>
             <h3>
               <a class="post-link" href="{{ post.url | relative_url }}">
                 {{ post.title | escape }}

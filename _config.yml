@@ -62,6 +62,13 @@ font:                  Noto Sans, Helvetica, Arial, sans-serif
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
+# Where the standards-alignment widget on lesson-plan posts loads its JS and
+# JSON from (see _includes/standards-alignment.html). Carriers are authored
+# and published in the learn repo, not here -- this just points at them.
+# Override locally (e.g. http://localhost:4010) to test against a learn
+# server running changes that haven't deployed yet.
+standards_base: https://learn.porttack.com
+
 header_pages:
 - welcome.md
 - slv.md

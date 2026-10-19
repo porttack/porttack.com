@@ -4,6 +4,7 @@ title: "Prove Me Wrong: A Socratic Seminar on AI and Cheating"
 date: 2026-07-20
 categories: lesson-plans
 label: Lesson Plan / AI Literacy
+lesson_category: society
 excerpt_separator: <!--more-->
 excerpt: "A ready-to-run Socratic seminar built around a true AI-cheating story: the reading, the norms, a fishbowl with a hot seat, an entry ticket, an observer organizer, an exit ticket, a clear boundary for the student who came to perform, and the California standards it covers. The format is taught first, on accessible content, with my own opinion held back until the end.<br><a href='/2026/07/20/prove-me-wrong.html'><img src='https://www.insidehighered.com/sites/default/files/styles/max_650x650/public/2026-07/Roberto_Serrano_Brown_University.jpg?itok=Ts4wzwtu' alt='Roberto Serrano, Brown University economics professor, next to a gate into Brown’s campus' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 ---
@@ -238,11 +239,11 @@ I grade effort and honesty here, not the position landed on. "I changed my mind 
 
 ---
 
-## Appendix: California standards and mandates
+## Common Core and California mandates
 
-Paraphrased. Confirm exact wording against the official California Department of Education documents before citing formally.
+Two things the standards-catalog widget above doesn't cover, since neither is in that catalog system: Common Core ELA, and a legislative mandate rather than a standard.
 
-**Common Core ELA (California adoption)**
+**Common Core ELA (California adoption).** Paraphrased; confirm exact wording against the official documents before citing formally.
 
 - **SL.6.1 / SL.9-10.1:** engage in, and at 9th drive, collaborative discussions, building on others and justifying one's own views. The spine of the activity.
 - **SL.6.3 / SL.9-10.3:** delineate and evaluate a speaker's argument, reasoning, and evidence. The observer's job.
@@ -250,10 +251,4 @@ Paraphrased. Confirm exact wording against the official California Department of
 - **RI.6.8 / RI.9-10.8:** trace and evaluate an argument and its specific claims. The seminar in motion.
 - **W.6.1 / W.9-10.1:** write to support a claim with reasons and evidence. Entry and exit tickets.
 
-**CTE Anchor Standards**
-
-- **2.0 Communications**, **5.0 Problem Solving and Critical Thinking**, **8.0 Ethics and Legal Responsibilities** (academic honesty and responsible tool use, right on point), and **9.0 Leadership and Teamwork.**
-
-**Media literacy (AB 873)**
-
-AB 873 (Berman), Chapter 815, Statutes of 2023, adds Education Code Section 33548 and took effect January 1, 2024. It directs the Instructional Quality Commission to weave media literacy and digital citizenship into the ELA, math, science, and history-social science frameworks as they are revised. This seminar is a concrete piece of that intent: students evaluating when and how to use an AI tool, and what its use costs or gains them. It is a framework directive rather than a per-lesson standard, so it belongs here as alignment.
+**Media literacy (AB 873).** AB 873 (Berman), Chapter 815, Statutes of 2023, adds Education Code Section 33548 and took effect January 1, 2024. It directs the Instructional Quality Commission to weave media literacy and digital citizenship into the ELA, math, science, and history-social science frameworks as they are revised. This seminar is a concrete piece of that intent: students evaluating when and how to use an AI tool, and what its use costs or gains them. It is a framework directive rather than a per-lesson standard, so it belongs here as alignment.

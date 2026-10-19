@@ -3,6 +3,7 @@ title: "Teaching Binary With Coins"
 date: 2026-08-31
 categories: teaching lesson-plans
 label: Lesson Plan
+lesson_category: coding
 excerpt_separator: <!--more-->
 ---
 
@@ -94,12 +95,6 @@ But I do not motivate it the way most sources do. The usual entry point is memor
 Two digits, one byte, `FF` is the ceiling. That framing connects directly to the color picker already on the screen. The `0x` prefix gets one sentence as a "you'll see this again in robotics" deposit and nothing more. It is not the point today.
 
 I am explicit with students that hex is enrichment. They will not be asked to convert hex on the AP exam. Binary to decimal and back, they will.
-
-## Computer Science Standards Alignment
-
-One lesson, spanning AP, middle school, high school, and CTE: AP CSP topic 2.1 (Binary Numbers); California's 9-12.DA.8 and CSTA's 3A-DA-09 at the high school level; California's 6-8.DA.7 and CSTA's 2-DA-07 at the middle school level; and California CTE's anchor standard 5.11.
-
-[This lesson's full standards report](https://learn.porttack.com/standards/?report=Coins)
 
 ## Vocabulary
 

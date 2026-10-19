@@ -1,0 +1,41 @@
+{% comment %}
+  Standards alignment widget for a lesson-plan post. Loads learn's own
+  assets/js/standards-alignment.js and fetches its published carrier JSON
+  cross-origin (learn.porttack.com serves standards/data/ with
+  access-control-allow-origin: *) -- see learn's
+  _standards/carriers/README.md, "Embedding the widget on another site".
+
+  Carrier comes from this post's lesson_category (_data/lesson_categories.yml),
+  or from the post's own standards_carrier: front matter when it needs a
+  different one -- Little Brother does this, since it's a multi-chapter unit
+  with its own carrier (little_brother), not a single-post category carrier.
+  A post with standards_carrier: set shows the whole-source summary (no
+  data-chapter); a category-carrier post shows just its own entry, located by
+  this post's slug (data-chapter="{{ page.slug }}", matching the locator each
+  category carrier uses for its posts).
+
+  data-scope-label names the whole carrier itself (used in the "see this ___
+  on the full standards map" / "view this ___'s own report" links), never
+  this one post -- "category" for a category carrier, "unit" for an override
+  like Little Brother's.
+{% endcomment %}
+{% assign lesson_cat = site.data.lesson_categories | where: "id", page.lesson_category | first %}
+{% assign std_carrier = page.standards_carrier | default: lesson_cat.carrier %}
+{% if std_carrier %}
+{% assign std_base = site.standards_base | default: "https://learn.porttack.com" %}
+<details class="standards-alignment" data-base="{{ std_base }}" data-carrier-slug="{{ std_carrier }}" data-carrier-url="{{ std_base }}/standards/data/carriers/{{ std_carrier | replace: '_', '-' }}.json" data-scope-label="{% if page.standards_carrier %}unit{% else %}category{% endif %}"{% unless page.standards_carrier %} data-chapter="{{ page.slug }}"{% endunless %} hidden>
+  <summary>Standards alignment</summary>
+  <div class="standards-alignment-body"></div>
+</details>
+<style>
+  .standards-alignment{margin:1.5em 0;border:1px solid rgba(128,128,128,.35);border-radius:6px;padding:0 1.2em;font-size:0.9em;color:#555;}
+  .standards-alignment summary{cursor:pointer;font-weight:600;padding:0.8em 0;}
+  .standards-alignment[open] summary{border-bottom:1px solid rgba(128,128,128,.25);margin-bottom:1em;}
+  .standards-alignment h3{font-size:0.95em;margin:0.8em 0 0.3em;}
+  .standards-alignment ul{margin:0;padding-left:1.2em;}
+  .standards-alignment li{margin-bottom:0.6em;}
+  .standards-alignment .standards-note{margin:0.2em 0 0;}
+  .standards-alignment-links{margin:1em 0 0;font-style:italic;}
+</style>
+<script src="{{ std_base }}/assets/js/standards-alignment.js" defer></script>
+{% endif %}

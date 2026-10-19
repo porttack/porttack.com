@@ -1,0 +1,19 @@
+# Categories for lesson-plan posts (front matter: lesson_category: <id>).
+# "carrier" names the learn-repo carrier slug (learn/_standards/carriers/)
+# that holds this category's standards alignment -- carriers are edited in
+# learn, not here. A post can override its category's carrier with its own
+# standards_carrier: front matter (Little Brother does this, since it's a
+# multi-chapter unit with its own carrier, not a single-post category one).
+# See _includes/standards-alignment.html and porttack.com's CLAUDE.md.
+- id: sel
+  name: SEL
+  carrier: porttack_sel
+- id: coding
+  name: Coding
+  carrier: porttack_coding
+- id: hardware
+  name: Hardware
+  carrier: porttack_hardware
+- id: society
+  name: Society (Impact of Computing)
+  carrier: porttack_society

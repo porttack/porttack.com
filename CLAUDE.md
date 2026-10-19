@@ -105,6 +105,38 @@ captions, draft-status markers, and seminar facilitator notes.
   calling them done. Let Eric look at a UI change himself before running
   automated browser tests on it.
 
+## Standards alignment on lesson-plan posts
+
+Posts with `lesson_category:` set (`sel`, `coding`, `hardware`, or `society`,
+see `_data/lesson_categories.yml`) get a collapsed "Standards alignment"
+widget at the bottom of the post (`_layouts/post.html` includes
+`standards-alignment.html` whenever `lesson_category` or `standards_carrier`
+is set). It loads `assets/js/standards-alignment.js` and fetches its data
+cross-origin, both straight from `learn.porttack.com` (`site.standards_base`
+in `_config.yml`) — nothing is synced into this repo.
+
+**The carrier JSON is authored and edited in the learn repo**
+(`learn/_standards/carriers/porttack-{sel,coding,hardware,society}.json`),
+never here. One carrier per category, keyed by post slug (each post is one
+`locator_kind: "none"` entry, not a chaptered source). To add a new
+lesson-plan post to an existing category: set its `lesson_category:` front
+matter here, then add its slug as a locator to that category's carrier file
+in learn and run `tools/publish_standards.sh` there.
+
+A post can override its category's carrier with its own `standards_carrier:`
+front matter when it needs a different one — *Little Brother* does this
+(`standards_carrier: little_brother`), since it's a multi-chapter unit with
+its own carrier, not a single post. An overridden carrier shows as a
+whole-source summary (every code it covers, not just one locator); a
+category-carrier post shows just its own entry, located by `page.slug`.
+
+Don't hand-write a standards appendix on a new lesson-plan post — that's what
+the widget replaces. `porttack.com/standards/` (the old castandards.json /
+apcsp.json / crosswalk.json / README under this repo's own `standards/`
+directory) is a separate, unrelated project for an AP CSP book and has
+nothing to do with this system; don't confuse the two or let anything here
+overwrite those files.
+
 ## Jekyll gotchas (paid for the hard way)
 
 - Liquid parses tags inside comment blocks, even in `_includes/` doc

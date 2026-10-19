@@ -4,6 +4,7 @@ title:  "Kilo & Milli: Borrowing the Meter Stick to Teach Electrical Units"
 date:   2026-05-04
 categories: teaching lesson-plans
 label: Lesson Plan
+lesson_category: hardware
 excerpt_separator: <!--more-->
 excerpt: "A short lesson for Physical Computing / Robotics that turns a skill students already have (mm, cm, m, km) into a skill they need (mV, mA, kΩ).<br><a href='/docs/assets/slides/Kilo_Milli_v3.pdf'><img src='/docs/assets/images/kilo-milli-ladder.png' alt='The SI Prefix Ladder: kilo, hecto, deca, base, deci, centi, milli' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0; box-shadow: -4px 4px 10px rgba(0,0,0,0.3), 2px 4px 8px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.08);'></a>"
 ---
@@ -25,16 +26,6 @@ Before any of that I just ask them things. How many millimeters tall am I? Guess
 ## The quiz
 
 The [16-question quiz](/docs/assets/quizes/Kilo_Milli_Quiz.pdf) starts with pure length as a warm-up, then runs the identical question shapes against volts, amps, and ohms, with a couple of hints tied to real hardware (`3300 mV` &rarr; "a Microbit!"). The reference table on the last slide stays projected during the quiz on purpose -- it's an open-book test of the conversion procedure, not a memorization check, which matches how they'll actually use this (a cheat sheet on the workbench, not from memory). I checked the arithmetic on every slide and quiz item; all of it is correct.
-
-## Appendix: standards alignment
-
-This lesson sits mostly outside California's 9-12 computer science core -- that framework doesn't cover electrical measurement, and I'd rather say so than force a fit. The clean match is in the CTE **Information & Communication Technologies** anchor standards, the ones every ICT pathway course (including Physical Computing / Robotics) is built on:
-
-- **Anchor 10 (Technical Knowledge & Skills), 10.7**: *"Understand the SI (metric) prefixes commonly used in computing including, at least, kilo, mega, giga, and tera."* Written with data sizes in mind (kilobytes, gigabytes), but the competency it names -- fluency with SI prefixes as a scale factor, not a memorized table -- is exactly what this lesson teaches, applied to a different unit domain (volts, amps, ohms) than the standard's own examples. Worth naming that extension rather than glossing over it.
-- **Anchor 10** more broadly: *"Apply essential technical knowledge and skills common to all pathways in the ICT sector, following procedures when carrying out experiments or performing technical tasks."* Reading a multimeter and decoding a resistor's printed value are exactly this kind of procedural technical skill.
-- **Anchor 5 (Problem Solving & Critical Thinking), 5.7**: *"Work out problems iteratively and recursively."* The chaining exercise (converting across two steps by repeating the same rule) is a small, concrete instance of that habit.
-
-Source: [CTE Model Curriculum Standards, ICT sector edition (2013)](https://www.cde.ca.gov/ci/ct/sf/documents/infocomtech.pdf).
 
 ## Suggestions and TODOs
 

@@ -4,6 +4,7 @@ title: "Finding Fido or Finding You?"
 date: 2026-03-04
 categories: teaching lesson-plans tech-news
 label: Lesson
+lesson_category: society
 show_history: true
 excerpt: "In February, Ring spent a Super Bowl slot showing a lost dog reunited with a crying kid. It was heartwarming. It was also an ad for a neighborhood-wide surveillance network that is on by default, built by a founder who has spent a decade saying his real mission is to end crime. Here is the story, and why it belongs in a computer science classroom.<br><div style='display: flex; justify-content: center; gap: 0.5em; margin: 0.6em 0 0;'><img src='https://www.pcworld.com/wp-content/uploads/2026/02/Ring-Search-Party-Super-Bowl-ad-3.jpg?quality=50&strip=all&w=1024' alt='Screenshot from Ring’s Super Bowl ad showing the Search Party feature tracking a lost dog' style='max-height: 150px; width: auto; display: block;'><img src='https://piunikaweb.com/wp-content/uploads/2026/02/ring-dog-found-with-search-party.webp' alt='Ring app notification showing a dog found via Search Party' style='max-height: 150px; width: auto; display: block;'></div>"
 excerpt_separator: <!--more-->
@@ -64,16 +65,3 @@ The best thing I can teach a student is not to be afraid of a doorbell. It is to
 ---
 
 **View the full classroom presentation:** [Google Slides](https://docs.google.com/presentation/d/1_tl_4sCDswmFkHAdQrGfM5dEwCZdJXTh/edit?usp=sharing) &middot; [PDF](/docs/assets/slides/finding-fido-or-finding-you.pdf)
-
----
-
-### Appendix: standards alignment
-
-| Standard | Code | Connection |
-|---|---|---|
-| CA Ed Code (media literacy, digital citizenship) | Section 33548 (AB 873, 2023) | Access, analyze, evaluate, and use media; digital citizenship across core subjects, K-12 |
-| CA Ed Code (AI literacy) | Section 33548, amended (AB 2876, 2024) | Artificial intelligence literacy content in curriculum frameworks and instructional materials |
-| CA CS, Impacts of Computing (MS) | 6-8.IC.20 to .22 | Tradeoffs of computing tech; social and ethical impacts; data collection and privacy |
-| CA CS, Impacts of Computing (HS) | 9-12.IC.23, .29, .30 | Computing's social and cultural effects; non-evident data collection; weighing privacy against safety and law |
-| AP CSP, Big Idea 5, Impact of Computing | IOC-1 | Beneficial and harmful effects; personally identifiable information and safe computing |
-| ISTE, Digital Citizen | 2b | Managing personal data and awareness of data-collection technology |

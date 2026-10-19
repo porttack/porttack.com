@@ -4,6 +4,8 @@ title: "Little Brother / Big Brother"
 date: 2026-06-14
 categories: teaching lesson-plans
 label: Unit Plan
+lesson_category: society
+standards_carrier: little_brother
 show_history: true
 excerpt: "Cory Doctorow's <em>Little Brother</em> pulls students into questions of privacy, surveillance, encryption, and civil liberties -- questions that don't have clean answers. Also: the full reading sequence, lesson materials, and how it maps to California and AP CSP standards.<br><a href='/2026/06/14/little-brother.html'><img src='https://craphound.com/craphound/wp-content/cory/littlebrother-US-cover-small.jpg' alt='Little Brother by Cory Doctorow' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0; box-shadow: -4px 4px 10px rgba(0,0,0,0.3), 2px 4px 8px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.08);'></a>"
 excerpt_separator: <!--more-->
@@ -69,43 +71,6 @@ Students may not remember every networking concept or cryptographic technique fr
 - **Crypto & the key-signing party (Groupings 3–4):** an interactive **["Key Exchange Party" tool](https://porttack.com/keygen)** that generates an ED25519 private key, public key, and fingerprint live on screen, simulating Chapter 10's key-signing party.
 - **Crypto Wars: "Illegal Math" (Grouping 8, Ch 17):** [presentation](https://docs.google.com/presentation/d/1gtE46uUj_wQlXWfdxtBLOv7oHNNxROgb/edit?usp=sharing)
 - **Creative Commons / copyright (Grouping 8, Ch 17 + Intro):** [presentation](https://docs.google.com/presentation/d/1bC-1o6sW6UZQOy8p7VpzShud3Y03uMMu/edit?usp=sharing)
-
-### California standards coverage
-
-California's 9–12 **core** runs CS.1–3, NI.4–7, DA.8–11, AP.12–22, IC.23–30 (thirty standards). Here's where the novel lands:
-
-**Covered: the thematic core**
-- **9-12.IC.23, .24, .26, .28, .29, .30** (Impacts of Computing): computing's effect on social, ethical, economic, and cultural practices; intellectual-property and licensing law; non-evident data collection; and weighing privacy against safety, law, and ethics. That's **six standards (a fifth of the core)** and the spine of the unit. Strongest individual anchors: **IC.23, IC.28, IC.29, IC.30**; IC.24 and IC.26 are real but lighter touches. (IC.25 and IC.27 aren't really here.)
-
-**Covered / reinforced: networking**
-- **9-12.NI.5–.7** (Networking & the Internet): the design characteristics of the internet (DNS, addressing, scalability, reliability), network security, and comparing cryptographic techniques for secure transmission. The book hits all three squarely: NI.5 through Xnet's mesh routing and Chapter 17's DNS explainer, NI.6/NI.7 through the crypto-and-countermeasures arc running chapters 6–10 and 17. (NI.4, on network performance for organizations, is the one 9-12 networking standard the book doesn't really touch.)
-
-**Covered: licensing**
-- The **Creative Commons** release of the book maps to the licensing standard in the **AP.12–22** strand. Students can read the actual CC license on the book *and* find it again on the CSTA standards document (abstract-to-concrete in one move).
-
-**[This book's California coverage, highlighted](https://learn.porttack.com/standards/?only=LB&view=ca-cs)** &middot; **[...as a standalone report](https://learn.porttack.com/standards/?report=LB&view=ca-cs)**
-
-### AP CSP coverage
-
-The novel lands almost entirely in two of the five Big Ideas:
-
-**Big Idea 5: Impact of Computing (IOC)**
-- **5.1 Beneficial and Harmful Effects**: the surveillance state, dual-use technology, computing's effect on society (the whole arc).
-- **5.5 Legal and Ethical Concerns**: intellectual property and licensing; the book's **Creative Commons** release is a textbook-perfect anchor (LO IOC-1.F).
-- **5.6 Safe Computing**: PII and privacy, symmetric and **public-key encryption**, authentication and the web of trust. The crypto chapters map here directly (IOC-2).
-
-**Big Idea 4: Computing Systems & Networks (CSN)**
-- **4.1 The Internet**: how data moves: DNS, packets, routing, redundancy (CSN-1).
-- **4.2 Fault Tolerance**: resilient, redundant networks; the Xnet / mesh material is a natural hook.
-
-**[This book's AP CSP coverage, highlighted](https://learn.porttack.com/standards/?only=LB&view=ap-only)** &middot; **[...as a standalone report](https://learn.porttack.com/standards/?report=LB&view=ap-only)**
-
-### The full standards alignment
-
-The sections above are the summary. Every course I teach gets checked against the same standards catalog (California, AP CSP, and CSTA), and *Little Brother*'s full breakdown -- exact code, chapter, and how strong the match is -- lives there too:
-
-- **[This book's coverage, highlighted against the whole catalog](https://learn.porttack.com/standards/?only=LB)**
-- **[A standalone, printable report of just what it covers](https://learn.porttack.com/standards/?report=LB)**
 
 ### Appendix: Doctorow's encouragement, and where other teachers have gone
 

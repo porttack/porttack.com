@@ -25,12 +25,20 @@ layout: default
       </time>
       {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {%- endif -%}
+      {%- if page.lesson_category -%}
+        {%- assign lesson_cat = site.data.lesson_categories | where: "id", page.lesson_category | first -%}
+        • {{ lesson_cat.name | default: page.lesson_category }}
       {%- endif -%}</p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
+
+  {%- if page.lesson_category or page.standards_carrier -%}
+    {%- include standards-alignment.html -%}
+  {%- endif -%}
 
   {%- if page.categories contains "public-comment" -%}
     <hr>

@@ -4,6 +4,7 @@ title:  "Words That Built Our Classroom Community"
 date:   2025-09-22
 categories: teaching community lesson-plans
 label: Lesson Plan
+lesson_category: sel
 excerpt_separator: <!--more-->
 ---
 
