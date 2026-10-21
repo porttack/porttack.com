@@ -57,19 +57,13 @@ permalink: /one-word-rotary-worksheet/
     color: #888;
     font-size: 0.85em;
   }
-  .owr-list-d {
-    border-top: 1px dashed #bbb;
-    margin-top: 1.2em;
-    padding-top: 1em;
-  }
-  .owr-list-d .owr-list { max-width: 32%; }
   .owr-list-d-note {
-    font-size: 0.85em;
+    font-size: 0.8em;
     color: #888;
-    margin: 0 0 0.6em;
+    font-weight: normal;
   }
   .owr-step {
-    margin: 1.3em 0;
+    margin: 0.9em 0;
   }
   .owr-step h2 {
     font-size: 1.1em;
@@ -89,7 +83,9 @@ permalink: /one-word-rotary-worksheet/
   }
   @media (max-width: 600px) {
     .owr-lists { flex-direction: column; }
-    .owr-list-d .owr-list { max-width: 100%; }
+  }
+  @media print {
+    .site-header, .site-footer { display: none !important; }
   }
 </style>
 
@@ -98,11 +94,14 @@ permalink: /one-word-rotary-worksheet/
 Print this page, or use it on screen. Pairs with the **[One Word: Service Club Version](/one-word-rotary/)** activity.
 
 <div class="owr-fwt" markdown="1">
-**A compass for this activity: Rotary's Four-Way Test**
+**A possible compass for this activity: Rotary's Four-Way Test**
 
-*Of the things we think, say, or do:* Is it the **TRUTH**? Is it **FAIR** to all concerned? Will it build **GOODWILL** and **BETTER FRIENDSHIPS**? Will it be **BENEFICIAL** to all concerned?
+*Of the things we think, say, or do:*
 
-The first question matters most here -- keep your words sincere, not performed.
+1. Is it the **TRUTH**?
+2. Is it **FAIR** to all concerned?
+3. Will it build **GOODWILL** and **BETTER FRIENDSHIPS**?
+4. Will it be **BENEFICIAL** to all concerned?
 </div>
 
 <div class="owr-step" markdown="1">
@@ -142,13 +141,8 @@ Write up to three separate lists of five words that describe who you are right n
 <li>5.</li>
 </ol>
 </div>
-</div>
-
-<div class="owr-list-d">
-<p class="owr-list-d-note">Only if Step 5 sends you here for a fresh start:</p>
-<div class="owr-lists">
 <div class="owr-list">
-<div class="owr-list-head"><span class="owr-checkbox"></span> List D</div>
+<div class="owr-list-head"><span class="owr-checkbox"></span> List D <span class="owr-list-d-note">(if needed)</span></div>
 <ol class="owr-words">
 <li>1.</li>
 <li>2.</li>
@@ -156,7 +150,6 @@ Write up to three separate lists of five words that describe who you are right n
 <li>4.</li>
 <li>5.</li>
 </ol>
-</div>
 </div>
 </div>
 
