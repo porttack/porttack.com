@@ -7,6 +7,21 @@ permalink: /one-word-rotary-worksheet/
 <style>
   .owr-worksheet { font-size: 1.05em; }
   .owr-worksheet h2 { margin-top: 1.4em; }
+  .owr-fwt {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.7em 1em;
+    margin: 1em 0 1.4em;
+    font-size: 0.8em;
+    line-height: 1.5;
+    color: #555;
+    background: #fafafa;
+  }
+  .owr-fwt-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.3em;
+  }
   .owr-lists {
     display: flex;
     gap: 1.5em;
@@ -42,6 +57,24 @@ permalink: /one-word-rotary-worksheet/
     color: #888;
     font-size: 0.85em;
   }
+  .owr-list-d {
+    border-top: 1px dashed #bbb;
+    margin-top: 1.2em;
+    padding-top: 1em;
+  }
+  .owr-list-d .owr-list { max-width: 32%; }
+  .owr-list-d-note {
+    font-size: 0.85em;
+    color: #888;
+    margin: 0 0 0.6em;
+  }
+  .owr-step {
+    margin: 1.3em 0;
+  }
+  .owr-step h2 {
+    font-size: 1.1em;
+    margin-bottom: 0.3em;
+  }
   .owr-final {
     border: 2px solid #999;
     border-radius: 8px;
@@ -56,6 +89,7 @@ permalink: /one-word-rotary-worksheet/
   }
   @media (max-width: 600px) {
     .owr-lists { flex-direction: column; }
+    .owr-list-d .owr-list { max-width: 100%; }
   }
 </style>
 
@@ -63,9 +97,19 @@ permalink: /one-word-rotary-worksheet/
 
 Print this page, or use it on screen. Pairs with the **[One Word: Service Club Version](/one-word-rotary/)** activity.
 
-## Three Lists
+<div class="owr-fwt" markdown="1">
+**A compass for this activity: Rotary's Four-Way Test**
 
-Write up to three separate lists of five words that describe who you are right now. Personality, roles, interests, background -- anything that feels true. Three different angles on yourself to choose from.
+*Of the things we think, say, or do:* Is it the **TRUTH**? Is it **FAIR** to all concerned? Will it build **GOODWILL** and **BETTER FRIENDSHIPS**? Will it be **BENEFICIAL** to all concerned?
+
+The first question matters most here -- keep your words sincere, not performed.
+</div>
+
+<div class="owr-step" markdown="1">
+
+## Step 1: Three Lists
+
+Write up to three separate lists of five words that describe who you are right now. Personality, roles, interests, background -- anything that feels true. Duplicate words across lists are fine.
 
 <div class="owr-lists">
 <div class="owr-list">
@@ -100,13 +144,63 @@ Write up to three separate lists of five words that describe who you are right n
 </div>
 </div>
 
-## Pick a List
+<div class="owr-list-d">
+<p class="owr-list-d-note">Only if Step 5 sends you here for a fresh start:</p>
+<div class="owr-lists">
+<div class="owr-list">
+<div class="owr-list-head"><span class="owr-checkbox"></span> List D</div>
+<ol class="owr-words">
+<li>1.</li>
+<li>2.</li>
+<li>3.</li>
+<li>4.</li>
+<li>5.</li>
+</ol>
+</div>
+</div>
+</div>
 
-Check the box above the list you want to work with. Changed your mind partway through? Switching to a different list is fine -- check that one instead.
+</div>
 
-## Narrow It Down
+<div class="owr-step" markdown="1">
 
-Cross off one word at a time from your chosen list -- five down to four, four to three, and so on -- until a single word is left.
+## Step 2: Pick a List
+
+Check the box above the list you want to work with.
+
+</div>
+
+<div class="owr-step" markdown="1">
+
+## Step 3: Cross Off One Word
+
+Five words down to four.
+
+</div>
+
+<div class="owr-step" markdown="1">
+
+## Step 4: Cross Off a Second Word
+
+Four words down to three.
+
+</div>
+
+<div class="owr-step" markdown="1">
+
+## Step 5: Keep Going, or Switch?
+
+Still good with this list? Keep going to Step 6. Not feeling it anymore? Check a different list's box instead -- List A, B, C, or a fresh List D -- and pick up from there.
+
+</div>
+
+<div class="owr-step" markdown="1">
+
+## Step 6: Narrow to One
+
+Keep crossing off, one word at a time, until a single word is left.
+
+</div>
 
 <div class="owr-final" markdown="1">
 
