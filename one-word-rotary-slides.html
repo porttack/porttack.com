@@ -76,6 +76,12 @@ permalink: /one-word-rotary-slides/
     font-weight: 700;
   }
 
+  .slide-subtitle {
+    font-size: 28px;
+    color: var(--muted);
+    margin: 0 0 20px;
+  }
+
   .slide-body {
     font-size: 36px;
     line-height: 1.5;
@@ -488,6 +494,7 @@ const SLIDES = [
     kind: "radial",
     kicker: "One Answer",
     title: "Paul Harris, Narrowed",
+    subtitle: "Founder of Rotary",
     center: "Fellowship",
     around: ["Tolerance", "Service", "Vision", "Humility"],
     notes: "From List A. Fellowship is the word Harris's own founding story points to most directly -- missing the easy friendships of small-town life was specifically what led him to start the club. Service, Rotary's own later motto (“Service Above Self,” adopted 1950), is a real, honest alternative from the same list -- which is the point: more than one of these could be defended."
@@ -496,6 +503,7 @@ const SLIDES = [
     kind: "radial",
     kicker: "One Answer",
     title: "Arch Klumph, Narrowed",
+    subtitle: "Creator of the Foundation",
     center: "Steward",
     around: ["Generous", "Visionary", "Leader", "Philanthropic"],
     notes: "From List A. Visionary only covers the single 1917 proposal; Steward covers the fuller record -- six years as the Foundation's first board chairman, literally managing and overseeing charitable funds on others' behalf, which is what the word means in the first place. Generous or Philanthropic are honest alternatives from the same list."
@@ -504,6 +512,7 @@ const SLIDES = [
     kind: "radial",
     kicker: "One Answer",
     title: "Herbert Taylor, Narrowed",
+    subtitle: "Inventor of the Four-Way Test",
     center: "Principled",
     around: ["Rescuer", "Trustworthy", "Reformer", "Ethical"],
     notes: "From List A. Rescuer is the vivid, story-shaped alternative -- he did save the company -- but Principled is more specific to what he's actually remembered for: not just acting ethically, but writing down four explicit rules and running a company by them. That's the whole reason his name is on the Four-Way Test printed on the worksheet."
@@ -650,6 +659,7 @@ function Stage({ slide, aspect }) {
       <div className={"stage " + arClass}>
         <p className="kicker">{slide.kicker}</p>
         <h1 className="slide-title">{slide.title}</h1>
+        {slide.subtitle && <p className="slide-subtitle">{slide.subtitle}</p>}
         <div className="radial-wrap">
           {slide.around.map((w, i) => (
             <div className={"radial-word radial-" + positions[i]} key={i}>{w}</div>
