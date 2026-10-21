@@ -30,3 +30,7 @@ The wall has become our portrait. Where it goes from here, I'm not sure, but for
 ## For Other Teachers
 
 If you're interested in trying this, I've written up a **[detailed lesson plan](/one-word-lesson-plan/)** that breaks down the original Cult of Pedagogy idea into specific daily activities that worked for me, with timing, learning objectives, and California standards alignment for both SEL and CTE, plus the **[student worksheet](/one-word-worksheet/)** itself, ready to print.
+
+## For Adult Ice Breakers
+
+This works outside a classroom too. I'm adapting it into a quick **[fellowship-building opener for my Rotary club](/one-word-rotary/)**: same narrowing-to-one-word idea, condensed to about 12 minutes, with its own worksheet and slides.
