@@ -150,6 +150,39 @@ permalink: /one-word-rotary-slides/
     color: #b25e00;
   }
 
+  /* Two candidate word-lists shown side by side, so the room can guess
+     which list and which word the next slide reveals. */
+  .twolists-wrap {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .twolists-col { flex: 0 1 380px; }
+
+  .twolists-label {
+    font-size: 30px;
+    color: var(--muted);
+    margin: 0 0 16px;
+    text-align: center;
+  }
+
+  .twolists-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .twolists-col li {
+    font-size: 36px;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .twolists-col li:last-child { border-bottom: none; }
+
   /* One narrowed word, large, center; the four it beat, struck through,
      at the compass points around it. A static end-state snapshot, not an
      animation of the narrowing itself. */
@@ -286,18 +319,6 @@ permalink: /one-word-rotary-slides/
     font-size: 22px;
   }
 
-  .outline-slide.outline-nested {
-    margin: 12px 0 12px 32px;
-    background: #f6f8fa;
-    border-style: dashed;
-  }
-
-  .outline-slide h3 {
-    margin: 0 0 6px;
-    font-size: 18px;
-    color: var(--muted);
-  }
-
   .outline-slide .outline-bullets {
     color: var(--muted);
     font-size: 15px;
@@ -369,25 +390,20 @@ const SLIDES = [
     kicker: "An example",
     title: "Paul Harris, Rotary's Founder",
     bullets: [
-      "Chicago, 1905 -- missed the hometown friendships of his youth",
-      "Candidate words: Fellowship, Tolerance, Service, Vision, Humility",
-      "All real, all documented -- which one would you narrow to?"
+      "Chicago attorney, practicing law for 40 years",
+      "Raised by his grandparents in Vermont from age 3",
+      "Spent 5 years after law school traveling -- reporter, cowboy, cattle hand",
+      "Founded the first Rotary club in 1905 with three friends"
     ],
-    notes: "Grounded in Harris's own account of why he founded Rotary -- he wanted the kind of fellowship he'd known growing up, not a guess at his private inner life. The next slide shows one honest answer, not the only one.",
-    down: [
-      {
-        kind: "bullets",
-        kicker: "A deeper cut",
-        title: "Arch Klumph, Founder of the Foundation",
-        bullets: [
-          "Cleveland lumber businessman, Rotary Club of Cleveland founding member (1911)",
-          "Rotary International president, 1916-17",
-          "Proposed an endowment \"for doing good in the world\" at the 1917 convention -- it became The Rotary Foundation",
-          "The Foundation's first board chairman, 1928-1934"
-        ],
-        notes: "Optional aside, reachable with the down arrow and skipped by the normal next/prev flow. Harris founded the organization; Klumph, six years later, gave it a mechanism -- the Foundation -- to actually fund its work."
-      }
-    ]
+    notes: "All documented, not a guess at his private inner life -- see Rotary's own history pages and Wikipedia. The next slide shows two honest lists of candidate words; the one after that reveals which word and which list."
+  },
+  {
+    kind: "twolists",
+    kicker: "Guess the Word",
+    title: "Two Possible Lists",
+    listA: ["Tolerance", "Service", "Fellowship", "Vision", "Humility"],
+    listB: ["Cowboy", "Traveler", "Playful", "Attorney", "Imaginative"],
+    notes: "List A leans civic (the Rotary-values side); List B leans personal (the cowboy-for-a-summer, imaginative-and-playful side -- also real, also documented). Ask the room to guess before advancing: which list, and which word?"
   },
   {
     kind: "radial",
@@ -395,7 +411,35 @@ const SLIDES = [
     title: "Paul Harris, Narrowed",
     center: "Fellowship",
     around: ["Tolerance", "Service", "Vision", "Humility"],
-    notes: "Fellowship is the word Harris's own founding story points to most directly -- missing the easy friendships of small-town life was specifically what led him to start the club. Service, Rotary's own later motto (“Service Above Self,” adopted 1950), is a real, honest alternative -- which is the point: more than one of these could be defended."
+    notes: "From List A. Fellowship is the word Harris's own founding story points to most directly -- missing the easy friendships of small-town life was specifically what led him to start the club. Service, Rotary's own later motto (“Service Above Self,” adopted 1950), is a real, honest alternative from the same list -- which is the point: more than one of these could be defended."
+  },
+  {
+    kind: "bullets",
+    kicker: "A second example",
+    title: "Arch Klumph, Founder of the Foundation",
+    bullets: [
+      "Cleveland lumber businessman, Rotary Club of Cleveland founding member (1911)",
+      "Rotary International president, 1916-17",
+      "Proposed an endowment \"for doing good in the world\" at the 1917 convention -- it became The Rotary Foundation",
+      "Also an expert flutist, active in organizing Cleveland's own symphony orchestra"
+    ],
+    notes: "Harris founded the organization in 1905; Klumph, Rotary's president twelve years later, gave it a mechanism -- the Foundation -- to actually fund its work. Verified against Rotary International's own history pages."
+  },
+  {
+    kind: "twolists",
+    kicker: "Guess the Word",
+    title: "Two Possible Lists",
+    listA: ["Generous", "Steward", "Visionary", "Leader", "Philanthropic"],
+    listB: ["Lumberman", "Flutist", "Clevelander", "Patron", "Trustee"],
+    notes: "List A leans civic (the Foundation-founder side); List B leans personal (the businessman and orchestra patron side -- also real, also documented). Same move as before: ask the room to guess first."
+  },
+  {
+    kind: "radial",
+    kicker: "One Answer",
+    title: "Arch Klumph, Narrowed",
+    center: "Visionary",
+    around: ["Generous", "Steward", "Leader", "Philanthropic"],
+    notes: "From List A. Visionary fits the single thing Klumph is actually remembered for -- proposing an ongoing endowment mechanism nobody else at that 1917 convention had thought to ask for. Generous or Philanthropic are honest alternatives from the same list."
   },
   {
     kind: "bullets",
@@ -475,6 +519,24 @@ function Stage({ slide, aspect }) {
       </div>
     );
   }
+  if (slide.kind === "twolists") {
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <div className="twolists-wrap">
+          <div className="twolists-col">
+            <h2 className="twolists-label">List A</h2>
+            <ul>{slide.listA.map((w, i) => <li key={i}>{w}</li>)}</ul>
+          </div>
+          <div className="twolists-col">
+            <h2 className="twolists-label">List B</h2>
+            <ul>{slide.listB.map((w, i) => <li key={i}>{w}</li>)}</ul>
+          </div>
+        </div>
+      </div>
+    );
+  }
   if (slide.kind === "radial") {
     // One narrowed word, large, in the middle; the words it beat arranged
     // around it, struck through. A static snapshot of "after narrowing,"
@@ -537,10 +599,10 @@ function bulletsToText(bullets) {
   return bullets.map(b => (typeof b === "string" ? b : b.text)).join(" / ");
 }
 
-function OutlineCard({ slide, heading, nested }) {
+function OutlineCard({ slide, heading }) {
   return (
-    <div className={"outline-slide" + (nested ? " outline-nested" : "")}>
-      {nested ? <h3>{heading}</h3> : <h2>{heading}</h2>}
+    <div className="outline-slide">
+      <h2>{heading}</h2>
       {slide.bullets && <p className="outline-bullets">On slide: {bulletsToText(slide.bullets)}</p>}
       <div className="outline-notes"><p>{slide.notes}</p></div>
     </div>
@@ -551,50 +613,36 @@ function Outline() {
   return (
     <div className="outline">
       <h1>One Word: Service Club Version</h1>
-      <p className="outline-sub">Speaker notes outline. Print this before class if you'd rather have paper than toggle notes on screen. Indented cards are optional "down arrow" asides, skipped by the normal next/prev flow.</p>
+      <p className="outline-sub">Speaker notes outline. Print this before class if you'd rather have paper than toggle notes on screen.</p>
       {SLIDES.map((s, i) => (
-        <React.Fragment key={i}>
-          <OutlineCard slide={s} heading={`${i + 1}. ${s.title}`} />
-          {(s.down || []).map((d, j) => (
-            <OutlineCard slide={d} heading={`Extra: ${d.title}`} nested key={j} />
-          ))}
-        </React.Fragment>
+        <OutlineCard slide={s} heading={`${i + 1}. ${s.title}`} key={i} />
       ))}
     </div>
   );
 }
 
 // Deep-linking: ?slide=3 opens on that slide (1-indexed, to match the
-// on-screen counter), ?extra=1 additionally drops into that slide's Nth
-// "down" slide if it has any, ?outline=1 opens straight into the
-// speaker-notes outline.
+// on-screen counter), ?outline=1 opens straight into the speaker-notes
+// outline.
 function initialStateFromUrl() {
   const params = new URLSearchParams(window.location.search);
   const slideParam = parseInt(params.get("slide"), 10);
   const index = Number.isInteger(slideParam) ? Math.min(Math.max(slideParam - 1, 0), SLIDES.length - 1) : 0;
-  const maxExtra = (SLIDES[index].down || []).length;
-  const extraParam = parseInt(params.get("extra"), 10);
-  const subIndex = Number.isInteger(extraParam) ? Math.min(Math.max(extraParam, 0), maxExtra) : 0;
   const mode = params.get("outline") ? "outline" : "deck";
-  return { index, subIndex, mode };
+  return { index, mode };
 }
 
 function App() {
   const initial = initialStateFromUrl();
   const [index, setIndex] = useState(initial.index);
-  const [subIndex, setSubIndex] = useState(initial.subIndex);
   const [showNotes, setShowNotes] = useState(false);
   const [aspect, setAspect] = useState("16:9");
   const [mode, setMode] = useState(initial.mode); // "deck" | "outline"
 
-  const topSlide = SLIDES[index];
-  const downSlides = topSlide.down || [];
-  const slide = subIndex === 0 ? topSlide : downSlides[subIndex - 1];
+  const slide = SLIDES[index];
 
-  const next = useCallback(() => { setIndex(i => Math.min(i + 1, SLIDES.length - 1)); setSubIndex(0); }, []);
-  const prev = useCallback(() => { setIndex(i => Math.max(i - 1, 0)); setSubIndex(0); }, []);
-  const goDown = useCallback(() => setSubIndex(s => Math.min(s + 1, downSlides.length)), [downSlides.length]);
-  const goUp = useCallback(() => setSubIndex(s => Math.max(s - 1, 0)), []);
+  const next = useCallback(() => setIndex(i => Math.min(i + 1, SLIDES.length - 1)), []);
+  const prev = useCallback(() => setIndex(i => Math.max(i - 1, 0)), []);
 
   useEffect(() => {
     function onKey(e) {
@@ -604,15 +652,13 @@ function App() {
       }
       if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); next(); }
       else if (e.key === "ArrowLeft") { e.preventDefault(); prev(); }
-      else if (e.key === "ArrowDown") { e.preventDefault(); goDown(); }
-      else if (e.key === "ArrowUp") { e.preventDefault(); goUp(); }
       else if (e.key === "n" || e.key === "N") setShowNotes(v => !v);
       else if (e.key === "f" || e.key === "F") toggleFullscreen();
       else if (e.key === "o" || e.key === "O") setMode("outline");
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [mode, next, prev, goDown, goUp]);
+  }, [mode, next, prev]);
 
   function toggleFullscreen() {
     if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
@@ -639,16 +685,7 @@ function App() {
         <ScaledStage slide={slide} aspect={aspect} />
         <div className="click-zone left" onClick={prev} title="Previous slide"></div>
         <div className="click-zone right" onClick={next} title="Next slide"></div>
-        {subIndex > 0 && (
-          <button className="depth-nav depth-up" onClick={goUp} title="Back to the main flow">&#9650; Back</button>
-        )}
-        {subIndex < downSlides.length && (
-          <button className="depth-nav depth-down" onClick={goDown} title="More about this slide">&#9660; More</button>
-        )}
-        <div className="slide-counter-badge">
-          {index + 1} / {SLIDES.length}
-          {subIndex > 0 && <span> &middot; extra {subIndex}/{downSlides.length}</span>}
-        </div>
+        <div className="slide-counter-badge">{index + 1} / {SLIDES.length}</div>
       </div>
       {showNotes && (
         <div className="notes-panel">
