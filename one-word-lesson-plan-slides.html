@@ -142,6 +142,20 @@ permalink: /one-word-lesson-plan-slides/
     color: var(--muted);
   }
 
+  /* Plain "Day N" section break between days -- no content of its own,
+     just a beat for the room before the next day's material starts. */
+  .day-slide {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .day-title {
+    font-size: 120px;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0;
+  }
+
   .highlight-slide {
     background: #fff7e6;
   }
@@ -282,82 +296,119 @@ const { useState, useEffect, useRef, useCallback } = React;
 // slide (keep it short); `notes` is only ever shown in the notes panel or the
 // printable outline, so it can be a full paragraph. A bullet can be a plain
 // string, or { text, href } to render as a link.
+// These are projected for students, not read by the teacher -- so a slide's
+// visible `bullets` only ever say what students see/do/think about, never an
+// instruction to the presenter ("model this," "collect the worksheets").
+// Teacher-only logistics belong in `notes` (speaker-notes panel / printable
+// outline), never on the slide itself. Also deliberately no slide previews
+// the whole arc up front -- a smart student might guess we're headed to one
+// word, but the deck itself never says so before Day 2.
 const SLIDES = [
   {
     kind: "title",
-    kicker: "SEL Lesson",
+    kicker: "SEL",
     title: "One Word",
-    subtitle: "Narrowing identity down to one word, to build a classroom together",
-    notes: "Adapted from Cult of Pedagogy / Tom Rademacher. Three short days plus a work day: brainstorm five words, narrow to one, make it, reflect on it."
+    subtitle: "A few days, getting to know ourselves and each other",
+    notes: "Adapted from Cult of Pedagogy / Tom Rademacher. Don't preview the elimination structure here -- let Day 2 be the first time students realize words start getting cut."
+  },
+  {
+    kind: "day",
+    title: "Day 1",
+    notes: "15 minutes. Brainstorm, then the safe-space ground rules."
   },
   {
     kind: "bullets",
-    kicker: "The idea",
-    title: "The Process",
+    kicker: "Brainstorm",
+    title: "Who Are You?",
     bullets: [
-      "Brainstorm five words that describe who you are",
-      "Narrow, round by round, down to one",
-      "That word goes on the wall -- our portrait, together"
+      "List 5 words that describe who you are",
+      "Personality? (funny, curious, determined...)",
+      "Things you love? (music, art, gaming...)",
+      "Your background, your goals, your talents"
     ],
-    notes: "The elimination is the real lesson, not the final word: it's reflective in a way that teaches you something about each student. Some change their minds three times; others know immediately. Both are fine."
-  },
-  {
-    kind: "bullets",
-    kicker: "Day 1 (15 min)",
-    title: "Identity Brainstorming",
-    bullets: [
-      "Model it first: your own five words, thinking out loud",
-      "Word categories: traits, hobbies, background, goals, talents, values",
-      "Safe space rules apply from the start (next slide)",
-      "Students brainstorm independently; collect the worksheets"
-    ],
-    notes: "Opening line: 'We're building OUR classroom space together.' Circulate during work time and offer encouragement, not suggestions -- this isn't a race."
+    notes: "Model your own five words first, thinking out loud about why each one -- then students brainstorm independently. Circulate and encourage, don't suggest; this isn't a race. Collect worksheets at the end. Don't mention yet that some of these words won't make the final cut."
   },
   {
     kind: "highlight",
-    kicker: "Before you start",
+    kicker: "Before we share",
     title: "Safe Space Rules",
     bullets: [
       "Share only what you're comfortable sharing",
       "A private word can become a “code word” only you understand",
       "Never suggest a word for someone else, or comment on their choice"
     ],
-    notes: "State this on Day 1 and hold it the whole unit. It's what makes the brainstorming honest instead of performative."
+    notes: "State this and hold it for the whole unit -- it's what makes the brainstorming honest instead of performative."
+  },
+  {
+    kind: "day",
+    title: "Day 2",
+    notes: "15 minutes. Two rounds of elimination, five words down to three."
   },
   {
     kind: "bullets",
-    kicker: "Day 2 (15 min)",
-    title: "Strategic Elimination",
+    kicker: "Narrow",
+    title: "Down to Four",
     bullets: [
-      "Model crossing off a word, out loud, with real reasoning",
-      "“Identity isn't fixed” -- changes are allowed",
-      "Round 1: five words down to four; round 2: down to three",
-      "Reflection: was this hard? Why?"
+      "Look at your five words again",
+      "Cross one off -- which one are you ready to let go of?",
+      "There's no wrong answer; identity isn't fixed"
     ],
-    notes: "Ask for volunteers after each round: 'What did you cross off?' and 'What made that easy or hard?' That discussion is doing more work than the worksheet itself."
+    notes: "Review worksheets beforehand so you know who might need a check-in. Model crossing off one of your own words, out loud, with real reasoning, before students start. Ask a volunteer or two afterward: what did you cross off, and why?"
+  },
+  {
+    kind: "bullets",
+    kicker: "Narrow again",
+    title: "Down to Three",
+    bullets: [
+      "One more word goes",
+      "Which one was harder to let go of this time?",
+      "Talk with a partner about your choice"
+    ],
+    notes: "This round is usually harder than the first -- that's expected and worth naming out loud. Pair discussion, then collect worksheets."
+  },
+  {
+    kind: "day",
+    title: "Day 3",
+    notes: "45-75 minutes. Choosing the final word, then building it."
+  },
+  {
+    kind: "bullets",
+    kicker: "Create",
+    title: "Choose and Build",
+    bullets: [
+      "Pick your final word from your last two",
+      "Design a display that's really you",
+      "No two words -- or designs -- will look the same"
+    ],
+    notes: "Show examples of past word walls first. Conference briefly with each student on their final word before they get art supplies. For a student stuck between two words, ask about their interests or what makes them proud -- don't choose for them."
   },
   {
     kind: "wide",
-    kicker: "Day 3 (45–75 min)",
-    title: "Visual Creation",
+    kicker: "Together",
+    title: "Building Our Community",
     image: "/docs/assets/images/one-word-wall-2025.jpeg",
     bullets: [
-      "Students pick their final word from their last two",
-      "Design and build a word display; no two look the same",
-      "The real community-building happens in the making -- then it goes on the wall together"
+      "Every word on this wall is real, and different",
+      "This wall is our portrait, together",
+      "Look at what we just built"
     ],
-    notes: "6th graders love arts and crafts, and while they're making their displays they're naturally learning about each other -- helping with supplies, admiring designs, asking about word choices. That's the actual payoff of this day."
+    notes: "This is the actual community-building moment, and it happens in the making, not just the finished display -- students help each other with supplies, admire designs, ask about word choices. Closing question once the wall is up: how might understanding each other's words help us work better together this year?"
+  },
+  {
+    kind: "day",
+    title: "Day 4",
+    notes: "10-15 minutes. Reflection -- format (written, journal, partner talk) is up to the classroom."
   },
   {
     kind: "bullets",
-    kicker: "Day 4 (10–15 min)",
-    title: "Journal Reflection",
+    kicker: "Reflect",
+    title: "Think It Through",
     bullets: [
       "Why is your word important to you?",
       "What's one word on the wall that makes you curious about that person?",
-      "(then) How would you explain your word to someone at home?"
+      "How would you explain your word to someone at home?"
     ],
-    notes: "Hold back prompt 3 until most students have finished 1 and 2 -- it changes the frame of the first two if shown too early. 10-12 minutes of writing; 2-3 volunteers can share one sentence if time allows."
+    notes: "Hold back the third question until most students have answered the first two -- it reframes them if shown too early. A few volunteers can share one sentence if time allows."
   },
   {
     kind: "title",
@@ -385,6 +436,13 @@ function renderBullets(bullets) {
 
 function Stage({ slide, aspect }) {
   const arClass = aspect === "4:3" ? "ar-4-3" : "ar-16-9";
+  if (slide.kind === "day") {
+    return (
+      <div className={"stage day-slide " + arClass}>
+        <h1 className="day-title">{slide.title}</h1>
+      </div>
+    );
+  }
   if (slide.kind === "title") {
     return (
       <div className={"stage title-slide " + arClass}>
