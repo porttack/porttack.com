@@ -150,6 +150,44 @@ permalink: /one-word-rotary-slides/
     color: #b25e00;
   }
 
+  /* One narrowed word, large, center; the four it beat, struck through,
+     at the compass points around it. A static end-state snapshot, not an
+     animation of the narrowing itself. */
+  .radial-wrap {
+    position: relative;
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .radial-word {
+    position: absolute;
+    font-size: 32px;
+    font-weight: 600;
+    color: #9aa0a6;
+    text-decoration: line-through;
+  }
+
+  .radial-top { top: 0; left: 50%; transform: translateX(-50%); }
+  .radial-bottom { bottom: 0; left: 50%; transform: translateX(-50%); }
+  .radial-left { top: 50%; left: 0; transform: translateY(-50%); }
+  .radial-right { top: 50%; right: 0; transform: translateY(-50%); }
+
+  .radial-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--accent);
+    background: #fff;
+    border: 3px solid var(--accent);
+    border-radius: 16px;
+    padding: 20px 48px;
+    white-space: nowrap;
+  }
+
   .slide-counter-badge {
     position: absolute;
     bottom: 18px;
@@ -326,6 +364,25 @@ const SLIDES = [
     notes: "Keep sharing brief -- one word, plus one sentence if the person wants to add it. The point is breadth (hearing from everyone), not depth."
   },
   {
+    kind: "bullets",
+    kicker: "An example",
+    title: "Paul Harris, Rotary's Founder",
+    bullets: [
+      "Chicago, 1905 -- missed the hometown friendships of his youth",
+      "Candidate words: Fellowship, Tolerance, Service, Vision, Humility",
+      "All real, all documented -- which one would you narrow to?"
+    ],
+    notes: "Grounded in Harris's own account of why he founded Rotary -- he wanted the kind of fellowship he'd known growing up, not a guess at his private inner life. The next slide shows one honest answer, not the only one."
+  },
+  {
+    kind: "radial",
+    kicker: "One Answer",
+    title: "Paul Harris, Narrowed",
+    center: "Fellowship",
+    around: ["Tolerance", "Service", "Vision", "Humility"],
+    notes: "Fellowship is the word Harris's own founding story points to most directly -- missing the easy friendships of small-town life was specifically what led him to start the club. Service, Rotary's own later motto (“Service Above Self,” adopted 1950), is a real, honest alternative -- which is the point: more than one of these could be defended."
+  },
+  {
     kind: "highlight",
     kicker: "Before you start",
     title: "Facilitator Notes",
@@ -389,6 +446,24 @@ function Stage({ slide, aspect }) {
         <h1 className="slide-title">{slide.title}</h1>
         <img className="slide-wide-image" src={slide.image} alt="" />
         <div className="slide-body">{renderBullets(slide.bullets)}</div>
+      </div>
+    );
+  }
+  if (slide.kind === "radial") {
+    // One narrowed word, large, in the middle; the words it beat arranged
+    // around it, struck through. A static snapshot of "after narrowing,"
+    // not an animation of the process -- see the commit message for why.
+    const positions = ["top", "right", "bottom", "left"];
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <div className="radial-wrap">
+          {slide.around.map((w, i) => (
+            <div className={"radial-word radial-" + positions[i]} key={i}>{w}</div>
+          ))}
+          <div className="radial-center">{slide.center}</div>
+        </div>
       </div>
     );
   }
