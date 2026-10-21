@@ -228,8 +228,17 @@ permalink: /one-word-rotary-slides/
   .twolists-col li:last-child { border-bottom: none; }
 
   /* One narrowed word, large, center; the four it beat, struck through,
-     at the compass points around it. A static end-state snapshot, not an
-     animation of the narrowing itself. */
+     slowly orbiting it. Not an animation of the narrowing itself (that
+     already happened, on the crossoff slide) -- just a slow decorative
+     drift, purely for visual interest on an otherwise static slide. The
+     wrap is much wider than it is tall, so the path is a flattened ellipse
+     (370px/135px), not a circle -- a circle wide enough to clear the
+     center box's own width would have overflowed the wrap's height. Each
+     word's position is keyframed directly (no rotate() anywhere), so the
+     text itself never tilts; only its position sweeps. The four words
+     share one keyframe timeline, phase-staggered via a negative
+     animation-delay per word so they stay evenly spaced starting from
+     their old top/right/bottom/left places. */
   .radial-wrap {
     position: relative;
     flex: 1 1 auto;
@@ -239,16 +248,51 @@ permalink: /one-word-rotary-slides/
 
   .radial-word {
     position: absolute;
+    top: 50%;
+    left: 50%;
     font-size: 32px;
     font-weight: 600;
     color: #9aa0a6;
     text-decoration: line-through;
+    white-space: nowrap;
+    animation: radial-ellipse-path 50s linear infinite;
   }
 
-  .radial-top { top: 0; left: 50%; transform: translateX(-50%); }
-  .radial-bottom { bottom: 0; left: 50%; transform: translateX(-50%); }
-  .radial-left { top: 50%; left: 0; transform: translateY(-50%); }
-  .radial-right { top: 50%; right: 0; transform: translateY(-50%); }
+  @keyframes radial-ellipse-path {
+    0% { transform: translate(calc(-50% + 370.0px), calc(-50% + 0.0px)); }
+    4.1667% { transform: translate(calc(-50% + 357.4px), calc(-50% + 34.9px)); }
+    8.3333% { transform: translate(calc(-50% + 320.4px), calc(-50% + 67.5px)); }
+    12.5% { transform: translate(calc(-50% + 261.6px), calc(-50% + 95.5px)); }
+    16.6667% { transform: translate(calc(-50% + 185.0px), calc(-50% + 116.9px)); }
+    20.8333% { transform: translate(calc(-50% + 95.8px), calc(-50% + 130.4px)); }
+    25% { transform: translate(calc(-50% + 0.0px), calc(-50% + 135.0px)); }
+    29.1667% { transform: translate(calc(-50% + -95.8px), calc(-50% + 130.4px)); }
+    33.3333% { transform: translate(calc(-50% + -185.0px), calc(-50% + 116.9px)); }
+    37.5% { transform: translate(calc(-50% + -261.6px), calc(-50% + 95.5px)); }
+    41.6667% { transform: translate(calc(-50% + -320.4px), calc(-50% + 67.5px)); }
+    45.8333% { transform: translate(calc(-50% + -357.4px), calc(-50% + 34.9px)); }
+    50% { transform: translate(calc(-50% + -370.0px), calc(-50% + 0.0px)); }
+    54.1667% { transform: translate(calc(-50% + -357.4px), calc(-50% + -34.9px)); }
+    58.3333% { transform: translate(calc(-50% + -320.4px), calc(-50% + -67.5px)); }
+    62.5% { transform: translate(calc(-50% + -261.6px), calc(-50% + -95.5px)); }
+    66.6667% { transform: translate(calc(-50% + -185.0px), calc(-50% + -116.9px)); }
+    70.8333% { transform: translate(calc(-50% + -95.8px), calc(-50% + -130.4px)); }
+    75% { transform: translate(calc(-50% + -0.0px), calc(-50% + -135.0px)); }
+    79.1667% { transform: translate(calc(-50% + 95.8px), calc(-50% + -130.4px)); }
+    83.3333% { transform: translate(calc(-50% + 185.0px), calc(-50% + -116.9px)); }
+    87.5% { transform: translate(calc(-50% + 261.6px), calc(-50% + -95.5px)); }
+    91.6667% { transform: translate(calc(-50% + 320.4px), calc(-50% + -67.5px)); }
+    95.8333% { transform: translate(calc(-50% + 357.4px), calc(-50% + -34.9px)); }
+    100% { transform: translate(calc(-50% + 370.0px), calc(-50% + -0.0px)); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .radial-word { animation: none; }
+    .radial-word:nth-child(1) { transform: translate(-50%, -50%) translate(0, -135px); }
+    .radial-word:nth-child(2) { transform: translate(-50%, -50%) translate(370px, 0); }
+    .radial-word:nth-child(3) { transform: translate(-50%, -50%) translate(0, 135px); }
+    .radial-word:nth-child(4) { transform: translate(-50%, -50%) translate(-370px, 0); }
+  }
 
   .radial-center {
     position: absolute;
@@ -651,19 +695,25 @@ function Stage({ slide, aspect }) {
     );
   }
   if (slide.kind === "radial") {
-    // One narrowed word, large, in the middle; the words it beat arranged
-    // around it, struck through. A static snapshot of "after narrowing,"
-    // not an animation of the process -- see the commit message for why.
-    const positions = ["top", "right", "bottom", "left"];
+    // One narrowed word, large, in the middle; the words it beat, struck
+    // through, slowly orbiting it for fun. Each word starts at its old
+    // fixed compass point (top/right/bottom/left) via a negative
+    // animation-delay into the shared .radial-ellipse-path keyframes,
+    // then drifts from there.
+    const ORBIT_DURATION = 50;
     return (
       <div className={"stage " + arClass}>
         <p className="kicker">{slide.kicker}</p>
         <h1 className="slide-title">{slide.title}</h1>
         {slide.subtitle && <p className="slide-subtitle">{slide.subtitle}</p>}
         <div className="radial-wrap">
-          {slide.around.map((w, i) => (
-            <div className={"radial-word radial-" + positions[i]} key={i}>{w}</div>
-          ))}
+          {slide.around.map((w, i) => {
+            const startAngle = (i * 90 - 90 + 360) % 360;
+            const delay = -(startAngle / 360) * ORBIT_DURATION;
+            return (
+              <span className="radial-word" style={{ animationDelay: `${delay}s` }} key={i}>{w}</span>
+            );
+          })}
           <div className="radial-center">{slide.center}</div>
         </div>
       </div>
