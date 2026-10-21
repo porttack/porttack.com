@@ -150,6 +150,25 @@ permalink: /one-word-rotary-slides/
     color: #b25e00;
   }
 
+  /* A real, un-curated word list, as many as came in -- wraps freely, no
+     fixed count the way every other slide kind keeps to. */
+  .wordcloud-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    align-content: flex-start;
+    margin-top: 24px;
+  }
+
+  .wordcloud-chip {
+    background: #f1f3f5;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-size: 24px;
+  }
+
   /* Two candidate word-lists shown side by side, so the room can guess
      which list and which word the next slide reveals. */
   .twolists-wrap {
@@ -359,19 +378,7 @@ const SLIDES = [
     kicker: "Service Club Version",
     title: "One Word",
     subtitle: "A quick fellowship-building opener",
-    notes: "Adapted from a classroom SEL activity. Twelve minutes: brainstorm, narrow to one, write it down, say it out loud."
-  },
-  {
-    kind: "highlight",
-    kicker: "Our compass",
-    title: "The Four-Way Test",
-    bullets: [
-      "Is it the TRUTH?",
-      "Is it FAIR to all concerned?",
-      "Will it build GOODWILL and BETTER FRIENDSHIPS?",
-      "Will it be BENEFICIAL to all concerned?"
-    ],
-    notes: "Read this before starting. The first question is the one that matters most for today: keep your words sincere, not performed for the room."
+    notes: "Adapted from a classroom SEL activity. Twelve minutes: brainstorm, narrow to one, write it down, say it out loud. The worksheet carries Rotary's Four-Way Test as a printed compass; it doesn't need its own slide here."
   },
   {
     kind: "bullets",
@@ -451,7 +458,7 @@ const SLIDES = [
       "Rotary International director, then president, 1954-55",
       "Also a devout Methodist, active for decades in Christian philanthropy"
     ],
-    notes: "The same man who wrote the compass this deck opened with. Verified against Wikipedia and Rotary's own history pages."
+    notes: "The same man who wrote the Four-Way Test printed on the worksheet. Verified against Wikipedia and Rotary's own history pages."
   },
   {
     kind: "twolists",
@@ -467,7 +474,14 @@ const SLIDES = [
     title: "Herbert Taylor, Narrowed",
     center: "Principled",
     around: ["Rescuer", "Trustworthy", "Reformer", "Ethical"],
-    notes: "From List A. Rescuer is the vivid, story-shaped alternative -- he did save the company -- but Principled is more specific to what he's actually remembered for: not just acting ethically, but writing down four explicit rules and running a company by them. That's the whole reason his name is attached to the test this deck opened with."
+    notes: "From List A. Rescuer is the vivid, story-shaped alternative -- he did save the company -- but Principled is more specific to what he's actually remembered for: not just acting ethically, but writing down four explicit rules and running a company by them. That's the whole reason his name is on the Four-Way Test printed on the worksheet."
+  },
+  {
+    kind: "wordcloud",
+    kicker: "The Real Thing",
+    title: "What My Students Actually Wrote",
+    words: ["virtuous", "determined", "caring", "responsible", "committed", "artistic", "competitive", "christian", "athlete", "swimmer", "funny", "sarcastic", "sister", "brother", "friend", "italian", "mexican", "polish", "american", "ireland", "gamer", "minecraft", "basketball", "softball", "golfer", "camping", "hunting", "construction", "ebike", "flips", "tropical", "silly", "demonic", "mcdonalds"],
+    notes: "This is the actual word wall from my own 6th-grade class, not a guess about anyone -- every word a real student picked. Three historical examples is one kind of evidence; this is the other kind: sincere and whimsical sitting right next to each other (virtuous next to mcdonalds), which is exactly the range you should expect from the room tonight too."
   },
   {
     kind: "bullets",
@@ -499,7 +513,7 @@ const SLIDES = [
       "Club Service: strengthening fellowship within the club",
       "Diversity: words rarely repeat, and the range is the point"
     ],
-    notes: "This isn't a stretch -- Club Service is literally defined as strengthening fellowship. (The Four-Way Test already opened the deck.)"
+    notes: "This isn't a stretch -- Club Service is literally defined as strengthening fellowship. (The Four-Way Test is on the worksheet, not its own slide here.)"
   },
   {
     kind: "title",
@@ -544,6 +558,20 @@ function Stage({ slide, aspect }) {
         <h1 className="slide-title">{slide.title}</h1>
         <img className="slide-wide-image" src={slide.image} alt="" />
         <div className="slide-body">{renderBullets(slide.bullets)}</div>
+      </div>
+    );
+  }
+  if (slide.kind === "wordcloud") {
+    // Deliberately breaks the "few words per slide" rule every other kind
+    // follows -- the point of this one is volume and range, not a short
+    // takeaway.
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <div className="wordcloud-wrap">
+          {slide.words.map((w, i) => <span className="wordcloud-chip" key={i}>{w}</span>)}
+        </div>
       </div>
     );
   }
