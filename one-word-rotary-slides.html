@@ -286,6 +286,18 @@ permalink: /one-word-rotary-slides/
     font-size: 22px;
   }
 
+  .outline-slide.outline-nested {
+    margin: 12px 0 12px 32px;
+    background: #f6f8fa;
+    border-style: dashed;
+  }
+
+  .outline-slide h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    color: var(--muted);
+  }
+
   .outline-slide .outline-bullets {
     color: var(--muted);
     font-size: 15px;
@@ -354,17 +366,6 @@ const SLIDES = [
   },
   {
     kind: "bullets",
-    kicker: "The activity, continued",
-    title: "Narrow, Write, Share",
-    bullets: [
-      "Narrow (3 min): cross off one word at a time, five down to one",
-      "Write it down (1 min): fold a card into a tent, word facing out",
-      "Share (remaining time): go around the room, one word each"
-    ],
-    notes: "Keep sharing brief -- one word, plus one sentence if the person wants to add it. The point is breadth (hearing from everyone), not depth."
-  },
-  {
-    kind: "bullets",
     kicker: "An example",
     title: "Paul Harris, Rotary's Founder",
     bullets: [
@@ -372,7 +373,21 @@ const SLIDES = [
       "Candidate words: Fellowship, Tolerance, Service, Vision, Humility",
       "All real, all documented -- which one would you narrow to?"
     ],
-    notes: "Grounded in Harris's own account of why he founded Rotary -- he wanted the kind of fellowship he'd known growing up, not a guess at his private inner life. The next slide shows one honest answer, not the only one."
+    notes: "Grounded in Harris's own account of why he founded Rotary -- he wanted the kind of fellowship he'd known growing up, not a guess at his private inner life. The next slide shows one honest answer, not the only one.",
+    down: [
+      {
+        kind: "bullets",
+        kicker: "A deeper cut",
+        title: "Arch Klumph, Founder of the Foundation",
+        bullets: [
+          "Cleveland lumber businessman, Rotary Club of Cleveland founding member (1911)",
+          "Rotary International president, 1916-17",
+          "Proposed an endowment \"for doing good in the world\" at the 1917 convention -- it became The Rotary Foundation",
+          "The Foundation's first board chairman, 1928-1934"
+        ],
+        notes: "Optional aside, reachable with the down arrow and skipped by the normal next/prev flow. Harris founded the organization; Klumph, six years later, gave it a mechanism -- the Foundation -- to actually fund its work."
+      }
+    ]
   },
   {
     kind: "radial",
@@ -381,6 +396,17 @@ const SLIDES = [
     center: "Fellowship",
     around: ["Tolerance", "Service", "Vision", "Humility"],
     notes: "Fellowship is the word Harris's own founding story points to most directly -- missing the easy friendships of small-town life was specifically what led him to start the club. Service, Rotary's own later motto (“Service Above Self,” adopted 1950), is a real, honest alternative -- which is the point: more than one of these could be defended."
+  },
+  {
+    kind: "bullets",
+    kicker: "The activity, continued",
+    title: "Narrow, Write, Share",
+    bullets: [
+      "Narrow (3 min): cross off one word at a time, five down to one",
+      "Write it down (1 min): fold a card into a tent, word facing out",
+      "Share (remaining time): go around the room, one word each"
+    ],
+    notes: "Keep sharing brief -- one word, plus one sentence if the person wants to add it. The point is breadth (hearing from everyone), not depth."
   },
   {
     kind: "highlight",
@@ -511,10 +537,10 @@ function bulletsToText(bullets) {
   return bullets.map(b => (typeof b === "string" ? b : b.text)).join(" / ");
 }
 
-function OutlineCard({ slide, heading }) {
+function OutlineCard({ slide, heading, nested }) {
   return (
-    <div className="outline-slide">
-      <h2>{heading}</h2>
+    <div className={"outline-slide" + (nested ? " outline-nested" : "")}>
+      {nested ? <h3>{heading}</h3> : <h2>{heading}</h2>}
       {slide.bullets && <p className="outline-bullets">On slide: {bulletsToText(slide.bullets)}</p>}
       <div className="outline-notes"><p>{slide.notes}</p></div>
     </div>
@@ -525,36 +551,50 @@ function Outline() {
   return (
     <div className="outline">
       <h1>One Word: Service Club Version</h1>
-      <p className="outline-sub">Speaker notes outline. Print this before class if you'd rather have paper than toggle notes on screen.</p>
+      <p className="outline-sub">Speaker notes outline. Print this before class if you'd rather have paper than toggle notes on screen. Indented cards are optional "down arrow" asides, skipped by the normal next/prev flow.</p>
       {SLIDES.map((s, i) => (
-        <OutlineCard slide={s} heading={`${i + 1}. ${s.title}`} key={i} />
+        <React.Fragment key={i}>
+          <OutlineCard slide={s} heading={`${i + 1}. ${s.title}`} />
+          {(s.down || []).map((d, j) => (
+            <OutlineCard slide={d} heading={`Extra: ${d.title}`} nested key={j} />
+          ))}
+        </React.Fragment>
       ))}
     </div>
   );
 }
 
 // Deep-linking: ?slide=3 opens on that slide (1-indexed, to match the
-// on-screen counter), ?outline=1 opens straight into the speaker-notes
-// outline.
+// on-screen counter), ?extra=1 additionally drops into that slide's Nth
+// "down" slide if it has any, ?outline=1 opens straight into the
+// speaker-notes outline.
 function initialStateFromUrl() {
   const params = new URLSearchParams(window.location.search);
   const slideParam = parseInt(params.get("slide"), 10);
   const index = Number.isInteger(slideParam) ? Math.min(Math.max(slideParam - 1, 0), SLIDES.length - 1) : 0;
+  const maxExtra = (SLIDES[index].down || []).length;
+  const extraParam = parseInt(params.get("extra"), 10);
+  const subIndex = Number.isInteger(extraParam) ? Math.min(Math.max(extraParam, 0), maxExtra) : 0;
   const mode = params.get("outline") ? "outline" : "deck";
-  return { index, mode };
+  return { index, subIndex, mode };
 }
 
 function App() {
   const initial = initialStateFromUrl();
   const [index, setIndex] = useState(initial.index);
+  const [subIndex, setSubIndex] = useState(initial.subIndex);
   const [showNotes, setShowNotes] = useState(false);
   const [aspect, setAspect] = useState("16:9");
   const [mode, setMode] = useState(initial.mode); // "deck" | "outline"
 
-  const slide = SLIDES[index];
+  const topSlide = SLIDES[index];
+  const downSlides = topSlide.down || [];
+  const slide = subIndex === 0 ? topSlide : downSlides[subIndex - 1];
 
-  const next = useCallback(() => setIndex(i => Math.min(i + 1, SLIDES.length - 1)), []);
-  const prev = useCallback(() => setIndex(i => Math.max(i - 1, 0)), []);
+  const next = useCallback(() => { setIndex(i => Math.min(i + 1, SLIDES.length - 1)); setSubIndex(0); }, []);
+  const prev = useCallback(() => { setIndex(i => Math.max(i - 1, 0)); setSubIndex(0); }, []);
+  const goDown = useCallback(() => setSubIndex(s => Math.min(s + 1, downSlides.length)), [downSlides.length]);
+  const goUp = useCallback(() => setSubIndex(s => Math.max(s - 1, 0)), []);
 
   useEffect(() => {
     function onKey(e) {
@@ -564,13 +604,15 @@ function App() {
       }
       if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); next(); }
       else if (e.key === "ArrowLeft") { e.preventDefault(); prev(); }
+      else if (e.key === "ArrowDown") { e.preventDefault(); goDown(); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); goUp(); }
       else if (e.key === "n" || e.key === "N") setShowNotes(v => !v);
       else if (e.key === "f" || e.key === "F") toggleFullscreen();
       else if (e.key === "o" || e.key === "O") setMode("outline");
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [mode, next, prev]);
+  }, [mode, next, prev, goDown, goUp]);
 
   function toggleFullscreen() {
     if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
@@ -597,7 +639,16 @@ function App() {
         <ScaledStage slide={slide} aspect={aspect} />
         <div className="click-zone left" onClick={prev} title="Previous slide"></div>
         <div className="click-zone right" onClick={next} title="Next slide"></div>
-        <div className="slide-counter-badge">{index + 1} / {SLIDES.length}</div>
+        {subIndex > 0 && (
+          <button className="depth-nav depth-up" onClick={goUp} title="Back to the main flow">&#9650; Back</button>
+        )}
+        {subIndex < downSlides.length && (
+          <button className="depth-nav depth-down" onClick={goDown} title="More about this slide">&#9660; More</button>
+        )}
+        <div className="slide-counter-badge">
+          {index + 1} / {SLIDES.length}
+          {subIndex > 0 && <span> &middot; extra {subIndex}/{downSlides.length}</span>}
+        </div>
       </div>
       {showNotes && (
         <div className="notes-panel">
