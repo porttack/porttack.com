@@ -693,11 +693,24 @@ function ScaledStage({ slide, aspect }) {
       const s = Math.min((rect.width * 0.98) / designW, (rect.height * 0.98) / designH);
       setScale(s > 0 ? s : 1);
     };
+    // Entering/exiting fullscreen can report a stale rect for a frame or
+    // two before the browser finishes resizing the viewport, so the
+    // ResizeObserver callback that follows sometimes measures too early
+    // and leaves the stage scaled for the old (smaller) size with empty
+    // space around it. A double rAF waits for that resize to settle.
+    const recomputeSoon = () => {
+      requestAnimationFrame(() => requestAnimationFrame(recompute));
+    };
     recompute();
     const ro = new ResizeObserver(recompute);
     ro.observe(el);
     window.addEventListener("resize", recompute);
-    return () => { ro.disconnect(); window.removeEventListener("resize", recompute); };
+    document.addEventListener("fullscreenchange", recomputeSoon);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", recompute);
+      document.removeEventListener("fullscreenchange", recomputeSoon);
+    };
   }, [designH]);
 
   return (
