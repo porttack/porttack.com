@@ -8,7 +8,7 @@ A short, adult version of the **[One Word lesson plan](/one-word-lesson-plan/)**
 
 Good as a fellowship-building opener: a quick way for members to learn something real about each other that doesn't come up in regular club business.
 
-Slides: **[One Word Slides, Service Club Version](/one-word-rotary-slides/)**
+Slides: **[One Word Slides, Service Club Version](/one-word-rotary-slides/)** &middot; Worksheet: **[One Word Worksheet, Service Club Version](/one-word-rotary-worksheet/)**
 
 ## The activity (10 minutes)
 
@@ -19,7 +19,8 @@ Slides: **[One Word Slides, Service Club Version](/one-word-rotary-slides/)**
 
 ## Materials
 
-- Blank index cards or cardstock, one per member, folded lengthwise into a tent
+- The **[worksheet](/one-word-rotary-worksheet/)**, printed, or plain paper -- for the brainstorm and narrowing steps
+- Blank index cards or cardstock, one per member, folded lengthwise into a tent -- for the word itself
 - Pens
 
 ## Facilitator notes
