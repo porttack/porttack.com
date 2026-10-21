@@ -10,12 +10,13 @@ Good as a fellowship-building opener: a quick way for members to learn something
 
 Slides: **[One Word Slides, Service Club Version](/one-word-rotary-slides/)** &middot; Worksheet: **[One Word Worksheet, Service Club Version](/one-word-rotary-worksheet/)**
 
-## The activity (10 minutes)
+## The activity (12 minutes)
 
-1. **Brainstorm (2 min).** Everyone silently lists five words that describe who they are. Personality traits, roles, interests, background -- anything that feels true.
-2. **Narrow (2 min).** Cross off words until one is left.
-3. **Write it down (1 min).** Fold an index card lengthwise into a tent and write your word on it, facing out, in front of you.
-4. **Share (remaining time).** Go around the room. Each person says their word, and -- if they want -- one sentence about why. Keep it brief; the point is breadth (hearing from everyone), not depth.
+1. **Brainstorm (3 min).** Everyone silently writes up to three separate lists of five words each -- personality traits, roles, interests, background, anything that feels true. Three lists give you more than one angle on yourself to work from.
+2. **Pick a list (30 sec).** Choose whichever list feels most interesting to work with right now. Switching to a different list partway through is fine.
+3. **Narrow (3 min).** Cross off one word at a time from your chosen list -- five down to four, four to three, and so on, until a single word is left.
+4. **Write it down (1 min).** Fold an index card lengthwise into a tent and write your word on it, facing out, in front of you.
+5. **Share (remaining time).** Go around the room. Each person says their word, and -- if they want -- one sentence about why. Keep it brief; the point is breadth (hearing from everyone), not depth.
 
 ## Materials
 
