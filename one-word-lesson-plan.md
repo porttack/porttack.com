@@ -10,6 +10,8 @@ permalink: /one-word-lesson-plan/
 
 Lesson originated from: [cultofpedagogy.com](https://www.cultofpedagogy.com/classroom-decor-one-word/)
 
+Classroom slides: **[One Word Slides](/one-word-lesson-plan-slides/)**
+
 Student worksheet (brainstorming, then reducing to 5 words, then to 1): **[One Word Worksheet](/one-word-worksheet/)**
 
 Potential follow-on lesson plan: [WhatdoYouBring.pdf](https://drive.google.com/file/d/0BwkJnLDZMJwVTHA2Sm5tbVM4bXc/view?resourcekey=0-SycznroSHIFCS9TL31WK0g)

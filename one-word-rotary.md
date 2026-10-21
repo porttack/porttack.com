@@ -8,6 +8,8 @@ A short, adult version of the **[One Word lesson plan](/one-word-lesson-plan/)**
 
 Good as a fellowship-building opener: a quick way for members to learn something real about each other that doesn't come up in regular club business.
 
+Slides: **[One Word Slides, Service Club Version](/one-word-rotary-slides/)**
+
 ## The activity (10 minutes)
 
 1. **Brainstorm (2 min).** Everyone silently lists five words that describe who they are. Personality traits, roles, interests, background -- anything that feels true.
