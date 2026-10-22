@@ -23,6 +23,8 @@ The format, norms, fishbowl, and handouts are the ones in [Prove Me Wrong]({% po
 
 My own take is in [AI Robot Teachers Are Almost Here]({% post_url 2026-07-24-robot-teacher %}). It stays out of the room until the end.
 
+Slides: **[A Robot for Room 114](/robot-teacher-slides/)**
+
 ## Learning goals
 
 By the end of the seminar, students can:
@@ -44,6 +46,7 @@ Changes for this seminar:
 
 - **Exit ticket:** add one line: "Name one piece of student data this robot would hold, and one risk of keeping it."
 - **Readings:** parts 1 and 2 below. Part 2 is handed out partway through.
+- **Slides:** [A Robot for Room 114](/robot-teacher-slides/), with speaker notes. Round 3 is deliberately blank on screen.
 - **Run of show and Round 3:** below. This one has three rounds, not one.
 
 <style>

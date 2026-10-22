@@ -21,6 +21,8 @@ The format, norms, fishbowl, and handouts are the ones in [Prove Me Wrong]({% po
 
 This reading works as a re-introduction because the text is short and every student already has an opinion about rules written about them.
 
+Slides: **[The Rules Students Wrote](/students-first-slides/)**
+
 ## Learning goals
 
 By the end of the seminar, students can:
@@ -44,6 +46,7 @@ Changes for this seminar:
 - **Entry ticket, question 3:** add "Which rule would you cut, and what would you put in its place?"
 - **Exit ticket:** add one line: "Write one rule you would cut, change, or add, and say why."
 - **Reading and questions:** below.
+- **Slides:** [The Rules Students Wrote](/students-first-slides/), with speaker notes.
 
 <style>
 .seminar-reading{border:1px solid rgba(128,128,128,.35);border-radius:8px;margin:1.5rem 0;overflow:hidden;font-style:normal;}
