@@ -4,7 +4,7 @@ title: "The Rules Students Wrote: A Socratic Seminar on the STUDENTS FIRST Act"
 categories: draft
 label: Lesson Plan / AI Literacy
 lesson_category: society
-excerpt: "Ninety-eight high school students wrote a national AI policy for schools. One of their rules says a student can be suspended or expelled if a parent uses AI on their homework. A ready-to-run Socratic seminar on four rules the students wrote."
+excerpt: "Ninety-eight high school students wrote a national AI policy for schools. One of their rules says a student can be suspended or expelled if a parent uses AI on their homework. A ready-to-run Socratic seminar on six rules the students wrote."
 ---
 
 <!-- DRAFT NOTES FOR ERIC (delete before publishing)
@@ -72,17 +72,21 @@ Changes for this seminar:
   <div class="seminar-reading__body">
     <p class="seminar-reading__title">The Rules Students Wrote</p>
     <p><strong>1.</strong> In July 2026, ninety-eight high school students from all fifty states met in Boston for a weekend. They wrote a model AI policy for schools and voted it through. They called it the STUDENTS FIRST Act. It is not a law. But a national group of school superintendents is sending it to school leaders who are writing their own AI rules right now.</p>
-    <p><strong>2.</strong> The bill has forty-nine rules. Here are four, word for word.</p>
+    <p><strong>2.</strong> The bill has forty-nine rules. Here are six, word for word.</p>
     <p><strong>3. Rule A (Students, provision 6):</strong></p>
     <blockquote>"If they are not explicitly told that AI use is permitted, any use of AI will be considered unauthorized and plagiarism."</blockquote>
-    <p><strong>4. Rule B (Students, provision 9):</strong></p>
-    <blockquote>"AI use is strictly prohibited on all graded assessments. If a teacher catches a student using it for that purpose, the grade on that assignment must result in a zero unless the teacher specifies otherwise. AI use is permitted for studying."</blockquote>
-    <p><strong>5. Rule C (Parents and Guardians, provision 7):</strong></p>
+    <p><strong>4. Rule B (Parents and Guardians, provision 7):</strong></p>
     <blockquote>"If parents use AI to assist their child on graded work when explicit permission is not given by their classroom teacher, students will be subject to suspension or expulsion at their schools discretion."</blockquote>
-    <p><strong>6. Rule D (Students, provision 1):</strong></p>
+    <p><strong>5. Rule C (Students, provision 4):</strong></p>
+    <blockquote>"Students should never use AI for the act of writing, though editing, brainstorming, and studying with AI is permitted after eighth grade. How to edit written assignments (without AI assistance) should be taught and assessed thoroughly prior to eighth grade before students use AI for editing."</blockquote>
+    <p><strong>6. Rule D (Teachers, provision 2):</strong></p>
+    <blockquote>"Teachers must use one standardized AI detector in conjunction with their school district for written graded assessments and use Lockdown browsers for graded online assessments. If AI detects any misconduct, teachers must personally investigate the issue before reporting the student to admin for improper use."</blockquote>
+    <p><strong>7. Rule E (Students, provision 1):</strong></p>
     <blockquote>"Students should have the right to appeal any convictions of wrongful AI use. They may be subject to technologies such as AI detectors. Students should prepare their documents to defend against potential false positives, such as procuring the document history of major assignments."</blockquote>
-    <p><strong>7.</strong> Notice who wrote these. Not teachers, not a company, not a lawmaker. Students. At least one student senator said out loud, on the floor, that the bill had repetitive rules and contradictions, and voted for it anyway as a starting point.</p>
-    <p><strong>8.</strong> Now you are the senate. You do not have to accept the rules as written. Which ones would you keep, change, or cut? And which rules do you think the students forgot to write?</p>
+    <p><strong>8. Rule F (Students, provision 15):</strong></p>
+    <blockquote>"Students must have access to at least one school approved, filtered, and monitored AI mode."</blockquote>
+    <p><strong>9.</strong> Notice who wrote these. Not teachers, not a company, not a lawmaker. Students. At least one student senator said out loud, on the floor, that the bill had repetitive rules and contradictions, and voted for it anyway as a starting point.</p>
+    <p><strong>10.</strong> Now you are the senate. You do not have to accept the rules as written. Which ones would you keep, change, or cut? And which rules do you think the students forgot to write?</p>
   </div>
 </div>
 <script>
@@ -127,7 +131,7 @@ function seminarPlainCopy(text,done){
 
 - **Temperature check.** One wall: "Rules like these protect students." Other wall: "Rules like these mostly punish students." Same line, same before-and-after movement.
 - **Entry ticket, question 3.** Evidence by paragraph number still works. Add: "Which rule would you cut, and what would you put in its place?"
-- **Outer circle.** One observer per round listens for anyone who points to a specific rule letter (A, B, C, D) instead of "the rules" in general.
+- **Outer circle.** One observer per round listens for anyone who points to a specific rule letter (A to F) instead of "the rules" in general.
 
 ## Facilitator questions
 
@@ -135,15 +139,17 @@ Back-pocket only. Open with one.
 
 **Opening (pick one):**
 
-- Rule C says a student can be suspended or expelled if a *parent* uses AI on their homework. Fair, or backwards?
+- Rule B says a student can be suspended or expelled if a *parent* uses AI on their homework. Fair, or backwards?
 - These are the rules students wrote about themselves. Are they tougher or softer than you expected?
 
 **Core:**
 
 - Rule A treats any AI use that is not explicitly allowed as plagiarism. Who is responsible for saying what is allowed?
-- Rule D tells students to save their document history to prove they did not cheat. What does that say about who is trusted?
-- Rule B allows AI for studying but bans it on graded assessments. Where is the line between studying and doing the work?
-- Of the four, which one would you want to live under? Which one would you fight?
+- Rule E tells students to save their document history to prove they did not cheat. What does that say about who is trusted?
+- Rule C draws an age line: no AI for editing before eighth grade, and never for "the act of writing." Is eighth grade the right line? Is writing code "the act of writing"?
+- Rule D puts a detector on every written assessment and a lockdown browser on every online one. Who pays the cost when a detector is wrong?
+- Rule F says every student gets a school AI that is "filtered and monitored." Does monitoring make it safer, or make you use it less?
+- Of the six, which one would you want to live under? Which one would you fight?
 
 **Deeper:**
 
@@ -168,8 +174,8 @@ All of this is collected during the seminar. Nothing needs a separate quiz.
 
 | Goal | Evidence | What meeting it looks like |
 |---|---|---|
-| 1. Effects | Entry ticket: a starting side and two pieces of evidence by paragraph number. | Names at least one benefit and one harm of a specific rule (A, B, C, or D) and cites the text. |
-| 2. Legal and ethical questions | Fishbowl talk on Rule A and Rule C, tracked on the observer organizer. | Raises a question of fairness or responsibility (who decides what is "permitted"? who is punished?) and supports it. |
+| 1. Effects | Entry ticket: a starting side and two pieces of evidence by paragraph number. | Names at least one benefit and one harm of a specific rule (A to F) and cites the text. |
+| 2. Legal and ethical questions | Fishbowl talk on Rule A and Rule B, tracked on the observer organizer. | Raises a question of fairness or responsibility (who decides what is "permitted"? who is punished?) and supports it. |
 | 3. A proposed rule | One added line on the exit ticket: "Write one rule you would cut, change, or add, and say why." | A rule stated clearly enough to enforce, with a reason that refers to the reading. |
 | 4. Discussion | Observer organizer, including the tally of times a student built on someone else's idea. Before-and-after temperature check, with a count of who moved and why. | Builds on a peer by name, cites a rule by letter, and can say what moved them (or why they held). |
 
