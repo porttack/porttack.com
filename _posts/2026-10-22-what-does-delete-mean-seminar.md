@@ -45,13 +45,10 @@ By the end of the seminar, students can:
 
 ## Materials
 
-Reused as written from [Prove Me Wrong]({% post_url 2026-07-20-prove-me-wrong %}):
+The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the entry ticket, observer organizer, and exit ticket.
 
-- [Norms to post]({% post_url 2026-07-20-prove-me-wrong %}#five-norms-to-post)
-- [Fishbowl and hot seat guardrails]({% post_url 2026-07-20-prove-me-wrong %}#the-fishbowl-with-guardrails) and [boundaries]({% post_url 2026-07-20-prove-me-wrong %}#boundaries-said-once)
-- [Entry ticket, observer organizer, and exit ticket]({% post_url 2026-07-20-prove-me-wrong %}#the-handouts)
 
-Changes for this seminar:
+Specific to this seminar:
 
 - **Exit ticket:** add one line: "Write one sentence a company should promise customers when they press Delete, including how long it takes."
 - **Readings:** parts 1 and 2 below. Part 2 is handed out partway through.
@@ -236,7 +233,7 @@ I grade evidence and honesty, not the position landed on. "I changed my mind bec
 
 ## Standards
 
-Same Common Core alignment as [Prove Me Wrong]({% post_url 2026-07-20-prove-me-wrong %}): SL.6.1 / SL.9-10.1, SL.6.3 / SL.9-10.3, RI.6.1 / RI.9-10.1, RI.6.8 / RI.9-10.8, W.6.1 / W.9-10.1. Goal 3 is RI.6.8 / RI.9-10.8 in practice: evaluating which claims are supported.
+Common Core ELA (California adoption): SL.6.1 / SL.9-10.1, SL.6.3 / SL.9-10.3, RI.6.1 / RI.9-10.1, RI.6.8 / RI.9-10.8, W.6.1 / W.9-10.1. What each one covers is in the [kit](/socratic-seminar-kit/#common-core-and-california-mandates). Goal 3 is RI.6.8 / RI.9-10.8 in practice: evaluating which claims are supported.
 
 **AP CSP, Big Idea 5, Impact of Computing.** This seminar touches:
 

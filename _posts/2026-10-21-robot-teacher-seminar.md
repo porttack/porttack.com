@@ -19,7 +19,7 @@ excerpt: "A rural district bought a humanoid robot to help teach high school cod
 
 A school district bought a humanoid robot to help teach high school coding and robotics. Then the state stepped in. This is a seminar about whether a school should buy it. It is a decision, not a debate over who is right, and your students are the ones affected.
 
-The format, norms, fishbowl, and handouts are the ones in [Prove Me Wrong]({% post_url 2026-07-20-prove-me-wrong %}). I am not repeating them. Use that post's norms, entry ticket, observer organizer, and exit ticket as written. What changes here is the reading, which arrives in two parts, and a third round that is spoken, not handed out.
+The format is in the [Socratic Seminar Kit](/socratic-seminar-kit/): the norms, the fishbowl, and the three tickets. What changes here is the reading, which arrives in two parts, and a third round that is spoken, not handed out.
 
 My own take is in [AI Robot Teachers Are Almost Here]({% post_url 2026-07-24-robot-teacher %}). It stays out of the room until the end.
 
@@ -36,13 +36,10 @@ By the end of the seminar, students can:
 
 ## Materials
 
-Reused as written from [Prove Me Wrong]({% post_url 2026-07-20-prove-me-wrong %}):
+The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the entry ticket, observer organizer, and exit ticket.
 
-- [Norms to post]({% post_url 2026-07-20-prove-me-wrong %}#five-norms-to-post)
-- [Fishbowl and hot seat guardrails]({% post_url 2026-07-20-prove-me-wrong %}#the-fishbowl-with-guardrails) and [boundaries]({% post_url 2026-07-20-prove-me-wrong %}#boundaries-said-once)
-- [Entry ticket, observer organizer, and exit ticket]({% post_url 2026-07-20-prove-me-wrong %}#the-handouts)
 
-Changes for this seminar:
+Specific to this seminar:
 
 - **Exit ticket:** add one line: "Name one piece of student data this robot would hold, and one risk of keeping it."
 - **Readings:** parts 1 and 2 below. Part 2 is handed out partway through.
@@ -150,7 +147,7 @@ function seminarPlainCopy(text,done){
 
 ## The run of show
 
-Rough minutes, scaled to your period. The structure is the one from Prove Me Wrong with a second reading and a third round.
+Rough minutes, scaled to your period. The structure is the [kit's run of show](/socratic-seminar-kit/#the-run-of-show) with a second reading and a third round.
 
 1. **Norms, out loud (5 min).** Post them, read them, hold to them.
 2. **Opening temperature check (3 min).** Students stand on a line. One wall: "A robot tutor is just another tool, like a textbook or a calculator." The other: "A tutor with a face is different."
@@ -229,7 +226,7 @@ I grade evidence and honesty, not the position landed on. "I changed my mind bec
 
 ## Standards
 
-Same Common Core alignment as [Prove Me Wrong]({% post_url 2026-07-20-prove-me-wrong %}): SL.6.1 / SL.9-10.1, SL.6.3 / SL.9-10.3, RI.6.1 / RI.9-10.1, RI.6.8 / RI.9-10.8, W.6.1 / W.9-10.1.
+Common Core ELA (California adoption): SL.6.1 / SL.9-10.1, SL.6.3 / SL.9-10.3, RI.6.1 / RI.9-10.1, RI.6.8 / RI.9-10.8, W.6.1 / W.9-10.1. What each one covers is in the [kit](/socratic-seminar-kit/#common-core-and-california-mandates).
 
 **AP CSP, Big Idea 5, Impact of Computing.** This seminar touches:
 

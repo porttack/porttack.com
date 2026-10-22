@@ -17,7 +17,7 @@ excerpt: "Ninety-eight high school students wrote a national AI policy for schoo
 
 Ninety-eight high school students wrote a national AI policy for schools this summer. Before I tell my students what I think of it, they read some of it and argue about it.
 
-The format, norms, fishbowl, and handouts are the ones in [Prove Me Wrong]({% post_url 2026-07-20-prove-me-wrong %}). I am not repeating them. Use that post's norms, run of show, entry ticket, observer organizer, and exit ticket as written, and swap in the reading and questions below. My own take on the bill is in [The Kids Wrote a Discipline Policy]({% post_url 2026-08-07-the-kids-wrote-a-discipline-policy %}). I keep it out of the room until the end.
+The format is in the [Socratic Seminar Kit](/socratic-seminar-kit/): the norms, the fishbowl, and the three tickets. This page has the reading and questions. My own take on the bill is in [The Kids Wrote a Discipline Policy]({% post_url 2026-08-07-the-kids-wrote-a-discipline-policy %}). I keep it out of the room until the end.
 
 This reading works as a re-introduction because the text is short and every student already has an opinion about rules written about them.
 
@@ -34,14 +34,10 @@ By the end of the seminar, students can:
 
 ## Materials
 
-Reused as written from [Prove Me Wrong]({% post_url 2026-07-20-prove-me-wrong %}):
+The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the entry ticket, observer organizer, and exit ticket.
 
-- [Norms to post]({% post_url 2026-07-20-prove-me-wrong %}#five-norms-to-post)
-- [Run of show]({% post_url 2026-07-20-prove-me-wrong %}#the-run-of-show)
-- [Fishbowl and hot seat guardrails]({% post_url 2026-07-20-prove-me-wrong %}#the-fishbowl-with-guardrails) and [boundaries]({% post_url 2026-07-20-prove-me-wrong %}#boundaries-said-once)
-- [Entry ticket, observer organizer, and exit ticket]({% post_url 2026-07-20-prove-me-wrong %}#the-handouts)
 
-Changes for this seminar:
+Specific to this seminar:
 
 - **Entry ticket, question 3:** add "Which rule would you cut, and what would you put in its place?"
 - **Exit ticket:** add one line: "Write one rule you would cut, change, or add, and say why."
@@ -127,7 +123,7 @@ function seminarPlainCopy(text,done){
 
 (Source: [the STUDENTS FIRST Act, full text (AASA, PDF)](https://www.aasa.org/docs/default-source/resources/reports/17_s-2026-the-students-first-act-final-bill-passed-84-14-july-19-2026.pdf). Section and provision numbers are the bill's own.)
 
-## What changes from the first seminar
+## Setup for this seminar
 
 - **Temperature check.** One wall: "Rules like these protect students." Other wall: "Rules like these mostly punish students." Same line, same before-and-after movement.
 - **Entry ticket, question 3.** Evidence by paragraph number still works. Add: "Which rule would you cut, and what would you put in its place?"
@@ -183,4 +179,4 @@ I grade evidence and honesty, not the position landed on. "I changed my mind bec
 
 ## Standards
 
-Same alignment as [Prove Me Wrong]({% post_url 2026-07-20-prove-me-wrong %}): SL.6.1 / SL.9-10.1, SL.6.3 / SL.9-10.3, RI.6.1 / RI.9-10.1, RI.6.8 / RI.9-10.8, W.6.1 / W.9-10.1. The bill is also a primary source in civics terms: a document drafted, amended, and voted on by its subjects.
+Common Core ELA (California adoption): SL.6.1 / SL.9-10.1, SL.6.3 / SL.9-10.3, RI.6.1 / RI.9-10.1, RI.6.8 / RI.9-10.8, W.6.1 / W.9-10.1. What each one covers is in the [kit](/socratic-seminar-kit/#common-core-and-california-mandates). The bill is also a primary source in civics terms: a document drafted, amended, and voted on by its subjects.

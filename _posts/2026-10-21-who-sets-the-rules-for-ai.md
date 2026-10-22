@@ -14,7 +14,7 @@ excerpt: "88% of college students use AI. 57% say nobody has told them where the
 - Add this slug to learn/_standards/carriers/porttack-society.json and run tools/publish_standards.sh.
 -->
 
-This is the second seminar in a series. The format, norms, fishbowl, and handouts are the same ones in [Prove Me Wrong]({% post_url 2026-07-20-prove-me-wrong %}). I am not repeating them. Use that post's norms, run of show, entry ticket, observer organizer, and exit ticket as written, and swap in the reading and questions below.
+The format is in the [Socratic Seminar Kit](/socratic-seminar-kit/): the norms, the fishbowl, and the three tickets. This page has the reading and questions.
 
 The reading is data, not a story. That is the point. Last time students argued about one professor and one test. This time they argue about a number and who is responsible for it.
 
@@ -29,14 +29,10 @@ By the end of the seminar, students can:
 
 ## Materials
 
-Reused as written from [Prove Me Wrong]({% post_url 2026-07-20-prove-me-wrong %}):
+The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the entry ticket, observer organizer, and exit ticket.
 
-- [Norms to post]({% post_url 2026-07-20-prove-me-wrong %}#five-norms-to-post)
-- [Run of show]({% post_url 2026-07-20-prove-me-wrong %}#the-run-of-show)
-- [Fishbowl and hot seat guardrails]({% post_url 2026-07-20-prove-me-wrong %}#the-fishbowl-with-guardrails) and [boundaries]({% post_url 2026-07-20-prove-me-wrong %}#boundaries-said-once)
-- [Entry ticket, observer organizer, and exit ticket]({% post_url 2026-07-20-prove-me-wrong %}#the-handouts)
 
-Changes for this seminar:
+Specific to this seminar:
 
 - **Entry ticket, question 3:** add "Which number in the reading surprised you most, and why?"
 - **Exit ticket:** add one line: "Write one rule that would count as adequate guidance, and say why."
@@ -112,7 +108,7 @@ function seminarPlainCopy(text,done){
 
 (Source: [EdTech Innovation Hub's coverage of the Digital Education Council survey](https://www.edtechinnovationhub.com/news/q6zw9wco2mttajdbd1jyeonjnpiovu).)
 
-## What changes from the first seminar
+## Setup for this seminar
 
 - **Temperature check.** One wall: "If the rules are unclear, the student is responsible." Other wall: "If the rules are unclear, the school is responsible." Same line, same before-and-after movement.
 - **Entry ticket, question 3.** Evidence by paragraph number still works. Add: "Which number in the reading surprised you most, and why?"
@@ -162,4 +158,4 @@ I grade evidence and honesty, not the position landed on. "I changed my mind bec
 
 ## Standards
 
-Same alignment as [Prove Me Wrong]({% post_url 2026-07-20-prove-me-wrong %}): SL.6.1 / SL.9-10.1, SL.6.3 / SL.9-10.3, RI.6.1 / RI.9-10.1, RI.6.8 / RI.9-10.8, W.6.1 / W.9-10.1. Add a data-literacy note for this one: students critique what a survey can and cannot support (paragraph 8).
+Common Core ELA (California adoption): SL.6.1 / SL.9-10.1, SL.6.3 / SL.9-10.3, RI.6.1 / RI.9-10.1, RI.6.8 / RI.9-10.8, W.6.1 / W.9-10.1. What each one covers is in the [kit](/socratic-seminar-kit/#common-core-and-california-mandates). Add a data-literacy note for this one: students critique what a survey can and cannot support (paragraph 8).
