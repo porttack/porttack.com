@@ -53,7 +53,7 @@ The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=What
 Specific to this seminar:
 
 - **Handout:** [print the two-sided handout with this seminar's questions filled in](/socratic-seminar-handout/?topic=What%20Does%20Delete%20Mean%3F&exit=Write%20one%20sentence%20a%20company%20should%20promise%20customers%20when%20they%20press%20Delete%2C%20including%20how%20long%20it%20takes.). The front is the entry ticket; the back is the observer organizer and the exit ticket. Name and period are at the top.
-- **Readings:** parts 1 and 2 below. Part 2 is handed out partway through.
+- **Readings, printable (one page each):** [Reading Part 1](/delete-reading-1/) and [Reading Part 2](/delete-reading-2/). The same text is below. Part 2 is handed out partway through.
 - **Slides:** [What Does Delete Mean?](/delete-seminar-slides/), with speaker notes and a diagram for the engineer's note. The first five slides are an optional five-minute warm-up on the Ring ad (the poll, [the ad itself on Ring's YouTube channel](https://www.youtube.com/watch?v=OheUzrXsKrY), the first reaction, and how Search Party works). Press S on any warm-up slide to skip to the seminar, or open [the deck at slide 6](/delete-seminar-slides/?slide=6). The discussion slides carry an amber "stay here" cue in the toolbar, so you know where to stop for each round. After the reveal there is an optional "What Happened Next" group: a timeline, the [WeRateDogs](https://www.youtube.com/watch?v=-ITnLiqKbeI) and [Wyze](https://www.youtube.com/watch?v=ROFblZ_-9q4) responses, and a "Who made it, and why?" slide.
 - **Run of show:** below. Two rounds, no spoken third round.
 
@@ -75,7 +75,7 @@ This builds on [Finding Fido, or Finding You?]({% post_url 2026-03-04-finding-fi
 
 ## Reading, part 1: the camera
 
-Hand this out first.
+Hand this out first. ([Print it](/delete-reading-1/))
 
 <div class="seminar-reading">
   <div class="seminar-reading__bar">
@@ -86,16 +86,7 @@ Hand this out first.
   </div>
   <div class="seminar-reading__body">
     <p class="seminar-reading__title">The Delete Button (Part 1)</p>
-    <p><strong>1.</strong> In early February 2026, Nancy Guthrie, who is 84, was reported missing from her home in Arizona. The case is still open. This reading is not about the crime. It is about one camera.</p>
-    <p><strong>2.</strong> Her front door had a Google Nest doorbell camera. The county sheriff said the camera was disconnected at 1:47 a.m. He also said she did not have a paid subscription that would have saved video.</p>
-    <p><strong>3.</strong> More than a week after she disappeared, the FBI released video from that camera. FBI Director Kash Patel wrote on X: "The video was recovered from residual data located in backend systems." Months later he told Fox News that "there was a chance that it was located in their cache just before it was being deleted."</p>
-    <p><strong>4.</strong> Google's own Nest safety page says this about its cameras:</p>
-    <blockquote>"You can access, review, and delete this footage at any time."</blockquote>
-    <blockquote>"Some models of our cameras support recording video footage while offline."</blockquote>
-    <blockquote>"That means you may not see a visual indicator when your camera is sending the video footage to our servers."</blockquote>
-    <p><strong>5.</strong> The same page says a visual indicator would have been visible when the camera was actually recording. It does not say how long video is kept if you do not pay for a subscription.</p>
-    <p><strong>6.</strong> Here is what is still unknown. NBC News reported that it was unclear how the FBI collected the video, and whether Google stored video from a device without a subscription. Google did not answer reporters' questions about how the footage was captured or recovered.</p>
-    <p><strong>7.</strong> In many computer systems, pressing Delete does not erase anything right away. The system marks the data as deleted and removes it later. You are the engineer on the team that decides what the company tells customers about Delete. A customer presses it. What should the company promise, and what should it tell them?</p>
+    {% include delete-reading-1.html %}
   </div>
 </div>
 
@@ -103,7 +94,7 @@ Hand this out first.
 
 ## Reading, part 2: what experts said
 
-Hand this out partway through, after the opening round and a few minutes of fishbowl, then run the temperature check again.
+Hand this out partway through, after the opening round and a few minutes of fishbowl, then run the temperature check again. ([Print it](/delete-reading-2/))
 
 <div class="seminar-reading">
   <div class="seminar-reading__bar">
@@ -114,12 +105,7 @@ Hand this out partway through, after the opening round and a few minutes of fish
   </div>
   <div class="seminar-reading__body">
     <p class="seminar-reading__title">The Delete Button (Part 2)</p>
-    <p><strong>8.</strong> Reporters asked computer security experts how video could come back from a camera that looked like it had no recording. Alex Stamos, a cybersecurity expert, told CBS News: "Internal storage uses a very lazy deletion mechanism, so the data wouldn't be available to users who didn't pay." He added: "The video for non-subscribers would be marked for deletion," and "the actual files might not be deleted for days."</p>
-    <p><strong>9.</strong> Patrick Jackson, a former NSA data researcher, told CBS News: "There's kind of this old saying that data is never deleted, it's just renamed."</p>
-    <p><strong>10.</strong> Stacey Higginbotham, a Consumer Reports policy fellow, told the Associated Press that unless a Nest user pays for a subscription, "Google routinely purges the footage rather than retain it indefinitely." She also said that if law enforcement asked for footage before it was overwritten, it could still be retrieved.</p>
-    <p><strong>11.</strong> Michelle Dahl of the Surveillance Technology Oversight Project said: "We should absolutely be alarmed over the privacy implications that are at stake with this video that was recovered by the Nest camera." She added that if you rely on a camera for security, you should "look into options where that data is not transmitted off to a cloud."</p>
-    <p><strong>12.</strong> The video the FBI released showed a masked person at the door. As of October news reports, that person had not been publicly identified.</p>
-    <p><strong>13.</strong> Back to the promise. Has anything you just read changed what the company should say?</p>
+    {% include delete-reading-2.html %}
   </div>
 </div>
 
@@ -170,12 +156,12 @@ Start times are in minutes from the beginning of the class, with the sections yo
 | 1–5 (optional) | 0, skippable | The Ring warm-up: poll, play the ad, first reaction, how Search Party works. Press S on any of them to skip to slide 6. |
 | 6–8 | 5 | Title, goals, and the five norms. Read the norms out loud, and add one sentence: "We are talking about the camera, not the crime." |
 | 9 | 10 | **Opening temperature check.** Students stand on a line. One wall: "Delete should mean gone, right away." The other: "Delete can take time, as long as the company tells you how long." Note where the room sits. |
-| 10 | 13 | **Hand out Reading Part 1 and the two-sided handout.** Students read, then fill in the entry ticket on the front. |
+| 10 | 13 | **Hand out [Reading Part 1](/delete-reading-1/) and the [two-sided handout](/socratic-seminar-handout/?topic=What%20Does%20Delete%20Mean%3F&exit=Write%20one%20sentence%20a%20company%20should%20promise%20customers%20when%20they%20press%20Delete%2C%20including%20how%20long%20it%20takes.).** Students read, then fill in the entry ticket on the front. |
 | 11–15 | 17 | Project the facts. Keep it brisk, since they have read it. Slide 15, "What Nobody Has Confirmed," is the honest middle. |
 | **16** | 20 | **Stop. Round 1 opening.** Every student answers briefly from their entry ticket: "What should the company promise when you press Delete, and what should it tell you?" |
 | **17** | 24 | **Stop. Round 1 fishbowl** with the hot seat. The outer circle fills in the **observer organizer** on the back of the handout. Stay on this slide until it ends. |
 | 18–19 | 39, slide 19 skippable | The engineer's note, spoken (see below). Slide 19 is optional. No discussion here. |
-| 20 | 42, skippable with Round 2 | **Hand out Reading Part 2.** |
+| 20 | 42, skippable with Round 2 | **Hand out [Reading Part 2](/delete-reading-2/).** |
 | 21–22 | 43, skippable with Round 2 | Silent reads: Stamos, then Jackson. |
 | **23** | 46, skippable with Round 2 | **Stop. Round 2 fishbowl.** Michelle Dahl's quote stays up. Stay on this slide until it ends. |
 | 24 | 56, skippable | **Temperature check again.** Who moved, and what moved them? |
