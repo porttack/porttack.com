@@ -23,6 +23,29 @@ The format, norms, fishbowl, and handouts are the ones in [Prove Me Wrong]({% po
 
 My own take is in [AI Robot Teachers Are Almost Here]({% post_url 2026-07-24-robot-teacher %}). It stays out of the room until the end.
 
+## Learning goals
+
+By the end of the seminar, students can:
+
+1. Weigh the beneficial and harmful effects of a computing innovation, including effects its builders did not intend, and defend a position with evidence from the reading. AP CSP: [IOC-1.A](https://learn.porttack.com/standards/apcsp-standards-reference.html#IOC-1.A), [IOC-1.B](https://learn.porttack.com/standards/apcsp-standards-reference.html#IOC-1.B).
+2. Explain how unequal access to technology affects who benefits from it, using this district as the example. AP CSP: [IOC-1.C](https://learn.porttack.com/standards/apcsp-standards-reference.html#IOC-1.C).
+3. Identify what personal data a school system like this would collect, and the privacy risks of keeping it. AP CSP: [IOC-2.A](https://learn.porttack.com/standards/apcsp-standards-reference.html#IOC-2.A).
+4. Discuss as a group: cite the text, build on what others said, and change a position when the evidence changes.
+
+## Materials
+
+Reused as written from [Prove Me Wrong]({% post_url 2026-07-20-prove-me-wrong %}):
+
+- [Norms to post]({% post_url 2026-07-20-prove-me-wrong %}#five-norms-to-post)
+- [Fishbowl and hot seat guardrails]({% post_url 2026-07-20-prove-me-wrong %}#the-fishbowl-with-guardrails) and [boundaries]({% post_url 2026-07-20-prove-me-wrong %}#boundaries-said-once)
+- [Entry ticket, observer organizer, and exit ticket]({% post_url 2026-07-20-prove-me-wrong %}#the-handouts)
+
+Changes for this seminar:
+
+- **Exit ticket:** add one line: "Name one piece of student data this robot would hold, and one risk of keeping it."
+- **Readings:** parts 1 and 2 below. Part 2 is handed out partway through.
+- **Run of show and Round 3:** below. This one has three rounds, not one.
+
 <style>
 .seminar-reading{border:1px solid rgba(128,128,128,.35);border-radius:8px;margin:1.5rem 0;overflow:hidden;font-style:normal;}
 .seminar-reading__bar{display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.5rem .9rem;background:rgba(128,128,128,.12);border-bottom:1px solid rgba(128,128,128,.25);}
@@ -187,6 +210,19 @@ Back-pocket only. The entry ticket asks students to write their own.
 ## The reveal
 
 *[Eric: your take goes here, held back until the last ten minutes and offered as one opinion among many. Your relationships argument (students take risks for people, not for products) is the natural source. Decide whether the "lipstick on a pig" line belongs in front of an observer.]*
+
+## Evidence of learning
+
+All of this is collected during the seminar. Nothing needs a separate quiz.
+
+| Goal | Evidence | What meeting it looks like |
+|---|---|---|
+| 1. Effects | Entry ticket: a starting side and two pieces of evidence by paragraph number. Exit ticket: what they believed, what they believe now. | A position that names at least one benefit and one harm, and cites the reading. |
+| 2. Access | Round 1 and 2 talk, tracked on the observer organizer. Exit ticket. | Connects the district's size, income, or location to why it wanted the robot, or to who else could afford one. |
+| 3. Personal data | One added line on the exit ticket: "Name one piece of student data this robot would hold, and one risk of keeping it." | A specific data type (student ID, conversation history, flagged-term alerts) and a specific risk. |
+| 4. Discussion | Observer organizer, including the tally of times a student built on someone else's idea. Three temperature checks, with a count of who moved and why. | Builds on a peer by name, cites a paragraph, and can say what moved them (or why they held). |
+
+I grade evidence and honesty, not the position landed on. "I changed my mind because of what someone said" is the best possible answer. The temperature-check count and the observer organizers are the artifacts to show anyone who asks what students did.
 
 ## Standards
 

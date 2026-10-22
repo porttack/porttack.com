@@ -18,6 +18,30 @@ This is the second seminar in a series. The format, norms, fishbowl, and handout
 
 The reading is data, not a story. That is the point. Last time students argued about one professor and one test. This time they argue about a number and who is responsible for it.
 
+## Learning goals
+
+By the end of the seminar, students can:
+
+1. Say what a survey result shows and what it cannot show, including the difference between what people say and what they do. AP CSP: [DAT-2.A](https://learn.porttack.com/standards/apcsp-standards-reference.html#DAT-2.A), [DAT-2.C](https://learn.porttack.com/standards/apcsp-standards-reference.html#DAT-2.C).
+2. Weigh the beneficial and harmful effects of widespread AI use when the rules for it are unclear. AP CSP: [IOC-1.A](https://learn.porttack.com/standards/apcsp-standards-reference.html#IOC-1.A), [IOC-1.B](https://learn.porttack.com/standards/apcsp-standards-reference.html#IOC-1.B).
+3. Write a rule that counts as adequate guidance for AI use, and justify it. AP CSP practice: [P6 Responsible Computing](https://learn.porttack.com/standards/apcsp-standards-reference.html#P6).
+4. Discuss as a group: cite the text, build on what others said, and change a position when the evidence changes.
+
+## Materials
+
+Reused as written from [Prove Me Wrong]({% post_url 2026-07-20-prove-me-wrong %}):
+
+- [Norms to post]({% post_url 2026-07-20-prove-me-wrong %}#five-norms-to-post)
+- [Run of show]({% post_url 2026-07-20-prove-me-wrong %}#the-run-of-show)
+- [Fishbowl and hot seat guardrails]({% post_url 2026-07-20-prove-me-wrong %}#the-fishbowl-with-guardrails) and [boundaries]({% post_url 2026-07-20-prove-me-wrong %}#boundaries-said-once)
+- [Entry ticket, observer organizer, and exit ticket]({% post_url 2026-07-20-prove-me-wrong %}#the-handouts)
+
+Changes for this seminar:
+
+- **Entry ticket, question 3:** add "Which number in the reading surprised you most, and why?"
+- **Exit ticket:** add one line: "Write one rule that would count as adequate guidance, and say why."
+- **Reading and questions:** below.
+
 <style>
 .seminar-reading{border:1px solid rgba(128,128,128,.35);border-radius:8px;margin:1.5rem 0;overflow:hidden;font-style:normal;}
 .seminar-reading__bar{display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.5rem .9rem;background:rgba(128,128,128,.12);border-bottom:1px solid rgba(128,128,128,.25);}
@@ -122,6 +146,19 @@ Back-pocket only. Open with one.
 ## The reveal
 
 *[Eric: your take goes here. Held back until the last ten minutes, offered as one opinion among many.]*
+
+## Evidence of learning
+
+All of this is collected during the seminar. Nothing needs a separate quiz.
+
+| Goal | Evidence | What meeting it looks like |
+|---|---|---|
+| 1. Reading data | Entry ticket: evidence by paragraph number, plus which number surprised them. Outer-circle observer listening for paragraph 8. | Names at least one thing the survey cannot show (self-reported, college students, no fieldwork dates) and uses it. |
+| 2. Effects | Entry ticket (starting side and why). Fishbowl talk on the core questions. | A position that names a benefit and a harm and cites the reading. |
+| 3. A proposed rule | One added line on the exit ticket: "Write one rule that would count as adequate guidance, and say why." | A rule stated clearly enough to follow, with a reason that refers to the reading. |
+| 4. Discussion | Observer organizer, including the tally of times a student built on someone else's idea. Before-and-after temperature check, with a count of who moved and why. | Builds on a peer by name, cites a paragraph, and can say what moved them (or why they held). |
+
+I grade evidence and honesty, not the position landed on. "I changed my mind because of what someone said" is the best possible answer. The temperature-check count and the observer organizers are the artifacts to show anyone who asks what students did.
 
 ## Standards
 

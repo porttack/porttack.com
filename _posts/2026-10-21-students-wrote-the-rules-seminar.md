@@ -21,6 +21,30 @@ The format, norms, fishbowl, and handouts are the ones in [Prove Me Wrong]({% po
 
 This reading works as a re-introduction because the text is short and every student already has an opinion about rules written about them.
 
+## Learning goals
+
+By the end of the seminar, students can:
+
+1. Weigh the beneficial and harmful effects of AI tools in school, and of the rules written to control them, and defend a position with evidence from the bill. AP CSP: [IOC-1.A](https://learn.porttack.com/standards/apcsp-standards-reference.html#IOC-1.A), [IOC-1.B](https://learn.porttack.com/standards/apcsp-standards-reference.html#IOC-1.B).
+2. Describe the legal and ethical questions a rule like "any unapproved AI use is plagiarism" raises, and who should decide. AP CSP: [IOC-1.F](https://learn.porttack.com/standards/apcsp-standards-reference.html#IOC-1.F).
+3. Propose a rule, or a revision, for responsible use of AI tools, and justify it. AP CSP practice: [P6 Responsible Computing](https://learn.porttack.com/standards/apcsp-standards-reference.html#P6).
+4. Discuss as a group: cite the text, build on what others said, and change a position when the evidence changes.
+
+## Materials
+
+Reused as written from [Prove Me Wrong]({% post_url 2026-07-20-prove-me-wrong %}):
+
+- [Norms to post]({% post_url 2026-07-20-prove-me-wrong %}#five-norms-to-post)
+- [Run of show]({% post_url 2026-07-20-prove-me-wrong %}#the-run-of-show)
+- [Fishbowl and hot seat guardrails]({% post_url 2026-07-20-prove-me-wrong %}#the-fishbowl-with-guardrails) and [boundaries]({% post_url 2026-07-20-prove-me-wrong %}#boundaries-said-once)
+- [Entry ticket, observer organizer, and exit ticket]({% post_url 2026-07-20-prove-me-wrong %}#the-handouts)
+
+Changes for this seminar:
+
+- **Entry ticket, question 3:** add "Which rule would you cut, and what would you put in its place?"
+- **Exit ticket:** add one line: "Write one rule you would cut, change, or add, and say why."
+- **Reading and questions:** below.
+
 <style>
 .seminar-reading{border:1px solid rgba(128,128,128,.35);border-radius:8px;margin:1.5rem 0;overflow:hidden;font-style:normal;}
 .seminar-reading__bar{display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.5rem .9rem;background:rgba(128,128,128,.12);border-bottom:1px solid rgba(128,128,128,.25);}
@@ -134,6 +158,19 @@ Back-pocket only. Open with one.
 ## The reveal
 
 *[Eric: your take goes here. Held back until the last ten minutes, offered as one opinion among many. Your argument in "The Kids Wrote a Discipline Policy" (the ratio of rules about catching people to rules about building capability) is the natural source.]*
+
+## Evidence of learning
+
+All of this is collected during the seminar. Nothing needs a separate quiz.
+
+| Goal | Evidence | What meeting it looks like |
+|---|---|---|
+| 1. Effects | Entry ticket: a starting side and two pieces of evidence by paragraph number. | Names at least one benefit and one harm of a specific rule (A, B, C, or D) and cites the text. |
+| 2. Legal and ethical questions | Fishbowl talk on Rule A and Rule C, tracked on the observer organizer. | Raises a question of fairness or responsibility (who decides what is "permitted"? who is punished?) and supports it. |
+| 3. A proposed rule | One added line on the exit ticket: "Write one rule you would cut, change, or add, and say why." | A rule stated clearly enough to enforce, with a reason that refers to the reading. |
+| 4. Discussion | Observer organizer, including the tally of times a student built on someone else's idea. Before-and-after temperature check, with a count of who moved and why. | Builds on a peer by name, cites a rule by letter, and can say what moved them (or why they held). |
+
+I grade evidence and honesty, not the position landed on. "I changed my mind because of what someone said" is the best possible answer. The temperature-check count and the observer organizers are the artifacts to show anyone who asks what students did.
 
 ## Standards
 
