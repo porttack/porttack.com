@@ -2,6 +2,7 @@
 layout: page
 title: "Socratic Seminar Kit"
 permalink: /socratic-seminar-kit/
+standards_carrier: socratic_seminar_kit
 ---
 
 <!-- DRAFT NOTES (delete before publishing)
@@ -93,6 +94,10 @@ Common Core ELA (California adoption). Paraphrased; confirm exact wording agains
 - **W.6.1 / W.9-10.1:** write to support a claim with reasons and evidence. Entry and exit tickets.
 
 **Media literacy (AB 873).** AB 873 (Berman), Chapter 815, Statutes of 2023, adds Education Code Section 33548 and took effect January 1, 2024. It directs the Instructional Quality Commission to weave media literacy and digital citizenship into the ELA, math, science, and history-social science frameworks as they are revised. A seminar on a current technology story is a concrete piece of that intent: students evaluating the claims made about a technology and weighing what it gains or costs them. It is a framework directive rather than a per-lesson standard, so it belongs here as alignment.
+
+The Common Core and AB 873 alignment above is specific to this page and not in the widget below. The widget covers the discourse skills the format itself practices -- communicating effectively, reasoned judgment from evidence, perspective-taking, honesty, and questioning your own beliefs -- regardless of which seminar's reading fills the room that day. Each seminar's own lesson plan has its own alignment for its own reading, shown the same way at the bottom of that post.
+
+{% include standards-alignment.html %}
 
 <script>
 // Pass any query string this page was opened with on to the handout link, so a
