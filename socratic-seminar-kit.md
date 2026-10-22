@@ -4,30 +4,15 @@ title: "Socratic Seminar Kit"
 permalink: /socratic-seminar-kit/
 ---
 
-<!-- DRAFT NOTES FOR ERIC (delete before publishing)
-- Everything here is your wording from the Prove Me Wrong post (norms, fishbowl, boundaries, the three handouts, the temperature-check rationale, the grading line, the Common Core list and AB 873 paragraph), moved into one shared page.
+<!-- DRAFT NOTES (delete before publishing)
+- Everything here is your wording from the Prove Me Wrong post (norms, fishbowl, boundaries, the three tickets, the temperature-check rationale, the grading line, the Common Core list and AB 873 paragraph), moved into one shared page.
 - Two things are mine, not yours: the short intro, and the AB 873 sentence about how seminars connect to it, which I generalized from your sentence about AI tools. Both are flagged inline. Rewrite them.
+- The three tickets are now one two-sided printable page, socratic-seminar-handout.html, whose layout is mine. Its "Topic," extra entry question, and extra exit question come from link parameters or the boxes on the page.
 - This page is a root-level markdown file, so it is public as soon as it is pushed. It has no draft category.
 -->
 
-The parts of a seminar that stay the same from topic to topic: the norms, the fishbowl, the boundaries, and the three tickets. Each seminar lesson plan has its own reading and questions, and links here for the rest.
+The parts of a seminar that stay the same from topic to topic: the norms, the fishbowl, the boundaries, and a one-sheet handout. Each seminar lesson plan has its own reading and questions, and links here for the rest.
 
-<style>
-.seminar-reading{border:1px solid rgba(128,128,128,.35);border-radius:8px;margin:1.5rem 0;overflow:hidden;font-style:normal;}
-.seminar-reading__bar{display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.5rem .9rem;background:rgba(128,128,128,.12);border-bottom:1px solid rgba(128,128,128,.25);}
-.seminar-reading__label{font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;font-weight:700;opacity:.7;}
-.seminar-reading__copy{display:inline-flex;align-items:center;justify-content:center;padding:.3rem;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit;cursor:pointer;opacity:.7;line-height:0;}
-.seminar-reading__copy:hover{opacity:1;}
-.seminar-reading__copy.is-copied{color:#2e7d32;border-color:#2e7d32;opacity:1;}
-.seminar-reading__body{padding:1rem 1.15rem;line-height:1.6;font-style:normal;}
-.seminar-reading__body p{margin:0 0 .75rem;font-style:normal;}
-.seminar-reading__body p:last-child{margin-bottom:0;}
-.seminar-reading__title{font-weight:700;font-size:1.05rem;margin:0 0 .9rem;}
-.seminar-reading__body .write-line{border-bottom:1px solid rgba(128,128,128,.4);height:1.7rem;margin:0 0 .7rem;}
-.seminar-reading__body table{width:100%;border-collapse:collapse;margin:0 0 .75rem;}
-.seminar-reading__body th,.seminar-reading__body td{border:1px solid rgba(128,128,128,.35);padding:.5rem .6rem;text-align:left;vertical-align:top;height:2.2rem;}
-.seminar-reading__body th{background:rgba(128,128,128,.1);}
-</style>
 
 ## The run of show
 
@@ -74,75 +59,15 @@ The fishbowl gives a calm ladder. A seat in the circle is a privilege, not a rig
 
 The goal is not to be harsh. It is to protect the students who came to think from the one who came to perform.
 
-## The handouts
+## The handout
 
-**Entry ticket** (pre-work, or filled out in class right after reading together):
+One sheet, two sides, with name and period at the top: <a id="handout-link" href="/socratic-seminar-handout/"><strong>Print the handout</strong></a>. Print double-sided and flip on the long edge.
 
-<div class="seminar-reading">
-  <div class="seminar-reading__bar">
-    <span class="seminar-reading__label">Student handout</span>
-    <button type="button" class="seminar-reading__copy" onclick="copySeminarReading(this)" aria-label="Copy the entry ticket to the clipboard" title="Copy">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-    </button>
-  </div>
-  <div class="seminar-reading__body">
-    <p class="seminar-reading__title">Entry Ticket</p>
-    <p><strong>1.</strong> Two questions the reading raises for you, ones you could actually argue about.</p>
-    <div class="write-line"></div>
-    <div class="write-line"></div>
-    <p><strong>2.</strong> A starting side, and why. Changing your mind during the seminar is not losing. It is the point.</p>
-    <div class="write-line"></div>
-    <div class="write-line"></div>
-    <p><strong>3.</strong> Two pieces of evidence from the reading, by paragraph number.</p>
-    <div class="write-line"></div>
-    <div class="write-line"></div>
-  </div>
-</div>
+- **Front: the entry ticket.** Filled out after the reading, before the seminar starts. Three prompts: two questions the reading raises for you, ones you could actually argue about; a starting side, and why ("Changing your mind during the seminar is not losing. It is the point."); and two pieces of evidence from the reading, by paragraph number.
+- **Back, top: the observer organizer.** The outer circle fills it in while watching; it is their ticket into the hot seat. Four things to catch: an idea they agreed with, an idea they would push back on, the strongest point made, and a question nobody has asked yet. Under it, a tally of each time someone builds on another person's idea instead of starting over. That tally is the difference between a discussion and a set of speeches.
+- **Back, bottom: the exit ticket.** "Did your thinking move today? Three sentences: what you believed walking in, what you believe now, and what said or asked in the room moved you (or held you in place)."
 
-**Observer organizer** (the outer circle fills it in while watching; it is their ticket into the hot seat):
-
-<div class="seminar-reading">
-  <div class="seminar-reading__bar">
-    <span class="seminar-reading__label">Student handout</span>
-    <button type="button" class="seminar-reading__copy" onclick="copySeminarReading(this)" aria-label="Copy the observer organizer to the clipboard" title="Copy">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-    </button>
-  </div>
-  <div class="seminar-reading__body">
-    <p class="seminar-reading__title">Observer Organizer</p>
-    <table>
-      <tr><th>What to catch</th><th>Who said it</th><th>My note</th></tr>
-      <tr><td>An idea I agreed with</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-      <tr><td>An idea I would push back on</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-      <tr><td>The strongest point made</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-      <tr><td>A question nobody has asked yet</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-    </table>
-    <p><em>Tally each time someone builds on another person's idea instead of starting over:</em></p>
-    <div class="write-line"></div>
-  </div>
-</div>
-
-That tally is the difference between a discussion and a set of speeches.
-
-**Exit ticket:**
-
-<div class="seminar-reading">
-  <div class="seminar-reading__bar">
-    <span class="seminar-reading__label">Student handout</span>
-    <button type="button" class="seminar-reading__copy" onclick="copySeminarReading(this)" aria-label="Copy the exit ticket to the clipboard" title="Copy">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-    </button>
-  </div>
-  <div class="seminar-reading__body">
-    <p class="seminar-reading__title">Exit Ticket</p>
-    <p>Did your thinking move today? Three sentences: what you believed walking in, what you believe now, and what said or asked in the room moved you (or held you in place).</p>
-    <div class="write-line"></div>
-    <div class="write-line"></div>
-    <div class="write-line"></div>
-  </div>
-</div>
-
-Some seminars add one line to the exit ticket that checks a specific goal. The lesson plan gives the exact line.
+A seminar can add one question to the entry ticket and one to the exit ticket, to check a specific goal. Each lesson plan links to the handout with its own questions filled in. If you reached this page from a lesson plan, the link above already carries that seminar's topic and questions. You can also type your own on the handout page before printing.
 
 I grade effort and honesty here, not the position landed on. "I changed my mind because of what someone said" is the best possible answer.
 
@@ -167,40 +92,14 @@ Common Core ELA (California adoption). Paraphrased; confirm exact wording agains
 - **RI.6.8 / RI.9-10.8:** trace and evaluate an argument and its specific claims. The seminar in motion.
 - **W.6.1 / W.9-10.1:** write to support a claim with reasons and evidence. Entry and exit tickets.
 
-**Media literacy (AB 873).** AB 873 (Berman), Chapter 815, Statutes of 2023, adds Education Code Section 33548 and took effect January 1, 2024. It directs the Instructional Quality Commission to weave media literacy and digital citizenship into the ELA, math, science, and history-social science frameworks as they are revised. A seminar on a current technology story is a concrete piece of that intent: students evaluating the claims made about a technology and weighing what it gains or costs them. *(This last sentence is a generalization of your original; see the draft notes.)* It is a framework directive rather than a per-lesson standard, so it belongs here as alignment.
+**Media literacy (AB 873).** AB 873 (Berman), Chapter 815, Statutes of 2023, adds Education Code Section 33548 and took effect January 1, 2024. It directs the Instructional Quality Commission to weave media literacy and digital citizenship into the ELA, math, science, and history-social science frameworks as they are revised. A seminar on a current technology story is a concrete piece of that intent: students evaluating the claims made about a technology and weighing what it gains or costs them. It is a framework directive rather than a per-lesson standard, so it belongs here as alignment.
 
 <script>
-var SEMINAR_COPY_ICON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
-var SEMINAR_CHECK_ICON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-function copySeminarReading(btn){
-  var box=btn.closest('.seminar-reading');
-  var el=box?box.querySelector('.seminar-reading__body'):null;
-  if(!el){return;}
-  var html=el.innerHTML;
-  var text=el.innerText.trim();
-  function done(){
-    btn.classList.add('is-copied');
-    btn.innerHTML=SEMINAR_CHECK_ICON;
-    setTimeout(function(){btn.classList.remove('is-copied');btn.innerHTML=SEMINAR_COPY_ICON;},1500);
-  }
-  if(navigator.clipboard&&window.ClipboardItem){
-    var item=new ClipboardItem({
-      'text/html':new Blob([html],{type:'text/html'}),
-      'text/plain':new Blob([text],{type:'text/plain'})
-    });
-    navigator.clipboard.write([item]).then(done,function(){seminarPlainCopy(text,done);});
-  }else if(navigator.clipboard&&navigator.clipboard.writeText){
-    navigator.clipboard.writeText(text).then(done,function(){seminarPlainCopy(text,done);});
-  }else{
-    seminarPlainCopy(text,done);
-  }
-}
-function seminarPlainCopy(text,done){
-  var ta=document.createElement('textarea');
-  ta.value=text;ta.setAttribute('readonly','');
-  ta.style.position='absolute';ta.style.left='-9999px';
-  document.body.appendChild(ta);ta.select();
-  try{document.execCommand('copy');done();}catch(e){}
-  document.body.removeChild(ta);
-}
+// Pass any query string this page was opened with on to the handout link, so a
+// lesson plan can link here with its topic and questions and nothing is retyped.
+(function () {
+  var q = window.location.search;
+  var a = document.getElementById("handout-link");
+  if (q && a) { a.setAttribute("href", "/socratic-seminar-handout/" + q); }
+})();
 </script>

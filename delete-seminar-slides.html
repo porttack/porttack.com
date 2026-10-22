@@ -357,6 +357,44 @@ permalink: /delete-seminar-slides/
     margin: 10px 0 0;
   }
 
+  .section-slide { border-left: 16px solid var(--accent); }
+  .section-hints { margin: 36px 0 0; font-size: 30px; color: var(--muted); line-height: 1.7; }
+  .section-hints span { display: block; }
+
+  .skip-warmup {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    z-index: 5;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .skip-warmup:hover { background: rgba(0,0,0,0.75); }
+
+  .handout-badge {
+    background: #2a7ae2;
+    color: #fff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .pause-badge {
+    background: #b25e00;
+    color: #fff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
   .slide-counter-badge {
     position: absolute;
     bottom: 18px;
@@ -491,6 +529,70 @@ const { useState, useEffect, useRef, useCallback } = React;
 // string, or { text, href } to render as a link.
 const SLIDES = [
   {
+    id: "warmup",
+    group: "warmup",
+    kind: "section",
+    kicker: "Optional warm-up",
+    title: "Finding Fido",
+    subtitle: "The Ring Super Bowl ad. About five minutes.",
+    hints: [
+      "Space or →  run the warm-up",
+      "S  skip to the seminar"
+    ],
+    notes: "Optional. Skip it if your class has already seen the Ring lesson. These five slides use only the front of the Finding Fido lesson: the poll, the ad, the first reaction, and how Search Party works. They deliberately stop before the numbers, the backlash, and function creep. The seminar holds back that framing until the end. Press S on any warm-up slide to jump to the seminar title slide."
+  },
+  {
+    group: "warmup",
+    kind: "highlight",
+    kicker: "Before we watch",
+    title: "Think About It",
+    bullets: [
+      "Does your family have a Ring doorbell or security camera at home?",
+      "How many cameras do you think you walk past on a normal day?",
+      "If your dog went missing, would you want every camera in your neighborhood scanning for it? Why or why not?"
+    ],
+    notes: "From the Finding Fido lesson. A quick poll: hands up, or a show of fingers. Don't discuss yet."
+  },
+  {
+    group: "warmup",
+    kind: "title",
+    kicker: "Watch",
+    title: "The Ring Ad",
+    subtitle: "\u201cBe a Hero in Your Neighborhood,\u201d Super Bowl LX, about 30 seconds. Watch for: what emotions does Ring want you to feel?",
+    bullets: [
+      { text: "Play it on Ring's YouTube channel", href: "https://www.youtube.com/watch?v=OheUzrXsKrY" }
+    ],
+    notes: "Play the ad. The link opens in a new tab, so you keep your place here. It is Ring's own upload (YouTube lists the channel as \u201cRing\u201d), titled \u201cSearch Party from Ring | Be A Hero In Your Neighborhood.\u201d Preview it before class and check that it still plays. Other uploads of the ad exist on third-party channels; this is the official one."
+  },
+  {
+    group: "warmup",
+    kind: "bullets",
+    kicker: "Your first reaction",
+    title: "Heartwarming or Creepy?",
+    bullets: [
+      "What did you think?",
+      "What emotions were you feeling while watching?",
+      "What is the ad actually showing you about the technology?",
+      "Did anything make you uncomfortable? If so, what?"
+    ],
+    notes: "Take two or three answers. Don't correct or lead. The seminar's rule is facts first, your opinion last."
+  },
+  {
+    group: "warmup",
+    kind: "bullets",
+    kicker: "How it works",
+    title: "How Search Party Actually Works",
+    bullets: [
+      "A dog owner uploads a photo to the Ring app",
+      "AI scans nearby outdoor Ring cameras for visual matches",
+      "If it finds a match, the camera owner is notified",
+      "The camera owner decides whether to share the clip",
+      "It is on by default for cameras that save video to the cloud. You have to turn it off."
+    ],
+    notes: "From the Finding Fido lesson. The lesson's “By the Numbers” slide is left out of this warm-up (20M, 125M, about 1 a day, 0.03%); I couldn't verify those figures. Next slide is the seminar's own title slide. Press Space to start."
+  },
+  {
+    id: "seminar-start",
     kind: "title",
     kicker: "Socratic Seminar",
     title: "What Does Delete Mean?",
@@ -524,6 +626,7 @@ const SLIDES = [
   },
   {
     kind: "wall",
+    pause: "Students move to the line. Note where the room sits.",
     kicker: "Temperature check",
     title: "Stand on the Line",
     left: "Delete should mean gone, right away",
@@ -532,6 +635,7 @@ const SLIDES = [
   },
   {
     kind: "bullets",
+    handout: "Hand out: Reading Part 1 and the two-sided handout (entry ticket on the front)",
     kicker: "The camera",
     title: "A Doorbell Camera",
     bullets: [
@@ -544,27 +648,27 @@ const SLIDES = [
   },
   {
     kind: "quote",
-    kicker: "More than a week later",
-    title: "The FBI Releases Video",
+    kicker: "The FBI, more than a week later",
+    title: "How the Video Was Recovered",
     quote: "The video was recovered from residual data located in backend systems.",
     cite: "FBI Director Kash Patel, on X, as reported by NBC News",
     notes: "Silent read. Don't explain “backend systems.” That's the engineer's note, later."
   },
   {
     kind: "quote",
-    kicker: "Months later",
-    title: "A Second Account",
-    quote: "There was a chance that it was located in their cache just before it was being deleted.",
+    kicker: "The FBI, months later",
+    title: "How the FBI Director Described It Later",
+    quote: "\u2026there was a chance that it was located in their cache just before it was being deleted.",
     cite: "FBI Director Kash Patel, to Fox News, July 2026",
-    notes: "Fox's account of the same recovery. The quote begins mid-sentence in the original (“But there was a chance...”). Don't resolve any differences between the two accounts. Let students notice."
+    notes: "Two statements about the same recovery from the same official: first, \u201cresidual data located in backend systems\u201d; later, video in a cache \u201cjust before it was being deleted.\u201d The quote begins mid-sentence in the original, so it starts with an ellipsis. Don't resolve any differences between the two. Let students notice."
   },
   {
     kind: "quote",
-    kicker: "What Google says",
-    title: "The Delete Promise",
+    kicker: "Google's own page",
+    title: "What Google Says About Deleting",
     quote: "You can access, review, and delete this footage at any time.",
     cite: "Google Nest Security & Privacy Commitments, Cameras FAQ",
-    notes: "From safety.google/nest. Read it. The next slide is from the same page."
+    notes: "From safety.google/nest. Read slides 12 and 13 side by side: the FBI says the video was in a cache just before it was being deleted; Google's page says you can delete at any time. That is not a contradiction. It is the seminar's question: what does \u201cdelete\u201d actually cover? The next slide is from the same page."
   },
   {
     kind: "bullets",
@@ -590,6 +694,7 @@ const SLIDES = [
   },
   {
     kind: "title",
+    pause: "Round 1 opening: every student answers. Stay on this slide.",
     kicker: "Round 1",
     title: "The Promise",
     subtitle: "What should the company promise when you press Delete, and what should it tell you?",
@@ -597,6 +702,8 @@ const SLIDES = [
   },
   {
     kind: "bullets",
+    handout: "Outer circle: observer organizer (back of the handout)",
+    pause: "Round 1 fishbowl: stay here until it ends (about 15 min).",
     kicker: "The seminar",
     title: "Fishbowl",
     bullets: [
@@ -629,7 +736,7 @@ const SLIDES = [
       ] }
     ],
     caption: "Between steps 2 and 3 the data is still there. How long that lasts depends on the system.",
-    notes: "Spoken, in your words, between Round 1 and Round 2. File systems: deleting removes the entry and marks the space free; the bytes stay until overwritten. Big data stores are often append-only: a delete writes a marker (a tombstone) and the old bytes are removed later, when the system rewrites its files. Backups and replicas can hold copies longer. Some stores can't remove one item without rewriting a larger block. These are general CS points, not sourced to an article. Then ask: so what can an engineer honestly promise?"
+    notes: "Spoken, in your own words, between Round 1 and Round 2. File systems: deleting removes the entry and marks the space free; the bytes stay until overwritten. Big data stores are often append-only: a delete writes a marker (a tombstone) and the old bytes are removed later, when the system rewrites its files. Backups and replicas can hold copies longer. Some stores can't remove one item without rewriting a larger block. These are general CS points, not sourced to an article. Then ask: so what can an engineer honestly promise?"
   },
   {
     kind: "bullets",
@@ -645,6 +752,7 @@ const SLIDES = [
   },
   {
     kind: "title",
+    handout: "Hand out: Reading Part 2",
     kicker: "Round 2",
     title: "The Experts",
     subtitle: "Hand out Reading Part 2",
@@ -668,6 +776,7 @@ const SLIDES = [
   },
   {
     kind: "quote",
+    pause: "Round 2 fishbowl: stay here until it ends.",
     kicker: "A privacy advocate",
     title: "Michelle Dahl",
     quote: "We should absolutely be alarmed over the privacy implications that are at stake with this video that was recovered by the Nest camera.",
@@ -676,6 +785,7 @@ const SLIDES = [
   },
   {
     kind: "wall",
+    pause: "Students move again. Who shifted?",
     kicker: "Temperature check, again",
     title: "Has Anything Changed Your Mind?",
     left: "Delete should mean gone, right away",
@@ -684,6 +794,7 @@ const SLIDES = [
   },
   {
     kind: "highlight",
+    pause: "Sort statements with the class. Stay here.",
     kicker: "Pick a statement from the reading",
     title: "Sort It",
     bullets: [
@@ -695,6 +806,7 @@ const SLIDES = [
   },
   {
     kind: "wall",
+    pause: "Last move. Count who shifted.",
     kicker: "Last temperature check",
     title: "Move One Last Time",
     left: "Delete should mean gone, right away",
@@ -703,6 +815,8 @@ const SLIDES = [
   },
   {
     kind: "bullets",
+    handout: "Students: exit ticket (back of the handout)",
+    pause: "Students write. Stay here.",
     kicker: "Exit ticket",
     title: "Did Your Thinking Move?",
     bullets: [
@@ -714,11 +828,64 @@ const SLIDES = [
     notes: "I grade effort and honesty, not the position landed on. The last line is the evidence for the privacy-risk and abstraction goal."
   },
   {
-    kind: "title",
-    kicker: "One opinion among many",
-    title: "Where I Landed",
-    subtitle: "Where am I wrong?",
-    notes: "Eric: your take goes here, spoken, held to the end. Nothing on this slide is a position; it is only a placeholder."
+    id: "afterword",
+    group: "afterword",
+    kind: "section",
+    kicker: "Optional, after the reveal",
+    title: "What Happened Next",
+    subtitle: "How people reacted to the Ring ad. About five minutes.",
+    hints: [
+      "Space or →  continue",
+      "S  skip to the last slide"
+    ],
+    notes: "Optional, and deliberately last: use it after your reveal, not after Round 1. Students have formed their own views from the facts first; now they see how the public reacted. These slides are the backlash section of the Finding Fido lesson, rebuilt with sources I could check. Press S to skip to the last slide."
+  },
+  {
+    group: "afterword",
+    kind: "bullets",
+    kicker: "What happened",
+    title: "A Timeline",
+    bullets: [
+      "Feb. 8, 2026: Ring's ad airs during Super Bowl LX",
+      "Feb. 12: Ring cancels its partnership with Flock Safety",
+      "Ring has not given the backlash as its reason. Critics point to the timing."
+    ],
+    notes: "The ad aired Feb. 8 (Super Bowl LX; CNBC and Wikipedia). Some earlier Finding Fido materials give Feb. 9, which is a day off. The Flock cancellation on Feb. 12 is from Inc. and Variety coverage; I could not open Variety (paywalled). Ring's stated reason (a mutual decision, integration needing more time and resources) comes from search summaries of The Ringer and PetaPixel that I did not read directly. Check before you say more than the slide does. I left out the “people ripping cameras off walls, 3.2M views” slide because I could not verify it."
+  },
+  {
+    group: "afterword",
+    kind: "bullets",
+    kicker: "Watch: a creator responds",
+    title: "WeRateDogs",
+    bullets: [
+      "Matt Nelson, who runs WeRateDogs, argues the ad uses dogs to make mass surveillance feel acceptable",
+      { text: "Watch “The Very Dystopian Dog Super Bowl Ad” on YouTube", href: "https://www.youtube.com/watch?v=-ITnLiqKbeI" }
+    ],
+    notes: "This is the video linked in the original Finding Fido lesson deck. YouTube lists the channel as WeRateDogs. Several outlets quote the phrase “manufacture consent for mass surveillance,” but they word it differently, so I paraphrased. Claims inside the video, like the 0.03% figure, are his. Ring says Search Party finds about a dog a day. The link opens in a new tab. Preview it first."
+  },
+  {
+    group: "afterword",
+    kind: "bullets",
+    kicker: "Watch: a competitor responds",
+    title: "Wyze",
+    bullets: [
+      "Wyze sells security cameras. This is an ad for Wyze.",
+      { text: "Watch “Definitely Only for Dogs: Ring's Superbowl Commercial (Parody)” on YouTube", href: "https://www.youtube.com/watch?v=ROFblZ_-9q4" }
+    ],
+    notes: "This is the video linked in the original Finding Fido lesson deck. YouTube lists the channel as Wyze. It is a parody by a competing camera maker, which is the point of the next slide. The link opens in a new tab. Preview it first."
+  },
+  {
+    group: "afterword",
+    kind: "highlight",
+    kicker: "Same question as the seminar",
+    title: "Who Made It, and Why?",
+    bullets: [
+      "Ring: selling a feature",
+      "WeRateDogs: a creator with a big audience, arguing a position",
+      "Wyze: a camera company selling against Ring",
+      "What would each one leave out?"
+    ],
+    notes: "This is the documented / claimed / unknown sort from the seminar, applied to three sources. Ask: what does each one want you to feel, and what would it leave out?"
   },
   {
     kind: "title",
@@ -737,7 +904,7 @@ function renderBullets(bullets) {
   return (
     <ul>
       {bullets.map((b, i) => (
-        <li key={i}>{typeof b === "string" ? b : <a href={b.href}>{b.text}</a>}</li>
+        <li key={i}>{typeof b === "string" ? b : <a href={b.href} {...(/^https?:/.test(b.href) ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{b.text}</a>}</li>
       ))}
     </ul>
   );
@@ -797,6 +964,22 @@ function Stage({ slide, aspect }) {
           </div>
         ))}
         <p className="blocks-caption">{slide.caption}</p>
+      </div>
+    );
+  }
+  if (slide.kind === "section") {
+    // A master slide for an optional group of slides that sit under it.
+    // The hints tell the presenter how to run or skip the group.
+    return (
+      <div className={"stage title-slide section-slide " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        {slide.subtitle && <p className="slide-subtitle">{slide.subtitle}</p>}
+        {slide.hints && (
+          <div className="section-hints">
+            {slide.hints.map((h, i) => <span key={i}>{h}</span>)}
+          </div>
+        )}
       </div>
     );
   }
@@ -978,6 +1161,8 @@ function App() {
 
   const next = useCallback(() => setIndex(i => Math.min(i + 1, SLIDES.length - 1)), []);
   const prev = useCallback(() => setIndex(i => Math.max(i - 1, 0)), []);
+  // From any slide in an optional group, jump to the first slide after the group.
+  const skipSection = useCallback(() => setIndex(i => { const g = SLIDES[i].group; if (!g) return i; let j = i; while (j < SLIDES.length && SLIDES[j].group === g) j++; return Math.min(j, SLIDES.length - 1); }), []);
 
   useEffect(() => {
     function onKey(e) {
@@ -990,10 +1175,11 @@ function App() {
       else if (e.key === "n" || e.key === "N") setShowNotes(v => !v);
       else if (e.key === "f" || e.key === "F") toggleFullscreen();
       else if (e.key === "o" || e.key === "O") setMode("outline");
+      else if (e.key === "s" || e.key === "S") skipSection();
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [mode, next, prev]);
+  }, [mode, next, prev, skipSection]);
 
   function toggleFullscreen() {
     if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
@@ -1020,6 +1206,7 @@ function App() {
         <ScaledStage slide={slide} aspect={aspect} />
         <div className="click-zone left" onClick={prev} title="Previous slide"></div>
         <div className="click-zone right" onClick={next} title="Next slide"></div>
+        {slide.group && <button className="skip-warmup" onClick={skipSection}>Skip section (S) &rarr;</button>}
         <div className="slide-counter-badge">{index + 1} / {SLIDES.length}</div>
       </div>
       {showNotes && (
@@ -1030,6 +1217,8 @@ function App() {
       )}
       <div className="toolbar">
         <a className="back-link" href="/2026/10/22/what-does-delete-mean-seminar.html">&larr; What Does Delete Mean?</a>
+        {slide.handout && <span className="handout-badge">&#128196; {slide.handout}</span>}
+        {slide.pause && <span className="pause-badge">&#9208; {slide.pause}</span>}
         <div className="spacer"></div>
         <button onClick={prev} disabled={index === 0}>&larr; Prev</button>
         <span className="counter">{index + 1} / {SLIDES.length}</span>

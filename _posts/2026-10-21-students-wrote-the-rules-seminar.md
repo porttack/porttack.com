@@ -7,7 +7,7 @@ lesson_category: society
 excerpt: "Ninety-eight high school students wrote a national AI policy for schools. One of their rules says a student can be suspended or expelled if a parent uses AI on their homework. A ready-to-run Socratic seminar on six rules the students wrote."
 ---
 
-<!-- DRAFT NOTES FOR ERIC (delete before publishing)
+<!-- DRAFT NOTES (delete before publishing)
 - Date and publish status are yours. Filename date is just today's.
 - All quoted provisions are verbatim from the AASA PDF (pdftotext), including the original's typos ("schools discretion").
 - The reveal is a placeholder. I did not write your opinion.
@@ -17,7 +17,7 @@ excerpt: "Ninety-eight high school students wrote a national AI policy for schoo
 
 Ninety-eight high school students wrote a national AI policy for schools this summer. Before I tell my students what I think of it, they read some of it and argue about it.
 
-The format is in the [Socratic Seminar Kit](/socratic-seminar-kit/): the norms, the fishbowl, and the three tickets. This page has the reading and questions. My own take on the bill is in [The Kids Wrote a Discipline Policy]({% post_url 2026-08-07-the-kids-wrote-a-discipline-policy %}). I keep it out of the room until the end.
+The format is in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=The%20Rules%20Students%20Wrote&entry=Which%20rule%20would%20you%20cut%2C%20and%20what%20would%20you%20put%20in%20its%20place%3F&exit=Write%20one%20rule%20you%20would%20cut%2C%20change%2C%20or%20add%2C%20and%20say%20why.): the norms, the fishbowl, and the three tickets. This page has the reading and questions. My own take on the bill is in [The Kids Wrote a Discipline Policy]({% post_url 2026-08-07-the-kids-wrote-a-discipline-policy %}). I keep it out of the room until the end.
 
 This reading works as a re-introduction because the text is short and every student already has an opinion about rules written about them.
 
@@ -34,13 +34,12 @@ By the end of the seminar, students can:
 
 ## Materials
 
-The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the entry ticket, observer organizer, and exit ticket.
+The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=The%20Rules%20Students%20Wrote&entry=Which%20rule%20would%20you%20cut%2C%20and%20what%20would%20you%20put%20in%20its%20place%3F&exit=Write%20one%20rule%20you%20would%20cut%2C%20change%2C%20or%20add%2C%20and%20say%20why.): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the one-sheet handout.
 
 
 Specific to this seminar:
 
-- **Entry ticket, question 3:** add "Which rule would you cut, and what would you put in its place?"
-- **Exit ticket:** add one line: "Write one rule you would cut, change, or add, and say why."
+- **Handout:** [print the two-sided handout with this seminar's questions filled in](/socratic-seminar-handout/?topic=The%20Rules%20Students%20Wrote&entry=Which%20rule%20would%20you%20cut%2C%20and%20what%20would%20you%20put%20in%20its%20place%3F&exit=Write%20one%20rule%20you%20would%20cut%2C%20change%2C%20or%20add%2C%20and%20say%20why.). The front is the entry ticket; the back is the observer organizer and the exit ticket. Name and period are at the top.
 - **Reading and questions:** below.
 - **Slides:** [The Rules Students Wrote](/students-first-slides/), with speaker notes.
 
@@ -126,7 +125,7 @@ function seminarPlainCopy(text,done){
 ## Setup for this seminar
 
 - **Temperature check.** One wall: "Rules like these protect students." Other wall: "Rules like these mostly punish students." Same line, same before-and-after movement.
-- **Entry ticket, question 3.** Evidence by paragraph number still works. Add: "Which rule would you cut, and what would you put in its place?"
+- **Entry ticket.** The handout prints this extra question: "Which rule would you cut, and what would you put in its place?"
 - **Outer circle.** One observer per round listens for anyone who points to a specific rule letter (A to F) instead of "the rules" in general.
 
 ## Facilitator questions
@@ -162,7 +161,7 @@ Back-pocket only. Open with one.
 
 ## The reveal
 
-*[Eric: your take goes here. Held back until the last ten minutes, offered as one opinion among many. Your argument in "The Kids Wrote a Discipline Policy" (the ratio of rules about catching people to rules about building capability) is the natural source.]*
+*[Your take goes here. Hold it until the last ten minutes and offer it as one opinion among many.]*
 
 ## Evidence of learning
 

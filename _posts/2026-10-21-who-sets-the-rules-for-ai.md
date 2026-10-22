@@ -7,14 +7,14 @@ lesson_category: society
 excerpt: "88% of college students use AI. 57% say nobody has told them where the line is. A ready-to-run Socratic seminar on one survey and one question: when the rules are unclear, who is responsible?"
 ---
 
-<!-- DRAFT NOTES FOR ERIC (delete before publishing)
+<!-- DRAFT NOTES (delete before publishing)
 - Date and publish status are yours. Dropped the date on purpose.
 - The survey is cited from secondary coverage (EdTech Innovation Hub). The article names the Digital Education Council but links no report and gives no fieldwork dates. Find the primary report before publishing.
 - The reveal paragraph is a placeholder. I did not write your opinion for you.
 - Add this slug to learn/_standards/carriers/porttack-society.json and run tools/publish_standards.sh.
 -->
 
-The format is in the [Socratic Seminar Kit](/socratic-seminar-kit/): the norms, the fishbowl, and the three tickets. This page has the reading and questions.
+The format is in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=Who%20Sets%20the%20Rules%20for%20AI%3F&entry=Which%20number%20in%20the%20reading%20surprised%20you%20most%2C%20and%20why%3F&exit=Write%20one%20rule%20that%20would%20count%20as%20adequate%20guidance%2C%20and%20say%20why.): the norms, the fishbowl, and the three tickets. This page has the reading and questions.
 
 The reading is data, not a story. That is the point. Last time students argued about one professor and one test. This time they argue about a number and who is responsible for it.
 
@@ -29,13 +29,12 @@ By the end of the seminar, students can:
 
 ## Materials
 
-The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the entry ticket, observer organizer, and exit ticket.
+The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=Who%20Sets%20the%20Rules%20for%20AI%3F&entry=Which%20number%20in%20the%20reading%20surprised%20you%20most%2C%20and%20why%3F&exit=Write%20one%20rule%20that%20would%20count%20as%20adequate%20guidance%2C%20and%20say%20why.): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the one-sheet handout.
 
 
 Specific to this seminar:
 
-- **Entry ticket, question 3:** add "Which number in the reading surprised you most, and why?"
-- **Exit ticket:** add one line: "Write one rule that would count as adequate guidance, and say why."
+- **Handout:** [print the two-sided handout with this seminar's questions filled in](/socratic-seminar-handout/?topic=Who%20Sets%20the%20Rules%20for%20AI%3F&entry=Which%20number%20in%20the%20reading%20surprised%20you%20most%2C%20and%20why%3F&exit=Write%20one%20rule%20that%20would%20count%20as%20adequate%20guidance%2C%20and%20say%20why.). The front is the entry ticket; the back is the observer organizer and the exit ticket. Name and period are at the top.
 - **Reading and questions:** below.
 
 <style>
@@ -111,7 +110,7 @@ function seminarPlainCopy(text,done){
 ## Setup for this seminar
 
 - **Temperature check.** One wall: "If the rules are unclear, the student is responsible." Other wall: "If the rules are unclear, the school is responsible." Same line, same before-and-after movement.
-- **Entry ticket, question 3.** Evidence by paragraph number still works. Add: "Which number in the reading surprised you most, and why?"
+- **Entry ticket.** The handout prints this extra question: "Which number in the reading surprised you most, and why?"
 - **Stretch for the outer circle.** Paragraph 8 is a free gift. Ask one observer per round to listen for anyone who uses it, meaning anyone who questions what the survey can and cannot prove.
 
 ## Facilitator questions
@@ -141,7 +140,7 @@ Back-pocket only. Open with one.
 
 ## The reveal
 
-*[Eric: your take goes here. Held back until the last ten minutes, offered as one opinion among many.]*
+*[Your take goes here. Hold it until the last ten minutes and offer it as one opinion among many.]*
 
 ## Evidence of learning
 

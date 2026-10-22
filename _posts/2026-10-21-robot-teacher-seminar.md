@@ -7,7 +7,7 @@ lesson_category: society
 excerpt: "A rural district bought a humanoid robot to help teach high school coding and robotics, and then the state stepped in. A ready-to-run Socratic seminar where the students are the school board."
 ---
 
-<!-- DRAFT NOTES FOR ERIC (delete before publishing)
+<!-- DRAFT NOTES (delete before publishing)
 - Date and publish status are yours. Filename date is just today's.
 - Readings quote New York Focus (Melissa Manno, July 14 and July 24, 2026) directly. Page numbers do not apply; quotes are from the articles.
 - Round 3 (teacher-only, verbal) is below. The wording is a suggestion, not your words. Rewrite it in your voice. Review that section before this post goes public.
@@ -19,7 +19,7 @@ excerpt: "A rural district bought a humanoid robot to help teach high school cod
 
 A school district bought a humanoid robot to help teach high school coding and robotics. Then the state stepped in. This is a seminar about whether a school should buy it. It is a decision, not a debate over who is right, and your students are the ones affected.
 
-The format is in the [Socratic Seminar Kit](/socratic-seminar-kit/): the norms, the fishbowl, and the three tickets. What changes here is the reading, which arrives in two parts, and a third round that is spoken, not handed out.
+The format is in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=A%20Robot%20for%20Room%20114&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.): the norms, the fishbowl, and the three tickets. What changes here is the reading, which arrives in two parts, and a third round that is spoken, not handed out.
 
 My own take is in [AI Robot Teachers Are Almost Here]({% post_url 2026-07-24-robot-teacher %}). It stays out of the room until the end.
 
@@ -36,12 +36,12 @@ By the end of the seminar, students can:
 
 ## Materials
 
-The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the entry ticket, observer organizer, and exit ticket.
+The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=A%20Robot%20for%20Room%20114&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the one-sheet handout.
 
 
 Specific to this seminar:
 
-- **Exit ticket:** add one line: "Name one piece of student data this robot would hold, and one risk of keeping it."
+- **Handout:** [print the two-sided handout with this seminar's questions filled in](/socratic-seminar-handout/?topic=A%20Robot%20for%20Room%20114&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.). The front is the entry ticket; the back is the observer organizer and the exit ticket. Name and period are at the top.
 - **Readings:** parts 1 and 2 below. Part 2 is handed out partway through.
 - **Slides:** [A Robot for Room 114](/robot-teacher-slides/), with speaker notes. Round 3 is deliberately blank on screen.
 - **Run of show and Round 3:** below. This one has three rounds, not one.
@@ -209,7 +209,7 @@ Back-pocket only. The entry ticket asks students to write their own.
 
 ## The reveal
 
-*[Eric: your take goes here, held back until the last ten minutes and offered as one opinion among many. Your relationships argument (students take risks for people, not for products) is the natural source. Decide whether the "lipstick on a pig" line belongs in front of an observer.]*
+*[Your take goes here. Hold it until the last ten minutes and offer it as one opinion among many.]*
 
 ## Evidence of learning
 

@@ -7,11 +7,13 @@ lesson_category: society
 excerpt: "A doorbell camera, no subscription, and video the sheriff said had been disconnected. The FBI says it came from 'residual data located in backend systems.' A ready-to-run Socratic seminar on a question every engineer who builds one has to answer: what should a company promise when you press Delete?"
 ---
 
-<!-- DRAFT NOTES FOR ERIC (delete before publishing)
+<!-- DRAFT NOTES (delete before publishing)
 
 LABEL AND CATEGORY. "Lesson Plan" is an existing label. I did not coin "Lesson Plan / Privacy." lesson_category: society is the closest existing fit; confirm. Add this slug to learn/_standards/carriers/porttack-society.json and run tools/publish_standards.sh.
 
-FRAMING (from Eric): delete is mostly a constraint, not a decision. Big data stores mark things for deletion, and some cannot truly delete; file systems have worked this way for ages. The seminar therefore asks what a company should PROMISE and DISCLOSE about Delete, not what an engineer should make it do. The spoken engineer's note carries general CS statements that are not sourced to any article; verify against your own knowledge.
+SLIDE NUMBERS in the run-of-show table match the deck as of the last build. If you add or remove slides, renumber the table.
+
+FRAMING: delete is mostly a constraint, not a decision. Big data stores mark things for deletion, and some cannot truly delete; file systems have worked this way for ages. The seminar therefore asks what a company should PROMISE and DISCLOSE about Delete, not what an engineer should make it do. The spoken engineer's note carries general CS statements that are not sourced to any article; verify against your own knowledge.
 
 THE CASE IS REAL AND OPEN. Per reporting in early October, no one had been publicly identified and the sheriff and FBI were publicly disagreeing about the early investigation. The reading deliberately stays on the camera and the footage. It never speculates about the crime and never mentions the sheriff/FBI dispute, the ransom notes, or the Pima County politics. If a student goes there, redirect: "We are not discussing the case, only the camera." Check the current status before class.
 
@@ -22,7 +24,7 @@ WHAT I VERIFIED (read directly):
 - Fortune/AP, Feb 11, 2026 (Riddle, Liedtke): Higginbotham and Dahl quotes, verbatim; AP says Google did not answer its questions.
 - Google Safety Center, safety.google/nest (Cameras FAQ): the offline-recording, visual-indicator, and delete-at-any-time sentences, verbatim. The page does NOT say how long video is kept without a subscription.
 
-WHAT I COULD NOT VERIFY, AND LEFT OUT (all of these are in your Finding Fido slide deck):
+WHAT I COULD NOT VERIFY, AND LEFT OUT (all of these are in the original Finding Fido slide deck):
 - "Google's documentation says non-subscribers get only 3 hours of event video history." No source I could read gives a number of hours. NBC reports a different (30-day, standard tier) figure that it does not tie to non-subscribers.
 - The Patel quote "We were able to go into their systems and actually excavate material that people would think would normally be deleted." The word "excavate" does not appear in the Fox article I read. It may come from a different interview. NBC quotes a different line ("execute lawful searches and go to these private sector companies and expedite results").
 - "Google cooperated and used engineers to excavate the data."
@@ -45,14 +47,14 @@ By the end of the seminar, students can:
 
 ## Materials
 
-The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the entry ticket, observer organizer, and exit ticket.
+The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=What%20Does%20Delete%20Mean%3F&exit=Write%20one%20sentence%20a%20company%20should%20promise%20customers%20when%20they%20press%20Delete%2C%20including%20how%20long%20it%20takes.): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the one-sheet handout.
 
 
 Specific to this seminar:
 
-- **Exit ticket:** add one line: "Write one sentence a company should promise customers when they press Delete, including how long it takes."
+- **Handout:** [print the two-sided handout with this seminar's questions filled in](/socratic-seminar-handout/?topic=What%20Does%20Delete%20Mean%3F&exit=Write%20one%20sentence%20a%20company%20should%20promise%20customers%20when%20they%20press%20Delete%2C%20including%20how%20long%20it%20takes.). The front is the entry ticket; the back is the observer organizer and the exit ticket. Name and period are at the top.
 - **Readings:** parts 1 and 2 below. Part 2 is handed out partway through.
-- **Slides:** [What Does Delete Mean?](/delete-seminar-slides/), with speaker notes and a diagram for the engineer's note.
+- **Slides:** [What Does Delete Mean?](/delete-seminar-slides/), with speaker notes and a diagram for the engineer's note. The first five slides are an optional five-minute warm-up on the Ring ad (the poll, [the ad itself on Ring's YouTube channel](https://www.youtube.com/watch?v=OheUzrXsKrY), the first reaction, and how Search Party works). Press S on any warm-up slide to skip to the seminar, or open [the deck at slide 6](/delete-seminar-slides/?slide=6). The discussion slides carry an amber "stay here" cue in the toolbar, so you know where to stop for each round. After the reveal there is an optional "What Happened Next" group: a timeline, the [WeRateDogs](https://www.youtube.com/watch?v=-ITnLiqKbeI) and [Wyze](https://www.youtube.com/watch?v=ROFblZ_-9q4) responses, and a "Who made it, and why?" slide.
 - **Run of show:** below. Two rounds, no spoken third round.
 
 This builds on [Finding Fido, or Finding You?]({% post_url 2026-03-04-finding-fido-or-finding-you %}), which covers Ring's Search Party. That lesson is about function creep and opt-out defaults. This one is about one question inside it: what "delete" means.
@@ -159,22 +161,36 @@ function seminarPlainCopy(text,done){
 }
 </script>
 
-## The run of show
+## The run of show, slide by slide
 
-Rough minutes, scaled to your period.
+Start times are in minutes from the beginning of the class, with the sections you might skip marked. The slide numbers are for [the deck](/delete-seminar-slides/). The deck also shows an amber "stay here" badge on the stop slides and a blue "hand out" badge where a worksheet goes out, so the toolbar tells you the same thing.
 
-1. **Norms, out loud (5 min).** Post them, read them, hold to them. Add one sentence: "We are talking about the camera, not the crime."
-2. **Opening temperature check (3 min).** Students stand on a line. One wall: "Delete should mean gone, right away." The other: "Delete can take time, as long as the company tells you how long."
-3. **Read part 1 (4 min).** Then the entry ticket, or students use one already filled out.
-4. **Round 1, the promise (15 min).** Opening question to every student, briefly: "What should the company promise when you press Delete, and what should it tell you?" Then fishbowl with the hot seat.
-5. **Between rounds, the engineer's note (3 min).** Spoken, in your words. See below.
-6. **Round 2, the experts (10 min).** Hand out part 2. Run the temperature check again. Who moved, and what moved them?
-7. **Closing temperature check (3 min).** One last move to the line.
-8. **Reveal and exit ticket (10 min).** Your take as one opinion among many, then they write.
+| Slides | Starts at (min) | What you do |
+|---|---|---|
+| 1–5 (optional) | 0, skippable | The Ring warm-up: poll, play the ad, first reaction, how Search Party works. Press S on any of them to skip to slide 6. |
+| 6–8 | 5 | Title, goals, and the five norms. Read the norms out loud, and add one sentence: "We are talking about the camera, not the crime." |
+| 9 | 10 | **Opening temperature check.** Students stand on a line. One wall: "Delete should mean gone, right away." The other: "Delete can take time, as long as the company tells you how long." Note where the room sits. |
+| 10 | 13 | **Hand out Reading Part 1 and the two-sided handout.** Students read, then fill in the entry ticket on the front. |
+| 11–15 | 17 | Project the facts. Keep it brisk, since they have read it. Slide 15, "What Nobody Has Confirmed," is the honest middle. |
+| **16** | 20 | **Stop. Round 1 opening.** Every student answers briefly from their entry ticket: "What should the company promise when you press Delete, and what should it tell you?" |
+| **17** | 24 | **Stop. Round 1 fishbowl** with the hot seat. The outer circle fills in the **observer organizer** on the back of the handout. Stay on this slide until it ends. |
+| 18–19 | 39, slide 19 skippable | The engineer's note, spoken (see below). Slide 19 is optional. No discussion here. |
+| 20 | 42, skippable with Round 2 | **Hand out Reading Part 2.** |
+| 21–22 | 43, skippable with Round 2 | Silent reads: Stamos, then Jackson. |
+| **23** | 46, skippable with Round 2 | **Stop. Round 2 fishbowl.** Michelle Dahl's quote stays up. Stay on this slide until it ends. |
+| 24 | 56, skippable | **Temperature check again.** Who moved, and what moved them? |
+| 25 | 59, skippable | "Sort It": pick a statement from the reading and sort it as documented, claimed, or unknown. |
+| 26 | 62, the closing check if you skip Round 2 | **Last temperature check.** Count who shifted across all three. |
+| (no slide) | 65 | **Your reveal, spoken.** One opinion among many. Then "Where am I wrong?" |
+| 27 | 70 | Students fill in the **exit ticket** on the back of the handout. |
+| 28–32 (optional) | 75, skippable | "What Happened Next," after the reveal: the timeline, the WeRateDogs and Wyze videos, and "Who made it, and why?" Press S on any of them to skip to slide 33. |
+| 33 | 80 | Write-up links. |
+
+Start times assume nothing is skipped, which runs to about minute 80. Rows marked "skippable" can be dropped. Adjust the later start times yourself. These are estimates, not timed runs.
 
 ## The engineer's note (spoken)
 
-This is where your background does the work, and it moves the argument. Students will assume Delete is a decision. It is mostly a constraint. Say it in your own words. The points below are general computer science, not sourced to any article, so check them against your own knowledge before using them.
+This is where an engineering background does the work, and it moves the argument. Students will assume Delete is a decision. It is mostly a constraint. Say it in your own words. The points below are general computer science, not sourced to any article, so check them against your own knowledge before using them.
 
 - **File systems:** deleting a file usually removes the entry that points to it and marks the space as free. The bytes stay where they were until something else overwrites them. This has been true for decades.
 - **Big data stores:** many large databases and logs are append-only. A "delete" writes a marker (often called a tombstone) saying the record is dead. The old bytes are removed later, when the system rewrites its files in a background cleanup, which can take days or longer.
@@ -216,7 +232,7 @@ Students may want to talk about the crime itself, a theory, or the people involv
 
 ## The reveal
 
-*[Eric: your take goes here, held back until the last ten minutes and offered as one opinion among many.]*
+*[Your take goes here. Hold it until the last ten minutes and offer it as one opinion among many.]*
 
 ## Evidence of learning
 

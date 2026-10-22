@@ -1,0 +1,240 @@
+---
+title: "Socratic Seminar Handout"
+permalink: /socratic-seminar-handout/
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Socratic Seminar Handout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { --ink: #1b1f23; --rule: #9aa0a6; --muted: #57606a; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #e9edf1;
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.35;
+  }
+
+  /* --- On-screen tools (never printed) --- */
+  .tools {
+    max-width: 8.5in;
+    margin: 16px auto;
+    padding: 14px 18px 16px;
+    background: #fff;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  .tools h2 { margin: 0 0 6px; font-size: 16px; }
+  .tools p { margin: 0 0 8px; color: var(--muted); }
+  .tools label { display: block; margin: 10px 0 3px; font-weight: 600; }
+  .tools input[type=text] { width: 100%; padding: 7px 9px; font-size: 14px; border: 1px solid #c4cbd2; border-radius: 6px; }
+  .tools .buttons { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .tools button {
+    padding: 8px 16px; font-size: 14px; border-radius: 6px; cursor: pointer;
+    border: 1px solid #2a7ae2; background: #2a7ae2; color: #fff;
+  }
+  .tools button.secondary { background: #fff; color: #2a7ae2; }
+
+  /* --- The two sides of the sheet --- */
+  .sheet {
+    width: 8.5in;
+    height: 11in;
+    margin: 16px auto;
+    background: #fff;
+    padding: 0.5in;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.18);
+    overflow: hidden;
+  }
+
+  .namebar { display: flex; gap: 18px; margin: 0 0 8px; }
+  .fld {
+    flex: 1 1 auto;
+    border-bottom: 1.5px solid var(--ink);
+    min-height: 0.34in;
+    font-size: 9.5pt;
+    font-weight: 700;
+  }
+  .fld.period { flex: 0 0 1.3in; }
+  .fld.date { flex: 0 0 1.7in; }
+  .namebar.small .fld { min-height: 0.28in; }
+
+  h1 { font-size: 17pt; margin: 6px 0 2px; }
+  .topic { margin: 0 0 6px; font-size: 11pt; }
+  .topic .blank { display: inline-block; min-width: 4.2in; border-bottom: 1px solid var(--rule); vertical-align: bottom; }
+  .topic .blank.filled { border-bottom: none; font-weight: 700; }
+
+  h2.section {
+    font-size: 12pt;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 2px solid var(--ink);
+    margin: 14px 0 8px;
+    padding-bottom: 2px;
+  }
+  .hint { margin: 0 0 8px; font-size: 9.5pt; color: var(--muted); font-style: italic; }
+
+  .q { margin: 0 0 4px; font-weight: 600; }
+  .lines { margin: 0 0 12px; }
+  .lines i { display: block; border-bottom: 1px solid var(--rule); height: 0.31in; }
+  .extra[hidden] { display: none; }
+
+  table { width: 100%; border-collapse: collapse; margin: 0 0 8px; }
+  th, td { border: 1px solid var(--ink); padding: 4px 7px; vertical-align: top; font-size: 10pt; }
+  th { background: #f1f3f5; text-align: left; }
+  td { height: 0.72in; }
+  td:first-child { width: 2.3in; font-weight: 600; }
+
+  @media print {
+    body { background: #fff; }
+    .tools { display: none; }
+    @page { size: letter; margin: 0.5in; }
+    .sheet {
+      width: auto;
+      height: 10in;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      page-break-after: always;
+      break-after: page;
+    }
+    .sheet:last-of-type { page-break-after: auto; break-after: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tools">
+  <h2>Socratic seminar handout</h2>
+  <p>Two sides of one sheet. Print double-sided and flip on the long edge. The front is the entry ticket. The back is the observer organizer and the exit ticket.</p>
+  <label for="in-topic">Seminar topic (optional)</label>
+  <input type="text" id="in-topic" placeholder="e.g. What Does Delete Mean?">
+  <label for="in-entry">Extra entry-ticket question (optional)</label>
+  <input type="text" id="in-entry" placeholder="Printed as question 4 on the front">
+  <label for="in-exit">Extra exit-ticket question (optional)</label>
+  <input type="text" id="in-exit" placeholder="Printed under the exit ticket on the back">
+  <div class="buttons">
+    <button type="button" id="btn-print">Print</button>
+    <button type="button" class="secondary" id="btn-copy">Copy link to this version</button>
+  </div>
+</div>
+
+<!-- FRONT -->
+<div class="sheet" id="front">
+  <div class="namebar">
+    <div class="fld">Name</div>
+    <div class="fld period">Period</div>
+    <div class="fld date">Date</div>
+  </div>
+  <h1>Socratic Seminar</h1>
+  <p class="topic"><b>Topic:</b> <span class="blank" id="topic-text"></span></p>
+
+  <h2 class="section">Entry ticket</h2>
+  <p class="hint">Fill this out after the reading, before the seminar starts.</p>
+
+  <p class="q">1. Two questions the reading raises for you, ones you could actually argue about.</p>
+  <div class="lines"><i></i><i></i><i></i><i></i></div>
+
+  <p class="q">2. A starting side, and why. Changing your mind during the seminar is not losing. It is the point.</p>
+  <div class="lines"><i></i><i></i><i></i><i></i></div>
+
+  <p class="q">3. Two pieces of evidence from the reading, by paragraph number.</p>
+  <div class="lines"><i></i><i></i><i></i><i></i></div>
+
+  <div class="extra" id="entry-extra" hidden>
+    <p class="q"><span>4. </span><span id="entry-extra-text"></span></p>
+    <div class="lines"><i></i><i></i><i></i><i></i></div>
+  </div>
+</div>
+
+<!-- BACK -->
+<div class="sheet" id="back">
+  <div class="namebar small">
+    <div class="fld">Name</div>
+    <div class="fld period">Period</div>
+  </div>
+
+  <h2 class="section">Observer organizer</h2>
+  <p class="hint">The outer circle fills this in while watching. It is your ticket into the hot seat.</p>
+  <table>
+    <tr><th>What to catch</th><th>Who said it</th><th>My note</th></tr>
+    <tr><td>An idea I agreed with</td><td></td><td></td></tr>
+    <tr><td>An idea I would push back on</td><td></td><td></td></tr>
+    <tr><td>The strongest point made</td><td></td><td></td></tr>
+    <tr><td>A question nobody has asked yet</td><td></td><td></td></tr>
+  </table>
+  <p class="q" style="font-weight:400"><em>Tally each time someone builds on another person's idea instead of starting over:</em></p>
+  <div class="lines"><i></i><i></i></div>
+
+  <h2 class="section">Exit ticket</h2>
+  <p class="q">Did your thinking move today? Three sentences: what you believed walking in, what you believe now, and what said or asked in the room moved you (or held you in place).</p>
+  <div class="lines"><i></i><i></i><i></i></div>
+
+  <div class="extra" id="exit-extra" hidden>
+    <p class="q"><span id="exit-extra-text"></span></p>
+    <div class="lines"><i></i><i></i></div>
+  </div>
+</div>
+
+<script>
+{% raw %}
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var inTopic = document.getElementById("in-topic");
+  var inEntry = document.getElementById("in-entry");
+  var inExit = document.getElementById("in-exit");
+
+  // Text is always set with textContent, so nothing typed or passed in the
+  // link can add markup to the page.
+  function render() {
+    var topic = inTopic.value.trim();
+    var entry = inEntry.value.trim();
+    var exit = inExit.value.trim();
+
+    var topicEl = document.getElementById("topic-text");
+    topicEl.textContent = topic;
+    topicEl.className = topic ? "blank filled" : "blank";
+
+    var entryBox = document.getElementById("entry-extra");
+    document.getElementById("entry-extra-text").textContent = entry;
+    entryBox.hidden = !entry;
+
+    var exitBox = document.getElementById("exit-extra");
+    document.getElementById("exit-extra-text").textContent = exit;
+    exitBox.hidden = !exit;
+
+    var next = new URLSearchParams();
+    if (topic) next.set("topic", topic);
+    if (entry) next.set("entry", entry);
+    if (exit) next.set("exit", exit);
+    var qs = next.toString();
+    try {
+      window.history.replaceState(null, "", window.location.pathname + (qs ? "?" + qs : ""));
+    } catch (e) {}
+  }
+
+  inTopic.value = params.get("topic") || "";
+  inEntry.value = params.get("entry") || "";
+  inExit.value = params.get("exit") || "";
+  [inTopic, inEntry, inExit].forEach(function (el) { el.addEventListener("input", render); });
+
+  document.getElementById("btn-print").addEventListener("click", function () { window.print(); });
+  document.getElementById("btn-copy").addEventListener("click", function (e) {
+    var btn = e.currentTarget;
+    var done = function () { btn.textContent = "Copied"; setTimeout(function () { btn.textContent = "Copy link to this version"; }, 1500); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(window.location.href).then(done, function () {});
+    }
+  });
+
+  render();
+})();
+{% endraw %}
+</script>
+</body>
+</html>
