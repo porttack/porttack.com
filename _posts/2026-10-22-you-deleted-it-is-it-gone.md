@@ -230,16 +230,3 @@ All of this is collected during the seminar. Nothing needs a separate quiz.
 | 4. Discussion | Observer organizer, including the tally of times a student built on someone else's idea. Three temperature checks, with a count of who moved and why. | Builds on a peer by name, cites a paragraph, and can say what moved them (or why they held). |
 
 I grade evidence and honesty, not the position landed on. "I changed my mind because of what someone said" is the best possible answer.
-
-## Standards
-
-Common Core ELA (California adoption): SL.6.1 / SL.9-10.1, SL.6.3 / SL.9-10.3, RI.6.1 / RI.9-10.1, RI.6.8 / RI.9-10.8, W.6.1 / W.9-10.1. What each one covers is in the [kit](/socratic-seminar-kit/#common-core-and-california-mandates). Goal 3 is RI.6.8 / RI.9-10.8 in practice: evaluating which claims are supported.
-
-**AP CSP, Big Idea 5, Impact of Computing.** This seminar touches:
-
-- **5.1 Beneficial and Harmful Effects.** One outcome that is helpful in one respect and damaging in another.
-- **5.6 Safe Computing.** The privacy risk of stored personal data, including data the user thinks is gone.
-
-Check these topic labels against the current College Board framework before citing them formally.
-
-**General seminar standards.** The widget below covers both this seminar's own reading and the discourse skills the seminar format itself practices (communicating effectively, reasoned judgment from evidence, perspective-taking, honesty, and questioning your own beliefs), whatever the reading.
