@@ -5,6 +5,7 @@ categories: lesson-plans
 redirect_from: /2026/10/22/what-does-delete-mean-seminar.html
 label: Lesson Plan
 lesson_category: society
+standards_extra_carrier: socratic_seminar_kit
 excerpt: "A doorbell camera, no subscription, and video the sheriff said had been disconnected. The FBI says it came from 'residual data located in backend systems.' A ready-to-run Socratic seminar on a question every engineer who builds one has to answer: what should a company promise when you press Delete?<br><a href='/2026/10/22/you-deleted-it-is-it-gone.html'><img src='https://www.pcworld.com/wp-content/uploads/2026/02/Ring-Search-Party-Super-Bowl-ad-3.jpg?quality=50&strip=all&w=1024' alt='Screenshot from Ring&#39;s Super Bowl ad showing the Search Party feature tracking a lost dog' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 ---
 
@@ -241,6 +242,4 @@ Common Core ELA (California adoption): SL.6.1 / SL.9-10.1, SL.6.3 / SL.9-10.3, R
 
 Check these topic labels against the current College Board framework before citing them formally.
 
-**General seminar standards.** Two alignment widgets follow. The first covers the discourse skills the seminar format itself practices (communicating effectively, reasoned judgment from evidence, perspective-taking, honesty, and questioning your own beliefs), whatever the reading. The second covers this seminar's own reading.
-
-{% include standards-alignment.html carrier="socratic_seminar_kit" %}
+**General seminar standards.** The widget below covers both this seminar's own reading and the discourse skills the seminar format itself practices (communicating effectively, reasoned judgment from evidence, perspective-taking, honesty, and questioning your own beliefs), whatever the reading.

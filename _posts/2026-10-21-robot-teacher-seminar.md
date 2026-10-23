@@ -4,6 +4,7 @@ title: "Should a School Buy a Robot Tutor? A Socratic Seminar"
 categories: draft
 label: Lesson Plan / AI Literacy
 lesson_category: society
+standards_extra_carrier: socratic_seminar_kit
 excerpt: "A rural district bought a humanoid robot to help teach high school coding and robotics, and then the state stepped in. A ready-to-run Socratic seminar where the students are the school board."
 ---
 
@@ -238,6 +239,4 @@ Common Core ELA (California adoption): SL.6.1 / SL.9-10.1, SL.6.3 / SL.9-10.3, R
 
 Check these topic labels against the current College Board framework before citing them formally.
 
-**General seminar standards.** Two alignment widgets follow. The first covers the discourse skills the seminar format itself practices (communicating effectively, reasoned judgment from evidence, perspective-taking, honesty, and questioning your own beliefs), whatever the reading. The second covers this seminar's own reading.
-
-{% include standards-alignment.html carrier="socratic_seminar_kit" %}
+**General seminar standards.** The widget below covers both this seminar's own reading and the discourse skills the seminar format itself practices (communicating effectively, reasoned judgment from evidence, perspective-taking, honesty, and questioning your own beliefs), whatever the reading.

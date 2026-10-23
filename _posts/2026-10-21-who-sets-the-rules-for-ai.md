@@ -4,6 +4,7 @@ title: "Who Sets the Rules for AI? A Socratic Seminar on a Student Survey"
 categories: draft
 label: Lesson Plan / AI Literacy
 lesson_category: society
+standards_extra_carrier: socratic_seminar_kit
 excerpt: "88% of college students use AI. 57% say nobody has told them where the line is. A ready-to-run Socratic seminar on one survey and one question: when the rules are unclear, who is responsible?"
 ---
 
@@ -159,6 +160,4 @@ I grade evidence and honesty, not the position landed on. "I changed my mind bec
 
 Common Core ELA (California adoption): SL.6.1 / SL.9-10.1, SL.6.3 / SL.9-10.3, RI.6.1 / RI.9-10.1, RI.6.8 / RI.9-10.8, W.6.1 / W.9-10.1. What each one covers is in the [kit](/socratic-seminar-kit/#common-core-and-california-mandates). Add a data-literacy note for this one: students critique what a survey can and cannot support (paragraph 8).
 
-**General seminar standards.** Two alignment widgets follow. The first covers the discourse skills the seminar format itself practices (communicating effectively, reasoned judgment from evidence, perspective-taking, honesty, and questioning your own beliefs), whatever the reading. The second covers this seminar's own reading.
-
-{% include standards-alignment.html carrier="socratic_seminar_kit" %}
+**General seminar standards.** The widget below covers both this seminar's own reading and the discourse skills the seminar format itself practices (communicating effectively, reasoned judgment from evidence, perspective-taking, honesty, and questioning your own beliefs), whatever the reading.
