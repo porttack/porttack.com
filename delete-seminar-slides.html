@@ -532,7 +532,7 @@ const SLIDES = [
     id: "warmup",
     group: "warmup",
     kind: "section",
-    kicker: "Optional warm-up",
+    kicker: "Warm-up",
     title: "Finding Fido",
     subtitle: "The Ring Super Bowl ad. About five minutes.",
     hints: [
@@ -693,6 +693,31 @@ const SLIDES = [
     notes: "This slide is the honest middle. The seminar is built on this uncertainty, not on a claim that Google secretly kept the footage. Students sort statements into documented, claimed, and unknown later."
   },
   {
+    kind: "highlight",
+    pause: "Quiet thinking. No one shares. Stay on this slide.",
+    kicker: "Your own Delete button",
+    title: "Your Delete Button",
+    bullets: [
+      "Think of a question you've asked an AI that you wouldn't want read aloud",
+      "Keep it to yourself. Don't say it or write it down.",
+      "Now imagine pressing Delete on that chat",
+      "What do you expect to happen to it?"
+    ],
+    notes: "This is the bridge from a camera to students' own lives. A doorbell video is easy to hold at a distance. A question you typed at midnight is not. Do not ask anyone to share, and do not ask what the question was. If you ran a short demo of your own (a harmless question, deleted live), this is where it fits. Keep any example to something you would be comfortable explaining. Some students ask AI about health, family, or worries. If anything a student says concerns you, follow your school's procedures."
+  },
+  {
+    kind: "highlight",
+    kicker: "What the companies say",
+    title: "Deleting an AI Chat",
+    bullets: [
+      "Anthropic: 30 days; flagged chats up to 2 years",
+      "OpenAI: 30 days, with security and legal exceptions",
+      "Google: chats a human reviewed stay up to 3 years",
+      "These are promises. You can't check them from outside."
+    ],
+    notes: "Policy pages, October 2026. Anthropic (Privacy Center, \u201cHow long do you store my data?\u201d, dated July 1, 2026, read directly): deleted chats are removed from your history immediately and from back-end storage within 30 days. Flagged policy violations are kept up to 2 years, and the page lists legal and dispute exceptions. Data already used in trained models is not removed. Google (Gemini Apps Privacy Hub, updated October 2026, read directly): chats that human reviewers have seen are not deleted when you delete your activity, and are kept up to three years. The default auto-delete is 18 months, and work or school accounts may be subject to different terms. OpenAI: its pages would not open for me, so this line comes from search results quoting its help center, not from the page. It says a deleted chat leaves your account right away and is scheduled for permanent deletion within 30 days, unless it was already de-identified or must be kept for security or legal reasons. A 2025 court order also required it to keep deleted chats for a time. Verify the OpenAI wording at help.openai.com before you rely on it. The three policies are similar at the headline level (about 30 days) and differ in the details that matter. Ask students to notice which are documented, which are claims, and which are unknown. The company that makes Claude is Anthropic, and this deck was drafted with Claude, so read the Anthropic page yourself. If your students use school-issued accounts, the rules may be set by the school, not the person."
+  },
+  {
     kind: "title",
     pause: "Round 1 opening: every student answers. Stay on this slide.",
     kicker: "Round 1",
@@ -751,20 +776,12 @@ const SLIDES = [
     notes: "Optional second slide for the same note. Skip if the diagram was enough. The point for the room: Delete is mostly a constraint, so the argument is about what to promise and disclose, not whether a company can make data vanish instantly."
   },
   {
-    kind: "title",
-    handout: "Hand out: Reading Part 2",
-    kicker: "Round 2",
-    title: "The Experts",
-    subtitle: "Hand out Reading Part 2",
-    notes: "Hand out Part 2 (printable at /delete-reading-2/) after a few minutes of fishbowl and the engineer's note. Then run the temperature check again."
-  },
-  {
     kind: "quote",
     kicker: "A cybersecurity expert",
     title: "Alex Stamos",
     quote: "Internal storage uses a very lazy deletion mechanism, so the data wouldn't be available to users who didn't pay.",
     cite: "Alex Stamos, cybersecurity expert, to CBS News",
-    notes: "In the same article he adds: “The video for non-subscribers would be marked for deletion,” and “the actual files might not be deleted for days.” Those are two statements, not one. They're in Reading Part 2."
+    notes: "In the same article he adds: “The video for non-subscribers would be marked for deletion,” and “the actual files might not be deleted for days.” Those are two statements, not one."
   },
   {
     kind: "quote",
@@ -775,13 +792,55 @@ const SLIDES = [
     notes: "Ask nothing. Silent read, then next slide."
   },
   {
-    kind: "quote",
+    kind: "title",
+    kicker: "Round 2",
+    title: "The Reaction",
+    subtitle: "Two responses to the Ring ad. No handout. Watch, then discuss.",
+    notes: "Round 2 is not a reading. Play the two videos on the next slides (timeline first, then WeRateDogs, then Wyze), then stay on the \u201cWho Made It, and Why?\u201d slide for the fishbowl. Preview both videos before class."
+  },
+  {
+    kind: "bullets",
+    kicker: "What happened",
+    title: "A Timeline",
+    bullets: [
+      "Feb. 8, 2026: Ring's ad airs during Super Bowl LX",
+      "Feb. 12: Ring cancels its partnership with Flock Safety",
+      "Ring has not given the backlash as its reason. Critics point to the timing."
+    ],
+    notes: "The ad aired Feb. 8 (Super Bowl LX; CNBC and Wikipedia). Some earlier Finding Fido materials give Feb. 9, which is a day off. The Flock cancellation on Feb. 12 is from Inc. and Variety coverage; I could not open Variety (paywalled). Ring's stated reason (a mutual decision, integration needing more time and resources) comes from search summaries of The Ringer and PetaPixel that I did not read directly. Check before you say more than the slide does. I left out the “people ripping cameras off walls, 3.2M views” slide because I could not verify it."
+  },
+  {
+    kind: "bullets",
+    kicker: "Watch: a creator responds",
+    title: "WeRateDogs",
+    bullets: [
+      "Matt Nelson, who runs WeRateDogs, argues the ad uses dogs to make mass surveillance feel acceptable",
+      { text: "Watch “The Very Dystopian Dog Super Bowl Ad” on YouTube", href: "https://www.youtube.com/watch?v=-ITnLiqKbeI" }
+    ],
+    notes: "This is the video linked in the original Finding Fido lesson deck. YouTube lists the channel as WeRateDogs. Several outlets quote the phrase “manufacture consent for mass surveillance,” but they word it differently, so I paraphrased. Claims inside the video, like the 0.03% figure, are his. Ring says Search Party finds about a dog a day. The link opens in a new tab. Preview it first."
+  },
+  {
+    kind: "bullets",
+    kicker: "Watch: a competitor responds",
+    title: "Wyze",
+    bullets: [
+      "Wyze sells security cameras. This is an ad for Wyze.",
+      { text: "Watch “Definitely Only for Dogs: Ring's Superbowl Commercial (Parody)” on YouTube", href: "https://www.youtube.com/watch?v=ROFblZ_-9q4" }
+    ],
+    notes: "This is the video linked in the original Finding Fido lesson deck. YouTube lists the channel as Wyze. It is a parody by a competing camera maker, which is the point of the next slide. The link opens in a new tab. Preview it first."
+  },
+  {
+    kind: "highlight",
     pause: "Round 2 fishbowl: stay here until it ends.",
-    kicker: "A privacy advocate",
-    title: "Michelle Dahl",
-    quote: "We should absolutely be alarmed over the privacy implications that are at stake with this video that was recovered by the Nest camera.",
-    cite: "Michelle Dahl, Surveillance Technology Oversight Project, via the Associated Press",
-    notes: "She also said she did not know about Nest cameras specifically. That's worth raising if students treat her as a Nest expert. The AP piece also quotes Consumer Reports policy fellow Stacey Higginbotham: unless a user pays for a subscription, Google “routinely purges the footage rather than retain it indefinitely.” That's in Reading Part 2."
+    kicker: "Same question as the seminar",
+    title: "Who Made It, and Why?",
+    bullets: [
+      "Ring: selling a feature",
+      "WeRateDogs: a creator with a big audience, arguing a position",
+      "Wyze: a camera company selling against Ring",
+      "What would each one leave out?"
+    ],
+    notes: "This is the Round 2 discussion slide: stay here for the fishbowl. It is the documented / claimed / unknown sort from the seminar, applied to three sources. Ask: what does each one want you to feel, and what would it leave out?"
   },
   {
     kind: "wall",
@@ -802,7 +861,7 @@ const SLIDES = [
       "Claimed: one official or expert says so",
       "Unknown: nobody has explained it yet"
     ],
-    notes: "Ask for a specific statement from the reading and have students sort it. Good ones: Google's page about deleting at any time (documented); Patel's account of how the video was recovered (claimed); whether Google stored video without a subscription (unknown). This is the evidence for the documented/claimed/unknown goal."
+    notes: "Ask for a specific statement from the reading and have students sort it. Good ones: Google's page about deleting at any time (documented); Patel's account of how the video was recovered (claimed); whether Google stored video without a subscription (unknown). A claim from one of the Round 2 videos works too. This is the evidence for the documented/claimed/unknown goal."
   },
   {
     kind: "wall",
@@ -826,66 +885,6 @@ const SLIDES = [
       "One sentence a company should promise customers when they press Delete, including how long it takes"
     ],
     notes: "I grade effort and honesty, not the position landed on. The last line is the evidence for the privacy-risk and abstraction goal."
-  },
-  {
-    id: "afterword",
-    group: "afterword",
-    kind: "section",
-    kicker: "Optional, after the reveal",
-    title: "What Happened Next",
-    subtitle: "How people reacted to the Ring ad. About five minutes.",
-    hints: [
-      "Space or →  continue",
-      "S  skip to the last slide"
-    ],
-    notes: "Optional, and deliberately last: use it after your reveal, not after Round 1. Students have formed their own views from the facts first; now they see how the public reacted. These slides are the backlash section of the Finding Fido lesson, rebuilt with sources I could check. Press S to skip to the last slide."
-  },
-  {
-    group: "afterword",
-    kind: "bullets",
-    kicker: "What happened",
-    title: "A Timeline",
-    bullets: [
-      "Feb. 8, 2026: Ring's ad airs during Super Bowl LX",
-      "Feb. 12: Ring cancels its partnership with Flock Safety",
-      "Ring has not given the backlash as its reason. Critics point to the timing."
-    ],
-    notes: "The ad aired Feb. 8 (Super Bowl LX; CNBC and Wikipedia). Some earlier Finding Fido materials give Feb. 9, which is a day off. The Flock cancellation on Feb. 12 is from Inc. and Variety coverage; I could not open Variety (paywalled). Ring's stated reason (a mutual decision, integration needing more time and resources) comes from search summaries of The Ringer and PetaPixel that I did not read directly. Check before you say more than the slide does. I left out the “people ripping cameras off walls, 3.2M views” slide because I could not verify it."
-  },
-  {
-    group: "afterword",
-    kind: "bullets",
-    kicker: "Watch: a creator responds",
-    title: "WeRateDogs",
-    bullets: [
-      "Matt Nelson, who runs WeRateDogs, argues the ad uses dogs to make mass surveillance feel acceptable",
-      { text: "Watch “The Very Dystopian Dog Super Bowl Ad” on YouTube", href: "https://www.youtube.com/watch?v=-ITnLiqKbeI" }
-    ],
-    notes: "This is the video linked in the original Finding Fido lesson deck. YouTube lists the channel as WeRateDogs. Several outlets quote the phrase “manufacture consent for mass surveillance,” but they word it differently, so I paraphrased. Claims inside the video, like the 0.03% figure, are his. Ring says Search Party finds about a dog a day. The link opens in a new tab. Preview it first."
-  },
-  {
-    group: "afterword",
-    kind: "bullets",
-    kicker: "Watch: a competitor responds",
-    title: "Wyze",
-    bullets: [
-      "Wyze sells security cameras. This is an ad for Wyze.",
-      { text: "Watch “Definitely Only for Dogs: Ring's Superbowl Commercial (Parody)” on YouTube", href: "https://www.youtube.com/watch?v=ROFblZ_-9q4" }
-    ],
-    notes: "This is the video linked in the original Finding Fido lesson deck. YouTube lists the channel as Wyze. It is a parody by a competing camera maker, which is the point of the next slide. The link opens in a new tab. Preview it first."
-  },
-  {
-    group: "afterword",
-    kind: "highlight",
-    kicker: "Same question as the seminar",
-    title: "Who Made It, and Why?",
-    bullets: [
-      "Ring: selling a feature",
-      "WeRateDogs: a creator with a big audience, arguing a position",
-      "Wyze: a camera company selling against Ring",
-      "What would each one leave out?"
-    ],
-    notes: "This is the documented / claimed / unknown sort from the seminar, applied to three sources. Ask: what does each one want you to feel, and what would it leave out?"
   },
   {
     kind: "title",

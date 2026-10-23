@@ -1,0 +1,892 @@
+---
+title: "What Does Delete Mean?: Overview"
+permalink: /delete-seminar-overview/
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>What Does Delete Mean?: Overview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --accent: #2a7ae2;
+    --ink: #1b1f23;
+    --paper: #ffffff;
+    --muted: #57606a;
+    --border: #d0d7de;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: #e9edf1;
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  #root { height: 100%; }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .stage-outer {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 0;
+    position: relative;
+  }
+
+  /* Fixed-size design canvas, scaled to fit via a JS-computed transform --
+     lets every slide be authored at generous, fixed pixel sizes ("bigger
+     type") without hand-tuning responsive font sizes per breakpoint. */
+  .stage {
+    width: 1280px;
+    background: var(--paper);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.18);
+    padding: 80px 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 auto;
+  }
+
+  .stage.ar-16-9 { height: 720px; }
+  .stage.ar-4-3 { height: 960px; }
+
+  .kicker {
+    font-size: 28px;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0 0 18px;
+  }
+
+  .slide-title {
+    font-size: 64px;
+    line-height: 1.1;
+    margin: 0 0 40px;
+    font-weight: 700;
+  }
+
+  .slide-subtitle {
+    font-size: 28px;
+    color: var(--muted);
+    margin: 0 0 20px;
+  }
+
+  .slide-body {
+    font-size: 36px;
+    line-height: 1.5;
+  }
+
+  .slide-body ul {
+    margin: 0;
+    padding-left: 1.1em;
+  }
+
+  .slide-body li {
+    margin-bottom: 22px;
+  }
+
+  .slide-body li:last-child { margin-bottom: 0; }
+
+  .slide-body a { color: var(--accent); }
+
+  .slide-wide-image {
+    display: block;
+    width: 100%;
+    max-height: 260px;
+    object-fit: contain;
+    margin: 10px 0 18px;
+    border-radius: 8px;
+  }
+
+  .depth-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 14px;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .depth-nav.depth-up {
+    bottom: auto;
+    top: 14px;
+  }
+
+  .depth-nav:hover {
+    background: rgba(0,0,0,0.75);
+  }
+
+  .title-slide {
+    text-align: left;
+    justify-content: center;
+  }
+
+  .title-slide .slide-title {
+    font-size: 76px;
+    margin-bottom: 16px;
+  }
+
+  .title-slide .slide-subtitle {
+    font-size: 34px;
+    color: var(--muted);
+  }
+
+  .highlight-slide {
+    background: #fff7e6;
+  }
+
+  .highlight-slide .kicker {
+    color: #b25e00;
+  }
+
+  /* A single list with some words already struck through -- the narrowing
+     mechanic demoed in place, before any reveal. */
+  .crossoff-list {
+    list-style: none;
+    margin: 30px 0 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .crossoff-list li {
+    font-size: 42px;
+    padding: 14px 0;
+  }
+
+  .crossoff-list li.crossoff-out {
+    color: #9aa0a6;
+    text-decoration: line-through;
+  }
+
+  /* A real, un-curated word list, as many as came in -- wraps freely, no
+     fixed count the way every other slide kind keeps to. */
+  .wordcloud-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    align-content: flex-start;
+    margin-top: 24px;
+  }
+
+  .wordcloud-chip {
+    background: #f1f3f5;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-size: 24px;
+  }
+
+  /* Two candidate word-lists shown side by side, so the room can guess
+     which list and which word the next slide reveals. */
+  .twolists-wrap {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .twolists-col { flex: 0 1 380px; }
+
+  .twolists-label {
+    font-size: 30px;
+    color: var(--muted);
+    margin: 0 0 16px;
+    text-align: center;
+  }
+
+  .twolists-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .twolists-col li {
+    font-size: 36px;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .twolists-col li:last-child { border-bottom: none; }
+
+  /* One narrowed word, large, center; the four it beat, struck through,
+     at the compass points around it. A static end-state snapshot, not an
+     animation of the narrowing itself. */
+  .radial-wrap {
+    position: relative;
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .radial-word {
+    position: absolute;
+    font-size: 32px;
+    font-weight: 600;
+    color: #9aa0a6;
+    text-decoration: line-through;
+  }
+
+  .radial-top { top: 0; left: 50%; transform: translateX(-50%); }
+  .radial-bottom { bottom: 0; left: 50%; transform: translateX(-50%); }
+  .radial-left { top: 50%; left: 0; transform: translateY(-50%); }
+  .radial-right { top: 50%; right: 0; transform: translateY(-50%); }
+
+  .radial-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--accent);
+    background: #fff;
+    border: 3px solid var(--accent);
+    border-radius: 16px;
+    padding: 20px 48px;
+    white-space: nowrap;
+  }
+
+  .quote-slide .slide-title { font-size: 48px; margin-bottom: 24px; }
+
+  .quote-text {
+    margin: 0 0 24px;
+    padding-left: 36px;
+    border-left: 8px solid var(--accent);
+    font-size: 44px;
+    line-height: 1.35;
+  }
+  .quote-text.quote-lg { font-size: 34px; }
+  .quote-text.quote-xl { font-size: 30px; }
+
+  .quote-cite {
+    font-size: 26px;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* Temperature check: two walls, students physically stand on the line
+     between them. Left wall in the accent color, right wall in the warm one. */
+  .wall-wrap {
+    display: flex;
+    gap: 48px;
+    flex: 1 1 auto;
+    margin-top: 10px;
+    min-height: 0;
+  }
+
+  .wall-side {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 28px;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.25;
+    border-radius: 16px;
+    border: 5px solid var(--accent);
+    color: var(--accent);
+  }
+
+  .wall-side.wall-right {
+    border-color: #b25e00;
+    color: #b25e00;
+  }
+
+  .slide-counter-badge {
+    position: absolute;
+    bottom: 18px;
+    right: 24px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+
+  /* --- Toolbar (not part of the scaled stage, so it stays a readable,
+     fixed size regardless of projector distance / zoom level) --- */
+  .toolbar {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: #1b1f23;
+    color: #fff;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .toolbar button {
+    background: #333a42;
+    color: #fff;
+    border: 1px solid #4a545e;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .toolbar button:hover { background: #444e58; }
+  .toolbar button.active { background: var(--accent); border-color: var(--accent); }
+  .toolbar button:disabled { opacity: 0.4; cursor: default; }
+
+  .toolbar .spacer { flex: 1 1 auto; }
+  .toolbar .counter { min-width: 4.5em; text-align: center; }
+  .toolbar a.back-link { color: #9db8e8; text-decoration: none; font-size: 14px; }
+  .toolbar a.back-link:hover { text-decoration: underline; }
+
+  /* --- Speaker notes panel: docked below the stage, plain readable text,
+     hidden by default so a mirrored/projected display shows a clean deck. --- */
+  .notes-panel {
+    flex: 0 0 auto;
+    background: #f6f8fa;
+    border-top: 1px solid var(--border);
+    padding: 16px 24px;
+    max-height: 26vh;
+    overflow-y: auto;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .notes-panel h3 {
+    margin: 0 0 6px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+
+  .click-zone {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    cursor: pointer;
+  }
+  .click-zone.left { left: 0; }
+  .click-zone.right { right: 0; }
+
+  /* --- Outline / print-notes view: a plain scrollable page listing every
+     slide with its full speaker notes, meant for printing ahead of class. --- */
+  .outline {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  .outline h1 { margin-bottom: 4px; }
+  .outline .outline-sub { color: var(--muted); margin-top: 0; }
+
+  .outline-slide {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    break-inside: avoid;
+  }
+
+  .outline-slide h2 {
+    margin: 0 0 8px;
+    font-size: 22px;
+  }
+
+  .outline-slide .outline-bullets {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0 0 14px;
+  }
+
+  .outline-slide .outline-notes {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .outline-slide .outline-notes p:first-child { margin-top: 0; }
+
+  @media print {
+    .toolbar { display: none !important; }
+    .outline { height: auto; overflow: visible; }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone@7.25.6/babel.min.js"></script>
+
+<script type="text/babel" data-type="module">
+{% raw %}
+const { useState, useEffect, useRef, useCallback } = React;
+
+// Edit this array to change the deck. `bullets` is what the room sees on the
+// slide (keep it short); `notes` is only ever shown in the notes panel or the
+// printable outline, so it can be a full paragraph. A bullet can be a plain
+// string, or { text, href } to render as a link.
+const SLIDES = [
+  {
+    kind: "title",
+    kicker: "For teachers and administrators",
+    title: "What Does Delete Mean?",
+    subtitle: "A Socratic seminar on privacy, data, and one doorbell camera",
+    notes: "A short overview for colleagues or an administrator deciding whether to run or approve the seminar. About ten minutes, including the three videos. The full classroom deck, with every stop and hand-out marked, is linked on the last slide."
+  },
+  {
+    kind: "bullets",
+    kicker: "The idea",
+    title: "A Real Question",
+    bullets: [
+      "Students press Delete daily without asking what it does",
+      "A real camera, a real case, and a promise from Google",
+      "No single right answer, and some facts still unknown",
+      "It reaches their own AI chats, not just a doorbell"
+    ],
+    notes: "The seminar starts from one question: what should a company promise when you press Delete? The honest answer is not obvious, and an engineer cannot simply decide it, because many data systems mark data for deletion and remove it later. That is why students have something real to argue about. It also reaches students' own lives: many ask AI chatbots questions they would not say aloud, and the companies' deletion policies differ in ways that matter. A doorbell video is easy to hold at a distance; a midnight question is not."
+  },
+  {
+    kind: "bullets",
+    kicker: "The format",
+    title: "What Students Do",
+    bullets: [
+      "Read a one-page true story and take a position",
+      "Discuss in a fishbowl, with a hot seat",
+      "Watch two responses to a Super Bowl ad",
+      "Sort claims, move on the line, write what changed"
+    ],
+    notes: "It is a Socratic seminar: the students' talk does the work, not the teacher's slides. The teacher stays mostly silent, and the plan says where to stop each round. Students move to a line before, during, and after the discussion, which makes changes of mind visible."
+  },
+  {
+    kind: "bullets",
+    kicker: "The hook",
+    title: "One Camera, Two Accounts",
+    bullets: [
+      "A sheriff said the doorbell camera was disconnected",
+      "The FBI later released video from it",
+      "Google says you can delete footage “at any time”",
+      "Reporters: unclear how the video was recovered"
+    ],
+    notes: "Sources: NBC News, Fox News, and Google's own Nest safety page, all read directly. The seminar does not claim Google secretly kept the footage. The documented facts are narrower, and the uncertainty is the point. The case is real and still open, so the seminar stays on the camera and does not discuss the crime."
+  },
+  {
+    kind: "bullets",
+    kicker: "Moment 1",
+    title: "The Ring Ad",
+    bullets: [
+      "A 30-second Super Bowl ad about finding a lost dog",
+      { text: "Watch it on Ring's YouTube channel", href: "https://www.youtube.com/watch?v=OheUzrXsKrY" }
+    ],
+    notes: "Ring's own upload (YouTube lists the channel as Ring). In the classroom deck it is the warm-up: students react first, before they hear any argument. The link opens in a new tab. Preview it before presenting."
+  },
+  {
+    kind: "bullets",
+    kicker: "Moment 2",
+    title: "A Creator Responds",
+    bullets: [
+      "WeRateDogs argues the ad makes mass surveillance feel acceptable",
+      { text: "Watch it on YouTube", href: "https://www.youtube.com/watch?v=-ITnLiqKbeI" }
+    ],
+    notes: "About three minutes. This is the first of the two Round 2 videos, and in the classroom run it was a real reveal for students. YouTube lists the channel as WeRateDogs. It is one person arguing a position, and some figures in it are his own claims. Preview it first."
+  },
+  {
+    kind: "bullets",
+    kicker: "Moment 3",
+    title: "A Competitor Responds",
+    bullets: [
+      "Wyze sells security cameras. This parody is an ad for Wyze.",
+      { text: "Watch it on YouTube", href: "https://www.youtube.com/watch?v=ROFblZ_-9q4" }
+    ],
+    notes: "About 70 seconds. YouTube lists the channel as Wyze. It is a competing camera company's parody, which is the media-literacy point of the next slide. Preview it first."
+  },
+  {
+    kind: "highlight",
+    kicker: "Why it works",
+    title: "Nobody Is a Neutral Source",
+    bullets: [
+      "Ring: a company selling a feature",
+      "WeRateDogs: a creator arguing a position",
+      "Wyze: a competitor selling against Ring",
+      "Students ask: documented, claimed, or unknown?"
+    ],
+    notes: "This is the evidence-evaluation skill the seminar practices: who made it, why, and what would each one leave out. It transfers to any source students meet, which is the reason to teach it with a topic they care about."
+  },
+  {
+    kind: "bullets",
+    kicker: "Learning goals",
+    title: "What Students Learn",
+    bullets: [
+      "Weigh one design choice's benefits and harms",
+      "Explain the privacy risk of data kept after Delete",
+      "Separate documented, claimed, and unknown",
+      "Discuss with evidence, and change a position"
+    ],
+    notes: "AP CSP Big Idea 5, Impact of Computing: IOC-1.A (a single outcome can be helpful in one respect and damaging in another), IOC-2.A (privacy dangers of gathering and keeping personal data), and the abstraction practice (a simple button hides a complicated system). Impact of Computing is 21 to 26 percent of the multiple-choice exam, per the course and exam description. The discussion goal aligns with Common Core speaking and listening and reading informational text (SL.6.1 and SL.9-10.1, SL.6.3 and SL.9-10.3, RI.6.1 and RI.9-10.1, RI.6.8 and RI.9-10.8). The format also aligns with California's AB 873 on media literacy and digital citizenship (effective January 1, 2024). The lesson plan links each standard."
+  },
+  {
+    kind: "bullets",
+    kicker: "Evidence",
+    title: "How You Know It Worked",
+    bullets: [
+      "Entry ticket: a position, evidence by paragraph",
+      "Observer organizer: who built on whose idea",
+      "Temperature checks: who moved, and why",
+      "Exit ticket: a promise a company could keep"
+    ],
+    notes: "Everything is collected during the seminar, so no separate quiz is needed. Grading is on evidence and honesty, not on the position a student lands on. “I changed my mind because of what someone said” is the best possible answer."
+  },
+  {
+    kind: "bullets",
+    kicker: "Practicalities",
+    title: "What You Need",
+    bullets: [
+      "A projector, YouTube, one printed handout",
+      "A one-page reading and a deck with notes",
+      "About 80 minutes, less with the skip marks",
+      "No AI tools, accounts, or student data collected"
+    ],
+    notes: "The lesson plan has a slide-by-slide table with start times and marks the sections that can be skipped for a shorter period. Estimates, not timed runs. Students work on paper, so the seminar itself collects no student data, which matters for a lesson about data."
+  },
+  {
+    kind: "highlight",
+    kicker: "For administrators",
+    title: "Handled With Care",
+    bullets: [
+      "The case is real and open. We stay on the camera.",
+      "Quotes are verbatim, from sources checked",
+      "Claims that could not be verified were left out",
+      "A one-line redirect if students go to the crime"
+    ],
+    notes: "The reading never speculates about the crime and never mentions the disputes between the agencies. If a student goes there, the teacher says once: we are not discussing the case, we are discussing the camera. Several details that appear in older teaching materials on this topic could not be verified and were deliberately not used."
+  },
+  {
+    kind: "title",
+    kicker: "Find it",
+    title: "Everything Is Ready to Use",
+    bullets: [
+      { text: "The lesson plan", href: "/2026/10/22/what-does-delete-mean-seminar.html" },
+      { text: "The full classroom deck, with speaker notes", href: "/delete-seminar-slides/" },
+      { text: "The printable handout", href: "/socratic-seminar-handout/" },
+      { text: "The Socratic Seminar Kit", href: "/socratic-seminar-kit/" }
+    ],
+    notes: "The handout link opens a blank handout. The lesson plan links the same handout with this seminar's topic and exit question filled in, so nothing needs retyping."
+  }
+];
+
+// A bullet is either a plain string, or { text, href } to render as a link.
+function renderBullets(bullets) {
+  return (
+    <ul>
+      {bullets.map((b, i) => (
+        <li key={i}>{typeof b === "string" ? b : <a href={b.href} {...(/^https?:/.test(b.href) ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{b.text}</a>}</li>
+      ))}
+    </ul>
+  );
+}
+
+function Stage({ slide, aspect }) {
+  const arClass = aspect === "4:3" ? "ar-4-3" : "ar-16-9";
+  if (slide.kind === "title") {
+    return (
+      <div className={"stage title-slide " + arClass}>
+        {slide.kicker && <p className="kicker">{slide.kicker}</p>}
+        <h1 className="slide-title">{slide.title}</h1>
+        {slide.subtitle && <p className="slide-subtitle">{slide.subtitle}</p>}
+        {slide.bullets && <div className="slide-body">{renderBullets(slide.bullets)}</div>}
+      </div>
+    );
+  }
+  if (slide.kind === "quote") {
+    // A provision or a statement shown verbatim, large; type shrinks for
+    // longer passages so the whole quote always fits on the stage.
+    const len = slide.quote.length;
+    const sizeClass = len > 300 ? " quote-xl" : len > 150 ? " quote-lg" : "";
+    return (
+      <div className={"stage quote-slide " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <blockquote className={"quote-text" + sizeClass}>{"“"}{slide.quote}{"”"}</blockquote>
+        <p className="quote-cite">{slide.cite}</p>
+      </div>
+    );
+  }
+  if (slide.kind === "wall") {
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <div className="wall-wrap">
+          <div className="wall-side wall-left">{slide.left}</div>
+          <div className="wall-side wall-right">{slide.right}</div>
+        </div>
+      </div>
+    );
+  }
+  if (slide.kind === "wide") {
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <img className="slide-wide-image" src={slide.image} alt="" />
+        <div className="slide-body">{renderBullets(slide.bullets)}</div>
+      </div>
+    );
+  }
+  if (slide.kind === "crossoff") {
+    // A single list, some words already struck through -- a concrete demo
+    // of the narrowing mechanic itself, shown before any reveal so the room
+    // sees "crossing off" in action without yet learning the answer.
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <ul className="crossoff-list">
+          {slide.list.map((w, i) => (
+            <li className={slide.crossedOut.includes(w) ? "crossoff-out" : ""} key={i}>{w}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+  if (slide.kind === "wordcloud") {
+    // Deliberately breaks the "few words per slide" rule every other kind
+    // follows -- the point of this one is volume and range, not a short
+    // takeaway.
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <div className="wordcloud-wrap">
+          {slide.words.map((w, i) => <span className="wordcloud-chip" key={i}>{w}</span>)}
+        </div>
+      </div>
+    );
+  }
+  if (slide.kind === "twolists") {
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <div className="twolists-wrap">
+          <div className="twolists-col">
+            <h2 className="twolists-label">List A</h2>
+            <ul>{slide.listA.map((w, i) => <li key={i}>{w}</li>)}</ul>
+          </div>
+          <div className="twolists-col">
+            <h2 className="twolists-label">List B</h2>
+            <ul>{slide.listB.map((w, i) => <li key={i}>{w}</li>)}</ul>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  if (slide.kind === "radial") {
+    // One narrowed word, large, in the middle; the words it beat arranged
+    // around it, struck through. A static snapshot of "after narrowing,"
+    // not an animation of the process -- see the commit message for why.
+    const positions = ["top", "right", "bottom", "left"];
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        {slide.subtitle && <p className="slide-subtitle">{slide.subtitle}</p>}
+        <div className="radial-wrap">
+          {slide.around.map((w, i) => (
+            <div className={"radial-word radial-" + positions[i]} key={i}>{w}</div>
+          ))}
+          <div className="radial-center">{slide.center}</div>
+        </div>
+      </div>
+    );
+  }
+  const extraClass = slide.kind === "highlight" ? " highlight-slide" : "";
+  return (
+    <div className={"stage " + arClass + extraClass}>
+      <p className="kicker">{slide.kicker}</p>
+      <h1 className="slide-title">{slide.title}</h1>
+      <div className="slide-body">{renderBullets(slide.bullets)}</div>
+    </div>
+  );
+}
+
+function ScaledStage({ slide, aspect }) {
+  const outerRef = useRef(null);
+  const [scale, setScale] = useState(1);
+  const designW = 1280;
+  const designH = aspect === "4:3" ? 960 : 720;
+
+  useEffect(() => {
+    const el = outerRef.current;
+    if (!el) return;
+    const recompute = () => {
+      const rect = el.getBoundingClientRect();
+      const s = Math.min((rect.width * 0.98) / designW, (rect.height * 0.98) / designH);
+      setScale(s > 0 ? s : 1);
+    };
+    // Entering/exiting fullscreen can report a stale rect for a frame or
+    // two before the browser finishes resizing the viewport, so the
+    // ResizeObserver callback that follows sometimes measures too early
+    // and leaves the stage scaled for the old (smaller) size with empty
+    // space around it. A double rAF waits for that resize to settle.
+    const recomputeSoon = () => {
+      requestAnimationFrame(() => requestAnimationFrame(recompute));
+    };
+    recompute();
+    const ro = new ResizeObserver(recompute);
+    ro.observe(el);
+    window.addEventListener("resize", recompute);
+    document.addEventListener("fullscreenchange", recomputeSoon);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", recompute);
+      document.removeEventListener("fullscreenchange", recomputeSoon);
+    };
+  }, [designH]);
+
+  return (
+    <div className="stage-outer" ref={outerRef}>
+      <div style={{ transform: `scale(${scale})`, transformOrigin: "center center" }}>
+        <Stage slide={slide} aspect={aspect} />
+      </div>
+    </div>
+  );
+}
+
+function bulletsToText(bullets) {
+  return bullets.map(b => (typeof b === "string" ? b : b.text)).join(" / ");
+}
+
+function OutlineCard({ slide, heading }) {
+  return (
+    <div className="outline-slide">
+      <h2>{heading}</h2>
+      {slide.bullets && <p className="outline-bullets">On slide: {bulletsToText(slide.bullets)}</p>}
+      <div className="outline-notes"><p>{slide.notes}</p></div>
+    </div>
+  );
+}
+
+function Outline() {
+  return (
+    <div className="outline">
+      <h1>What Does Delete Mean? Overview</h1>
+      <p className="outline-sub">Speaker notes outline. Print this before class if you'd rather have paper than toggle notes on screen.</p>
+      {SLIDES.map((s, i) => (
+        <OutlineCard slide={s} heading={`${i + 1}. ${s.title}`} key={i} />
+      ))}
+    </div>
+  );
+}
+
+// Deep-linking: ?slide=3 opens on that slide (1-indexed, to match the
+// on-screen counter), ?outline=1 opens straight into the speaker-notes
+// outline.
+function initialStateFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const slideParam = parseInt(params.get("slide"), 10);
+  const index = Number.isInteger(slideParam) ? Math.min(Math.max(slideParam - 1, 0), SLIDES.length - 1) : 0;
+  const mode = params.get("outline") ? "outline" : "deck";
+  return { index, mode };
+}
+
+function App() {
+  const initial = initialStateFromUrl();
+  const [index, setIndex] = useState(initial.index);
+  const [showNotes, setShowNotes] = useState(false);
+  const [aspect, setAspect] = useState("16:9");
+  const [mode, setMode] = useState(initial.mode); // "deck" | "outline"
+
+  const slide = SLIDES[index];
+
+  const next = useCallback(() => setIndex(i => Math.min(i + 1, SLIDES.length - 1)), []);
+  const prev = useCallback(() => setIndex(i => Math.max(i - 1, 0)), []);
+
+  useEffect(() => {
+    function onKey(e) {
+      if (mode !== "deck") {
+        if (e.key === "Escape") setMode("deck");
+        return;
+      }
+      if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); next(); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); prev(); }
+      else if (e.key === "n" || e.key === "N") setShowNotes(v => !v);
+      else if (e.key === "f" || e.key === "F") toggleFullscreen();
+      else if (e.key === "o" || e.key === "O") setMode("outline");
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [mode, next, prev]);
+
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
+    else document.exitFullscreen();
+  }
+
+  if (mode === "outline") {
+    return (
+      <div className="app">
+        <div className="toolbar">
+          <a className="back-link" href="/2026/10/22/what-does-delete-mean-seminar.html">&larr; What Does Delete Mean? Overview</a>
+          <div className="spacer"></div>
+          <button onClick={() => setMode("deck")}>Back to slides (Esc)</button>
+          <button onClick={() => window.print()}>Print</button>
+        </div>
+        <Outline />
+      </div>
+    );
+  }
+
+  return (
+    <div className="app">
+      <div className="stage-outer" style={{ position: "relative" }}>
+        <ScaledStage slide={slide} aspect={aspect} />
+        <div className="click-zone left" onClick={prev} title="Previous slide"></div>
+        <div className="click-zone right" onClick={next} title="Next slide"></div>
+        <div className="slide-counter-badge">{index + 1} / {SLIDES.length}</div>
+      </div>
+      {showNotes && (
+        <div className="notes-panel">
+          <h3>Speaker notes</h3>
+          <p>{slide.notes}</p>
+        </div>
+      )}
+      <div className="toolbar">
+        <a className="back-link" href="/2026/10/22/what-does-delete-mean-seminar.html">&larr; What Does Delete Mean? Overview</a>
+        <div className="spacer"></div>
+        <button onClick={prev} disabled={index === 0}>&larr; Prev</button>
+        <span className="counter">{index + 1} / {SLIDES.length}</span>
+        <button onClick={next} disabled={index === SLIDES.length - 1}>Next &rarr;</button>
+        <button className={showNotes ? "active" : ""} onClick={() => setShowNotes(v => !v)}>Notes (N)</button>
+        <button onClick={() => setMode("outline")}>Print notes (O)</button>
+        <button onClick={() => setAspect(a => a === "16:9" ? "4:3" : "16:9")}>{aspect}</button>
+        <button onClick={toggleFullscreen}>Fullscreen (F)</button>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+{% endraw %}
+</script>
+</body>
+</html>

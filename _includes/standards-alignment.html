@@ -14,19 +14,27 @@
   this post's slug (data-chapter="{{ page.slug }}", matching the locator each
   category carrier uses for its posts).
 
+  A post that already shows its own widget can add a second one for a different
+  carrier by including this file with a carrier parameter (the carrier slug as a
+  quoted string). That second widget is a whole-source summary, like an override,
+  and the include then skips the style and script, which the post's own widget
+  already loaded. The Socratic seminar posts use this to add the discourse-skills
+  carrier next to their own reading's alignment.
+
   data-scope-label names the whole carrier itself (used in the "see this ___
   on the full standards map" / "view this ___'s own report" links), never
   this one post -- "category" for a category carrier, "unit" for an override
   like Little Brother's.
 {% endcomment %}
 {% assign lesson_cat = site.data.lesson_categories | where: "id", page.lesson_category | first %}
-{% assign std_carrier = page.standards_carrier | default: lesson_cat.carrier %}
+{% assign std_carrier = include.carrier | default: page.standards_carrier | default: lesson_cat.carrier %}
 {% if std_carrier %}
 {% assign std_base = site.standards_base | default: "https://learn.porttack.com" %}
-<details class="standards-alignment" data-base="{{ std_base }}" data-carrier-slug="{{ std_carrier }}" data-carrier-url="{{ std_base }}/standards/data/carriers/{{ std_carrier | replace: '_', '-' }}.json" data-scope-label="{% if page.standards_carrier %}unit{% else %}category{% endif %}"{% unless page.standards_carrier %} data-chapter="{{ page.slug }}"{% endunless %} hidden>
+<details class="standards-alignment" data-base="{{ std_base }}" data-carrier-slug="{{ std_carrier }}" data-carrier-url="{{ std_base }}/standards/data/carriers/{{ std_carrier | replace: '_', '-' }}.json" data-scope-label="{% if page.standards_carrier or include.carrier %}unit{% else %}category{% endif %}"{% unless page.standards_carrier or include.carrier %} data-chapter="{{ page.slug }}"{% endunless %} hidden>
   <summary>Standards alignment</summary>
   <div class="standards-alignment-body"></div>
 </details>
+{% unless include.carrier %}
 <style>
   .standards-alignment{margin:1.5em 0;border:1px solid rgba(128,128,128,.35);border-radius:6px;padding:0 1.2em;font-size:0.9em;color:#555;}
   .standards-alignment > summary{cursor:pointer;font-weight:600;padding:0.8em 0;}
@@ -48,4 +56,5 @@
   .standards-alignment-group h3:first-of-type{margin-top:0.5em;}
 </style>
 <script src="{{ std_base }}/assets/js/standards-alignment.js" defer></script>
+{% endunless %}
 {% endif %}

@@ -237,3 +237,7 @@ Common Core ELA (California adoption): SL.6.1 / SL.9-10.1, SL.6.3 / SL.9-10.3, R
 - **5.6 Safe Computing.** The robot's student IDs, stored conversations, and flagged-term alerts.
 
 Check these topic labels against the current College Board framework before citing them formally.
+
+**General seminar standards.** Two alignment widgets follow. The first covers the discourse skills the seminar format itself practices (communicating effectively, reasoned judgment from evidence, perspective-taking, honesty, and questioning your own beliefs), whatever the reading. The second covers this seminar's own reading.
+
+{% include standards-alignment.html carrier="socratic_seminar_kit" %}

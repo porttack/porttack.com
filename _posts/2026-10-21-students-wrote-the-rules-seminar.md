@@ -179,3 +179,7 @@ I grade evidence and honesty, not the position landed on. "I changed my mind bec
 ## Standards
 
 Common Core ELA (California adoption): SL.6.1 / SL.9-10.1, SL.6.3 / SL.9-10.3, RI.6.1 / RI.9-10.1, RI.6.8 / RI.9-10.8, W.6.1 / W.9-10.1. What each one covers is in the [kit](/socratic-seminar-kit/#common-core-and-california-mandates). The bill is also a primary source in civics terms: a document drafted, amended, and voted on by its subjects.
+
+**General seminar standards.** Two alignment widgets follow. The first covers the discourse skills the seminar format itself practices (communicating effectively, reasoned judgment from evidence, perspective-taking, honesty, and questioning your own beliefs), whatever the reading. The second covers this seminar's own reading.
+
+{% include standards-alignment.html carrier="socratic_seminar_kit" %}
