@@ -1,12 +1,12 @@
 ---
-title: "What Does Delete Mean?: Overview"
+title: "You Deleted It. Is It Gone? (Overview)"
 permalink: /delete-seminar-overview/
 ---
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>What Does Delete Mean?: Overview</title>
+<title>You Deleted It. Is It Gone? (Overview)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {
@@ -449,8 +449,8 @@ const SLIDES = [
   {
     kind: "title",
     kicker: "For teachers and administrators",
-    title: "What Does Delete Mean?",
-    subtitle: "A Socratic seminar on privacy, data, and one doorbell camera",
+    title: "You Deleted It. Is It Gone?",
+    subtitle: "A Socratic seminar on doorbell cameras and AI chats",
     notes: "A short overview for colleagues or an administrator deciding whether to run or approve the seminar. About ten minutes, including the three videos. The full classroom deck, with every stop and hand-out marked, is linked on the last slide."
   },
   {
@@ -584,7 +584,7 @@ const SLIDES = [
     kicker: "Find it",
     title: "Everything Is Ready to Use",
     bullets: [
-      { text: "The lesson plan", href: "/2026/10/22/what-does-delete-mean-seminar.html" },
+      { text: "The lesson plan", href: "/2026/10/22/you-deleted-it-is-it-gone.html" },
       { text: "The full classroom deck, with speaker notes", href: "/delete-seminar-slides/" },
       { text: "The printable handout", href: "/socratic-seminar-handout/" },
       { text: "The Socratic Seminar Kit", href: "/socratic-seminar-kit/" }
@@ -789,7 +789,7 @@ function OutlineCard({ slide, heading }) {
 function Outline() {
   return (
     <div className="outline">
-      <h1>What Does Delete Mean? Overview</h1>
+      <h1>You Deleted It. Is It Gone? Overview</h1>
       <p className="outline-sub">Speaker notes outline. Print this before class if you'd rather have paper than toggle notes on screen.</p>
       {SLIDES.map((s, i) => (
         <OutlineCard slide={s} heading={`${i + 1}. ${s.title}`} key={i} />
@@ -846,7 +846,7 @@ function App() {
     return (
       <div className="app">
         <div className="toolbar">
-          <a className="back-link" href="/2026/10/22/what-does-delete-mean-seminar.html">&larr; What Does Delete Mean? Overview</a>
+          <a className="back-link" href="/2026/10/22/you-deleted-it-is-it-gone.html">&larr; You Deleted It. Is It Gone? Overview</a>
           <div className="spacer"></div>
           <button onClick={() => setMode("deck")}>Back to slides (Esc)</button>
           <button onClick={() => window.print()}>Print</button>
@@ -871,7 +871,7 @@ function App() {
         </div>
       )}
       <div className="toolbar">
-        <a className="back-link" href="/2026/10/22/what-does-delete-mean-seminar.html">&larr; What Does Delete Mean? Overview</a>
+        <a className="back-link" href="/2026/10/22/you-deleted-it-is-it-gone.html">&larr; You Deleted It. Is It Gone? Overview</a>
         <div className="spacer"></div>
         <button onClick={prev} disabled={index === 0}>&larr; Prev</button>
         <span className="counter">{index + 1} / {SLIDES.length}</span>

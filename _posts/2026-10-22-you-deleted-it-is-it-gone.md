@@ -1,13 +1,17 @@
 ---
 layout: post
-title: "What Does Delete Mean? A Socratic Seminar on a Doorbell Camera"
+title: "You Deleted It. Is It Gone? A Socratic Seminar on Doorbell Cameras and AI Chats"
 categories: lesson-plans
+redirect_from: /2026/10/22/what-does-delete-mean-seminar.html
 label: Lesson Plan
 lesson_category: society
-excerpt: "A doorbell camera, no subscription, and video the sheriff said had been disconnected. The FBI says it came from 'residual data located in backend systems.' A ready-to-run Socratic seminar on a question every engineer who builds one has to answer: what should a company promise when you press Delete?"
+excerpt: "A doorbell camera, no subscription, and video the sheriff said had been disconnected. The FBI says it came from 'residual data located in backend systems.' A ready-to-run Socratic seminar on a question every engineer who builds one has to answer: what should a company promise when you press Delete?<br><a href='/2026/10/22/you-deleted-it-is-it-gone.html'><img src='https://www.pcworld.com/wp-content/uploads/2026/02/Ring-Search-Party-Super-Bowl-ad-3.jpg?quality=50&strip=all&w=1024' alt='Screenshot from Ring&#39;s Super Bowl ad showing the Search Party feature tracking a lost dog' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 ---
 
-Slides: **[What Does Delete Mean?](/delete-seminar-slides/)** &middot; Short overview for colleagues and administrators: **[What Does Delete Mean? Overview](/delete-seminar-overview/)**
+<img src="https://www.pcworld.com/wp-content/uploads/2026/02/Ring-Search-Party-Super-Bowl-ad-3.jpg?quality=50&strip=all&w=1024" alt="Screenshot from Ring's Super Bowl ad showing the Search Party feature tracking a lost dog" style="max-height: 250px; width: auto; display: block; margin: 0 auto 0.4em;">
+<p style="text-align: center;"><small>A still from Ring's Super Bowl ad, in which a neighborhood's cameras search for a lost dog. (via PCWorld)</small></p>
+
+Slides: **[You Deleted It. Is It Gone?](/delete-seminar-slides/)** &middot; Short overview for colleagues and administrators: **[You Deleted It. Is It Gone? Overview](/delete-seminar-overview/)**
 
 ## Learning goals
 
@@ -20,14 +24,14 @@ By the end of the seminar, students can:
 
 ## Materials
 
-The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=What%20Does%20Delete%20Mean%3F&exit=Write%20one%20sentence%20a%20company%20should%20promise%20customers%20when%20they%20press%20Delete%2C%20including%20how%20long%20it%20takes.): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the one-sheet handout.
+The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=You%20Deleted%20It.%20Is%20It%20Gone%3F&exit=Write%20one%20sentence%20a%20company%20should%20promise%20customers%20when%20they%20press%20Delete%2C%20including%20how%20long%20it%20takes.): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the one-sheet handout.
 
 
 Specific to this seminar:
 
-- **Handout:** [print the two-sided handout with this seminar's questions filled in](/socratic-seminar-handout/?topic=What%20Does%20Delete%20Mean%3F&exit=Write%20one%20sentence%20a%20company%20should%20promise%20customers%20when%20they%20press%20Delete%2C%20including%20how%20long%20it%20takes.). The front is the entry ticket; the back is the observer organizer and the exit ticket. Name and period are at the top.
+- **Handout:** [print the two-sided handout with this seminar's questions filled in](/socratic-seminar-handout/?topic=You%20Deleted%20It.%20Is%20It%20Gone%3F&exit=Write%20one%20sentence%20a%20company%20should%20promise%20customers%20when%20they%20press%20Delete%2C%20including%20how%20long%20it%20takes.). The front is the entry ticket; the back is the observer organizer and the exit ticket. Name and period are at the top.
 - **Reading, printable (one page):** [The Delete Button](/delete-reading-1/). The same text is below. Round 2 is two videos, not a reading.
-- **Slides:** [What Does Delete Mean?](/delete-seminar-slides/), with speaker notes and a diagram for the engineer's note. The first five slides are a five-minute warm-up on the Ring ad (the poll, [the ad itself on Ring's YouTube channel](https://www.youtube.com/watch?v=OheUzrXsKrY), the first reaction, and how Search Party works). Press S on any warm-up slide to skip to the seminar, or open [the deck at slide 6](/delete-seminar-slides/?slide=6). The discussion slides carry an amber "stay here" cue in the toolbar, so you know where to stop for each round. Round 2 plays two videos: [WeRateDogs](https://www.youtube.com/watch?v=-ITnLiqKbeI) and [Wyze](https://www.youtube.com/watch?v=ROFblZ_-9q4).
+- **Slides:** [You Deleted It. Is It Gone?](/delete-seminar-slides/), with speaker notes and a diagram for the engineer's note. The first five slides are a five-minute warm-up on the Ring ad (the poll, [the ad itself on Ring's YouTube channel](https://www.youtube.com/watch?v=OheUzrXsKrY), the first reaction, and how Search Party works). Press S on any warm-up slide to skip to the seminar, or open [the deck at slide 6](/delete-seminar-slides/?slide=6). The discussion slides carry an amber "stay here" cue in the toolbar, so you know where to stop for each round. Round 2 plays two videos: [WeRateDogs](https://www.youtube.com/watch?v=-ITnLiqKbeI) and [Wyze](https://www.youtube.com/watch?v=ROFblZ_-9q4).
 - **Run of show:** below. Two rounds, no spoken third round.
 
 This builds on [Finding Fido, or Finding You?]({% post_url 2026-03-04-finding-fido-or-finding-you %}), which covers Ring's Search Party. That lesson is about function creep and opt-out defaults. This one is about one question inside it: what "delete" means.
@@ -139,7 +143,7 @@ Start times are in minutes from the beginning of the class, with the sections yo
 | 1–5 (optional) | 0, skippable | The Ring warm-up: poll, play the ad, first reaction, how Search Party works. Press S on any of them to skip to slide 6. |
 | 6–8 | 5 | Title, goals, and the five norms. Read the norms out loud, and add one sentence: "We are talking about the camera, not the crime." |
 | 9 | 10 | **Opening temperature check.** Students stand on a line. One wall: "Delete should mean gone, right away." The other: "Delete can take time, as long as the company tells you how long." Note where the room sits. |
-| 10 | 13 | **Hand out [the reading](/delete-reading-1/) and the [two-sided handout](/socratic-seminar-handout/?topic=What%20Does%20Delete%20Mean%3F&exit=Write%20one%20sentence%20a%20company%20should%20promise%20customers%20when%20they%20press%20Delete%2C%20including%20how%20long%20it%20takes.).** Students read, then fill in the entry ticket on the front. |
+| 10 | 13 | **Hand out [the reading](/delete-reading-1/) and the [two-sided handout](/socratic-seminar-handout/?topic=You%20Deleted%20It.%20Is%20It%20Gone%3F&exit=Write%20one%20sentence%20a%20company%20should%20promise%20customers%20when%20they%20press%20Delete%2C%20including%20how%20long%20it%20takes.).** Students read, then fill in the entry ticket on the front. |
 | 11–15 | 17 | Project the facts. Keep it brisk, since they have read it. Slide 15, "What Nobody Has Confirmed," is the honest middle. |
 | **16** | 20 | **Stop. "Your Delete Button."** Quiet, private thinking about an AI chat. Nobody shares. The optional teacher demo fits here. |
 | 17 | 22 | "Deleting an AI Chat": what three companies publish, and that students cannot check it from outside. |

@@ -1,12 +1,12 @@
 ---
-title: "What Does Delete Mean?: Slides"
+title: "You Deleted It. Is It Gone? (Slides)"
 permalink: /delete-seminar-slides/
 ---
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>What Does Delete Mean?: Slides</title>
+<title>You Deleted It. Is It Gone? (Slides)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {
@@ -595,9 +595,9 @@ const SLIDES = [
     id: "seminar-start",
     kind: "title",
     kicker: "Socratic Seminar",
-    title: "What Does Delete Mean?",
+    title: "You Deleted It. Is It Gone?",
     subtitle: "One camera. One button. One word.",
-    notes: "Draft deck for the Delete seminar. Lesson plan: /2026/10/22/what-does-delete-mean-seminar.html. The format (norms, fishbowl, tickets) is in the Socratic Seminar Kit: /socratic-seminar-kit/. Two rounds, plus a short spoken engineer's note between them."
+    notes: "Classroom deck for the seminar. Lesson plan: /2026/10/22/you-deleted-it-is-it-gone.html. The format (norms, fishbowl, tickets) is in the Socratic Seminar Kit: /socratic-seminar-kit/. Two rounds, plus a short spoken engineer's note between them."
   },
   {
     kind: "bullets",
@@ -891,7 +891,7 @@ const SLIDES = [
     kicker: "More",
     title: "Full Write-Up",
     bullets: [
-      { text: "The lesson plan", href: "/2026/10/22/what-does-delete-mean-seminar.html" },
+      { text: "The lesson plan", href: "/2026/10/22/you-deleted-it-is-it-gone.html" },
       { text: "Finding Fido, or Finding You?", href: "/2026/03/04/finding-fido-or-finding-you.html" }
     ],
     notes: "Point people here if they want to run it themselves."
@@ -1129,7 +1129,7 @@ function OutlineCard({ slide, heading }) {
 function Outline() {
   return (
     <div className="outline">
-      <h1>What Does Delete Mean?</h1>
+      <h1>You Deleted It. Is It Gone?</h1>
       <p className="outline-sub">Speaker notes outline. Print this before class if you'd rather have paper than toggle notes on screen.</p>
       {SLIDES.map((s, i) => (
         <OutlineCard slide={s} heading={`${i + 1}. ${s.title}`} key={i} />
@@ -1189,7 +1189,7 @@ function App() {
     return (
       <div className="app">
         <div className="toolbar">
-          <a className="back-link" href="/2026/10/22/what-does-delete-mean-seminar.html">&larr; What Does Delete Mean?</a>
+          <a className="back-link" href="/2026/10/22/you-deleted-it-is-it-gone.html">&larr; You Deleted It. Is It Gone?</a>
           <div className="spacer"></div>
           <button onClick={() => setMode("deck")}>Back to slides (Esc)</button>
           <button onClick={() => window.print()}>Print</button>
@@ -1215,7 +1215,7 @@ function App() {
         </div>
       )}
       <div className="toolbar">
-        <a className="back-link" href="/2026/10/22/what-does-delete-mean-seminar.html">&larr; What Does Delete Mean?</a>
+        <a className="back-link" href="/2026/10/22/you-deleted-it-is-it-gone.html">&larr; You Deleted It. Is It Gone?</a>
         {slide.handout && <span className="handout-badge">&#128196; {slide.handout}</span>}
         {slide.pause && <span className="pause-badge">&#9208; {slide.pause}</span>}
         <div className="spacer"></div>
