@@ -9,6 +9,7 @@ standards_carrier: socratic_seminar_kit
 - Everything here is your wording from the Prove Me Wrong post (norms, fishbowl, boundaries, the three tickets, the temperature-check rationale, the grading line, the Common Core list and AB 873 paragraph), moved into one shared page.
 - Two things are mine, not yours: the short intro, and the AB 873 sentence about how seminars connect to it, which I generalized from your sentence about AI tools. Both are flagged inline. Rewrite them.
 - The three tickets are now one two-sided printable page, socratic-seminar-handout.html, whose layout is mine. Its "Topic," extra entry question, and extra exit question come from link parameters or the boxes on the page.
+- The "Playing the other side" section, its rubric, and the fourth entry-ticket question are new and are not your original wording. The rubric and the advice on choosing defenders are suggestions to adjust. The role-card page (socratic-seminar-cards.html) is also new.
 - This page is a root-level markdown file, so it is public as soon as it is pushed. It has no draft category.
 -->
 
@@ -60,23 +61,41 @@ The fishbowl gives a calm ladder. A seat in the circle is a privilege, not a rig
 
 The goal is not to be harsh. It is to protect the students who came to think from the one who came to perform.
 
+## Playing the other side
+
+Three moves that make students argue the strongest version of a side they do not hold. Use one, two, or all three.
+
+**1. The best argument for the other side (every seminar).** The entry ticket's fourth question asks for it: "What is the best argument for the side you did not pick? Say it so well that someone who holds that view would agree you got it right." Everyone prepares the other side before they speak, so no one has to be assigned a side, and it works when the room is lopsided. In the fishbowl, ask: "Who heard a strong argument for the side you didn't pick?"
+
+**2. Grade it.** This is the line on the handout worth grading closely: how well thought out it is, not whether the student agrees with it. A simple rubric:
+
+| | Strong | Developing | Not yet |
+|---|---|---|---|
+| **Fair** | Stated the way someone who holds the view would state it | Mostly fair, but a little weaker than the real argument | A caricature, or the student's own side restated |
+| **Specific** | Cites a paragraph, a quote, or a detail from the reading | General, with little support from the reading | No support |
+| **Reasoned** | Explains why the argument matters, not only what it is | Gives a reason but does not connect it | A bare claim |
+
+Adjust it to your gradebook. The rest of the handout is still graded for effort and honesty.
+
+**3. Assigned defenders (optional, when the room is lopsided).** Choose one or two students to argue the side most of the room does not hold, in the fishbowl. The temperature check already ranks the room: the line is the data. Ask for volunteers first. If nobody volunteers, ask students near the middle of the line, who have the least to give up. Do not pick the people at the loud end. Use it in a later round, such as the swap in Round 2, and not the first, so the first discussion stays authentic. Give each defender a role card with a few points from the reading ([print blank role cards](/socratic-seminar-cards/); a lesson plan links them already filled in). Say out loud who is playing a role. Afterward, ask what it was like to argue the side they did not hold. The optional second exit-ticket line asks it.
+
 ## The handout
 
 One sheet, two sides, with name and period at the top: <a id="handout-link" href="/socratic-seminar-handout/"><strong>Print the handout</strong></a>. Print double-sided and flip on the long edge.
 
-- **Front: the entry ticket.** Filled out after the reading, before the seminar starts. Three prompts: two questions the reading raises for you, ones you could actually argue about; a starting side, and why ("Changing your mind during the seminar is not losing. It is the point."); and two pieces of evidence from the reading, by paragraph number.
+- **Front: the entry ticket.** Filled out after the reading, before the seminar starts. Four prompts: two questions the reading raises for you, ones you could actually argue about; a starting side, and why ("Changing your mind during the seminar is not losing. It is the point."); two pieces of evidence from the reading, by paragraph number; and the best argument for the side you did not pick (see Playing the other side).
 - **Back, top: the observer organizer.** The outer circle fills it in while watching; it is their ticket into the hot seat. Four things to catch: an idea they agreed with, an idea they would push back on, the strongest point made, and a question nobody has asked yet. Under it, a tally of each time someone builds on another person's idea instead of starting over. That tally is the difference between a discussion and a set of speeches.
 - **Back, bottom: the exit ticket.** "Did your thinking move today? Three sentences: what you believed walking in, what you believe now, and what said or asked in the room moved you (or held you in place)."
 
-A seminar can add one question to the entry ticket and one to the exit ticket, to check a specific goal. Each lesson plan links to the handout with its own questions filled in. If you reached this page from a lesson plan, the link above already carries that seminar's topic and questions. You can also type your own on the handout page before printing.
+A seminar can add one question to the entry ticket (printed as question 5) and up to two to the exit ticket, to check a specific goal. Each lesson plan links to the handout with its own questions filled in. If you reached this page from a lesson plan, the link above already carries that seminar's topic and questions. You can also type your own on the handout page before printing.
 
-I grade effort and honesty here, not the position landed on. "I changed my mind because of what someone said" is the best possible answer.
+I grade effort and honesty here, not the position landed on. "I changed my mind because of what someone said" is the best possible answer. The one line worth grading closely is the best-argument question; the rubric is under Playing the other side.
 
 ## Evidence the format produces
 
 Every seminar collects the same artifacts, and none of them needs a separate quiz:
 
-- **Entry ticket:** a starting position and evidence cited by paragraph number.
+- **Entry ticket:** a starting position, evidence cited by paragraph number, and the best argument for the other side.
 - **Observer organizer:** what the outer circle caught, and the tally of times a student built on someone else's idea.
 - **Temperature checks:** a count of who moved, and why, from the before-and-after (or three-point) checks.
 - **Exit ticket:** what they believed, what they believe now, and what moved them.

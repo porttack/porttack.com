@@ -1,0 +1,201 @@
+---
+title: "Socratic Seminar Role Cards"
+permalink: /socratic-seminar-cards/
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Socratic Seminar Role Cards</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { --ink: #1b1f23; --muted: #57606a; --a: #2a7ae2; --b: #b25e00; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #e9edf1;
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 12pt;
+    line-height: 1.35;
+  }
+
+  /* --- On-screen tools (never printed) --- */
+  .tools {
+    max-width: 8.5in;
+    margin: 16px auto;
+    padding: 14px 18px 16px;
+    background: #fff;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  .tools h2 { margin: 0 0 6px; font-size: 16px; }
+  .tools p { margin: 0 0 8px; color: var(--muted); }
+  .tools label { display: block; margin: 10px 0 3px; font-weight: 600; }
+  .tools input[type=text], .tools textarea {
+    width: 100%; padding: 7px 9px; font-size: 14px; border: 1px solid #c4cbd2; border-radius: 6px; font-family: inherit;
+  }
+  .tools textarea { min-height: 84px; }
+  .tools .cols { display: flex; gap: 16px; flex-wrap: wrap; }
+  .tools .col { flex: 1 1 300px; }
+  .tools .buttons { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .tools button {
+    padding: 8px 16px; font-size: 14px; border-radius: 6px; cursor: pointer;
+    border: 1px solid #2a7ae2; background: #2a7ae2; color: #fff;
+  }
+  .tools button.secondary { background: #fff; color: #2a7ae2; }
+
+  /* --- One sheet: four cards, two for each side --- */
+  .sheet {
+    width: 8.5in;
+    height: 11in;
+    margin: 16px auto;
+    background: #fff;
+    padding: 0.5in;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.18);
+    overflow: hidden;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 3.75in 3.75in;
+    grid-template-rows: 4.95in 4.95in;
+  }
+  .card {
+    border: 1.5px dashed #6b7178;
+    padding: 0.28in 0.3in 0.22in;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .card .role { font-size: 9pt; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin: 0; }
+  .card .side { font-size: 26pt; font-weight: 800; line-height: 1.05; margin: 2px 0 8px; padding-bottom: 8px; border-bottom: 5px solid var(--a); }
+  .card.b .side { border-bottom-color: var(--b); }
+  .card .ptitle { font-size: 10pt; font-weight: 700; margin: 0 0 4px; }
+  .card ul { margin: 0 0 8px; padding-left: 1.1em; font-size: 11pt; }
+  .card li { margin-bottom: 5px; }
+  .card .starter { font-size: 10.5pt; margin: auto 0 6px; padding: 6px 8px; background: #f1f3f5; border-radius: 4px; }
+  .card .foot { font-size: 8pt; color: var(--muted); margin: 0; }
+
+  @media print {
+    body { background: #fff; }
+    .tools { display: none; }
+    @page { size: letter; margin: 0.5in; }
+    .sheet { width: auto; height: 10in; margin: 0; padding: 0; box-shadow: none; }
+    .card .side, .card .starter { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tools">
+  <h2>Socratic seminar role cards</h2>
+  <p>One sheet makes four cards: two for each side. Print as many copies as you need and cut along the dashed lines. Hand a card to each student who will argue a side they did not pick. The sheet fills in from the lesson plan's link, or type your own below.</p>
+  <label for="in-topic">Seminar topic (printed small on each card)</label>
+  <input type="text" id="in-topic" placeholder="e.g. Would You Vote Yes on a Robot Tutor?">
+  <div class="cols">
+    <div class="col">
+      <label for="in-a">Side A</label>
+      <input type="text" id="in-a" placeholder="e.g. Buy it">
+      <label for="in-ap">Side A points (one per line)</label>
+      <textarea id="in-ap" placeholder="Two or three points from the reading"></textarea>
+    </div>
+    <div class="col">
+      <label for="in-b">Side B</label>
+      <input type="text" id="in-b" placeholder="e.g. Do not buy it">
+      <label for="in-bp">Side B points (one per line)</label>
+      <textarea id="in-bp" placeholder="Two or three points from the reading"></textarea>
+    </div>
+  </div>
+  <div class="buttons">
+    <button type="button" id="btn-print">Print</button>
+    <button type="button" class="secondary" id="btn-copy">Copy link to this version</button>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="grid" id="grid"></div>
+</div>
+
+<script>
+{% raw %}
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var inTopic = document.getElementById("in-topic");
+  var inA = document.getElementById("in-a"), inAp = document.getElementById("in-ap");
+  var inB = document.getElementById("in-b"), inBp = document.getElementById("in-bp");
+  var grid = document.getElementById("grid");
+
+  // Everything is built with textContent, so nothing typed or passed in the
+  // link can add markup to the page.
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+
+  function card(kind, name, points, topic) {
+    var c = el("div", "card " + kind);
+    c.appendChild(el("p", "role", "Your role"));
+    c.appendChild(el("div", "side", name));
+    c.appendChild(el("p", "ptitle", "Points you can use"));
+    var ul = el("ul");
+    points.forEach(function (p) { ul.appendChild(el("li", "", p)); });
+    c.appendChild(ul);
+    var s = el("div", "starter");
+    s.appendChild(el("b", "", "Start with: "));
+    s.appendChild(document.createTextNode("“I see why people disagree, but…”"));
+    c.appendChild(s);
+    c.appendChild(el("p", "foot", (topic ? topic + ". " : "") + "This is a role. You do not have to agree with it."));
+    return c;
+  }
+
+  function lines(v) {
+    return v.split("\n").map(function (x) { return x.trim(); }).filter(Boolean);
+  }
+
+  function render() {
+    var topic = inTopic.value.trim();
+    var a = inA.value.trim() || "Side A";
+    var b = inB.value.trim() || "Side B";
+    var ap = lines(inAp.value); if (!ap.length) ap = ["Add two or three points from the reading."];
+    var bp = lines(inBp.value); if (!bp.length) bp = ["Add two or three points from the reading."];
+    grid.textContent = "";
+    grid.appendChild(card("a", a, ap, topic));
+    grid.appendChild(card("a", a, ap, topic));
+    grid.appendChild(card("b", b, bp, topic));
+    grid.appendChild(card("b", b, bp, topic));
+
+    var next = new URLSearchParams();
+    if (topic) next.set("topic", topic);
+    if (inA.value.trim()) next.set("a", inA.value.trim());
+    if (inAp.value.trim()) next.set("ap", lines(inAp.value).join("\n"));
+    if (inB.value.trim()) next.set("b", inB.value.trim());
+    if (inBp.value.trim()) next.set("bp", lines(inBp.value).join("\n"));
+    var qs = next.toString();
+    try {
+      window.history.replaceState(null, "", window.location.pathname + (qs ? "?" + qs : ""));
+    } catch (e) {}
+  }
+
+  inTopic.value = params.get("topic") || "";
+  inA.value = params.get("a") || ""; inAp.value = params.get("ap") || "";
+  inB.value = params.get("b") || ""; inBp.value = params.get("bp") || "";
+  [inTopic, inA, inAp, inB, inBp].forEach(function (x) { x.addEventListener("input", render); });
+
+  document.getElementById("btn-print").addEventListener("click", function () { window.print(); });
+  document.getElementById("btn-copy").addEventListener("click", function (e) {
+    var btn = e.currentTarget;
+    var done = function () { btn.textContent = "Copied"; setTimeout(function () { btn.textContent = "Copy link to this version"; }, 1500); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(window.location.href).then(done, function () {});
+    }
+  });
+
+  render();
+})();
+{% endraw %}
+</script>
+</body>
+</html>

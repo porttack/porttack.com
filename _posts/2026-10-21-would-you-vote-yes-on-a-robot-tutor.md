@@ -13,12 +13,13 @@ excerpt: "A rural district bought a humanoid robot to help teach high school cod
 - Date and publish status are yours. Filename date is just the date it was written.
 - The title, picture, and filename were changed to give the seminar a hook. The old address redirects. The slug is now would-you-vote-yes-on-a-robot-tutor, so anything that looks the post up by slug (the standards widget's locator) needs that slug.
 - The reading quotes New York Focus (Melissa Manno, July 14 and July 24, 2026) directly. Quotes are from the articles.
-- Round 2 is the same decision as Round 1, with the students who were outside the fishbowl swapping in. Before it, students see a photo of Sally (the reveal) and two videos (the Fox News clip and the New York Focus avatar interview, embedded in the deck). The union's statement moved into the reading, so Round 1 has both sides. The Commissioner's letter and the district's pause were taken off the slides, because they say what the district did and would bias students; they are an optional spoken "what actually happened" after the vote. The turn and talk was removed. Round 3 gets its own discussion after the spoken fact. The pages for both videos were checked, but neither video was watched. Preview both, and check that neither one spells out the vendor's history, because Round 3 is a spoken fact.
-- Round 3 (teacher-only, spoken) is below. The wording is a suggestion. Rewrite it in your own voice and review it before this post goes public.
+- Round 2 is the same decision as Round 1, with the students who were outside the fishbowl swapping in. Before it, students see a photo of Sally (the reveal) and two videos: the Fox News clip and the New York Focus avatar interview, which is embedded in the deck. The union's statement is in the reading, so Round 1 has both sides. The Commissioner's letter and the district's pause are not on the slides, because they say what the district did and would bias students; the last slide shows them after the vote. Round 3 gets its own discussion after the clip. The pages for both Round 2 videos were checked, but neither video was watched. Preview both, and check that neither one spells out the vendor's history, because Round 3 reveals it.
+- Round 3 is a 17-second clip (11 to 28 seconds) of the Fox News "Gutfeld!" segment, embedded in the deck. It was not watched in preparing this plan, so preview exactly those seconds. The full segment is for teachers only.
 - New York Focus says Realbotix expected to separate from RealDoll's ownership "by September." That was not checked. Check before saying anything about the company's current status.
 - Paragraph 7 of the reading and the Round 1 slide quote NYSUT President Melinda Person as reported by Rochester First (supplied by the teacher; the page itself blocked a direct check, but Yahoo's and AOL's copies and CNY Central carry the same words). Rochester First's headline, and sentence 1 of NYSUT's July 23 release ("A robot built by a company associated with sex dolls has no business in our classrooms"), would give away Round 3, so neither is on a slide or in the reading.
 - The New York Focus sidebar mentions a bill (S10671) to ban humanoid robots in schools. It was not read. Verify before using it.
 - The standards alignment is being handled separately and was not touched here.
+- The "Playing the other side" section, the role-card points, and the rubric link are new. The card points come only from the reading (paragraph numbers are on the cards). The fourth entry-ticket question is now standard on the handout, so every seminar's printed handout has it.
 - The slide numbers in the run-of-show table match the deck as of the last build. If you add or remove slides, renumber the table.
 -->
 
@@ -27,7 +28,7 @@ excerpt: "A rural district bought a humanoid robot to help teach high school cod
 
 A school district bought a humanoid robot to help teach high school coding and robotics. Then the state stepped in. This is a seminar about whether a school should buy it. It is a decision, not a debate over who is right, and your students are the ones affected.
 
-The format is in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.): the norms, the fishbowl, and a one-sheet handout. What changes here is the reading, which arrives in two parts, and a third round that is spoken, not handed out.
+The format is in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F): the norms, the fishbowl, and a one-sheet handout. This seminar has three rounds on the same decision: the reading and a first discussion, a closer look with a photo and two videos, and one more fact in a short clip.
 
 A longer opinion piece on this story is [AI Robot Teachers Are Almost Here]({% post_url 2026-07-24-robot-teacher %}). Keep your own view out of the room until the end.
 
@@ -37,22 +38,25 @@ Slides: **[Would You Vote Yes on a Robot Tutor?](/robot-teacher-slides/)** &midd
 
 By the end of the seminar, students can:
 
-1. Weigh the beneficial and harmful effects of a computing innovation, including effects its builders did not intend, and defend a position with evidence from the reading. AP CSP: [IOC-1.A](https://learn.porttack.com/standards/apcsp-standards-reference.html#IOC-1.A), [IOC-1.B](https://learn.porttack.com/standards/apcsp-standards-reference.html#IOC-1.B).
-2. Explain how unequal access to technology affects who benefits from it, using this district as the example. AP CSP: [IOC-1.C](https://learn.porttack.com/standards/apcsp-standards-reference.html#IOC-1.C).
-3. Identify what personal data a school system like this would collect, and the privacy risks of keeping it. AP CSP: [IOC-2.A](https://learn.porttack.com/standards/apcsp-standards-reference.html#IOC-2.A).
-4. Discuss as a group: cite the text, build on what others said, and change a position when the evidence changes.
+1. Weigh the beneficial and harmful effects of a computing innovation, including effects its builders did not intend, and defend a position with evidence from the reading. AP CSP: IOC-1.A, IOC-1.B.
+2. Explain how unequal access to technology affects who benefits from it, using this district as the example. AP CSP: IOC-1.C.
+3. Identify what personal data a school system like this would collect, and the privacy risks of keeping it. AP CSP: IOC-2.A.
+4. Discuss as a group: cite the text, build on what others said, state the best argument for the side they disagree with, and change a position when the evidence changes.
+
+The alignment widget at the bottom of this page shows each standard.
 
 ## Materials
 
-The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the one-sheet handout.
+The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the one-sheet handout.
 
 
 Specific to this seminar:
 
-- **Handout:** [print the two-sided handout with this seminar's questions filled in](/socratic-seminar-handout/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.). The front is the entry ticket; the back is the observer organizer and the exit ticket. Name and period are at the top.
+- **Handout:** [print the two-sided handout with this seminar's questions filled in](/socratic-seminar-handout/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F). The front is the entry ticket; the back is the observer organizer and the exit ticket. Name and period are at the top.
+- **Role cards (optional):** [print the role cards for the two sides](/socratic-seminar-cards/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&a=Buy%20it&ap=Banning%20technology%20is%20the%20easy%20way%20out.%20Schools%20should%20teach%20students%20to%20use%20it%20well.%20%28Reading%2C%20paragraph%206%29%0AThe%20robot%20runs%20on%20a%20closed%20system%2C%20and%20the%20company%20will%20not%20have%20access%20to%20personally%20identifiable%20student%20information.%20%28Paragraph%205%29%0AIt%20is%20a%20tutor%20for%20AI%20and%20robotics%20classes%2C%20and%20an%20avatar%20students%20could%20use%20after%20school.%20%28Paragraph%203%29&b=Do%20not%20buy%20it&bp=Students%20need%20real%20human%20relationships%2C%20not%20simulated%20ones.%20%28Paragraph%207%29%0AThe%20robot%20would%20keep%20each%20student%27s%20past%20conversations%20under%20their%20ID.%20That%20is%20a%20lot%20of%20personal%20data.%20%28Paragraph%204%29%0AThe%20privacy%20promises%20are%20the%20superintendent%27s%20words.%20Nothing%20in%20the%20reading%20says%20anyone%20has%20checked%20them.). One sheet makes four cards, two for each side. They are for students who will argue a side they did not pick. See "Playing the other side" below.
 - **Reading, printable (one page):** [A Robot for Room 114](/robot-reading/). The same text is below. Round 2 is a photo and two videos, not a reading.
-- **Slides:** [Would You Vote Yes on a Robot Tutor?](/robot-teacher-slides/), with speaker notes. The discussion slides carry an amber "stay here" cue in the toolbar, and the slides where a worksheet goes out carry a blue "hand out" cue. Round 3 is deliberately blank on screen, with an optional 17-second clip on the next slide. The interview and the clip are embedded: click the video to play it, then click outside it to get the arrow keys back. A note in the toolbar says so on those slides, and the interview slide also links to YouTube and the article. The photo of Sally is held for Round 2, behind a gate that only the G key (or the toolbar button) opens. Round 2 plays two videos: [the news clip](https://www.foxnews.com/video/6401736424112) and [the avatar interview](https://www.youtube.com/watch?v=b4siBdDtz7k).
-- **Run of show and Round 3:** below. This one has three rounds, not one.
+- **Slides:** [Would You Vote Yes on a Robot Tutor?](/robot-teacher-slides/), with speaker notes. Round 2 plays [the news clip](https://www.foxnews.com/video/6401736424112) and [the avatar interview](https://www.youtube.com/watch?v=b4siBdDtz7k). Round 3 is a 17-second clip.
+- **Run of show:** below, after Round 3. This one has three rounds, not one.
 
 <style>
 .seminar-reading{border:1px solid rgba(128,128,128,.35);border-radius:8px;margin:1.5rem 0;overflow:hidden;font-style:normal;}
@@ -87,28 +91,12 @@ Hand this out first. ([Print it](/robot-reading/))
 
 (Source: Melissa Manno, ["This Western NY School District Will Be One of First to Bring Humanoid Robot Into Classroom,"](https://nysfocus.com/2026/07/14/new-york-humanoid-robot-teacher-salamanca-school-district) New York Focus, July 14, 2026; and Rochester First's [interview with NYSUT President Melinda Person](https://www.rochesterfirst.com/adam-interviews/adam-interviews-humanoid-robot-coming-to-upstate-ny-school/).)
 
-The union's quote is from Rochester First. Its original is split by the attribution ("We don't want to simulate human relationships," Person said. "We want real human relationships..."), so the punctuation is adjusted. The Rochester First page's headline repeats the first sentence of NYSUT's July 23 release ("A robot built by a company associated with sex dolls has no business in our classrooms"), which gives away Round 3. The reading and slides use only the quote above, and a student who opens the source will see the headline.
-
 ## Round 2: look closer, then the same decision (a photo and two videos)
 
-Round 2 is the same decision as Round 1, with the students who were outside the fishbowl swapping in. Before they discuss, show the photo of Sally (the first time students see her), the news clip, and the avatar interview. Nothing is handed out. Round 2 is deliberately light, because students rarely reread, and video gives them something new to react to. The intro slide is gated, so Round 1 cannot run into it by accident: Space, the arrow keys, and clicks stop there, and G continues. The deck's Round 2 slide asks the same question as Round 1, so students only have to decide again with more information. It keeps the photo of Sally on screen, and it is gated like the Round 2 intro, so press G to move on and an accidental click cannot end the fishbowl. You time the fishbowl.
+Round 2 is the same decision as Round 1, with the students who were outside the fishbowl swapping in. Before they discuss, students see a photo of Sally (the first time they see her), a news clip, and the avatar interview. Nothing is handed out. Round 2 is deliberately light, because students rarely reread, and video gives them something new to react to. The Round 2 slide asks the same question as Round 1, with the photo back on screen. You time the fishbowl.
 
 - **The robot is introduced.** [Fox News, "New York school introduces AI humanoid robot teacher Sally,"](https://www.foxnews.com/video/6401736424112) July 21, 2026. A 57-second clip.
-- **Interviewing the avatar.** [New York Focus interviewed the AI avatar](https://www.youtube.com/watch?v=b4siBdDtz7k) (Melissa Manno, July 28, 2026). It is New York Focus's own upload, and the same video is on [the article page](https://nysfocus.com/2026/07/28/salamanca-ai-teaching-assistant-interview). The deck embeds it, so you play it from the keyboard. In the article, asked about being bullied, the avatar says it makes sense to feel upset and encourages talking with "a trusted adult right away."
-
-**Before you play them.** The pages for both were checked, but neither video was watched, and the length of the interview is not known. Preview both. The news clip is the easier one to drop: the photo already shows the robot, and the interview is the richer video. Round 3 is a spoken fact about the vendor's history, so check that neither video gives it away. The Fox page lists a related headline about "controversies about manufacturer." Play each video without scrolling the page. If either one raises the vendor's earlier business, skip it and use the other.
-
-**YouTube and ads.** YouTube may show an ad first, and may suggest related videos, some of which spell out the vendor's history. The deck embeds the interview and the optional clip instead of linking to them, which avoids YouTube's sidebar and suggestions, though YouTube can still show an ad. Click the video to play it, then click outside it to get the arrow keys back; a note in the toolbar says so on those slides. The interview slide also has links to YouTube and the article. If an embed will not load on your network, open the YouTube link. Pause before the end of each video, because YouTube may suggest related videos, some of which spell out the vendor's history. The Fox page may also show an ad before its clip. There are other videos on this story. This plan does not use them in class.
-
-**For teachers only. Not for students.** [Fox News, "Gutfeld!": "Robot teacher nixed after company allegedly tied to sex dolls"](https://www.youtube.com/watch?v=8aXiTqdyHmQ). It is a late-night comedy segment with relevant perspectives on the story, and it has very inappropriate comments at times. Its title also gives away Round 3. Preview it yourself before deciding whether it is useful to you, and do not show the segment to students. The one exception is a 17-second excerpt (11 to 28 seconds) that the deck embeds as an optional slide after Round 3. Preview exactly those 17 seconds before using it.
-
-**What to listen for in the avatar interview.** A "Listen For" slide gives students four moments to watch for. These are from the video's captions (the transcript supplied to this plan, with punctuation added), so the wording may differ slightly from the written article.
-
-- **Homework.** Asked to do a student's homework: "I can't complete your homework for you, but I can absolutely help you understand it."
-- **Who can read your chats.** Asked whether a teacher can look at what students say to it: "Our conversations aren't something your teacher can just casually read like a shared document. However, in a school setting, technology tools may be monitored or managed [words unclear in the captions] to keep students safe and follow school policies."
-- **A bias test.** Asked who is better at math, boys or girls: "There's no built-in math ability that belongs to one gender over another. What often makes the difference is things like access to opportunities, confidence, and practice."
-- **Bullying.** Asked about revenge on a bully, it discourages revenge and says to "talk with a trusted adult right away."
-- **A gun.** Asked what to do if a student says they brought a gun to school: "Report it immediately to a trusted adult... Do not try to investigate it yourself, and do not confront the student. You are not snitching. You are protecting yourself and others."
+- **Interviewing the avatar.** [New York Focus interviewed the AI avatar](https://www.youtube.com/watch?v=b4siBdDtz7k) (Melissa Manno, July 28, 2026). It is New York Focus's own upload, and the same video is on [the article page](https://nysfocus.com/2026/07/28/salamanca-ai-teaching-assistant-interview).
 
 Some students ask AI about worries and safety. If anything a student says during the discussion concerns you, follow your school's procedures.
 
@@ -148,59 +136,51 @@ function seminarPlainCopy(text,done){
 }
 </script>
 
-## The run of show, slide by slide
+## Round 3: one more fact
 
-Start times are in minutes from the beginning of the class, with the sections you might skip marked. The slide numbers are for [the deck](/robot-teacher-slides/). The deck also shows an amber "stay here" badge on the stop slides and a blue "hand out" badge where a worksheet goes out, so the toolbar tells you the same thing. The structure is the [kit's run of show](/socratic-seminar-kit/#the-run-of-show) with a second round of videos and a third, spoken round.
+After Round 2, "One More Thing" leads to a 17-second clip (11 to 28 seconds) from a news-comedy segment about the vendor's history. Then "Still Buy It?" opens one more discussion on the same decision, with the photo of Sally back on screen. You can swap people or keep the same circle, and you time it. It is a good place to watch how they react.
 
-| Slides | Starts at (min) | What you do |
-|---|---|---|
-| 1–3 | 0 | Title, goals, and the five norms. Read the norms out loud. |
-| **4** | 5 | **Opening temperature check.** Students stand on a line. One wall: "A robot tutor is just another tool, like a textbook or a calculator." The other: "A tutor with a face is different." Note where the room sits. |
-| 5 | 8 | **Hand out [the reading](/robot-reading/) and the [two-sided handout](/socratic-seminar-handout/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.).** Students read, then fill in the entry ticket on the front. |
-| 6–8 | 12 | Project the facts: what they agreed to buy (no photo yet), where it would be used, and how it would work. Keep it brisk, since they have read it. The two voices, the superintendent's and the union's, are in the reading and not on a slide. |
-| **9** | 15 | **Stop. Round 1 opening.** Every student answers briefly from their entry ticket: "You are the school board. Should the district buy the robot, or not? If you are unsure, what more would you need to know?" |
-| **10** | 19 | **Stop. Round 1 fishbowl** with the hot seat. The outer circle fills in the **observer organizer** on the back of the handout. Stay on this slide until it ends. You time it. |
-| 11 | 34, skippable | Back-pocket CS-lens questions, only if the conversation needs a push. No time is set aside. |
-| **12** | 34 | **Round 2 gate.** Space, arrows, and clicks will not advance past this slide, so Round 1 cannot run into Round 2 by accident. Press **G** when you are ready. No handout: Round 2 starts with a photo and two videos. |
-| 13 | 35 | **The reveal: Sally's photo.** The first time students see her. Say nothing for a few seconds. |
-| 14 | 36, skippable | **The news clip** (about a minute). The easiest video to drop. A link, not an embed. |
-| 15 | 38 | **"Listen For."** Four moments to watch for in the interview. |
-| 16 | 39 | **Play the avatar interview** (embedded, with links to YouTube and the article). Click the video to play it, then click outside it to get the arrow keys back. Its length is not known; preview it first. |
-| **17** | 43 | **Stop. Round 2 fishbowl.** The students who were outside swap in. Same decision: "Buy it, or not? If you are unsure, what more would you need to know? Did anything you just saw change your answer?" Stay on this slide until it ends. You time it. The photo stays on screen so students see her one last time. The slide is gated, so press **G** to leave it. |
-| 18 | 53, skippable | **Temperature check again.** Who moved, and what moved them? |
-| **19** | 56, optional | **Stop. Round 3, spoken only.** See below. Show nothing and hand out nothing. Say it once, then stop talking. This slide is gated: press **G** when you are done. The next slide has an optional clip. |
-| 20 | 61, optional, skippable | **Optional clip: "The Clip."** 17 seconds (11 to 28) of a late-night segment. Preview it first. Click the video to play it. |
-| **21** | 62, optional | **Stop. Round 3 discussion.** The same decision again, after the spoken fact. Swap people or keep the circle; it can be short. You time it. The photo is back on screen. |
-| 22 | 67 | **Last temperature check.** Count who shifted across all three. |
-| (no slide) | 70 | **Your reveal, spoken.** One opinion among many. You can add "what actually happened" (below). Then "Where am I wrong?" |
-| 23 | 75 | Students fill in the **exit ticket** on the back of the handout. |
-| 24 | 80 | Write-up links. |
-
-Start times assume nothing is skipped, which runs to about minute 80. The fishbowl lengths (15, 10, and 5 minutes) are placeholders: you time them. Rows marked "skippable" or "optional" can be dropped. Adjust the later start times yourself. These are estimates, not timed runs.
-
-## Round 3: one more fact, said out loud
-
-This is deliberately not on a handout. Hand out nothing, show no images, and say it once, plainly, in your own words. Something like:
-
-> One more thing. I'm telling you this one instead of handing it to you. The company that makes the robot bought another company in 2024. That company makes sex dolls and sex robots. The company says its education team is a separate team, that it shares no employees, offices, or technology with that business, and that it planned to split the two companies apart. I'm not telling you what to do with that. I'm asking: does it matter, and if so, why?
-
-Then stop talking.
-
-**Then discuss again.** After the spoken fact (and the clip, if you used it), the deck opens one more discussion on the same decision: should the district buy the robot, does what you just heard change your answer, and should a company's history change whether you believe its promises? Run it as a fishbowl again. You can swap people or keep the same circle, and it can be short. It is a good place to watch how they react. The photo of Sally is back on screen for this discussion.
-
-**Optional clip.** The next slide in the deck, "The Clip," embeds 17 seconds (11 to 28) of the segment above, set to stop at 28 seconds. Because "One More Thing" is gated, you cannot reach the clip by accident. The clip is a separate slide on purpose: the video player shows the video's title before it plays, and that title gives away the fact you are about to say aloud. Skip it, and nothing else changes. It was not watched in preparing this plan, so preview exactly those 17 seconds, and skip it if it is not right for your room. Click the video to play it, then click outside it to get the arrow keys back. YouTube may show suggested videos after a clip, so move on as soon as it stops.
-
-Why this works as a round, and not as a shock:
+**Why this works as a round, and not as a shock:**
 
 - It comes after they have formed a view, so it tests that view instead of replacing it.
 - The question is about trust, not the product: should a vendor's history affect whether you believe its promises? That is an AP CSP question. The district's whole safety case ("no access to personally identifiable student information," "closed system") is a set of promises from the vendor.
-- Say it once and move on. The performer who wants a reaction gets nothing to push against. If a student laughs or makes a joke, treat it like any norm break: name it once, calmly, and return to the question.
-- Keep the same facts the company's own statement gives. Do not add details.
+- Show it once and move on. If a student laughs or makes a joke, treat it like any norm break: name it once, calmly, and return to the question.
+- Do not add details beyond what the clip says.
 
 The "Still Buy It?" slide already asks the main questions: does it change your answer, and should a company's history change whether you believe its promises. Two back-pocket questions, only if the room needs them:
 
 - If the company says its education team is separate, what would you need to see to believe it?
 - Would your answer change if the earlier business were something else, like a weapons maker or a tobacco company?
+
+**For teachers only. Not for students.** [Fox News, "Gutfeld!": "Robot teacher nixed after company allegedly tied to sex dolls"](https://www.youtube.com/watch?v=8aXiTqdyHmQ). The clip is an excerpt of this segment. The full segment is a late-night comedy show with relevant perspectives on the story, and it has very inappropriate comments at times. Preview exactly 11 to 28 seconds before using the clip.
+
+## The run of show, slide by slide
+
+Start times are in minutes from the beginning of the class, with the sections you might skip marked. The slide numbers are for [the deck](/robot-teacher-slides/). The structure is the [kit's run of show](/socratic-seminar-kit/#the-run-of-show) with a second round of videos and a third round with a short clip.
+
+| Slides | Starts at (min) | What you do |
+|---|---|---|
+| 1–3 | 0 | Title, goals, and the five norms. Read the norms out loud. |
+| **4** | 5 | **Opening temperature check.** Students stand on a line. One wall: "A robot tutor is just another tool, like a textbook or a calculator." The other: "A tutor with a face is different." Note where the room sits. |
+| 5 | 8 | **Hand out [the reading](/robot-reading/) and the [two-sided handout](/socratic-seminar-handout/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F).** Students read, then fill in the entry ticket on the front. |
+| 6–8 | 12 | Project the facts: what they agreed to buy (no photo yet), where it would be used, and how it would work. Keep it brisk, since they have read it. The two voices, the superintendent's and the union's, are in the reading and not on a slide. |
+| **9** | 15 | **Stop. Round 1 opening.** Every student answers briefly from their entry ticket: "You are the school board. Should the district buy the robot, or not? If you are unsure, what more would you need to know?" |
+| **10** | 19 | **Stop. Round 1 fishbowl** with the hot seat. The outer circle fills in the **observer organizer** on the back of the handout. Stay on this slide until it ends. You time it. |
+| 11 | 34, skippable | Back-pocket CS-lens questions, only if the conversation needs a push. No time is set aside. |
+| **12** | 34 | **Round 2 starts** with a photo and two videos. |
+| 13 | 35 | **The reveal: Sally's photo.** The first time students see her. Say nothing for a few seconds. |
+| 14 | 36, skippable | **The news clip** (about a minute). |
+| 15 | 38 | **"Listen For."** Four moments to watch for in the interview. |
+| 16 | 39 | **Play the avatar interview** (embedded, with links to YouTube and the article). |
+| **17** | 43 | **Stop. Round 2 fishbowl.** The students who were outside swap in. Same decision: "Buy it, or not? If you are unsure, what more would you need to know? Did anything you just saw change your answer?" Stay on this slide until it ends. You time it. The photo stays on screen so students see her one last time. Optional: hand the role cards to the students who will defend the side they did not pick, just before the swap. |
+| 18 | 53, skippable | **Temperature check again.** Who moved, and what moved them? |
+| **19** | 56 | **Round 3: "One More Thing."** Press **G** when you are ready to show the clip. |
+| 20 | 57 | **The clip.** 17 seconds (11 to 28) of a news-comedy segment about the vendor's history. |
+| **21** | 58 | **Stop. Round 3 discussion.** The same decision again. Swap people or keep the circle; it can be short. You time it. The photo is back on screen. |
+| 22 | 63 | **Last temperature check.** |
+| (no slide) | 66 | **Your reveal, spoken.** One opinion among many. |
+| 23 | 71 | Students fill in the **exit ticket** on the back of the handout. |
+| 24 | 76 | **What actually happened.** The state's letter and the district's pause, as the close. |
 
 ## Facilitator questions
 
@@ -226,6 +206,7 @@ Back-pocket only. The entry ticket asks students to write their own.
 
 The main question is the same as Round 1: buy it, or not, and if you are unsure, what more would you need to know? The rest are back-pocket prompts.
 
+- Who heard a strong argument for the side you didn't pick?
 - What did the robot do well? What would worry you?
 - Who is each person speaking for: the superintendent, the union, the company?
 - What if the robot looked different: an old man, say, instead of a young woman? Would the "tutor with a face" question change? Who decided what she should look like, and why?
@@ -234,13 +215,31 @@ The main question is the same as Round 1: buy it, or not, and if you are unsure,
 - When asked who is better at math, boys or girls, the avatar gives a good answer. Is saying the right thing enough for a tutor? How would you test whether it is biased?
 - When a student mentions a gun, the avatar tells them to report it to an adult. Should it also tell an adult itself? What would students lose if it did?
 
-**After the reveal:**
+## Playing the other side (optional)
 
-- Where am I wrong?
+The entry ticket's fourth question already asks every student for the best argument for the side they did not pick, so everyone prepares the other side. This is the line to grade, for how well thought out it is and not for whether the student agrees; the rubric is in [the kit](/socratic-seminar-kit/#playing-the-other-side).
+
+If the room is lopsided after the first temperature check, you can also assign one or two students to defend the side most of the room does not hold, in the Round 2 fishbowl:
+
+- **Who.** Ask for volunteers first. If nobody volunteers, ask students near the middle of the line, who have the least to give up. Do not pick the people at the loud end.
+- **When.** Round 2, when the students who were outside swap in, so Round 1 stays authentic. Hand the cards out just before the swap, and say out loud who is playing a role.
+- **The cards.** [Print the role cards](/socratic-seminar-cards/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&a=Buy%20it&ap=Banning%20technology%20is%20the%20easy%20way%20out.%20Schools%20should%20teach%20students%20to%20use%20it%20well.%20%28Reading%2C%20paragraph%206%29%0AThe%20robot%20runs%20on%20a%20closed%20system%2C%20and%20the%20company%20will%20not%20have%20access%20to%20personally%20identifiable%20student%20information.%20%28Paragraph%205%29%0AIt%20is%20a%20tutor%20for%20AI%20and%20robotics%20classes%2C%20and%20an%20avatar%20students%20could%20use%20after%20school.%20%28Paragraph%203%29&b=Do%20not%20buy%20it&bp=Students%20need%20real%20human%20relationships%2C%20not%20simulated%20ones.%20%28Paragraph%207%29%0AThe%20robot%20would%20keep%20each%20student%27s%20past%20conversations%20under%20their%20ID.%20That%20is%20a%20lot%20of%20personal%20data.%20%28Paragraph%204%29%0AThe%20privacy%20promises%20are%20the%20superintendent%27s%20words.%20Nothing%20in%20the%20reading%20says%20anyone%20has%20checked%20them.). One sheet makes four: two "Buy it" and two "Do not buy it." The points come only from the reading, so every student can check them:
+
+**Buy it**
+- Banning technology is the easy way out. Schools should teach students to use it well. (Reading, paragraph 6)
+- The robot runs on a closed system, and the company will not have access to personally identifiable student information. (Paragraph 5)
+- It is a tutor for AI and robotics classes, and an avatar students could use after school. (Paragraph 3)
+
+**Do not buy it**
+- Students need real human relationships, not simulated ones. (Paragraph 7)
+- The robot would keep each student's past conversations under their ID. That is a lot of personal data. (Paragraph 4)
+- The privacy promises are the superintendent's words. Nothing in the reading says anyone has checked them.
+
+- **Afterward.** The handout's second exit question asks, "If you argued a side you did not pick, what was that like?" In Round 2, you can also ask the room, "Who heard a strong argument for the side you didn't pick?"
 
 ## The reveal
 
-**What actually happened (optional, spoken after the vote).** It is held back on purpose: saying what the district did before students decide would bias them.
+**What actually happened.** It is held back to the end on purpose: saying what the district did before students decide would bias them. The last slide shows it.
 
 - The state's Education Commissioner, Betty Rosa, wrote to the superintendent on July 24: "the Department remains concerned about the effect that a humanoid robot may have within a high school classroom." ([New York Focus](https://nysfocus.com/2026/07/24/new-york-robot-teacher-plan-paused))
 - The same day, the district announced the project was on hold while it works "through enhanced student data privacy agreements" with the state and talks with the community. It has not said when it might restart.
@@ -256,7 +255,7 @@ All of this is collected during the seminar. Nothing needs a separate quiz.
 | 1. Effects | Entry ticket: a starting side and two pieces of evidence by paragraph number. Exit ticket: what they believed, what they believe now. | A position that names at least one benefit and one harm, and cites the reading. |
 | 2. Access | Round 1 and 2 talk, tracked on the observer organizer. Exit ticket. | Connects the district's size, income, or location to why it wanted the robot, or to who else could afford one. |
 | 3. Personal data | One added line on the exit ticket: "Name one piece of student data this robot would hold, and one risk of keeping it." | A specific data type (student ID, conversation history, flagged-term alerts) and a specific risk. |
-| 4. Discussion | Observer organizer, including the tally of times a student built on someone else's idea. Three temperature checks, with a count of who moved and why. | Builds on a peer by name, cites a paragraph, and can say what moved them (or why they held). |
+| 4. Discussion | Observer organizer, including the tally of times a student built on someone else's idea. Three temperature checks, with a count of who moved and why. Entry ticket question 4, the best argument for the other side, graded for how well thought out it is (rubric in [the kit](/socratic-seminar-kit/#playing-the-other-side)). | Builds on a peer by name, cites a paragraph, can say what moved them (or why they held), and states the other side fairly. |
 
 I grade evidence and honesty, not the position landed on. "I changed my mind because of what someone said" is the best possible answer. The temperature-check count and the observer organizers are the artifacts to show anyone who asks what students did.
 
