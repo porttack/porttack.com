@@ -91,7 +91,7 @@ The union's quote is from Rochester First. Its original is split by the attribut
 
 ## Round 2: look closer, then the same decision (a photo and two videos)
 
-Round 2 is the same decision as Round 1, with the students who were outside the fishbowl swapping in. Before they discuss, show the photo of Sally (the first time students see her), the news clip, and the avatar interview. Nothing is handed out. Round 2 is deliberately light, because students rarely reread, and video gives them something new to react to. The intro slide is gated, so Round 1 cannot run into it by accident: Space, the arrow keys, and clicks stop there, and G continues. The deck's Round 2 slide asks the same question as Round 1, so students only have to decide again with more information. You time the fishbowl.
+Round 2 is the same decision as Round 1, with the students who were outside the fishbowl swapping in. Before they discuss, show the photo of Sally (the first time students see her), the news clip, and the avatar interview. Nothing is handed out. Round 2 is deliberately light, because students rarely reread, and video gives them something new to react to. The intro slide is gated, so Round 1 cannot run into it by accident: Space, the arrow keys, and clicks stop there, and G continues. The deck's Round 2 slide asks the same question as Round 1, so students only have to decide again with more information. It keeps the photo of Sally on screen, and it is gated like the Round 2 intro, so press G to move on and an accidental click cannot end the fishbowl. You time the fishbowl.
 
 - **The robot is introduced.** [Fox News, "New York school introduces AI humanoid robot teacher Sally,"](https://www.foxnews.com/video/6401736424112) July 21, 2026. A 57-second clip.
 - **Interviewing the avatar.** [New York Focus interviewed the AI avatar](https://www.youtube.com/watch?v=b4siBdDtz7k) (Melissa Manno, July 28, 2026). It is New York Focus's own upload, and the same video is on [the article page](https://nysfocus.com/2026/07/28/salamanca-ai-teaching-assistant-interview). The deck embeds it, so you play it from the keyboard. In the article, asked about being bullied, the avatar says it makes sense to feel upset and encourages talking with "a trusted adult right away."
@@ -157,26 +157,26 @@ Start times are in minutes from the beginning of the class, with the sections yo
 | 1–3 | 0 | Title, goals, and the five norms. Read the norms out loud. |
 | **4** | 5 | **Opening temperature check.** Students stand on a line. One wall: "A robot tutor is just another tool, like a textbook or a calculator." The other: "A tutor with a face is different." Note where the room sits. |
 | 5 | 8 | **Hand out [the reading](/robot-reading/) and the [two-sided handout](/socratic-seminar-handout/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.).** Students read, then fill in the entry ticket on the front. |
-| 6–10 | 12 | Project the facts: what they agreed to buy (no photo yet), where it would be used, how it would work, and the two voices, the superintendent and the union. Keep it brisk, since they have read it. |
-| **11** | 16 | **Stop. Round 1 opening.** Every student answers briefly from their entry ticket: "You are the school board. Should the district buy the robot, or not? If you are unsure, what more would you need to know?" |
-| **12** | 20 | **Stop. Round 1 fishbowl** with the hot seat. The outer circle fills in the **observer organizer** on the back of the handout. Stay on this slide until it ends. You time it. |
-| 13 | 35, skippable | Back-pocket CS-lens questions, only if the conversation needs a push. No time is set aside. |
-| **14** | 35 | **Round 2 gate.** Space, arrows, and clicks will not advance past this slide, so Round 1 cannot run into Round 2 by accident. Press **G** when you are ready. No handout: Round 2 starts with a photo and two videos. |
-| 15 | 36 | **The reveal: Sally's photo.** The first time students see her. Say nothing for a few seconds. |
-| 16 | 37, skippable | **The news clip** (about a minute). The easiest video to drop. A link, not an embed. |
-| 17 | 39 | **"Listen For."** Four moments to watch for in the interview. |
-| 18 | 40 | **Play the avatar interview** (embedded, with links to YouTube and the article). Click the video to play it, then click outside it to get the arrow keys back. Its length is not known; preview it first. |
-| **19** | 44 | **Stop. Round 2 fishbowl.** The students who were outside swap in. Same decision: "Buy it, or not? If you are unsure, what more would you need to know? Did anything you just saw change your answer?" Stay on this slide until it ends. You time it. |
-| 20 | 54, skippable | **Temperature check again.** Who moved, and what moved them? |
-| **21** | 57, optional | **Stop. Round 3, spoken only.** See below. Show nothing and hand out nothing. Say it once, then stop talking. The next slide has an optional clip. |
-| 22 | 62, optional, skippable | **Optional clip: "The Clip."** 17 seconds (11 to 28) of a late-night segment. Preview it first. Click the video to play it. |
-| **23** | 63, optional | **Stop. Round 3 discussion.** The same decision again, after the spoken fact. Swap people or keep the circle; it can be short. You time it. |
-| 24 | 68 | **Last temperature check.** Count who shifted across all three. |
-| (no slide) | 71 | **Your reveal, spoken.** One opinion among many. You can add "what actually happened" (below). Then "Where am I wrong?" |
-| 25 | 76 | Students fill in the **exit ticket** on the back of the handout. |
-| 26 | 81 | Write-up links. |
+| 6–8 | 12 | Project the facts: what they agreed to buy (no photo yet), where it would be used, and how it would work. Keep it brisk, since they have read it. The two voices, the superintendent's and the union's, are in the reading and not on a slide. |
+| **9** | 15 | **Stop. Round 1 opening.** Every student answers briefly from their entry ticket: "You are the school board. Should the district buy the robot, or not? If you are unsure, what more would you need to know?" |
+| **10** | 19 | **Stop. Round 1 fishbowl** with the hot seat. The outer circle fills in the **observer organizer** on the back of the handout. Stay on this slide until it ends. You time it. |
+| 11 | 34, skippable | Back-pocket CS-lens questions, only if the conversation needs a push. No time is set aside. |
+| **12** | 34 | **Round 2 gate.** Space, arrows, and clicks will not advance past this slide, so Round 1 cannot run into Round 2 by accident. Press **G** when you are ready. No handout: Round 2 starts with a photo and two videos. |
+| 13 | 35 | **The reveal: Sally's photo.** The first time students see her. Say nothing for a few seconds. |
+| 14 | 36, skippable | **The news clip** (about a minute). The easiest video to drop. A link, not an embed. |
+| 15 | 38 | **"Listen For."** Four moments to watch for in the interview. |
+| 16 | 39 | **Play the avatar interview** (embedded, with links to YouTube and the article). Click the video to play it, then click outside it to get the arrow keys back. Its length is not known; preview it first. |
+| **17** | 43 | **Stop. Round 2 fishbowl.** The students who were outside swap in. Same decision: "Buy it, or not? If you are unsure, what more would you need to know? Did anything you just saw change your answer?" Stay on this slide until it ends. You time it. The photo stays on screen so students see her one last time. The slide is gated, so press **G** to leave it. |
+| 18 | 53, skippable | **Temperature check again.** Who moved, and what moved them? |
+| **19** | 56, optional | **Stop. Round 3, spoken only.** See below. Show nothing and hand out nothing. Say it once, then stop talking. This slide is gated: press **G** when you are done. The next slide has an optional clip. |
+| 20 | 61, optional, skippable | **Optional clip: "The Clip."** 17 seconds (11 to 28) of a late-night segment. Preview it first. Click the video to play it. |
+| **21** | 62, optional | **Stop. Round 3 discussion.** The same decision again, after the spoken fact. Swap people or keep the circle; it can be short. You time it. The photo is back on screen. |
+| 22 | 67 | **Last temperature check.** Count who shifted across all three. |
+| (no slide) | 70 | **Your reveal, spoken.** One opinion among many. You can add "what actually happened" (below). Then "Where am I wrong?" |
+| 23 | 75 | Students fill in the **exit ticket** on the back of the handout. |
+| 24 | 80 | Write-up links. |
 
-Start times assume nothing is skipped, which runs to about minute 81. The fishbowl lengths (15, 10, and 5 minutes) are placeholders: you time them. Rows marked "skippable" or "optional" can be dropped. Adjust the later start times yourself. These are estimates, not timed runs.
+Start times assume nothing is skipped, which runs to about minute 80. The fishbowl lengths (15, 10, and 5 minutes) are placeholders: you time them. Rows marked "skippable" or "optional" can be dropped. Adjust the later start times yourself. These are estimates, not timed runs.
 
 ## Round 3: one more fact, said out loud
 
@@ -186,9 +186,9 @@ This is deliberately not on a handout. Hand out nothing, show no images, and say
 
 Then stop talking.
 
-**Then discuss again.** After the spoken fact (and the clip, if you used it), the deck opens one more discussion on the same decision: should the district buy the robot, does what you just heard change your answer, and should a company's history change whether you believe its promises? Run it as a fishbowl again. You can swap people or keep the same circle, and it can be short. It is a good place to watch how they react.
+**Then discuss again.** After the spoken fact (and the clip, if you used it), the deck opens one more discussion on the same decision: should the district buy the robot, does what you just heard change your answer, and should a company's history change whether you believe its promises? Run it as a fishbowl again. You can swap people or keep the same circle, and it can be short. It is a good place to watch how they react. The photo of Sally is back on screen for this discussion.
 
-**Optional clip.** The next slide in the deck, "The Clip," embeds 17 seconds (11 to 28) of the segment above, set to stop at 28 seconds. It is a separate slide on purpose: the video player shows the video's title before it plays, and that title gives away the fact you are about to say aloud. Skip it, and nothing else changes. It was not watched in preparing this plan, so preview exactly those 17 seconds, and skip it if it is not right for your room. Click the video to play it, then click outside it to get the arrow keys back. YouTube may show suggested videos after a clip, so move on as soon as it stops.
+**Optional clip.** The next slide in the deck, "The Clip," embeds 17 seconds (11 to 28) of the segment above, set to stop at 28 seconds. Because "One More Thing" is gated, you cannot reach the clip by accident. The clip is a separate slide on purpose: the video player shows the video's title before it plays, and that title gives away the fact you are about to say aloud. Skip it, and nothing else changes. It was not watched in preparing this plan, so preview exactly those 17 seconds, and skip it if it is not right for your room. Click the video to play it, then click outside it to get the arrow keys back. YouTube may show suggested videos after a clip, so move on as soon as it stops.
 
 Why this works as a round, and not as a shock:
 
@@ -197,11 +197,9 @@ Why this works as a round, and not as a shock:
 - Say it once and move on. The performer who wants a reaction gets nothing to push against. If a student laughs or makes a joke, treat it like any norm break: name it once, calmly, and return to the question.
 - Keep the same facts the company's own statement gives. Do not add details.
 
-Questions for round 3, back-pocket:
+The "Still Buy It?" slide already asks the main questions: does it change your answer, and should a company's history change whether you believe its promises. Two back-pocket questions, only if the room needs them:
 
-- Does it change your vote? Should it?
 - If the company says its education team is separate, what would you need to see to believe it?
-- Is it fair to judge a product by the history of the company that owns it? When is it fair, and when is it not?
 - Would your answer change if the earlier business were something else, like a weapons maker or a tobacco company?
 
 ## Facilitator questions
@@ -224,17 +222,17 @@ Back-pocket only. The entry ticket asks students to write their own.
 - The district is poorer than most. Does this narrow the gap between rich and poor schools, or widen it?
 - Could a robot tutor be biased? In what ways?
 
-**Round 2 (the videos and the statements):**
+**Round 2 (the photo and the videos):**
 
 The main question is the same as Round 1: buy it, or not, and if you are unsure, what more would you need to know? The rest are back-pocket prompts.
 
 - What did the robot do well? What would worry you?
-- Who is each person speaking for: the superintendent, the union, the state, the company?
+- Who is each person speaking for: the superintendent, the union, the company?
+- What if the robot looked different: an old man, say, instead of a young woman? Would the "tutor with a face" question change? Who decided what she should look like, and why?
 - The district says the robot will not replace teachers, and the union says students need real human relationships. Is there anything they agree on?
 - The superintendent said words like self-harm alert administrators. The avatar says a teacher cannot "just casually read" a student's conversations. Are those the same claim? What would you want clarified?
 - When asked who is better at math, boys or girls, the avatar gives a good answer. Is saying the right thing enough for a tutor? How would you test whether it is biased?
 - When a student mentions a gun, the avatar tells them to report it to an adult. Should it also tell an adult itself? What would students lose if it did?
-- The union says students need "real relationships with caring adults." The superintendent says banning technology is the easy way out. Who is each one speaking for?
 
 **After the reveal:**
 

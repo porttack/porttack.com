@@ -351,6 +351,10 @@ permalink: /robot-teacher-slides/
     font-weight: 600;
   }
 
+  .split-wrap { display: flex; gap: 48px; align-items: center; }
+  .split-text { flex: 1 1 0; }
+  .split-image { flex: 0 0 400px; width: 400px; border-radius: 10px; object-fit: contain; }
+
   .slide-counter-badge {
     position: absolute;
     bottom: 18px;
@@ -572,28 +576,12 @@ const SLIDES = [
     notes: "These are the superintendent's and the company's descriptions, not independently checked. Say so out loud. The superintendent also said the company “will not have access to personally identifiable student information,” and that the robot was trained to say “I don't know” instead of making up an answer. This sets up the CS-lens questions: what data is this, and how would anyone verify the promises?"
   },
   {
-    kind: "quote",
-    kicker: "The superintendent's case",
-    title: "Mark Beehler",
-    quote: "I also believe it is critical for schools to teach proper use of technology, not simply exclude it.",
-    cite: "Superintendent Mark Beehler, via New York Focus",
-    notes: "He also said many schools are taking the easy solution of simply banning it. His case is serious: a small, high-poverty district rarely gets first access to new technology."
-  },
-  {
-    kind: "quote",
-    kicker: "The teachers union",
-    title: "Melinda Person",
-    quote: "We don't want to simulate human relationships. We want real human relationships and for our students to learn how to form them organically.",
-    cite: "Melinda Person, president of NYSUT, to Rochester First",
-    notes: "From Rochester First's interview with NYSUT's president. The reading quotes the same words, so Round 1 has both sides. The original quotation is split by the attribution (\u201c...relationships,\u201d NYSUT President Melinda Person said. \u201cWe want real human relationships...\u201d), so the punctuation here is adjusted. The Rochester First page's headline repeats the first sentence of NYSUT's July 23 release, which would give away Round 3, so do not send students to it before Round 3. A good question to ask, only if the room needs it: is there anything the superintendent and the union agree on?"
-  },
-  {
     kind: "title",
     kicker: "Round 1",
     title: "You Are the School Board",
     pause: "Round 1 opening: every student answers. Stay on this slide.",
     subtitle: "The vote is tonight. Buy the robot, or not? If you're unsure, what would you need to know?",
-    notes: "Every student answers briefly from their entry ticket, so no one has to be brave to go first. About 4 minutes."
+    notes: "Every student answers briefly from their entry ticket, so no one has to be brave to go first. About 4 minutes. The two voices, the superintendent's and the union's, are in paragraphs 6 and 7 of the reading, so no slides repeat them. If the room needs a push: is there anything the superintendent and the union agree on?"
   },
   {
     kind: "bullets",
@@ -677,16 +665,19 @@ const SLIDES = [
     notes: "New York Focus's own upload (YouTube lists the channel as New York Focus), titled \u201cI Interviewed Realbotix's AI Teaching Assistant. Here's What Happened.\u201d Click the video to play it. Clicking inside the player gives it the keyboard, so click outside it afterward to get the arrow keys back (a note in the toolbar says so). The links under the video open the same interview on YouTube or the article page, in case you prefer them or the embed will not load. The video was not watched, so preview it. YouTube may suggest related videos at the end, and some spell out the vendor's history, so pause before the end. In the article, asked about being bullied, the avatar says it makes sense to feel upset and encourages talking with \u201ca trusted adult right away.\u201d"
   },
   {
-    kind: "highlight",
+    id: "round2-discussion",
+    gate: true,
+    kind: "split",
     kicker: "Round 2: the same decision",
     title: "Buy It, or Not?",
-    pause: "Round 2 fishbowl: the students outside swap in. Stay here until it ends.",
+    image: "/docs/assets/images/ny-school-robot-inc.jpeg",
+    pause: "Round 2 fishbowl: the students outside swap in. Press G to continue.",
     bullets: [
       "Should the district buy the robot?",
       "If you're unsure, what more would you need to know?",
       "Did anything you just saw change your answer?"
     ],
-    notes: "Round 2 is the same decision as Round 1. The students who were outside the fishbowl swap in, and you time it. The new information is the photo and the two videos. Back-pocket prompts are in the lesson plan."
+    notes: "Round 2 is the same decision as Round 1. The students who were outside the fishbowl swap in, and you time it. The photo stays on screen so students see her one last time while they decide. This slide is gated: Space, the arrow keys, and clicks will not advance past it, so the discussion cannot be cut short by an accidental click. Press G, or the Continue button in the toolbar, when the fishbowl is over. Back-pocket prompts are in the lesson plan, including what if the robot looked different."
   },
   {
     kind: "wall",
@@ -698,12 +689,14 @@ const SLIDES = [
     notes: "Who moved, and what moved them? Take two or three answers."
   },
   {
+    id: "round3-gate",
+    gate: true,
     kind: "title",
     kicker: "Round 3",
     title: "One More Thing",
-    pause: "Round 3: spoken only. Stay on this slide.",
+    pause: "Round 3: spoken only. Press G to continue.",
     subtitle: "Listen.",
-    notes: "Spoken only. Hand out nothing and show nothing. Say it once, plainly, in your own words, then stop talking. The suggested wording and follow-up questions are in the lesson plan under Round 3. The facts are deliberately not in this slide. If you want to follow your spoken fact with a short clip, the next slide has one, and you can skip it. After the fact (and the clip), the slide after that opens one more discussion on the same decision."
+    notes: "Spoken only. This slide is gated: Space, the arrow keys, and clicks will not advance past it, so you cannot reach the next slide (the clip, whose title gives away the fact) by accident. Press G, or the Continue button in the toolbar, when you are done speaking. Hand out nothing and show nothing. Say it once, plainly, in your own words, then stop talking. The suggested wording and follow-up questions are in the lesson plan under Round 3. The facts are deliberately not in this slide. If you want to follow your spoken fact with a short clip, the next slide has one, and you can skip it. After the fact (and the clip), the slide after that opens one more discussion on the same decision."
   },
   {
     kind: "video",
@@ -715,7 +708,8 @@ const SLIDES = [
     notes: "Optional. 11 to 28 seconds of a Fox News \u201cGutfeld!\u201d segment, set to stop at 28 seconds. It was not watched here, so preview exactly those 17 seconds before using it, and skip this slide if it is not right for your room. The full segment is for teachers only, which is why this slide has no link to it: a link would play the whole segment, not just the 17 seconds. It is a separate slide from \u201cOne More Thing\u201d on purpose: the video player shows the video's title before it plays, and that title gives away the fact you are about to say aloud. Click the video to play it, then click outside it to get the arrow keys back. After the clip, YouTube may show suggested videos, so move on as soon as it stops."
   },
   {
-    kind: "highlight",
+    kind: "split",
+    image: "/docs/assets/images/ny-school-robot-inc.jpeg",
     kicker: "Round 3: the same decision",
     title: "Still Buy It?",
     pause: "Round 3 discussion: swap the circle or keep it. Your call.",
@@ -724,7 +718,7 @@ const SLIDES = [
       "Does what you just heard change your answer?",
       "Should a company's history change whether you believe its promises?"
     ],
-    notes: "One more discussion on the same decision, after the spoken fact (and the clip, if you used it). You can swap people or keep the same circle, and it can be short. This is a good place to watch how they react."
+    notes: "One more discussion on the same decision, with the photo back on screen, after the spoken fact (and the clip, if you used it). You can swap people or keep the same circle, and it can be short. This is a good place to watch how they react."
   },
   {
     kind: "wall",
@@ -822,6 +816,19 @@ function Stage({ slide, aspect }) {
             {slide.links.map((l, i) => <a key={i} href={l.href} target="_blank" rel="noopener noreferrer">{l.text}</a>)}
           </p>
         )}
+      </div>
+    );
+  }
+  if (slide.kind === "split") {
+    // Bullets on the left, a picture on the right.
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <div className="split-wrap">
+          <div className="slide-body split-text">{renderBullets(slide.bullets)}</div>
+          <img className="split-image" src={slide.image} alt="" />
+        </div>
       </div>
     );
   }
