@@ -1,38 +1,26 @@
 ---
 layout: post
-title: "Would You Vote Yes on a Robot Tutor? A Socratic Seminar on a Real School District's Decision"
-categories: draft
-redirect_from: /2026/10/21/robot-teacher-seminar.html
+title: "Can Robotic AI Teachers Do the Work of Real Teachers? A Socratic Seminar"
+categories: lesson-plans
+redirect_from:
+  - /2026/10/21/robot-teacher-seminar.html
+  - /2026/10/21/would-you-vote-yes-on-a-robot-tutor.html
 label: Lesson Plan / AI Literacy
 lesson_category: society
 standards_extra_carrier: socratic_seminar_kit
-excerpt: "A rural district bought a humanoid robot to help teach high school coding and robotics, and then the state stepped in. A ready-to-run Socratic seminar where the students are the school board.<br><a href='/2026/10/21/would-you-vote-yes-on-a-robot-tutor.html'><img src='/docs/assets/images/ny-school-robot-inc.jpeg' alt='Sally, the humanoid robot teaching assistant that Salamanca City Central School District agreed to buy' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
+excerpt: "A rural district agreed to buy a humanoid robot to help teach high school coding and robotics, and then the state stepped in. A ready-to-run Socratic seminar where the students are the school board.<br><a href='/2026/10/23/can-robotic-ai-teachers-do-the-work-of-real-teachers.html'><img src='/docs/assets/images/ny-school-robot-inc.jpeg' alt='Sally, the humanoid robot teaching assistant that Salamanca City Central School District agreed to buy' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 ---
-
-<!-- DRAFT NOTES (delete before publishing)
-- Date and publish status are yours. Filename date is just the date it was written.
-- The title, picture, and filename were changed to give the seminar a hook. The old address redirects. The slug is now would-you-vote-yes-on-a-robot-tutor, so anything that looks the post up by slug (the standards widget's locator) needs that slug.
-- The reading quotes New York Focus (Melissa Manno, July 14 and July 24, 2026) directly. Quotes are from the articles.
-- Round 2 is the same decision as Round 1, with the students who were outside the fishbowl swapping in. Before it, students see a photo of Sally (the reveal) and two videos: the Fox News clip and the New York Focus avatar interview, which is embedded in the deck. The union's statement is in the reading, so Round 1 has both sides. The Commissioner's letter and the district's pause are not on the slides, because they say what the district did and would bias students; the last slide shows them after the vote. Round 3 gets its own discussion after the clip. The pages for both Round 2 videos were checked, but neither video was watched. Preview both, and check that neither one spells out the vendor's history, because Round 3 reveals it.
-- Round 3 is a 17-second clip (11 to 28 seconds) of the Fox News "Gutfeld!" segment, embedded in the deck. It was not watched in preparing this plan, so preview exactly those seconds. The full segment is for teachers only.
-- New York Focus says Realbotix expected to separate from RealDoll's ownership "by September." That was not checked. Check before saying anything about the company's current status.
-- Paragraph 7 of the reading and the Round 1 slide quote NYSUT President Melinda Person as reported by Rochester First (supplied by the teacher; the page itself blocked a direct check, but Yahoo's and AOL's copies and CNY Central carry the same words). Rochester First's headline, and sentence 1 of NYSUT's July 23 release ("A robot built by a company associated with sex dolls has no business in our classrooms"), would give away Round 3, so neither is on a slide or in the reading.
-- The New York Focus sidebar mentions a bill (S10671) to ban humanoid robots in schools. It was not read. Verify before using it.
-- The standards alignment is being handled separately and was not touched here.
-- The "Playing the other side" section, the role-card points, and the rubric link are new. The card points come only from the reading (paragraph numbers are on the cards). The fourth entry-ticket question is now standard on the handout, so every seminar's printed handout has it.
-- The slide numbers in the run-of-show table match the deck as of the last build. If you add or remove slides, renumber the table.
--->
 
 <img src="/docs/assets/images/ny-school-robot-inc.jpeg" alt="Sally, the humanoid robot teaching assistant that Salamanca City Central School District agreed to buy" style="max-height: 250px; width: auto; display: block; margin: 0 auto 0.4em;">
 <p style="text-align: center;"><small>Sally, the humanoid robot the district agreed to buy. Photo: Courtesy Realbotix.</small></p>
 
-A school district bought a humanoid robot to help teach high school coding and robotics. Then the state stepped in. This is a seminar about whether a school should buy it. It is a decision, not a debate over who is right, and your students are the ones affected.
+A school district agreed to buy a humanoid robot to help teach high school coding and robotics. Then the state stepped in. This is a seminar about whether a school should buy it. It is a decision, not a debate over who is right, and your students are the ones affected. Buy it or not is the way in to the bigger question in the title: can robotic AI teachers do the work of real teachers?
 
 The format is in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F): the norms, the fishbowl, and a one-sheet handout. This seminar has three rounds on the same decision: the reading and a first discussion, a closer look with a photo and two videos, and one more fact in a short clip.
 
 A longer opinion piece on this story is [AI Robot Teachers Are Almost Here]({% post_url 2026-07-24-robot-teacher %}). Keep your own view out of the room until the end.
 
-Slides: **[Would You Vote Yes on a Robot Tutor?](/robot-teacher-slides/)** &middot; Short overview for colleagues and administrators: **[Would You Vote Yes on a Robot Tutor? Overview](/robot-tutor-overview/)**
+Slides: **[Would You Vote Yes on a Robot Tutor?](/robot-teacher-slides/)** &middot; Short overview for colleagues and administrators: **[Can Robotic AI Teachers Do the Work of Real Teachers? Overview](/robot-tutor-overview/)**
 
 ## Learning goals
 
