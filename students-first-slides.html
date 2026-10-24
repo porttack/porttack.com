@@ -313,6 +313,9 @@ permalink: /students-first-slides/
     color: #b25e00;
   }
 
+  .stage { pointer-events: none; }
+  .stage a, .stage button, .stage iframe { pointer-events: auto; }
+
   .slide-counter-badge {
     position: absolute;
     bottom: 18px;
@@ -795,7 +798,7 @@ function ScaledStage({ slide, aspect }) {
 
   return (
     <div className="stage-outer" ref={outerRef}>
-      <div style={{ transform: `scale(${scale})`, transformOrigin: "center center" }}>
+      <div style={{ transform: `scale(${scale})`, transformOrigin: "center center", position: "relative", zIndex: 1, pointerEvents: "none" }}>
         <Stage slide={slide} aspect={aspect} />
       </div>
     </div>

@@ -38,7 +38,7 @@ Realbotix told New York Focus that its education team is separate from RealDoll,
 
 ## The union objections, and then the NY State objections
 
-The New York State United Teachers, which represents nearly 700,000 members, [issued a blunt statement](https://www.rochesterfirst.com/adam-interviews/adam-interviews-humanoid-robot-coming-to-upstate-ny-school/). President Melinda Person said a robot from a company associated with sex dolls has no business in a classroom, and made the broader case that students need real relationships with caring adults, not simulated ones.
+The New York State United Teachers, which represents nearly 700,000 members, [issued a blunt statement](https://www.nysut.org/news/2026/july/media-release-robots): "A robot built by a company associated with sex dolls has no business in our classrooms." President Melinda Person added that students "need real relationships with caring adults," and told [Rochester First](https://www.rochesterfirst.com/adam-interviews/adam-interviews-humanoid-robot-coming-to-upstate-ny-school/), "We don't want to simulate human relationships. We want real human relationships and for our students to learn how to form them organically."
 
 The union wasn't alone. The Alliance for Quality Education argued that underserved students were being made [guinea pigs for untested innovation](https://dailycaller.com/2026/07/20/new-york-salamanca-school-district-robot-ai-classroom-sally-realbotix/), and that the years when children develop socially and emotionally are not years to outsource to a robot, however human it looks. A local parent told New York Focus that adding AI to a community already facing hard problems felt like contradicting everything they believe.
 

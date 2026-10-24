@@ -1,0 +1,885 @@
+---
+title: "Would You Vote Yes on a Robot Tutor? (Overview)"
+permalink: /robot-tutor-overview/
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Would You Vote Yes on a Robot Tutor? (Overview)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --accent: #2a7ae2;
+    --ink: #1b1f23;
+    --paper: #ffffff;
+    --muted: #57606a;
+    --border: #d0d7de;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: #e9edf1;
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  #root { height: 100%; }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .stage-outer {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 0;
+    position: relative;
+  }
+
+  /* Fixed-size design canvas, scaled to fit via a JS-computed transform --
+     lets every slide be authored at generous, fixed pixel sizes ("bigger
+     type") without hand-tuning responsive font sizes per breakpoint. */
+  .stage {
+    width: 1280px;
+    background: var(--paper);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.18);
+    padding: 80px 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 auto;
+  }
+
+  .stage.ar-16-9 { height: 720px; }
+  .stage.ar-4-3 { height: 960px; }
+
+  .kicker {
+    font-size: 28px;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0 0 18px;
+  }
+
+  .slide-title {
+    font-size: 64px;
+    line-height: 1.1;
+    margin: 0 0 40px;
+    font-weight: 700;
+  }
+
+  .slide-subtitle {
+    font-size: 28px;
+    color: var(--muted);
+    margin: 0 0 20px;
+  }
+
+  .slide-body {
+    font-size: 36px;
+    line-height: 1.5;
+  }
+
+  .slide-body ul {
+    margin: 0;
+    padding-left: 1.1em;
+  }
+
+  .slide-body li {
+    margin-bottom: 22px;
+  }
+
+  .slide-body li:last-child { margin-bottom: 0; }
+
+  .slide-body a { color: var(--accent); }
+
+  .slide-wide-image {
+    display: block;
+    width: 100%;
+    max-height: 260px;
+    object-fit: contain;
+    margin: 10px 0 18px;
+    border-radius: 8px;
+  }
+
+  .depth-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 14px;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .depth-nav.depth-up {
+    bottom: auto;
+    top: 14px;
+  }
+
+  .depth-nav:hover {
+    background: rgba(0,0,0,0.75);
+  }
+
+  .title-slide {
+    text-align: left;
+    justify-content: center;
+  }
+
+  .title-slide .slide-title {
+    font-size: 76px;
+    margin-bottom: 16px;
+  }
+
+  .title-slide .slide-subtitle {
+    font-size: 34px;
+    color: var(--muted);
+  }
+
+  .highlight-slide {
+    background: #fff7e6;
+  }
+
+  .highlight-slide .kicker {
+    color: #b25e00;
+  }
+
+  /* A single list with some words already struck through -- the narrowing
+     mechanic demoed in place, before any reveal. */
+  .crossoff-list {
+    list-style: none;
+    margin: 30px 0 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .crossoff-list li {
+    font-size: 42px;
+    padding: 14px 0;
+  }
+
+  .crossoff-list li.crossoff-out {
+    color: #9aa0a6;
+    text-decoration: line-through;
+  }
+
+  /* A real, un-curated word list, as many as came in -- wraps freely, no
+     fixed count the way every other slide kind keeps to. */
+  .wordcloud-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    align-content: flex-start;
+    margin-top: 24px;
+  }
+
+  .wordcloud-chip {
+    background: #f1f3f5;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-size: 24px;
+  }
+
+  /* Two candidate word-lists shown side by side, so the room can guess
+     which list and which word the next slide reveals. */
+  .twolists-wrap {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .twolists-col { flex: 0 1 380px; }
+
+  .twolists-label {
+    font-size: 30px;
+    color: var(--muted);
+    margin: 0 0 16px;
+    text-align: center;
+  }
+
+  .twolists-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .twolists-col li {
+    font-size: 36px;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .twolists-col li:last-child { border-bottom: none; }
+
+  /* One narrowed word, large, center; the four it beat, struck through,
+     at the compass points around it. A static end-state snapshot, not an
+     animation of the narrowing itself. */
+  .radial-wrap {
+    position: relative;
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .radial-word {
+    position: absolute;
+    font-size: 32px;
+    font-weight: 600;
+    color: #9aa0a6;
+    text-decoration: line-through;
+  }
+
+  .radial-top { top: 0; left: 50%; transform: translateX(-50%); }
+  .radial-bottom { bottom: 0; left: 50%; transform: translateX(-50%); }
+  .radial-left { top: 50%; left: 0; transform: translateY(-50%); }
+  .radial-right { top: 50%; right: 0; transform: translateY(-50%); }
+
+  .radial-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--accent);
+    background: #fff;
+    border: 3px solid var(--accent);
+    border-radius: 16px;
+    padding: 20px 48px;
+    white-space: nowrap;
+  }
+
+  .quote-slide .slide-title { font-size: 48px; margin-bottom: 24px; }
+
+  .quote-text {
+    margin: 0 0 24px;
+    padding-left: 36px;
+    border-left: 8px solid var(--accent);
+    font-size: 44px;
+    line-height: 1.35;
+  }
+  .quote-text.quote-lg { font-size: 34px; }
+  .quote-text.quote-xl { font-size: 30px; }
+
+  .quote-cite {
+    font-size: 26px;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* Temperature check: two walls, students physically stand on the line
+     between them. Left wall in the accent color, right wall in the warm one. */
+  .wall-wrap {
+    display: flex;
+    gap: 48px;
+    flex: 1 1 auto;
+    margin-top: 10px;
+    min-height: 0;
+  }
+
+  .wall-side {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 28px;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.25;
+    border-radius: 16px;
+    border: 5px solid var(--accent);
+    color: var(--accent);
+  }
+
+  .wall-side.wall-right {
+    border-color: #b25e00;
+    color: #b25e00;
+  }
+
+  .stage { pointer-events: none; }
+  .stage a, .stage button, .stage iframe { pointer-events: auto; }
+
+  .slide-counter-badge {
+    position: absolute;
+    bottom: 18px;
+    right: 24px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+
+  /* --- Toolbar (not part of the scaled stage, so it stays a readable,
+     fixed size regardless of projector distance / zoom level) --- */
+  .toolbar {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: #1b1f23;
+    color: #fff;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .toolbar button {
+    background: #333a42;
+    color: #fff;
+    border: 1px solid #4a545e;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .toolbar button:hover { background: #444e58; }
+  .toolbar button.active { background: var(--accent); border-color: var(--accent); }
+  .toolbar button:disabled { opacity: 0.4; cursor: default; }
+
+  .toolbar .spacer { flex: 1 1 auto; }
+  .toolbar .counter { min-width: 4.5em; text-align: center; }
+  .toolbar a.back-link { color: #9db8e8; text-decoration: none; font-size: 14px; }
+  .toolbar a.back-link:hover { text-decoration: underline; }
+
+  /* --- Speaker notes panel: docked below the stage, plain readable text,
+     hidden by default so a mirrored/projected display shows a clean deck. --- */
+  .notes-panel {
+    flex: 0 0 auto;
+    background: #f6f8fa;
+    border-top: 1px solid var(--border);
+    padding: 16px 24px;
+    max-height: 26vh;
+    overflow-y: auto;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .notes-panel h3 {
+    margin: 0 0 6px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+
+  .click-zone {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    cursor: pointer;
+  }
+  .click-zone.left { left: 0; }
+  .click-zone.right { right: 0; }
+
+  /* --- Outline / print-notes view: a plain scrollable page listing every
+     slide with its full speaker notes, meant for printing ahead of class. --- */
+  .outline {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  .outline h1 { margin-bottom: 4px; }
+  .outline .outline-sub { color: var(--muted); margin-top: 0; }
+
+  .outline-slide {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    break-inside: avoid;
+  }
+
+  .outline-slide h2 {
+    margin: 0 0 8px;
+    font-size: 22px;
+  }
+
+  .outline-slide .outline-bullets {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0 0 14px;
+  }
+
+  .outline-slide .outline-notes {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .outline-slide .outline-notes p:first-child { margin-top: 0; }
+
+  @media print {
+    .toolbar { display: none !important; }
+    .outline { height: auto; overflow: visible; }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone@7.25.6/babel.min.js"></script>
+
+<script type="text/babel" data-type="module">
+{% raw %}
+const { useState, useEffect, useRef, useCallback } = React;
+
+// Edit this array to change the deck. `bullets` is what the room sees on the
+// slide (keep it short); `notes` is only ever shown in the notes panel or the
+// printable outline, so it can be a full paragraph. A bullet can be a plain
+// string, or { text, href } to render as a link.
+const SLIDES = [
+  {
+    kind: "title",
+    kicker: "For teachers and administrators",
+    title: "Would You Vote Yes on a Robot Tutor?",
+    subtitle: "A Socratic seminar on a real school district's decision",
+    notes: "A short overview for colleagues or an administrator deciding whether to run or approve the seminar. About ten minutes, including the two videos. The full classroom deck, with every stop and hand-out marked, is linked on the last slide."
+  },
+  {
+    kind: "bullets",
+    kicker: "The idea",
+    title: "A Real Decision",
+    bullets: [
+      "A real district bought a humanoid robot tutor",
+      "Then the state stepped in, and the district paused",
+      "Students are the school board, and the vote is theirs"
+    ],
+    notes: "The seminar puts students in the position of the people who had to decide. It is a decision, not a debate over who is right, and the students are the ones a decision like this affects. There is no single right answer, and some of the facts are still unknown."
+  },
+  {
+    kind: "bullets",
+    kicker: "The format",
+    title: "What Students Do",
+    bullets: [
+      "Read a one-page true story and take a position",
+      "Discuss in a fishbowl, with a hot seat",
+      "Watch two videos, then weigh what changed",
+      "Move on a line and write what moved them"
+    ],
+    notes: "It is a Socratic seminar: the students' talk does the work, not the teacher's slides. The teacher stays mostly silent, and the plan says where to stop each round. Students stand on a line before, during, and after the discussion, which makes changes of mind visible."
+  },
+  {
+    kind: "bullets",
+    kicker: "The facts",
+    title: "One District, One Robot",
+    bullets: [
+      "Salamanca, NY: about 1,300 students, rural",
+      "$57,590 for a robot and an AI assistant",
+      "Planned for high school AI and robotics courses",
+      "The district says no student data goes to the vendor"
+    ],
+    notes: "Source: New York Focus, July 14, 2026, read directly. The data claim is the superintendent's statement that the company “will not have access to personally identifiable student information.” The seminar treats that as a promise to examine, not a fact. The district paused the project on July 24 while it works on enhanced student data privacy agreements with the state."
+  },
+  {
+    kind: "bullets",
+    kicker: "Moment 1",
+    title: "The Robot Is Introduced",
+    bullets: [
+      "A 57-second news clip on the plan (Fox News)",
+      { text: "Watch it on foxnews.com", href: "https://www.foxnews.com/video/6401736424112" }
+    ],
+    notes: "Round 2 in the classroom run. The page was checked, but the clip was not watched, so preview it. The link opens in a new tab."
+  },
+  {
+    kind: "bullets",
+    kicker: "Moment 2",
+    title: "Interviewing the Avatar",
+    bullets: [
+      "A reporter interviews the AI avatar (New York Focus)",
+      { text: "Watch it on YouTube (New York Focus)", href: "https://www.youtube.com/watch?v=b4siBdDtz7k" },
+      { text: "Read the source article", href: "https://nysfocus.com/2026/07/28/salamanca-ai-teaching-assistant-interview" }
+    ],
+    notes: "New York Focus's own upload on YouTube, also embedded on its article page. The video was not watched, so preview it. YouTube may show an ad first and may suggest related videos, so open it ahead of time. The link opens in a new tab."
+  },
+  {
+    kind: "highlight",
+    kicker: "Why it works",
+    title: "Whose Voice Is It?",
+    bullets: [
+      "Superintendent: first access for a small district",
+      "Teachers union: students need real relationships",
+      "State: concerned about a humanoid robot in class",
+      "Students ask: who is speaking for whom?"
+    ],
+    notes: "Every voice in this story has a stake. Students practice the evidence-evaluation question: who is saying this, why, and what would they leave out? It transfers to any source they meet."
+  },
+  {
+    kind: "bullets",
+    kicker: "Learning goals",
+    title: "What Students Learn",
+    bullets: [
+      "Weigh a new technology's benefits and harms",
+      "Explain how access changes who benefits",
+      "Name the student data a system like this holds",
+      "Discuss with evidence, and change a position"
+    ],
+    notes: "AP CSP Big Idea 5, Impact of Computing: IOC-1.A and IOC-1.B (beneficial and harmful effects, including unintended ones), IOC-1.C (the digital divide), and IOC-2.A (privacy dangers of gathering and keeping personal data). Impact of Computing is 21 to 26 percent of the multiple-choice exam, per the course and exam description. The discussion goal aligns with Common Core speaking and listening and reading informational text (SL.6.1 and SL.9-10.1, SL.6.3 and SL.9-10.3, RI.6.1 and RI.9-10.1, RI.6.8 and RI.9-10.8). The lesson plan links each standard."
+  },
+  {
+    kind: "bullets",
+    kicker: "Evidence",
+    title: "How You Know It Worked",
+    bullets: [
+      "Entry ticket: a position, evidence by paragraph",
+      "Observer organizer: who built on whose idea",
+      "Temperature checks: who moved, and why",
+      "Exit ticket: one data type and its risk"
+    ],
+    notes: "Everything is collected during the seminar, so no separate quiz is needed. Grading is on evidence and honesty, not on the position a student lands on. “I changed my mind because of what someone said” is the best possible answer."
+  },
+  {
+    kind: "bullets",
+    kicker: "Practicalities",
+    title: "What You Need",
+    bullets: [
+      "A projector, YouTube, one printed handout",
+      "A one-page reading and a deck with notes",
+      "Roughly one to one and a half class periods",
+      "Students work on paper, so no accounts or data"
+    ],
+    notes: "The lesson plan has a slide-by-slide table with start times and marks the sections that can be skipped for a shorter period. The times are estimates, not timed runs. The seminar itself collects no student data, which matters for a lesson about student data."
+  },
+  {
+    kind: "highlight",
+    kicker: "For administrators",
+    title: "Handled With Care",
+    bullets: [
+      "Round 3: one spoken fact about the vendor's history",
+      "Spoken first; an optional 17-second clip follows",
+      "It is optional, and it is the teacher's call",
+      "Quotes are verbatim, from sources checked"
+    ],
+    notes: "Round 3 is one fact, said once, aloud: the company that makes the robot bought, in 2024, another company that makes adult-oriented dolls and robots, and the company says its education team is separate. The question put to students is about trust: should a vendor's history change whether you believe its promises? The lesson plan gives a plain, factual script, no added detail, and a boundary for jokes. It is stated here so an administrator is not surprised. It is the teacher's decision whether to use it. The classroom deck also has an optional 17-second clip after it, taken from a late-night comedy segment on a national news network. The segment as a whole is for teachers only. The clip stops at 28 seconds, and the teacher previews it first. Skip it and nothing else changes. The rest of the lesson stands without it."
+  },
+  {
+    kind: "title",
+    kicker: "Find it",
+    title: "Ready to Use",
+    bullets: [
+      { text: "The lesson plan", href: "/2026/10/21/would-you-vote-yes-on-a-robot-tutor.html" },
+      { text: "The full classroom deck, with speaker notes", href: "/robot-teacher-slides/" },
+      { text: "The printable handout", href: "/socratic-seminar-handout/" },
+      { text: "The Socratic Seminar Kit", href: "/socratic-seminar-kit/" }
+    ],
+    notes: "The handout link opens a blank handout. The lesson plan links the same handout with this seminar's topic and exit question filled in, so nothing needs retyping."
+  }
+];
+
+// A bullet is either a plain string, or { text, href } to render as a link.
+function renderBullets(bullets) {
+  return (
+    <ul>
+      {bullets.map((b, i) => (
+        <li key={i}>{typeof b === "string" ? b : <a href={b.href} {...(/^https?:/.test(b.href) ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{b.text}</a>}</li>
+      ))}
+    </ul>
+  );
+}
+
+function Stage({ slide, aspect }) {
+  const arClass = aspect === "4:3" ? "ar-4-3" : "ar-16-9";
+  if (slide.kind === "title") {
+    return (
+      <div className={"stage title-slide " + arClass}>
+        {slide.kicker && <p className="kicker">{slide.kicker}</p>}
+        <h1 className="slide-title">{slide.title}</h1>
+        {slide.subtitle && <p className="slide-subtitle">{slide.subtitle}</p>}
+        {slide.bullets && <div className="slide-body">{renderBullets(slide.bullets)}</div>}
+      </div>
+    );
+  }
+  if (slide.kind === "quote") {
+    // A provision or a statement shown verbatim, large; type shrinks for
+    // longer passages so the whole quote always fits on the stage.
+    const len = slide.quote.length;
+    const sizeClass = len > 300 ? " quote-xl" : len > 150 ? " quote-lg" : "";
+    return (
+      <div className={"stage quote-slide " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <blockquote className={"quote-text" + sizeClass}>{"“"}{slide.quote}{"”"}</blockquote>
+        <p className="quote-cite">{slide.cite}</p>
+      </div>
+    );
+  }
+  if (slide.kind === "wall") {
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <div className="wall-wrap">
+          <div className="wall-side wall-left">{slide.left}</div>
+          <div className="wall-side wall-right">{slide.right}</div>
+        </div>
+      </div>
+    );
+  }
+  if (slide.kind === "wide") {
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <img className="slide-wide-image" src={slide.image} alt="" />
+        <div className="slide-body">{renderBullets(slide.bullets)}</div>
+      </div>
+    );
+  }
+  if (slide.kind === "crossoff") {
+    // A single list, some words already struck through -- a concrete demo
+    // of the narrowing mechanic itself, shown before any reveal so the room
+    // sees "crossing off" in action without yet learning the answer.
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <ul className="crossoff-list">
+          {slide.list.map((w, i) => (
+            <li className={slide.crossedOut.includes(w) ? "crossoff-out" : ""} key={i}>{w}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+  if (slide.kind === "wordcloud") {
+    // Deliberately breaks the "few words per slide" rule every other kind
+    // follows -- the point of this one is volume and range, not a short
+    // takeaway.
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <div className="wordcloud-wrap">
+          {slide.words.map((w, i) => <span className="wordcloud-chip" key={i}>{w}</span>)}
+        </div>
+      </div>
+    );
+  }
+  if (slide.kind === "twolists") {
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <div className="twolists-wrap">
+          <div className="twolists-col">
+            <h2 className="twolists-label">List A</h2>
+            <ul>{slide.listA.map((w, i) => <li key={i}>{w}</li>)}</ul>
+          </div>
+          <div className="twolists-col">
+            <h2 className="twolists-label">List B</h2>
+            <ul>{slide.listB.map((w, i) => <li key={i}>{w}</li>)}</ul>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  if (slide.kind === "radial") {
+    // One narrowed word, large, in the middle; the words it beat arranged
+    // around it, struck through. A static snapshot of "after narrowing,"
+    // not an animation of the process -- see the commit message for why.
+    const positions = ["top", "right", "bottom", "left"];
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        {slide.subtitle && <p className="slide-subtitle">{slide.subtitle}</p>}
+        <div className="radial-wrap">
+          {slide.around.map((w, i) => (
+            <div className={"radial-word radial-" + positions[i]} key={i}>{w}</div>
+          ))}
+          <div className="radial-center">{slide.center}</div>
+        </div>
+      </div>
+    );
+  }
+  const extraClass = slide.kind === "highlight" ? " highlight-slide" : "";
+  return (
+    <div className={"stage " + arClass + extraClass}>
+      <p className="kicker">{slide.kicker}</p>
+      <h1 className="slide-title">{slide.title}</h1>
+      <div className="slide-body">{renderBullets(slide.bullets)}</div>
+    </div>
+  );
+}
+
+function ScaledStage({ slide, aspect }) {
+  const outerRef = useRef(null);
+  const [scale, setScale] = useState(1);
+  const designW = 1280;
+  const designH = aspect === "4:3" ? 960 : 720;
+
+  useEffect(() => {
+    const el = outerRef.current;
+    if (!el) return;
+    const recompute = () => {
+      const rect = el.getBoundingClientRect();
+      const s = Math.min((rect.width * 0.98) / designW, (rect.height * 0.98) / designH);
+      setScale(s > 0 ? s : 1);
+    };
+    // Entering/exiting fullscreen can report a stale rect for a frame or
+    // two before the browser finishes resizing the viewport, so the
+    // ResizeObserver callback that follows sometimes measures too early
+    // and leaves the stage scaled for the old (smaller) size with empty
+    // space around it. A double rAF waits for that resize to settle.
+    const recomputeSoon = () => {
+      requestAnimationFrame(() => requestAnimationFrame(recompute));
+    };
+    recompute();
+    const ro = new ResizeObserver(recompute);
+    ro.observe(el);
+    window.addEventListener("resize", recompute);
+    document.addEventListener("fullscreenchange", recomputeSoon);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", recompute);
+      document.removeEventListener("fullscreenchange", recomputeSoon);
+    };
+  }, [designH]);
+
+  return (
+    <div className="stage-outer" ref={outerRef}>
+      <div style={{ transform: `scale(${scale})`, transformOrigin: "center center", position: "relative", zIndex: 1, pointerEvents: "none" }}>
+        <Stage slide={slide} aspect={aspect} />
+      </div>
+    </div>
+  );
+}
+
+function bulletsToText(bullets) {
+  return bullets.map(b => (typeof b === "string" ? b : b.text)).join(" / ");
+}
+
+function OutlineCard({ slide, heading }) {
+  return (
+    <div className="outline-slide">
+      <h2>{heading}</h2>
+      {slide.bullets && <p className="outline-bullets">On slide: {bulletsToText(slide.bullets)}</p>}
+      <div className="outline-notes"><p>{slide.notes}</p></div>
+    </div>
+  );
+}
+
+function Outline() {
+  return (
+    <div className="outline">
+      <h1>Would You Vote Yes on a Robot Tutor? Overview</h1>
+      <p className="outline-sub">Speaker notes outline. Print this before class if you'd rather have paper than toggle notes on screen.</p>
+      {SLIDES.map((s, i) => (
+        <OutlineCard slide={s} heading={`${i + 1}. ${s.title}`} key={i} />
+      ))}
+    </div>
+  );
+}
+
+// Deep-linking: ?slide=3 opens on that slide (1-indexed, to match the
+// on-screen counter), ?outline=1 opens straight into the speaker-notes
+// outline.
+function initialStateFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const slideParam = parseInt(params.get("slide"), 10);
+  const index = Number.isInteger(slideParam) ? Math.min(Math.max(slideParam - 1, 0), SLIDES.length - 1) : 0;
+  const mode = params.get("outline") ? "outline" : "deck";
+  return { index, mode };
+}
+
+function App() {
+  const initial = initialStateFromUrl();
+  const [index, setIndex] = useState(initial.index);
+  const [showNotes, setShowNotes] = useState(false);
+  const [aspect, setAspect] = useState("16:9");
+  const [mode, setMode] = useState(initial.mode); // "deck" | "outline"
+
+  const slide = SLIDES[index];
+
+  const next = useCallback(() => setIndex(i => Math.min(i + 1, SLIDES.length - 1)), []);
+  const prev = useCallback(() => setIndex(i => Math.max(i - 1, 0)), []);
+
+  useEffect(() => {
+    function onKey(e) {
+      if (mode !== "deck") {
+        if (e.key === "Escape") setMode("deck");
+        return;
+      }
+      if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); next(); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); prev(); }
+      else if (e.key === "n" || e.key === "N") setShowNotes(v => !v);
+      else if (e.key === "f" || e.key === "F") toggleFullscreen();
+      else if (e.key === "o" || e.key === "O") setMode("outline");
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [mode, next, prev]);
+
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
+    else document.exitFullscreen();
+  }
+
+  if (mode === "outline") {
+    return (
+      <div className="app">
+        <div className="toolbar">
+          <a className="back-link" href="/2026/10/21/would-you-vote-yes-on-a-robot-tutor.html">&larr; Would You Vote Yes on a Robot Tutor? Overview</a>
+          <div className="spacer"></div>
+          <button onClick={() => setMode("deck")}>Back to slides (Esc)</button>
+          <button onClick={() => window.print()}>Print</button>
+        </div>
+        <Outline />
+      </div>
+    );
+  }
+
+  return (
+    <div className="app">
+      <div className="stage-outer" style={{ position: "relative" }}>
+        <ScaledStage slide={slide} aspect={aspect} />
+        <div className="click-zone left" onClick={prev} title="Previous slide"></div>
+        <div className="click-zone right" onClick={next} title="Next slide"></div>
+        <div className="slide-counter-badge">{index + 1} / {SLIDES.length}</div>
+      </div>
+      {showNotes && (
+        <div className="notes-panel">
+          <h3>Speaker notes</h3>
+          <p>{slide.notes}</p>
+        </div>
+      )}
+      <div className="toolbar">
+        <a className="back-link" href="/2026/10/21/would-you-vote-yes-on-a-robot-tutor.html">&larr; Would You Vote Yes on a Robot Tutor? Overview</a>
+        <div className="spacer"></div>
+        <button onClick={prev} disabled={index === 0}>&larr; Prev</button>
+        <span className="counter">{index + 1} / {SLIDES.length}</span>
+        <button onClick={next} disabled={index === SLIDES.length - 1}>Next &rarr;</button>
+        <button className={showNotes ? "active" : ""} onClick={() => setShowNotes(v => !v)}>Notes (N)</button>
+        <button onClick={() => setMode("outline")}>Print notes (O)</button>
+        <button onClick={() => setAspect(a => a === "16:9" ? "4:3" : "16:9")}>{aspect}</button>
+        <button onClick={toggleFullscreen}>Fullscreen (F)</button>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+{% endraw %}
+</script>
+</body>
+</html>

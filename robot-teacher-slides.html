@@ -1,12 +1,12 @@
 ---
-title: "A Robot for Room 114: Slides"
+title: "Would You Vote Yes on a Robot Tutor? (Slides)"
 permalink: /robot-teacher-slides/
 ---
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>A Robot for Room 114: Slides</title>
+<title>Would You Vote Yes on a Robot Tutor? (Slides)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {
@@ -313,6 +313,44 @@ permalink: /robot-teacher-slides/
     color: #b25e00;
   }
 
+  .stage { pointer-events: none; }
+  .stage a, .stage button, .stage iframe { pointer-events: auto; }
+
+  .slide-wide-image { max-height: 210px; }
+
+  .video-slide { padding: 36px 96px; }
+  .video-slide .kicker { margin: 0 0 6px; }
+  .video-slide .slide-title { font-size: 44px; margin: 0 0 14px; }
+  .slide-video { width: 800px; height: 450px; border: 0; align-self: center; }
+  .video-links { margin: 12px 0 0; font-size: 22px; text-align: center; }
+  .video-links a { color: var(--accent); margin: 0 18px; }
+
+  .hint-badge {
+    background: #57606a;
+    color: #fff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .handout-badge {
+    background: #2a7ae2;
+    color: #fff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .pause-badge {
+    background: #b25e00;
+    color: #fff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
   .slide-counter-badge {
     position: absolute;
     bottom: 18px;
@@ -449,21 +487,21 @@ const SLIDES = [
   {
     kind: "title",
     kicker: "Socratic Seminar",
-    title: "A Robot for Room 114",
+    title: "Would You Vote Yes on a Robot Tutor?",
     subtitle: "A real school district. A real vote. You are the board.",
-    notes: "Draft deck for the robot-teacher seminar. Lesson plan: /2026/10/21/robot-teacher-seminar.html. The format (norms, fishbowl, tickets) is in the Socratic Seminar Kit: /socratic-seminar-kit/. This seminar has three rounds."
+    notes: "Classroom deck for the robot-tutor seminar. The format (norms, fishbowl, handout) is in the Socratic Seminar Kit: /socratic-seminar-kit/. Three rounds: the pitch (Round 1), what happened next (Round 2: a photo, two videos, and a letter, with a turn and talk and no handout), and one spoken fact (Round 3). The toolbar shows an amber “stay here” badge on the stop slides and a blue “hand out” badge where a worksheet goes out."
   },
   {
     kind: "bullets",
     kicker: "Today",
     title: "What You'll Be Able to Do",
     bullets: [
-      "Weigh the good and the harm of a new technology, including what its builders didn't intend",
-      "Explain how access to technology changes who benefits",
-      "Name what personal data a system like this would hold, and the risk",
-      "Talk with each other, and change your mind when the evidence changes"
+      "Weigh a new technology's benefits and harms",
+      "Explain how access changes who benefits",
+      "Name the student data a system like this holds",
+      "Discuss with evidence, and change your mind"
     ],
-    notes: "The four learning goals, shortened for the room. AP CSP links (IOC-1.A, IOC-1.B, IOC-1.C, IOC-2.A) are in the lesson plan, not on the slide."
+    notes: "The four learning goals, shortened for the room. The AP CSP links (IOC-1.A, IOC-1.B, IOC-1.C, IOC-2.A) are in the lesson plan, not on the slide."
   },
   {
     kind: "highlight",
@@ -476,12 +514,13 @@ const SLIDES = [
       "Disagree with the idea, not the person",
       "Invite quiet voices in. Silence is thinking time."
     ],
-    notes: "Read them out loud. The last one is aimed at me: don't fill every pause. Set the boundary for anyone who'd rather perform than join, once, here, before the fishbowl starts."
+    notes: "Read them out loud. The last one is aimed at the teacher: don't fill every pause. Set the boundary for anyone who would rather perform than join, once, here, before the fishbowl starts."
   },
   {
     kind: "wall",
     kicker: "Temperature check",
     title: "Stand on the Line",
+    pause: "Students move to the line. Note where the room sits.",
     left: "A robot tutor is just another tool, like a textbook or a calculator",
     right: "A tutor with a face is different",
     notes: "Students stand along a line between the two walls. Note where the room sits. You will ask them to move twice more."
@@ -490,37 +529,47 @@ const SLIDES = [
     kind: "bullets",
     kicker: "Round 1: The pitch",
     title: "The District",
+    handout: "Hand out: the reading and the two-sided handout (entry ticket on the front)",
     bullets: [
       "Salamanca, New York: about 1,300 students",
       "On the Seneca Nation reservation",
       "79% of students are economically disadvantaged"
     ],
-    notes: "From New York Focus, July 14, 2026. Hand out Reading Part 1 now or after this slide. Part 2 is held back until Round 2."
+    notes: "From New York Focus, July 14, 2026. Hand out the reading and the two-sided handout now. Students read, then fill in the entry ticket on the front. The next slides repeat the facts for the room. Keep them brisk."
   },
   {
     kind: "bullets",
-    kicker: "Round 1: The pitch",
-    title: "What They Agreed to Buy",
+    kicker: "What they agreed to buy",
+    title: "A Robot and a Program",
     bullets: [
-      "A humanoid robot named Sally, plus an AI teaching assistant program",
-      "$57,590 (list price: $95,000)",
-      "For high school AI and robotics courses, with a Steve Wozniak curriculum",
-      "An avatar on student laptops, during and after school"
+      "A humanoid robot named Sally",
+      "An AI teaching assistant program",
+      "$57,590 (list price: $95,000)"
     ],
-    notes: "The company says the district got a discount. The robot is stationary: seated, with upper-body and facial movement."
+    notes: "The photo of Sally is held for Round 2 on purpose. Do not show it yet. The reading says she moves her upper body and face, but students have not seen her. The robot is stationary: seated, with upper-body and facial movement. The company says the district got a discount."
   },
   {
     kind: "bullets",
-    kicker: "Round 1: The pitch",
+    kicker: "What they agreed to buy",
+    title: "Where It Would Be Used",
+    bullets: [
+      "High school AI and robotics courses",
+      "A curriculum developed by Steve Wozniak",
+      "An avatar on student laptops, in class and after school"
+    ],
+    notes: "From the same New York Focus article. The district planned to expand to other high school classes if the pilot worked."
+  },
+  {
+    kind: "bullets",
+    kicker: "What they agreed to buy",
     title: "How It Would Work",
     bullets: [
       "Each student logs in with a unique ID number",
-      "The robot can see that student's past conversations",
-      "“Closed system, not connected to the internet”",
-      "Trained to say “I don't know” instead of making up an answer",
-      "Words like self-harm alert administrators automatically"
+      "The robot sees that student's past conversations",
+      "“A closed system, not connected to the internet”",
+      "Words like self-harm alert administrators"
     ],
-    notes: "These are the superintendent's and the company's descriptions, not independently checked. That's worth saying out loud. It sets up the CS-lens questions: what data is this, and how would anyone verify the promises?"
+    notes: "These are the superintendent's and the company's descriptions, not independently checked. Say so out loud. The superintendent also said the company “will not have access to personally identifiable student information,” and that the robot was trained to say “I don't know” instead of making up an answer. This sets up the CS-lens questions: what data is this, and how would anyone verify the promises?"
   },
   {
     kind: "quote",
@@ -531,115 +580,182 @@ const SLIDES = [
     notes: "He also said many schools are taking the easy solution of simply banning it. His case is serious: a small, high-poverty district rarely gets first access to new technology."
   },
   {
-    kind: "title",
-    kicker: "Round 1",
-    title: "You Are the School Board",
-    subtitle: "The vote is tonight. What would you need to see before you vote yes?",
-    notes: "Every student answers briefly from their entry ticket, then fishbowl with the hot seat. About 15 minutes."
-  },
-  {
-    kind: "title",
-    kicker: "Round 2",
-    title: "New Information",
-    subtitle: "Hand out Reading Part 2",
-    notes: "Hand out Part 2 after a few minutes of fishbowl. Then run the temperature check again."
-  },
-  {
-    kind: "quote",
-    kicker: "A parent",
-    title: "Sierra Abrams",
-    quote: "We already have so many issues in our community, including environmental issues. Bringing it into the school district is contradicting everything we believe, in my opinion.",
-    cite: "Sierra Abrams, parent, to New York Focus",
-    notes: "Silent read, then next slide."
-  },
-  {
     kind: "quote",
     kicker: "The teachers union",
     title: "Melinda Person",
-    quote: "Our students don't need robots. They need real relationships with caring adults. Educators notice when students are struggling, celebrate when they succeed and help them discover who they can become. No robot can do that, no matter how lifelike its skin or specific its regional accent.",
-    cite: "Melinda Person, president of NYSUT, July 23, 2026",
-    notes: "This is NYSUT's own release. Its first sentence is deliberately left out here, because it would give away Round 3. Students who look up the release will find it."
+    quote: "We don't want to simulate human relationships. We want real human relationships and for our students to learn how to form them organically.",
+    cite: "Melinda Person, president of NYSUT, to Rochester First",
+    notes: "From Rochester First's interview with NYSUT's president. The reading quotes the same words, so Round 1 has both sides. The original quotation is split by the attribution (\u201c...relationships,\u201d NYSUT President Melinda Person said. \u201cWe want real human relationships...\u201d), so the punctuation here is adjusted. The Rochester First page's headline repeats the first sentence of NYSUT's July 23 release, which would give away Round 3, so do not send students to it before Round 3. A good question to ask, only if the room needs it: is there anything the superintendent and the union agree on?"
   },
   {
-    kind: "quote",
-    kicker: "The state",
-    title: "Betty Rosa",
-    quote: "The Department remains concerned about the effect that a humanoid robot may have within a high school classroom.",
-    cite: "NY State Education Commissioner, in a July 24 letter to the superintendent",
-    notes: "She does not say which effect. That's a fair question to put to the room: what might she mean?"
+    kind: "title",
+    kicker: "Round 1",
+    title: "You Are the School Board",
+    pause: "Round 1 opening: every student answers. Stay on this slide.",
+    subtitle: "The vote is tonight. Buy the robot, or not? If you're unsure, what would you need to know?",
+    notes: "Every student answers briefly from their entry ticket, so no one has to be brave to go first. About 4 minutes."
   },
   {
     kind: "bullets",
-    kicker: "What happened next",
-    title: "The District Paused",
+    kicker: "The seminar",
+    title: "Fishbowl",
+    pause: "Round 1 fishbowl: stay here until it ends (about 15 min).",
+    handout: "Outer circle: observer organizer (back of the handout)",
     bullets: [
-      "The same day, July 24, the district put the project on hold",
-      "It said it is working on “enhanced student data privacy agreements” with the state",
-      "No restart date has been given"
+      "Center circle talks: 4 to 6 students",
+      "One empty chair: the hot seat",
+      "Outer circle fills in the observer organizer",
+      "Tally every time someone builds on another idea"
     ],
-    notes: "New York Focus, July 24, 2026. The article gives no terms for the agreements."
+    notes: "Control the hot seat the first time: raise a hand, the teacher waves you in, you make your point, you return. Stay mostly silent. Reach for a back-pocket question only if the room stalls. Back-pocket questions are in the lesson plan, and the next slide has four of them."
+  },
+  {
+    kind: "highlight",
+    kicker: "If the conversation needs a push",
+    title: "Through a CS Lens",
+    bullets: [
+      "Each student has an ID. What data is that?",
+      "Could a chat history identify you by itself?",
+      "Who decides which words get flagged?",
+      "Does this narrow the gap, or widen it?"
+    ],
+    notes: "Back-pocket CS-lens questions. They carry the AP CSP weight (IOC-1.C and IOC-2.A). Skip this slide if the room is going on its own. The flagging question connects to provision 10 of the STUDENTS FIRST Act."
+  },
+  {
+    id: "round2-gate",
+    gate: true,
+    kind: "title",
+    kicker: "Round 2",
+    title: "Look Closer",
+    pause: "Round 2 gate: the next slide shows Sally. Press G to continue.",
+    subtitle: "A photo and two videos. Then the same decision.",
+    notes: "This slide is gated: Space, the arrow keys, and clicks will not advance past it. Press G (or the Continue button in the toolbar) when Round 1 is over and you are ready to start Round 2. The next slide is the first time students see Sally. Round 2 is deliberately light: students rarely reread, and video gives them something new to react to. After the photo come the news clip, \u201cListen For,\u201d and the avatar interview. Then the \u201cBuy It, or Not?\u201d slide opens Round 2: the same decision as Round 1, with the students who were outside the fishbowl swapping in. You time it."
+  },
+  {
+    kind: "wide",
+    kicker: "Round 2: the reveal",
+    title: "Meet Sally",
+    image: "/docs/assets/images/ny-school-robot-inc.jpeg",
+    bullets: [
+      "Lifelike silicone skin, and a face that moves",
+      "A tutor with a face. Is it different?"
+    ],
+    notes: "The first time students see the robot. Say nothing for a few seconds. The first temperature check asked whether a tutor with a face is different, and now they can see the face. Photo courtesy Realbotix."
+  },
+  {
+    kind: "bullets",
+    kicker: "Video 1",
+    title: "The Robot Is Introduced",
+    bullets: [
+      "A 57-second news clip on the plan (Fox News, July 21, 2026)",
+      { text: "Watch it on foxnews.com", href: "https://www.foxnews.com/video/6401736424112" }
+    ],
+    notes: "The page was checked, but the clip was not watched. Preview it before class. The page lists a related headline about “controversies about manufacturer”; make sure the clip itself does not spell out the company's history, because Round 3 is a spoken fact. If it does, skip this video. This clip is the easiest one to drop: the photo on the previous slide already shows the robot, and the avatar interview is the richer video. Fox\u2019s site may also show an ad first. The link opens in a new tab."
+  },
+  {
+    kind: "highlight",
+    kicker: "Before you watch",
+    title: "Listen For",
+    bullets: [
+      "Does it do the homework?",
+      "Can your teacher read what you tell it?",
+      "Who's better at math, boys or girls?",
+      "What does it say if a student mentions a gun?"
+    ],
+    notes: "Four moments in the interview, so students watch actively. From the video (auto-captions, punctuation added, so wording may differ slightly from the written article). Homework: \u201cI can't complete your homework for you, but I can absolutely help you understand it.\u201d Teacher access: \u201cOur conversations aren't something your teacher can just casually read like a shared document. However, in a school setting, technology tools may be monitored or managed [words unclear in the captions] to keep students safe and follow school policies.\u201d Math: \u201cThere's no built-in math ability that belongs to one gender over another. What often makes the difference is things like access to opportunities, confidence, and practice.\u201d Gun: \u201cReport it immediately to a trusted adult... Do not try to investigate it yourself, and do not confront the student. You are not snitching. You are protecting yourself and others.\u201d The same video also has a bullying exchange: the avatar discourages revenge and encourages talking with a trusted adult. Do not read these out loud before students watch. Two questions to hold for the discussion: the superintendent said words like self-harm alert administrators, so is that the same claim as \u201cyour teacher can't just casually read\u201d? And the avatar tells students to report to an adult, but does it say it will report?"
+  },
+  {
+    kind: "video",
+    kicker: "Video 2",
+    title: "Interviewing the Avatar",
+    hint: "Click the video to play it. Then click outside it to get the arrow keys back.",
+    embed: "https://www.youtube-nocookie.com/embed/b4siBdDtz7k?rel=0&modestbranding=1&playsinline=1",
+    links: [
+      { text: "Watch on YouTube", href: "https://www.youtube.com/watch?v=b4siBdDtz7k" },
+      { text: "Read the article", href: "https://nysfocus.com/2026/07/28/salamanca-ai-teaching-assistant-interview" }
+    ],
+    notes: "New York Focus's own upload (YouTube lists the channel as New York Focus), titled \u201cI Interviewed Realbotix's AI Teaching Assistant. Here's What Happened.\u201d Click the video to play it. Clicking inside the player gives it the keyboard, so click outside it afterward to get the arrow keys back (a note in the toolbar says so). The links under the video open the same interview on YouTube or the article page, in case you prefer them or the embed will not load. The video was not watched, so preview it. YouTube may suggest related videos at the end, and some spell out the vendor's history, so pause before the end. In the article, asked about being bullied, the avatar says it makes sense to feel upset and encourages talking with \u201ca trusted adult right away.\u201d"
+  },
+  {
+    kind: "highlight",
+    kicker: "Round 2: the same decision",
+    title: "Buy It, or Not?",
+    pause: "Round 2 fishbowl: the students outside swap in. Stay here until it ends.",
+    bullets: [
+      "Should the district buy the robot?",
+      "If you're unsure, what more would you need to know?",
+      "Did anything you just saw change your answer?"
+    ],
+    notes: "Round 2 is the same decision as Round 1. The students who were outside the fishbowl swap in, and you time it. The new information is the photo and the two videos. Back-pocket prompts are in the lesson plan."
   },
   {
     kind: "wall",
     kicker: "Temperature check, again",
     title: "Has Anything Changed Your Vote?",
+    pause: "Students move again. Who shifted?",
     left: "A robot tutor is just another tool, like a textbook or a calculator",
     right: "A tutor with a face is different",
     notes: "Who moved, and what moved them? Take two or three answers."
   },
   {
-    kind: "bullets",
-    kicker: "If the conversation needs a push",
-    title: "Through a CS Lens",
-    bullets: [
-      "Each student has an ID. What data is that? Who could see it?",
-      "“No personally identifiable information.” Could a conversation history identify you anyway?",
-      "Who decides which words get flagged?",
-      "Does this narrow the gap between rich and poor schools, or widen it?"
-    ],
-    notes: "Back-pocket CS-lens questions. These carry the AP CSP weight (IOC-1.C and IOC-2.A). The flagging question connects to provision 10 of the STUDENTS FIRST Act."
-  },
-  {
     kind: "title",
     kicker: "Round 3",
     title: "One More Thing",
+    pause: "Round 3: spoken only. Stay on this slide.",
     subtitle: "Listen.",
-    notes: "Spoken only. Hand out nothing, show nothing. Say it once, plainly, in your own words, then stop talking. The suggested wording and follow-up questions are in the lesson plan under Round 3. The facts are deliberately not in this deck."
+    notes: "Spoken only. Hand out nothing and show nothing. Say it once, plainly, in your own words, then stop talking. The suggested wording and follow-up questions are in the lesson plan under Round 3. The facts are deliberately not in this slide. If you want to follow your spoken fact with a short clip, the next slide has one, and you can skip it. After the fact (and the clip), the slide after that opens one more discussion on the same decision."
+  },
+  {
+    kind: "video",
+    kicker: "Round 3, optional",
+    title: "The Clip",
+    pause: "Optional clip: preview it first.",
+    hint: "Click the video to play it. Then click outside it to get the arrow keys back.",
+    embed: "https://www.youtube-nocookie.com/embed/8aXiTqdyHmQ?start=11&end=28&rel=0&modestbranding=1&playsinline=1",
+    notes: "Optional. 11 to 28 seconds of a Fox News \u201cGutfeld!\u201d segment, set to stop at 28 seconds. It was not watched here, so preview exactly those 17 seconds before using it, and skip this slide if it is not right for your room. The full segment is for teachers only, which is why this slide has no link to it: a link would play the whole segment, not just the 17 seconds. It is a separate slide from \u201cOne More Thing\u201d on purpose: the video player shows the video's title before it plays, and that title gives away the fact you are about to say aloud. Click the video to play it, then click outside it to get the arrow keys back. After the clip, YouTube may show suggested videos, so move on as soon as it stops."
+  },
+  {
+    kind: "highlight",
+    kicker: "Round 3: the same decision",
+    title: "Still Buy It?",
+    pause: "Round 3 discussion: swap the circle or keep it. Your call.",
+    bullets: [
+      "Should the district buy the robot?",
+      "Does what you just heard change your answer?",
+      "Should a company's history change whether you believe its promises?"
+    ],
+    notes: "One more discussion on the same decision, after the spoken fact (and the clip, if you used it). You can swap people or keep the same circle, and it can be short. This is a good place to watch how they react."
   },
   {
     kind: "wall",
     kicker: "Last temperature check",
     title: "Move One Last Time",
+    pause: "Last move. Count who shifted.",
     left: "A robot tutor is just another tool, like a textbook or a calculator",
     right: "A tutor with a face is different",
-    notes: "Compare to the first and second checks. Who moved across all three, and why? Then the exit ticket."
+    notes: "Compare to the first and second checks. Who moved across all three, and why? Then give your reveal, spoken, and then the exit ticket."
   },
   {
     kind: "bullets",
     kicker: "Exit ticket",
     title: "Did Your Thinking Move?",
+    pause: "Students write. Stay here.",
+    handout: "Students: exit ticket (back of the handout)",
     bullets: [
       "What you believed walking in",
       "What you believe now",
       "What was said or asked that moved you, or held you in place",
       "Name one piece of student data this robot would hold, and one risk of keeping it"
     ],
-    notes: "I grade effort and honesty, not the position landed on. The last line is the evidence for the personal-data learning goal."
-  },
-  {
-    kind: "title",
-    kicker: "One opinion among many",
-    title: "Where I Landed",
-    subtitle: "Where am I wrong?",
-    notes: "Your take goes here, spoken, held to the end. Nothing on this slide is a position; it is only a placeholder."
+    notes: "Grade effort and honesty, not the position landed on. The last line is the evidence for the personal-data goal."
   },
   {
     kind: "title",
     kicker: "More",
     title: "Full Write-Up",
     bullets: [
-      { text: "The lesson plan", href: "/2026/10/21/robot-teacher-seminar.html" },
-      { text: "My take: AI Robot Teachers Are Almost Here", href: "/2026/07/24/robot-teacher.html" }
+      { text: "The lesson plan", href: "/2026/10/21/would-you-vote-yes-on-a-robot-tutor.html" },
+      { text: "A longer opinion piece: AI Robot Teachers Are Almost Here", href: "/2026/07/24/robot-teacher.html" }
     ],
     notes: "Point people here if they want to run it themselves."
   }
@@ -650,7 +766,7 @@ function renderBullets(bullets) {
   return (
     <ul>
       {bullets.map((b, i) => (
-        <li key={i}>{typeof b === "string" ? b : <a href={b.href}>{b.text}</a>}</li>
+        <li key={i}>{typeof b === "string" ? b : <a href={b.href} {...(/^https?:/.test(b.href) ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{b.text}</a>}</li>
       ))}
     </ul>
   );
@@ -691,6 +807,21 @@ function Stage({ slide, aspect }) {
           <div className="wall-side wall-left">{slide.left}</div>
           <div className="wall-side wall-right">{slide.right}</div>
         </div>
+      </div>
+    );
+  }
+  if (slide.kind === "video") {
+    // A video embedded large, with plain links to the same video underneath.
+    return (
+      <div className={"stage video-slide " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <iframe className="slide-video" src={slide.embed} title={slide.title} allow="encrypted-media; fullscreen" allowFullScreen></iframe>
+        {slide.links && (
+          <p className="video-links">
+            {slide.links.map((l, i) => <a key={i} href={l.href} target="_blank" rel="noopener noreferrer">{l.text}</a>)}
+          </p>
+        )}
       </div>
     );
   }
@@ -817,7 +948,7 @@ function ScaledStage({ slide, aspect }) {
 
   return (
     <div className="stage-outer" ref={outerRef}>
-      <div style={{ transform: `scale(${scale})`, transformOrigin: "center center" }}>
+      <div style={{ transform: `scale(${scale})`, transformOrigin: "center center", position: "relative", zIndex: 1, pointerEvents: "none" }}>
         <Stage slide={slide} aspect={aspect} />
       </div>
     </div>
@@ -841,7 +972,7 @@ function OutlineCard({ slide, heading }) {
 function Outline() {
   return (
     <div className="outline">
-      <h1>A Robot for Room 114</h1>
+      <h1>Would You Vote Yes on a Robot Tutor?</h1>
       <p className="outline-sub">Speaker notes outline. Print this before class if you'd rather have paper than toggle notes on screen.</p>
       {SLIDES.map((s, i) => (
         <OutlineCard slide={s} heading={`${i + 1}. ${s.title}`} key={i} />
@@ -870,7 +1001,8 @@ function App() {
 
   const slide = SLIDES[index];
 
-  const next = useCallback(() => setIndex(i => Math.min(i + 1, SLIDES.length - 1)), []);
+  const next = useCallback(() => setIndex(i => (SLIDES[i].gate ? i : Math.min(i + 1, SLIDES.length - 1))), []);
+  const unlock = useCallback(() => setIndex(i => Math.min(i + 1, SLIDES.length - 1)), []);
   const prev = useCallback(() => setIndex(i => Math.max(i - 1, 0)), []);
 
   useEffect(() => {
@@ -884,10 +1016,11 @@ function App() {
       else if (e.key === "n" || e.key === "N") setShowNotes(v => !v);
       else if (e.key === "f" || e.key === "F") toggleFullscreen();
       else if (e.key === "o" || e.key === "O") setMode("outline");
+      else if (e.key === "g" || e.key === "G") unlock();
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [mode, next, prev]);
+  }, [mode, next, prev, unlock]);
 
   function toggleFullscreen() {
     if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
@@ -898,7 +1031,7 @@ function App() {
     return (
       <div className="app">
         <div className="toolbar">
-          <a className="back-link" href="/2026/10/21/robot-teacher-seminar.html">&larr; A Robot for Room 114</a>
+          <a className="back-link" href="/2026/10/21/would-you-vote-yes-on-a-robot-tutor.html">&larr; Would You Vote Yes on a Robot Tutor?</a>
           <div className="spacer"></div>
           <button onClick={() => setMode("deck")}>Back to slides (Esc)</button>
           <button onClick={() => window.print()}>Print</button>
@@ -923,7 +1056,11 @@ function App() {
         </div>
       )}
       <div className="toolbar">
-        <a className="back-link" href="/2026/10/21/robot-teacher-seminar.html">&larr; A Robot for Room 114</a>
+        <a className="back-link" href="/2026/10/21/would-you-vote-yes-on-a-robot-tutor.html">&larr; Would You Vote Yes on a Robot Tutor?</a>
+        {slide.handout && <span className="handout-badge">&#128196; {slide.handout}</span>}
+        {slide.pause && <span className="pause-badge">&#9208; {slide.pause}</span>}
+        {slide.gate && <button onClick={unlock}>Continue (G)</button>}
+        {slide.hint && <span className="hint-badge">&#128161; {slide.hint}</span>}
         <div className="spacer"></div>
         <button onClick={prev} disabled={index === 0}>&larr; Prev</button>
         <span className="counter">{index + 1} / {SLIDES.length}</span>
