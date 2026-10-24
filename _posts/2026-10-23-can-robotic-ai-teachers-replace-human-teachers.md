@@ -8,11 +8,11 @@ redirect_from:
 label: Lesson Plan / AI Literacy
 lesson_category: society
 standards_extra_carrier: socratic_seminar_kit
-excerpt: "A rural district agreed to buy a humanoid robot to help teach high school coding and robotics, and then the state stepped in. A ready-to-run Socratic seminar where the students are the school board.<br><a href='/2026/10/23/can-robotic-ai-teachers-replace-human-teachers.html'><img src='/docs/assets/images/ny-school-robot-inc.jpeg' alt='Sally, the humanoid robot teaching assistant that Salamanca City Central School District agreed to buy' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
+excerpt: "A rural district agreed to buy a humanoid robot to help teach high school coding and robotics, and then the state stepped in. A ready-to-run Socratic seminar where the students are the school board.<br><a href='/2026/10/23/can-robotic-ai-teachers-replace-human-teachers.html'><img src='/docs/assets/images/robot-teacher-classroom.jpg' alt='A friendly cartoon-style robot teacher pointing at a chalkboard that reads Computer Science, with a list of topics and a few lines of Python code' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 ---
 
-<img src="/docs/assets/images/ny-school-robot-inc.jpeg" alt="Sally, the humanoid robot teaching assistant that Salamanca City Central School District agreed to buy" style="max-height: 250px; width: auto; display: block; margin: 0 auto 0.4em;">
-<p style="text-align: center;"><small>Sally, the humanoid robot the district agreed to buy. Photo: Courtesy Realbotix.</small></p>
+<img src="/docs/assets/images/robot-teacher-classroom.jpg" alt="A friendly cartoon-style robot teacher pointing at a chalkboard that reads Computer Science, with a list of topics and a few lines of Python code" style="max-height: 250px; width: auto; display: block; margin: 0 auto 0.4em;">
+<p style="text-align: center;"><small>An AI-generated picture of a robot teacher.</small></p>
 
 A school district agreed to buy a humanoid robot to help teach high school coding and robotics. Then the state stepped in. This is a seminar about whether a school should buy it. It is a decision, not a debate over who is right, and your students are the ones affected. Buy it or not is the way in to the bigger question in the title: can robotic AI teachers replace human teachers?
 
