@@ -8,6 +8,8 @@ label: Tech News
 excerpt: "A rural district on the Seneca Nation reservation spent $57,590 on a humanoid robot teaching assistant built by a company with roots in sex dolls. On Friday the state stepped in and the district hit pause. The real problem isn't the data agreements. <br><img src='/docs/assets/images/ny-school-robot-inc.jpeg' alt='Sally' style='max-height: 200px; width: auto; display: block;'>"
 ---
 
+*Update, October 24, 2026: After this post, New York State Sen. Shelley Mayer introduced a bill, [S10671](https://www.nysenate.gov/legislation/bills/2025/S10671) on July 29. It would require every New York school district, charter school, and BOCES to adopt a policy prohibiting AI-enabled humanoid robots "in an instructional capacity." As of today the bill is still in committee in the New York Senate.*
+
 Salamanca High School was going to introduce students to a new face this September: a stationary humanoid robot named **Sally**, with silicone skin, long brown hair, and (this is real) a programmed Western New York accent.
 
 As of Friday afternoon, it isn't. The district has put the pilot on hold.

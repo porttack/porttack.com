@@ -251,6 +251,8 @@ If the room is lopsided after the first temperature check, you can also assign o
 
 - The state's Education Commissioner, Betty Rosa, wrote to the superintendent on July 24: "the Department remains concerned about the effect that a humanoid robot may have within a high school classroom." ([New York Focus](https://nysfocus.com/2026/07/24/new-york-robot-teacher-plan-paused))
 - The same day, the district announced the project was on hold while it works "through enhanced student data privacy agreements" with the state and talks with the community. It has not said when it might restart.
+- On July 29, New York State Sen. Shelley Mayer introduced a bill, [S10671](https://www.nysenate.gov/legislation/bills/2025/S10671), which would require every school district, charter school, and BOCES in New York to adopt a policy prohibiting AI-enabled humanoid robots "in an instructional capacity." As of October 24, 2026 it is in committee in the New York Senate and has not passed either chamber. It is a New York bill and would not apply anywhere else.
+- If time allows, ask: "A New York senator is asking the same question the students just answered. Does a ban answer it?"
 
 *[Your take goes here. Hold it until the last ten minutes and offer it as one opinion among many.]*
 
