@@ -116,6 +116,8 @@ Common Core ELA (California adoption). Paraphrased; confirm exact wording agains
 
 The Common Core and AB 873 alignment above is specific to this page and not in the widget below. The widget covers the discourse skills the format itself practices -- communicating effectively, reasoned judgment from evidence, perspective-taking, honesty, and questioning your own beliefs -- regardless of which seminar's reading fills the room that day. Each seminar's own lesson plan has its own alignment for its own reading, shown the same way at the bottom of that post.
 
+{% include license-footer.html %}
+
 {% include standards-alignment.html %}
 
 <script>

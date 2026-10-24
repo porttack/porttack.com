@@ -31,7 +31,25 @@ By the end of the seminar, students can:
 3. Identify what personal data a school system like this would collect, and the privacy risks of keeping it. AP CSP: IOC-2.A.
 4. Discuss as a group: cite the text, build on what others said, state the best argument for the side they disagree with, and change a position when the evidence changes.
 
-The alignment widget at the bottom of this page shows each standard.
+[See Standards](#standards-alignment)
+
+<script>
+// "See Standards" jumps to the standards widget at the bottom of the page and
+// opens it. The widget is built by the page layout, so it is found at click time.
+(function () {
+  var link = document.querySelector('a[href="#standards-alignment"]');
+  if (!link) return;
+  link.addEventListener('click', function (e) {
+    var d = document.querySelector('details.standards-alignment');
+    if (!d || d.hidden) return;
+    e.preventDefault();
+    d.id = 'standards-alignment';
+    d.open = true;
+    d.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    try { history.replaceState(null, '', '#standards-alignment'); } catch (x) {}
+  });
+})();
+</script>
 
 ## Materials
 
@@ -246,3 +264,5 @@ All of this is collected during the seminar. Nothing needs a separate quiz.
 | 4. Discussion | Observer organizer, including the tally of times a student built on someone else's idea. Three temperature checks, with a count of who moved and why. Entry ticket question 4, the best argument for the other side, graded for how well thought out it is (rubric in [the kit](/socratic-seminar-kit/#playing-the-other-side)). | Builds on a peer by name, cites a paragraph, can say what moved them (or why they held), and states the other side fairly. |
 
 I grade evidence and honesty, not the position landed on. "I changed my mind because of what someone said" is the best possible answer. The temperature-check count and the observer organizers are the artifacts to show anyone who asks what students did.
+
+{% include license-footer.html %}

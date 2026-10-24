@@ -230,3 +230,5 @@ All of this is collected during the seminar. Nothing needs a separate quiz.
 | 4. Discussion | Observer organizer, including the tally of times a student built on someone else's idea. Three temperature checks, with a count of who moved and why. | Builds on a peer by name, cites a paragraph, and can say what moved them (or why they held). |
 
 I grade evidence and honesty, not the position landed on. "I changed my mind because of what someone said" is the best possible answer.
+
+{% include license-footer.html %}
