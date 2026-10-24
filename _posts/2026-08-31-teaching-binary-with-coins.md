@@ -7,6 +7,8 @@ lesson_category: coding
 excerpt_separator: <!--more-->
 ---
 
+<img src="/assets/img/binary-coins-27.png" alt="Cash register board showing 27 as 11011: the 16, 8, 2, and 1 coins below the line, the 4 above it" title="Douglas Kiang's cash register board, from his walkthrough video" style="float: right; width: 200px; margin: 0.25em 0 0.5em 1em;">
+
 There is a version of the binary lesson where you put `128 64 32 16 8 4 2 1` on the board, explain that each place doubles, work three examples, and assign twenty conversions. It takes eleven minutes and roughly half the room writes down the algorithm without ever believing it.
 
 [Douglas Kiang has a better version](https://www.youtube.com/watch?v=AzhjGfxL574). It is a store, and it does not make change.
@@ -52,7 +54,7 @@ Then ask what the next coin should be. They say 16, and they can say why. This i
 
 ## The cash register
 
-Kiang's board looks like this: vertical lines making columns, one heavy horizontal line across the middle, coins laid out largest on the left.
+Kiang's board looks like this: vertical lines making columns, one heavy horizontal line across the middle, coins laid out largest on the left. The picture at the top of this post is that board with 27 on it.
 
 Coins you are **not** using stay above the line. Coins you **are** using go below.
 
