@@ -1,12 +1,12 @@
 ---
-title: "Can Robotic AI Teachers Do the Work of Real Teachers? (Overview)"
+title: "Can Robotic AI Teachers Replace Human Teachers? (Overview)"
 permalink: /robot-tutor-overview/
 ---
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Can Robotic AI Teachers Do the Work of Real Teachers? (Overview)</title>
+<title>Can Robotic AI Teachers Replace Human Teachers? (Overview)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {
@@ -452,7 +452,7 @@ const SLIDES = [
   {
     kind: "title",
     kicker: "For teachers and administrators",
-    title: "Can Robotic AI Teachers Do the Work of Real Teachers?",
+    title: "Can Robotic AI Teachers Replace Human Teachers?",
     subtitle: "A Socratic seminar on a real school district's decision",
     notes: "A short overview for colleagues or an administrator deciding whether to run or approve the seminar. About ten minutes, including the two videos. The full classroom deck, with every stop and hand-out marked, is linked on the last slide."
   },
@@ -577,7 +577,7 @@ const SLIDES = [
     kicker: "Find it",
     title: "Ready to Use",
     bullets: [
-      { text: "The lesson plan", href: "/2026/10/23/can-robotic-ai-teachers-do-the-work-of-real-teachers.html" },
+      { text: "The lesson plan", href: "/2026/10/23/can-robotic-ai-teachers-replace-human-teachers.html" },
       { text: "The full classroom deck, with speaker notes", href: "/robot-teacher-slides/" },
       { text: "The printable handout", href: "/socratic-seminar-handout/" },
       { text: "The Socratic Seminar Kit", href: "/socratic-seminar-kit/" }
@@ -782,7 +782,7 @@ function OutlineCard({ slide, heading }) {
 function Outline() {
   return (
     <div className="outline">
-      <h1>Can Robotic AI Teachers Do the Work of Real Teachers? Overview</h1>
+      <h1>Can Robotic AI Teachers Replace Human Teachers? Overview</h1>
       <p className="outline-sub">Speaker notes outline. Print this before class if you'd rather have paper than toggle notes on screen.</p>
       {SLIDES.map((s, i) => (
         <OutlineCard slide={s} heading={`${i + 1}. ${s.title}`} key={i} />
@@ -839,7 +839,7 @@ function App() {
     return (
       <div className="app">
         <div className="toolbar">
-          <a className="back-link" href="/2026/10/23/can-robotic-ai-teachers-do-the-work-of-real-teachers.html">&larr; Can Robotic AI Teachers Do the Work of Real Teachers? Overview</a>
+          <a className="back-link" href="/2026/10/23/can-robotic-ai-teachers-replace-human-teachers.html">&larr; Can Robotic AI Teachers Replace Human Teachers? Overview</a>
           <div className="spacer"></div>
           <button onClick={() => setMode("deck")}>Back to slides (Esc)</button>
           <button onClick={() => window.print()}>Print</button>
@@ -864,7 +864,7 @@ function App() {
         </div>
       )}
       <div className="toolbar">
-        <a className="back-link" href="/2026/10/23/can-robotic-ai-teachers-do-the-work-of-real-teachers.html">&larr; Can Robotic AI Teachers Do the Work of Real Teachers? Overview</a>
+        <a className="back-link" href="/2026/10/23/can-robotic-ai-teachers-replace-human-teachers.html">&larr; Can Robotic AI Teachers Replace Human Teachers? Overview</a>
         <div className="spacer"></div>
         <button onClick={prev} disabled={index === 0}>&larr; Prev</button>
         <span className="counter">{index + 1} / {SLIDES.length}</span>

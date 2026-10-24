@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Can Robotic AI Teachers Do the Work of Real Teachers? A Socratic Seminar"
+title: "Can Robotic AI Teachers Replace Human Teachers? A Socratic Seminar"
 categories: lesson-plans
 redirect_from:
   - /2026/10/21/robot-teacher-seminar.html
@@ -8,19 +8,19 @@ redirect_from:
 label: Lesson Plan / AI Literacy
 lesson_category: society
 standards_extra_carrier: socratic_seminar_kit
-excerpt: "A rural district agreed to buy a humanoid robot to help teach high school coding and robotics, and then the state stepped in. A ready-to-run Socratic seminar where the students are the school board.<br><a href='/2026/10/23/can-robotic-ai-teachers-do-the-work-of-real-teachers.html'><img src='/docs/assets/images/ny-school-robot-inc.jpeg' alt='Sally, the humanoid robot teaching assistant that Salamanca City Central School District agreed to buy' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
+excerpt: "A rural district agreed to buy a humanoid robot to help teach high school coding and robotics, and then the state stepped in. A ready-to-run Socratic seminar where the students are the school board.<br><a href='/2026/10/23/can-robotic-ai-teachers-replace-human-teachers.html'><img src='/docs/assets/images/ny-school-robot-inc.jpeg' alt='Sally, the humanoid robot teaching assistant that Salamanca City Central School District agreed to buy' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
 ---
 
 <img src="/docs/assets/images/ny-school-robot-inc.jpeg" alt="Sally, the humanoid robot teaching assistant that Salamanca City Central School District agreed to buy" style="max-height: 250px; width: auto; display: block; margin: 0 auto 0.4em;">
 <p style="text-align: center;"><small>Sally, the humanoid robot the district agreed to buy. Photo: Courtesy Realbotix.</small></p>
 
-A school district agreed to buy a humanoid robot to help teach high school coding and robotics. Then the state stepped in. This is a seminar about whether a school should buy it. It is a decision, not a debate over who is right, and your students are the ones affected. Buy it or not is the way in to the bigger question in the title: can robotic AI teachers do the work of real teachers?
+A school district agreed to buy a humanoid robot to help teach high school coding and robotics. Then the state stepped in. This is a seminar about whether a school should buy it. It is a decision, not a debate over who is right, and your students are the ones affected. Buy it or not is the way in to the bigger question in the title: can robotic AI teachers replace human teachers?
 
 The format is in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F): the norms, the fishbowl, and a one-sheet handout. This seminar has three rounds on the same decision: the reading and a first discussion, a closer look with a photo and two videos, and one more fact in a short clip.
 
 A longer opinion piece on this story is [AI Robot Teachers Are Almost Here]({% post_url 2026-07-24-robot-teacher %}). Keep your own view out of the room until the end.
 
-Slides: **[Would You Vote Yes on a Robot Tutor?](/robot-teacher-slides/)** &middot; Short overview for colleagues and administrators: **[Can Robotic AI Teachers Do the Work of Real Teachers? Overview](/robot-tutor-overview/)**
+Slides: **[Would You Vote Yes on a Robot Tutor?](/robot-teacher-slides/)** &middot; Short overview for colleagues and administrators: **[Can Robotic AI Teachers Replace Human Teachers? Overview](/robot-tutor-overview/)**
 
 ## Learning goals
 
