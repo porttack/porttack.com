@@ -889,8 +889,29 @@ function App() {
       else if (e.key === "f" || e.key === "F") toggleFullscreen();
       else if (e.key === "o" || e.key === "O") setMode("outline");
     }
+    // Touch: swipe left for the next slide, right for the previous. Swipes
+    // that start on a link, button, or video are left alone.
+    let touchStart = null;
+    function onTouchStart(e) {
+      if (mode !== "deck" || e.touches.length !== 1 || e.target.closest("a, button, iframe, input, textarea, select")) { touchStart = null; return; }
+      touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    }
+    function onTouchEnd(e) {
+      if (!touchStart) return;
+      const dx = e.changedTouches[0].clientX - touchStart.x;
+      const dy = e.changedTouches[0].clientY - touchStart.y;
+      touchStart = null;
+      if (Math.abs(dx) < 50 || Math.abs(dx) < 1.5 * Math.abs(dy)) return;
+      if (dx < 0) next(); else prev();
+    }
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    window.addEventListener("touchstart", onTouchStart, { passive: true });
+    window.addEventListener("touchend", onTouchEnd, { passive: true });
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("touchstart", onTouchStart);
+      window.removeEventListener("touchend", onTouchEnd);
+    };
   }, [mode, next, prev]);
 
   function toggleFullscreen() {

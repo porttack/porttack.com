@@ -21,10 +21,10 @@ The parts of a seminar that stay the same from topic to topic: the norms, the fi
 Scaled to whatever time you have. Rough minutes:
 
 1. **Norms, out loud (5 min).** Post them, read them, hold to them.
-2. **Opening temperature check (3 min).** Students stand on a line across the room between two walls, each with a position. Note where the room sits.
+2. **Opening temperature check (3 min).** Students vote with their feet, going to one side of the room or the other, each side with a position. Note where the room sits, then they return to their seats.
 3. **Opening round (4 min).** One question, and every student answers briefly from their entry ticket. No one has to be brave to go first, because everyone goes.
 4. **The seminar (20 min).** Fishbowl with the hot seat. I stay mostly silent. Stretch and swap the center group once if the energy earns it.
-5. **Closing temperature check (4 min).** Students move to the line again. Who shifted, and what moved them?
+5. **Closing temperature check (4 min).** Students pick a side again. Who shifted, and what moved them?
 6. **Reveal and exit ticket (10 min).** I share my take as one opinion among many, and they write.
 
 A seminar with a second reading adds a round between steps 4 and 5. Its lesson plan says where.
@@ -77,7 +77,7 @@ Three moves that make students argue the strongest version of a side they do not
 
 Adjust it to your gradebook. The rest of the handout is still graded for effort and honesty.
 
-**3. Assigned defenders (optional, when the room is lopsided).** Choose one or two students to argue the side most of the room does not hold, in the fishbowl. The temperature check already ranks the room: the line is the data. Ask for volunteers first. If nobody volunteers, ask students near the middle of the line, who have the least to give up. Do not pick the people at the loud end. Use it in a later round, such as the swap in Round 2, and not the first, so the first discussion stays authentic. Give each defender a role card with a few points from the reading ([print blank role cards](/socratic-seminar-cards/); a lesson plan links them already filled in). Say out loud who is playing a role. Afterward, ask what it was like to argue the side they did not hold. The optional second exit-ticket line asks it.
+**3. Assigned defenders (optional, when the room is lopsided).** Choose one or two students to argue the side most of the room does not hold, in the fishbowl. The temperature check already ranks the room: the split is the data. Ask for volunteers first. If nobody volunteers, ask students from the larger side, who are then arguing against their own pick. Do not pick the most outspoken. Use it in a later round, such as the swap in Round 2, and not the first, so the first discussion stays authentic. Give each defender a role card with a few points from the reading ([print blank role cards](/socratic-seminar-cards/); a lesson plan links them already filled in). Say out loud who is playing a role. Afterward, ask what it was like to argue the side they did not hold. The optional second exit-ticket line asks it.
 
 ## The handout
 

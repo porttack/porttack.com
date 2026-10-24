@@ -18,11 +18,11 @@ Would the students vote yes on a robot teacher? A real school district in rural 
 
 Three rounds on the same decision: the reading, a closer look with a photo and two videos, and one more fact in a short clip. Every student also prepares the best argument for the side they did not pick, and you can ask a few to defend the position they disagree with.
 
-**A note on content.** Round 3 reveals that the robot's maker is tied to sex dolls, and the avatar interview in Round 2 touches bullying and a student bringing a gun to school. Both are short clips that you preview first. They are not the focus of the lesson, but they may add to engagement. These are topics high school students are likely to meet already. The question in Round 3 is about trust, not shock.
+**A note on content.** In Round 2, the avatar interview touches bullying and a student bringing a gun to school. Round 3 reveals that the robot's maker is tied to sex dolls. The question in Round 3 is about trust, not shock. The clips are not the focus of the lesson, but they may spark some discussion and lead some students to change sides. High school students have likely met these topics already.
 
 A longer opinion piece on this story is [AI Robot Teachers Are Almost Here]({% post_url 2026-07-24-robot-teacher %}). Keep your own view out of the room until the end.
 
-Slides: **[Would You Vote Yes on a Robot Tutor?](/robot-teacher-slides/)**<br>Overview Slides: **[Can Robotic AI Teachers Replace Human Teachers?](/robot-tutor-overview/)** (for teachers/admins)
+Slides: **[Would You Vote for a Robot Teacher?](/robot-teacher-slides/)**<br>Overview Slides: **[Can Robotic AI Teachers Replace Human Teachers?](/robot-tutor-overview/)** (for teachers/admins)
 
 ## Learning goals
 
@@ -55,15 +55,15 @@ By the end of the seminar, students can:
 
 ## Materials
 
-The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the one-sheet handout.
+The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the one-sheet handout.
 
 
 Specific to this seminar:
 
-- **Handout:** [print the two-sided handout with this seminar's questions filled in](/socratic-seminar-handout/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F). The front is the entry ticket; the back is the observer organizer and the exit ticket. Name and period are at the top.
-- **Role cards (optional):** [print the role cards for the two sides](/socratic-seminar-cards/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&a=Buy%20it&ap=Banning%20technology%20is%20the%20easy%20way%20out.%20Schools%20should%20teach%20students%20to%20use%20it%20well.%20%28Reading%2C%20paragraph%206%29%0AThe%20robot%20runs%20on%20a%20closed%20system%2C%20and%20the%20company%20will%20not%20have%20access%20to%20personally%20identifiable%20student%20information.%20%28Paragraph%205%29%0AIt%20is%20a%20tutor%20for%20AI%20and%20robotics%20classes%2C%20and%20an%20avatar%20students%20could%20use%20after%20school.%20%28Paragraph%203%29&b=Do%20not%20buy%20it&bp=Students%20need%20real%20human%20relationships%2C%20not%20simulated%20ones.%20%28Paragraph%207%29%0AThe%20robot%20would%20keep%20each%20student%27s%20past%20conversations%20under%20their%20ID.%20That%20is%20a%20lot%20of%20personal%20data.%20%28Paragraph%204%29%0AThe%20privacy%20promises%20are%20the%20superintendent%27s%20words.%20Nothing%20in%20the%20reading%20says%20anyone%20has%20checked%20them.). One sheet makes four cards, two for each side. They are for students who will argue a side they did not pick. See "Playing the other side" below.
+- **Handout:** [print the two-sided handout with this seminar's questions filled in](/socratic-seminar-handout/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F). The front is the entry ticket; the back is the observer organizer and the exit ticket. Name and period are at the top.
+- **Role cards (optional):** [print the role cards for the two sides](/socratic-seminar-cards/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&a=Buy%20it&ap=Banning%20technology%20is%20the%20easy%20way%20out.%20Schools%20should%20teach%20students%20to%20use%20it%20well.%20%28Reading%2C%20paragraph%206%29%0AThe%20robot%20runs%20on%20a%20closed%20system%2C%20and%20the%20company%20will%20not%20have%20access%20to%20personally%20identifiable%20student%20information.%20%28Paragraph%205%29%0AIt%20is%20a%20tutor%20for%20AI%20and%20robotics%20classes%2C%20and%20an%20avatar%20students%20could%20use%20after%20school.%20%28Paragraph%203%29&b=Do%20not%20buy%20it&bp=Students%20need%20real%20human%20relationships%2C%20not%20simulated%20ones.%20%28Paragraph%207%29%0AThe%20robot%20would%20keep%20each%20student%27s%20past%20conversations%20under%20their%20ID.%20That%20is%20a%20lot%20of%20personal%20data.%20%28Paragraph%204%29%0AThe%20privacy%20promises%20are%20the%20superintendent%27s%20words.%20Nothing%20in%20the%20reading%20says%20anyone%20has%20checked%20them.). One sheet makes four cards, two for each side. They are for students who will argue a side they did not pick. See "Playing the other side" below.
 - **Reading, printable (one page):** [A Robot for Room 114](/robot-reading/). The same text is below. Round 2 is a photo and two videos, not a reading.
-- **Slides:** [Would You Vote Yes on a Robot Tutor?](/robot-teacher-slides/), with speaker notes. Round 2 plays [the news clip](https://www.foxnews.com/video/6401736424112) and [the avatar interview](https://www.youtube.com/watch?v=b4siBdDtz7k). Round 3 is a 17-second clip.
+- **Slides:** [Would You Vote for a Robot Teacher?](/robot-teacher-slides/), with speaker notes. Round 2 plays [the news clip](https://www.foxnews.com/video/6401736424112) and [the avatar interview](https://www.youtube.com/watch?v=b4siBdDtz7k). Round 3 is a 17-second clip.
 - **Run of show:** below, after Round 3. This one has three rounds, not one.
 
 <style>
@@ -169,8 +169,8 @@ Start times are in minutes from the beginning of the class, with the sections yo
 | Slides | Starts at (min) | What you do |
 |---|---|---|
 | 1–3 | 0 | Title, goals, and the five norms. Read the norms out loud. |
-| **4** | 5 | **Opening temperature check.** Students stand on a line. One wall: "A robot tutor is just another tool, like a textbook or a calculator." The other: "A tutor with a face is different." Note where the room sits. |
-| 5 | 8 | **Hand out [the reading](/robot-reading/) and the [two-sided handout](/socratic-seminar-handout/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F).** Students read, then fill in the entry ticket on the front. |
+| **4** | 5 | **Opening temperature check.** Students vote with their feet: they go to one side of the room or the other. One side: "A robot teacher is just another tool, like a textbook or a calculator." The other: "A teacher with a face is different." Note where the room sits, then they return to their seats. |
+| 5 | 8 | **Hand out [the reading](/robot-reading/) and the [two-sided handout](/socratic-seminar-handout/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F).** Students read, then fill in the entry ticket on the front. |
 | 6–8 | 12 | Project the facts: what they agreed to buy (no photo yet), where it would be used, and how it would work. Keep it brisk, since they have read it. The two voices, the superintendent's and the union's, are in the reading and not on a slide. |
 | **9** | 15 | **Stop. Round 1 opening.** Every student answers briefly from their entry ticket: "You are the school board. Should the district buy the robot, or not? If you are unsure, what more would you need to know?" |
 | **10** | 19 | **Stop. Round 1 fishbowl** with the hot seat. The outer circle fills in the **observer organizer** on the back of the handout. Stay on this slide until it ends. You time it. |
@@ -208,7 +208,7 @@ Back-pocket only. The entry ticket asks students to write their own.
 - "No access to personally identifiable student information." What counts as personally identifiable? Could a conversation history identify you without your name?
 - The robot flags words like self-harm and alerts administrators. Who decides what gets flagged? What happens to a student who sees that coming? (This connects directly to [the chatbot-and-principal provision]({% post_url 2026-08-08-what-happens-when-the-chatbot-tells-the-principal %}) of the STUDENTS FIRST Act.)
 - The district is poorer than most. Does this narrow the gap between rich and poor schools, or widen it?
-- Could a robot tutor be biased? In what ways?
+- Could a robot teacher be biased? In what ways?
 
 **Round 2 (the photo and the videos):**
 
@@ -217,7 +217,7 @@ The main question is the same as Round 1: buy it, or not, and if you are unsure,
 - Who heard a strong argument for the side you didn't pick?
 - What did the robot do well? What would worry you?
 - Who is each person speaking for: the superintendent, the union, the company?
-- What if the robot looked different: an old man, say, instead of a young woman? Would the "tutor with a face" question change? Who decided what she should look like, and why?
+- What if the robot looked different: an old man, say, instead of a young woman? Would the "teacher with a face" question change? Who decided what she should look like, and why?
 - The district says the robot will not replace teachers, and the union says students need real human relationships. Is there anything they agree on?
 - The superintendent said words like self-harm alert administrators. The avatar says a teacher cannot "just casually read" a student's conversations. Are those the same claim? What would you want clarified?
 - When asked who is better at math, boys or girls, the avatar gives a good answer. Is saying the right thing enough for a tutor? How would you test whether it is biased?
@@ -229,9 +229,9 @@ The entry ticket's fourth question already asks every student for the best argum
 
 If the room is lopsided after the first temperature check, you can also assign one or two students to defend the side most of the room does not hold, in the Round 2 fishbowl:
 
-- **Who.** Ask for volunteers first. If nobody volunteers, ask students near the middle of the line, who have the least to give up. Do not pick the people at the loud end.
+- **Who.** Ask for volunteers first. If nobody volunteers, ask students from the larger side, who are then arguing against their own pick. Do not pick the most outspoken.
 - **When.** Round 2, when the students who were outside swap in, so Round 1 stays authentic. Hand the cards out just before the swap, and say out loud who is playing a role.
-- **The cards.** [Print the role cards](/socratic-seminar-cards/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&a=Buy%20it&ap=Banning%20technology%20is%20the%20easy%20way%20out.%20Schools%20should%20teach%20students%20to%20use%20it%20well.%20%28Reading%2C%20paragraph%206%29%0AThe%20robot%20runs%20on%20a%20closed%20system%2C%20and%20the%20company%20will%20not%20have%20access%20to%20personally%20identifiable%20student%20information.%20%28Paragraph%205%29%0AIt%20is%20a%20tutor%20for%20AI%20and%20robotics%20classes%2C%20and%20an%20avatar%20students%20could%20use%20after%20school.%20%28Paragraph%203%29&b=Do%20not%20buy%20it&bp=Students%20need%20real%20human%20relationships%2C%20not%20simulated%20ones.%20%28Paragraph%207%29%0AThe%20robot%20would%20keep%20each%20student%27s%20past%20conversations%20under%20their%20ID.%20That%20is%20a%20lot%20of%20personal%20data.%20%28Paragraph%204%29%0AThe%20privacy%20promises%20are%20the%20superintendent%27s%20words.%20Nothing%20in%20the%20reading%20says%20anyone%20has%20checked%20them.). One sheet makes four: two "Buy it" and two "Do not buy it." The points come only from the reading, so every student can check them:
+- **The cards.** [Print the role cards](/socratic-seminar-cards/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&a=Buy%20it&ap=Banning%20technology%20is%20the%20easy%20way%20out.%20Schools%20should%20teach%20students%20to%20use%20it%20well.%20%28Reading%2C%20paragraph%206%29%0AThe%20robot%20runs%20on%20a%20closed%20system%2C%20and%20the%20company%20will%20not%20have%20access%20to%20personally%20identifiable%20student%20information.%20%28Paragraph%205%29%0AIt%20is%20a%20tutor%20for%20AI%20and%20robotics%20classes%2C%20and%20an%20avatar%20students%20could%20use%20after%20school.%20%28Paragraph%203%29&b=Do%20not%20buy%20it&bp=Students%20need%20real%20human%20relationships%2C%20not%20simulated%20ones.%20%28Paragraph%207%29%0AThe%20robot%20would%20keep%20each%20student%27s%20past%20conversations%20under%20their%20ID.%20That%20is%20a%20lot%20of%20personal%20data.%20%28Paragraph%204%29%0AThe%20privacy%20promises%20are%20the%20superintendent%27s%20words.%20Nothing%20in%20the%20reading%20says%20anyone%20has%20checked%20them.). One sheet makes four: two "Buy it" and two "Do not buy it." The points come only from the reading, so every student can check them:
 
 **Buy it**
 - Banning technology is the easy way out. Schools should teach students to use it well. (Reading, paragraph 6)

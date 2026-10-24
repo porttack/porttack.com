@@ -496,7 +496,7 @@ const SLIDES = [
     kicker: "The idea",
     title: "A Real Decision",
     bullets: [
-      "A real district bought a humanoid robot tutor",
+      "A real district bought a humanoid robot teacher",
       "Then the state stepped in, and the district paused",
       "Students are the school board, and the vote is theirs"
     ],
@@ -507,12 +507,12 @@ const SLIDES = [
     kicker: "For administrators",
     title: "Why This Needs Care",
     bullets: [
-      "Round 3 reveals the maker's link to sex dolls",
-      "The avatar interview touches bullying and a gun",
-      "Each is a short clip the teacher previews first",
-      "The question is trust, not shock"
+      "Round 2: the avatar interview touches bullying and a gun",
+      "Round 3: the maker's link to sex dolls is revealed",
+      "The Round 3 question is trust, not shock",
+      "Both are short clips the teacher previews first"
     ],
-    notes: "The seminar touches two sensitive things, and both are stated here so an administrator is not surprised. Round 3 reveals one fact: the company that makes the robot, Realbotix, bought Simulcra, the parent company of RealDoll, in April 2024, and RealDoll makes sex dolls and sex robots (New York Focus). The company says its education team is separate. The Round 3 clip is 17 seconds (11 to 28) from a late-night news-comedy segment. The full segment has some very inappropriate comments and is for teachers only, so only the 17 seconds is shown, and the teacher previews them first. In the Round 2 avatar interview, the avatar answers a question about bullying and a question about a student who brought a gun to school, and in both it tells the student to go to a trusted adult. Both are short clips, not the focus of the lesson, but they may add to engagement. High school students are likely to meet these topics already. The Round 3 question is about trust, not shock: should a vendor's history change whether you believe its promises?"
+    notes: "The seminar touches two sensitive things, and both are stated here so an administrator is not surprised. In the Round 2 avatar interview, the avatar answers a question about bullying and a question about a student who brought a gun to school, and in both it tells the student to go to a trusted adult. Round 3 reveals one fact: the company that makes the robot, Realbotix, bought Simulcra, the parent company of RealDoll, in April 2024, and RealDoll makes sex dolls and sex robots (New York Focus). The company says its education team is separate. The Round 3 question is about trust, not shock: should a vendor's history change whether you believe its promises? The Round 3 clip is 17 seconds (11 to 28) from a late-night news-comedy segment. The full segment has some very inappropriate comments and is for teachers only, so only the 17 seconds is shown, and the teacher previews them first. Both are short clips, not the focus of the lesson, but they may spark some discussion and lead some students to change sides. High school students have likely met these topics already."
   },
   {
     kind: "bullets",
@@ -522,9 +522,9 @@ const SLIDES = [
       "Read a one-page true story and take a position",
       "Discuss in a fishbowl, with a hot seat",
       "Watch two videos, then weigh what changed",
-      "Move on a line and write what moved them"
+      "Pick a side of the room, and write what moved them"
     ],
-    notes: "It is a Socratic seminar: the students' talk does the work, not the teacher's slides. The teacher stays mostly silent, and the plan says where to stop each round. Students stand on a line before, during, and after the discussion, which makes changes of mind visible."
+    notes: "It is a Socratic seminar: the students' talk does the work, not the teacher's slides. The teacher stays mostly silent, and the plan says where to stop each round. Students pick a side of the room before, during, and after the discussion, then return to their seats, which makes changes of mind visible."
   },
   {
     kind: "bullets",
@@ -885,8 +885,29 @@ function App() {
       else if (e.key === "f" || e.key === "F") toggleFullscreen();
       else if (e.key === "o" || e.key === "O") setMode("outline");
     }
+    // Touch: swipe left for the next slide, right for the previous. Swipes
+    // that start on a link, button, or video are left alone.
+    let touchStart = null;
+    function onTouchStart(e) {
+      if (mode !== "deck" || e.touches.length !== 1 || e.target.closest("a, button, iframe, input, textarea, select")) { touchStart = null; return; }
+      touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    }
+    function onTouchEnd(e) {
+      if (!touchStart) return;
+      const dx = e.changedTouches[0].clientX - touchStart.x;
+      const dy = e.changedTouches[0].clientY - touchStart.y;
+      touchStart = null;
+      if (Math.abs(dx) < 50 || Math.abs(dx) < 1.5 * Math.abs(dy)) return;
+      if (dx < 0) next(); else prev();
+    }
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    window.addEventListener("touchstart", onTouchStart, { passive: true });
+    window.addEventListener("touchend", onTouchEnd, { passive: true });
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("touchstart", onTouchStart);
+      window.removeEventListener("touchend", onTouchEnd);
+    };
   }, [mode, next, prev]);
 
   function toggleFullscreen() {

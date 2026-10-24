@@ -1,12 +1,12 @@
 ---
-title: "Would You Vote Yes on a Robot Tutor? (Slides)"
+title: "Would You Vote for a Robot Teacher? (Slides)"
 permalink: /robot-teacher-slides/
 ---
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Would You Vote Yes on a Robot Tutor? (Slides)</title>
+<title>Would You Vote for a Robot Teacher? (Slides)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {
@@ -489,11 +489,14 @@ const { useState, useEffect, useRef, useCallback } = React;
 // string, or { text, href } to render as a link.
 const SLIDES = [
   {
-    kind: "title",
+    kind: "split",
+    image: "/docs/assets/images/robot-teacher-classroom.jpg",
     kicker: "Socratic Seminar",
-    title: "Would You Vote Yes on a Robot Tutor?",
-    subtitle: "A real school district. A real vote. You are the board.",
-    notes: "Classroom deck for the robot-tutor seminar. The format (norms, fishbowl, handout) is in the Socratic Seminar Kit: /socratic-seminar-kit/. Three rounds, each on the same decision: the pitch (Round 1), a closer look at a photo and two videos (Round 2), and one more fact in a short clip (Round 3). The toolbar shows an amber “stay here” badge on the stop slides and a blue “hand out” badge where a worksheet goes out."
+    title: "Would You Vote for a Robot Teacher?",
+    bullets: [
+      "A real school district. A real vote. You are the board."
+    ],
+    notes: "The picture is an AI-generated illustration, friendly and cartoon-style on purpose, so students start out picturing a plastic robot. The real robot appears in Round 2. Classroom deck for the robot-teacher seminar. The format (norms, fishbowl, handout) is in the Socratic Seminar Kit: /socratic-seminar-kit/. Three rounds, each on the same decision: the pitch (Round 1), a closer look at a photo and two videos (Round 2), and one more fact in a short clip (Round 3). The toolbar shows an amber “stay here” badge on the stop slides and a blue “hand out” badge where a worksheet goes out."
   },
   {
     kind: "bullets",
@@ -523,11 +526,11 @@ const SLIDES = [
   {
     kind: "wall",
     kicker: "Temperature check",
-    title: "Stand on the Line",
-    pause: "Students move to the line. Note where the room sits.",
-    left: "A robot tutor is just another tool, like a textbook or a calculator",
-    right: "A tutor with a face is different",
-    notes: "Students stand along a line between the two walls. Note where the room sits. You will ask them to move twice more."
+    title: "Vote with Your Feet",
+    pause: "Students go to one side of the room or the other. Note where the room sits.",
+    left: "A robot teacher is just another tool, like a textbook or a calculator",
+    right: "A teacher with a face is different",
+    notes: "Students go to the side of the room that matches their opinion, then return to their seats. Note where the room sits. You will ask them to pick a side twice more."
   },
   {
     kind: "bullets",
@@ -626,9 +629,9 @@ const SLIDES = [
     image: "/docs/assets/images/ny-school-robot-inc.jpeg",
     bullets: [
       "Lifelike silicone skin, and a face that moves",
-      "A tutor with a face. Is it different?"
+      "A teacher with a face. Is it different?"
     ],
-    notes: "The first time students see the robot. Say nothing for a few seconds. The first temperature check asked whether a tutor with a face is different, and now they can see the face. Photo courtesy Realbotix."
+    notes: "The first time students see the robot. Say nothing for a few seconds. The first temperature check asked whether a teacher with a face is different, and now they can see the face. Photo courtesy Realbotix."
   },
   {
     kind: "bullets",
@@ -683,9 +686,9 @@ const SLIDES = [
     kind: "wall",
     kicker: "Temperature check, again",
     title: "Has Anything Changed Your Vote?",
-    pause: "Students move again. Who shifted?",
-    left: "A robot tutor is just another tool, like a textbook or a calculator",
-    right: "A tutor with a face is different",
+    pause: "Students pick a side again. Who shifted?",
+    left: "A robot teacher is just another tool, like a textbook or a calculator",
+    right: "A teacher with a face is different",
     notes: "Who moved, and what moved them? Take two or three answers."
   },
   {
@@ -723,10 +726,10 @@ const SLIDES = [
   {
     kind: "wall",
     kicker: "Last temperature check",
-    title: "Move One Last Time",
-    pause: "Last move. Count who shifted.",
-    left: "A robot tutor is just another tool, like a textbook or a calculator",
-    right: "A tutor with a face is different",
+    title: "Vote with Your Feet One Last Time",
+    pause: "Last pick. Count who shifted.",
+    left: "A robot teacher is just another tool, like a textbook or a calculator",
+    right: "A teacher with a face is different",
     notes: "Compare to the first and second checks. Who moved across all three, and why? Then give your reveal, spoken, and then the exit ticket."
   },
   {
@@ -981,7 +984,7 @@ function OutlineCard({ slide, heading }) {
 function Outline() {
   return (
     <div className="outline">
-      <h1>Would You Vote Yes on a Robot Tutor?</h1>
+      <h1>Would You Vote for a Robot Teacher?</h1>
       <p className="outline-sub">Speaker notes outline. Print this before class if you'd rather have paper than toggle notes on screen.</p>
       {SLIDES.map((s, i) => (
         <OutlineCard slide={s} heading={`${i + 1}. ${s.title}`} key={i} />
@@ -1027,8 +1030,29 @@ function App() {
       else if (e.key === "o" || e.key === "O") setMode("outline");
       else if (e.key === "g" || e.key === "G") unlock();
     }
+    // Touch: swipe left for the next slide, right for the previous. Swipes
+    // that start on a link, button, or video are left alone.
+    let touchStart = null;
+    function onTouchStart(e) {
+      if (mode !== "deck" || e.touches.length !== 1 || e.target.closest("a, button, iframe, input, textarea, select")) { touchStart = null; return; }
+      touchStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    }
+    function onTouchEnd(e) {
+      if (!touchStart) return;
+      const dx = e.changedTouches[0].clientX - touchStart.x;
+      const dy = e.changedTouches[0].clientY - touchStart.y;
+      touchStart = null;
+      if (Math.abs(dx) < 50 || Math.abs(dx) < 1.5 * Math.abs(dy)) return;
+      if (dx < 0) next(); else prev();
+    }
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    window.addEventListener("touchstart", onTouchStart, { passive: true });
+    window.addEventListener("touchend", onTouchEnd, { passive: true });
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("touchstart", onTouchStart);
+      window.removeEventListener("touchend", onTouchEnd);
+    };
   }, [mode, next, prev, unlock]);
 
   function toggleFullscreen() {
@@ -1040,7 +1064,7 @@ function App() {
     return (
       <div className="app">
         <div className="toolbar">
-          <a className="back-link" href="/2026/10/23/can-robotic-ai-teachers-replace-human-teachers.html">&larr; Would You Vote Yes on a Robot Tutor?</a>
+          <a className="back-link" href="/2026/10/23/can-robotic-ai-teachers-replace-human-teachers.html">&larr; Would You Vote for a Robot Teacher?</a>
           <div className="spacer"></div>
           <button onClick={() => setMode("deck")}>Back to slides (Esc)</button>
           <button onClick={() => window.print()}>Print</button>
@@ -1065,7 +1089,7 @@ function App() {
         </div>
       )}
       <div className="toolbar">
-        <a className="back-link" href="/2026/10/23/can-robotic-ai-teachers-replace-human-teachers.html">&larr; Would You Vote Yes on a Robot Tutor?</a>
+        <a className="back-link" href="/2026/10/23/can-robotic-ai-teachers-replace-human-teachers.html">&larr; Would You Vote for a Robot Teacher?</a>
         {slide.handout && <span className="handout-badge">&#128196; {slide.handout}</span>}
         {slide.pause && <span className="pause-badge">&#9208; {slide.pause}</span>}
         {slide.gate && <button onClick={unlock}>Continue (G)</button>}
