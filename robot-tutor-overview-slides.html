@@ -316,6 +316,41 @@ permalink: /robot-tutor-overview/
   .stage { pointer-events: none; }
   .stage a, .stage button, .stage iframe { pointer-events: auto; }
 
+  .slide-wide-image { max-height: 210px; }
+
+  .video-slide { padding: 36px 96px; }
+  .video-slide .kicker { margin: 0 0 6px; }
+  .video-slide .slide-title { font-size: 44px; margin: 0 0 14px; }
+  .slide-video { width: 800px; height: 450px; border: 0; align-self: center; }
+  .video-links { margin: 12px 0 0; font-size: 22px; text-align: center; }
+  .video-links a { color: var(--accent); margin: 0 18px; }
+
+  .hint-badge {
+    background: #57606a;
+    color: #fff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .handout-badge {
+    background: #2a7ae2;
+    color: #fff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .pause-badge {
+    background: #b25e00;
+    color: #fff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
   .slide-counter-badge {
     position: absolute;
     bottom: 18px;
@@ -468,6 +503,18 @@ const SLIDES = [
     notes: "The seminar puts students in the position of the people who had to decide. It is a decision, not a debate over who is right, and the students are the ones a decision like this affects. There is no single right answer, and some of the facts are still unknown."
   },
   {
+    kind: "highlight",
+    kicker: "For administrators",
+    title: "Why This Needs Care",
+    bullets: [
+      "Round 3 reveals the maker's link to sex dolls",
+      "The avatar interview touches bullying and a gun",
+      "Each is a short clip the teacher previews first",
+      "The question is trust, not shock"
+    ],
+    notes: "The seminar touches two sensitive things, and both are stated here so an administrator is not surprised. Round 3 reveals one fact: the company that makes the robot, Realbotix, bought Simulcra, the parent company of RealDoll, in April 2024, and RealDoll makes sex dolls and sex robots (New York Focus). The company says its education team is separate. The Round 3 clip is 17 seconds (11 to 28) from a late-night news-comedy segment. The full segment has some very inappropriate comments and is for teachers only, so only the 17 seconds is shown, and the teacher previews them first. In the Round 2 avatar interview, the avatar answers a question about bullying and a question about a student who brought a gun to school, and in both it tells the student to go to a trusted adult. Both are short clips, not the focus of the lesson, but they may add to engagement. High school students are likely to meet these topics already. The Round 3 question is about trust, not shock: should a vendor's history change whether you believe its promises?"
+  },
+  {
     kind: "bullets",
     kicker: "The format",
     title: "What Students Do",
@@ -502,15 +549,24 @@ const SLIDES = [
     notes: "Round 2 in the classroom run. The page was checked, but the clip was not watched, so preview it. The link opens in a new tab."
   },
   {
-    kind: "bullets",
+    kind: "video",
     kicker: "Moment 2",
     title: "Interviewing the Avatar",
-    bullets: [
-      "A reporter interviews the AI avatar (New York Focus)",
-      { text: "Watch it on YouTube (New York Focus)", href: "https://www.youtube.com/watch?v=b4siBdDtz7k" },
+    hint: "Click the video to play it. Then click outside it to get the arrow keys back.",
+    embed: "https://www.youtube-nocookie.com/embed/b4siBdDtz7k?rel=0&modestbranding=1&playsinline=1",
+    links: [
+      { text: "Watch on YouTube (New York Focus)", href: "https://www.youtube.com/watch?v=b4siBdDtz7k" },
       { text: "Read the source article", href: "https://nysfocus.com/2026/07/28/salamanca-ai-teaching-assistant-interview" }
     ],
     notes: "New York Focus's own upload on YouTube, also embedded on its article page. The video was not watched, so preview it. YouTube may show an ad first and may suggest related videos, so open it ahead of time. The link opens in a new tab."
+  },
+  {
+    kind: "video",
+    kicker: "Moment 3 (optional)",
+    title: "The Round 3 Clip",
+    hint: "Click the video to play it. Then click outside it to get the arrow keys back.",
+    embed: "https://www.youtube-nocookie.com/embed/8aXiTqdyHmQ?start=11&end=28&rel=0&modestbranding=1&playsinline=1",
+    notes: "The Round 3 clip: 17 seconds (11 to 28) of a Fox News late-night segment, set to stop at 28 seconds. It reveals that the robot's maker is tied to sex dolls, which is why the previous care slide exists. The teacher previews exactly these seconds first. There is no link to the full segment because it is for teachers only and has some very inappropriate comments. The classroom deck uses this same clip, on the slide after a gated \u201cOne More Thing.\u201d"
   },
   {
     kind: "highlight",
@@ -559,18 +615,6 @@ const SLIDES = [
       "Students work on paper, so no accounts or data"
     ],
     notes: "The lesson plan has a slide-by-slide table with start times and marks the sections that can be skipped for a shorter period. The times are estimates, not timed runs. The seminar itself collects no student data, which matters for a lesson about student data."
-  },
-  {
-    kind: "highlight",
-    kicker: "For administrators",
-    title: "Handled With Care",
-    bullets: [
-      "Round 3: a 17-second clip about the vendor's history",
-      "The teacher previews exactly those seconds",
-      "The full segment is for teachers only",
-      "Quotes are verbatim, from sources checked"
-    ],
-    notes: "Round 3 is a 17-second clip (11 to 28 seconds) from a late-night news-comedy segment, shown to introduce one fact: the company that makes the robot bought, in 2024, another company that makes adult-oriented dolls and robots, and the company says its education team is separate. The question put to students is about trust: should a vendor's history change whether you believe its promises? The full segment has some very inappropriate comments, so the deck shows only the 17 seconds, and the teacher previews them first. It is stated here so an administrator is not surprised."
   },
   {
     kind: "title",
@@ -632,6 +676,21 @@ function Stage({ slide, aspect }) {
           <div className="wall-side wall-left">{slide.left}</div>
           <div className="wall-side wall-right">{slide.right}</div>
         </div>
+      </div>
+    );
+  }
+  if (slide.kind === "video") {
+    // A video embedded large, with plain links to the same video underneath.
+    return (
+      <div className={"stage video-slide " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <iframe className="slide-video" src={slide.embed} title={slide.title} allow="encrypted-media; fullscreen" allowFullScreen></iframe>
+        {slide.links && (
+          <p className="video-links">
+            {slide.links.map((l, i) => <a key={i} href={l.href} target="_blank" rel="noopener noreferrer">{l.text}</a>)}
+          </p>
+        )}
       </div>
     );
   }
@@ -865,6 +924,7 @@ function App() {
       )}
       <div className="toolbar">
         <a className="back-link" href="/2026/10/23/can-robotic-ai-teachers-replace-human-teachers.html">&larr; Can Robotic AI Teachers Replace Human Teachers? Overview</a>
+        {slide.hint && <span className="hint-badge">&#128161; {slide.hint}</span>}
         <div className="spacer"></div>
         <button onClick={prev} disabled={index === 0}>&larr; Prev</button>
         <span className="counter">{index + 1} / {SLIDES.length}</span>

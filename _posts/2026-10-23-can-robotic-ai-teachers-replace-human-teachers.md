@@ -14,13 +14,15 @@ excerpt: "A rural district agreed to buy a humanoid robot to help teach high sch
 <img src="/docs/assets/images/robot-teacher-classroom.jpg" alt="A friendly cartoon-style robot teacher pointing at a chalkboard that reads Computer Science, with a list of topics and a few lines of Python code" style="max-height: 250px; width: auto; display: block; margin: 0 auto 0.4em;">
 <p style="text-align: center;"><small>An AI-generated picture of a robot teacher.</small></p>
 
-A school district agreed to buy a humanoid robot to help teach high school coding and robotics. Then the state stepped in. This is a seminar about whether a school should buy it. It is a decision, not a debate over who is right, and your students are the ones affected. Buy it or not is the way in to the bigger question in the title: can robotic AI teachers replace human teachers?
+Would the students vote yes on a robot teacher? A real school district in rural New York agreed to spend $57,590 on one, a humanoid robot to help teach high school coding and robotics. In this seminar the students are the school board, and the decision leads to a bigger question: **Can robotic AI teachers replace human teachers?**
 
-The format is in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=Would%20You%20Vote%20Yes%20on%20a%20Robot%20Tutor%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F): the norms, the fishbowl, and a one-sheet handout. This seminar has three rounds on the same decision: the reading and a first discussion, a closer look with a photo and two videos, and one more fact in a short clip.
+Three rounds on the same decision: the reading, a closer look with a photo and two videos, and one more fact in a short clip. Every student also prepares the best argument for the side they did not pick, and you can ask a few to defend the position they disagree with.
+
+**A note on content.** Round 3 reveals that the robot's maker is tied to sex dolls, and the avatar interview in Round 2 touches bullying and a student bringing a gun to school. Both are short clips that you preview first. They are not the focus of the lesson, but they may add to engagement. These are topics high school students are likely to meet already. The question in Round 3 is about trust, not shock.
 
 A longer opinion piece on this story is [AI Robot Teachers Are Almost Here]({% post_url 2026-07-24-robot-teacher %}). Keep your own view out of the room until the end.
 
-Slides: **[Would You Vote Yes on a Robot Tutor?](/robot-teacher-slides/)** &middot; Short overview for colleagues and administrators: **[Can Robotic AI Teachers Replace Human Teachers? Overview](/robot-tutor-overview/)**
+Slides: **[Would You Vote Yes on a Robot Tutor?](/robot-teacher-slides/)**<br>Overview Slides: **[Can Robotic AI Teachers Replace Human Teachers?](/robot-tutor-overview/)** (for teachers/admins)
 
 ## Learning goals
 
@@ -144,7 +146,7 @@ function seminarPlainCopy(text,done){
 
 ## Round 3: one more fact
 
-After Round 2, "One More Thing" leads to a 17-second clip (11 to 28 seconds) from a news-comedy segment about the vendor's history. Then "Still Buy It?" opens one more discussion on the same decision, with the photo of Sally back on screen. You can swap people or keep the same circle, and you time it. It is a good place to watch how they react.
+Round 3 reveals that the robot's maker is tied to sex dolls. Realbotix bought Simulcra, the parent company of RealDoll, in April 2024, and RealDoll makes sex dolls and sex robots ([New York Focus](https://nysfocus.com/2026/07/14/new-york-humanoid-robot-teacher-salamanca-school-district)). Realbotix says its education team is separate: no shared employees, payroll, locations, or technology. After Round 2, "One More Thing" leads to a 17-second clip (11 to 28 seconds) from a news-comedy segment on the story. Then "Still Buy It?" opens one more discussion on the same decision, with the photo of Sally back on screen. You can swap people or keep the same circle, and you time it. It is a good place to watch how they react.
 
 **Why this works as a round, and not as a shock:**
 
@@ -181,7 +183,7 @@ Start times are in minutes from the beginning of the class, with the sections yo
 | **17** | 43 | **Stop. Round 2 fishbowl.** The students who were outside swap in. Same decision: "Buy it, or not? If you are unsure, what more would you need to know? Did anything you just saw change your answer?" Stay on this slide until it ends. You time it. The photo stays on screen so students see her one last time. Optional: hand the role cards to the students who will defend the side they did not pick, just before the swap. |
 | 18 | 53, skippable | **Temperature check again.** Who moved, and what moved them? |
 | **19** | 56 | **Round 3: "One More Thing."** Press **G** when you are ready to show the clip. |
-| 20 | 57 | **The clip.** 17 seconds (11 to 28) of a news-comedy segment about the vendor's history. |
+| 20 | 57 | **The clip.** 17 seconds (11 to 28) of a news-comedy segment. It reveals the robot's maker is tied to sex dolls (see Round 3). |
 | **21** | 58 | **Stop. Round 3 discussion.** The same decision again. Swap people or keep the circle; it can be short. You time it. The photo is back on screen. |
 | 22 | 63 | **Last temperature check.** |
 | (no slide) | 66 | **Your reveal, spoken.** One opinion among many. |

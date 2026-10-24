@@ -316,6 +316,41 @@ permalink: /delete-seminar-overview/
   .stage { pointer-events: none; }
   .stage a, .stage button, .stage iframe { pointer-events: auto; }
 
+  .slide-wide-image { max-height: 210px; }
+
+  .video-slide { padding: 36px 96px; }
+  .video-slide .kicker { margin: 0 0 6px; }
+  .video-slide .slide-title { font-size: 44px; margin: 0 0 14px; }
+  .slide-video { width: 800px; height: 450px; border: 0; align-self: center; }
+  .video-links { margin: 12px 0 0; font-size: 22px; text-align: center; }
+  .video-links a { color: var(--accent); margin: 0 18px; }
+
+  .hint-badge {
+    background: #57606a;
+    color: #fff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .handout-badge {
+    background: #2a7ae2;
+    color: #fff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .pause-badge {
+    background: #b25e00;
+    color: #fff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
   .slide-counter-badge {
     position: absolute;
     bottom: 18px;
@@ -493,32 +528,35 @@ const SLIDES = [
     notes: "Sources: NBC News, Fox News, and Google's own Nest safety page, all read directly. The seminar does not claim Google secretly kept the footage. The documented facts are narrower, and the uncertainty is the point. The case is real and still open, so the seminar stays on the camera and does not discuss the crime."
   },
   {
-    kind: "bullets",
+    kind: "video",
     kicker: "Moment 1",
     title: "The Ring Ad",
-    bullets: [
-      "A 30-second Super Bowl ad about finding a lost dog",
-      { text: "Watch it on Ring's YouTube channel", href: "https://www.youtube.com/watch?v=OheUzrXsKrY" }
+    hint: "Click the video to play it. Then click outside it to get the arrow keys back.",
+    embed: "https://www.youtube-nocookie.com/embed/OheUzrXsKrY?rel=0&modestbranding=1&playsinline=1",
+    links: [
+      { text: "Watch on YouTube (Ring's own upload)", href: "https://www.youtube.com/watch?v=OheUzrXsKrY" }
     ],
     notes: "Ring's own upload (YouTube lists the channel as Ring). In the classroom deck it is the warm-up: students react first, before they hear any argument. The link opens in a new tab. Preview it before presenting."
   },
   {
-    kind: "bullets",
+    kind: "video",
     kicker: "Moment 2",
     title: "A Creator Responds",
-    bullets: [
-      "WeRateDogs argues the ad makes mass surveillance feel acceptable",
-      { text: "Watch it on YouTube", href: "https://www.youtube.com/watch?v=-ITnLiqKbeI" }
+    hint: "Click the video to play it. Then click outside it to get the arrow keys back.",
+    embed: "https://www.youtube-nocookie.com/embed/-ITnLiqKbeI?rel=0&modestbranding=1&playsinline=1",
+    links: [
+      { text: "Watch on YouTube (WeRateDogs)", href: "https://www.youtube.com/watch?v=-ITnLiqKbeI" }
     ],
     notes: "About three minutes. This is the first of the two Round 2 videos, and in the classroom run it was a real reveal for students. YouTube lists the channel as WeRateDogs. It is one person arguing a position, and some figures in it are his own claims. Preview it first."
   },
   {
-    kind: "bullets",
+    kind: "video",
     kicker: "Moment 3",
     title: "A Competitor Responds",
-    bullets: [
-      "Wyze sells security cameras. This parody is an ad for Wyze.",
-      { text: "Watch it on YouTube", href: "https://www.youtube.com/watch?v=ROFblZ_-9q4" }
+    hint: "Click the video to play it. Then click outside it to get the arrow keys back.",
+    embed: "https://www.youtube-nocookie.com/embed/ROFblZ_-9q4?rel=0&modestbranding=1&playsinline=1",
+    links: [
+      { text: "Watch on YouTube (Wyze)", href: "https://www.youtube.com/watch?v=ROFblZ_-9q4" }
     ],
     notes: "About 70 seconds. YouTube lists the channel as Wyze. It is a competing camera company's parody, which is the media-literacy point of the next slide. Preview it first."
   },
@@ -642,6 +680,21 @@ function Stage({ slide, aspect }) {
           <div className="wall-side wall-left">{slide.left}</div>
           <div className="wall-side wall-right">{slide.right}</div>
         </div>
+      </div>
+    );
+  }
+  if (slide.kind === "video") {
+    // A video embedded large, with plain links to the same video underneath.
+    return (
+      <div className={"stage video-slide " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <iframe className="slide-video" src={slide.embed} title={slide.title} allow="encrypted-media; fullscreen" allowFullScreen></iframe>
+        {slide.links && (
+          <p className="video-links">
+            {slide.links.map((l, i) => <a key={i} href={l.href} target="_blank" rel="noopener noreferrer">{l.text}</a>)}
+          </p>
+        )}
       </div>
     );
   }
@@ -875,6 +928,7 @@ function App() {
       )}
       <div className="toolbar">
         <a className="back-link" href="/2026/10/22/you-deleted-it-is-it-gone.html">&larr; You Deleted It. Is It Gone? Overview</a>
+        {slide.hint && <span className="hint-badge">&#128161; {slide.hint}</span>}
         <div className="spacer"></div>
         <button onClick={prev} disabled={index === 0}>&larr; Prev</button>
         <span className="counter">{index + 1} / {SLIDES.length}</span>

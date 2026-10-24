@@ -40,6 +40,29 @@ layout: default
     {%- include standards-alignment.html -%}
   {%- endif -%}
 
+  {%- if page.categories contains "lesson-plans" or page.lesson_category -%}
+    {%- assign repo = site.github_repo | default: "porttack/porttack.com" -%}
+    {%- capture issue_body -%}
+Page: {{ page.title }}
+https://porttack.com{{ page.url }}
+
+What should change, and why?
+
+    {%- endcapture -%}
+    <p class="suggest-links">
+      <a href="https://github.com/{{ repo }}/edit/main/{{ page.path }}">Suggest an edit</a>
+      <a href="https://github.com/{{ repo }}/issues/new?title={{ '[Lesson Plan] ' | append: page.title | url_encode }}&amp;body={{ issue_body | strip | append: '
+
+' | url_encode }}">Request a change or fix</a>
+      <a class="history-link" href="https://github.com/{{ repo }}/commits/main/{{ page.path }}">History</a>
+    </p>
+    <style>
+      .suggest-links{font-size:90%;margin-top:1.5em;}
+      .suggest-links a{margin-right:1.2em;}
+      @media print{.suggest-links{display:none;}}
+    </style>
+  {%- endif -%}
+
   {%- if page.categories contains "public-comment" -%}
     <hr>
     <p style="font-size: 90%; color: #666;">
@@ -62,7 +85,7 @@ layout: default
     revealed by JS so non-draft pages stay clean.
   {%- endcomment -%}
   <div id="git-history" class="git-history" hidden
-       data-repo="{{ site.github_repo | default: 'yogieric/porttack.com' }}"
+       data-repo="{{ site.github_repo | default: 'porttack/porttack.com' }}"
        data-path="{{ page.path }}"
        data-draft="{% if page.categories contains 'draft' %}true{% else %}false{% endif %}"
        data-show="{% if page.show_history %}true{% else %}false{% endif %}">
@@ -86,13 +109,15 @@ layout: default
     var isDraft = box.getAttribute("data-draft") === "true";
     var forced = box.getAttribute("data-show") === "true";
     var wantsHistory = new URLSearchParams(window.location.search).has("history");
-    if(!isDraft && !forced && !wantsHistory) return;  // leave hidden on normal posts
-    box.hidden = false;
     var repo = box.getAttribute("data-repo");
     var path = box.getAttribute("data-path");
     var list = box.querySelector(".git-history-list");
     var api = "https://api.github.com/repos/" + repo + "/commits?per_page=50&path=" + encodeURIComponent(path);
     function esc(s){ var d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
+    var loaded = false;
+    function loadHistory(){
+    if(loaded) return;
+    loaded = true;
     fetch(api, {headers:{Accept:"application/vnd.github+json"}})
       .then(function(r){ if(!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
       .then(function(commits){
@@ -113,6 +138,18 @@ layout: default
       .catch(function(err){
         list.innerHTML = '<li class="git-history-status">Could not load history (' + esc(err.message) + ').</li>';
       });
+    }
+    function show(){ box.hidden = false; loadHistory(); }
+    if(isDraft || forced || wantsHistory) show();
+    // The History link under a lesson plan opens this panel instead of leaving the page.
+    var link = document.querySelector(".history-link");
+    if(link){
+      link.addEventListener("click", function(e){
+        if(e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+        e.preventDefault();
+        if(box.hidden){ show(); box.scrollIntoView({behavior:"smooth", block:"nearest"}); } else { box.hidden = true; }
+      });
+    }
   })();
   </script>
 
