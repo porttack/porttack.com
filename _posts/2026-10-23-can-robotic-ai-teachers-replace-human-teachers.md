@@ -20,6 +20,13 @@ Three rounds on the same decision: the reading, a closer look with a photo and t
 
 **The format.** A fishbowl: a small circle discusses while the rest of the class observes and fills in an organizer, then the groups swap. An empty chair, the hot seat, lets an observer join for one comment and then leave. Students follow five posted norms, read aloud at the start. Four CS-lens questions are on a slide for anyone to use at any time: Each student has an ID, so what data is that? Could a chat history identify you by itself? Who decides which words get flagged? Does this narrow the gap, or widen it? The class also starts by choosing one of three corners, and the entry and exit tickets record where each student starts and ends on the buy-or-don't question.
 
+<div style="display: flex; gap: 8px; max-width: 520px; margin: 0.8em auto 0.2em;">
+  <div style="flex: 1; border: 2px solid #2a7ae2; color: #2a7ae2; border-radius: 8px; padding: 6px 8px; text-align: center; font-size: 0.85em; font-weight: 700;">No robots in teaching</div>
+  <div style="flex: 1; border: 2px solid #2e7d32; color: #2e7d32; border-radius: 8px; padding: 6px 8px; text-align: center; font-size: 0.85em; font-weight: 700;">A robot replaces a teacher's aide</div>
+  <div style="flex: 1; border: 2px solid #b25e00; color: #b25e00; border-radius: 8px; padding: 6px 8px; text-align: center; font-size: 0.85em; font-weight: 700;">A robot replaces the teacher</div>
+</div>
+<p style="text-align: center;"><small>The bigger question: where do you stand?</small></p>
+
 **At a glance.**
 
 - **Class time:** about an hour. The core run below is 55 minutes, and the optional items add about 20 more.
@@ -246,7 +253,16 @@ If a show of hands on buy or don't is lopsided, you can also assign one or two s
 - The same day, the district announced the project was on hold while it works "through enhanced student data privacy agreements" with the state and talks with the community. It has not said when it might restart.
 - On July 29, New York State Sen. Shelley Mayer introduced a bill, [S10671](https://www.nysenate.gov/legislation/bills/2025/S10671), which would require every school district, charter school, and BOCES in New York to adopt a policy prohibiting AI-enabled humanoid robots "in an instructional capacity." As of October 24, 2026 it is in committee in the New York Senate and has not passed either chamber. It is a New York bill and would not apply anywhere else.
 - If time allows, ask: "A New York senator is asking the same question the students just answered. Does a ban answer it?"
-- **Compare (optional).** The last slide sets the New York bill beside your own district's policy. For example, a clause added to one district's union contract in 2026 lets the union veto any attempt to replace teachers' jobs with AI. Swap in your own district's policy. Ask: "How are these alike? How are they different?"
+- **Compare (optional).** The last slide puts three rules side by side. Swap in your own district's policy. Ask: "How are these alike? How are they different?"
+
+<table style="width: 100%; max-width: 640px; margin: 0.8em auto; border-collapse: separate; border-spacing: 6px; font-size: 0.85em;">
+  <thead><tr><th></th><th>California law, from 2027</th><th>Our teachers' contract</th><th>Proposed NY bill (humanoid robots)</th></tr></thead>
+  <tbody>
+    <tr><th style="border: 3px solid #2a7ae2; color: #2a7ae2; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 700;">No robots in teaching</th><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Vague</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Vague</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">True (but nuanced)</td></tr>
+    <tr><th style="border: 3px solid #2e7d32; color: #2e7d32; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 700;">A robot replaces a teacher's aide</th><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Vague</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Not covered</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Banned for "instruction"</td></tr>
+    <tr><th style="border: 3px solid #b25e00; color: #b25e00; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 700;">A robot replaces the teacher</th><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Banned</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Union must agree</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Banned</td></tr>
+  </tbody>
+</table>
 
 *[Your take goes here. Hold it until the last ten minutes and offer it as one opinion among many.]*
 

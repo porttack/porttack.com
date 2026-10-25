@@ -308,6 +308,15 @@ permalink: /robot-teacher-slides/
     color: var(--accent);
   }
 
+  .grid-table { width: 100%; border-collapse: separate; border-spacing: 10px; margin-top: 4px; }
+  .grid-table th, .grid-table td { text-align: center; font-size: 26px; line-height: 1.2; padding: 12px 10px; border-radius: 10px; }
+  .grid-table thead th { font-size: 22px; color: var(--muted); font-weight: 600; padding: 4px 10px; }
+  .grid-table td { border: 2px solid var(--border); font-weight: 600; }
+  .grid-table tbody th { width: 28%; border: 4px solid var(--accent); color: var(--accent); font-weight: 700; }
+  .grid-table tbody th.grid-green { border-color: #2e7d32; color: #2e7d32; }
+  .grid-table tbody th.grid-amber { border-color: #b25e00; color: #b25e00; }
+  .grid-footer { font-size: 26px; margin: 6px 0 0; }
+
   .wall-prompt { font-size: 30px; line-height: 1.3; margin: 0 0 6px; }
   .wall-wrap.three { gap: 28px; }
   .wall-wrap.three .wall-side { font-size: 32px; padding: 20px; }
@@ -811,15 +820,17 @@ const SLIDES = [
     notes: "The close, if there is time. It comes last on purpose: saying what the district did before students decided would have biased them. The Commissioner's letter and the district's announcement were both on July 24, 2026 (New York Focus). The district has not given a restart date, and the article gives no terms for the agreements. S10671 is a New York bill, introduced July 29, 2026 by State Sen. Shelley Mayer, and it would not apply anywhere else. It would require districts, charter schools, and BOCES to adopt a policy prohibiting AI-enabled humanoid robots in an instructional capacity (nysenate.gov). As of October 24, 2026 it is in committee. If time allows, ask: does a ban answer the question the students just answered?"
   },
   {
-    kind: "bullets",
+    kind: "grid",
     kicker: "Compare",
-    title: "Two Rules About AI and Teachers",
-    bullets: [
-      "New York: a bill would ban humanoid robots from teaching (S10671, still in committee)",
-      "Our district: a clause added to the union contract in 2026 lets the union veto any attempt to replace teachers' jobs with AI",
-      "How are these alike? How are they different?"
+    title: "Three Rules About AI and Teachers",
+    columns: ["California law, from 2027", "Our teachers' contract", "Proposed NY bill (humanoid robots)"],
+    rows: [
+      { label: "No robots in teaching", tone: "blue", cells: ["Vague", "Vague", "True (but nuanced)"] },
+      { label: "A robot replaces a teacher's aide", tone: "green", cells: ["Vague", "Not covered", "Banned for \"instruction\""] },
+      { label: "A robot replaces the teacher", tone: "amber", cells: ["Banned", "Union must agree", "Banned"] }
     ],
-    notes: "Optional, after the close. If your own district has a contract or policy on AI, swap it in for the second bullet. The bill is a state law that would ban one kind of robot outright. A contract clause is an agreement between a district and its teachers: the district can't replace teachers' jobs with AI unless the union agrees. Let students find the differences themselves: who made the rule, who it covers, and whether it can be changed by agreement."
+    footer: "How are they alike? How are they different?",
+    notes: "Optional, after the close. Each cell says what that rule does about that position. California: AB 2148 (Education Code section 98), signed June 30, 2026 and effective January 1, 2027, says a public school employee, including teachers and classified employees, and a contractor in a public school are natural persons. It does not mention AI or robots, and it does not say any position must be filled. So a robot cannot be a district's employee or contractor, and other rules that require a teacher then require a person. On its own, though, it does not stop a district from using a robot in place of an aide. Our contract, Article 23.2: the district may not use AI to replace union positions, or work members regularly or exclusively do, without the union's agreement, and software that helps teachers work is allowed. It covers certificated staff (Article 1.1), and instructional aides are non-teachers (Article 6.2.1). New York S10671 would require districts to adopt a policy prohibiting AI-enabled humanoid robots in an instructional capacity, which includes tutoring and doing the duties of a certified teacher or teaching assistant. It does not mention aides or non-instructional work. If your own district has a policy, swap it in for a column."
   }
 ];
 
@@ -865,6 +876,28 @@ function Stage({ slide, aspect }) {
         <h1 className="slide-title">{slide.title}</h1>
         <blockquote className={"quote-text" + sizeClass}>{"“"}{slide.quote}{"”"}</blockquote>
         <p className="quote-cite">{slide.cite}</p>
+      </div>
+    );
+  }
+  if (slide.kind === "grid") {
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title">{slide.title}</h1>
+        <table className="grid-table">
+          <thead>
+            <tr><th></th>{slide.columns.map((c, i) => <th key={i}>{c}</th>)}</tr>
+          </thead>
+          <tbody>
+            {slide.rows.map((r, i) => (
+              <tr key={i}>
+                <th className={r.tone ? "grid-" + r.tone : ""}>{r.label}</th>
+                {r.cells.map((c, j) => <td key={j}>{c}</td>)}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {slide.footer && <p className="grid-footer">{slide.footer}</p>}
       </div>
     );
   }
