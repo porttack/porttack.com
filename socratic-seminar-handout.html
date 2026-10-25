@@ -84,6 +84,14 @@ permalink: /socratic-seminar-handout/
   .lines i { display: block; border-bottom: 1px solid var(--rule); height: 0.31in; }
   .extra[hidden] { display: none; }
 
+  .sides { margin: 0 0 8px; }
+  .sides[hidden], .exit-block[hidden] { display: none; }
+  .opt { display: inline-block; border: 1.5px solid var(--ink); border-radius: 999px; padding: 1px 14px; margin-right: 8px; font-weight: 700; }
+  .sides .lbl, .sides .arrow { font-weight: 700; margin-right: 6px; }
+  .sides .arrow { margin: 0 8px 0 2px; }
+  .half { white-space: nowrap; }
+  .num { display: inline-block; min-width: 0.4in; border-bottom: 1.5px solid var(--ink); margin: 0 3px 0 4px; }
+
   table { width: 100%; border-collapse: collapse; margin: 0 0 8px; }
   th, td { border: 1px solid var(--ink); padding: 4px 7px; vertical-align: top; font-size: 10pt; }
   th { background: #f1f3f5; text-align: left; }
@@ -120,6 +128,11 @@ permalink: /socratic-seminar-handout/
   <input type="text" id="in-exit" placeholder="Printed under the exit ticket on the back">
   <label for="in-exit2">Second extra exit-ticket question (optional)</label>
   <input type="text" id="in-exit2" placeholder="Printed under the first extra question on the back">
+  <label for="in-a">Side A (optional, only for a seminar with two sides)</label>
+  <input type="text" id="in-a" placeholder="e.g. Buy it">
+  <label for="in-b">Side B (needed with Side A)</label>
+  <input type="text" id="in-b" placeholder="e.g. Do not buy it">
+  <p>With both sides filled in, the entry ticket asks students to circle one and rate how sure they are, 1 to 10, and the exit ticket has a Start and End line so you can tally who moved.</p>
   <div class="buttons">
     <button type="button" id="btn-print">Print</button>
     <button type="button" class="secondary" id="btn-copy">Copy link to this version</button>
@@ -143,6 +156,7 @@ permalink: /socratic-seminar-handout/
   <div class="lines"><i></i><i></i><i></i></div>
 
   <p class="q">2. A starting side, and why. Changing your mind during the seminar is not losing. It is the point.</p>
+  <p class="sides" id="start-sides" hidden>Circle one, even if you are unsure. Put your doubts in your reason. <span class="opt" id="start-a"></span><span class="opt" id="start-b"></span><br>How sure are you, from 1 (on the fence) to 10 (very sure)? <span class="num"></span>/ 10</p>
   <div class="lines"><i></i><i></i><i></i></div>
 
   <p class="q">3. Two pieces of evidence from the reading, by paragraph number.</p>
@@ -177,8 +191,16 @@ permalink: /socratic-seminar-handout/
   <div class="lines"><i></i><i></i></div>
 
   <h2 class="section">Exit ticket</h2>
-  <p class="q">Did your thinking move today? Three sentences: what you believed walking in, what you believe now, and what said or asked in the room moved you (or held you in place).</p>
-  <div class="lines"><i></i><i></i><i></i></div>
+  <div class="exit-block" id="exit-default">
+    <p class="q">Did your thinking move today? Three sentences: what you believed walking in, what you believe now, and what said or asked in the room moved you (or held you in place).</p>
+    <div class="lines"><i></i><i></i><i></i></div>
+  </div>
+
+  <div class="exit-block" id="exit-sided" hidden>
+    <p class="sides"><span class="half"><span class="lbl">Start</span><span class="opt" id="end-start-a"></span><span class="opt" id="end-start-b"></span><span class="num"></span>/ 10<span class="arrow">&rarr;</span></span><span class="half"><span class="lbl">End</span><span class="opt" id="end-a"></span><span class="opt" id="end-b"></span><span class="num"></span>/ 10</span></p>
+    <p class="q">Circle a side and give your 1 to 10 at each end, even if you are unsure. Did your thinking move today? Say what in the room moved you, or held you in place.</p>
+    <div class="lines"><i></i><i></i></div>
+  </div>
 
   <div class="extra" id="exit-extra" hidden>
     <p class="q"><span id="exit-extra-text"></span></p>
@@ -201,6 +223,8 @@ permalink: /socratic-seminar-handout/
   var inEntry = document.getElementById("in-entry");
   var inExit = document.getElementById("in-exit");
   var inExit2 = document.getElementById("in-exit2");
+  var inA = document.getElementById("in-a");
+  var inB = document.getElementById("in-b");
 
   // Text is always set with textContent, so nothing typed or passed in the
   // link can add markup to the page.
@@ -226,11 +250,23 @@ permalink: /socratic-seminar-handout/
     document.getElementById("exit2-extra-text").textContent = exit2;
     exit2Box.hidden = !exit2;
 
+    // The Start and End lines need both sides.
+    var a = inA.value.trim();
+    var b = inB.value.trim();
+    var sided = !!(a && b);
+    ["start-a", "end-start-a", "end-a"].forEach(function (id) { document.getElementById(id).textContent = a; });
+    ["start-b", "end-start-b", "end-b"].forEach(function (id) { document.getElementById(id).textContent = b; });
+    document.getElementById("start-sides").hidden = !sided;
+    document.getElementById("exit-sided").hidden = !sided;
+    document.getElementById("exit-default").hidden = sided;
+
     var next = new URLSearchParams();
     if (topic) next.set("topic", topic);
     if (entry) next.set("entry", entry);
     if (exit) next.set("exit", exit);
     if (exit2) next.set("exit2", exit2);
+    if (a) next.set("a", a);
+    if (b) next.set("b", b);
     var qs = next.toString();
     try {
       window.history.replaceState(null, "", window.location.pathname + (qs ? "?" + qs : ""));
@@ -241,7 +277,9 @@ permalink: /socratic-seminar-handout/
   inEntry.value = params.get("entry") || "";
   inExit.value = params.get("exit") || "";
   inExit2.value = params.get("exit2") || "";
-  [inTopic, inEntry, inExit, inExit2].forEach(function (el) { el.addEventListener("input", render); });
+  inA.value = params.get("a") || "";
+  inB.value = params.get("b") || "";
+  [inTopic, inEntry, inExit, inExit2, inA, inB].forEach(function (el) { el.addEventListener("input", render); });
 
   document.getElementById("btn-print").addEventListener("click", function () { window.print(); });
   document.getElementById("btn-copy").addEventListener("click", function (e) {

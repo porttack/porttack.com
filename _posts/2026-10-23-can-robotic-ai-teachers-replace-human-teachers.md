@@ -18,11 +18,15 @@ Would the students vote yes on a robot teacher? A real school district in rural 
 
 Three rounds on the same decision: the reading, a closer look with a photo and two videos, and one more fact in a short clip. Every student also prepares the best argument for the side they did not pick, and you can ask a few to defend the position they disagree with.
 
+**The format.** A fishbowl: a small circle discusses while the rest of the class observes and fills in an organizer, then the groups swap. An empty chair, the hot seat, lets an observer join for one comment and then leave. Students follow five posted norms, read aloud at the start. Four CS-lens questions are on a slide for anyone to use at any time: Each student has an ID, so what data is that? Could a chat history identify you by itself? Who decides which words get flagged? Does this narrow the gap, or widen it?
+
+**Time.** Allow about an hour. The core run below is 58 minutes, and the optional items add about 20 more.
+
 **A note on content.** In Round 2, the avatar interview touches bullying and a student bringing a gun to school. Round 3 reveals that the robot's maker is tied to sex dolls. The question in Round 3 is about trust, not shock. The clips are not the focus of the lesson, but they may spark some discussion and lead some students to change sides. High school students have likely met these topics already.
 
-A longer opinion piece on this story is [AI Robot Teachers Are Almost Here]({% post_url 2026-07-24-robot-teacher %}). Keep your own view out of the room until the end.
+A longer opinion piece on this story is [AI Robot Teachers Are Almost Here]({% post_url 2026-07-24-robot-teacher %}).
 
-Slides: **[Would You Vote for a Robot Teacher?](/robot-teacher-slides/)**<br>Overview Slides: **[Can Robotic AI Teachers Replace Human Teachers?](/robot-tutor-overview/)** (for teachers/admins)
+Slides: **[Would You Vote for a Robot Teacher?](/robot-teacher-slides/)** (with speaker notes)<br>Overview Slides: **[Can Robotic AI Teachers Replace Human Teachers?](/robot-tutor-overview/)** (for teachers/admins)
 
 ## Learning goals
 
@@ -55,16 +59,15 @@ By the end of the seminar, students can:
 
 ## Materials
 
-The format lives in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F): the run of show, the norms to post, the fishbowl and hot seat guardrails, the boundaries, and the one-sheet handout.
+The format is in the [Socratic Seminar Kit](/socratic-seminar-kit/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F&a=Buy%20it&b=Do%20not%20buy%20it): norms, fishbowl and hot seat guardrails, run of show.
 
 
 Specific to this seminar:
 
-- **Handout:** [print the two-sided handout with this seminar's questions filled in](/socratic-seminar-handout/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F). The front is the entry ticket; the back is the observer organizer and the exit ticket. Name and period are at the top.
-- **Role cards (optional):** [print the role cards for the two sides](/socratic-seminar-cards/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&a=Buy%20it&ap=Banning%20technology%20is%20the%20easy%20way%20out.%20Schools%20should%20teach%20students%20to%20use%20it%20well.%20%28Reading%2C%20paragraph%206%29%0AThe%20robot%20runs%20on%20a%20closed%20system%2C%20and%20the%20company%20will%20not%20have%20access%20to%20personally%20identifiable%20student%20information.%20%28Paragraph%205%29%0AIt%20is%20a%20tutor%20for%20AI%20and%20robotics%20classes%2C%20and%20an%20avatar%20students%20could%20use%20after%20school.%20%28Paragraph%203%29&b=Do%20not%20buy%20it&bp=Students%20need%20real%20human%20relationships%2C%20not%20simulated%20ones.%20%28Paragraph%207%29%0AThe%20robot%20would%20keep%20each%20student%27s%20past%20conversations%20under%20their%20ID.%20That%20is%20a%20lot%20of%20personal%20data.%20%28Paragraph%204%29%0AThe%20privacy%20promises%20are%20the%20superintendent%27s%20words.%20Nothing%20in%20the%20reading%20says%20anyone%20has%20checked%20them.). One sheet makes four cards, two for each side. They are for students who will argue a side they did not pick. See "Playing the other side" below.
-- **Reading, printable (one page):** [A Robot for Room 114](/robot-reading/). The same text is below. Round 2 is a photo and two videos, not a reading.
-- **Slides:** [Would You Vote for a Robot Teacher?](/robot-teacher-slides/), with speaker notes. Round 2 plays [the news clip](https://www.foxnews.com/video/6401736424112) and [the avatar interview](https://www.youtube.com/watch?v=b4siBdDtz7k). Round 3 is a 17-second clip.
-- **Run of show:** below, after Round 3. This one has three rounds, not one.
+- **Handout:** [entry ticket, observer organizer, exit ticket](/socratic-seminar-handout/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F&a=Buy%20it&b=Do%20not%20buy%20it).
+- **Role cards (optional):** [four cards to a sheet, two per side](/socratic-seminar-cards/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&a=Buy%20it&ap=Banning%20technology%20is%20the%20easy%20way%20out.%20Schools%20should%20teach%20students%20to%20use%20it%20well.%20%28Reading%2C%20paragraph%206%29%0AThe%20robot%20runs%20on%20a%20closed%20system%2C%20and%20the%20company%20will%20not%20have%20access%20to%20personally%20identifiable%20student%20information.%20%28Paragraph%205%29%0AIt%20is%20a%20tutor%20for%20AI%20and%20robotics%20classes%2C%20and%20an%20avatar%20students%20could%20use%20after%20school.%20%28Paragraph%203%29&b=Do%20not%20buy%20it&bp=Students%20need%20real%20human%20relationships%2C%20not%20simulated%20ones.%20%28Paragraph%207%29%0AThe%20robot%20would%20keep%20each%20student%27s%20past%20conversations%20under%20their%20ID.%20That%20is%20a%20lot%20of%20personal%20data.%20%28Paragraph%204%29%0AThe%20privacy%20promises%20are%20the%20superintendent%27s%20words.%20Nothing%20in%20the%20reading%20says%20anyone%20has%20checked%20them.). For students who will argue a side they did not pick. See "Playing the other side" below.
+- **Reading:** [A Robot for Room 114](/robot-reading/), one printable page. The same text is below.
+- **Run of show:** below, after Round 3.
 
 <style>
 .seminar-reading{border:1px solid rgba(128,128,128,.35);border-radius:8px;margin:1.5rem 0;overflow:hidden;font-style:normal;}
@@ -101,7 +104,9 @@ Hand this out first. ([Print it](/robot-reading/))
 
 ## Round 2: look closer, then the same decision (a photo and two videos)
 
-Round 2 is the same decision as Round 1, with the students who were outside the fishbowl swapping in. Before they discuss, students see a photo of Sally (the first time they see her), a news clip, and the avatar interview. Nothing is handed out. Round 2 is deliberately light, because students rarely reread, and video gives them something new to react to. The Round 2 slide asks the same question as Round 1, with the photo back on screen. You time the fishbowl.
+<img src="/docs/assets/images/ny-school-robot-inc.jpeg" alt="Sally, the humanoid robot the district agreed to buy: a young woman's face, long brown hair, and a white collared shirt" style="float: right; width: 150px; height: auto; margin: 0.2em 0 0.5em 1em;">
+
+Round 2 is the same decision as Round 1, with the students who were outside the fishbowl swapping in. Before they discuss, students see a photo of Sally (the first time they see her), a news clip, and the avatar interview. Nothing is handed out, because students rarely reread and video gives them something new to react to. The slide asks the Round 1 question with the photo back on screen. You time the fishbowl.
 
 - **The robot is introduced.** [Fox News, "New York school introduces AI humanoid robot teacher Sally,"](https://www.foxnews.com/video/6401736424112) July 21, 2026. A 57-second clip.
 - **Interviewing the avatar.** [New York Focus interviewed the AI avatar](https://www.youtube.com/watch?v=b4siBdDtz7k) (Melissa Manno, July 28, 2026). It is New York Focus's own upload, and the same video is on [the article page](https://nysfocus.com/2026/07/28/salamanca-ai-teaching-assistant-interview).
@@ -164,32 +169,31 @@ The "Still Buy It?" slide already asks the main questions: does it change your a
 
 ## The run of show, slide by slide
 
-Start times are in minutes from the beginning of the class, with the sections you might skip marked. The slide numbers are for [the deck](/robot-teacher-slides/). The structure is the [kit's run of show](/socratic-seminar-kit/#the-run-of-show) with a second round of videos and a third round with a short clip.
+Min is minutes from the start of class. Optional rows have no minutes, so they are not in the 58. Slide numbers are for [the deck](/robot-teacher-slides/). This is the [kit's run of show](/socratic-seminar-kit/#the-run-of-show) plus Rounds 2 and 3.
 
-| Slides | Starts at (min) | What you do |
+| Slides | Min | What you do |
 |---|---|---|
-| 1–3 | 0 | Title, goals, and the five norms. Read the norms out loud. |
-| 4 | 5 | **The fishbowl.** Explain the format before anyone does it, including the hot seat: an empty chair at the table where an observer from the outer circle can sit, make a comment, then get up and leave. The center circle's size is your call. |
-| 5 | 6 | **Through a CS lens.** Four questions students can use any time, so you do not need to stop for them later. |
-| **6** | 7 | **Opening temperature check.** Students vote with their feet: they go to one side of the room or the other. One side: "A robot teacher is just another tool, like a textbook or a calculator." The other: "A teacher with a face is different." Note where the room sits, then they return to their seats. |
-| 7 | 10 | **Hand out [the reading](/robot-reading/) and the [two-sided handout](/socratic-seminar-handout/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F).** Students read, then fill in the entry ticket on the front. |
-| 8–10 | 14 | Project the facts: what they agreed to buy (no photo yet), where it would be used, and how it would work. Keep it brisk, since they have read it. The two voices, the superintendent's and the union's, are in the reading and not on a slide. |
-| **11** | 17 | **Stop. Round 1 opening.** Every student answers briefly from their entry ticket: "You are the school board. Should the district buy the robot, or not? If you are unsure, what more would you need to know?" |
-| **12** | 21 | **Stop. Round 1 fishbowl** with the hot seat. The outer circle fills in the **observer organizer** on the back of the handout. Stay on this slide until it ends. You time it. |
-| **13** | 36 | **Round 2 starts** with a photo and two videos. |
-| 14 | 37 | **The reveal: Sally's photo.** The first time students see her. Say nothing for a few seconds. |
-| 15 | 38, skippable | **The news clip** (about a minute). |
-| 16 | 40 | **Play the avatar interview** (embedded, with links to YouTube and the article). |
-| **17** | 44 | **Stop. Round 2 fishbowl.** The students who were outside swap in. Same decision: "Buy it, or not? If you are unsure, what more would you need to know? Did anything you just saw change your answer?" Stay on this slide until it ends. You time it. The photo stays on screen so students see her one last time. Optional: hand the role cards to the students who will defend the side they did not pick, just before the swap. |
-| 18 | 54, skippable | **Temperature check again.** Who moved, and what moved them? |
-| **19** | 57 | **Round 3: "One More Thing."** Press **G** when you are ready to show the clip. |
-| 20 | 58 | **The clip.** 17 seconds (11 to 28) of a news-comedy segment. It reveals the robot's maker is tied to sex dolls (see Round 3). |
-| **21** | 59 | **Stop. Round 3 discussion.** The same decision again. Swap people or keep the circle; it can be short. You time it. The photo is back on screen. |
-| 22 | 64 | **Last temperature check.** |
-| (no slide) | 67 | **Your reveal, spoken.** One opinion among many. |
-| 23 | 72 | Students fill in the **exit ticket** on the back of the handout. |
-| 24 | 77 | **What actually happened.** The state's letter and the district's pause, as the close. |
-| 25 | 80, skippable | **Compare.** The New York bill beside your own district's policy on AI and teachers. |
+| 1–3 | 0–4 | Title, goals, and the five norms. Read the norms out loud. |
+| 4–5 | 4–6 | **The fishbowl and the CS lens.** Explain the format before anyone does it, including the hot seat. The center circle's size is your call. Then show the four CS-lens questions, so you do not need to stop for them later. |
+| **6** | 6–9 | **Opening temperature check.** Students vote with their feet: they go to one side of the room or the other. One side: "A robot teacher is just another tool, like a textbook or a calculator." The other: "A teacher with a face is different." Note where the room sits, then they return to their seats. |
+| 7 | 9–19 | **Hand out [the reading](/robot-reading/) and the [two-sided handout](/socratic-seminar-handout/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F&a=Buy%20it&b=Do%20not%20buy%20it).** Students read, then fill in the entry ticket on the front, circling a side even if they are unsure and rating how sure they are, 1 to 10. Give them about 10 quiet minutes. |
+| 8–10 | Optional | Project the facts (about 3 min): what they agreed to buy (no photo yet), where it would be used, how it would work. The reading covers them, so skip it if you are short on time. The superintendent's and the union's voices are in the reading, not on a slide. |
+| **11** | 19–22 | **Stop. Round 1 opening.** Every student answers briefly from their entry ticket: "You are the school board. Should the district buy the robot, or not? If you are unsure, what more would you need to know?" |
+| **12** | 22–34 | **Stop. Round 1 fishbowl** with the hot seat. The outer circle fills in the **observer organizer** on the back of the handout. Stay on this slide until it ends. You time it. |
+| **13** | 34–40 | **Round 2 starts** with a photo and two videos. |
+| 14 | | **The reveal: Sally's photo.** The first time students see her. Say nothing for a few seconds. |
+| 15 | Optional | **The news clip** (about a minute). |
+| 16 | | **Play the avatar interview** (embedded, with links to YouTube and the article). |
+| **17** | 40–48 | **Stop. Round 2 fishbowl.** The students who were outside swap in. Same decision: "Buy it, or not? If you are unsure, what more would you need to know? Did anything you just saw change your answer?" Stay on this slide until it ends. You time it. The photo stays on screen. Optional: hand the role cards to students who will defend the side they did not pick, just before the swap. |
+| 18 | Optional | **Temperature check again** (about 3 min). Who moved, and what moved them? |
+| **19** | 48–50 | **Round 3: "One More Thing."** Press **G** when you are ready to show the clip. |
+| 20 | | **The clip.** 17 seconds (11 to 28) of a news-comedy segment. It reveals the robot's maker is tied to sex dolls (see Round 3). |
+| **21** | 50–55 | **Stop. Round 3 discussion.** The same decision again. Swap people or keep the circle; it can be short. You time it. The photo is back on screen. |
+| 22 | Optional | **Last temperature check** (about 3 min). |
+| (no slide) | Optional | **Your reveal, spoken** (about 5 min). One opinion among many. |
+| 23 | 55–58 | Students fill in the **exit ticket** on the back of the handout: circle where they started and where they ended, with a 1 to 10 for each, then say what moved them. |
+| 24 | Optional | **What actually happened** (about 3 min). The state's letter and the district's pause, as the close. |
+| 25 | Optional | **Compare.** The New York bill beside your own district's policy on AI and teachers. |
 
 ## Facilitator questions
 
@@ -197,7 +201,7 @@ Back-pocket only. The entry ticket asks students to write their own.
 
 **Round 1:**
 
-- The union says, "We want real human relationships and for our students to learn how to form them organically." The superintendent says banning technology is the easy way out. Which do you agree with, and why?
+- The union says, "We want real human relationships and for our students to learn how to form [real human relationships] organically." The superintendent says banning technology is the easy way out. Which do you agree with, and why?
 - You are the school board. Should the district buy the robot, or not? If you are unsure, what more would you need to know?
 - The district's argument is that banning technology is the easy way out. Is it?
 - If you were a superintendent of a small, poor district, would you want to be first, or wait and see?
@@ -231,8 +235,8 @@ The entry ticket's fourth question already asks every student for the best argum
 If the room is lopsided after the first temperature check, you can also assign one or two students to defend the side most of the room does not hold, in the Round 2 fishbowl:
 
 - **Who.** Ask for volunteers first. If nobody volunteers, ask students from the larger side, who are then arguing against their own pick. Do not pick the most outspoken.
-- **When.** Round 2, when the students who were outside swap in, so Round 1 stays authentic. Hand the cards out just before the swap, and say out loud who is playing a role.
-- **The cards.** [Print the role cards](/socratic-seminar-cards/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&a=Buy%20it&ap=Banning%20technology%20is%20the%20easy%20way%20out.%20Schools%20should%20teach%20students%20to%20use%20it%20well.%20%28Reading%2C%20paragraph%206%29%0AThe%20robot%20runs%20on%20a%20closed%20system%2C%20and%20the%20company%20will%20not%20have%20access%20to%20personally%20identifiable%20student%20information.%20%28Paragraph%205%29%0AIt%20is%20a%20tutor%20for%20AI%20and%20robotics%20classes%2C%20and%20an%20avatar%20students%20could%20use%20after%20school.%20%28Paragraph%203%29&b=Do%20not%20buy%20it&bp=Students%20need%20real%20human%20relationships%2C%20not%20simulated%20ones.%20%28Paragraph%207%29%0AThe%20robot%20would%20keep%20each%20student%27s%20past%20conversations%20under%20their%20ID.%20That%20is%20a%20lot%20of%20personal%20data.%20%28Paragraph%204%29%0AThe%20privacy%20promises%20are%20the%20superintendent%27s%20words.%20Nothing%20in%20the%20reading%20says%20anyone%20has%20checked%20them.). One sheet makes four: two "Buy it" and two "Do not buy it." The points come only from the reading, so every student can check them:
+- **When.** Round 2, after the swap, so Round 1 stays authentic. Say out loud who is playing a role.
+- **The cards.** [Print the role cards](/socratic-seminar-cards/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&a=Buy%20it&ap=Banning%20technology%20is%20the%20easy%20way%20out.%20Schools%20should%20teach%20students%20to%20use%20it%20well.%20%28Reading%2C%20paragraph%206%29%0AThe%20robot%20runs%20on%20a%20closed%20system%2C%20and%20the%20company%20will%20not%20have%20access%20to%20personally%20identifiable%20student%20information.%20%28Paragraph%205%29%0AIt%20is%20a%20tutor%20for%20AI%20and%20robotics%20classes%2C%20and%20an%20avatar%20students%20could%20use%20after%20school.%20%28Paragraph%203%29&b=Do%20not%20buy%20it&bp=Students%20need%20real%20human%20relationships%2C%20not%20simulated%20ones.%20%28Paragraph%207%29%0AThe%20robot%20would%20keep%20each%20student%27s%20past%20conversations%20under%20their%20ID.%20That%20is%20a%20lot%20of%20personal%20data.%20%28Paragraph%204%29%0AThe%20privacy%20promises%20are%20the%20superintendent%27s%20words.%20Nothing%20in%20the%20reading%20says%20anyone%20has%20checked%20them.). The points come only from the reading, so every student can check them:
 
 **Buy it**
 - Banning technology is the easy way out. Schools should teach students to use it well. (Reading, paragraph 6)
@@ -267,8 +271,8 @@ All of this is collected during the seminar. Nothing needs a separate quiz.
 | 1. Effects | Entry ticket: a starting side and two pieces of evidence by paragraph number. Exit ticket: what they believed, what they believe now. | A position that names at least one benefit and one harm, and cites the reading. |
 | 2. Access | Round 1 and 2 talk, tracked on the observer organizer. Exit ticket. | Connects the district's size, income, or location to why it wanted the robot, or to who else could afford one. |
 | 3. Personal data | One added line on the exit ticket: "Name one piece of student data this robot would hold, and one risk of keeping it." | A specific data type (student ID, conversation history, flagged-term alerts) and a specific risk. |
-| 4. Discussion | Observer organizer, including the tally of times a student built on someone else's idea. Three temperature checks, with a count of who moved and why. Entry ticket question 4, the best argument for the other side, graded for how well thought out it is (rubric in [the kit](/socratic-seminar-kit/#playing-the-other-side)). | Builds on a peer by name, cites a paragraph, can say what moved them (or why they held), and states the other side fairly. |
+| 4. Discussion | Observer organizer, including the tally of times a student built on someone else's idea. The Start and End lines on the exit ticket, with a count of who moved and why (the temperature checks, if you ran them, show the same thing). Entry ticket question 4, the best argument for the other side, graded for how well thought out it is (rubric in [the kit](/socratic-seminar-kit/#playing-the-other-side)). | Builds on a peer by name, cites a paragraph, can say what moved them (or why they held), and states the other side fairly. |
 
-I grade evidence and honesty, not the position landed on. "I changed my mind because of what someone said" is the best possible answer. The temperature-check count and the observer organizers are the artifacts to show anyone who asks what students did.
+I grade evidence and honesty, not the position landed on. "I changed my mind because of what someone said" is the best possible answer. The Start-to-End count and the observer organizers are the artifacts to show anyone who asks what students did.
 
 {% include license-footer.html %}
