@@ -1,0 +1,106 @@
+---
+title: "Robot Policy Worksheet"
+permalink: /robot-policy-worksheet/
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Robot Policy Worksheet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { --ink: #1b1f23; --rule: #9aa0a6; --muted: #57606a; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #e9edf1;
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.35;
+  }
+
+  .tools {
+    max-width: 8.5in;
+    margin: 16px auto;
+    padding: 12px 18px;
+    background: #fff;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  .tools p { margin: 0 0 8px; color: var(--muted); }
+  .tools button {
+    padding: 8px 16px; font-size: 14px; border-radius: 6px; cursor: pointer;
+    border: 1px solid #2a7ae2; background: #2a7ae2; color: #fff;
+  }
+
+  .sheet {
+    width: 8.5in;
+    height: 11in;
+    margin: 16px auto;
+    background: #fff;
+    padding: 0.5in;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.18);
+    overflow: hidden;
+  }
+
+  .namebar { display: flex; gap: 18px; margin: 0 0 8px; }
+  .fld { flex: 1 1 auto; border-bottom: 1.5px solid var(--ink); min-height: 0.34in; font-size: 9.5pt; font-weight: 700; }
+  .fld.period { flex: 0 0 1.3in; }
+  .fld.date { flex: 0 0 1.7in; }
+
+  h1 { font-size: 17pt; margin: 6px 0 6px; }
+  .prompt { margin: 0 0 8px; }
+  .lines { margin: 10px 0 14px; }
+  .lines i { display: block; border-bottom: 1px solid var(--rule); height: 0.34in; }
+
+  table { width: 100%; border-collapse: collapse; margin: 0 0 4px; }
+  th, td { border: 1px solid var(--ink); padding: 3px 7px; font-size: 9.5pt; }
+  th { background: #f1f3f5; text-align: left; }
+  th + th, td + td { width: 0.8in; text-align: center; }
+  tr.total td { font-weight: 700; }
+  .note { margin: 0 0 8px; font-size: 9pt; color: var(--muted); }
+
+  @media print {
+    body { background: #fff; }
+    .tools { display: none; }
+    @page { size: letter; margin: 0.5in; }
+    .sheet { width: auto; height: 10in; margin: 0; padding: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tools">
+  <p>One side of one sheet, for the day after the robot-teacher seminar. The rubric is printed on it so students know how it is graded.</p>
+  <button type="button" onclick="window.print()">Print</button>
+</div>
+
+<div class="sheet">
+  <div class="namebar">
+    <div class="fld">Name</div>
+    <div class="fld period">Period</div>
+    <div class="fld date">Date</div>
+  </div>
+  <h1>A Rule About Robots in Classrooms</h1>
+  <p class="prompt">You are on the school board. Write one paragraph in complete sentences: the rule your district should adopt about humanoid robots in classrooms, and who decides. Say whether a robot may replace an aide, replace a teacher, or neither. Name one thing your rule protects and one thing it gives up. Use a detail from the reading, a video, or our discussion. It may help to think about who gets the robot and what student data it would hold.</p>
+  <div class="lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+  <table>
+    <tr><th>How this is graded</th><th>Points</th><th>Score</th></tr>
+    <tr><td>Legible: I can read all of it</td><td>1</td><td></td></tr>
+    <tr><td>Complete sentences</td><td>1</td><td></td></tr>
+    <tr><td>The rule (replace an aide, replace a teacher, or neither), and who decides</td><td>1</td><td></td></tr>
+    <tr><td>One thing the rule protects</td><td>1</td><td></td></tr>
+    <tr><td>One thing the rule gives up</td><td>1</td><td></td></tr>
+    <tr><td>A detail from the reading, a video, or the discussion</td><td>1</td><td></td></tr>
+    <tr class="total"><td>Total</td><td>6</td><td></td></tr>
+  </table>
+  <p class="note">The rule you choose is not graded. The thinking and the writing are.</p>
+
+  {% include license-footer.html %}
+</div>
+
+</body>
+</html>
