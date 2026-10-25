@@ -189,6 +189,7 @@ Start times are in minutes from the beginning of the class, with the sections yo
 | (no slide) | 67 | **Your reveal, spoken.** One opinion among many. |
 | 23 | 72 | Students fill in the **exit ticket** on the back of the handout. |
 | 24 | 77 | **What actually happened.** The state's letter and the district's pause, as the close. |
+| 25 | 80, skippable | **Compare.** The New York bill beside your own district's policy on AI and teachers. |
 
 ## Facilitator questions
 
@@ -253,6 +254,7 @@ If the room is lopsided after the first temperature check, you can also assign o
 - The same day, the district announced the project was on hold while it works "through enhanced student data privacy agreements" with the state and talks with the community. It has not said when it might restart.
 - On July 29, New York State Sen. Shelley Mayer introduced a bill, [S10671](https://www.nysenate.gov/legislation/bills/2025/S10671), which would require every school district, charter school, and BOCES in New York to adopt a policy prohibiting AI-enabled humanoid robots "in an instructional capacity." As of October 24, 2026 it is in committee in the New York Senate and has not passed either chamber. It is a New York bill and would not apply anywhere else.
 - If time allows, ask: "A New York senator is asking the same question the students just answered. Does a ban answer it?"
+- **Compare (optional).** The last slide sets the New York bill beside your own district's policy. For example, a clause added to one district's union contract in 2026 lets the union veto any attempt to replace teachers' jobs with AI. Swap in your own district's policy. Ask: "How are these alike? How are they different?"
 
 *[Your take goes here. Hold it until the last ten minutes and offer it as one opinion among many.]*
 
