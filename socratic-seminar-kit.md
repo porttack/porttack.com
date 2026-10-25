@@ -43,11 +43,11 @@ The last one is aimed at me. The instinct is to fill every pause, and filling pa
 
 ## The fishbowl, with guardrails
 
-Four to six students in the center talk. One extra center chair stays empty: the hot seat. Everyone else is on the outside with the observer organizer. The outer circle is not the bench. Listening well is the second skill of the day, and the organizer is what makes it visible and gradable.
+A small group of students in the center talk. I use four to six, but use whatever fits your room. One extra chair at the table stays empty: the hot seat. It lets an observer from the outer circle join the conversation for a moment, sit down, make a comment, then get up and leave. Everyone else is on the outside as an observer, with the observer organizer. The outer circle is not the bench. Listening well is the second skill of the day, and the organizer is what makes it visible and gradable.
 
 Three guardrails:
 
-- **Control the chair the first time.** An open invitation becomes a stampede. The first time, a student raises a hand, I wave them into the hot seat, they make their point, they return. Loosen it once they can handle it.
+- **Control the chair the first time.** An open invitation becomes a stampede. The first time, an observer raises a hand, I wave them into the hot seat, they make their comment, and they get up and go back to the outer circle. Loosen it once they can handle it.
 - **Stack the first circle.** For the debut, hand-pick students who will set the bar rather than clown. Say out loud that the circle rotates all year, so it does not read as favoritism.
 - **Keep the observer job simple.** The first time, the task is concrete and non-social. Save partner critique for later.
 

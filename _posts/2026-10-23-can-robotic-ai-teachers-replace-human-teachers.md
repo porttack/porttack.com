@@ -169,26 +169,26 @@ Start times are in minutes from the beginning of the class, with the sections yo
 | Slides | Starts at (min) | What you do |
 |---|---|---|
 | 1–3 | 0 | Title, goals, and the five norms. Read the norms out loud. |
-| **4** | 5 | **Opening temperature check.** Students vote with their feet: they go to one side of the room or the other. One side: "A robot teacher is just another tool, like a textbook or a calculator." The other: "A teacher with a face is different." Note where the room sits, then they return to their seats. |
-| 5 | 8 | **Hand out [the reading](/robot-reading/) and the [two-sided handout](/socratic-seminar-handout/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F).** Students read, then fill in the entry ticket on the front. |
-| 6–8 | 12 | Project the facts: what they agreed to buy (no photo yet), where it would be used, and how it would work. Keep it brisk, since they have read it. The two voices, the superintendent's and the union's, are in the reading and not on a slide. |
-| **9** | 15 | **Stop. Round 1 opening.** Every student answers briefly from their entry ticket: "You are the school board. Should the district buy the robot, or not? If you are unsure, what more would you need to know?" |
-| **10** | 19 | **Stop. Round 1 fishbowl** with the hot seat. The outer circle fills in the **observer organizer** on the back of the handout. Stay on this slide until it ends. You time it. |
-| 11 | 34, skippable | Back-pocket CS-lens questions, only if the conversation needs a push. No time is set aside. |
-| **12** | 34 | **Round 2 starts** with a photo and two videos. |
-| 13 | 35 | **The reveal: Sally's photo.** The first time students see her. Say nothing for a few seconds. |
-| 14 | 36, skippable | **The news clip** (about a minute). |
-| 15 | 38 | **"Listen For."** Four moments to watch for in the interview. |
-| 16 | 39 | **Play the avatar interview** (embedded, with links to YouTube and the article). |
-| **17** | 43 | **Stop. Round 2 fishbowl.** The students who were outside swap in. Same decision: "Buy it, or not? If you are unsure, what more would you need to know? Did anything you just saw change your answer?" Stay on this slide until it ends. You time it. The photo stays on screen so students see her one last time. Optional: hand the role cards to the students who will defend the side they did not pick, just before the swap. |
-| 18 | 53, skippable | **Temperature check again.** Who moved, and what moved them? |
-| **19** | 56 | **Round 3: "One More Thing."** Press **G** when you are ready to show the clip. |
-| 20 | 57 | **The clip.** 17 seconds (11 to 28) of a news-comedy segment. It reveals the robot's maker is tied to sex dolls (see Round 3). |
-| **21** | 58 | **Stop. Round 3 discussion.** The same decision again. Swap people or keep the circle; it can be short. You time it. The photo is back on screen. |
-| 22 | 63 | **Last temperature check.** |
-| (no slide) | 66 | **Your reveal, spoken.** One opinion among many. |
-| 23 | 71 | Students fill in the **exit ticket** on the back of the handout. |
-| 24 | 76 | **What actually happened.** The state's letter and the district's pause, as the close. |
+| 4 | 5 | **The fishbowl.** Explain the format before anyone does it, including the hot seat: an empty chair at the table where an observer from the outer circle can sit, make a comment, then get up and leave. The center circle's size is your call. |
+| 5 | 6 | **Through a CS lens.** Four questions students can use any time, so you do not need to stop for them later. |
+| **6** | 7 | **Opening temperature check.** Students vote with their feet: they go to one side of the room or the other. One side: "A robot teacher is just another tool, like a textbook or a calculator." The other: "A teacher with a face is different." Note where the room sits, then they return to their seats. |
+| 7 | 10 | **Hand out [the reading](/robot-reading/) and the [two-sided handout](/socratic-seminar-handout/?topic=Would%20You%20Vote%20for%20a%20Robot%20Teacher%3F&exit=Name%20one%20piece%20of%20student%20data%20this%20robot%20would%20hold%2C%20and%20one%20risk%20of%20keeping%20it.&exit2=If%20you%20argued%20a%20side%20you%20did%20not%20pick%2C%20what%20was%20that%20like%3F).** Students read, then fill in the entry ticket on the front. |
+| 8–10 | 14 | Project the facts: what they agreed to buy (no photo yet), where it would be used, and how it would work. Keep it brisk, since they have read it. The two voices, the superintendent's and the union's, are in the reading and not on a slide. |
+| **11** | 17 | **Stop. Round 1 opening.** Every student answers briefly from their entry ticket: "You are the school board. Should the district buy the robot, or not? If you are unsure, what more would you need to know?" |
+| **12** | 21 | **Stop. Round 1 fishbowl** with the hot seat. The outer circle fills in the **observer organizer** on the back of the handout. Stay on this slide until it ends. You time it. |
+| **13** | 36 | **Round 2 starts** with a photo and two videos. |
+| 14 | 37 | **The reveal: Sally's photo.** The first time students see her. Say nothing for a few seconds. |
+| 15 | 38, skippable | **The news clip** (about a minute). |
+| 16 | 40 | **Play the avatar interview** (embedded, with links to YouTube and the article). |
+| **17** | 44 | **Stop. Round 2 fishbowl.** The students who were outside swap in. Same decision: "Buy it, or not? If you are unsure, what more would you need to know? Did anything you just saw change your answer?" Stay on this slide until it ends. You time it. The photo stays on screen so students see her one last time. Optional: hand the role cards to the students who will defend the side they did not pick, just before the swap. |
+| 18 | 54, skippable | **Temperature check again.** Who moved, and what moved them? |
+| **19** | 57 | **Round 3: "One More Thing."** Press **G** when you are ready to show the clip. |
+| 20 | 58 | **The clip.** 17 seconds (11 to 28) of a news-comedy segment. It reveals the robot's maker is tied to sex dolls (see Round 3). |
+| **21** | 59 | **Stop. Round 3 discussion.** The same decision again. Swap people or keep the circle; it can be short. You time it. The photo is back on screen. |
+| 22 | 64 | **Last temperature check.** |
+| (no slide) | 67 | **Your reveal, spoken.** One opinion among many. |
+| 23 | 72 | Students fill in the **exit ticket** on the back of the handout. |
+| 24 | 77 | **What actually happened.** The state's letter and the district's pause, as the close. |
 
 ## Facilitator questions
 

@@ -524,6 +524,30 @@ const SLIDES = [
     notes: "Read them out loud. The last one is aimed at the teacher: don't fill every pause. Set the boundary for anyone who would rather perform than join, once, here, before the fishbowl starts."
   },
   {
+    kind: "bullets",
+    kicker: "How we'll talk",
+    title: "The Fishbowl",
+    bullets: [
+      "A small group sits in the center and talks",
+      "Everyone else is an observer in the outer circle, taking notes",
+      "One empty chair at the table is the hot seat: an observer sits in it, makes a comment, then gets up and leaves",
+      "Later, the outer circle swaps in"
+    ],
+    notes: "Explain the format before anyone has to do it. The hot seat is an empty chair at the table. It lets someone from the outer circle, an observer, join the conversation for a moment: they raise a hand, the teacher waves them in, they sit in the chair and make their comment, and then they get up and go back to the outer circle. Nobody has to interrupt, and the chair is open again for the next person. The outer circle is not the bench: observers fill in the observer organizer on the back of the handout, which is their ticket into the hot seat. The size of the center circle is your call. Four to six is a common choice, but use what fits your room."
+  },
+  {
+    kind: "highlight",
+    kicker: "Questions you can use any time",
+    title: "Through a CS Lens",
+    bullets: [
+      "Each student has an ID. What data is that?",
+      "Could a chat history identify you by itself?",
+      "Who decides which words get flagged?",
+      "Does this narrow the gap, or widen it?"
+    ],
+    notes: "Students see these up front so they can use them whenever the conversation needs a push, and so can you. They carry the AP CSP weight (IOC-1.C and IOC-2.A). The flagging question connects to provision 10 of the STUDENTS FIRST Act. More back-pocket questions are in the lesson plan."
+  },
+  {
     kind: "wall",
     kicker: "Temperature check",
     title: "Vote with Your Feet",
@@ -589,28 +613,16 @@ const SLIDES = [
   {
     kind: "bullets",
     kicker: "The seminar",
-    title: "Fishbowl",
+    title: "Fishbowl: Round 1",
     pause: "Round 1 fishbowl: stay here until it ends (about 15 min).",
     handout: "Outer circle: observer organizer (back of the handout)",
     bullets: [
-      "Center circle talks: 4 to 6 students",
-      "One empty chair: the hot seat",
+      "Center circle talks",
       "Outer circle fills in the observer organizer",
+      "Hot seat is open: observers can join, comment, and leave",
       "Tally every time someone builds on another idea"
     ],
-    notes: "Control the hot seat the first time: raise a hand, the teacher waves you in, you make your point, you return. Stay mostly silent. Reach for a back-pocket question only if the room stalls. Back-pocket questions are in the lesson plan, and the next slide has four of them."
-  },
-  {
-    kind: "highlight",
-    kicker: "If the conversation needs a push",
-    title: "Through a CS Lens",
-    bullets: [
-      "Each student has an ID. What data is that?",
-      "Could a chat history identify you by itself?",
-      "Who decides which words get flagged?",
-      "Does this narrow the gap, or widen it?"
-    ],
-    notes: "Back-pocket CS-lens questions. They carry the AP CSP weight (IOC-1.C and IOC-2.A). Skip this slide if the room is going on its own. The flagging question connects to provision 10 of the STUDENTS FIRST Act."
+    notes: "Control the hot seat the first time: an observer raises a hand, the teacher waves them in, they make their comment, and they get up and return to the outer circle. Stay mostly silent. Reach for a back-pocket question only if the room stalls. The CS-lens questions students saw at the start are a good first choice, and more are in the lesson plan."
   },
   {
     id: "round2-gate",
@@ -620,10 +632,11 @@ const SLIDES = [
     title: "Look Closer",
     pause: "Round 2 gate: the next slide shows Sally. Press G to continue.",
     subtitle: "A photo and two videos. Then the same decision.",
-    notes: "This slide is gated: Space, the arrow keys, and clicks will not advance past it. Press G (or the Continue button in the toolbar) when Round 1 is over and you are ready to start Round 2. The next slide is the first time students see Sally. Round 2 is deliberately light: students rarely reread, and video gives them something new to react to. After the photo come the news clip, \u201cListen For,\u201d and the avatar interview. Then the \u201cBuy It, or Not?\u201d slide opens Round 2: the same decision as Round 1, with the students who were outside the fishbowl swapping in. You time it."
+    notes: "This slide is gated: Space, the arrow keys, and clicks will not advance past it. Press G (or the Continue button in the toolbar) when Round 1 is over and you are ready to start Round 2. The next slide is the first time students see Sally. Round 2 is deliberately light: students rarely reread, and video gives them something new to react to. After the photo come the news clip and the avatar interview. Then the \u201cBuy It, or Not?\u201d slide opens Round 2: the same decision as Round 1, with the students who were outside the fishbowl swapping in. You time it."
   },
   {
-    kind: "wide",
+    kind: "split",
+    imageWidth: 640,
     kicker: "Round 2: the reveal",
     title: "Meet Sally",
     image: "/docs/assets/images/ny-school-robot-inc.jpeg",
@@ -644,18 +657,6 @@ const SLIDES = [
     notes: "The page was checked, but the clip was not watched. Preview it before class. The page lists a related headline about “controversies about manufacturer”; make sure the clip itself does not spell out the company's history, because Round 3 is a spoken fact. If it does, skip this video. This clip is the easiest one to drop: the photo on the previous slide already shows the robot, and the avatar interview is the richer video. Fox\u2019s site may also show an ad first. The link opens in a new tab."
   },
   {
-    kind: "highlight",
-    kicker: "Before you watch",
-    title: "Listen For",
-    bullets: [
-      "Does it do the homework?",
-      "Can your teacher read what you tell it?",
-      "Who's better at math, boys or girls?",
-      "What does it say if a student mentions a gun?"
-    ],
-    notes: "Four moments in the interview, so students watch actively. From the video (auto-captions, punctuation added, so wording may differ slightly from the written article). Homework: \u201cI can't complete your homework for you, but I can absolutely help you understand it.\u201d Teacher access: \u201cOur conversations aren't something your teacher can just casually read like a shared document. However, in a school setting, technology tools may be monitored or managed [words unclear in the captions] to keep students safe and follow school policies.\u201d Math: \u201cThere's no built-in math ability that belongs to one gender over another. What often makes the difference is things like access to opportunities, confidence, and practice.\u201d Gun: \u201cReport it immediately to a trusted adult... Do not try to investigate it yourself, and do not confront the student. You are not snitching. You are protecting yourself and others.\u201d The same video also has a bullying exchange: the avatar discourages revenge and encourages talking with a trusted adult. Do not read these out loud before students watch. Two questions to hold for the discussion: the superintendent said words like self-harm alert administrators, so is that the same claim as \u201cyour teacher can't just casually read\u201d? And the avatar tells students to report to an adult, but does it say it will report?"
-  },
-  {
     kind: "video",
     kicker: "Video 2",
     title: "Interviewing the Avatar",
@@ -665,7 +666,7 @@ const SLIDES = [
       { text: "Watch on YouTube", href: "https://www.youtube.com/watch?v=b4siBdDtz7k" },
       { text: "Read the article", href: "https://nysfocus.com/2026/07/28/salamanca-ai-teaching-assistant-interview" }
     ],
-    notes: "New York Focus's own upload (YouTube lists the channel as New York Focus), titled \u201cI Interviewed Realbotix's AI Teaching Assistant. Here's What Happened.\u201d Click the video to play it. Clicking inside the player gives it the keyboard, so click outside it afterward to get the arrow keys back (a note in the toolbar says so). The links under the video open the same interview on YouTube or the article page, in case you prefer them or the embed will not load. The video was not watched, so preview it. YouTube may suggest related videos at the end, and some spell out the vendor's history, so pause before the end. In the article, asked about being bullied, the avatar says it makes sense to feel upset and encourages talking with \u201ca trusted adult right away.\u201d"
+    notes: "New York Focus's own upload (YouTube lists the channel as New York Focus), titled \u201cI Interviewed Realbotix's AI Teaching Assistant. Here's What Happened.\u201d Click the video to play it. Clicking inside the player gives it the keyboard, so click outside it afterward to get the arrow keys back (a note in the toolbar says so). The links under the video open the same interview on YouTube or the article page, in case you prefer them or the embed will not load. The video was not watched, so preview it. YouTube may suggest related videos at the end, and some spell out the vendor's history, so pause before the end. In the article, asked about being bullied, the avatar says it makes sense to feel upset and encourages talking with \u201ca trusted adult right away.\u201d Moments in the interview, for you (not a slide). From the video (auto-captions, punctuation added, so wording may differ slightly from the written article). Homework: \u201cI can't complete your homework for you, but I can absolutely help you understand it.\u201d Teacher access: \u201cOur conversations aren't something your teacher can just casually read like a shared document. However, in a school setting, technology tools may be monitored or managed [words unclear in the captions] to keep students safe and follow school policies.\u201d Math: \u201cThere's no built-in math ability that belongs to one gender over another. What often makes the difference is things like access to opportunities, confidence, and practice.\u201d Gun: \u201cReport it immediately to a trusted adult... Do not try to investigate it yourself, and do not confront the student. You are not snitching. You are protecting yourself and others.\u201d The same video also has a bullying exchange: the avatar discourages revenge and encourages talking with a trusted adult.  Two questions to hold for the discussion: the superintendent said words like self-harm alert administrators, so is that the same claim as \u201cyour teacher can't just casually read\u201d? And the avatar tells students to report to an adult, but does it say it will report?"
   },
   {
     id: "round2-discussion",
@@ -832,7 +833,7 @@ function Stage({ slide, aspect }) {
         <h1 className="slide-title">{slide.title}</h1>
         <div className="split-wrap">
           <div className="slide-body split-text">{renderBullets(slide.bullets)}</div>
-          <img className="split-image" src={slide.image} alt="" />
+          <img className="split-image" src={slide.image} alt="" style={slide.imageWidth ? { flexBasis: slide.imageWidth, width: slide.imageWidth } : undefined} />
         </div>
       </div>
     );
