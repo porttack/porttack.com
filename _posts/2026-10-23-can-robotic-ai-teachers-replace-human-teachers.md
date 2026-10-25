@@ -258,13 +258,22 @@ If a show of hands on buy or don't is lopsided, you can also assign one or two s
 <table style="width: 100%; max-width: 640px; margin: 0.8em auto; border-collapse: separate; border-spacing: 6px; font-size: 0.85em;">
   <thead><tr><th></th><th>California law, from 2027</th><th>Our teachers' contract</th><th>Proposed NY bill (humanoid robots)</th></tr></thead>
   <tbody>
-    <tr><th style="border: 3px solid #2a7ae2; color: #2a7ae2; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 700;">No robots in teaching</th><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Vague</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Vague</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">True (but nuanced)</td></tr>
-    <tr><th style="border: 3px solid #2e7d32; color: #2e7d32; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 700;">A robot replaces a teacher's aide</th><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Vague</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Not covered</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Banned for "instruction"</td></tr>
+    <tr><th style="border: 3px solid #2a7ae2; color: #2a7ae2; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 700;">No robots in teaching</th><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Vague</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">False</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">True (but nuanced)</td></tr>
+    <tr><th style="border: 3px solid #2e7d32; color: #2e7d32; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 700;">A robot replaces a teacher's aide</th><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Vague</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Depends on the work</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Banned for "instruction"</td></tr>
     <tr><th style="border: 3px solid #b25e00; color: #b25e00; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 700;">A robot replaces the teacher</th><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Banned</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Union must agree</td><td style="border: 2px solid #ccc; border-radius: 8px; padding: 6px 8px; text-align: center; font-weight: 600;">Banned</td></tr>
   </tbody>
 </table>
 
 *[Your take goes here. Hold it until the last ten minutes and offer it as one opinion among many.]*
+
+## Author's position
+
+If it helps, here is mine, as one opinion among many. The full argument is in [AI Robot Teachers Are Almost Here]({% post_url 2026-07-24-robot-teacher %}). These are the deeper issues I raise there, which this seminar has no time to cover:
+
+- **Relationships come first.** Students take cognitive risks for people, not products. Zaretta Hammond's work on culturally responsive teaching treats trust as the precondition for learning, not the warm-up.
+- **Emotional offload.** A robot with a face can manufacture attachment. Common Sense Media rates social AI companions [unacceptable for anyone under 18](https://www.commonsensemedia.org/press-releases/ai-companions-decoded-common-sense-media-recommends-ai-companion-safety-standards), and its definition fits Sally.
+- **The human skills.** Resilience, leadership, curiosity, and empathy are in rising demand as AI spreads ([World Economic Forum](https://www.weforum.org/publications/the-future-of-jobs-report-2025/)). People learn them by working with other people.
+- **We keep iterating on what we know doesn't work.** Khan Academy is free and excellent, and it has not replaced a teacher, because learning happens inside a relationship. An AI robot's anthropomorphic empathy is just **lipstick on a pig**.
 
 ## Next day: a short writing assignment (optional)
 
