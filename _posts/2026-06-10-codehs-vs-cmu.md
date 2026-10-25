@@ -112,7 +112,7 @@ For my students, CMU CS Academy has been the stronger choice for building real p
 
 ---
 
-## Appendix A: CA Standards Coverage
+## Appendix A: Standards Coverage
 
 <div style="border-left: 4px solid #0969da; background: #f6f8fa; padding: 0.9em 1.2em; margin: 1.5em 0; border-radius: 4px;">
 <p style="margin: 0;">A live version of this comparison, covering more ground than the table below, is maintained at <a href="https://learn.porttack.com/standards/?sources=cmu_cs1,codehs_corgi&view=open-all">learn.porttack.com/standards</a>: the same two courses mapped against California's standards, CSTA 2017, CSTA 2026, and CA CTE (ICT), with an interactive coverage map you can toggle by source. What follows is the California and CSTA 2017 slice, current as of this post, for anyone reading without clicking through.</p>
@@ -218,7 +218,13 @@ Neither replaces a well-scaffolded introductory course. But for a pathway that r
 
 ---
 
-## Appendix C: Does CMU Wait Too Long to Teach Loops?
+## Appendix C: What About Code.org?
+
+*Status: Not yet written*
+
+---
+
+## Appendix D: Does CMU Wait Too Long to Teach Loops?
 
 *This appendix is intended for CS educators. Administrators can skip it.*
 
@@ -236,7 +242,7 @@ The honest position is that this is a genuine design tradeoff, not an obvious mi
 
 ---
 
-## Appendix D: Python vs. JavaScript
+## Appendix E: Python vs. JavaScript
 
 *This appendix is intended for CS educators and curriculum decision-makers.*
 
@@ -254,7 +260,7 @@ Computer science is ultimately about concepts rather than any specific language.
 
 ---
 
-## Appendix E: Student Placement in Introductory CS
+## Appendix F: Student Placement in Introductory CS
 
 *Status: Still work in progress*
 
