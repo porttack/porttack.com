@@ -6,6 +6,7 @@ redirect_from:
   - /2026/10/21/robot-teacher-seminar.html
   - /2026/10/21/would-you-vote-yes-on-a-robot-tutor.html
 label: Lesson Plan / AI Literacy
+image: https://porttack.com/docs/assets/images/robot-teacher-classroom.jpg
 lesson_category: society
 standards_extra_carrier: socratic_seminar_kit
 excerpt: "A rural district agreed to buy a humanoid robot to help teach high school coding and robotics, and then the state stepped in. A ready-to-run Socratic seminar where the students are the school board.<br><a href='/2026/10/23/can-robotic-ai-teachers-replace-human-teachers.html'><img src='/docs/assets/images/robot-teacher-classroom.jpg' alt='A friendly cartoon-style robot teacher pointing at a chalkboard that reads Computer Science, with a list of topics and a few lines of Python code' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
@@ -272,7 +273,7 @@ If it helps, here is mine, as one opinion among many. The full argument is in [A
 
 - **Relationships come first.** Students take cognitive risks for people, not products. Zaretta Hammond's work on culturally responsive teaching treats trust as the precondition for learning, not the warm-up.
 - **Emotional offload.** A robot with a face can manufacture attachment. Common Sense Media rates social AI companions [unacceptable for anyone under 18](https://www.commonsensemedia.org/press-releases/ai-companions-decoded-common-sense-media-recommends-ai-companion-safety-standards), and its definition fits Sally.
-- **The human skills.** Resilience, leadership, curiosity, and empathy are in rising demand as AI spreads ([World Economic Forum](https://www.weforum.org/publications/the-future-of-jobs-report-2025/)). People learn them by working with other people.
+- **The human skills.** Resilience, leadership, curiosity, and empathy are in rising demand as AI spreads ([World Economic Forum]({% post_url 2026-07-08-hope-in-the-standards %}#wef-skills-now)). People learn them by working with other people.
 - **We keep iterating on what we know doesn't work.** Khan Academy is free and excellent, and it has not replaced a teacher, because learning happens inside a relationship. An AI robot's anthropomorphic empathy is just **lipstick on a pig**.
 
 ## Next day: a short writing assignment (optional)
