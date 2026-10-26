@@ -5,6 +5,7 @@ date:   2025-08-05
 categories: rotary service
 label: Rotary
 excerpt_separator: <!--more-->
+image: https://porttack.com/docs/assets/images/bikeride20250802.jpeg
 ---
 <img src="https://porttack.com/docs/assets/images/bikeride20250802.jpeg">
 

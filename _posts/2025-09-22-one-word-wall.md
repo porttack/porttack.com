@@ -6,6 +6,7 @@ categories: teaching community lesson-plans
 label: Lesson Plan
 lesson_category: sel
 excerpt_separator: <!--more-->
+image: https://porttack.com/docs/assets/images/one-word-wall-2025.jpeg
 ---
 
 <img src="/docs/assets/images/one-word-wall-2025.jpeg">

@@ -5,6 +5,7 @@ date:   2025-07-08
 categories: scouting parenting character
 label: Scouts
 excerpt_separator: <!--more-->
+image: https://porttack.com/docs/assets/images/wolfeboro1.jpeg
 ---
 <img src="https://porttack.com/docs/assets/images/wolfeboro1.jpeg">
 

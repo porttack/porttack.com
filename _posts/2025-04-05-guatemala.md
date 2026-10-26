@@ -4,6 +4,7 @@ title:  "A Service Project with My Son: A Guatemala Water Project"
 date:   2025-04-05
 categories: service rotary
 excerpt_separator: <!--more-->
+image: https://porttack.com/docs/assets/images/guatemala_poster.png
 ---
 <img src="https://porttack.com/docs/assets/images/guatemala_poster.png">
 

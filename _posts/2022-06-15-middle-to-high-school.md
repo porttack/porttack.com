@@ -3,6 +3,7 @@ layout: post
 title:  "Reflecting on Accomplishments: Nurturing Growth in Education and Community"
 date:   2022-06-15
 categories: parenting
+image: https://porttack.com/docs/assets/images/slve-mural.jpg
 ---
 Wrapping up my time with a school is always bittersweet, a time to spend some social capital, and give back. This year, my son and daughter completed their middle school journey at Nature Academy and SLVMS. 
 

@@ -4,6 +4,7 @@ title:  "2024-25 Robotics Program Annual Report: Growth, Community, and Second P
 date:   2025-06-06
 categories: teaching robotics annual-report
 excerpt_separator: <!--more-->
+image: https://porttack.com/docs/assets/images/rov2.jpeg
 ---
 
 <div style="text-align: center;">

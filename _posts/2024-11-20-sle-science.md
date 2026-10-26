@@ -4,6 +4,7 @@ title:  "When High Schoolers Teach Elementary: SLE Science Night Success"
 date:   2024-11-20
 categories: teaching service community
 excerpt_separator: <!--more-->
+image: https://porttack.com/docs/assets/images/scinight24.jpeg
 ---
 
 <img src="https://porttack.com/docs/assets/images/scinight24.jpeg">

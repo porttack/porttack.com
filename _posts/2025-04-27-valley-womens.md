@@ -4,6 +4,7 @@ title:  "Gratitude in Action: Students Present to Valley Women's Club"
 date:   2025-04-27
 categories: community grants presentations
 excerpt_separator: <!--more-->
+image: https://porttack.com/docs/assets/images/vw2025.jpeg
 ---
 
 <img src="https://porttack.com/docs/assets/images/vw2025.jpeg">
