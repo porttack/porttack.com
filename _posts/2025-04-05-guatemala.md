@@ -5,6 +5,9 @@ date:   2025-04-05
 categories: service rotary
 excerpt_separator: <!--more-->
 image: https://porttack.com/docs/assets/images/guatemala_poster.png
+slides:
+  - title: "Presentation"
+    url: "https://docs.google.com/presentation/d/1lDz4XiRvGh2GLMPMPwx0JUFJKESKDOkjRwV5HbFbVQQ/edit?usp=sharing"
 ---
 <img src="https://porttack.com/docs/assets/images/guatemala_poster.png">
 

@@ -6,6 +6,9 @@ label: Lesson Plan
 lesson_category: coding
 excerpt_separator: <!--more-->
 image: https://porttack.com/assets/img/binary-coins-27.png
+slides:
+  - title: "Hex slides"
+    url: "https://docs.google.com/presentation/d/11_Jk-uo5r7tasBkRFtKpgR9WTcAd68xVD7TSsAbU79Q/edit"
 ---
 
 <img src="/assets/img/binary-coins-27.png" alt="Cash register board showing 27 as 11011: the 16, 8, 2, and 1 coins below the line, the 4 above it" title="Douglas Kiang's cash register board, from his walkthrough video" style="float: right; width: 200px; margin: 0.25em 0 0.5em 1em;">

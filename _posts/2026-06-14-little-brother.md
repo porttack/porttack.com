@@ -9,6 +9,11 @@ standards_carrier: little_brother
 show_history: true
 excerpt: "Cory Doctorow's <em>Little Brother</em> pulls students into questions of privacy, surveillance, encryption, and civil liberties -- questions that don't have clean answers. Also: the full reading sequence, lesson materials, and how it maps to California and AP CSP standards.<br><a href='/2026/06/14/little-brother.html'><img src='https://craphound.com/craphound/wp-content/cory/littlebrother-US-cover-small.jpg' alt='Little Brother by Cory Doctorow' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0; box-shadow: -4px 4px 10px rgba(0,0,0,0.3), 2px 4px 8px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.08);'></a>"
 excerpt_separator: <!--more-->
+slides:
+  - title: "Crypto Wars"
+    url: "https://docs.google.com/presentation/d/1gtE46uUj_wQlXWfdxtBLOv7oHNNxROgb/edit?usp=sharing"
+  - title: "Creative Commons"
+    url: "https://docs.google.com/presentation/d/1bC-1o6sW6UZQOy8p7VpzShud3Y03uMMu/edit?usp=sharing"
 ---
 
 <a href="https://craphound.com/littlebrother/"><img src="https://craphound.com/craphound/wp-content/cory/littlebrother-US-cover-large.jpg" alt="Little Brother by Cory Doctorow" style="max-height: 250px; width: auto; display: block; margin: 0 auto 1em; box-shadow: -4px 4px 10px rgba(0,0,0,0.3), 2px 4px 8px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.08);"></a>

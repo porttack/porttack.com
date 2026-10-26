@@ -6,6 +6,9 @@ label: Lesson Plan / AI Literacy
 lesson_category: society
 standards_extra_carrier: socratic_seminar_kit
 excerpt: "Ninety-eight high school students wrote a national AI policy for schools. One of their rules says a student can be suspended or expelled if a parent uses AI on their homework. A ready-to-run Socratic seminar on six rules the students wrote."
+slides:
+  - title: "Slides"
+    url: "/students-first-slides/"
 ---
 
 <!-- DRAFT NOTES (delete before publishing)

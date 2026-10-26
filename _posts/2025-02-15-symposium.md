@@ -3,6 +3,9 @@ layout: post
 title:  "Beyond the Classroom: Presenting at the CA STEAM Symposium"
 date:   2025-02-15
 categories: teaching professional-development
+slides:
+  - title: "Presentation"
+    url: "https://sccoe.link/casteam2025"
 ---
 
 Last week I had the opportunity to present at the California STEAM Symposium alongside Stephanie Sumarna from the Santa Cruz County Office of Education. Our session, "Cultivating Educator and Student Leadership through Computer Science and ROVs," let us share how our underwater robotics program creates opportunities for both student and teacher growth.

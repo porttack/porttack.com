@@ -5,6 +5,9 @@ date: 2026-10-22
 label: Rotary
 excerpt_separator: <!--more-->
 excerpt: "I took the One Word activity from my classroom and cut it down to twelve minutes for a Rotary meeting. Everyone narrows who they are to a single word and says it out loud. Worksheet and slides included.<br><a href='/2026/10/22/one-word-rotary-icebreaker.html'><img src='/docs/assets/images/SLV_Rotary_logo2.png' alt='Rotary Club of San Lorenzo Valley' style='max-height: 110px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
+slides:
+  - title: "Slides"
+    url: "/one-word-rotary-slides/"
 ---
 
 <a href="https://portal.clubrunner.ca//6779"><img src="/docs/assets/images/SLV_Rotary_logo2.png" alt="Rotary Club of San Lorenzo Valley" style="max-height: 150px; width: auto; display: block; margin: 0 auto 0.3em;"></a>

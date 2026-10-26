@@ -1,0 +1,13 @@
+{%- comment -%}
+  Buttons linking straight to a post's slide decks. Reads the slides front
+  matter list on the post passed as include.post (a list of title and url
+  pairs). Renders nothing when the post has no slides.
+{%- endcomment -%}
+{%- assign deck_post = include.post | default: page -%}
+{%- if deck_post.slides.size > 0 -%}
+<span class="slide-buttons">
+  {%- for deck in deck_post.slides -%}
+  &#32;<a class="slide-button" href="{{ deck.url }}">&#9654; {{ deck.title | default: "Slides" }}</a>
+  {%- endfor -%}
+</span>
+{%- endif -%}

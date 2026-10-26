@@ -8,6 +8,11 @@ lesson_category: hardware
 excerpt_separator: <!--more-->
 excerpt: "A short lesson for Physical Computing / Robotics that turns a skill students already have (mm, cm, m, km) into a skill they need (mV, mA, kΩ).<br><a href='/docs/assets/slides/Kilo_Milli_v3.pdf'><img src='/docs/assets/images/kilo-milli-ladder.png' alt='The SI Prefix Ladder: kilo, hecto, deca, base, deci, centi, milli' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0; box-shadow: -4px 4px 10px rgba(0,0,0,0.3), 2px 4px 8px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.08);'></a>"
 image: https://porttack.com/docs/assets/images/kilo-milli-ladder.png
+slides:
+  - title: "Slides (PDF)"
+    url: "/docs/assets/slides/Kilo_Milli_v3.pdf"
+  - title: "Google Slides"
+    url: "https://docs.google.com/presentation/d/1SwArrt0lFytWQIRPR__mHDiYjcmV0bdlC4s3dk0fPKw/edit?usp=sharing"
 ---
 
 <a href="/docs/assets/slides/Kilo_Milli_v3.pdf"><img src="/docs/assets/images/kilo-milli-ladder.png" alt="The SI Prefix Ladder: kilo, hecto, deca, base, deci, centi, milli" style="max-width: 500px; width: 100%; display: block; margin: 0 auto 1em; box-shadow: -4px 4px 10px rgba(0,0,0,0.3), 2px 4px 8px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.08);"></a>

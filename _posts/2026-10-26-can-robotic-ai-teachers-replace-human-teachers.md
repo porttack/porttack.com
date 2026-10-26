@@ -11,6 +11,11 @@ image: https://porttack.com/docs/assets/images/robot-teacher-classroom.jpg
 lesson_category: society
 standards_extra_carrier: socratic_seminar_kit
 excerpt: "A rural district agreed to buy a humanoid robot to help teach high school coding and robotics, and then the state stepped in. A ready-to-run Socratic seminar where the students are the school board.<br><a href='/2026/10/26/can-robotic-ai-teachers-replace-human-teachers.html'><img src='/docs/assets/images/robot-teacher-classroom.jpg' alt='A friendly cartoon-style robot teacher pointing at a chalkboard that reads Computer Science, with a list of topics and a few lines of Python code' style='max-height: 150px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
+slides:
+  - title: "Slides"
+    url: "/robot-teacher-slides/"
+  - title: "Overview slides"
+    url: "/robot-tutor-overview/"
 ---
 
 <img src="/docs/assets/images/robot-teacher-classroom.jpg" alt="A friendly cartoon-style robot teacher pointing at a chalkboard that reads Computer Science, with a list of topics and a few lines of Python code" style="max-height: 250px; width: auto; display: block; margin: 0 auto 0.4em;">
