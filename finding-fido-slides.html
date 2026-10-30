@@ -581,24 +581,9 @@ const SLIDES = [
     id: "seminar-start",
     kind: "title",
     kicker: "Socratic Seminar",
-    title: "Finding Fido",
-    subtitle: "Ring's Search Party",
-    notes: "Grades 7 to 9. Opens cold: the next slide plays the ad before anything is explained. Round 1 is a complete lesson. If the class goes badly, stop after Round 1 and go to the exit: press S on any Round 2 slide to jump there. A red PAUSE HERE bar along the bottom marks the slides where the class stops. Nothing is locked: the arrow keys, space and clicks always move on. On the timed slides the room sees a ring showing the share of time left. Start it with T, the Start button, or by clicking the ring, and click it again to pause. Past zero it counts up in red."
-  },
-  {
-    kind: "table",
-    kicker: "How you are graded",
-    title: "The Rubric",
-    head: ["What", "Points"],
-    rows: [
-      ["Entry ticket: a question, and a side with a reason", "1"],
-      ["Entry ticket: one piece of evidence from the reading", "1"],
-      ["Your seat: inside, spend 2 or 3 of your tokens. Outside, stay quiet.", "2"],
-      ["Observer organizer: two rows, each naming who said it", "1"],
-      ["Exit ticket", "1"]
-    ],
-    total: ["Total", "6"],
-    notes: "Show this before the ad. Which side you pick, and whether you change it, are not graded. A student who changes sides because of something said in the room did the thing the seminar is for. Inside students fill in the organizer right after the round. The slide numbers after this one are one higher than before."
+    title: "The Super Bowl Ad About a Lost Dog",
+    subtitle: "A Socratic seminar",
+    notes: "Opens cold: the next slide plays the ad before anything is explained, so the hook comes before the rules. Round 1 is a complete lesson. If the class goes badly, stop after Round 1 and go to the exit: press S on any Round 2 slide to jump there. A red PAUSE HERE bar along the bottom marks the slides where the class stops. Nothing is locked: the arrow keys, space and clicks always move on. On the timed slides the room sees a ring showing the share of time left. Start it with T, the Start button, or by clicking the ring, and click it again to pause. Past zero it counts up in red."
   },
   {
     kind: "video",
@@ -615,6 +600,21 @@ const SLIDES = [
     left: "This is great",
     right: "This is creepy",
     notes: "Students go to one side of the room or the other, or stand in the middle if they are unsure. Note where the room sits. Do not say you will ask again. The exit asks a different question, and not announcing it keeps the first answers honest."
+  },
+  {
+    kind: "table",
+    kicker: "How you are graded",
+    title: "The Rubric",
+    head: ["What", "Points"],
+    rows: [
+      ["Entry ticket: a question, and a side with a reason", "1"],
+      ["Entry ticket: one piece of evidence from the reading", "1"],
+      ["Your seat: inside, spend 2 or 3 of your tokens. Outside, stay quiet.", "2"],
+      ["Observer organizer: two rows, each naming who said it", "1"],
+      ["Exit ticket", "1"]
+    ],
+    total: ["Total", "6"],
+    notes: "Read this out loud right after the first position check, then go to the norms. Which side you pick, and whether you change it, are not graded. A student who changes sides because of something said in the room did the thing the seminar is for. Inside students fill in the organizer right after the round."
   },
   {
     kind: "bullets",
@@ -642,6 +642,14 @@ const SLIDES = [
     notes: "Hand out the reading (printable at /fido-reading-1/) and the handout. Then wait. Do not read it to them or put it on the screen; the quiet is the point. Students fill in the entry ticket on the front: one question, a side and a reason, and one piece of evidence by paragraph number. About five minutes."
   },
   {
+    kind: "wall",
+    kicker: "Take a position",
+    title: "If it were your camera, which would you choose?",
+    left: "I'd leave it on",
+    right: "I'd turn it off",
+    notes: "Students go to the side they circled on their entry ticket, or stand in the middle if they are unsure. Note where the room sits. Then choose your inner circle for Round 1 from both sides and the middle, so the circle has both views, and have them take their seats in the circle. Everyone else sits down with the organizer. This move doubles as the seating change. You repeat this exact question at the exit."
+  },
+  {
     kind: "highlight",
     stop: true,
     timer: 10,
@@ -659,7 +667,7 @@ const SLIDES = [
     title: "Wyze",
     videoId: "ROFblZ_-9q4",
     videoLink: "https://www.youtube.com/watch?v=ROFblZ_-9q4",
-    notes: "TEACHER NOTE: the parody's fake reviews include an ICE reference. Preview it first. 7th grade: pause before the fake reviews, or skip to the next slide and use WeRateDogs instead. 9th grade: play it in full (about 70 seconds). Wyze sells security cameras, so this is an ad for Wyze. Worth saying out loud."
+    notes: "TEACHER NOTE: the parody's fake reviews include an ICE reference. Preview it first. For a younger or more sensitive class, pause before the fake reviews, or skip to the next slide and use WeRateDogs instead. Otherwise play it in full (about 70 seconds). Wyze sells security cameras, so this is an ad for Wyze. Worth saying out loud."
   },
   {
     group: "round2",
@@ -680,7 +688,7 @@ const SLIDES = [
     kicker: "Round 2",
     title: "If it can find a dog, could it find a person? Should it ever?",
     bullets: [],
-    notes: "Pick a new circle (new tokens) or keep the same one. OPPOSITE SIDE (optional): before this round, ask one or two students to argue the side most of the room does not hold. Look at the sides on the entry tickets, or where the room stood at the opener. Ask for volunteers first. Do not pick the most outspoken. Say out loud who is playing a role, and give them a role card (print them from the post). Afterward, ask what it was like to argue a side they did not pick."
+    notes: "Pick a new circle (new tokens) or keep the same one. OPPOSITE SIDE (optional): before this round, ask one or two students to argue the side most of the room does not hold. Look at where the room stood on the position slide before Round 1, or at the entry tickets. Ask for volunteers first. Do not pick the most outspoken. Say out loud who is playing a role, and give them a role card (print them from the post). Afterward, ask what it was like to argue a side they did not pick."
   },
   {
     kind: "wall",
@@ -690,7 +698,7 @@ const SLIDES = [
     title: "If it were your camera, which would you choose?",
     left: "I'd leave it on",
     right: "I'd turn it off",
-    notes: "A different question from the opener, and the same two sides as the Start and End lines on the handout. Students go to a side. Note who ended up where, and ask one or two why. Compare with the first slide if you like, but they are different questions. Then they sit and fill in the exit ticket on the back of the handout. Collect the sheets."
+    notes: "The same question and sides as the position slide before Round 1, and as the Start and End lines on the handout. Students go to a side. Note who ended up where, and ask one or two why. Compare with where they stood before Round 1. Then they sit and fill in the exit ticket on the back of the handout. Collect the sheets."
   },
   {
     kind: "title",

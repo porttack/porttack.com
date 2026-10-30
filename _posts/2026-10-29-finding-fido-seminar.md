@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Finding Fido: A Socratic Seminar for Grades 7–9"
+title: "The Super Bowl Ad About a Lost Dog: A Socratic Seminar for Grades 7–9"
 categories: lesson-plans
 label: Lesson Plan
 lesson_category: society
@@ -62,16 +62,17 @@ Minutes are from the start of class. The slide numbers are for [the deck](/findi
 
 | Slides | Min | What you do |
 |---|---|---|
-| 1–2 | 0–2 | Title, then the rubric. Read the rubric out loud. |
-| 3–4 | 2–7 | **Opener.** Play the ad cold, then students go to one side of the room: "This is great" or "This is creepy," or the middle if they are unsure. Do not tell them you will ask again. |
-| 5 | 7–9 | **Norms.** Read them out loud, add the sarcasm rule, hand tokens to the inner circle, and explain the token rule. |
+| 1 | 0–1 | Title. |
+| 2–3 | 1–6 | **Opener.** Play the ad cold, with no setup, then students go to one side of the room: "This is great" or "This is creepy," or the middle if they are unsure. Do not tell them you will ask again. |
+| 4–5 | 6–9 | **Rubric, then norms.** Read the rubric out loud. Read the norms, add the sarcasm rule, hand tokens to the inner circle, and explain the token rule. |
 | **6** | 9–14 | **Stop. Hand out [the reading](/fido-reading-1/) and the handout, then wait.** Students read it to themselves and fill in the entry ticket on the front. |
-| **7** | 14–24 | **Stop. Round 1.** "Should Search Party be on by default?" Inside students finish the organizer right after. |
-| 8–10 | 24–37, optional | **Round 2.** The Wyze video (slide 8), then WeRateDogs (slide 9), then slide 10: "If it can find a dog, could it find a person? Should it ever?" Skip a video with Next. Press S on any of these slides to skip to the exit. |
-| **11** | 24–29, or 37–42 with Round 2 | **Stop. Exit.** A different question: "If it were your camera, which would you choose?" Students go to "I'd leave it on" or "I'd turn it off," then fill in the exit ticket on the back of the handout. |
-| 12 | | Write-up links. |
+| 7 | 14–17 | **Take a position.** "If it were your camera, which would you choose?" Students go to "I'd leave it on" or "I'd turn it off" (the side they circled on the entry ticket), or the middle. Then you choose the inner circle from both sides and the middle, and they take their seats in the circle. Everyone else sits down with the organizer. |
+| **8** | 17–27 | **Stop. Round 1.** "Should Search Party be on by default?" Inside students finish the organizer right after. |
+| 9–11 | 27–40, optional | **Round 2.** The Wyze video (slide 9), then WeRateDogs (slide 10), then slide 11: "If it can find a dog, could it find a person? Should it ever?" Skip a video with Next. Press S on any of these slides to skip to the exit. |
+| **12** | 27–32, or 40–45 with Round 2 | **Stop. Exit.** The same question and sides as slide 7. Students go to a side again, then fill in the exit ticket on the back of the handout. Compare with where they stood before Round 1. |
+| 13 | | Write-up links. |
 
-That is about 29 minutes with Round 1 alone and about 42 with Round 2. These are estimates, not timed runs. Round 1 is a complete lesson. If the class goes badly, stop there and go straight to the exit.
+That is about 32 minutes with Round 1 alone and about 45 with Round 2. These are estimates, not timed runs. Round 1 is a complete lesson. If the class goes badly, stop there and go straight to the exit.
 
 ## The fishbowl
 
@@ -81,7 +82,7 @@ If you hold Round 2, pick a new circle with new tokens, or keep the same one.
 
 ## The opposite side
 
-Optional, in Round 2. Look at the sides on the entry tickets. Ask one or two students to argue the side most of the room does not hold. Ask for volunteers first. Do not pick the most outspoken. Give each a [role card](/socratic-seminar-cards/?topic=Finding%20Fido&a=I%27d%20leave%20it%20on&ap=A%20lost%20dog%20comes%20home.%20%28Paragraph%201%29%0AThe%20neighbor%20decides%20whether%20to%20share%20the%20video.%20%28Paragraph%202%29%0ARing%20says%20it%20is%20only%20for%20pets.%20%28Paragraph%205%29&b=I%27d%20turn%20it%20off&bp=It%20is%20turned%20on%20automatically.%20Owners%20did%20not%20have%20to%20say%20yes.%20%28Paragraph%203%29%0AIt%20takes%20six%20steps%20to%20turn%20off.%20%28Paragraph%203%29%0AThe%20founder%20says%20Ring%27s%20real%20goal%20is%20to%20reduce%20crime.%20%28Paragraph%205%29), say out loud who is playing a role, and afterward ask what it was like to argue a side they did not pick.
+Optional, in Round 2. Look at where the room stood on slide 7. Ask one or two students to argue the side most of the room does not hold. Ask for volunteers first. Do not pick the most outspoken. Give each a [role card](/socratic-seminar-cards/?topic=Finding%20Fido&a=I%27d%20leave%20it%20on&ap=A%20lost%20dog%20comes%20home.%20%28Paragraph%201%29%0AThe%20neighbor%20decides%20whether%20to%20share%20the%20video.%20%28Paragraph%202%29%0ARing%20says%20it%20is%20only%20for%20pets.%20%28Paragraph%205%29&b=I%27d%20turn%20it%20off&bp=It%20is%20turned%20on%20automatically.%20Owners%20did%20not%20have%20to%20say%20yes.%20%28Paragraph%203%29%0AIt%20takes%20six%20steps%20to%20turn%20off.%20%28Paragraph%203%29%0AThe%20founder%20says%20Ring%27s%20real%20goal%20is%20to%20reduce%20crime.%20%28Paragraph%205%29), say out loud who is playing a role, and afterward ask what it was like to argue a side they did not pick.
 
 ## Reading: The Dog Finder
 
