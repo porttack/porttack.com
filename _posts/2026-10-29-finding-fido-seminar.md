@@ -63,16 +63,16 @@ Minutes are from the start of class. The slide numbers are for [the deck](/findi
 | Slides | Min | What you do |
 |---|---|---|
 | 1 | 0–1 | Title. |
-| 2–3 | 1–6 | **Opener.** Play the ad cold, with no setup, then students go to one side of the room: "This is great" or "This is creepy," or the middle if they are unsure. Do not tell them you will ask again. |
-| 4–5 | 6–9 | **Rubric, then norms.** Read the rubric out loud. Read the norms, add the sarcasm rule, hand tokens to the inner circle, and explain the token rule. |
-| **6** | 9–14 | **Stop. Hand out [the reading](/fido-reading-1/) and the handout, then wait.** Students read it to themselves and fill in the entry ticket on the front. |
-| 7 | 14–17 | **Take a position.** "If it were your camera, which would you choose?" Students go to "I'd leave it on" or "I'd turn it off" (the side they circled on the entry ticket), or the middle. Then you choose the inner circle from both sides and the middle, and they take their seats in the circle. Everyone else sits down with the organizer. |
-| **8** | 17–27 | **Stop. Round 1.** "Should Search Party be on by default?" Inside students finish the organizer right after. |
-| 9–11 | 27–40, optional | **Round 2.** The Wyze video (slide 9), then WeRateDogs (slide 10), then slide 11: "If it can find a dog, could it find a person? Should it ever?" Skip a video with Next. Press S on any of these slides to skip to the exit. |
-| **12** | 27–32, or 40–45 with Round 2 | **Stop. Exit.** The same question and sides as slide 7. Students go to a side again, then fill in the exit ticket on the back of the handout. Compare with where they stood before Round 1. |
+| 2–3 | 1–4 | **Opener.** Play the ad cold, with no setup. Then a show of hands, nobody moves: "This is great" or "This is creepy." Count each side. Do not tell them you will ask again. |
+| 4–5 | 4–7 | **Rubric, then norms.** Read the rubric out loud. Read the norms, add the sarcasm rule, hand tokens to the inner circle, and explain the token rule. |
+| **6** | 7–12 | **Stop. Hand out [the reading](/fido-reading-1/) and the handout, then wait.** Students read it to themselves and fill in the entry ticket on the front. |
+| 7 | 12–15 | **Take a position.** "If it were your camera, which would you choose?" Students go to "I'd leave it on" or "I'd turn it off" (the side they circled on the entry ticket), or the middle. Then you choose the inner circle from both sides and the middle, and they take their seats in the circle. Everyone else sits down with the organizer. |
+| **8** | 15–25 | **Stop. Round 1.** "Should Search Party be on by default?" Inside students finish the organizer right after. |
+| 9–11 | 25–38, optional | **Round 2.** The Wyze video (slide 9), then WeRateDogs (slide 10), then slide 11: "If it can find a dog, could it find a person? Should it ever?" Skip a video with Next. Press S on any of these slides to skip to the exit. |
+| **12** | 25–30, or 38–43 with Round 2 | **Stop. Exit.** The same question and sides as slide 7. Students go to a side again, then fill in the exit ticket on the back of the handout. Compare with where they stood before Round 1. |
 | 13 | | Write-up links. |
 
-That is about 32 minutes with Round 1 alone and about 45 with Round 2. These are estimates, not timed runs. Round 1 is a complete lesson. If the class goes badly, stop there and go straight to the exit.
+That is about 30 minutes with Round 1 alone and about 43 with Round 2. These are estimates, not timed runs. Round 1 is a complete lesson. If the class goes badly, stop there and go straight to the exit.
 
 ## The fishbowl
 
