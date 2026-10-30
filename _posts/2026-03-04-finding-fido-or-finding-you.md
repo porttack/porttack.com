@@ -23,6 +23,8 @@ slides:
 
 <p style="text-align: center; font-size: 0.9em; margin: 0 0 1.5em;">Classroom slides: <a href="/docs/assets/slides/finding-fido-or-finding-you.pdf">PDF</a> &middot; <a href="https://docs.google.com/presentation/d/1_tl_4sCDswmFkHAdQrGfM5dEwCZdJXTh/edit?usp=sharing">Google Slides</a></p>
 
+Want to run this in class? [Here's the seminar version]({% post_url 2026-10-29-finding-fido-seminar %}).
+
 When Ring aired its Super Bowl ad, a Seattle artist named Maggie Butler [filmed herself pulling her doorbell camera off her porch and flipping it off](https://www.centraloregondaily.com/news/consumer/ring-ai-dog-search-privacy-backlash/article_377dd8f6-73e8-4606-aac3-5c3921bdc0bd.html). The clip was watched millions of times. She had bought the camera to catch package thieves, but the ad had convinced her the thing on her wall had quietly become something else. "They aren't just tracking lost dogs," she said, "they're tracking you and your neighbors."
 
 The ad itself was gentle. A lost dog, a crying kid, a neighborhood pulling together, a golden retriever trotting home. Ring paid for one of the most expensive thirty seconds in television to make you feel exactly that. So it is worth asking why Butler and others went outside to pull their cameras down instead, why senators and Republican strategists attacked the ad in the same breath, and why the company quietly killed a police-tech partnership four days later.

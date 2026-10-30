@@ -85,6 +85,8 @@ permalink: /socratic-seminar-handout/
   .extra[hidden] { display: none; }
 
   table.grading { margin: 12px 0 2px; }
+  #back { display: flex; flex-direction: column; }
+  #back .license-notice { margin-top: auto !important; }
   table.grading th, table.grading td { height: auto; padding: 2px 7px; font-size: 8.5pt; font-weight: 400; }
   table.grading th { font-weight: 700; }
   table.grading td:first-child { width: auto; font-weight: 400; }
@@ -92,7 +94,7 @@ permalink: /socratic-seminar-handout/
   table.grading tr.total td { font-weight: 700; }
   .grading-note { margin: 0; font-size: 8.5pt; color: var(--muted); }
   .sides { margin: 0 0 8px; }
-  .sides[hidden], .exit-block[hidden] { display: none; }
+  .sides[hidden], .exit-block[hidden], #q4-block[hidden], #grading-lite[hidden], #grading-default[hidden], tr.org-extra[hidden] { display: none; }
   .opt { display: inline-block; border: 1.5px solid var(--ink); border-radius: 999px; padding: 1px 14px; margin-right: 8px; font-weight: 700; }
   .sides .lbl, .sides .arrow { font-weight: 700; margin-right: 6px; }
   .sides .arrow { margin: 0 8px 0 2px; }
@@ -131,6 +133,7 @@ permalink: /socratic-seminar-handout/
   <input type="text" id="in-topic" placeholder="e.g. You Deleted It. Is It Gone?">
   <label for="in-entry">Extra entry-ticket question (optional)</label>
   <input type="text" id="in-entry" placeholder="Printed as question 5 on the front">
+  <label style="display:flex;gap:8px;align-items:center;font-weight:600"><input type="checkbox" id="in-lite"> Shorter version (grades 7&ndash;9): one question, one piece of evidence, no best-argument question, two organizer rows</label>
   <label for="in-exit">Extra exit-ticket question (optional)</label>
   <input type="text" id="in-exit" placeholder="Printed under the exit ticket on the back">
   <label for="in-exit2">Second extra exit-ticket question (optional)</label>
@@ -159,30 +162,41 @@ permalink: /socratic-seminar-handout/
   <h2 class="section">Entry ticket</h2>
   <p class="hint">Fill this out after the reading, before the seminar starts.</p>
 
-  <p class="q">1. Two questions the reading raises for you, ones you could actually argue about.</p>
+  <p class="q" id="q1">1. Two questions the reading raises for you, ones you could actually argue about.</p>
   <div class="lines"><i></i><i></i><i></i></div>
 
   <p class="q">2. A starting side, and why. Changing your mind during the seminar is not losing. It is the point.</p>
   <p class="sides" id="start-sides" hidden>Circle one, even if you are unsure. Put your doubts in your reason. <span class="opt" id="start-a"></span><span class="opt" id="start-b"></span><br>How sure are you, from 1 (on the fence) to 10 (very sure)? <span class="num"></span>/ 10</p>
   <div class="lines"><i></i><i></i><i></i></div>
 
-  <p class="q">3. Two pieces of evidence from the reading, by paragraph number.</p>
+  <p class="q" id="q3">3. Two pieces of evidence from the reading, by paragraph number.</p>
   <div class="lines"><i></i><i></i><i></i></div>
 
+  <div id="q4-block">
   <p class="q">4. What is the best argument for the side you did not pick? Say it so well that someone who holds that view would agree you got it right.</p>
   <div class="lines"><i></i><i></i><i></i></div>
+  </div>
 
   <div class="extra" id="entry-extra" hidden>
     <p class="q"><span>5. </span><span id="entry-extra-text"></span></p>
     <div class="lines"><i></i><i></i><i></i></div>
   </div>
 
-  <table class="grading">
+  <table class="grading" id="grading-default">
     <tr><th>How this sheet is graded</th><th>Points</th><th>Score</th></tr>
     <tr><td><b>Entry ticket, Q1–2:</b> two questions, and a side with a reason</td><td>1</td><td></td></tr>
     <tr><td><b>Entry ticket, Q3:</b> two pieces of evidence, each with a paragraph number</td><td>1</td><td></td></tr>
     <tr><td><b>Entry ticket, Q4:</b> the other side stated fairly, with support from the reading</td><td>2</td><td></td></tr>
     <tr><td><b>Observer organizer:</b> at least three rows, each naming who said it</td><td>1</td><td></td></tr>
+    <tr><td><b>Exit ticket:</b> Start and End, and a reason that names what was said or asked in the room</td><td>1</td><td></td></tr>
+    <tr class="total"><td>Total</td><td>6</td><td></td></tr>
+  </table>
+  <table class="grading" id="grading-lite" hidden>
+    <tr><th>How this sheet is graded</th><th>Points</th><th>Score</th></tr>
+    <tr><td><b>Entry ticket, Q1–2:</b> one question, and a side with a reason</td><td>1</td><td></td></tr>
+    <tr><td><b>Entry ticket, Q3:</b> one piece of evidence, with a paragraph number</td><td>1</td><td></td></tr>
+    <tr><td><b>Your seat:</b> inside, you spent 2 or 3 tokens; outside, you stayed quiet</td><td>2</td><td></td></tr>
+    <tr><td><b>Observer organizer:</b> two rows, each naming who said it</td><td>1</td><td></td></tr>
     <tr><td><b>Exit ticket:</b> Start and End, and a reason that names what was said or asked in the room</td><td>1</td><td></td></tr>
     <tr class="total"><td>Total</td><td>6</td><td></td></tr>
   </table>
@@ -197,13 +211,13 @@ permalink: /socratic-seminar-handout/
   </div>
 
   <h2 class="section">Observer organizer</h2>
-  <p class="hint">The outer circle fills this in while watching. Fill in at least three rows. It is your ticket into the hot seat.</p>
+  <p class="hint" id="org-hint">The outer circle fills this in while watching. Fill in at least three rows. It is your ticket into the hot seat.</p>
   <table>
     <tr><th>What to catch</th><th>Who said it</th><th>My note / why</th></tr>
     <tr><td>An idea I agreed with</td><td></td><td></td></tr>
     <tr><td>An idea I would push back on</td><td></td><td></td></tr>
-    <tr><td>The strongest point made</td><td></td><td></td></tr>
-    <tr><td>A question nobody has asked yet</td><td></td><td></td></tr>
+    <tr class="org-extra"><td>The strongest point made</td><td></td><td></td></tr>
+    <tr class="org-extra"><td>A question nobody has asked yet</td><td></td><td></td></tr>
   </table>
   <p class="q" style="font-weight:400"><em>Tally each time someone builds on another person's idea instead of starting over:</em></p>
   <div class="lines"><i></i><i></i></div>
@@ -243,6 +257,7 @@ permalink: /socratic-seminar-handout/
   var inExit2 = document.getElementById("in-exit2");
   var inA = document.getElementById("in-a");
   var inB = document.getElementById("in-b");
+  var inLite = document.getElementById("in-lite");
 
   // Text is always set with textContent, so nothing typed or passed in the
   // link can add markup to the page.
@@ -278,6 +293,19 @@ permalink: /socratic-seminar-handout/
     document.getElementById("exit-sided").hidden = !sided;
     document.getElementById("exit-default").hidden = sided;
 
+    // The shorter version: one question, one piece of evidence, no
+    // best-argument question, two organizer rows, and its own grading table.
+    var lite = inLite.checked;
+    document.getElementById("q1").textContent = lite ? "1. One question the reading raises for you, one you could actually argue about." : "1. Two questions the reading raises for you, ones you could actually argue about.";
+    document.getElementById("q3").textContent = lite ? "3. One piece of evidence from the reading, by paragraph number." : "3. Two pieces of evidence from the reading, by paragraph number.";
+    document.getElementById("q4-block").hidden = lite;
+    document.querySelectorAll(".org-extra").forEach(function (el) { el.hidden = lite; });
+    document.getElementById("org-hint").textContent = lite
+      ? "Fill in both rows. Outside the circle, fill it in while watching. Inside the circle, fill it in right after the round."
+      : "The outer circle fills this in while watching. Fill in at least three rows. It is your ticket into the hot seat.";
+    document.getElementById("grading-default").hidden = lite;
+    document.getElementById("grading-lite").hidden = !lite;
+
     var next = new URLSearchParams();
     if (topic) next.set("topic", topic);
     if (entry) next.set("entry", entry);
@@ -285,6 +313,7 @@ permalink: /socratic-seminar-handout/
     if (exit2) next.set("exit2", exit2);
     if (a) next.set("a", a);
     if (b) next.set("b", b);
+    if (lite) next.set("lite", "1");
     var qs = next.toString();
     try {
       window.history.replaceState(null, "", window.location.pathname + (qs ? "?" + qs : ""));
@@ -297,7 +326,8 @@ permalink: /socratic-seminar-handout/
   inExit2.value = params.get("exit2") || "";
   inA.value = params.get("a") || "";
   inB.value = params.get("b") || "";
-  [inTopic, inEntry, inExit, inExit2, inA, inB].forEach(function (el) { el.addEventListener("input", render); });
+  inLite.checked = params.get("lite") === "1";
+  [inTopic, inEntry, inExit, inExit2, inA, inB, inLite].forEach(function (el) { el.addEventListener("input", render); el.addEventListener("change", render); });
 
   document.getElementById("btn-print").addEventListener("click", function () { window.print(); });
   document.getElementById("btn-copy").addEventListener("click", function (e) {

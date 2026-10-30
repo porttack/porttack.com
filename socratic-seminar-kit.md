@@ -89,6 +89,8 @@ One sheet, two sides, with name and period at the top: <a id="handout-link" href
 
 A seminar can add one question to the entry ticket (printed as question 5) and up to two to the exit ticket, to check a specific goal. A seminar with two sides can also pass them (the `a` and `b` link parameters, the same ones the role cards use), which adds a side and a 1-to-10 "how sure are you" to the entry ticket, and a Start and End line to the exit ticket, so you can tally who moved. Each lesson plan links to the handout with its own questions filled in. If you reached this page from a lesson plan, the link above already carries that seminar's topic and questions. You can also type your own on the handout page before printing.
 
+A shorter version of the handout is available for younger or less patient classes: add `lite=1` to the link (or check the box on the handout page). It asks for one question and one piece of evidence, drops the best-argument question, shows two organizer rows, and swaps in a 6-point grading table that also grades the seat you were in (inside, or quiet outside). A lesson plan that uses it links to it already set.
+
 I grade effort and honesty here, not the position landed on. "I changed my mind because of what someone said" is the best possible answer. The one line worth grading closely is the best-argument question; the rubric is under Playing the other side.
 
 ## Evidence the format produces

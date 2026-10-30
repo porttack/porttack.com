@@ -19,6 +19,8 @@ slides:
 
 Slides: **[You Deleted It. Is It Gone?](/delete-seminar-slides/)** &middot; Short overview for colleagues and administrators: **[You Deleted It. Is It Gone? Overview](/delete-seminar-overview/)**
 
+For younger students, start with the simpler [Finding Fido seminar]({% post_url 2026-10-29-finding-fido-seminar %}).
+
 ## Learning goals
 
 By the end of the seminar, students can:
