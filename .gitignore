@@ -6,5 +6,5 @@ vendor
 
 .DS_Store
 *.bak
-tmp/
+attic/
 .sfa-backup-*/
