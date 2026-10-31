@@ -1,0 +1,74 @@
+{%- comment -%}
+  All 49 provisions of the STUDENTS FIRST Act as a printable list, grouped by
+  section, with a toggle between every provision and only the arguable ones.
+  Arguable provisions are bold with a diamond marker so they stay distinct on
+  paper. Data lives in _data/students_first_provisions.yml (flag arguable there).
+
+  Usage (add the Liquid tag braces yourself):
+     include provision-list.html
+     include provision-list.html id="second-one"    only if embedded twice on one page
+
+  Self-contained. Without JavaScript it shows the full list.
+{%- endcomment -%}
+{%- assign uid = include.id | default: "plist" -%}
+{%- assign sections = "General Provisions|Student Provisions|Parents and Guardians|Teachers|Administrators" | split: "|" -%}
+{%- assign total = site.data.students_first_provisions | size -%}
+{%- assign arguable = site.data.students_first_provisions | where: "arguable", true | size -%}
+
+<div class="pt-plist" id="{{ uid }}" data-show="all">
+  <div class="pt-plist__bar">
+    <div class="pt-plist__toggle" role="group" aria-label="Which provisions to show">
+      <button type="button" data-show="all" aria-pressed="true">All {{ total }}</button>
+      <button type="button" data-show="arguable" aria-pressed="false">Arguable only ({{ arguable }})</button>
+    </div>
+    <p class="pt-plist__key"><span class="pt-plist__mark" aria-hidden="true">&#9670;</span> <b>Bold</b> provisions are the arguable ones.</p>
+  </div>
+
+  {%- for sec in (1..5) -%}
+  {%- assign idx = sec | minus: 1 -%}
+  <section class="pt-plist__sec">
+    <h4>Section {{ sec }}: {{ sections[idx] }}</h4>
+    <ul>
+      {%- for p in site.data.students_first_provisions -%}{%- if p.sec == sec -%}
+      <li{% if p.arguable %} class="is-arguable"{% endif %}>
+        <span class="pt-plist__ref">{{ p.sec }}.{{ p.prov }}</span>
+        {% if p.arguable %}<span class="pt-plist__mark" aria-hidden="true">&#9670;</span> {% endif %}<strong>{{ p.label }}.</strong> {{ p.text }}
+      </li>
+      {%- endif -%}{%- endfor -%}
+    </ul>
+  </section>
+  {%- endfor -%}
+</div>
+
+<style>
+.pt-plist__bar { display:flex; flex-wrap:wrap; align-items:center; gap:.6rem 1.2rem; margin:1rem 0; }
+.pt-plist__toggle { display:inline-flex; border:1px solid currentColor; border-radius:999px; overflow:hidden; }
+.pt-plist__toggle button { font:inherit; font-size:.85rem; padding:.35rem .9rem; background:transparent; color:inherit; border:0; cursor:pointer; opacity:.7; }
+.pt-plist__toggle button[aria-pressed="true"] { opacity:1; font-weight:700; background:rgba(128,128,128,.22); }
+.pt-plist__key { margin:0; font-size:.85rem; }
+.pt-plist__sec h4 { margin:1.2rem 0 .4rem; }
+.pt-plist__sec ul { list-style:none; margin:0; padding:0; }
+.pt-plist__sec li { margin:0; padding:.3rem 0 .3rem 3rem; position:relative; font-size:.92rem; line-height:1.45; border-bottom:1px solid rgba(128,128,128,.25); }
+.pt-plist__ref { position:absolute; left:0; font-family:monospace; font-size:.8rem; opacity:.7; }
+.pt-plist li.is-arguable { font-weight:700; }
+.pt-plist[data-show="arguable"] li:not(.is-arguable) { display:none; }
+.pt-plist[data-show="arguable"] .pt-plist__sec:not(:has(.is-arguable)) { display:none; }
+@media print {
+  .pt-plist__toggle { display:none; }
+  .pt-plist__sec li { break-inside:avoid; }
+}
+</style>
+
+<script>
+(function(){
+  var root = document.getElementById({{ uid | jsonify }});
+  if (!root) return;
+  var buttons = root.querySelectorAll(".pt-plist__toggle button");
+  buttons.forEach(function(b){
+    b.addEventListener("click", function(){
+      root.dataset.show = b.dataset.show;
+      buttons.forEach(function(o){ o.setAttribute("aria-pressed", String(o === b)); });
+    });
+  });
+})();
+</script>

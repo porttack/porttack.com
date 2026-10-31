@@ -86,11 +86,9 @@ You get one weekend and a blank page. Write three rules for AI in this school. N
 
 ## The sorting activity
 
-I built this to project during the Synthesis question. It has all forty-nine provisions of the bill. Students sort them, the tally updates live, and my classification is hidden until they commit to their own.
+All forty-nine provisions of the bill, grouped by section. Students sort each one as control, a right, or a capability. The point is not to agree with me. Several provisions are genuinely arguable, and the arguing is the good part. Those are in bold. Toggle to show only them, and print whichever view you want.
 
-The point is not to agree with me. Several provisions are genuinely arguable, and the arguing is the good part.
-
-{% include provision-map.html mode="classroom" %}
+{% include provision-list.html %}
 
 ## Facilitation notes
 

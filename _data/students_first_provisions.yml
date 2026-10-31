@@ -1,0 +1,210 @@
+# STUDENTS FIRST Act, all 49 provisions (sec, prov, short label, text).
+# arguable: true marks provisions that don't sort cleanly into control / rights / capability.
+# Used by _includes/provision-list.html. Edit the arguable flags here.
+
+- sec: 1
+  prov: 1
+  label: "Vendors must disclose known biases"
+  text: "Any organization selling generative AI to public schools must address all known biases in it and inform clients; the school must pass that on to parents and guardians."
+- sec: 1
+  prov: 2
+  label: "Protect the human parts of teaching"
+  text: "Educators should prioritize educator-student relationships by omitting AI where human connection is irreplaceable."
+- sec: 1
+  prov: 3
+  label: "Teacher judgment and privacy law preserved"
+  text: "Nothing in the act infringes teacher professional judgment, penalizes a teacher or administrator for declining to use AI, or preempts federal or state student privacy law."
+- sec: 2
+  prov: 1
+  label: "Detectors, plus a right to appeal"
+  text: "Students may appeal convictions of wrongful AI use and may be subject to AI detectors. Students should preserve document history to defend against false positives. Suspected work gets examined by two officials plus checking software."
+  arguable: true
+- sec: 2
+  prov: 2
+  label: "AI literacy when devices arrive"
+  text: "States shall require AI literacy instruction when students begin using classroom devices, covering misinformation, plagiarism, bias, privacy, appropriate academic use, environmental impact, and how AI works."
+- sec: 2
+  prov: 3
+  label: "AI supports in IEP and 504 plans"
+  text: "Schools should allow AI-based learning supports in IEP or 504 accommodation plans where appropriate."
+- sec: 2
+  prov: 4
+  label: "Teach editing before allowing the tool"
+  text: "Never AI for the act of writing. Editing, brainstorming, and studying permitted after eighth grade, and editing without AI must be taught and assessed thoroughly first."
+  arguable: true
+- sec: 2
+  prov: 5
+  label: "No AI harassment, expulsion possible"
+  text: "Students may not use AI images, video, audio, or messages to bully, harass, libel, or falsely accuse. Violators face suspension or expulsion and may face legal consequences without school protection."
+- sec: 2
+  prov: 6
+  label: "Permission required, citation required"
+  text: "Students need teacher permission to use AI and must cite how and where. Absent explicit permission, any use is unauthorized and counts as plagiarism."
+- sec: 2
+  prov: 7
+  label: "Right to refuse AI"
+  text: "High school students can refuse to use AI tools and must be given an alternative assignment."
+- sec: 2
+  prov: 8
+  label: "No pasting assignments into AI"
+  text: "Students are prohibited from inputting assignments directly into AI platforms."
+- sec: 2
+  prov: 9
+  label: "Automatic zero on graded assessments"
+  text: "AI use is strictly prohibited on all graded assessments. A student caught receives a zero unless the teacher specifies otherwise. Studying is exempt."
+- sec: 2
+  prov: 10
+  label: "Teacher-chosen punishment, principal signoff"
+  text: "No plagiarizing use on formative or summative work. Punishment is the teacher's choice with the principal's permission."
+- sec: 2
+  prov: 11
+  label: "Fact-check everything AI produces"
+  text: "Students must independently fact-check all AI-generated claims before submitting."
+- sec: 2
+  prov: 12
+  label: "Oral defense on suspicion"
+  text: "Verification of Mastery. If AI was used during drafting, students must demonstrate independent mastery through in-person discussion, handwritten assessment, or oral defense."
+  arguable: true
+- sec: 2
+  prov: 13
+  label: "No AI on artistic assignments"
+  text: "Students may not use AI to complete artistic assignments."
+- sec: 2
+  prov: 14
+  label: "Notice of data collection, no profiling"
+  text: "Students must be told what data is collected and why, may deny unnecessary collection, and schools may not use AI to profile students by ethnicity, religion, appearance, beliefs, or values."
+- sec: 2
+  prov: 15
+  label: "Access to one approved AI tool"
+  text: "Students must have access to at least one school-approved, filtered, monitored AI mode."
+  arguable: true
+- sec: 3
+  prov: 1
+  label: "Parents model critical thinking"
+  text: "Parents should encourage balanced technology habits, reinforce ethical academic behavior at home, and support critical thinking over shortcuts."
+- sec: 3
+  prov: 2
+  label: "Parents learn AI literacy in order to monitor"
+  text: "Parents are encouraged to learn AI literacy, to be used to monitor their children's AI use at home for schoolwork and studying."
+  arguable: true
+- sec: 3
+  prov: 3
+  label: "Told how AI is used, may give feedback"
+  text: "Parents shall be informed how AI is incorporated into curriculum and given the opportunity to provide feedback."
+- sec: 3
+  prov: 4
+  label: "Annual notice and sign-off"
+  text: "Families informed annually of potential AI use, sign off before the year begins, and may request clarification with a timely response."
+- sec: 3
+  prov: 5
+  label: "Sign the punishment schedule"
+  text: "Parents must be aware of and sign a written form on punishments for breaking AI rules, with a public comment period before rules take effect."
+  arguable: true
+- sec: 3
+  prov: 6
+  label: "Parents set the rules at home"
+  text: "Parents may request AI policy information and set their own rules for AI use at home, though following school policy is advised."
+- sec: 3
+  prov: 7
+  label: "Parent AI help on graded work risks expulsion"
+  text: "Parents may use AI freely on non-graded work, but only with explicit teacher permission on graded work. Otherwise the student is subject to suspension or expulsion."
+- sec: 3
+  prov: 8
+  label: "Parents must enforce boundaries"
+  text: "Parents are required to review school AI guidelines so they can enforce appropriate boundaries at home."
+- sec: 3
+  prov: 9
+  label: "Answer within one week"
+  text: "Parents have a right to an explanation of classroom AI rules, and the teacher must respond within one week."
+- sec: 3
+  prov: 10
+  label: "Chatbot detects distress and alerts officials"
+  text: "School-licensed chatbots must detect attempts to use them for emotional support or life advice, must not fulfill the request, and should alert school officials including principals, assistant principals, secretaries, counselors, and school resource officers."
+- sec: 4
+  prov: 1
+  label: "No AI-only grading or discipline"
+  text: "Teachers cannot rely solely on AI to determine grades, misconduct, or other decisions about a student's education."
+- sec: 4
+  prov: 2
+  label: "Mandatory detector and lockdown browser"
+  text: "Teachers must use one standardized district AI detector on written graded assessments and lockdown browsers on graded online assessments, and must personally investigate before reporting."
+- sec: 4
+  prov: 3
+  label: "Written policy in every syllabus"
+  text: "Teachers must publish a clear written AI policy each semester stating when AI is permitted, restricted, or banned, with category-based rules and consistency across sections."
+- sec: 4
+  prov: 4
+  label: "Teachers may use AI, and must disclose"
+  text: "Teachers may use AI for planning, practice materials, feedback, resources, and instruction, must be as transparent as students are asked to be, and must review AI output for accuracy, bias, and appropriateness."
+  arguable: true
+- sec: 4
+  prov: 5
+  label: "Teacher autonomy on assessment drafting"
+  text: "Teachers choose whether to use AI to draft internal assessments and are responsible for verifying accuracy, bias, and standards alignment."
+- sec: 4
+  prov: 6
+  label: "Viva voce on suspicion"
+  text: "Teachers may require an oral defense of any paper or project where AI use is suspected or reported."
+- sec: 4
+  prov: 7
+  label: "Discipline jurisdiction by offense level"
+  text: "Teachers may discipline AI misuse per district guidelines, which must define teacher versus administrator jurisdiction using grade weighting, offense level, and school size. Sensitive IEP or 504 information may not be entered into AI tools."
+- sec: 4
+  prov: 8
+  label: "Biennial AI literacy training"
+  text: "Teachers assigning digital work must complete a state-provided AI literacy course every two years covering responsible use, integrity, privacy, accessibility, and recognizing AI-generated work."
+- sec: 5
+  prov: 1
+  label: "Counselors stay human"
+  text: "Administrators should require that counselors not use AI tools, particularly in mental health contexts, so students receive face-to-face help."
+  arguable: true
+- sec: 5
+  prov: 2
+  label: "Annual policy review"
+  text: "Administration must review AI policy every year to ensure practices meet district values and goals."
+  arguable: true
+- sec: 5
+  prov: 3
+  label: "Publish the rules and the penalties"
+  text: "Administrators must create a clear rule set for AI use, published on the school website or rule book, along with the repercussions for breaking it."
+- sec: 5
+  prov: 4
+  label: "Guidelines plus consequences"
+  text: "Administrators must establish clear guidelines for AI use by teachers and students, and consequences for misuse."
+- sec: 5
+  prov: 5
+  label: "Bi-annual staff training"
+  text: "Administrators must provide mandated bi-annual AI literacy training for teachers, covering professional use and safe curricular integration."
+- sec: 5
+  prov: 6
+  label: "Appeals, and no AI in the discipline process"
+  text: "Any AI-misuse discipline must include an appeal. Administrators may not use AI in the disciplinary process except for detection software, and must have a second party in decisions about AI use."
+  arguable: true
+- sec: 5
+  prov: 7
+  label: "Revoke AI access"
+  text: "Administrators can take away a student's privilege of using AI."
+- sec: 5
+  prov: 8
+  label: "Progressive discipline ladder"
+  text: "Repeat violations trigger progressive discipline: parent conferences, redoing work in a monitored non-digital environment, loss of credit for the assignment or course, academic probation, or other code-of-conduct actions."
+- sec: 5
+  prov: 9
+  label: "No personal information into AI tools"
+  text: "Administrators may not enter any student's or teacher's personal information into AI tools."
+- sec: 5
+  prov: 10
+  label: "Consult before drafting, publish early"
+  text: "Administrators must consult students, staff, and families before drafting rules, form a monitoring committee, and publish guidelines at least two weeks before the school year."
+- sec: 5
+  prov: 11
+  label: "Opt-out procedures with a deadline"
+  text: "Opt-out procedures must be established two weeks before the year starts, with a response within one week of a parent request."
+- sec: 5
+  prov: 12
+  label: "No AI in hiring"
+  text: "Administrators may not use AI to employ teachers or faculty."
+- sec: 5
+  prov: 13
+  label: "Federal funding for AI capacity"
+  text: "Proportional federal funding with a baseline minimum should go to states for enterprise AI, mandatory staff training, and AI literacy options for students."
