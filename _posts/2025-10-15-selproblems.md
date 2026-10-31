@@ -6,6 +6,7 @@ categories: draft
 redirect_from: /drafts/2025-10-15-selproblems.html
 excerpt_separator: <!--more-->
 excerpt: "We have spent decades teaching students to manage their emotions, but we quietly set aside the moral frameworks and community belonging that character-based education once provided. I argue that this gap is one source of rising student anxiety, and that schools need both: the skills SEL teaches and the foundation of belonging and contribution that character education offers. (A draft and work in progress.)<br><a href='/2025/10/15/selproblems.html'><img src='/docs/assets/images/SELvsCBE.png' alt='SEL vs Character-Based Education Venn diagram' style='max-height: 225px; width: auto; display: block; margin: 0.6em auto 0;'></a>"
+image: https://porttack.com/docs/assets/images/SELvsCBE.png
 ---
 *Why Social-Emotional Learning isn't enough, and how removing moral guardrails fuels student anxiety*
 
