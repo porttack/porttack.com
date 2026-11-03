@@ -320,7 +320,7 @@ permalink: /finding-fido-slides/
   .slide-table th { background: #f1f3f5; font-size: 26px; text-transform: uppercase; letter-spacing: 0.04em; }
   .slide-table .pts { width: 150px; text-align: center; font-weight: 700; }
   .slide-table tr.total td { background: #f1f3f5; font-weight: 700; }
-  .video-slide .slide-title { font-size: 40px; margin-bottom: 14px; }
+  .video-slide .slide-title { font-size: 34px; margin-bottom: 14px; }
   .video-slide .kicker { margin-bottom: 8px; }
   .video-frame { display: block; width: 768px; height: 432px; margin: 0 auto; border: 0; border-radius: 8px; background: #000; }
   .video-link { display: block; text-align: center; margin-top: 8px; font-size: 20px; color: var(--accent); }
@@ -359,6 +359,18 @@ permalink: /finding-fido-slides/
     padding: 14px 0; border-radius: 0 0 12px 12px; pointer-events: none;
   }
 
+  /* REVIEW-MODE (prototype): remove this block, the rev: fields, and the REVIEW lines before publishing. */
+  .rev-frame { position: absolute; inset: 0; border: 8px solid #d00; border-radius: 12px; z-index: 30; pointer-events: none; }
+  .rev-panel { background: #fdeaea; color: #b00; border-top: 2px solid #d00; padding: 8px 24px; font-size: 16px; font-weight: 600; }
+  .corners-wrap { display: flex; gap: 28px; flex: 1 1 auto; margin-top: 10px; min-height: 0; }
+  .corner-box { flex: 1 1 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; font-size: 50px; font-weight: 700; line-height: 1.15; border-radius: 16px; border: 5px solid var(--accent); color: var(--accent); }
+  .corner-box.c1 { border-color: #b25e00; color: #b25e00; }
+  .corner-box.c2 { border-color: #2a7ae2; color: #2a7ae2; }
+  .corner-box.c3 { border-color: #2e7d32; color: #2e7d32; }
+  .corner-box small { display: block; margin-top: 14px; font-size: 28px; font-weight: 600; opacity: .85; }
+  .split-wrap { display: flex; gap: 24px; flex: 1 1 auto; min-height: 0; margin-top: 6px; }
+  .split-pane { flex: 1 1 0; min-height: 360px; border: 3px dashed #9aa0a6; border-radius: 12px; background: #f1f3f5; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; color: #6b7178; font-size: 20px; overflow: hidden; }
+  .split-pane img { width: 100%; height: 100%; object-fit: cover; }
   .stage { pointer-events: none; }
   .stage a, .stage button, .stage iframe { pointer-events: auto; }
 
@@ -579,19 +591,36 @@ const { useState, useEffect, useRef, useCallback } = React;
 const SLIDES = [
   {
     id: "seminar-start",
+    rev: "CHANGED (notes only): Round 1 is no longer called a complete lesson; the notes also describe the new arrow-key behavior.",
     kind: "title",
     kicker: "Socratic Seminar",
     title: "The Super Bowl Ad About a Lost Dog",
     subtitle: "A Socratic seminar",
-    notes: "Opens cold: the next slide plays the ad before anything is explained, so the hook comes before the rules. Nobody gets up until after the reading. Round 1 is a complete lesson. If the class goes badly, stop after Round 1 and go to the exit: press S on any Round 2 slide to jump there. A red PAUSE HERE bar along the bottom marks the slides where the class stops. Nothing is locked: the arrow keys, space and clicks always move on. On the timed slides the room sees a ring showing the share of time left. Start it with T, the Start button, or by clicking the ring, and click it again to pause. Past zero it counts up in red."
+    notes: "Opens with three quick questions, then plays the ad cold: nothing about Ring or the camera is explained first, so the hook comes before the rules. Nobody gets up until after the reading. Round 1 can stand alone if the class goes badly: press S on any Round 2 slide to jump to the exit. But if the circle agrees in Round 1, do not skip the videos. The video is what creates the disagreement. A red PAUSE HERE bar along the bottom marks the slides where the class stops. Nothing is locked: the arrow keys, space and clicks always move on. On the timed slides the room sees a ring showing the share of time left. Start it with T, the Start button, or by clicking the ring, and click it again to pause. Past zero it counts up in red. On a timed slide the first press of Next or the right arrow starts the timer; the next press moves on. On the opening questions slide, each press shows one more question."
   },
   {
+    rev: "NEW slide 2: stop slide BEFORE the ad. No timer. One question appears per Next / right arrow.",
+    kind: "bullets",
+    stop: true,
+    reveal: true,
+    pause: "Three questions. Take answers, then go on.",
+    kicker: "Before we watch",
+    title: "Three questions",
+    bullets: [
+      "Dog person or cat person?",
+      "Have you ever lost a pet?",
+      "How many doorbell cameras do you walk past to get to school?"
+    ],
+    notes: "Stop here. Each press of Next or the right arrow adds one more question; after the third, it moves on. Take a few answers out loud for each. Let them enjoy the dog and cat talk. The camera count matters: students use it later (it comes back on the Round 1 slide). Then play the ad."
+  },
+  {
+    rev: "MOVED: the ad is now slide 3, after the three questions.",
     kind: "video",
     kicker: "Watch",
     title: "The Ring Ad",
     videoId: "OheUzrXsKrY",
     videoLink: "https://www.youtube.com/watch?v=OheUzrXsKrY",
-    notes: "Play it cold, with no setup (about 30 seconds). It is Ring's own upload, \u201cSearch Party from Ring | Be A Hero In Your Neighborhood.\u201d Do not discuss it yet: go to the hands-up slide. If the embed does not play on your network, use the link under the video. Preview it before class."
+    notes: "Play it cold, with no setup (about 30 seconds). It is Ring's own upload, \u201cSearch Party from Ring | Be A Hero In Your Neighborhood.\u201d Do not discuss it yet: go to the hands-up slide. The three questions before it (pets, and your walk past cameras) are not about Ring. If the embed does not play on your network, use the link under the video. Preview it before class."
   },
   {
     kind: "wall",
@@ -602,6 +631,7 @@ const SLIDES = [
     notes: "A show of hands, about a minute. Nobody moves. Count each side and note the room. Do not say you will ask again, and take no explanations yet. Then go straight to the rubric."
   },
   {
+    rev: "CHANGED: seat line no longer says tokens. Staying quiet outside is still part of the 2 points.",
     kind: "table",
     kicker: "How you are graded",
     title: "The Rubric",
@@ -609,7 +639,7 @@ const SLIDES = [
     rows: [
       ["Entry ticket: a question, and a side with a reason", "1"],
       ["Entry ticket: one piece of evidence from the reading", "1"],
-      ["Your seat: inside, spend 2 or 3 of your tokens. Outside, stay quiet.", "2"],
+      ["Your seat: inside, speak 2 or 3 times. Outside, stay quiet.", "2"],
       ["Observer organizer: two rows, each naming who said it", "1"],
       ["Exit ticket", "1"]
     ],
@@ -618,19 +648,20 @@ const SLIDES = [
   },
   {
     kind: "bullets",
+    rev: "CHANGED: 'Use your tokens' removed (tokens are optional). Outside job is now 'listen and take notes', not 'the organizer'.",
     kicker: "Norms",
     title: "Norms",
     bullets: [
       "One voice at a time.",
-      "Outside the circle, you are quiet. Your job is the organizer.",
-      "Use your tokens."
+      "Outside the circle, you are quiet. Your job is to listen and take notes."
     ],
-    notes: "Read them out loud, and add the sarcasm rule yourself: sarcasm aimed at Ring is fair game, sarcasm aimed at a classmate is a norm break. Hand each inner-circle student 3 tokens (anything: poker chips, paper slips) and a cup in the middle to drop them in. Explain the token rule out loud: each time you speak, you give one up; use at least 2 and no more than 3. Staying quiet outside the circle is on the rubric. A student who breaks a norm to get attention gets the kit's quiet consequence: you move to the outer circle. You hand-pick the inner circle. Say out loud that the circle rotates all year, so it does not read as favoritism."
+    notes: "Read them out loud, and add the sarcasm rule yourself: sarcasm aimed at Ring is fair game, sarcasm aimed at a classmate is a norm break. OPTIONAL tokens: hand each inner-circle student 3 (anything: poker chips, paper slips) and a cup in the middle. Each time you speak, you give one up; use at least 2 and no more than 3. Without tokens, say it as a count: speak 2 or 3 times. Staying quiet outside the circle is on the rubric. A student who breaks a norm to get attention gets the kit's quiet consequence: you move to the outer circle. You hand-pick the inner circle. Say out loud that the circle rotates all year, so it does not read as favoritism."
   },
   {
     kind: "bullets",
     stop: true,
-    timer: 5,
+    rev: "CHANGED: timer 5 to 10 minutes.",
+    timer: 10,
     timerLabel: "Entry ticket",
     handout: "Hand out the reading and the handout, then wait",
     kicker: "Reading",
@@ -639,15 +670,31 @@ const SLIDES = [
       "Read it to yourself.",
       "Then fill in the front of your handout."
     ],
-    notes: "Hand out the reading (printable at /fido-reading-1/) and the handout. Then wait. Do not read it to them or put it on the screen; the quiet is the point. Students fill in the entry ticket on the front: one question, a side and a reason, and one piece of evidence by paragraph number. About five minutes."
+    notes: "Hand out the reading (printable at /fido-reading-1/) and the handout. Then wait. Do not read it to them or put it on the screen; the quiet is the point. Students fill in the entry ticket on the front: one question, a side and a reason, and one piece of evidence by paragraph number. About ten minutes. The handout has one more line: does your home have a doorbell camera, and about how many do you walk past to get to school?"
   },
   {
-    kind: "wall",
+    rev: "CHANGED: three pictures, now your generated photos (cropped into /assets/img/fido/): a dog, a delivery driver, a kid walking to school.",
+    kind: "split",
+    title: "Same camera. Same AI.",
+    panes: [
+      { image: "/assets/img/fido/camera-dog.jpg", label: "A dog" },
+      { image: "/assets/img/fido/camera-driver.jpg", label: "A delivery driver" },
+      { image: "/assets/img/fido/camera-kid.jpg", label: "A kid walking to school" }
+    ],
+    notes: "No other text on this slide. These are AI-generated images of fictional people, not real viral doorbell footage. Three pictures: a dog, a delivery driver, and a kid walking to school, all as a doorbell camera would see them. Let the silence work, then go to the position slide."
+  },
+  {
+    rev: "CHANGED: two sides became three corners, framed as Ring's engineers. Boxes now hold only a short label; one line under the title says owners can change the setting.",
+    kind: "corners",
     kicker: "Take a position",
-    title: "If it were your camera, which would you choose?",
-    left: "I'd leave it on",
-    right: "I'd turn it off",
-    notes: "Students go to the side they circled on their entry ticket, or stand in the middle if they are unsure. Note where the room sits. Then choose your inner circle for Round 1 from both sides and the middle, so the circle has both views, and have them take their seats in the circle. Everyone else sits down with the organizer. This move doubles as the seating change. You repeat this exact question at the exit."
+    title: "You\u2019re Ring\u2019s engineers. Which would you build?",
+    subtitle: "Owners can change the setting either way.",
+    options: [
+      { text: "On by default", note: "(What Ring did.)" },
+      { text: "Off by default" },
+      { text: "Ask each owner" }
+    ],
+    notes: "Say out loud that owners can change the setting either way: the choice is what it starts as. On by default: you have to dig to turn it off (what Ring did). Off by default: owners turn it on. Ask each owner: no default, they decide when they set up the camera. Students go to the corner they circled on their entry ticket. Note where the room sits. Then choose your inner circle for Round 1 from all three corners, so the circle has different views, and have them take their seats. Everyone else sits down with the organizer. This move doubles as the seating change. You repeat this exact question at the exit."
   },
   {
     kind: "highlight",
@@ -655,10 +702,12 @@ const SLIDES = [
     timer: 10,
     timerLabel: "Round 1",
     pause: "Round 1: stay here until it ends.",
+    rev: "CHANGED: reminder line under the question; two new back-pocket questions and the all-agree advice in the notes.",
     kicker: "Round 1",
     title: "Should Search Party be on by default?",
+    reminder: "Remember your camera count.",
     bullets: [],
-    notes: "Your hand-picked inner circle (about 8) talks. Everyone else is outside with the observer organizer on the back of the handout (two rows). Stay quiet. Back-pocket question: \u201cWho is on that video besides the owner?\u201d When the time is up, inside students finish the organizer from what they heard. This is a complete lesson if you stop here: press S to jump to the exit."
+    notes: "Your hand-picked inner circle (about 8) talks. Everyone else is outside with the observer organizer on the back of the handout (four rows; they fill in any two). Stay quiet. Back-pocket questions: \u201cWho is on that video besides the owner?\u201d \u201cYour neighbor\u2019s camera films you every day walking home. Should Ring\u2019s AI be able to search that video without asking you?\u201d \u201cWhy only dogs? Why not cats? If it can learn cats, what else could it learn to find?\u201d IF THE CIRCLE ALL AGREES: do not wait. Keep Round 1 short, play the video, then ask this same question again. The video is what creates the disagreement. When the time is up, inside students finish the organizer from what they heard. You can stop after Round 1 and press S to jump to the exit, but only if the room actually split."
   },
   {
     group: "round2",
@@ -671,12 +720,51 @@ const SLIDES = [
   },
   {
     group: "round2",
+    rev: "CHANGED: WeRateDogs is now four clips with new titles. Part 1 runs 0:00 to 0:45 (the old part 2 is merged into it). PARTS 3 AND 4 HAVE PLACEHOLDER TIMES.",
     kind: "video",
-    kicker: "Watch: a creator responds",
-    title: "WeRateDogs",
+    kicker: "Watch: a creator responds (1 of 4)",
+    title: "Enabling Mass Surveillance, part 1 (WeRateDogs)",
     videoId: "-ITnLiqKbeI",
-    videoLink: "https://www.youtube.com/watch?v=-ITnLiqKbeI",
-    notes: "About 3 minutes. Matt Nelson, who runs WeRateDogs, argues the ad uses dogs to make mass surveillance feel acceptable. Skip it (press Next) if time is short. Preview first."
+    videoLink: "https://www.youtube.com/watch?v=-ITnLiqKbeI&t=0s",
+    start: 0,
+    end: 45,
+    notes: "0:00 to 0:45. Matt Nelson, who runs WeRateDogs, argues the ad uses dogs to make mass surveillance feel acceptable. By about 0:18 he says the camera is about mass surveillance. This clip ends just before the informants line, which comes right after it. Show some of the clips, not all: Next skips ahead. A short, safe place to stop."
+  },
+  {
+    group: "round2",
+    rev: "NEW: clip 2 of 4, 0:46 to 1:34 (starts two seconds later than before; same end).",
+    kind: "video",
+    kicker: "Watch: a creator responds (2 of 4)",
+    title: "Making Ring Owners Informants, part 2 (WeRateDogs)",
+    videoId: "-ITnLiqKbeI",
+    videoLink: "https://www.youtube.com/watch?v=-ITnLiqKbeI&t=46s",
+    start: 46,
+    end: 94,
+    notes: "0:46 to 1:34. Starts with the line that Search Party turns neighbors into informants for ICE and other agencies. ICE is named here, so preview it for 7th graders and decide whether to show this clip. It ends where the next clip starts, at about 1:34."
+  },
+  {
+    group: "round2",
+    rev: "NEW: clip 3 of 4. Starts at 1:34. THE END TIME IS A PLACEHOLDER (151 seconds is my guess, one second past the placeholder start of clip 4).",
+    kind: "video",
+    kicker: "Watch: a creator responds (3 of 4)",
+    title: "Examples: Warrantless Surveillance, part 3 (WeRateDogs)",
+    videoId: "-ITnLiqKbeI",
+    videoLink: "https://www.youtube.com/watch?v=-ITnLiqKbeI&t=94s",
+    start: 94,
+    end: 151,
+    notes: "TEACHER NOTE: from 1:34 the video gives examples of ICE and Texas police doing warrantless searches, including a search for a woman over an abortion. Preview it. With 7th graders, skip this clip (press Next). [END TIME: fill in where this section ends, and add one second.]"
+  },
+  {
+    group: "round2",
+    rev: "NEW: clip 4 of 4. START AND END ARE PLACEHOLDERS.",
+    kind: "video",
+    kicker: "Watch: a creator responds (4 of 4)",
+    title: "Better Ways to Protect Pets, part 4 (WeRateDogs)",
+    videoId: "-ITnLiqKbeI",
+    videoLink: "https://www.youtube.com/watch?v=-ITnLiqKbeI&t=150s",
+    start: 150,
+    end: 180,
+    notes: "[START TIME: fill in.] The last part: one dog a day is hardly worth all this work, and the service is really about mass surveillance, not a serious effort to do what the ad says. If you skipped clip 3, this is a good clip to end on."
   },
   {
     group: "round2",
@@ -691,14 +779,19 @@ const SLIDES = [
     notes: "Pick a new circle (new tokens) or keep the same one. OPPOSITE SIDE (optional): before this round, ask one or two students to argue the side most of the room does not hold. Look at where the room stood on the position slide before Round 1. Ask for volunteers first. Do not pick the most outspoken. Say out loud who is playing a role, and give them a role card (print them from the post). Afterward, ask what it was like to argue a side they did not pick."
   },
   {
-    kind: "wall",
+    rev: "CHANGED: three corners, same as the position slide (short labels). Notes add 'So why didn't Ring do that?'",
+    kind: "corners",
     stop: true,
     pause: "Exit: take a position again, then the exit ticket.",
     kicker: "Take a position again",
-    title: "If it were your camera, which would you choose?",
-    left: "I'd leave it on",
-    right: "I'd turn it off",
-    notes: "The same question and sides as the position slide before Round 1, and as the Start and End lines on the handout. Students go to a side. Note who ended up where, and ask one or two why. Compare with where they stood before Round 1. Then they sit and fill in the exit ticket on the back of the handout. Collect the sheets."
+    title: "You\u2019re Ring\u2019s engineers. Which would you build?",
+    subtitle: "Owners can change the setting either way.",
+    options: [
+      { text: "On by default", note: "(What Ring did.)" },
+      { text: "Off by default" },
+      { text: "Ask each owner" }
+    ],
+    notes: "The same question and corners as before Round 1, and the same three choices as the Start and End lines on the handout. Students go to a corner. Note who ended up where, and ask one or two why. Compare with where they stood before Round 1. Then point at whichever corner most students chose (likely the third) and ask: \u201cSo why didn\u2019t Ring do that?\u201d Then they sit and fill in the exit ticket on the back of the handout. Collect the sheets."
   },
   {
     kind: "title",
@@ -732,7 +825,7 @@ function formatTimer(sec) {
   return (over ? "+" : "") + Math.floor(a / 60) + ":" + String(a % 60).padStart(2, "0");
 }
 
-function Stage({ slide, aspect }) {
+function Stage({ slide, aspect, step }) {
   const arClass = aspect === "4:3" ? "ar-4-3" : "ar-16-9";
   if (slide.kind === "title") {
     return (
@@ -771,12 +864,36 @@ function Stage({ slide, aspect }) {
         <h1 className="slide-title">{slide.title}</h1>
         <iframe
           className="video-frame"
-          src={"https://www.youtube.com/embed/" + slide.videoId + "?rel=0"}
+          src={"https://www.youtube.com/embed/" + slide.videoId + "?rel=0" + (slide.start ? "&start=" + slide.start : "") + (slide.end ? "&end=" + slide.end : "")}
           title={slide.title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
           allowFullScreen
         ></iframe>
         <a className="video-link" href={slide.videoLink} target="_blank" rel="noopener noreferrer">If the video does not play, open it on YouTube</a>
+      </div>
+    );
+  }
+  if (slide.kind === "corners") {
+    return (
+      <div className={"stage " + arClass}>
+        <p className="kicker">{slide.kicker}</p>
+        <h1 className="slide-title" style={slide.subtitle ? { marginBottom: 12 } : undefined}>{slide.title}</h1>
+        {slide.subtitle && <p className="slide-subtitle">{slide.subtitle}</p>}
+        <div className="corners-wrap">
+          {slide.options.map((o, i) => (
+            <div className={"corner-box c" + (i + 1)} key={i}>{o.text}{o.note && <small>{o.note}</small>}</div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+  if (slide.kind === "split") {
+    return (
+      <div className={"stage " + arClass}>
+        <h1 className="slide-title" style={{ textAlign: "center", marginBottom: 24 }}>{slide.title}</h1>
+        <div className="split-wrap">
+          {slide.panes.map((pn, i) => <div className="split-pane" key={i}>{pn.image ? <img src={pn.image} alt="" /> : pn.label}</div>)}
+        </div>
       </div>
     );
   }
@@ -923,12 +1040,13 @@ function Stage({ slide, aspect }) {
     <div className={"stage " + arClass + extraClass}>
       <p className="kicker">{slide.kicker}</p>
       <h1 className="slide-title">{slide.title}</h1>
-      <div className="slide-body">{renderBullets(slide.bullets)}</div>
+      {slide.reminder && <p className="slide-subtitle" style={{ fontSize: 36 }}>{slide.reminder}</p>}
+      <div className="slide-body">{renderBullets(slide.reveal ? slide.bullets.slice(0, step) : slide.bullets)}</div>
     </div>
   );
 }
 
-function ScaledStage({ slide, aspect, children }) {
+function ScaledStage({ slide, aspect, step, children }) {
   const outerRef = useRef(null);
   const [scale, setScale] = useState(1);
   const designW = 1280;
@@ -965,7 +1083,7 @@ function ScaledStage({ slide, aspect, children }) {
   return (
     <div className="stage-outer" ref={outerRef}>
       <div style={{ transform: `scale(${scale})`, transformOrigin: "center center", position: "relative", zIndex: 1, pointerEvents: "none" }}>
-        <Stage slide={slide} aspect={aspect} />
+        <Stage slide={slide} aspect={aspect} step={step} />
         {children}
       </div>
     </div>
@@ -976,10 +1094,13 @@ function bulletsToText(bullets) {
   return bullets.map(b => (typeof b === "string" ? b : b.text)).join(" / ");
 }
 
+const REVIEW = !!new URLSearchParams(window.location.search).get("review");
+
 function OutlineCard({ slide, heading }) {
   return (
-    <div className="outline-slide">
+    <div className="outline-slide" style={REVIEW && slide.rev ? { borderColor: "#d00", borderWidth: 3 } : undefined}>
       <h2>{heading}</h2>
+      {REVIEW && slide.rev && <p style={{ color: "#b00", fontWeight: 600 }}>{slide.rev}</p>}
       {slide.bullets && <p className="outline-bullets">On slide: {bulletsToText(slide.bullets)}</p>}
       <div className="outline-notes"><p>{slide.notes}</p></div>
     </div>
@@ -1020,10 +1141,16 @@ function App() {
 
   // A countdown for the slides that have a `timer` (minutes). It never starts
   // on its own. Past zero it counts up, so a teacher can run over on purpose.
-  const [timer, setTimer] = useState({ running: false, left: 0, endAt: 0, has: false, total: 0 });
+  const [timer, setTimer] = useState({ running: false, left: 0, endAt: 0, has: false, total: 0, started: false });
+  // How many bullets show on a slide with reveal: true. Starts at the first; Next adds one.
+  const [step, setStep] = useState(1);
+  const cameBack = useRef(false);
   useEffect(() => {
     const m = SLIDES[index].timer || 0;
-    setTimer({ running: false, left: m * 60, endAt: 0, has: m > 0, total: m * 60 });
+    setTimer({ running: false, left: m * 60, endAt: 0, has: m > 0, total: m * 60, started: false });
+    const sl = SLIDES[index];
+    setStep(sl.reveal && cameBack.current ? sl.bullets.length : 1);
+    cameBack.current = false;
   }, [index]);
   useEffect(() => {
     if (!timer.running) return;
@@ -1035,15 +1162,22 @@ function App() {
   const toggleTimer = useCallback(() => {
     setTimer(t => {
       if (!t.has) return t;
-      return t.running ? { ...t, running: false } : { ...t, running: true, endAt: Date.now() + t.left * 1000 };
+      return t.running ? { ...t, running: false } : { ...t, running: true, started: true, endAt: Date.now() + t.left * 1000 };
     });
   }, []);
   const nudgeTimer = seconds => setTimer(t => ({ ...t, left: t.left + seconds, endAt: t.endAt + seconds * 1000, total: Math.max(t.total, t.left + seconds) }));
-  const resetTimer = () => setTimer({ running: false, left: (slide.timer || 0) * 60, endAt: 0, has: !!slide.timer, total: (slide.timer || 0) * 60 });
+  const resetTimer = () => setTimer({ running: false, left: (slide.timer || 0) * 60, endAt: 0, has: !!slide.timer, total: (slide.timer || 0) * 60, started: false });
 
 
-  const next = useCallback(() => setIndex(i => Math.min(i + 1, SLIDES.length - 1)), []);
-  const prev = useCallback(() => setIndex(i => Math.max(i - 1, 0)), []);
+  // Next does one small thing first if the slide has one: show the next bullet
+  // (reveal slides), or start the timer (timed slides). Otherwise it moves on.
+  const next = useCallback(() => {
+    const sl = SLIDES[index];
+    if (sl.reveal && step < sl.bullets.length) { setStep(step + 1); return; }
+    if (sl.timer && timer.has && !timer.started) { toggleTimer(); return; }
+    setIndex(i => Math.min(i + 1, SLIDES.length - 1));
+  }, [index, step, timer.has, timer.started, toggleTimer]);
+  const prev = useCallback(() => { cameBack.current = true; setIndex(i => Math.max(i - 1, 0)); }, []);
   // From any slide in an optional group, jump to the first slide after the group.
   const skipSection = useCallback(() => setIndex(i => { const g = SLIDES[i].group; if (!g) return i; let j = i; while (j < SLIDES.length && SLIDES[j].group === g) j++; return Math.min(j, SLIDES.length - 1); }), []);
 
@@ -1108,7 +1242,8 @@ function App() {
   return (
     <div className="app">
       <div className="stage-outer" style={{ position: "relative" }}>
-        <ScaledStage slide={slide} aspect={aspect}>
+        <ScaledStage slide={slide} aspect={aspect} step={step}>
+          {REVIEW && slide.rev && <div className="rev-frame"></div>}
           {slide.stop && <div className="pause-bar">PAUSE HERE</div>}
           {slide.timer && (
             <div className={"timer-ring" + (timer.left < 0 ? " over" : timer.running ? " running" : "")} onClick={toggleTimer} role="button" aria-label="Start or pause the timer" title="Click to start or pause">
@@ -1126,6 +1261,7 @@ function App() {
         {slide.group && <button className="skip-warmup" onClick={skipSection}>Skip section (S) &rarr;</button>}
         <div className="slide-counter-badge">{index + 1} / {SLIDES.length}</div>
       </div>
+      {REVIEW && slide.rev && <div className="rev-panel">{slide.rev}</div>}
       {showNotes && (
         <div className="notes-panel">
           <h3>Speaker notes</h3>

@@ -1,0 +1,366 @@
+---
+title: "Socratic Seminar Handout (PROTOTYPE)"
+permalink: /socratic-seminar-handout-proto/
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Socratic Seminar Handout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { --ink: #1b1f23; --rule: #9aa0a6; --muted: #57606a; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #e9edf1;
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.35;
+  }
+
+  /* --- On-screen tools (never printed) --- */
+  .tools {
+    max-width: 8.5in;
+    margin: 16px auto;
+    padding: 14px 18px 16px;
+    background: #fff;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  .tools h2 { margin: 0 0 6px; font-size: 16px; }
+  .tools p { margin: 0 0 8px; color: var(--muted); }
+  .tools label { display: block; margin: 10px 0 3px; font-weight: 600; }
+  .tools input[type=text] { width: 100%; padding: 7px 9px; font-size: 14px; border: 1px solid #c4cbd2; border-radius: 6px; }
+  .tools .buttons { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .tools button {
+    padding: 8px 16px; font-size: 14px; border-radius: 6px; cursor: pointer;
+    border: 1px solid #2a7ae2; background: #2a7ae2; color: #fff;
+  }
+  .tools button.secondary { background: #fff; color: #2a7ae2; }
+
+  /* --- The two sides of the sheet --- */
+  .sheet {
+    width: 8.5in;
+    height: 11in;
+    margin: 16px auto;
+    background: #fff;
+    padding: 0.5in;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.18);
+    overflow: hidden;
+  }
+
+  .namebar { display: flex; gap: 18px; margin: 0 0 8px; }
+  .fld {
+    flex: 1 1 auto;
+    border-bottom: 1.5px solid var(--ink);
+    min-height: 0.34in;
+    font-size: 9.5pt;
+    font-weight: 700;
+  }
+  .fld.period { flex: 0 0 1.3in; }
+  .fld.date { flex: 0 0 1.7in; }
+  .namebar.small .fld { min-height: 0.28in; }
+
+  h1 { font-size: 17pt; margin: 6px 0 2px; }
+  .topic { margin: 0 0 6px; font-size: 11pt; }
+  .topic .blank { display: inline-block; min-width: 4.2in; border-bottom: 1px solid var(--rule); vertical-align: bottom; }
+  .topic .blank.filled { border-bottom: none; font-weight: 700; }
+
+  h2.section {
+    font-size: 12pt;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 2px solid var(--ink);
+    margin: 14px 0 8px;
+    padding-bottom: 2px;
+  }
+  .hint { margin: 0 0 8px; font-size: 9.5pt; color: var(--muted); font-style: italic; }
+
+  .q { margin: 0 0 4px; font-weight: 600; }
+  .lines { margin: 0 0 12px; }
+  .lines i { display: block; border-bottom: 1px solid var(--rule); height: 0.31in; }
+  .extra[hidden] { display: none; }
+
+  table.grading { margin: 12px 0 2px; }
+  #back { display: flex; flex-direction: column; }
+  #back .license-notice { margin-top: auto !important; }
+  table.grading th, table.grading td { height: auto; padding: 2px 7px; font-size: 8.5pt; font-weight: 400; }
+  table.grading th { font-weight: 700; }
+  table.grading td:first-child { width: auto; font-weight: 400; }
+  table.grading th + th, table.grading td + td { width: 0.8in; text-align: center; }
+  table.grading tr.total td { font-weight: 700; }
+  .grading-note { margin: 0; font-size: 8.5pt; color: var(--muted); }
+  .sides { margin: 0 0 8px; }
+  .sides[hidden], .exit-block[hidden], #q4-block[hidden], #grading-lite[hidden], #grading-default[hidden], tr.org-extra[hidden] { display: none; }
+  .opt { display: inline-block; border: 1.5px solid var(--ink); border-radius: 999px; padding: 1px 14px; margin-right: 8px; font-weight: 700; }
+  .sides .lbl, .sides .arrow { font-weight: 700; margin-right: 6px; }
+  .sides .arrow { margin: 0 8px 0 2px; }
+  .half { white-space: nowrap; }
+  .num { display: inline-block; min-width: 0.4in; border-bottom: 1.5px solid var(--ink); margin: 0 3px 0 4px; }
+
+  table { width: 100%; border-collapse: collapse; margin: 0 0 8px; }
+  th, td { border: 1px solid var(--ink); padding: 4px 7px; vertical-align: top; font-size: 10pt; }
+  th { background: #f1f3f5; text-align: left; }
+  td { height: 0.72in; }
+  td:first-child { width: 2.3in; font-weight: 600; }
+
+  @media print {
+    body { background: #fff; }
+    .tools { display: none; }
+    @page { size: letter; margin: 0.5in; }
+    .sheet {
+      width: auto;
+      height: 10in;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      page-break-after: always;
+      break-after: page;
+    }
+    .sheet:last-of-type { page-break-after: auto; break-after: auto; }
+  }
+  /* PROTOTYPE: changes shown in red. Temporary page; delete when the kit is updated. */
+  .rev { color: #d00; }
+  .opt.rev { border-color: #d00; }
+  tr.rev td { color: #d00; }
+  .opt[hidden] { display: none; }
+  .sides.three .opt { display: block; margin: 3px 0; border-radius: 10px; white-space: normal; }
+  .sides.three .half { display: inline-block; vertical-align: top; width: 48%; white-space: normal; }
+  .sides.three .arrow { display: none; }
+</style>
+</head>
+<body>
+
+<div class="tools">
+  <h2>Socratic seminar handout</h2>
+  <p>Two sides of one sheet. Print double-sided and flip on the long edge. The front is the entry ticket, including a standard question that asks for the best argument for the other side. The back is the observer organizer and the exit ticket.</p>
+  <label for="in-topic">Seminar topic (optional)</label>
+  <input type="text" id="in-topic" placeholder="e.g. You Deleted It. Is It Gone?">
+  <label for="in-entry">Extra entry-ticket question (optional)</label>
+  <input type="text" id="in-entry" placeholder="Printed as question 5 on the front">
+  <label style="display:flex;gap:8px;align-items:center;font-weight:600"><input type="checkbox" id="in-lite"> Shorter version: one question, one piece of evidence, no best-argument question, two organizer rows</label>
+  <label for="in-exit">Extra exit-ticket question (optional)</label>
+  <input type="text" id="in-exit" placeholder="Printed under the exit ticket on the back">
+  <label for="in-exit2">Second extra exit-ticket question (optional)</label>
+  <input type="text" id="in-exit2" placeholder="Printed under the first extra question on the back">
+  <label for="in-a">Side A (optional, only for a seminar with two sides)</label>
+  <input type="text" id="in-a" placeholder="e.g. Buy it">
+  <label for="in-b">Side B (needed with Side A)</label>
+  <input type="text" id="in-b" placeholder="e.g. Do not buy it">
+  <label for="in-c" class="rev">Side C (optional, needs A and B; for a seminar with three choices)</label>
+  <input type="text" id="in-c" placeholder="e.g. Ask each owner">
+  <p>With both sides filled in, the entry ticket asks students to circle one and rate how sure they are, 1 to 10, and the exit ticket has a Start and End line so you can tally who moved.</p>
+  <div class="buttons">
+    <button type="button" id="btn-print">Print</button>
+    <button type="button" class="secondary" id="btn-copy">Copy link to this version</button>
+  </div>
+</div>
+
+<!-- FRONT -->
+<div class="sheet" id="front">
+  <div class="namebar">
+    <div class="fld">Name</div>
+    <div class="fld period">Period</div>
+    <div class="fld date">Date</div>
+  </div>
+  <h1>Socratic Seminar</h1>
+  <p class="topic"><b>Topic:</b> <span class="blank" id="topic-text"></span></p>
+
+  <h2 class="section">Entry ticket</h2>
+  <p class="hint">Fill this out after the reading, before the seminar starts.</p>
+
+  <p class="q" id="q1">1. Two questions the reading raises for you, ones you could actually argue about.</p>
+  <div class="lines"><i></i><i></i><i></i></div>
+
+  <p class="q">2. A starting side, and why. Changing your mind during the seminar is not losing. It is the point.</p>
+  <p class="sides" id="start-sides" hidden>Circle one, even if you are unsure. Put your doubts in your reason. <span class="opt" id="start-a"></span><span class="opt" id="start-b"></span><span class="opt rev" id="start-c" hidden></span><br>How sure are you, from 1 (on the fence) to 10 (very sure)? <span class="num"></span>/ 10</p>
+  <div class="lines"><i></i><i></i><i></i></div>
+
+  <p class="q" id="q3">3. Two pieces of evidence from the reading, by paragraph number.</p>
+  <div class="lines"><i></i><i></i><i></i></div>
+
+  <div id="q4-block">
+  <p class="q">4. What is the best argument for the side you did not pick? Say it so well that someone who holds that view would agree you got it right.</p>
+  <div class="lines"><i></i><i></i><i></i></div>
+  </div>
+
+  <div class="extra" id="entry-extra" hidden>
+    <p class="q"><span>5. </span><span id="entry-extra-text"></span></p>
+    <div class="lines"><i></i><i></i><i></i></div>
+  </div>
+
+  <table class="grading" id="grading-default">
+    <tr><th>How this sheet is graded</th><th>Points</th><th>Score</th></tr>
+    <tr><td><b>Entry ticket, Q1–2:</b> two questions, and a side with a reason</td><td>1</td><td></td></tr>
+    <tr><td><b>Entry ticket, Q3:</b> two pieces of evidence, each with a paragraph number</td><td>1</td><td></td></tr>
+    <tr><td><b>Entry ticket, Q4:</b> the other side stated fairly, with support from the reading</td><td>2</td><td></td></tr>
+    <tr><td><b>Observer organizer:</b> at least three rows, each naming who said it</td><td>1</td><td></td></tr>
+    <tr><td><b>Exit ticket:</b> Start and End, and a reason that names what was said or asked in the room</td><td>1</td><td></td></tr>
+    <tr class="total"><td>Total</td><td>6</td><td></td></tr>
+  </table>
+  <table class="grading" id="grading-lite" hidden>
+    <tr><th>How this sheet is graded</th><th>Points</th><th>Score</th></tr>
+    <tr><td><b>Entry ticket, Q1–2:</b> one question, and a side with a reason</td><td>1</td><td></td></tr>
+    <tr><td><b>Entry ticket, Q3:</b> one piece of evidence, with a paragraph number</td><td>1</td><td></td></tr>
+    <tr><td><b>Your seat:</b> <span class="rev">inside, you spoke 2 or 3 times; outside, you listened quietly and took notes</span></td><td>2</td><td></td></tr>
+    <tr><td><b>Observer organizer:</b> <span class="rev">any two rows</span>, each naming who said it</td><td>1</td><td></td></tr>
+    <tr><td><b>Exit ticket:</b> Start and End, and a reason that names what was said or asked in the room</td><td>1</td><td></td></tr>
+    <tr class="total"><td>Total</td><td>6</td><td></td></tr>
+  </table>
+  <p class="grading-note">Which side you pick, your numbers, and whether you move are not graded. Blank or unreadable answers earn no points.</p>
+</div>
+
+<!-- BACK -->
+<div class="sheet" id="back">
+  <div class="namebar small">
+    <div class="fld">Name</div>
+    <div class="fld period">Period</div>
+  </div>
+
+  <h2 class="section">Observer organizer</h2>
+  <p class="hint" id="org-hint">The outer circle fills this in while watching. Fill in at least three rows. It is your ticket into the hot seat.</p>
+  <table>
+    <tr><th>What to catch</th><th>Who said it</th><th>My note / why</th></tr>
+    <tr><td>An idea I agreed with</td><td></td><td></td></tr>
+    <tr><td>An idea I would push back on</td><td></td><td></td></tr>
+    <tr class="org-extra"><td>The strongest point made</td><td></td><td></td></tr>
+    <tr class="org-extra"><td>A question nobody has asked yet</td><td></td><td></td></tr>
+  </table>
+  <p class="q" style="font-weight:400"><em>Tally each time someone builds on another person's idea instead of starting over:</em></p>
+  <div class="lines"><i></i><i></i></div>
+
+  <h2 class="section">Exit ticket</h2>
+  <div class="exit-block" id="exit-default">
+    <p class="q">Did your thinking move today? Three sentences: what you believed walking in, what you believe now, and what said or asked in the room moved you (or held you in place).</p>
+    <div class="lines"><i></i><i></i><i></i></div>
+  </div>
+
+  <div class="exit-block" id="exit-sided" hidden>
+    <p class="sides" id="end-sides"><span class="half"><span class="lbl">Start</span><span class="opt" id="end-start-a"></span><span class="opt" id="end-start-b"></span><span class="opt rev" id="end-start-c" hidden></span><span class="num"></span>/ 10<span class="arrow">&rarr;</span></span><span class="half"><span class="lbl">End</span><span class="opt" id="end-a"></span><span class="opt" id="end-b"></span><span class="opt rev" id="end-c" hidden></span><span class="num"></span>/ 10</span></p>
+    <p class="q">Circle a side and give your 1 to 10 at each end, even if you are unsure. Did your thinking move today? Say what in the room moved you, or held you in place.</p>
+    <div class="lines"><i></i><i></i></div>
+  </div>
+
+  <div class="extra" id="exit-extra" hidden>
+    <p class="q"><span id="exit-extra-text"></span></p>
+    <div class="lines"><i></i><i></i></div>
+  </div>
+
+  <div class="extra" id="exit2-extra" hidden>
+    <p class="q"><span id="exit2-extra-text"></span></p>
+    <div class="lines"><i></i><i></i></div>
+  </div>
+
+  {% include license-footer.html %}
+</div>
+
+<script>
+{% raw %}
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var inTopic = document.getElementById("in-topic");
+  var inEntry = document.getElementById("in-entry");
+  var inExit = document.getElementById("in-exit");
+  var inExit2 = document.getElementById("in-exit2");
+  var inA = document.getElementById("in-a");
+  var inB = document.getElementById("in-b");
+  var inC = document.getElementById("in-c");
+  var inLite = document.getElementById("in-lite");
+
+  // Text is always set with textContent, so nothing typed or passed in the
+  // link can add markup to the page.
+  function render() {
+    var topic = inTopic.value.trim();
+    var entry = inEntry.value.trim();
+    var exit = inExit.value.trim();
+    var exit2 = inExit2.value.trim();
+
+    var topicEl = document.getElementById("topic-text");
+    topicEl.textContent = topic;
+    topicEl.className = topic ? "blank filled" : "blank";
+
+    var entryBox = document.getElementById("entry-extra");
+    document.getElementById("entry-extra-text").textContent = entry;
+    entryBox.hidden = !entry;
+
+    var exitBox = document.getElementById("exit-extra");
+    document.getElementById("exit-extra-text").textContent = exit;
+    exitBox.hidden = !exit;
+
+    var exit2Box = document.getElementById("exit2-extra");
+    document.getElementById("exit2-extra-text").textContent = exit2;
+    exit2Box.hidden = !exit2;
+
+    // The Start and End lines need both sides.
+    var a = inA.value.trim();
+    var b = inB.value.trim();
+    var sided = !!(a && b);
+    ["start-a", "end-start-a", "end-a"].forEach(function (id) { document.getElementById(id).textContent = a; });
+    ["start-b", "end-start-b", "end-b"].forEach(function (id) { document.getElementById(id).textContent = b; });
+    var c = inC.value.trim();
+    var three = sided && !!c;
+    ["start-c", "end-start-c", "end-c"].forEach(function (id) { var e = document.getElementById(id); e.textContent = c; e.hidden = !three; });
+    document.getElementById("start-sides").classList.toggle("three", three);
+    document.getElementById("end-sides").classList.toggle("three", three);
+    document.getElementById("start-sides").hidden = !sided;
+    document.getElementById("exit-sided").hidden = !sided;
+    document.getElementById("exit-default").hidden = sided;
+
+    // The shorter version: one question, one piece of evidence, no
+    // best-argument question, two organizer rows, and its own grading table.
+    var lite = inLite.checked;
+    document.getElementById("q1").textContent = lite ? "1. One question the reading raises for you, one you could actually argue about." : "1. Two questions the reading raises for you, ones you could actually argue about.";
+    document.getElementById("q3").textContent = lite ? "3. One piece of evidence from the reading, by paragraph number." : "3. Two pieces of evidence from the reading, by paragraph number.";
+    document.getElementById("q4-block").hidden = lite;
+    // PROTOTYPE: the short version keeps all four rows (red); students fill in any two.
+    document.querySelectorAll(".org-extra").forEach(function (el) { el.hidden = false; el.classList.toggle("rev", lite); });
+    document.getElementById("org-hint").className = lite ? "hint rev" : "hint";
+    document.getElementById("org-hint").textContent = lite
+      ? "Outside the circle, your job is to listen and take notes. Fill in any two rows while you watch. Inside the circle, fill them in right after the round."
+      : "The outer circle fills this in while watching. Fill in at least three rows. It is your ticket into the hot seat.";
+    document.getElementById("grading-default").hidden = lite;
+    document.getElementById("grading-lite").hidden = !lite;
+
+    var next = new URLSearchParams();
+    if (topic) next.set("topic", topic);
+    if (entry) next.set("entry", entry);
+    if (exit) next.set("exit", exit);
+    if (exit2) next.set("exit2", exit2);
+    if (a) next.set("a", a);
+    if (b) next.set("b", b);
+    if (c) next.set("c", c);
+    if (lite) next.set("lite", "1");
+    var qs = next.toString();
+    try {
+      window.history.replaceState(null, "", window.location.pathname + (qs ? "?" + qs : ""));
+    } catch (e) {}
+  }
+
+  inTopic.value = params.get("topic") || "";
+  inEntry.value = params.get("entry") || "";
+  inExit.value = params.get("exit") || "";
+  inExit2.value = params.get("exit2") || "";
+  inA.value = params.get("a") || "";
+  inB.value = params.get("b") || "";
+  inC.value = params.get("c") || "";
+  inLite.checked = params.get("lite") === "1";
+  [inTopic, inEntry, inExit, inExit2, inA, inB, inC, inLite].forEach(function (el) { el.addEventListener("input", render); el.addEventListener("change", render); });
+
+  document.getElementById("btn-print").addEventListener("click", function () { window.print(); });
+  document.getElementById("btn-copy").addEventListener("click", function (e) {
+    var btn = e.currentTarget;
+    var done = function () { btn.textContent = "Copied"; setTimeout(function () { btn.textContent = "Copy link to this version"; }, 1500); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(window.location.href).then(done, function () {});
+    }
+  });
+
+  render();
+})();
+{% endraw %}
+</script>
+</body>
+</html>
